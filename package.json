@@ -1,0 +1,21 @@
+{
+  "name": "@webex/components",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "module": "dist/index.js",
+  "dependencies": {
+    "react": "^16.8.6"
+  },
+  "author": "devsupport@webex.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@webex/eslint-config-base": "^0.8.0",
+    "@webex/eslint-config-react": "^0.8.0",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^4.19.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-mocha": "^6.0.0",
+    "eslint-plugin-react": "^7.14.3"
+  }
+}
