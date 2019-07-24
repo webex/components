@@ -6,9 +6,5 @@ import React from 'react';
  * @returns {object}
  */
 export default function WebexTestComponent() {
-  return (
-    <div>
-      This is a Webex Test Component
-    </div>
-  );
+  return <div>This is a Webex Test Component</div>;
 }
