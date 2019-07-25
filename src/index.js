@@ -1,1 +1,1 @@
-export {default as TestComponent} from './TestComponet';
+export * from './adapters';
