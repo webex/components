@@ -6,7 +6,10 @@
   "scripts": {
     "prettier": "prettier \"src/**/!(static)/**/*.*(js|jsx)\"",
     "prettier-write": "prettier \"src/**/!(static)/**/*.*(js|jsx)\" --write",
-    "start": "start-storybook"
+    "start": "start-storybook -p 8080 -h localhost",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "@momentum-ui/react": "^20.1.1",
@@ -17,12 +20,18 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
     "@storybook/react": "^5.1.9",
     "@webex/eslint-config-base": "^0.8.0",
     "@webex/eslint-config-react": "^0.8.0",
     "babel-eslint": "^10.0.2",
+    "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.1.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.3.5",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.18.2",
@@ -31,9 +40,22 @@
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.6.1",
+    "jest": "^24.8.0",
     "node-sass": "^4.12.0",
     "prettier": "^1.18.2",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react",
+      "@babel/preset-env"
+    ]
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/.storybook/setupTests.js"
+    ],
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
   }
 }
