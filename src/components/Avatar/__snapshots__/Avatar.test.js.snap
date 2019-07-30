@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Webex Avatar component: exists 1`] = `
+<Avatar
+  alt=""
+  backgroundColor=""
+  buttonClassName=""
+  className={null}
+  color=""
+  failureBadge={false}
+  hasNotification={false}
+  hideDefaultTooltip={false}
+  icon={null}
+  isDecrypting={false}
+  isOverview={false}
+  onClick={null}
+  size="medium"
+  src={null}
+  theme={null}
+  title={null}
+  type=""
+/>
+`;

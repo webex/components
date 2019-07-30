@@ -23,7 +23,10 @@
     "intl": true,
     "shallowWithIntl": true,
     "mountWithIntl": true,
-    "renderWithIntl": true
+    "renderWithIntl": true,
+    "shallow": true,
+    "render": true,
+    "mount": true
   },
   "rules": {
     "arrow-body-style": [
