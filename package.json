@@ -1,9 +1,10 @@
 {
   "name": "@webex/components",
   "version": "0.0.1",
-  "main": "src/index.js",
-  "module": "dist/index.js",
+  "main": "dist/webexComponents.cjs.js",
+  "module": "dist/webexComponents.esm.js",
   "scripts": {
+    "build": "rollup -c",
     "prettier": "prettier \"src/**/!(static)/**/*.*(js|jsx)\"",
     "prettier-write": "prettier \"src/**/!(static)/**/*.*(js|jsx)\" --write",
     "start": "start-storybook -p 8080 -h localhost",
@@ -11,15 +12,18 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
   },
-  "dependencies": {
-    "@momentum-ui/react": "^20.1.1",
+  "peerDependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
+  },
+  "dependencies": {
+    "@momentum-ui/react": "^20.1.1"
   },
   "author": "devsupport@webex.com",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-export-default-from": "^7.5.2",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "@storybook/react": "^5.1.9",
@@ -28,6 +32,7 @@
     "babel-eslint": "^10.0.2",
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "css-loader": "^3.1.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
@@ -43,13 +48,22 @@
     "jest": "^24.8.0",
     "node-sass": "^4.12.0",
     "prettier": "^1.18.2",
+    "rollup": "^1.17.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1"
   },
   "babel": {
     "presets": [
-      "@babel/preset-react",
-      "@babel/preset-env"
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-object-rest-spread",
+      "@babel/plugin-proposal-export-default-from"
     ]
   },
   "jest": {
