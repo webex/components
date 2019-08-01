@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Avatar from './Avatar';
+import WebexAvatar from './WebexAvatar';
 
 describe('Webex Avatar component:', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<Avatar />);
+    wrapper = shallow(<WebexAvatar />);
   });
 
   test('exists', () => {

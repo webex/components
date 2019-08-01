@@ -1,1 +1,1 @@
-export default {};
+export {default as WebexAvatar} from './WebexAvatar/WebexAvatar';
