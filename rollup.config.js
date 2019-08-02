@@ -11,6 +11,7 @@ const output = (name, format) => ({
   globals: {
     react: 'React',
     'react-dom': 'ReactDOM',
+    'prop-types': 'PropTypes',
   },
 });
 
