@@ -1,0 +1,66 @@
+version: 2.1
+# reusable environment for all jobs
+executors:
+  main-executor:
+    working_directory: ~/webex-components
+    docker:
+      - image: circleci/node:12.7.0
+
+# reusable command for all jobs
+commands:
+  checkout_from_cache:
+    description: "To checkout and restore the dependencies cache"
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - dependency-cache-{{ checksum "package.json" }}
+            - dependency-cache-
+
+# define jobs
+jobs:
+  install:
+    executor: main-executor
+    steps:
+      - checkout_from_cache
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths: node_modules
+  test:
+    executor: main-executor
+    steps:
+      - checkout_from_cache
+      - run:
+          name: Linting
+          command: npm run test:eslint
+      - run:
+          name: Unit Test Coverage
+          command: npm run test:coverage
+      - store_test_results:
+          path: test_results
+  build:
+    executor: main-executor
+    steps:
+      - checkout_from_cache
+      - run:
+          name: build
+          command: npm run build
+
+# execute the jobs in a orderly manner
+workflows:
+  version: 2
+  setup_test_build:
+    jobs:
+      - install
+      - test:
+          requires:
+            - install
+      - build:
+          requires:
+            - test
+          filters:
+            branches:
+              only: master
