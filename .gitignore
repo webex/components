@@ -1,15 +1,43 @@
-**/dist/
-.DS_Store
-.idea
+#Runtime data
+dist/
+coverage/
+test_results/
+pids
+*.pid
+*.seed
+*.out
+*.map
+
+#Logs and others
+*.swp
 *.log
-/node_modules
-.env
-npm-debug*
-packages/**/es/*
-packages/**/cjs/*
-.tmp/*
-tmp.*
-*.tmp
-reports/*
-.python-version
-.cache
+*.log.*
+logs
+log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.node_repl_history
+reports/
+
+#IDEs
+.project
+.settings
+.metadata
+.vscode
+
+#Hidden directories
+.npm
+
+#OS
+.idea
+.DS_Store
+._*
+
+#Local stuff
+*.json
+.env*
+!.env.default
+!package.json
+!package-lock.json
+node_modules/
