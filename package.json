@@ -20,6 +20,10 @@
     "type": "git",
     "url": "https://github.com/webex/components.git"
   },
+  "publishConfig": {
+    "tag": "latest",
+    "access": "public"
+  },
   "author": "devsupport@webex.com",
   "license": "MIT",
   "peerDependencies": {
@@ -97,7 +101,9 @@
     "outputName": "results.xml"
   },
   "commitlint": {
-    "extends": ["@commitlint/config-conventional"]
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "husky": {
     "hooks": {

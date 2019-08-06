@@ -15,12 +15,7 @@ module.exports = {
         },
       },
     ],
-    [
-      '@semantic-release/npm',
-      {
-        tarballDir: 'dist',
-      },
-    ],
+    '@semantic-release/npm',
     [
       '@semantic-release/github',
       {
