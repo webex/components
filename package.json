@@ -96,6 +96,9 @@
     "outputDirectory": "test_results/jest",
     "outputName": "results.xml"
   },
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"]
+  },
   "husky": {
     "hooks": {
       "pre-commit": "npm run test:eslint",
