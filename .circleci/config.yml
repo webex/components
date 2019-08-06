@@ -41,24 +41,27 @@ jobs:
           command: npm run test:coverage
       - store_test_results:
           path: test_results
-  build:
+  release:
     executor: main-executor
     steps:
       - checkout_from_cache
       - run:
           name: build
           command: npm run build
+      - run:
+          name: release
+          command: npm run release
 
 # execute the jobs in a orderly manner
 workflows:
   version: 2
-  setup_test_build:
+  setup_test_release:
     jobs:
       - install
       - test:
           requires:
             - install
-      - build:
+      - release:
           requires:
             - test
           filters:
