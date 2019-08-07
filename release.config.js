@@ -20,7 +20,6 @@ module.exports = {
     [
       '@semantic-release/git',
       {
-        messages: 'chore(release): <%= nextRelease.version %>',
         assets: ['CHANGELOG.md', 'package.json', 'package-lock.json'],
       },
     ],
@@ -33,15 +32,15 @@ module.exports = {
             label: 'Package JSON',
           },
           {
-            path: 'dist/webexComponents.cjs.*',
+            path: 'dist/webexComponents.cjs.js',
             label: 'Common JS distribution',
           },
           {
-            path: 'dist/webexComponents.umd.*',
+            path: 'dist/webexComponents.umd.js',
             label: 'Universal Module Definition JS distribution',
           },
           {
-            path: 'dist/webexComponents.esm.*',
+            path: 'dist/webexComponents.esm.js',
             label: 'ECMAScript module JS distribution',
           },
         ],
