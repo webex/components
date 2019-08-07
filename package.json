@@ -40,6 +40,8 @@
     "@babel/preset-react": "^7.0.0",
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
+    "@semantic-release/changelog": "^3.0.4",
+    "@semantic-release/git": "^7.0.16",
     "@storybook/react": "^5.1.9",
     "@webex/eslint-config-base": "^0.8.0",
     "@webex/eslint-config-react": "^0.8.0",

@@ -15,7 +15,15 @@ module.exports = {
         },
       },
     ],
+    '@semantic-release/changelog',
     '@semantic-release/npm',
+    [
+      '@semantic-release/git',
+      {
+        messages: 'chore(release): <%= nextRelease.version %>',
+        assets: ['CHANGELOG.md', 'package.json', 'package-lock.json'],
+      },
+    ],
     [
       '@semantic-release/github',
       {
@@ -23,10 +31,6 @@ module.exports = {
           {
             path: 'package.json',
             label: 'Package JSON',
-          },
-          {
-            path: 'npm-shrinkwrap.json',
-            label: 'NPM',
           },
           {
             path: 'dist/webexComponents.cjs.*',
