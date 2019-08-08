@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/webex/components/compare/v1.2.0...v1.2.1) (2019-08-08)
+
+
+### Bug Fixes
+
+* **release:** use default commit message to push to master ([4f20a1c](https://github.com/webex/components/commit/4f20a1c))
+
 # [1.2.0](https://github.com/webex/components/compare/v1.1.0...v1.2.0) (2019-08-07)
 
 
