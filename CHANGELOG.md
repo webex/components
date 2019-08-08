@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/webex/components/compare/v1.2.1...v1.3.0) (2019-08-08)
+
+
+### Features
+
+* **peopleadapter:** create an interface ([3756f53](https://github.com/webex/components/commit/3756f53))
+
 ## [1.2.1](https://github.com/webex/components/compare/v1.2.0...v1.2.1) (2019-08-08)
 
 
