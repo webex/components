@@ -31,7 +31,8 @@
     "react-dom": "^16.8.6"
   },
   "dependencies": {
-    "@momentum-ui/react": "^20.1.1"
+    "@momentum-ui/react": "^20.1.1",
+    "rxjs": "^6.5.2"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
