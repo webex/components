@@ -40,4 +40,5 @@ reports/
 !.env.default
 !package.json
 !package-lock.json
+!src/data/*.json
 node_modules/
