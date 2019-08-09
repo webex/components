@@ -26,7 +26,8 @@
     "renderWithIntl": true,
     "shallow": true,
     "render": true,
-    "mount": true
+    "mount": true,
+    "rxjs": true,
   },
   "rules": {
     "arrow-body-style": [
