@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Webex Avatar component: exists 1`] = `
+exports[`Webex Avatar component matches snapshot with "active" person status 1`] = `
 <Avatar
-  alt=""
+  alt="Webex Component User"
   backgroundColor=""
   buttonClassName=""
   className={null}
@@ -15,9 +15,229 @@ exports[`Webex Avatar component: exists 1`] = `
   isOverview={false}
   onClick={null}
   size="medium"
-  src={null}
+  src="https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600"
   theme={null}
-  title={null}
+  title="Webex Component User"
+  type="active"
+/>
+`;
+
+exports[`Webex Avatar component matches snapshot with "bot" person status 1`] = `
+<Avatar
+  alt="Webex Component User"
+  backgroundColor=""
+  buttonClassName=""
+  className={null}
+  color=""
+  failureBadge={false}
+  hasNotification={false}
+  hideDefaultTooltip={false}
+  icon={null}
+  isDecrypting={false}
+  isOverview={false}
+  onClick={null}
+  size="medium"
+  src="https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600"
+  theme={null}
+  title="Webex Component User"
+  type="bot"
+/>
+`;
+
+exports[`Webex Avatar component matches snapshot with "call" person status 1`] = `
+<Avatar
+  alt="Webex Component User"
+  backgroundColor=""
+  buttonClassName=""
+  className={null}
+  color=""
+  failureBadge={false}
+  hasNotification={false}
+  hideDefaultTooltip={false}
+  icon={null}
+  isDecrypting={false}
+  isOverview={false}
+  onClick={null}
+  size="medium"
+  src="https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600"
+  theme={null}
+  title="Webex Component User"
+  type="call"
+/>
+`;
+
+exports[`Webex Avatar component matches snapshot with "default" status 1`] = `
+<Avatar
+  alt="Webex Component User"
+  backgroundColor=""
+  buttonClassName=""
+  className={null}
+  color=""
+  failureBadge={false}
+  hasNotification={false}
+  hideDefaultTooltip={false}
+  icon={null}
+  isDecrypting={false}
+  isOverview={false}
+  onClick={null}
+  size="medium"
+  src="https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600"
+  theme={null}
+  title="Webex Component User"
   type=""
+/>
+`;
+
+exports[`Webex Avatar component matches snapshot with "dnd" person status 1`] = `
+<Avatar
+  alt="Webex Component User"
+  backgroundColor=""
+  buttonClassName=""
+  className={null}
+  color=""
+  failureBadge={false}
+  hasNotification={false}
+  hideDefaultTooltip={false}
+  icon={null}
+  isDecrypting={false}
+  isOverview={false}
+  onClick={null}
+  size="medium"
+  src="https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600"
+  theme={null}
+  title="Webex Component User"
+  type="dnd"
+/>
+`;
+
+exports[`Webex Avatar component matches snapshot with "inactive" person status 1`] = `
+<Avatar
+  alt="Webex Component User"
+  backgroundColor=""
+  buttonClassName=""
+  className={null}
+  color=""
+  failureBadge={false}
+  hasNotification={false}
+  hideDefaultTooltip={false}
+  icon={null}
+  isDecrypting={false}
+  isOverview={false}
+  onClick={null}
+  size="medium"
+  src="https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600"
+  theme={null}
+  title="Webex Component User"
+  type="inactive"
+/>
+`;
+
+exports[`Webex Avatar component matches snapshot with "meeting" person status 1`] = `
+<Avatar
+  alt="Webex Component User"
+  backgroundColor=""
+  buttonClassName=""
+  className={null}
+  color=""
+  failureBadge={false}
+  hasNotification={false}
+  hideDefaultTooltip={false}
+  icon={null}
+  isDecrypting={false}
+  isOverview={false}
+  onClick={null}
+  size="medium"
+  src="https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600"
+  theme={null}
+  title="Webex Component User"
+  type="meeting"
+/>
+`;
+
+exports[`Webex Avatar component matches snapshot with "ooo" person status 1`] = `
+<Avatar
+  alt="Webex Component User"
+  backgroundColor=""
+  buttonClassName=""
+  className={null}
+  color=""
+  failureBadge={false}
+  hasNotification={false}
+  hideDefaultTooltip={false}
+  icon={null}
+  isDecrypting={false}
+  isOverview={false}
+  onClick={null}
+  size="medium"
+  src="https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600"
+  theme={null}
+  title="Webex Component User"
+  type="ooo"
+/>
+`;
+
+exports[`Webex Avatar component matches snapshot with "presenting" person status 1`] = `
+<Avatar
+  alt="Webex Component User"
+  backgroundColor=""
+  buttonClassName=""
+  className={null}
+  color=""
+  failureBadge={false}
+  hasNotification={false}
+  hideDefaultTooltip={false}
+  icon={null}
+  isDecrypting={false}
+  isOverview={false}
+  onClick={null}
+  size="medium"
+  src="https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600"
+  theme={null}
+  title="Webex Component User"
+  type="presenting"
+/>
+`;
+
+exports[`Webex Avatar component matches snapshot with "self" person status 1`] = `
+<Avatar
+  alt="Webex Component User"
+  backgroundColor=""
+  buttonClassName=""
+  className={null}
+  color=""
+  failureBadge={false}
+  hasNotification={false}
+  hideDefaultTooltip={false}
+  icon={null}
+  isDecrypting={false}
+  isOverview={false}
+  onClick={null}
+  size="medium"
+  src="https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600"
+  theme={null}
+  title="Webex Component User"
+  type="self"
+/>
+`;
+
+exports[`Webex Avatar component matches snapshot with "typing" person status 1`] = `
+<Avatar
+  alt="Webex Component User"
+  backgroundColor=""
+  buttonClassName=""
+  className={null}
+  color=""
+  failureBadge={false}
+  hasNotification={false}
+  hideDefaultTooltip={false}
+  icon={null}
+  isDecrypting={false}
+  isOverview={false}
+  onClick={null}
+  size="medium"
+  src="https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600"
+  theme={null}
+  title="Webex Component User"
+  type="typing"
 />
 `;
