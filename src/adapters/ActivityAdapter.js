@@ -9,6 +9,17 @@ import WebexAdapter from './WebexAdapter';
  */
 export default class ActivityAdapter extends WebexAdapter {
   /**
+   * An activity a person performs in Webex.
+   *
+   * @typedef {Object} Activity
+   * @property {string} ID        The activity identifier.
+   * @property {string} roomID    ID of the room where the activity happens.
+   * @property {string} text      Any text the activity may contain.
+   * @property {string} personID  ID of the person performing the activity.
+   * @property {Date}   created   Timestamp of the time when the activity happened.
+   */
+
+  /**
    * Returns an observable that emits message data of the given ID.
    *
    * @param {string} ID  ID of the message to get.
