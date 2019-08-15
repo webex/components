@@ -7,14 +7,33 @@ import {throwError} from 'rxjs';
  */
 export default class PeopleAdapter {
   /**
-   * Returns an observable that emits person data
+   * The status a person can have.
+   * @typedef {null|'active'|'bot'|'call'|'dnd'|'group'|'inactive'|'meeting'|'ooo'|'presenting'|'self'|'typing'} PersonStatus
+   */
+
+  /**
+   * A Person object with details about the person.
+   * @typedef {Object} Person
+   * @property {string}         ID          The person identifier.
+   * @property {Array.<string>} emails      An array of emails for the person.
+   * @property {string}         displayName The name to be displayed for the person.
+   * @property {string}         firstName   The first name of the person.
+   * @property {string}         lastName    The last name of the person.
+   * @property {string}         nickName    The short name for the person.
+   * @property {string}         avatar      The full url to the person's avatar.
+   * @property {string}         orgID       The ID of the organization the person belongs to.
+   * @property {PersonStatus}   status      The presence status of the user.
+   */
+
+  /**
+   * Returns an observable that emits person data of the given ID.
    *
-   * @param {String} id - ID of person to get
-   * @returns {Observable<PersonObject>}
+   * @param {string} ID ID of person to get.
+   * @returns {Observable.<Person>}
    * @memberof PeopleAdapter
    */
   // eslint-disable-next-line no-unused-vars
-  getPerson(id) {
-    return throwError(new Error('getPerson(id) must be defined in PeopleAdapter'));
+  getPerson(ID) {
+    return throwError(new Error('getPerson(ID) must be defined in PeopleAdapter'));
   }
 }
