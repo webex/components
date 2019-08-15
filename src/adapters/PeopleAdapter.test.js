@@ -15,7 +15,7 @@ describe('People Adapter Interface', () => {
     peopleAdapter.getPerson('id').subscribe(
       () => {},
       (error) => {
-        expect(error.message).toBe('getPerson(id) must be defined in PeopleAdapter');
+        expect(error.message).toBe('getPerson(ID) must be defined in PeopleAdapter');
         done();
       }
     );
