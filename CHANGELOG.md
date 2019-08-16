@@ -1,3 +1,13 @@
+# [1.5.0](https://github.com/webex/components/compare/v1.4.0...v1.5.0) (2019-08-16)
+
+
+### Features
+
+* **webexadapter:** add datasource instance property ([d244e13](https://github.com/webex/components/commit/d244e13))
+* **peopleadapter:** extend WebexAdapter ([3be7202](https://github.com/webex/components/commit/3be7202))
+* **peopleadapter:** init with json data ([d498811](https://github.com/webex/components/commit/d498811))
+* **persondata:** update shape ([8be1928](https://github.com/webex/components/commit/8be1928))
+
 # [1.4.0](https://github.com/webex/components/compare/v1.3.0...v1.4.0) (2019-08-09)
 
 
