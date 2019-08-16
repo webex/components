@@ -1,11 +1,13 @@
 import {throwError} from 'rxjs';
 
+import WebexAdapter from './WebexAdapter';
+
 /**
  * This is a base class that defines the interface that maps people data.
  * Developers that want to extend `PeopleAdapter` must implement all of its methods,
- * adhering to the exact parameters and structure of the returned objects
+ * adhering to the exact parameters and structure of the returned objects.
  */
-export default class PeopleAdapter {
+export default class PeopleAdapter extends WebexAdapter {
   /**
    * The status a person can have.
    * @typedef {null|'active'|'bot'|'call'|'dnd'|'group'|'inactive'|'meeting'|'ooo'|'presenting'|'self'|'typing'} PersonStatus
