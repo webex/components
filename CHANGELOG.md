@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/webex/components/compare/v1.5.0...v1.6.0) (2019-08-19)
+
+
+### Features
+
+* **activity:** add ActivityAdapter interface ([b446e0d](https://github.com/webex/components/commit/b446e0d))
+
 # [1.5.0](https://github.com/webex/components/compare/v1.4.0...v1.5.0) (2019-08-16)
 
 
