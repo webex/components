@@ -3,6 +3,11 @@ import {Observable} from 'rxjs';
 import PeopleAdapter from './PeopleAdapter';
 
 export default class PeopleJSONAdapter extends PeopleAdapter {
+  constructor(datasource) {
+    super(datasource);
+    this.getPerson = this.getPerson.bind(this);
+  }
+
   /**
    * @typedef PeopleJSON
    * @param {object} datasource An object that contains a set of people keyed by ID.
