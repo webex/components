@@ -29,16 +29,17 @@ export const PersonStatus = {
 export default class PeopleAdapter extends WebexAdapter {
   /**
    * A Person object with details about the person.
+   *
    * @typedef {Object} Person
-   * @property {string}               ID          The person identifier.
-   * @property {Array.<string>}       emails      An array of emails for the person.
-   * @property {string}               displayName The name to be displayed for the person.
-   * @property {string}               firstName   The first name of the person.
-   * @property {string}               lastName    The last name of the person.
-   * @property {string}               nickName    The short name for the person.
-   * @property {string}               avatar      The full url to the person's avatar.
-   * @property {string}               orgID       The ID of the organization the person belongs to.
-   * @property {null|PersonStatus}    status      The presence status of the user. @see PersonStatus enum
+   * @property {string}             ID          The person identifier.
+   * @property {Array.<string>}     emails      An array of emails for the person.
+   * @property {string}             displayName The name to be displayed for the person.
+   * @property {string}             firstName   The first name of the person.
+   * @property {string}             lastName    The last name of the person.
+   * @property {string}             nickName    The short name for the person.
+   * @property {string}             avatar      The full url to the person's avatar.
+   * @property {string}             orgID       The ID of the organization the person belongs to.
+   * @property {null|PersonStatus}  status      The presence status of the user. @see PersonStatus enum
    */
 
   /**
