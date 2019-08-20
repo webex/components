@@ -1,3 +1,17 @@
+# [1.7.0](https://github.com/webex/components/compare/v1.6.0...v1.7.0) (2019-08-20)
+
+
+### Bug Fixes
+
+* **people:** rename person filename to people ([82d9731](https://github.com/webex/components/commit/82d9731))
+
+
+### Features
+
+* **people:** create person status enum ([27843f8](https://github.com/webex/components/commit/27843f8))
+* **avatar:** implement the component ([5e35eec](https://github.com/webex/components/commit/5e35eec))
+* **person:** re-format the object and some prop values ([728bc4b](https://github.com/webex/components/commit/728bc4b))
+
 # [1.6.0](https://github.com/webex/components/compare/v1.5.0...v1.6.0) (2019-08-19)
 
 
