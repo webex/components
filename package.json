@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-proposal-export-default-from": "^7.5.2",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
@@ -84,8 +85,9 @@
       "@babel/preset-react"
     ],
     "plugins": [
-      "@babel/plugin-proposal-object-rest-spread",
-      "@babel/plugin-proposal-export-default-from"
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-proposal-export-default-from",
+      "@babel/plugin-proposal-object-rest-spread"
     ]
   },
   "jest": {
