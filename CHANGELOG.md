@@ -1,3 +1,17 @@
+# [1.8.0](https://github.com/webex/components/compare/v1.7.0...v1.8.0) (2019-08-22)
+
+
+### Bug Fixes
+
+* **ActivityAdapter:** replace activity with activities ([4006b47](https://github.com/webex/components/commit/4006b47))
+* **avatar:** replace person with people ([c850dbf](https://github.com/webex/components/commit/c850dbf))
+* **PeopleJson:** reword some terms to map accordingly ([38991ce](https://github.com/webex/components/commit/38991ce))
+
+
+### Features
+
+* **ActivityJson:** implement the adapter ([f5f892b](https://github.com/webex/components/commit/f5f892b))
+
 # [1.7.0](https://github.com/webex/components/compare/v1.6.0...v1.7.0) (2019-08-20)
 
 
