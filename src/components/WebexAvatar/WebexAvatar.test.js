@@ -2,7 +2,7 @@ import React from 'react';
 
 import PeopleJSONAdapter from '../../adapters/PeopleJSONAdapter';
 import {PersonStatus} from '../../adapters/PeopleAdapter';
-import person from '../../data/people';
+import people from '../../data/people';
 
 import WebexAvatar from './WebexAvatar';
 
@@ -10,8 +10,8 @@ describe('Webex Avatar component', () => {
   let personID, peopleJSONAdapter;
 
   beforeEach(() => {
-    [personID] = Object.keys(person);
-    peopleJSONAdapter = new PeopleJSONAdapter(person);
+    [personID] = Object.keys(people);
+    peopleJSONAdapter = new PeopleJSONAdapter(people);
     global.console.error = jest.fn();
   });
 

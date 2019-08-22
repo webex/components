@@ -3,13 +3,13 @@ import {storiesOf} from '@storybook/react';
 
 import PeopleJSONAdapter from '../../adapters/PeopleJSONAdapter';
 import {PersonStatus} from '../../adapters/PeopleAdapter';
-import person from '../../data/people';
+import people from '../../data/people';
 
 import WebexAvatar from './WebexAvatar';
 
 // Setup for the stories
-const [personID] = Object.keys(person);
-const peopleJSONAdapter = new PeopleJSONAdapter(person);
+const [personID] = Object.keys(people);
+const peopleJSONAdapter = new PeopleJSONAdapter(people);
 const stories = storiesOf('Webex Avatar', module);
 
 // Stories
