@@ -2,12 +2,12 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {Avatar} from '@momentum-ui/react';
 
-const propTypes = {
-  personID: PropTypes.string.isRequired,
-  adapter: PropTypes.object.isRequired,
-};
-
 export default class WebexAvatar extends PureComponent {
+  static propTypes = {
+    personID: PropTypes.string.isRequired,
+    adapter: PropTypes.object.isRequired,
+  };
+
   constructor(props) {
     super(props);
     this.props = props;
@@ -30,5 +30,3 @@ export default class WebexAvatar extends PureComponent {
     return <Avatar src={avatar} title={displayName} type={status} alt={displayName} />;
   }
 }
-
-WebexAvatar.propTypes = propTypes;
