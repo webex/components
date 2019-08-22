@@ -1,13 +1,12 @@
-import person from './../data/people';
+import people from './../data/people';
 import PeopleJSONAdapter from './PeopleJSONAdapter';
 
 describe('People Adapter Interface', () => {
-  let peopleJSONAdapter, peopleJSON;
+  let peopleJSONAdapter, personID;
 
   beforeEach(() => {
-    peopleJSON = {};
-    peopleJSON[person.ID] = person;
-    peopleJSONAdapter = new PeopleJSONAdapter(peopleJSON);
+    [personID] = Object.keys(people);
+    peopleJSONAdapter = new PeopleJSONAdapter(people);
   });
 
   test('getPerson() returns an observable', () => {
@@ -15,26 +14,26 @@ describe('People Adapter Interface', () => {
   });
 
   test('getPerson() returns a person data', (done) => {
-    peopleJSONAdapter.getPerson(person.ID).subscribe((data) => {
-      expect(data).toEqual(person);
+    peopleJSONAdapter.getPerson(personID).subscribe((data) => {
+      expect(data).toEqual(people[personID]);
       done();
     });
   });
 
   test('getPerson() throws a proper error message', (done) => {
-    const personID = 'personID';
+    const wrongPersonID = 'wrongPersonID';
 
-    peopleJSONAdapter.getPerson(personID).subscribe(
+    peopleJSONAdapter.getPerson(wrongPersonID).subscribe(
       () => {},
       (error) => {
-        expect(error.message).toBe(`Could not find person with ID "${personID}"`);
+        expect(error.message).toBe(`Could not find person with ID "${wrongPersonID}"`);
         done();
       }
     );
   });
 
   test('getPerson() completes the observable', (done) => {
-    peopleJSONAdapter.getPerson(person.ID).subscribe(
+    peopleJSONAdapter.getPerson(personID).subscribe(
       () => {},
       () => {},
       () => {

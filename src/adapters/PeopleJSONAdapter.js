@@ -2,32 +2,35 @@ import {Observable} from 'rxjs';
 
 import PeopleAdapter from './PeopleAdapter';
 
+/**
+ * @typedef PeopleJSON
+ * @param {object} datasource An object that contains a set of people keyed by ID.
+ * @example
+ * {
+ *   "userid-1": {
+ *     "ID": "userid-1",
+ *     "emails": [
+ *       "webexcmps@gmail.com"
+ *     ],
+ *     "displayName": "Webex Component User",
+ *     "firstName": "Webex",
+ *     "LastName": "Component User",
+ *     "nickName": "Webex",
+ *     "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~697607d5347442a990719dd5d80ce379~1600",
+ *     "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+ *     "status": "unknown"
+ *    }
+ * }
+ */
+
+/*
+ * Implements the PeopleAdapter interface with a JSON object as its datasource. See @PeopleJSON
+ */
 export default class PeopleJSONAdapter extends PeopleAdapter {
   constructor(datasource) {
     super(datasource);
     this.getPerson = this.getPerson.bind(this);
   }
-
-  /**
-   * @typedef PeopleJSON
-   * @param {object} datasource An object that contains a set of people keyed by ID.
-   * @example
-   * {
-   *   "userid-1": {
-   *     "ID": "userid-1",
-   *     "emails": [
-   *       "webexcmps@gmail.com"
-   *     ],
-   *     "displayName": "Webex Component User",
-   *     "firstName": "Webex",
-   *     "LastName": "Component User",
-   *     "nickName": "Webex",
-   *     "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~697607d5347442a990719dd5d80ce379~1600",
-   *     "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
-   *     "status": "unknown"
-   *    }
-   * }
-   */
 
   /**
    * Returns an observable that emits person data of the given ID.
