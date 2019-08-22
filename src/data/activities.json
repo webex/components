@@ -1,0 +1,10 @@
+{
+  "activity-1": {
+    "ID": "activity-1",
+    "roomID": "roomID",
+    "text": "text",
+    "personID": "personID",
+    "created": "created",
+    "displayAuthor": false
+  }
+}
