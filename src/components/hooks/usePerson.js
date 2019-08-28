@@ -18,7 +18,8 @@ export default function usePerson(personID, adapter) {
     return () => {
       subscription.unsubscribe();
     };
-  }, [person]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return person;
 }
