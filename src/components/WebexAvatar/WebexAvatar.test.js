@@ -6,6 +6,8 @@ import people from '../../data/people';
 
 import WebexAvatar from './WebexAvatar';
 
+jest.mock('../hooks/usePerson');
+
 describe('Webex Avatar component', () => {
   let personID, peopleJSONAdapter;
 
