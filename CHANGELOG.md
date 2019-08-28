@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/webex/components/compare/v1.8.0...v1.9.0) (2019-08-28)
+
+
+### Features
+
+* **hooks:** add usePerson react hook ([aafd563](https://github.com/webex/components/commit/aafd563))
+
 # [1.8.0](https://github.com/webex/components/compare/v1.7.0...v1.8.0) (2019-08-22)
 
 
