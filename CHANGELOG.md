@@ -1,3 +1,17 @@
+# [1.10.0](https://github.com/webex/components/compare/v1.9.1...v1.10.0) (2019-08-29)
+
+
+### Bug Fixes
+
+* **storybook:** prettify ([ca23def](https://github.com/webex/components/commit/ca23def))
+
+
+### Features
+
+* **data:** add index module ([a3fbe9a](https://github.com/webex/components/commit/a3fbe9a))
+* **storybook:** configure sass-resource-loader ([3583a2e](https://github.com/webex/components/commit/3583a2e))
+* **WebexActivity:** implement component ([9741751](https://github.com/webex/components/commit/9741751))
+
 ## [1.9.1](https://github.com/webex/components/compare/v1.9.0...v1.9.1) (2019-08-29)
 
 
