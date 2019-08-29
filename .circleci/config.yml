@@ -9,7 +9,7 @@ executors:
 # reusable command for all jobs
 commands:
   checkout_from_cache:
-    description: "To checkout and restore the dependencies cache"
+    description: 'To checkout and restore the dependencies cache'
     steps:
       - checkout
       - restore_cache:
@@ -25,7 +25,7 @@ jobs:
       - checkout_from_cache
       - run:
           name: Install Dependencies
-          command: npm install
+          command: npm ci
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths: node_modules
@@ -41,13 +41,17 @@ jobs:
           command: npm run test:coverage
       - store_test_results:
           path: test_results
-  release:
+  build:
     executor: main-executor
     steps:
       - checkout_from_cache
       - run:
           name: build
           command: npm run build
+  release:
+    executor: main-executor
+    steps:
+      - checkout_from_cache
       - run:
           name: release
           command: npm run release
@@ -61,9 +65,15 @@ workflows:
       - test:
           requires:
             - install
-      - release:
+      - build:
           requires:
             - test
+          filters:
+            branches:
+              only: master
+      - release:
+          requires:
+            - build
           filters:
             branches:
               only: master
