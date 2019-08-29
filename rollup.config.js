@@ -2,6 +2,7 @@ import babel from 'rollup-plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
 import commonJS from 'rollup-plugin-commonjs';
 import json from 'rollup-plugin-json';
+import scss from 'rollup-plugin-scss';
 
 const output = (name, format) => ({
   name,
@@ -23,7 +24,7 @@ export default [
       output('UMDWebexComponents', 'umd'),
       output('ESMWebexComponents', 'esm'),
     ],
-    plugins: [resolve(), babel(), commonJS(), json()],
+    plugins: [resolve(), babel(), commonJS(), json(), scss()],
     onwarn(warning, warn) {
       // skip circular dependency warnings from @momentum-ui/react library
       if (warning.code === 'CIRCULAR_DEPENDENCY') return;
