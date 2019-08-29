@@ -1,5 +1,5 @@
-$brand-font-folder: 'node_modules/@momentum-ui/core/fonts';
-$icon-font-path: 'node_modules/@momentum-ui/icons/fonts';
-$images-path: 'node_modules/@momentum-ui/core/images';
+$brand-font-folder: '~@momentum-ui/core/fonts';
+$icon-font-path: '~@momentum-ui/icons/fonts';
+$images-path: '~@momentum-ui/core/images';
 
-@import 'node_modules/@momentum-ui/core/scss/momentum-ui';
+@import '~@momentum-ui/core/scss/momentum-ui';
