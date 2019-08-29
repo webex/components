@@ -1,3 +1,10 @@
+## [1.9.1](https://github.com/webex/components/compare/v1.9.0...v1.9.1) (2019-08-29)
+
+
+### Bug Fixes
+
+* **hooks:** add dependencies to effect hook ([bd93a90](https://github.com/webex/components/commit/bd93a90))
+
 # [1.9.0](https://github.com/webex/components/compare/v1.8.0...v1.9.0) (2019-08-28)
 
 
