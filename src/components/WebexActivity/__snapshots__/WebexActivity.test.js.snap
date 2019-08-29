@@ -1,0 +1,278 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Webex Activity component Header component snapshot matches snapshot with "default" props 1`] = `
+<div
+  className="activity-header"
+>
+  <WebexAvatar
+    adapter={
+      PeopleJSONAdapter {
+        "datasource": Object {
+          "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM": Object {
+            "ID": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": null,
+          },
+        },
+        "getPerson": [Function],
+      }
+    }
+    personID="Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM"
+  />
+  <div
+    className="activity-author"
+  >
+    <span>
+      Webex Component User
+    </span>
+    <span
+      className="activity-timestamp"
+    >
+      2019-08-20T21:00:07.047Z P p
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Webex Activity component Webex Activity snapshots matches snapshot with "default" text 1`] = `
+<div
+  className="activity"
+  key="activity-1"
+>
+  <Header
+    adapter={
+      PeopleJSONAdapter {
+        "datasource": Object {
+          "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM": Object {
+            "ID": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": null,
+          },
+        },
+        "getPerson": [Function],
+      }
+    }
+    created="2019-08-20T21:00:07.047Z"
+    personID="Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM"
+  />
+  <div
+    className="activity-content"
+  >
+    text
+  </div>
+</div>
+`;
+
+exports[`Webex Activity component Webex Activity snapshots matches snapshot with "long" text 1`] = `
+<div
+  className="activity"
+  key="activity-1"
+>
+  <Header
+    adapter={
+      PeopleJSONAdapter {
+        "datasource": Object {
+          "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM": Object {
+            "ID": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": null,
+          },
+        },
+        "getPerson": [Function],
+      }
+    }
+    created="2019-08-20T21:00:07.047Z"
+    personID="Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM"
+  />
+  <div
+    className="activity-content"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+</div>
+`;
+
+exports[`Webex Activity component Webex Activity snapshots matches snapshot with a text from the same week 1`] = `
+<div
+  className="activity"
+  key="activity-1"
+>
+  <Header
+    adapter={
+      PeopleJSONAdapter {
+        "datasource": Object {
+          "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM": Object {
+            "ID": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": null,
+          },
+        },
+        "getPerson": [Function],
+      }
+    }
+    created="sameWeek"
+    personID="Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM"
+  />
+  <div
+    className="activity-content"
+  >
+    text
+  </div>
+</div>
+`;
+
+exports[`Webex Activity component Webex Activity snapshots matches snapshot with a text from today 1`] = `
+<div
+  className="activity"
+  key="activity-1"
+>
+  <Header
+    adapter={
+      PeopleJSONAdapter {
+        "datasource": Object {
+          "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM": Object {
+            "ID": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": null,
+          },
+        },
+        "getPerson": [Function],
+      }
+    }
+    created="today"
+    personID="Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM"
+  />
+  <div
+    className="activity-content"
+  >
+    text
+  </div>
+</div>
+`;
+
+exports[`Webex Activity component Webex Activity snapshots matches snapshot with a text from yesterday 1`] = `
+<div
+  className="activity"
+  key="activity-1"
+>
+  <Header
+    adapter={
+      PeopleJSONAdapter {
+        "datasource": Object {
+          "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM": Object {
+            "ID": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": null,
+          },
+        },
+        "getPerson": [Function],
+      }
+    }
+    created="yesterday"
+    personID="Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM"
+  />
+  <div
+    className="activity-content"
+  >
+    text
+  </div>
+</div>
+`;
+
+exports[`Webex Activity component Webex Activity snapshots matches snapshot with a text over a week ago 1`] = `
+<div
+  className="activity"
+  key="activity-1"
+>
+  <Header
+    adapter={
+      PeopleJSONAdapter {
+        "datasource": Object {
+          "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM": Object {
+            "ID": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": null,
+          },
+        },
+        "getPerson": [Function],
+      }
+    }
+    created="old"
+    personID="Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM"
+  />
+  <div
+    className="activity-content"
+  >
+    text
+  </div>
+</div>
+`;
+
+exports[`Webex Activity component Webex Activity snapshots matches snapshot with an activity without header 1`] = `
+<div
+  className="activity"
+  key="activity-1"
+>
+  <div
+    className="activity-content"
+  >
+    text
+  </div>
+</div>
+`;

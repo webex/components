@@ -10,3 +10,13 @@ global.shallow = shallow;
 global.render = render;
 global.mount = mount;
 global.rxjs = rxjs;
+global.Date = class extends Date {
+  constructor(date) {
+    super();
+    this.dateString = date || 'now';
+  }
+
+  toString() {
+    return this.dateString;
+  }
+};
