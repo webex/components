@@ -8,11 +8,12 @@ import {useState, useEffect} from 'react';
  * @returns {Person} Data of the person
  */
 export default function usePerson(personID, adapter) {
-  const [person, setPerson] = useState(undefined);
+  const [person, setPerson] = useState({});
 
   useEffect(() => {
-    // eslint-disable-next-line no-console
-    const onError = (error) => console.error(error.message);
+    const onError = (error) => {
+      throw error;
+    };
     const subscription = adapter.getPerson(personID).subscribe(setPerson, onError);
 
     return () => {

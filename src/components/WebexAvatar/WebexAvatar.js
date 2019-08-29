@@ -5,16 +5,10 @@ import {Avatar} from '@momentum-ui/react';
 import usePerson from '../hooks/usePerson';
 
 export default function WebexAvatar(props) {
-  let component = null;
-  const person = usePerson(props.personID, props.adapter);
+  const {personID, adapter} = props;
+  const {avatar, displayName, status} = usePerson(personID, adapter);
 
-  if (person) {
-    const {avatar, displayName, status} = person;
-
-    component = <Avatar src={avatar} title={displayName} type={status} alt={displayName} />;
-  }
-
-  return component;
+  return <Avatar src={avatar} title={displayName} type={status} alt={displayName} />;
 }
 
 WebexAvatar.propTypes = {
