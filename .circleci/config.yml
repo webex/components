@@ -8,31 +8,36 @@ executors:
 
 # reusable command for all jobs
 commands:
-  checkout_from_cache:
-    description: 'To checkout and restore the dependencies cache'
+  checkout_from_workspace:
+    description: 'To checkout and attach the workspace'
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - dependency-cache-{{ checksum "package.json" }}
-            - dependency-cache-
+      - attach_workspace:
+          at: ~/webex-components
 
 # define jobs
 jobs:
   install:
     executor: main-executor
     steps:
-      - checkout_from_cache
+      - checkout
+      - restore_cache:
+          keys:
+            - dependency-cache-{{ checksum "package-lock.json" }}
       - run:
           name: Install Dependencies
-          command: npm ci
+          command: npm i
       - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-{{ checksum "package-lock.json" }}
           paths: node_modules
+      - persist_to_workspace:
+          root: .
+          paths: node_modules
+
   test:
     executor: main-executor
     steps:
-      - checkout_from_cache
+      - checkout_from_workspace
       - run:
           name: Linting
           command: npm run test:eslint
@@ -41,24 +46,28 @@ jobs:
           command: npm run test:coverage
       - store_test_results:
           path: test_results
+
   build:
     executor: main-executor
     steps:
-      - checkout_from_cache
+      - checkout_from_workspace
       - run:
-          name: build
+          name: Build
           command: npm run build
+      - persist_to_workspace:
+          root: .
+          paths: dist
+
   release:
     executor: main-executor
     steps:
-      - checkout_from_cache
+      - checkout_from_workspace
       - run:
-          name: release
+          name: Release
           command: npm run release
 
 # execute the jobs in a orderly manner
 workflows:
-  version: 2
   setup_test_release:
     jobs:
       - install
