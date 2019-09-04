@@ -1,3 +1,10 @@
+## [1.10.2](https://github.com/webex/components/compare/v1.10.1...v1.10.2) (2019-09-04)
+
+
+### Performance Improvements
+
+* **circleci:** use workspace to presist the data between the jobs ([c4aa0b8](https://github.com/webex/components/commit/c4aa0b8))
+
 ## [1.10.1](https://github.com/webex/components/compare/v1.10.0...v1.10.1) (2019-08-30)
 
 
