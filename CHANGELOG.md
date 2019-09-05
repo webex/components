@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/webex/components/compare/v1.10.2...v1.11.0) (2019-09-05)
+
+
+### Features
+
+* **rooms:** create adapter interface ([408e6bc](https://github.com/webex/components/commit/408e6bc))
+
 ## [1.10.2](https://github.com/webex/components/compare/v1.10.1...v1.10.2) (2019-09-04)
 
 
