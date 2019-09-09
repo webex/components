@@ -1,7 +1,7 @@
 import people from './../data/people';
 import PeopleJSONAdapter from './PeopleJSONAdapter';
 
-describe('People Adapter Interface', () => {
+describe('People JSON Adapter Interface', () => {
   let peopleJSONAdapter, personID;
 
   beforeEach(() => {
