@@ -2,10 +2,10 @@ import rooms from './../data/rooms';
 import RoomsJSONAdapter from './RoomsJSONAdapter';
 
 describe('Rooms JSON Adapter Interface', () => {
-  let roomsJSONAdapter, roomID, roomActivitiesID;
+  let roomsJSONAdapter, roomID;
 
   beforeEach(() => {
-    [roomID, roomActivitiesID] = Object.keys(rooms);
+    [roomID] = Object.keys(rooms);
     roomsJSONAdapter = new RoomsJSONAdapter(rooms);
   });
 
@@ -13,7 +13,7 @@ describe('Rooms JSON Adapter Interface', () => {
     expect(rxjs.isObservable(roomsJSONAdapter.getRoom())).toBeTruthy();
   });
 
-  test('getRoom() returns a person data', (done) => {
+  test('getRoom() returns a room data', (done) => {
     roomsJSONAdapter.getRoom(roomID).subscribe((data) => {
       expect(data).toEqual(rooms[roomID]);
       done();
@@ -48,8 +48,8 @@ describe('Rooms JSON Adapter Interface', () => {
   });
 
   test('getPreviousRoomActivities() returns an array of previous activity IDs', (done) => {
-    roomsJSONAdapter.getPreviousRoomActivities(roomActivitiesID).subscribe((data) => {
-      expect(data).toEqual(rooms[roomActivitiesID]);
+    roomsJSONAdapter.getPreviousRoomActivities(roomID).subscribe((data) => {
+      expect(data).toEqual(rooms[`${roomID}-activities`]);
       done();
     });
   });
@@ -79,8 +79,8 @@ describe('Rooms JSON Adapter Interface', () => {
   });
 
   test('getRoomActivities() returns an array of previous activity IDs', (done) => {
-    roomsJSONAdapter.getRoomActivities(roomActivitiesID).subscribe((data) => {
-      expect(data).toEqual(rooms[roomActivitiesID]);
+    roomsJSONAdapter.getRoomActivities(roomID).subscribe((data) => {
+      expect(data).toEqual(rooms[`${roomID}-activities`]);
       done();
     });
   });
