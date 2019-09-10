@@ -55,7 +55,7 @@ export default class RoomsJSONAdapter extends RoomsAdapter {
    */
   getPreviousRoomActivities(ID) {
     return Observable.create((observer) => {
-      const data = !this.datasource[ID] ? [] : this.datasource[ID];
+      const data = !this.datasource[`${ID}-activities`] ? [] : this.datasource[`${ID}-activities`];
 
       observer.next(data);
 
@@ -72,7 +72,7 @@ export default class RoomsJSONAdapter extends RoomsAdapter {
    */
   getRoomActivities(ID) {
     return Observable.create((observer) => {
-      const data = !this.datasource[ID] ? [] : this.datasource[ID];
+      const data = !this.datasource[`${ID}-activities`] ? [] : this.datasource[`${ID}-activities`];
 
       observer.next(data);
 
