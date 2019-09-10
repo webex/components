@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/webex/components/compare/v1.11.0...v1.12.0) (2019-09-10)
+
+
+### Features
+
+* **rooms:** implemented rooms JSON adapter interface ([7d30e10](https://github.com/webex/components/commit/7d30e10))
+
 # [1.11.0](https://github.com/webex/components/compare/v1.10.2...v1.11.0) (2019-09-05)
 
 
