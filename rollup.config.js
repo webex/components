@@ -24,7 +24,22 @@ export default [
       output('UMDWebexComponents', 'umd'),
       output('ESMWebexComponents', 'esm'),
     ],
-    plugins: [resolve(), babel(), commonJS(), json(), scss()],
+    plugins: [
+      resolve(),
+      babel(),
+      commonJS(),
+      json(),
+      scss({
+        includePaths: ['node_modules'],
+        output: 'dist/webexComponents.css',
+        failOnError: true,
+        // remove `~` from node_modules import declarations.
+        // more info: https://github.com/facebook/create-react-app/issues/2859#issuecomment-318059618
+        importer(path) {
+          return {file: path[0] === '~' ? path.slice(1) : path};
+        },
+      }),
+    ],
     onwarn(warning, warn) {
       // skip circular dependency warnings from @momentum-ui/react library
       if (warning.code === 'CIRCULAR_DEPENDENCY') return;
