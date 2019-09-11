@@ -13,10 +13,7 @@ module.exports = async ({config, mode}) => {
       {
         loader: 'sass-resources-loader',
         options: {
-          resources: [
-            path.resolve(__dirname, '../src/styles/index.scss'),
-            path.resolve(__dirname, '../momentum-ui.scss'),
-          ],
+          resources: [path.resolve(__dirname, '../src/styles/index.scss')],
         },
       },
     ],
