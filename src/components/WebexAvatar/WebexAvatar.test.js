@@ -12,8 +12,8 @@ describe('Webex Avatar component', () => {
   let personID, newPeople, peopleAdapter;
 
   beforeEach(() => {
+    newPeople = {...people}; // Reset newPeople
     [personID] = Object.keys(people);
-    newPeople = people;
     peopleAdapter = new PeopleJSONAdapter(people);
   });
 
