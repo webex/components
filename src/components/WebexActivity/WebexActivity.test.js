@@ -12,7 +12,7 @@ describe('Webex Activity component', () => {
   let activityID, personID, adapters, newActivities;
 
   beforeEach(() => {
-    newActivities = {};
+    newActivities = {...activities}; // Reset newActivities
     [activityID] = Object.keys(activities);
     [personID] = Object.keys(people);
     adapters = {

@@ -13,8 +13,8 @@ describe('Webex Activity Stream component', () => {
   let roomID, newRooms, roomsAdapter;
 
   beforeEach(() => {
+    newRooms = {...rooms}; // Reset newRooms
     [roomID] = Object.keys(rooms);
-    newRooms = rooms;
     roomsAdapter = new RoomsJSONAdapter(rooms);
   });
 
