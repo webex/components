@@ -1,3 +1,12 @@
+## [1.12.1](https://github.com/webex/components/compare/v1.12.0...v1.12.1) (2019-09-11)
+
+
+### Bug Fixes
+
+* **style:** bundle momentum-ui styling modules ([9701887](https://github.com/webex/components/commit/9701887))
+* **activity:** export component from index file ([8ef4ddf](https://github.com/webex/components/commit/8ef4ddf))
+* **activity:** stringify date parameter ([4e3e8e0](https://github.com/webex/components/commit/4e3e8e0))
+
 # [1.12.0](https://github.com/webex/components/compare/v1.11.0...v1.12.0) (2019-09-10)
 
 
