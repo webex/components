@@ -175,7 +175,7 @@ exports[`Webex Activity Stream component Webex Activity Stream snapshots matches
   className="activity-stream"
 >
   <Greeting
-    personName="title"
+    personName="Webex Component User"
   />
 </div>
 `;
