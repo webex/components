@@ -1,3 +1,18 @@
+# [1.13.0](https://github.com/webex/components/compare/v1.12.1...v1.13.0) (2019-09-11)
+
+
+### Bug Fixes
+
+* **rooms:** change title to more appropiate name ([921fad3](https://github.com/webex/components/commit/921fad3))
+* **UnitTest:** copy an object immutably ([0672dfd](https://github.com/webex/components/commit/0672dfd))
+* **RoomsJsonAdapter:** invoke the appropiate method ([4246685](https://github.com/webex/components/commit/4246685))
+* **rooms:** seperate acitivities id from room id ([08b3ab6](https://github.com/webex/components/commit/08b3ab6))
+
+
+### Features
+
+* **ActivityStream:** implement empty state ([90c7c24](https://github.com/webex/components/commit/90c7c24))
+
 ## [1.12.1](https://github.com/webex/components/compare/v1.12.0...v1.12.1) (2019-09-11)
 
 
