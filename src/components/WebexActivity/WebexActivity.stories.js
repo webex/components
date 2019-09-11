@@ -77,7 +77,7 @@ stories.add('long text', () => {
 });
 
 stories.add('created today', () => {
-  const today = new Date();
+  const today = new Date().toString();
 
   newActivities[activityID] = {...activities[activityID], text: `${today}`, created: today};
 
@@ -93,7 +93,7 @@ stories.add('created today', () => {
 });
 
 stories.add('created yesterday', () => {
-  const yesterday = subDays(new Date(), 1);
+  const yesterday = subDays(new Date(), 1).toString();
 
   newActivities[activityID] = {
     ...activities[activityID],
@@ -114,7 +114,7 @@ stories.add('created yesterday', () => {
 
 stories.add('created this week', () => {
   // if it's sunday, make it a monday, otherwise pick the day before today
-  const thisWeek = getDay(new Date()) === 0 ? addDays(new Date(), 1) : subDays(new Date(), 2);
+  const thisWeek = getDay(new Date()) === 0 ? addDays(new Date(), 1) : subDays(new Date(), 2).toString();
 
   newActivities[activityID] = {...activities[activityID], text: `${thisWeek}`, created: thisWeek};
 
@@ -130,7 +130,7 @@ stories.add('created this week', () => {
 });
 
 stories.add('created over a week ago', () => {
-  const oldDate = subDays(new Date(), 7);
+  const oldDate = subDays(new Date(), 7).toString();
 
   newActivities[activityID] = {...activities[activityID], text: `${oldDate}`, created: oldDate};
 
