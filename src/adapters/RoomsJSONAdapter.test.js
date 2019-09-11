@@ -57,7 +57,7 @@ describe('Rooms JSON Adapter Interface', () => {
   test('getPreviousRoomActivities() returns an observable to an empty array for a given wrong room ID', (done) => {
     const wrongRoomActivitiesID = 'wrongRoomActivitiesID';
 
-    roomsJSONAdapter.getRoomActivities(wrongRoomActivitiesID).subscribe((data) => {
+    roomsJSONAdapter.getPreviousRoomActivities(wrongRoomActivitiesID).subscribe((data) => {
       expect(data).toEqual([]);
       done();
     });
