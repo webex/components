@@ -1,14 +1,20 @@
 {
   "default": {
     "ID": "default",
-    "title": "Webex Component User",
+    "title": "Test Room",
     "roomType": "group"
   },
-  "default-activities": [],
-  "direct": {
-    "ID": "direct",
+  "default-activities": ["default", "no-header", "long", "multi-line"],
+  "empty-space": {
+    "ID": "empty-space",
+    "title": "Empty Test Room",
+    "roomType": "group"
+  },
+  "empty-space-activities": [],
+  "empty-direct": {
+    "ID": "empty-direct",
     "title": "Webex Component User",
     "roomType": "direct"
   },
-  "direct-activities": []
+  "empty-direct-activities": []
 }
