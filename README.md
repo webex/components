@@ -15,7 +15,8 @@
   </a>
 </p>
 
-**Webex Components** is a set of [React](https://reactjs.org) components following Webex standard styling, aimed at react developers that want to embed the components into their applications.
+**Webex Components** is a set of [React](https://reactjs.org) components following Webex standard styling,
+aimed at react developers that want to embed the components into their applications.
 
 ## Table of Contents
 
@@ -34,36 +35,67 @@ npm install --save @webex/components
 
 ## Usage
 
-We need to externally import all the fonts, icons, images and core _CSS_ manually. Import `@webex/components/dist/webexComponents.css` into your main entry file. There are two ways to do this:
+### Styles
 
-### 1. JavaScript
+In order to properly style Webex Components, we need to import all the fonts, icons, images and core _CSS_ manually.
+Import `@webex/components/dist/webexComponents.css` into your main entry file.
+
+There are two ways to do this:
+
+#### JavaScript
+
+In your `index.js`, add the following import:
 
 ```js
 import '@webex/components/dist/webexComponents.css';
+...
 ```
 
-### 2. Html
+#### HTML
+
+In the `<head>` of your `index.html`, add the following import:
 
 ```html
 <head>
+  ...
   <link rel="stylesheet" type="text/css" href="node_modules/@webex/components/dist/webexComponents.css" />
 </head>
 ```
 
-Once Webex styles have been imported into your project, you can start using the components. For example:
+### Adapters
+Webex Components are self-updating, meaning, they know how to fetch the data they need.
+Data is passed to components via adapter classes (see [adapters](./src/adapters)).
+Adapters are an uniform interface for the Webex Components to consume.
+They also know how to map the data from their data source to the data the components need.
+
+To use a Webex Component, start by creating a Webex Adapter:
+```js
+import {WebexAdapter} from '@webex/components';
+
+const adapter = new WebexAdapter();
+```
+
+Adapters may interact with different data source types.
+For instance, as part of the Webex Component repository we distribute a [JSON adapter](./src/adapters) that reads data from JSON files.
+We also are working on offering [an adapter](https://github.com/webex/sdk-component-adapter) for the [Webex browser SDK](https://github.com/webex/webex-js-sdk).
+
+### Components
+
+Putting everything together - styles, adapters and components - this is a simple example of how using a component would look like:
 
 ```js
-import {WebexAvatar} from '@webex/components';
+import '@webex/components/dist/webexComponents.css';
 
-function App() {
-  return (
-    <div className="App">
-      <WebexAvatar title="Webex Avatar" />
-    </div>
-  );
-}
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {WebexAdapter, WebexAvatar} from '@webex/components';
 
-export default App;
+const adapter = new WebexAdapter();
+
+ReactDOM.render(
+  <WebexAvatar personId="XYZ" adapter={adapter} />,
+  document.getElementById('root')
+);
 ```
 
 _Happy Coding!_
