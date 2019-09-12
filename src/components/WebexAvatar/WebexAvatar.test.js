@@ -9,86 +9,54 @@ import WebexAvatar from './WebexAvatar';
 jest.mock('../hooks/usePerson');
 
 describe('Webex Avatar component', () => {
-  let personID, newPeople, peopleAdapter;
+  let peopleAdapter;
 
   beforeEach(() => {
-    newPeople = {...people}; // Reset newPeople
-    [personID] = Object.keys(people);
     peopleAdapter = new PeopleJSONAdapter(people);
   });
 
   test('matches snapshot with "default" status', () => {
-    expect(shallow(<WebexAvatar personID={personID} adapter={peopleAdapter} />)).toMatchSnapshot();
+    expect(shallow(<WebexAvatar personID="default" adapter={peopleAdapter} />)).toMatchSnapshot();
   });
 
   test(`matches snapshot with "${PersonStatus.ACTIVE}" person status`, () => {
-    newPeople[personID] = {...newPeople[personID], status: PersonStatus.ACTIVE};
-    peopleAdapter = new PeopleJSONAdapter(newPeople);
-
-    expect(shallow(<WebexAvatar personID={personID} adapter={peopleAdapter} />)).toMatchSnapshot();
+    expect(shallow(<WebexAvatar personID={PersonStatus.ACTIVE} adapter={peopleAdapter} />)).toMatchSnapshot();
   });
 
   test(`matches snapshot with "${PersonStatus.BOT}" person status`, () => {
-    newPeople[personID] = {...newPeople[personID], status: PersonStatus.BOT};
-    peopleAdapter = new PeopleJSONAdapter(newPeople);
-
-    expect(shallow(<WebexAvatar personID={personID} adapter={peopleAdapter} />)).toMatchSnapshot();
+    expect(shallow(<WebexAvatar personID={PersonStatus.BOT} adapter={peopleAdapter} />)).toMatchSnapshot();
   });
 
   test(`matches snapshot with "${PersonStatus.CALL}" person status`, () => {
-    newPeople[personID] = {...newPeople[personID], status: PersonStatus.CALL};
-    peopleAdapter = new PeopleJSONAdapter(newPeople);
-
-    expect(shallow(<WebexAvatar personID={personID} adapter={peopleAdapter} />)).toMatchSnapshot();
+    expect(shallow(<WebexAvatar personID={PersonStatus.CALL} adapter={peopleAdapter} />)).toMatchSnapshot();
   });
 
   test(`matches snapshot with "${PersonStatus.DO_NOT_DISTURB}" person status`, () => {
-    newPeople[personID] = {...newPeople[personID], status: PersonStatus.DO_NOT_DISTURB};
-    peopleAdapter = new PeopleJSONAdapter(newPeople);
-
-    expect(shallow(<WebexAvatar personID={personID} adapter={peopleAdapter} />)).toMatchSnapshot();
+    expect(shallow(<WebexAvatar personID={PersonStatus.DO_NOT_DISTURB} adapter={peopleAdapter} />)).toMatchSnapshot();
   });
 
   test(`matches snapshot with "${PersonStatus.INACTIVE}" person status`, () => {
-    newPeople[personID] = {...newPeople[personID], status: PersonStatus.INACTIVE};
-    peopleAdapter = new PeopleJSONAdapter(newPeople);
-
-    expect(shallow(<WebexAvatar personID={personID} adapter={peopleAdapter} />)).toMatchSnapshot();
+    expect(shallow(<WebexAvatar personID={PersonStatus.INACTIVE} adapter={peopleAdapter} />)).toMatchSnapshot();
   });
 
   test(`matches snapshot with "${PersonStatus.MEETING}" person status`, () => {
-    newPeople[personID] = {...newPeople[personID], status: PersonStatus.MEETING};
-    peopleAdapter = new PeopleJSONAdapter(newPeople);
-
-    expect(shallow(<WebexAvatar personID={personID} adapter={peopleAdapter} />)).toMatchSnapshot();
+    expect(shallow(<WebexAvatar personID={PersonStatus.MEETING} adapter={peopleAdapter} />)).toMatchSnapshot();
   });
 
   test(`matches snapshot with "${PersonStatus.OUT_OF_OFFICE}" person status`, () => {
-    newPeople[personID] = {...newPeople[personID], status: PersonStatus.OUT_OF_OFFICE};
-    peopleAdapter = new PeopleJSONAdapter(newPeople);
-
-    expect(shallow(<WebexAvatar personID={personID} adapter={peopleAdapter} />)).toMatchSnapshot();
+    expect(shallow(<WebexAvatar personID={PersonStatus.OUT_OF_OFFICE} adapter={peopleAdapter} />)).toMatchSnapshot();
   });
 
   test(`matches snapshot with "${PersonStatus.PRESENTING}" person status`, () => {
-    newPeople[personID] = {...newPeople[personID], status: PersonStatus.PRESENTING};
-    peopleAdapter = new PeopleJSONAdapter(newPeople);
-
-    expect(shallow(<WebexAvatar personID={personID} adapter={peopleAdapter} />)).toMatchSnapshot();
+    expect(shallow(<WebexAvatar personID={PersonStatus.PRESENTING} adapter={peopleAdapter} />)).toMatchSnapshot();
   });
 
   test(`matches snapshot with "${PersonStatus.SELF}" person status`, () => {
-    newPeople[personID] = {...newPeople[personID], status: PersonStatus.SELF};
-    peopleAdapter = new PeopleJSONAdapter(newPeople);
-
-    expect(shallow(<WebexAvatar personID={personID} adapter={peopleAdapter} />)).toMatchSnapshot();
+    expect(shallow(<WebexAvatar personID={PersonStatus.SELF} adapter={peopleAdapter} />)).toMatchSnapshot();
   });
 
   test(`matches snapshot with "${PersonStatus.TYPING}" person status`, () => {
-    newPeople[personID] = {...newPeople[personID], status: PersonStatus.TYPING};
-    peopleAdapter = new PeopleJSONAdapter(newPeople);
-
-    expect(shallow(<WebexAvatar personID={personID} adapter={peopleAdapter} />)).toMatchSnapshot();
+    expect(shallow(<WebexAvatar personID={PersonStatus.TYPING} adapter={peopleAdapter} />)).toMatchSnapshot();
   });
 
   test('throws error with inappropriate personID', () => {
@@ -99,7 +67,5 @@ describe('Webex Avatar component', () => {
 
   afterEach(() => {
     peopleAdapter = null;
-    newPeople = null;
-    personID = null;
   });
 });

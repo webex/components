@@ -1,11 +1,11 @@
-export default function useActivity(ID, adapter) {
-  const [activityID] = Object.keys(adapter.datasource);
+export default function useActivity(activityID, adapter) {
+  const IDs = Object.keys(adapter.datasource);
   let activity = null;
 
-  if (ID === activityID) {
-    activity = adapter.datasource[ID];
+  if (IDs.includes(activityID)) {
+    activity = adapter.datasource[activityID];
   } else {
-    throw new Error(`Could not find activity with ID "${ID}"`);
+    throw new Error(`Could not find activity with ID "${activityID}"`);
   }
 
   return activity;

@@ -1,8 +1,14 @@
 {
-  "room-1": {
-    "ID": "room-1",
+  "default": {
+    "ID": "default",
     "title": "Webex Component User",
     "roomType": "group"
   },
-  "room-1-activities": []
+  "default-activities": [],
+  "direct": {
+    "ID": "direct",
+    "title": "Webex Component User",
+    "roomType": "direct"
+  },
+  "direct-activities": []
 }

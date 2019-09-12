@@ -1,7 +1,6 @@
 import React from 'react';
 
 import RoomsJSONAdapter from '../../adapters/RoomsJSONAdapter';
-import {RoomType} from '../../adapters/RoomsAdapter';
 import rooms from '../../data/rooms';
 
 import WebexActivityStream, {Greeting, GreetingSpaceSVG, GreetingDirectSVG} from './WebexActivityStream';
@@ -10,11 +9,9 @@ jest.mock('../hooks/useRoom');
 jest.mock('../hooks/useActivityStream');
 
 describe('Webex Activity Stream component', () => {
-  let roomID, newRooms, roomsAdapter;
+  let roomsAdapter;
 
   beforeEach(() => {
-    newRooms = {...rooms}; // Reset newRooms
-    [roomID] = Object.keys(rooms);
     roomsAdapter = new RoomsJSONAdapter(rooms);
   });
 
@@ -42,23 +39,15 @@ describe('Webex Activity Stream component', () => {
 
   describe('Webex Activity Stream snapshots', () => {
     test('matches with empty group stream', () => {
-      expect(shallow(<WebexActivityStream roomID={roomID} adapter={roomsAdapter} />)).toMatchSnapshot();
+      expect(shallow(<WebexActivityStream roomID="default" adapter={roomsAdapter} />)).toMatchSnapshot();
     });
 
     test('matches with empty direct stream', () => {
-      newRooms[roomID] = {
-        ...rooms[roomID],
-        roomType: RoomType.DIRECT,
-      };
-      roomsAdapter = new RoomsJSONAdapter(newRooms);
-
-      expect(shallow(<WebexActivityStream roomID={roomID} adapter={roomsAdapter} />)).toMatchSnapshot();
+      expect(shallow(<WebexActivityStream roomID="direct" adapter={roomsAdapter} />)).toMatchSnapshot();
     });
   });
 
   afterEach(() => {
     roomsAdapter = null;
-    newRooms = null;
-    roomID = null;
   });
 });

@@ -9,12 +9,9 @@ jest.mock('../hooks/useActivity');
 jest.mock('../hooks/usePerson');
 
 describe('Webex Activity component', () => {
-  let activityID, personID, adapters, newActivities;
+  let adapters;
 
   beforeEach(() => {
-    newActivities = {...activities}; // Reset newActivities
-    [activityID] = Object.keys(activities);
-    [personID] = Object.keys(people);
     adapters = {
       peopleAdapter: new PeopleJSONAdapter(people),
       activitiesAdapter: new ActivitiesJSONAdapter(activities),
@@ -24,77 +21,38 @@ describe('Webex Activity component', () => {
   describe('Header component snapshot', () => {
     test('matches snapshot with "default" props', () => {
       expect(
-        shallow(
-          <Header personID={personID} adapter={adapters.peopleAdapter} created={activities[activityID].created} />
-        )
+        shallow(<Header personID="default" adapter={adapters.peopleAdapter} created={activities.default.created} />)
       ).toMatchSnapshot();
     });
   });
 
   describe('Webex Activity snapshots', () => {
     test('matches snapshot with "default" text', () => {
-      expect(shallow(<WebexActivity activityID={activityID} adapters={adapters} />)).toMatchSnapshot();
+      expect(shallow(<WebexActivity activityID="default" adapters={adapters} />)).toMatchSnapshot();
     });
 
     test('matches snapshot with an activity without header', () => {
-      newActivities[activityID] = {
-        ...activities[activityID],
-        displayHeader: false,
-      };
-
-      adapters.activitiesAdapter = new ActivitiesJSONAdapter(newActivities);
-      expect(shallow(<WebexActivity activityID={activityID} adapters={adapters} />)).toMatchSnapshot();
+      expect(shallow(<WebexActivity activityID="no-header" adapters={adapters} />)).toMatchSnapshot();
     });
 
     test('matches snapshot with "long" text', () => {
-      newActivities[activityID] = {
-        ...activities[activityID],
-        text:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      };
-      adapters.activitiesAdapter = new ActivitiesJSONAdapter(newActivities);
-
-      expect(shallow(<WebexActivity activityID={activityID} adapters={adapters} />)).toMatchSnapshot();
+      expect(shallow(<WebexActivity activityID="long" adapters={adapters} />)).toMatchSnapshot();
     });
 
     test('matches snapshot with a text from today', () => {
-      newActivities[activityID] = {
-        ...activities[activityID],
-        created: 'today',
-      };
-      adapters.activitiesAdapter = new ActivitiesJSONAdapter(newActivities);
-
-      expect(shallow(<WebexActivity activityID={activityID} adapters={adapters} />)).toMatchSnapshot();
+      expect(shallow(<WebexActivity activityID="today" adapters={adapters} />)).toMatchSnapshot();
     });
 
     test('matches snapshot with a text from yesterday', () => {
-      newActivities[activityID] = {
-        ...activities[activityID],
-        created: 'yesterday',
-      };
-      adapters.activitiesAdapter = new ActivitiesJSONAdapter(newActivities);
-
-      expect(shallow(<WebexActivity activityID={activityID} adapters={adapters} />)).toMatchSnapshot();
+      expect(shallow(<WebexActivity activityID="yesterday" adapters={adapters} />)).toMatchSnapshot();
     });
 
     test('matches snapshot with a text from the same week', () => {
-      newActivities[activityID] = {
-        ...activities[activityID],
-        created: 'sameWeek',
-      };
-      adapters.activitiesAdapter = new ActivitiesJSONAdapter(newActivities);
-
-      expect(shallow(<WebexActivity activityID={activityID} adapters={adapters} />)).toMatchSnapshot();
+      expect(shallow(<WebexActivity activityID="sameWeek" adapters={adapters} />)).toMatchSnapshot();
     });
 
     test('matches snapshot with a text over a week ago', () => {
-      newActivities[activityID] = {
-        ...activities[activityID],
-        created: 'old',
-      };
-      adapters.activitiesAdapter = new ActivitiesJSONAdapter(newActivities);
-
-      expect(shallow(<WebexActivity activityID={activityID} adapters={adapters} />)).toMatchSnapshot();
+      expect(shallow(<WebexActivity activityID="old" adapters={adapters} />)).toMatchSnapshot();
     });
   });
 
@@ -125,9 +83,6 @@ describe('Webex Activity component', () => {
   });
 
   afterEach(() => {
-    newActivities = null;
     adapters = null;
-    activityID = null;
-    personID = null;
   });
 });

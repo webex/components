@@ -1,6 +1,6 @@
 {
-  "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM": {
-    "ID": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM",
+  "default": {
+    "ID": "default",
     "emails": ["webexcmps@gmail.com"],
     "displayName": "Webex Component User",
     "firstName": "Webex",
@@ -9,5 +9,115 @@
     "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
     "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
     "status": null
+  },
+  "active": {
+    "ID": "active",
+    "emails": ["webexcmps@gmail.com"],
+    "displayName": "Webex Component User",
+    "firstName": "Webex",
+    "LastName": "Component User",
+    "nickName": "Webex",
+    "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+    "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+    "status": "active"
+  },
+  "bot": {
+    "ID": "bot",
+    "emails": ["webexcmps@gmail.com"],
+    "displayName": "Webex Component User",
+    "firstName": "Webex",
+    "LastName": "Component User",
+    "nickName": "Webex",
+    "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+    "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+    "status": "bot"
+  },
+  "call": {
+    "ID": "call",
+    "emails": ["webexcmps@gmail.com"],
+    "displayName": "Webex Component User",
+    "firstName": "Webex",
+    "LastName": "Component User",
+    "nickName": "Webex",
+    "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+    "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+    "status": "call"
+  },
+  "dnd": {
+    "ID": "dnd",
+    "emails": ["webexcmps@gmail.com"],
+    "displayName": "Webex Component User",
+    "firstName": "Webex",
+    "LastName": "Component User",
+    "nickName": "Webex",
+    "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+    "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+    "status": "dnd"
+  },
+  "inactive": {
+    "ID": "inactive",
+    "emails": ["webexcmps@gmail.com"],
+    "displayName": "Webex Component User",
+    "firstName": "Webex",
+    "LastName": "Component User",
+    "nickName": "Webex",
+    "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+    "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+    "status": "inactive"
+  },
+  "meeting": {
+    "ID": "meeting",
+    "emails": ["webexcmps@gmail.com"],
+    "displayName": "Webex Component User",
+    "firstName": "Webex",
+    "LastName": "Component User",
+    "nickName": "Webex",
+    "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+    "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+    "status": "meeting"
+  },
+  "ooo": {
+    "ID": "ooo",
+    "emails": ["webexcmps@gmail.com"],
+    "displayName": "Webex Component User",
+    "firstName": "Webex",
+    "LastName": "Component User",
+    "nickName": "Webex",
+    "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+    "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+    "status": "ooo"
+  },
+  "presenting": {
+    "ID": "presenting",
+    "emails": ["webexcmps@gmail.com"],
+    "displayName": "Webex Component User",
+    "firstName": "Webex",
+    "LastName": "Component User",
+    "nickName": "Webex",
+    "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+    "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+    "status": "presenting"
+  },
+  "self": {
+    "ID": "self",
+    "emails": ["webexcmps@gmail.com"],
+    "displayName": "Webex Component User",
+    "firstName": "Webex",
+    "LastName": "Component User",
+    "nickName": "Webex",
+    "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+    "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+    "status": "self"
+  },
+  "typing": {
+    "ID": "typing",
+    "emails": ["webexcmps@gmail.com"],
+    "displayName": "Webex Component User",
+    "firstName": "Webex",
+    "LastName": "Component User",
+    "nickName": "Webex",
+    "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+    "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+    "status": "typing"
   }
 }

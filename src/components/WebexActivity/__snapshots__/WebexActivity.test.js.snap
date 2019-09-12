@@ -8,8 +8,47 @@ exports[`Webex Activity component Header component snapshot matches snapshot wit
     adapter={
       PeopleJSONAdapter {
         "datasource": Object {
-          "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM": Object {
-            "ID": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM",
+          "active": Object {
+            "ID": "active",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "active",
+          },
+          "bot": Object {
+            "ID": "bot",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "bot",
+          },
+          "call": Object {
+            "ID": "call",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "call",
+          },
+          "default": Object {
+            "ID": "default",
             "LastName": "Component User",
             "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
             "displayName": "Webex Component User",
@@ -21,11 +60,102 @@ exports[`Webex Activity component Header component snapshot matches snapshot wit
             "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
             "status": null,
           },
+          "dnd": Object {
+            "ID": "dnd",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "dnd",
+          },
+          "inactive": Object {
+            "ID": "inactive",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "inactive",
+          },
+          "meeting": Object {
+            "ID": "meeting",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "meeting",
+          },
+          "ooo": Object {
+            "ID": "ooo",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "ooo",
+          },
+          "presenting": Object {
+            "ID": "presenting",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "presenting",
+          },
+          "self": Object {
+            "ID": "self",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "self",
+          },
+          "typing": Object {
+            "ID": "typing",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "typing",
+          },
         },
         "getPerson": [Function],
       }
     }
-    personID="Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM"
+    personID="default"
   />
   <div
     className="activity-author"
@@ -45,14 +175,53 @@ exports[`Webex Activity component Header component snapshot matches snapshot wit
 exports[`Webex Activity component Webex Activity snapshots matches snapshot with "default" text 1`] = `
 <div
   className="activity"
-  key="activity-1"
+  key="default"
 >
   <Header
     adapter={
       PeopleJSONAdapter {
         "datasource": Object {
-          "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM": Object {
-            "ID": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM",
+          "active": Object {
+            "ID": "active",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "active",
+          },
+          "bot": Object {
+            "ID": "bot",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "bot",
+          },
+          "call": Object {
+            "ID": "call",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "call",
+          },
+          "default": Object {
+            "ID": "default",
             "LastName": "Component User",
             "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
             "displayName": "Webex Component User",
@@ -64,12 +233,103 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
             "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
             "status": null,
           },
+          "dnd": Object {
+            "ID": "dnd",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "dnd",
+          },
+          "inactive": Object {
+            "ID": "inactive",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "inactive",
+          },
+          "meeting": Object {
+            "ID": "meeting",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "meeting",
+          },
+          "ooo": Object {
+            "ID": "ooo",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "ooo",
+          },
+          "presenting": Object {
+            "ID": "presenting",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "presenting",
+          },
+          "self": Object {
+            "ID": "self",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "self",
+          },
+          "typing": Object {
+            "ID": "typing",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "typing",
+          },
         },
         "getPerson": [Function],
       }
     }
     created="2019-08-20T21:00:07.047Z"
-    personID="Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM"
+    personID="default"
   />
   <div
     className="activity-content"
@@ -82,14 +342,53 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
 exports[`Webex Activity component Webex Activity snapshots matches snapshot with "long" text 1`] = `
 <div
   className="activity"
-  key="activity-1"
+  key="long"
 >
   <Header
     adapter={
       PeopleJSONAdapter {
         "datasource": Object {
-          "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM": Object {
-            "ID": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM",
+          "active": Object {
+            "ID": "active",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "active",
+          },
+          "bot": Object {
+            "ID": "bot",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "bot",
+          },
+          "call": Object {
+            "ID": "call",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "call",
+          },
+          "default": Object {
+            "ID": "default",
             "LastName": "Component User",
             "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
             "displayName": "Webex Component User",
@@ -101,12 +400,103 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
             "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
             "status": null,
           },
+          "dnd": Object {
+            "ID": "dnd",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "dnd",
+          },
+          "inactive": Object {
+            "ID": "inactive",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "inactive",
+          },
+          "meeting": Object {
+            "ID": "meeting",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "meeting",
+          },
+          "ooo": Object {
+            "ID": "ooo",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "ooo",
+          },
+          "presenting": Object {
+            "ID": "presenting",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "presenting",
+          },
+          "self": Object {
+            "ID": "self",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "self",
+          },
+          "typing": Object {
+            "ID": "typing",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "typing",
+          },
         },
         "getPerson": [Function],
       }
     }
     created="2019-08-20T21:00:07.047Z"
-    personID="Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM"
+    personID="default"
   />
   <div
     className="activity-content"
@@ -119,14 +509,53 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
 exports[`Webex Activity component Webex Activity snapshots matches snapshot with a text from the same week 1`] = `
 <div
   className="activity"
-  key="activity-1"
+  key="sameWeek"
 >
   <Header
     adapter={
       PeopleJSONAdapter {
         "datasource": Object {
-          "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM": Object {
-            "ID": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM",
+          "active": Object {
+            "ID": "active",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "active",
+          },
+          "bot": Object {
+            "ID": "bot",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "bot",
+          },
+          "call": Object {
+            "ID": "call",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "call",
+          },
+          "default": Object {
+            "ID": "default",
             "LastName": "Component User",
             "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
             "displayName": "Webex Component User",
@@ -138,12 +567,103 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
             "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
             "status": null,
           },
+          "dnd": Object {
+            "ID": "dnd",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "dnd",
+          },
+          "inactive": Object {
+            "ID": "inactive",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "inactive",
+          },
+          "meeting": Object {
+            "ID": "meeting",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "meeting",
+          },
+          "ooo": Object {
+            "ID": "ooo",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "ooo",
+          },
+          "presenting": Object {
+            "ID": "presenting",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "presenting",
+          },
+          "self": Object {
+            "ID": "self",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "self",
+          },
+          "typing": Object {
+            "ID": "typing",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "typing",
+          },
         },
         "getPerson": [Function],
       }
     }
     created="sameWeek"
-    personID="Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM"
+    personID="default"
   />
   <div
     className="activity-content"
@@ -156,14 +676,53 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
 exports[`Webex Activity component Webex Activity snapshots matches snapshot with a text from today 1`] = `
 <div
   className="activity"
-  key="activity-1"
+  key="today"
 >
   <Header
     adapter={
       PeopleJSONAdapter {
         "datasource": Object {
-          "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM": Object {
-            "ID": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM",
+          "active": Object {
+            "ID": "active",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "active",
+          },
+          "bot": Object {
+            "ID": "bot",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "bot",
+          },
+          "call": Object {
+            "ID": "call",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "call",
+          },
+          "default": Object {
+            "ID": "default",
             "LastName": "Component User",
             "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
             "displayName": "Webex Component User",
@@ -175,12 +734,103 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
             "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
             "status": null,
           },
+          "dnd": Object {
+            "ID": "dnd",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "dnd",
+          },
+          "inactive": Object {
+            "ID": "inactive",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "inactive",
+          },
+          "meeting": Object {
+            "ID": "meeting",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "meeting",
+          },
+          "ooo": Object {
+            "ID": "ooo",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "ooo",
+          },
+          "presenting": Object {
+            "ID": "presenting",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "presenting",
+          },
+          "self": Object {
+            "ID": "self",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "self",
+          },
+          "typing": Object {
+            "ID": "typing",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "typing",
+          },
         },
         "getPerson": [Function],
       }
     }
     created="today"
-    personID="Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM"
+    personID="default"
   />
   <div
     className="activity-content"
@@ -193,14 +843,53 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
 exports[`Webex Activity component Webex Activity snapshots matches snapshot with a text from yesterday 1`] = `
 <div
   className="activity"
-  key="activity-1"
+  key="yesterday"
 >
   <Header
     adapter={
       PeopleJSONAdapter {
         "datasource": Object {
-          "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM": Object {
-            "ID": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM",
+          "active": Object {
+            "ID": "active",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "active",
+          },
+          "bot": Object {
+            "ID": "bot",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "bot",
+          },
+          "call": Object {
+            "ID": "call",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "call",
+          },
+          "default": Object {
+            "ID": "default",
             "LastName": "Component User",
             "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
             "displayName": "Webex Component User",
@@ -212,12 +901,103 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
             "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
             "status": null,
           },
+          "dnd": Object {
+            "ID": "dnd",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "dnd",
+          },
+          "inactive": Object {
+            "ID": "inactive",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "inactive",
+          },
+          "meeting": Object {
+            "ID": "meeting",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "meeting",
+          },
+          "ooo": Object {
+            "ID": "ooo",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "ooo",
+          },
+          "presenting": Object {
+            "ID": "presenting",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "presenting",
+          },
+          "self": Object {
+            "ID": "self",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "self",
+          },
+          "typing": Object {
+            "ID": "typing",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "typing",
+          },
         },
         "getPerson": [Function],
       }
     }
     created="yesterday"
-    personID="Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM"
+    personID="default"
   />
   <div
     className="activity-content"
@@ -230,14 +1010,53 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
 exports[`Webex Activity component Webex Activity snapshots matches snapshot with a text over a week ago 1`] = `
 <div
   className="activity"
-  key="activity-1"
+  key="old"
 >
   <Header
     adapter={
       PeopleJSONAdapter {
         "datasource": Object {
-          "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM": Object {
-            "ID": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM",
+          "active": Object {
+            "ID": "active",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "active",
+          },
+          "bot": Object {
+            "ID": "bot",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "bot",
+          },
+          "call": Object {
+            "ID": "call",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "call",
+          },
+          "default": Object {
+            "ID": "default",
             "LastName": "Component User",
             "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
             "displayName": "Webex Component User",
@@ -249,12 +1068,103 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
             "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
             "status": null,
           },
+          "dnd": Object {
+            "ID": "dnd",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "dnd",
+          },
+          "inactive": Object {
+            "ID": "inactive",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "inactive",
+          },
+          "meeting": Object {
+            "ID": "meeting",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "meeting",
+          },
+          "ooo": Object {
+            "ID": "ooo",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "ooo",
+          },
+          "presenting": Object {
+            "ID": "presenting",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "presenting",
+          },
+          "self": Object {
+            "ID": "self",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "self",
+          },
+          "typing": Object {
+            "ID": "typing",
+            "LastName": "Component User",
+            "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
+            "displayName": "Webex Component User",
+            "emails": Array [
+              "webexcmps@gmail.com",
+            ],
+            "firstName": "Webex",
+            "nickName": "Webex",
+            "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+            "status": "typing",
+          },
         },
         "getPerson": [Function],
       }
     }
     created="old"
-    personID="Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM"
+    personID="default"
   />
   <div
     className="activity-content"
@@ -267,7 +1177,7 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
 exports[`Webex Activity component Webex Activity snapshots matches snapshot with an activity without header 1`] = `
 <div
   className="activity"
-  key="activity-1"
+  key="no-header"
 >
   <div
     className="activity-content"
