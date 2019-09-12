@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 
 import {RoomType} from '../../adapters/RoomsAdapter';
+import {useActivityStream, useRoom} from '../hooks';
+import WebexActivity from '../WebexActivity/WebexActivity';
+
 import './WebexActivityStream.scss';
-import {useRoom, useActivityStream} from '../hooks';
 
 export function GreetingDirectSVG() {
   return (
@@ -137,15 +139,27 @@ Greeting.propTypes = {
 };
 
 export default function WebexActivityStream(props) {
-  const {roomID, adapter} = props;
-  const {title, roomType} = useRoom(roomID, adapter);
-  const activityIDs = useActivityStream(roomID, adapter);
+  const {roomID, adapters} = props;
+  const {roomsAdapter, activitiesAdapter, peopleAdapter} = adapters;
+  const {title, roomType} = useRoom(roomID, roomsAdapter);
+  const activityIDs = useActivityStream(roomID, roomsAdapter);
   const personName = roomType === RoomType.DIRECT ? title : '';
+  const activities = activityIDs.map((activityID) => (
+    <WebexActivity key={activityID} activityID={activityID} adapters={{activitiesAdapter, peopleAdapter}} />
+  ));
 
-  return <div className="activity-stream">{!activityIDs.length && <Greeting personName={personName} />}</div>;
+  return (
+    <div className="activity-stream">
+      {activityIDs.length ? <Fragment>{activities}</Fragment> : <Greeting personName={personName} />}
+    </div>
+  );
 }
 
 WebexActivityStream.propTypes = {
   roomID: PropTypes.string.isRequired,
-  adapter: PropTypes.object.isRequired,
+  adapters: PropTypes.exact({
+    roomsAdapter: PropTypes.object.isRequired,
+    activitiesAdapter: PropTypes.object.isRequired,
+    peopleAdapter: PropTypes.object.isRequired,
+  }).isRequired,
 };
