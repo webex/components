@@ -334,7 +334,7 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
   <div
     className="activity-content"
   >
-    text
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   </div>
 </div>
 `;
@@ -668,7 +668,7 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
   <div
     className="activity-content"
   >
-    text
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   </div>
 </div>
 `;
@@ -835,7 +835,7 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
   <div
     className="activity-content"
   >
-    text
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   </div>
 </div>
 `;
@@ -1002,7 +1002,7 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
   <div
     className="activity-content"
   >
-    text
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   </div>
 </div>
 `;
@@ -1169,7 +1169,7 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
   <div
     className="activity-content"
   >
-    text
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   </div>
 </div>
 `;
@@ -1182,7 +1182,7 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
   <div
     className="activity-content"
   >
-    text
+    no header text
   </div>
 </div>
 `;
