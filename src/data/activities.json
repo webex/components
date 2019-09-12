@@ -1,10 +1,66 @@
 {
-  "activity-1": {
-    "ID": "activity-1",
+  "default": {
+    "ID": "default",
     "roomID": "roomID",
     "text": "text",
-    "personID": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMzNjYjE3Yy00MmUzLTQxYWMtYTA0NS00OTdlNDAwMjY0NmM",
+    "personID": "default",
     "created": "2019-08-20T21:00:07.047Z",
+    "displayHeader": true
+  },
+  "no-header": {
+    "ID": "no-header",
+    "roomID": "roomID",
+    "text": "text",
+    "personID": "default",
+    "created": "2019-08-20T21:00:07.047Z",
+    "displayHeader": false
+  },
+  "long": {
+    "ID": "long",
+    "roomID": "roomID",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "personID": "default",
+    "created": "2019-08-20T21:00:07.047Z",
+    "displayHeader": true
+  },
+  "multi-line": {
+    "ID": "multi-line",
+    "roomID": "roomID",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "personID": "default",
+    "created": "2019-08-20T21:00:07.047Z",
+    "displayHeader": true
+  },
+  "today": {
+    "ID": "today",
+    "roomID": "roomID",
+    "text": "text",
+    "personID": "default",
+    "created": "today",
+    "displayHeader": true
+  },
+  "yesterday": {
+    "ID": "yesterday",
+    "roomID": "roomID",
+    "text": "text",
+    "personID": "default",
+    "created": "yesterday",
+    "displayHeader": true
+  },
+  "sameWeek": {
+    "ID": "sameWeek",
+    "roomID": "roomID",
+    "text": "text",
+    "personID": "default",
+    "created": "sameWeek",
+    "displayHeader": true
+  },
+  "old": {
+    "ID": "old",
+    "roomID": "roomID",
+    "text": "text",
+    "personID": "default",
+    "created": "old",
     "displayHeader": true
   }
 }

@@ -1,12 +1,12 @@
-export default function useRoom(ID, adapter) {
-  const [roomID] = Object.keys(adapter.datasource);
+export default function useRoom(roomID, adapter) {
   const rooms = adapter.datasource;
+  const IDs = Object.keys(rooms);
   let room = null;
 
-  if (ID === roomID) {
-    room = rooms[ID];
+  if (IDs.includes(roomID)) {
+    room = rooms[roomID];
   } else {
-    throw new Error(`Could not find room with ID "${ID}"`);
+    throw new Error(`Could not find room with ID "${roomID}"`);
   }
 
   return room;

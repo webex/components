@@ -8,71 +8,36 @@ import people from '../../data/people';
 import WebexAvatar from './WebexAvatar';
 
 // Setup for the stories
-const [personID] = Object.keys(people);
 const stories = storiesOf('Webex Avatar', module);
-const newPeople = {};
+const peopleJSONAdapter = new PeopleJSONAdapter(people);
 
 // Stories
-stories.add('default', () => <WebexAvatar personID={personID} adapter={new PeopleJSONAdapter(people)} />);
+stories.add('default', () => <WebexAvatar personID="default" adapter={peopleJSONAdapter} />);
 
-stories.add(PersonStatus.ACTIVE, () => {
-  newPeople[personID] = {...people[personID], status: PersonStatus.ACTIVE};
+stories.add(PersonStatus.ACTIVE, () => <WebexAvatar personID={PersonStatus.ACTIVE} adapter={peopleJSONAdapter} />);
 
-  return <WebexAvatar personID={personID} adapter={new PeopleJSONAdapter(newPeople)} />;
-});
+stories.add(PersonStatus.BOT, () => <WebexAvatar personID={PersonStatus.BOT} adapter={peopleJSONAdapter} />);
 
-stories.add(PersonStatus.BOT, () => {
-  newPeople[personID] = {...people[personID], status: PersonStatus.BOT};
+stories.add(PersonStatus.CALL, () => <WebexAvatar personID={PersonStatus.CALL} adapter={peopleJSONAdapter} />);
 
-  return <WebexAvatar personID={personID} adapter={new PeopleJSONAdapter(newPeople)} />;
-});
+stories.add(PersonStatus.DO_NOT_DISTURB, () => (
+  <WebexAvatar personID={PersonStatus.DO_NOT_DISTURB} adapter={peopleJSONAdapter} />
+));
 
-stories.add(PersonStatus.CALL, () => {
-  newPeople[personID] = {...people[personID], status: PersonStatus.CALL};
+stories.add(PersonStatus.INACTIVE, () => <WebexAvatar personID={PersonStatus.INACTIVE} adapter={peopleJSONAdapter} />);
 
-  return <WebexAvatar personID={personID} adapter={new PeopleJSONAdapter(newPeople)} />;
-});
+stories.add(PersonStatus.MEETING, () => <WebexAvatar personID={PersonStatus.MEETING} adapter={peopleJSONAdapter} />);
 
-stories.add(PersonStatus.DO_NOT_DISTURB, () => {
-  newPeople[personID] = {...people[personID], status: PersonStatus.DO_NOT_DISTURB};
+stories.add(PersonStatus.OUT_OF_OFFICE, () => (
+  <WebexAvatar personID={PersonStatus.OUT_OF_OFFICE} adapter={peopleJSONAdapter} />
+));
 
-  return <WebexAvatar personID={personID} adapter={new PeopleJSONAdapter(newPeople)} />;
-});
+stories.add(PersonStatus.PRESENTING, () => (
+  <WebexAvatar personID={PersonStatus.PRESENTING} adapter={peopleJSONAdapter} />
+));
 
-stories.add(PersonStatus.INACTIVE, () => {
-  newPeople[personID] = {...people[personID], status: PersonStatus.INACTIVE};
+stories.add(PersonStatus.SELF, () => <WebexAvatar personID={PersonStatus.SELF} adapter={peopleJSONAdapter} />);
 
-  return <WebexAvatar personID={personID} adapter={new PeopleJSONAdapter(newPeople)} />;
-});
+stories.add(PersonStatus.TYPING, () => <WebexAvatar personID={PersonStatus.TYPING} adapter={peopleJSONAdapter} />);
 
-stories.add(PersonStatus.MEETING, () => {
-  newPeople[personID] = {...people[personID], status: PersonStatus.MEETING};
-
-  return <WebexAvatar personID={personID} adapter={new PeopleJSONAdapter(newPeople)} />;
-});
-
-stories.add(PersonStatus.OUT_OF_OFFICE, () => {
-  newPeople[personID] = {...people[personID], status: PersonStatus.OUT_OF_OFFICE};
-
-  return <WebexAvatar personID={personID} adapter={new PeopleJSONAdapter(newPeople)} />;
-});
-
-stories.add(PersonStatus.PRESENTING, () => {
-  newPeople[personID] = {...people[personID], status: PersonStatus.PRESENTING};
-
-  return <WebexAvatar personID={personID} adapter={new PeopleJSONAdapter(newPeople)} />;
-});
-
-stories.add(PersonStatus.SELF, () => {
-  newPeople[personID] = {...people[personID], status: PersonStatus.SELF};
-
-  return <WebexAvatar personID={personID} adapter={new PeopleJSONAdapter(newPeople)} />;
-});
-
-stories.add(PersonStatus.TYPING, () => {
-  newPeople[personID] = {...people[personID], status: PersonStatus.TYPING};
-
-  return <WebexAvatar personID={personID} adapter={new PeopleJSONAdapter(newPeople)} />;
-});
-
-stories.add('wrong PersonID', () => <WebexAvatar personID="Wrong personID" adapter={new PeopleJSONAdapter(people)} />);
+stories.add('wrong PersonID', () => <WebexAvatar personID="Wrong personID" adapter={peopleJSONAdapter} />);
