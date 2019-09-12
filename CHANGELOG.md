@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/webex/components/compare/v1.13.0...v1.14.0) (2019-09-12)
+
+
+### Features
+
+* **ActivityStream:** implement component  default state ([92e720b](https://github.com/webex/components/commit/92e720b))
+
 # [1.13.0](https://github.com/webex/components/compare/v1.12.1...v1.13.0) (2019-09-11)
 
 
