@@ -16,5 +16,11 @@
     "title": "Webex Component User",
     "roomType": "direct"
   },
-  "empty-direct-activities": []
+  "empty-direct-activities": [],
+  "time-rulers": {
+    "ID": "time-rulers",
+    "title": "Time Rulers Room",
+    "roomType": "group"
+  },
+  "time-rulers-activities": [{"date": "2019-08-20T21:00:07.047Z"}, "default", "no-header", "long", {"date": "2019-08-22T21:00:07.047Z"}, "multi-line"]
 }
