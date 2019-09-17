@@ -52,6 +52,10 @@ describe('Webex Activity Stream component', () => {
     test('matches with empty direct stream', () => {
       expect(shallow(<WebexActivityStream roomID="empty-direct" adapters={adapters} />)).toMatchSnapshot();
     });
+
+    test('matches with time rulers stream', () => {
+      expect(shallow(<WebexActivityStream roomID="time-rulers" adapters={adapters} />)).toMatchSnapshot();
+    });
   });
 
   afterEach(() => {
