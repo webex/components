@@ -20,3 +20,5 @@ stories.add('default', () => <WebexActivityStream roomID="default" adapters={ada
 stories.add('empty group stream', () => <WebexActivityStream roomID="empty-space" adapters={adapters} />);
 
 stories.add('empty 1:1 stream', () => <WebexActivityStream roomID="empty-direct" adapters={adapters} />);
+
+stories.add('with time rulers', () => <WebexActivityStream roomID="time-rulers" adapters={adapters} />);

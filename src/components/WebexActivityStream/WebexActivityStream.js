@@ -1,11 +1,43 @@
 import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
+import {ListSeparator} from '@momentum-ui/react';
+import {format, isToday, isSameWeek, isYesterday} from 'date-fns';
 
 import {RoomType} from '../../adapters/RoomsAdapter';
 import {useActivityStream, useRoom} from '../hooks';
 import WebexActivity from '../WebexActivity/WebexActivity';
 
 import './WebexActivityStream.scss';
+
+/**
+ * Returns a formatted timestamp based on the given date's offset from the current time.
+ *
+ * Divisor for messages from today display today
+ * Divisor for messages from dates from a previous day display as Yesterday
+ * Divisor for messages of dates from a previous day of the week (but not yesterday) display as <day of the week>
+ * Divisor for messages of dates older than a week from today display as M/D/YY
+ *
+ * @param {Date} timestamp Date instance to format
+ * @returns {string} formattedDate
+ */
+export function formatTimeRulerText(timestamp) {
+  let formattedDate;
+
+  if (isToday(timestamp)) {
+    formattedDate = 'today';
+  } else if (isYesterday(timestamp)) {
+    // Yesterday
+    formattedDate = 'Yesterday';
+  } else if (isSameWeek(timestamp, new Date())) {
+    // Monday
+    formattedDate = format(timestamp, 'iiii');
+  } else {
+    // 1/1/2020
+    formattedDate = format(timestamp, 'P');
+  }
+
+  return formattedDate;
+}
 
 export function GreetingDirectSVG() {
   return (
@@ -138,19 +170,34 @@ Greeting.propTypes = {
   personName: PropTypes.string.isRequired,
 };
 
+export function TimeRuler({text}) {
+  return <ListSeparator className="time-ruler" role="listitem" text={text} />;
+}
+
+TimeRuler.propTypes = {
+  text: PropTypes.string.isRequired,
+};
+
 export default function WebexActivityStream(props) {
   const {roomID, adapters} = props;
   const {roomsAdapter, activitiesAdapter, peopleAdapter} = adapters;
   const {title, roomType} = useRoom(roomID, roomsAdapter);
-  const activityIDs = useActivityStream(roomID, roomsAdapter);
+  const activitiesData = useActivityStream(roomID, roomsAdapter);
   const personName = roomType === RoomType.DIRECT ? title : '';
-  const activities = activityIDs.map((activityID) => (
-    <WebexActivity key={activityID} activityID={activityID} adapters={{activitiesAdapter, peopleAdapter}} />
-  ));
+  const activities = activitiesData.map((activity) => {
+    // If the activity is an object with a date property, it is a time ruler
+    const activityComponent = activity.date ? (
+      <TimeRuler key={activity.date.toString()} text={formatTimeRulerText(new Date(activity.date))} />
+    ) : (
+      <WebexActivity key={activity} activityID={activity} adapters={{activitiesAdapter, peopleAdapter}} />
+    );
+
+    return activityComponent;
+  });
 
   return (
     <div className="activity-stream">
-      {activityIDs.length ? <Fragment>{activities}</Fragment> : <Greeting personName={personName} />}
+      {activities.length ? <Fragment>{activities}</Fragment> : <Greeting personName={personName} />}
     </div>
   );
 }
