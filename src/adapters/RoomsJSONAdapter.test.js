@@ -94,6 +94,15 @@ describe('Rooms JSON Adapter Interface', () => {
     });
   });
 
+  test('getRoomActivities() returns objects with a date parameter for time rulers', (done) => {
+    const timeRulerRoomID = 'time-rulers';
+
+    roomsJSONAdapter.getRoomActivities(timeRulerRoomID).subscribe((data) => {
+      expect(data[0].date).toBeDefined();
+      done();
+    });
+  });
+
   test('getRoomActivities() completes the observable', (done) => {
     roomsJSONAdapter.getRoomActivities(roomID).subscribe(
       () => {},
