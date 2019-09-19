@@ -1,6 +1,3 @@
 export default function useActivityStream(ID, adapter) {
-  const [roomID] = Object.keys(adapter.datasource);
-  const rooms = adapter.datasource;
-
-  return ID === roomID ? rooms[`${ID}-activities`] : [];
+  return `${ID}-activities` in adapter.datasource ? adapter.datasource[`${ID}-activities`] : [];
 }
