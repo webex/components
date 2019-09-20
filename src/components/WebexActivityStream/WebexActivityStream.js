@@ -147,13 +147,13 @@ export function GreetingSpaceSVG() {
   );
 }
 
-export function Greeting(props) {
+export function Greeting({personName}) {
   let svg = <GreetingSpaceSVG />;
   let description = `This is a shared space between you and other group members. Here's where you'll see shared messages, files, and a call history with this space.`;
 
-  if (props.personName) {
+  if (personName) {
     svg = <GreetingDirectSVG />;
-    description = `This is your private conversation with ${props.personName}. Here's where you'll see shared messages, files, and a call history with this person.`;
+    description = `This is your private conversation with ${personName}. Here's where you'll see shared messages, files, and a call history with this person.`;
   }
 
   return (
@@ -178,8 +178,7 @@ TimeRuler.propTypes = {
   text: PropTypes.string.isRequired,
 };
 
-export default function WebexActivityStream(props) {
-  const {roomID, adapters} = props;
+export default function WebexActivityStream({roomID, adapters}) {
   const {roomsAdapter, activitiesAdapter, peopleAdapter} = adapters;
   const {title, roomType} = useRoom(roomID, roomsAdapter);
   const activitiesData = useActivityStream(roomID, roomsAdapter);
