@@ -29,6 +29,12 @@ export default class RoomsAdapter extends WebexAdapter {
    */
 
   /**
+   * @typedef {Object} ActivityData
+   * @param {string} date The date to render a time ruler for. Must be a valid date-time string
+   *     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#Date_Time_String_Format
+   */
+
+  /**
    * Returns an observable that emits room data of the given ID.
    *
    * @param {string} ID  ID of the room to get.
@@ -53,10 +59,10 @@ export default class RoomsAdapter extends WebexAdapter {
   }
 
   /**
-   * Returns an observable that emits an array of current activity IDs of the given roomID.
+   * Returns an observable that emits an array of current activities of the given roomID.
    *
    * @param {string} ID  ID of the room to get.
-   * @returns {Observable.<Array.<string>>}
+   * @returns {Observable.<Array.<string|ActivityData>>}
    * @memberof RoomsAdapter
    */
   // eslint-disable-next-line no-unused-vars
