@@ -4,8 +4,7 @@ import {Avatar} from '@momentum-ui/react';
 
 import usePerson from '../hooks/usePerson';
 
-export default function WebexAvatar(props) {
-  const {personID, adapter} = props;
+export default function WebexAvatar({personID, adapter}) {
   const {avatar, displayName, status} = usePerson(personID, adapter);
 
   return <Avatar src={avatar} title={displayName} type={status} alt={displayName} />;
