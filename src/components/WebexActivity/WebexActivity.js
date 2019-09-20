@@ -33,8 +33,7 @@ export function formatMessageDate(timestamp) {
   return formattedDate;
 }
 
-export function Header(props) {
-  const {personID, adapter, created} = props;
+export function Header({personID, adapter, created}) {
   const {displayName} = usePerson(personID, adapter);
 
   return (
@@ -54,8 +53,7 @@ Header.propTypes = {
   created: PropTypes.string.isRequired,
 };
 
-export default function WebexActivity(props) {
-  const {activityID, adapters} = props;
+export default function WebexActivity({activityID, adapters}) {
   const {created, displayHeader, ID, personID, text} = useActivity(activityID, adapters.activitiesAdapter);
   const header = displayHeader ? (
     <Header personID={personID} adapter={adapters.peopleAdapter} created={created} />
