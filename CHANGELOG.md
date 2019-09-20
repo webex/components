@@ -1,3 +1,17 @@
+# [1.15.0](https://github.com/webex/components/compare/v1.14.0...v1.15.0) (2019-09-20)
+
+
+### Bug Fixes
+
+* **mocks:** useActivityStream proper mock ([ffffd92](https://github.com/webex/components/commit/ffffd92))
+
+
+### Features
+
+* **data:** add time ruler data ([202bf41](https://github.com/webex/components/commit/202bf41))
+* **RoomsJsonAdapter:** add time ruler support ([e4b899c](https://github.com/webex/components/commit/e4b899c))
+* **ActivityStream:** add TimeRuler component ([0bfbe08](https://github.com/webex/components/commit/0bfbe08))
+
 # [1.14.0](https://github.com/webex/components/compare/v1.13.0...v1.14.0) (2019-09-12)
 
 
