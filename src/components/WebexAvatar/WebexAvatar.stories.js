@@ -1,43 +1,84 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react';
 
-import PeopleJSONAdapter from '../../adapters/PeopleJSONAdapter';
+import jsonData from '../../data';
 import {PersonStatus} from '../../adapters/PeopleAdapter';
-import people from '../../data/people';
-
-import WebexAvatar from './WebexAvatar';
+import {WebexJSONAdapter} from '../../adapters';
+import {WebexAvatar, WebexDataProvider} from '../';
 
 // Setup for the stories
 const stories = storiesOf('Webex Avatar', module);
-const peopleJSONAdapter = new PeopleJSONAdapter(people);
+const webexAdapter = new WebexJSONAdapter(jsonData);
 
 // Stories
-stories.add('default', () => <WebexAvatar personID="default" adapter={peopleJSONAdapter} />);
-
-stories.add(PersonStatus.ACTIVE, () => <WebexAvatar personID={PersonStatus.ACTIVE} adapter={peopleJSONAdapter} />);
-
-stories.add(PersonStatus.BOT, () => <WebexAvatar personID={PersonStatus.BOT} adapter={peopleJSONAdapter} />);
-
-stories.add(PersonStatus.CALL, () => <WebexAvatar personID={PersonStatus.CALL} adapter={peopleJSONAdapter} />);
-
-stories.add(PersonStatus.DO_NOT_DISTURB, () => (
-  <WebexAvatar personID={PersonStatus.DO_NOT_DISTURB} adapter={peopleJSONAdapter} />
+stories.add('default', () => (
+  <WebexDataProvider adapter={webexAdapter}>
+    <WebexAvatar personID="default" adapter={webexAdapter} />
+  </WebexDataProvider>
 ));
 
-stories.add(PersonStatus.INACTIVE, () => <WebexAvatar personID={PersonStatus.INACTIVE} adapter={peopleJSONAdapter} />);
+stories.add(PersonStatus.ACTIVE, () => (
+  <WebexDataProvider adapter={webexAdapter}>
+    <WebexAvatar personID={PersonStatus.ACTIVE} />
+  </WebexDataProvider>
+));
 
-stories.add(PersonStatus.MEETING, () => <WebexAvatar personID={PersonStatus.MEETING} adapter={peopleJSONAdapter} />);
+stories.add(PersonStatus.BOT, () => (
+  <WebexDataProvider adapter={webexAdapter}>
+    <WebexAvatar personID={PersonStatus.BOT} />
+  </WebexDataProvider>
+));
+
+stories.add(PersonStatus.CALL, () => (
+  <WebexDataProvider adapter={webexAdapter}>
+    <WebexAvatar personID={PersonStatus.CALL} />
+  </WebexDataProvider>
+));
+
+stories.add(PersonStatus.DO_NOT_DISTURB, () => (
+  <WebexDataProvider adapter={webexAdapter}>
+    <WebexAvatar personID={PersonStatus.DO_NOT_DISTURB} />
+  </WebexDataProvider>
+));
+
+stories.add(PersonStatus.INACTIVE, () => (
+  <WebexDataProvider adapter={webexAdapter}>
+    <WebexAvatar personID={PersonStatus.INACTIVE} />
+  </WebexDataProvider>
+));
+
+stories.add(PersonStatus.MEETING, () => (
+  <WebexDataProvider adapter={webexAdapter}>
+    <WebexAvatar personID={PersonStatus.MEETING} />
+  </WebexDataProvider>
+));
 
 stories.add(PersonStatus.OUT_OF_OFFICE, () => (
-  <WebexAvatar personID={PersonStatus.OUT_OF_OFFICE} adapter={peopleJSONAdapter} />
+  <WebexDataProvider adapter={webexAdapter}>
+    <WebexAvatar personID={PersonStatus.OUT_OF_OFFICE} />
+  </WebexDataProvider>
 ));
 
 stories.add(PersonStatus.PRESENTING, () => (
-  <WebexAvatar personID={PersonStatus.PRESENTING} adapter={peopleJSONAdapter} />
+  <WebexDataProvider adapter={webexAdapter}>
+    <WebexAvatar personID={PersonStatus.PRESENTING} />
+  </WebexDataProvider>
 ));
 
-stories.add(PersonStatus.SELF, () => <WebexAvatar personID={PersonStatus.SELF} adapter={peopleJSONAdapter} />);
+stories.add(PersonStatus.SELF, () => (
+  <WebexDataProvider adapter={webexAdapter}>
+    <WebexAvatar personID={PersonStatus.SELF} />
+  </WebexDataProvider>
+));
 
-stories.add(PersonStatus.TYPING, () => <WebexAvatar personID={PersonStatus.TYPING} adapter={peopleJSONAdapter} />);
+stories.add(PersonStatus.TYPING, () => (
+  <WebexDataProvider adapter={webexAdapter}>
+    <WebexAvatar personID={PersonStatus.TYPING} />
+  </WebexDataProvider>
+));
 
-stories.add('wrong PersonID', () => <WebexAvatar personID="Wrong personID" adapter={peopleJSONAdapter} />);
+stories.add('wrong PersonID', () => (
+  <WebexDataProvider adapter={webexAdapter}>
+    <WebexAvatar personID="Wrong personID" />
+  </WebexDataProvider>
+));
