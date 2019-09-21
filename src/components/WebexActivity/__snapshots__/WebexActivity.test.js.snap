@@ -1,35 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Webex Activity component Header component snapshot matches snapshot with "default" props 1`] = `
-<div
-  className="activity-header"
->
-  <WebexAvatar
-    personID="default"
-  />
-  <div
-    className="activity-author"
-  >
-    <span>
-      Webex Component User
-    </span>
-    <span
-      className="activity-timestamp"
-    >
-      2019-08-20T21:00:07.047Z P p
-    </span>
-  </div>
-</div>
-`;
-
-exports[`Webex Activity component Webex Activity snapshots matches snapshot with "default" text 1`] = `
+exports[`Webex Activity component snapshot matches snapshot with "default" text 1`] = `
 <div
   className="activity"
   key="default"
 >
-  <Header
-    created="2019-08-20T21:00:07.047Z"
+  <ActivityHeader
     personID="default"
+    timestamp="2019-08-20T21:00:07.047Z"
   />
   <div
     className="activity-content"
@@ -39,14 +17,14 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
 </div>
 `;
 
-exports[`Webex Activity component Webex Activity snapshots matches snapshot with "long" text 1`] = `
+exports[`Webex Activity component snapshot matches snapshot with "long" text 1`] = `
 <div
   className="activity"
   key="long"
 >
-  <Header
-    created="2019-08-20T21:00:07.047Z"
+  <ActivityHeader
     personID="default"
+    timestamp="2019-08-20T21:00:07.047Z"
   />
   <div
     className="activity-content"
@@ -56,14 +34,14 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
 </div>
 `;
 
-exports[`Webex Activity component Webex Activity snapshots matches snapshot with a text from the same week 1`] = `
+exports[`Webex Activity component snapshot matches snapshot with a text from the same week 1`] = `
 <div
   className="activity"
   key="sameWeek"
 >
-  <Header
-    created="sameWeek"
+  <ActivityHeader
     personID="default"
+    timestamp="sameWeek"
   />
   <div
     className="activity-content"
@@ -73,14 +51,14 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
 </div>
 `;
 
-exports[`Webex Activity component Webex Activity snapshots matches snapshot with a text from today 1`] = `
+exports[`Webex Activity component snapshot matches snapshot with a text from today 1`] = `
 <div
   className="activity"
   key="today"
 >
-  <Header
-    created="today"
+  <ActivityHeader
     personID="default"
+    timestamp="today"
   />
   <div
     className="activity-content"
@@ -90,14 +68,14 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
 </div>
 `;
 
-exports[`Webex Activity component Webex Activity snapshots matches snapshot with a text from yesterday 1`] = `
+exports[`Webex Activity component snapshot matches snapshot with a text from yesterday 1`] = `
 <div
   className="activity"
   key="yesterday"
 >
-  <Header
-    created="yesterday"
+  <ActivityHeader
     personID="default"
+    timestamp="yesterday"
   />
   <div
     className="activity-content"
@@ -107,14 +85,14 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
 </div>
 `;
 
-exports[`Webex Activity component Webex Activity snapshots matches snapshot with a text over a week ago 1`] = `
+exports[`Webex Activity component snapshot matches snapshot with a text over a week ago 1`] = `
 <div
   className="activity"
   key="old"
 >
-  <Header
-    created="old"
+  <ActivityHeader
     personID="default"
+    timestamp="old"
   />
   <div
     className="activity-content"
@@ -124,7 +102,7 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
 </div>
 `;
 
-exports[`Webex Activity component Webex Activity snapshots matches snapshot with an activity without header 1`] = `
+exports[`Webex Activity component snapshot matches snapshot with an activity without header 1`] = `
 <div
   className="activity"
   key="no-header"

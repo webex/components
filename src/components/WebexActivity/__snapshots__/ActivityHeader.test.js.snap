@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Activity Header component snapshot matches header at 3:00 PM 1`] = `
+<div
+  className="activity-header"
+>
+  <WebexAvatar
+    personID="default"
+  />
+  <div
+    className="activity-author"
+  >
+    <span>
+      Webex Component User
+    </span>
+    <span
+      className="activity-timestamp"
+    >
+      3:00 PM
+    </span>
+  </div>
+</div>
+`;
