@@ -2,56 +2,84 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {addDays, getDay, subDays} from 'date-fns';
 
-import {ActivitiesJSONAdapter, PeopleJSONAdapter} from '../../adapters';
-import {activities, people} from '../../data';
-
-import WebexActivity from './WebexActivity';
+import jsonData from '../../data';
+import {WebexJSONAdapter} from '../../adapters';
+import {WebexActivity, WebexDataProvider} from '../';
 
 // Setup for the stories
 const stories = storiesOf('Webex Activity', module);
-const adapters = {
-  activitiesAdapter: new ActivitiesJSONAdapter(activities),
-  peopleAdapter: new PeopleJSONAdapter(people),
-};
+const adapter = new WebexJSONAdapter(jsonData);
 
 // Stories
-stories.add('default', () => <WebexActivity activityID="default" adapters={adapters} />);
+stories.add('default', () => (
+  <WebexDataProvider adapter={adapter}>
+    <WebexActivity activityID="default" />
+  </WebexDataProvider>
+));
 
-stories.add('no header', () => <WebexActivity activityID="no-header" adapters={adapters} />);
+stories.add('no header', () => (
+  <WebexDataProvider adapter={adapter}>
+    <WebexActivity activityID="no-header" />
+  </WebexDataProvider>
+));
 
-stories.add('multi-line text', () => <WebexActivity activityID="multi-line" adapters={adapters} />);
+stories.add('multi-line text', () => (
+  <WebexDataProvider adapter={adapter}>
+    <WebexActivity activityID="multi-line" />
+  </WebexDataProvider>
+));
 
-stories.add('long text', () => <WebexActivity activityID="long" adapters={adapters} />);
+stories.add('long text', () => (
+  <WebexDataProvider adapter={adapter}>
+    <WebexActivity activityID="long" />
+  </WebexDataProvider>
+));
 
 stories.add('created today', () => {
   const today = new Date().toString();
 
-  activities.today = {...activities.today, text: today, created: today};
+  jsonData.activities.today = {...jsonData.activities.today, text: today, created: today};
 
-  return <WebexActivity activityID="today" adapters={adapters} />;
+  return (
+    <WebexDataProvider adapter={adapter}>
+      <WebexActivity activityID="today" />
+    </WebexDataProvider>
+  );
 });
 
 stories.add('created yesterday', () => {
   const yesterday = subDays(new Date(), 1).toString();
 
-  activities.yesterday = {...activities.yesterday, text: yesterday, created: yesterday};
+  jsonData.activities.yesterday = {...jsonData.activities.yesterday, text: yesterday, created: yesterday};
 
-  return <WebexActivity activityID="yesterday" adapters={adapters} />;
+  return (
+    <WebexDataProvider adapter={adapter}>
+      <WebexActivity activityID="yesterday" />
+    </WebexDataProvider>
+  );
 });
 
 stories.add('created this week', () => {
   // if it's sunday, make it a monday, otherwise pick the day before today
   const thisWeek = getDay(new Date()) === 0 ? addDays(new Date(), 1) : subDays(new Date(), 2).toString();
 
-  activities.sameWeek = {...activities.sameWeek, text: thisWeek, created: thisWeek};
+  jsonData.activities.sameWeek = {...jsonData.activities.sameWeek, text: thisWeek, created: thisWeek};
 
-  return <WebexActivity activityID="sameWeek" adapters={adapters} />;
+  return (
+    <WebexDataProvider adapter={adapter}>
+      <WebexActivity activityID="sameWeek" />
+    </WebexDataProvider>
+  );
 });
 
 stories.add('created over a week ago', () => {
   const oldDate = subDays(new Date(), 7).toString();
 
-  activities.old = {...activities.old, text: oldDate, created: oldDate};
+  jsonData.activities.old = {...jsonData.activities.old, text: oldDate, created: oldDate};
 
-  return <WebexActivity activityID="old" adapters={adapters} />;
+  return (
+    <WebexDataProvider adapter={adapter}>
+      <WebexActivity activityID="old" />
+    </WebexDataProvider>
+  );
 });
