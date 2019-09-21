@@ -1,24 +1,11 @@
 import React from 'react';
 
-import {ActivitiesJSONAdapter, PeopleJSONAdapter, RoomsJSONAdapter} from '../../adapters';
-import {activities, people, rooms} from '../../data';
-
 import WebexActivityStream, {Greeting, GreetingSpaceSVG, GreetingDirectSVG} from './WebexActivityStream';
 
 jest.mock('../hooks/useRoom');
 jest.mock('../hooks/useActivityStream');
 
 describe('Webex Activity Stream component', () => {
-  let adapters;
-
-  beforeEach(() => {
-    adapters = {
-      roomsAdapter: new RoomsJSONAdapter(rooms),
-      activitiesAdapter: new ActivitiesJSONAdapter(activities),
-      peopleAdapter: new PeopleJSONAdapter(people),
-    };
-  });
-
   describe('Greeting Space SVG snapshot', () => {
     test('matches with greeting space SVG', () => {
       expect(shallow(<GreetingSpaceSVG />)).toMatchSnapshot();
@@ -43,22 +30,19 @@ describe('Webex Activity Stream component', () => {
 
   describe('Webex Activity Stream snapshots', () => {
     test('matches with default stream', () => {
-      expect(shallow(<WebexActivityStream roomID="default" adapters={adapters} />)).toMatchSnapshot();
+      expect(shallow(<WebexActivityStream roomID="default" />)).toMatchSnapshot();
     });
+
     test('matches with empty group stream', () => {
-      expect(shallow(<WebexActivityStream roomID="empty-space" adapters={adapters} />)).toMatchSnapshot();
+      expect(shallow(<WebexActivityStream roomID="empty-space" />)).toMatchSnapshot();
     });
 
     test('matches with empty direct stream', () => {
-      expect(shallow(<WebexActivityStream roomID="empty-direct" adapters={adapters} />)).toMatchSnapshot();
+      expect(shallow(<WebexActivityStream roomID="empty-direct" />)).toMatchSnapshot();
     });
 
     test('matches with time rulers stream', () => {
-      expect(shallow(<WebexActivityStream roomID="time-rulers" adapters={adapters} />)).toMatchSnapshot();
+      expect(shallow(<WebexActivityStream roomID="time-rulers" />)).toMatchSnapshot();
     });
-  });
-
-  afterEach(() => {
-    adapters = null;
   });
 });
