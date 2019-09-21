@@ -1,33 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Webex Activity component Header component snapshot matches snapshot with "default" props 1`] = `
-<div
-  className="activity-header"
->
-  <WebexAvatar
-    personID="default"
-  />
-  <div
-    className="activity-author"
-  >
-    <span>
-      Webex Component User
-    </span>
-    <span
-      className="activity-timestamp"
-    >
-      2019-08-20T21:00:07.047Z P p
-    </span>
-  </div>
-</div>
-`;
-
 exports[`Webex Activity component Webex Activity snapshots matches snapshot with "default" text 1`] = `
 <div
   className="activity"
   key="default"
 >
-  <Header
+  <ActivityHeader
     created="2019-08-20T21:00:07.047Z"
     personID="default"
   />
@@ -44,7 +22,7 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
   className="activity"
   key="long"
 >
-  <Header
+  <ActivityHeader
     created="2019-08-20T21:00:07.047Z"
     personID="default"
   />
@@ -61,7 +39,7 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
   className="activity"
   key="sameWeek"
 >
-  <Header
+  <ActivityHeader
     created="sameWeek"
     personID="default"
   />
@@ -78,7 +56,7 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
   className="activity"
   key="today"
 >
-  <Header
+  <ActivityHeader
     created="today"
     personID="default"
   />
@@ -95,7 +73,7 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
   className="activity"
   key="yesterday"
 >
-  <Header
+  <ActivityHeader
     created="yesterday"
     personID="default"
   />
@@ -112,7 +90,7 @@ exports[`Webex Activity component Webex Activity snapshots matches snapshot with
   className="activity"
   key="old"
 >
-  <Header
+  <ActivityHeader
     created="old"
     personID="default"
   />
