@@ -1,0 +1,28 @@
+$content-left-margin: 3.5rem; //avatar width + margin
+
+.activity-header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .activity-author {
+    @include noselect();
+    display: flex;
+    min-width: 18.75rem !important;
+    margin-left: $content-left-margin;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    text-align: left;
+    color: $md-gray-70;
+    word-wrap: break-word;
+  }
+
+  .md-avatar {
+    position: absolute;
+    margin: 0 0.5rem;
+  }
+
+  .activity-timestamp {
+    margin-left: 0.5rem;
+  }
+}
