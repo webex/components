@@ -1,3 +1,15 @@
+# [1.16.0](https://github.com/webex/components/compare/v1.15.0...v1.16.0) (2019-09-21)
+
+
+### Bug Fixes
+
+* **components:** update index file to export all components ([a368ecc](https://github.com/webex/components/commit/a368ecc))
+
+
+### Features
+
+* **WebexDataProvider:** implement the component ([c5d96c3](https://github.com/webex/components/commit/c5d96c3))
+
 # [1.15.0](https://github.com/webex/components/compare/v1.14.0...v1.15.0) (2019-09-20)
 
 
