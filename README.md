@@ -63,16 +63,18 @@ In the `<head>` of your `index.html`, add the following import:
 ```
 
 ### Adapters
+
 Webex Components are self-updating, meaning, they know how to fetch the data they need.
 Data is passed to components via adapter classes (see [adapters](./src/adapters)).
 Adapters are an uniform interface for the Webex Components to consume.
 They also know how to map the data from their data source to the data the components need.
 
 To use a Webex Component, start by creating a Webex Adapter:
-```js
-import {WebexAdapter} from '@webex/components';
 
-const adapter = new WebexAdapter();
+```js
+import {WebexJSONAdapter} from '@webex/components';
+
+const adapter = new WebexJSONAdapter(jsonData);
 ```
 
 Adapters may interact with different data source types.
@@ -88,12 +90,14 @@ import '@webex/components/dist/webexComponents.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {WebexAdapter, WebexAvatar} from '@webex/components';
+import {WebexJSONAdapter, WebexAvatar} from '@webex/components';
 
-const adapter = new WebexAdapter();
+const adapter = new WebexJSONAdapter(jsonData);
 
 ReactDOM.render(
-  <WebexAvatar personId="XYZ" adapter={adapter} />,
+  <WebexDataProvider adapter={adapter}
+    <WebexAvatar personId="XYZ" />,
+  </WebexDataProvider>
   document.getElementById('root')
 );
 ```
