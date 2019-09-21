@@ -1,0 +1,18 @@
+.greeting {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 37.5rem;
+  text-align: center;
+  color: $gray-dark-3;
+
+  .greeting-header {
+    @include header-fonts;
+  }
+
+  .greeting-description {
+    @include body-fonts;
+    padding: 0 3.125rem;
+  }
+}
