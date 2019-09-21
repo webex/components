@@ -1,3 +1,7 @@
-export default function useActivityStream(ID, adapter) {
-  return `${ID}-activities` in adapter.datasource ? adapter.datasource[`${ID}-activities`] : [];
+import {useContext} from 'react';
+
+export default function useActivityStream(ID) {
+  const datasource = useContext();
+
+  return `${ID}-activities` in datasource.roomsAdapter ? datasource.roomsAdapter[`${ID}-activities`] : [];
 }

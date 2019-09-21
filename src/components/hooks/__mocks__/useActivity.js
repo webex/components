@@ -1,7 +1,11 @@
-export default function useActivity(activityID, adapter) {
-  if (!(activityID in adapter.datasource)) {
+import {useContext} from 'react';
+
+export default function useActivity(activityID) {
+  const datasource = useContext();
+
+  if (!(activityID in datasource.activitiesAdapter)) {
     throw new Error(`Could not find activity with ID "${activityID}"`);
   }
 
-  return adapter.datasource[activityID];
+  return datasource.activitiesAdapter[activityID];
 }

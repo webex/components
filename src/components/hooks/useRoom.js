@@ -1,20 +1,22 @@
-import {useState, useEffect} from 'react';
+import {useEffect, useContext, useState} from 'react';
+
+import {AdapterContext} from '../../components/';
 
 /**
  * Custom hook that returns room data of the given ID.
  *
  * @param {string} roomID  ID of the room for which to return data.
- * @param {obj} roomsAdapter  Component data adapter from which to retrieve data.
  * @returns {Room} Data of the room
  */
-export default function useRoom(roomID, roomsAdapter) {
+export default function useRoom(roomID) {
   const [room, setRoom] = useState({});
+  const adapter = useContext(AdapterContext);
 
   useEffect(() => {
     const onError = (error) => {
       throw error;
     };
-    const subscription = roomsAdapter.getRoom(roomID).subscribe(setRoom, onError);
+    const subscription = adapter.roomsAdapter.getRoom(roomID).subscribe(setRoom, onError);
 
     return () => {
       subscription.unsubscribe();

@@ -1,4 +1,6 @@
-import {useEffect, useReducer} from 'react';
+import {useContext, useEffect, useReducer} from 'react';
+
+import {AdapterContext} from '../../components/';
 
 const APPEND_ACTIVITIES = 'append_activities';
 
@@ -30,14 +32,14 @@ function reducer(activityIDs, action) {
  * Custom hook that returns activity data associated to the room of the given ID.
  *
  * @param {string} roomID  ID of the room for which to return data.
- * @param {RoomsAdapter} roomsAdapter  Component data adapter from which to retrieve data.
  * @returns {Room} Activity ID associated to the room
  */
-export default function useActivityStream(roomID, roomsAdapter) {
+export default function useActivityStream(roomID) {
   const [activityIDs, dispatch] = useReducer(reducer, []);
+  const adapter = useContext(AdapterContext);
 
   useEffect(() => {
-    const subscription = roomsAdapter.getRoomActivities(roomID).subscribe((activities) => {
+    const subscription = adapter.roomsAdapter.getRoomActivities(roomID).subscribe((activities) => {
       dispatch({type: APPEND_ACTIVITIES, payload: activities});
     });
 
