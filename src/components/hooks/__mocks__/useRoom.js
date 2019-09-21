@@ -1,7 +1,11 @@
-export default function useRoom(roomID, adapter) {
-  if (!(roomID in adapter.datasource)) {
+import {useContext} from 'react';
+
+export default function useRoom(roomID) {
+  const datasource = useContext();
+
+  if (!(roomID in datasource.roomsAdapter)) {
     throw new Error(`Could not find room with ID "${roomID}"`);
   }
 
-  return adapter.datasource[roomID];
+  return datasource.roomsAdapter[roomID];
 }

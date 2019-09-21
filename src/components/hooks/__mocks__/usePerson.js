@@ -1,7 +1,11 @@
-export default function usePerson(personID, adapter) {
-  if (!(personID in adapter.datasource)) {
+import {useContext} from 'react';
+
+export default function usePerson(personID) {
+  const datasource = useContext();
+
+  if (!(personID in datasource.peopleAdapter)) {
     throw new Error(`Could not find person with ID "${personID}"`);
   }
 
-  return adapter.datasource[personID];
+  return datasource.peopleAdapter[personID];
 }
