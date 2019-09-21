@@ -19,16 +19,15 @@ To see all the different possible states of the Webex Activity component, you ca
 1. Create a component adapters object from which the data will be retrieved (See [adapters](../../adapters)). For instance:
 
    ```js
-   const jsonAdapters = {
-     peopleJSONAdapter: new PeopleJSONAdapter(people),
-     activitiesJSONAdapter: new ActivitiesJSONAdapter(activities),
-   };
+   const jsonAdapter = new WebexJSONAdapter(jsonData);
    ```
 
 2. Create a component instance by passing the activity ID as a string and the component data adapters which contains [PeopleAdapter](../../adapters/PeopleAdapter.js) and [ActivitiesAdapter](../../adapters/ActivitiesAdapter.js) that we created previously
 
    ```js
-   <WebexActivities activityID="activityID" adapters={jsonAdapters} />
+   <WebexDataProvider adapter={jsonAdapter}>
+     <WebexActivities activityID="activityID" />
+   </WebexDataProvider>
    ```
 
 The component knows how to manage its data. If anything changes in the data source that the adapter manages, the component will also update on its own.

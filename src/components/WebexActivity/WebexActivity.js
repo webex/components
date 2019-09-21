@@ -33,12 +33,12 @@ export function formatMessageDate(timestamp) {
   return formattedDate;
 }
 
-export function Header({personID, adapter, created}) {
-  const {displayName} = usePerson(personID, adapter);
+export function Header({personID, created}) {
+  const {displayName} = usePerson(personID);
 
   return (
     <div className="activity-header">
-      <WebexAvatar personID={personID} adapter={adapter} />
+      <WebexAvatar personID={personID} />
       <div className="activity-author">
         <span>{displayName}</span>
         <span className="activity-timestamp">{formatMessageDate(new Date(created))}</span>
@@ -49,15 +49,12 @@ export function Header({personID, adapter, created}) {
 
 Header.propTypes = {
   personID: PropTypes.string.isRequired,
-  adapter: PropTypes.object.isRequired,
   created: PropTypes.string.isRequired,
 };
 
-export default function WebexActivity({activityID, adapters}) {
-  const {created, displayHeader, ID, personID, text} = useActivity(activityID, adapters.activitiesAdapter);
-  const header = displayHeader ? (
-    <Header personID={personID} adapter={adapters.peopleAdapter} created={created} />
-  ) : null;
+export default function WebexActivity({activityID}) {
+  const {created, displayHeader, ID, personID, text} = useActivity(activityID);
+  const header = displayHeader ? <Header personID={personID} created={created} /> : null;
 
   return (
     <div className="activity" key={ID}>
@@ -69,8 +66,4 @@ export default function WebexActivity({activityID, adapters}) {
 
 WebexActivity.propTypes = {
   activityID: PropTypes.string.isRequired,
-  adapters: PropTypes.exact({
-    activitiesAdapter: PropTypes.object.isRequired,
-    peopleAdapter: PropTypes.object.isRequired,
-  }).isRequired,
 };
