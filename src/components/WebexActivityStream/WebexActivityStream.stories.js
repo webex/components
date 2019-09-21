@@ -1,24 +1,35 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react';
 
-import {ActivitiesJSONAdapter, PeopleJSONAdapter, RoomsJSONAdapter} from '../../adapters';
-import {activities, people, rooms} from '../../data';
-
-import WebexActivityStream from './WebexActivityStream';
+import jsonData from '../../data';
+import {WebexJSONAdapter} from '../../adapters';
+import {WebexActivityStream, WebexDataProvider} from '../';
 
 // Setup for the stories
 const stories = storiesOf('Webex Activity Stream', module);
-const adapters = {
-  roomsAdapter: new RoomsJSONAdapter(rooms),
-  activitiesAdapter: new ActivitiesJSONAdapter(activities),
-  peopleAdapter: new PeopleJSONAdapter(people),
-};
+const adapter = new WebexJSONAdapter(jsonData);
 
 // Stories
-stories.add('default', () => <WebexActivityStream roomID="default" adapters={adapters} />);
+stories.add('default', () => (
+  <WebexDataProvider adapter={adapter}>
+    <WebexActivityStream roomID="default" />
+  </WebexDataProvider>
+));
 
-stories.add('empty group stream', () => <WebexActivityStream roomID="empty-space" adapters={adapters} />);
+stories.add('empty group stream', () => (
+  <WebexDataProvider adapter={adapter}>
+    <WebexActivityStream roomID="empty-space" />
+  </WebexDataProvider>
+));
 
-stories.add('empty 1:1 stream', () => <WebexActivityStream roomID="empty-direct" adapters={adapters} />);
+stories.add('with time rulers', () => (
+  <WebexDataProvider adapter={adapter}>
+    <WebexActivityStream roomID="time-rulers" />
+  </WebexDataProvider>
+));
 
-stories.add('with time rulers', () => <WebexActivityStream roomID="time-rulers" adapters={adapters} />);
+stories.add('empty 1:1 stream', () => (
+  <WebexDataProvider adapter={adapter}>
+    <WebexActivityStream roomID="empty-direct" />
+  </WebexDataProvider>
+));

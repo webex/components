@@ -178,17 +178,16 @@ TimeRuler.propTypes = {
   text: PropTypes.string.isRequired,
 };
 
-export default function WebexActivityStream({roomID, adapters}) {
-  const {roomsAdapter, activitiesAdapter, peopleAdapter} = adapters;
-  const {title, roomType} = useRoom(roomID, roomsAdapter);
-  const activitiesData = useActivityStream(roomID, roomsAdapter);
+export default function WebexActivityStream({roomID}) {
+  const {title, roomType} = useRoom(roomID);
+  const activitiesData = useActivityStream(roomID);
   const personName = roomType === RoomType.DIRECT ? title : '';
   const activities = activitiesData.map((activity) => {
     // If the activity is an object with a date property, it is a time ruler
     const activityComponent = activity.date ? (
       <TimeRuler key={activity.date.toString()} text={formatTimeRulerText(new Date(activity.date))} />
     ) : (
-      <WebexActivity key={activity} activityID={activity} adapters={{activitiesAdapter, peopleAdapter}} />
+      <WebexActivity key={activity} activityID={activity} />
     );
 
     return activityComponent;
@@ -203,9 +202,4 @@ export default function WebexActivityStream({roomID, adapters}) {
 
 WebexActivityStream.propTypes = {
   roomID: PropTypes.string.isRequired,
-  adapters: PropTypes.exact({
-    roomsAdapter: PropTypes.object.isRequired,
-    activitiesAdapter: PropTypes.object.isRequired,
-    peopleAdapter: PropTypes.object.isRequired,
-  }).isRequired,
 };
