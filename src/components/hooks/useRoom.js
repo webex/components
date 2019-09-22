@@ -10,13 +10,13 @@ import {AdapterContext} from '../../components/';
  */
 export default function useRoom(roomID) {
   const [room, setRoom] = useState({});
-  const adapter = useContext(AdapterContext);
+  const {roomsAdapter} = useContext(AdapterContext);
 
   useEffect(() => {
     const onError = (error) => {
       throw error;
     };
-    const subscription = adapter.roomsAdapter.getRoom(roomID).subscribe(setRoom, onError);
+    const subscription = roomsAdapter.getRoom(roomID).subscribe(setRoom, onError);
 
     return () => {
       subscription.unsubscribe();

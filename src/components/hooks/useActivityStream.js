@@ -36,10 +36,10 @@ function reducer(activityIDs, action) {
  */
 export default function useActivityStream(roomID) {
   const [activityIDs, dispatch] = useReducer(reducer, []);
-  const adapter = useContext(AdapterContext);
+  const {roomsAdapter} = useContext(AdapterContext);
 
   useEffect(() => {
-    const subscription = adapter.roomsAdapter.getRoomActivities(roomID).subscribe((activities) => {
+    const subscription = roomsAdapter.getRoomActivities(roomID).subscribe((activities) => {
       dispatch({type: APPEND_ACTIVITIES, payload: activities});
     });
 
