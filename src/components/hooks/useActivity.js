@@ -10,13 +10,13 @@ import {AdapterContext} from '../../components/';
  */
 export default function useActivity(activityID) {
   const [activity, setActivity] = useState({});
-  const adapter = useContext(AdapterContext);
+  const {activitiesAdapter} = useContext(AdapterContext);
 
   useEffect(() => {
     const onError = (error) => {
       throw error;
     };
-    const subscription = adapter.activitiesAdapter.getActivity(activityID).subscribe(setActivity, onError);
+    const subscription = activitiesAdapter.getActivity(activityID).subscribe(setActivity, onError);
 
     return () => {
       subscription.unsubscribe();

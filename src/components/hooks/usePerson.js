@@ -10,7 +10,7 @@ import {AdapterContext} from '../../components/';
  */
 export default function usePerson(personID) {
   const [person, setPerson] = useState({});
-  const adapter = useContext(AdapterContext);
+  const {peopleAdapter} = useContext(AdapterContext);
 
   useEffect(() => {
     const onError = (error) => {
@@ -21,7 +21,7 @@ export default function usePerson(personID) {
       // eslint-disable-next-line no-console
       console.error(error.message);
     };
-    const subscription = adapter.peopleAdapter.getPerson(personID).subscribe(setPerson, onError);
+    const subscription = peopleAdapter.getPerson(personID).subscribe(setPerson, onError);
 
     return () => {
       subscription.unsubscribe();
