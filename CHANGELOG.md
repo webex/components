@@ -1,3 +1,10 @@
+# [1.17.0](https://github.com/webex/components/compare/v1.16.0...v1.17.0) (2019-09-23)
+
+
+### Features
+
+* **WebexAvatar:** display gray empty avatar onError ([17b89bc](https://github.com/webex/components/commit/17b89bc))
+
 # [1.16.0](https://github.com/webex/components/compare/v1.15.0...v1.16.0) (2019-09-21)
 
 
