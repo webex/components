@@ -186,10 +186,6 @@ exports[`Webex Activity Stream component Webex Activity Stream snapshots matches
     activityID="long"
     key="long"
   />
-  <WebexActivity
-    activityID="multi-line"
-    key="multi-line"
-  />
 </div>
 `;
 

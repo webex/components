@@ -24,6 +24,7 @@ import ActivitiesAdapter from './ActivitiesAdapter';
 export default class ActivitiesJSONAdapter extends ActivitiesAdapter {
   constructor(datasource) {
     super(datasource);
+
     this.getActivity = this.getActivity.bind(this);
   }
 

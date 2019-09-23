@@ -4,7 +4,8 @@
     "title": "Test Room",
     "roomType": "group"
   },
-  "default-activities": ["default", "no-header", "long", "multi-line"],
+  "default-activities": ["default", "no-header", "long"],
+  "default-previous-activities": ["default", "no-header", "long", "multi-line"],
   "empty-space": {
     "ID": "empty-space",
     "title": "Empty Test Room",
