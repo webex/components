@@ -14,7 +14,12 @@ export default function usePerson(personID) {
 
   useEffect(() => {
     const onError = (error) => {
-      throw error;
+      setPerson({
+        displayName: ' ',
+      });
+
+      // eslint-disable-next-line no-console
+      console.error(error.message);
     };
     const subscription = adapter.peopleAdapter.getPerson(personID).subscribe(setPerson, onError);
 

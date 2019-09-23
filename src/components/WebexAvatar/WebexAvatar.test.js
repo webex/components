@@ -51,9 +51,7 @@ describe('Webex Avatar component', () => {
     expect(shallow(<WebexAvatar personID={PersonStatus.TYPING} />)).toMatchSnapshot();
   });
 
-  test('throws error with inappropriate personID', () => {
-    expect(() => shallow(<WebexAvatar personID="Wrong PersonID" />)).toThrowError(
-      new Error('Could not find person with ID "Wrong PersonID"')
-    );
+  test('matches snapshot with wrong personID', () => {
+    expect(shallow(<WebexAvatar personID="Wrong PersonID" />)).toMatchSnapshot();
   });
 });
