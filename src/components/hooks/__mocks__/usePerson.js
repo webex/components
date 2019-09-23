@@ -2,10 +2,13 @@ import {useContext} from 'react';
 
 export default function usePerson(personID) {
   const datasource = useContext();
+  let person = {...datasource.peopleAdapter[personID]};
 
   if (!(personID in datasource.peopleAdapter)) {
-    throw new Error(`Could not find person with ID "${personID}"`);
+    person = {
+      displayName: ' ',
+    };
   }
 
-  return datasource.peopleAdapter[personID];
+  return person;
 }
