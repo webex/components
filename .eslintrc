@@ -6,13 +6,7 @@
     "plugin:prettier/recommended",
     "prettier/react"
   ],
-  "plugins": [
-    "react",
-    "jsx-a11y",
-    "import",
-    "prettier",
-    "react-hooks"
-  ],
+  "plugins": ["react", "jsx-a11y", "import", "prettier", "react-hooks"],
   "env": {
     "browser": true,
     "jest": true
@@ -27,7 +21,7 @@
     "shallow": true,
     "render": true,
     "mount": true,
-    "rxjs": true,
+    "rxjs": true
   },
   "rules": {
     "arrow-body-style": [
@@ -54,16 +48,12 @@
     "import/no-named-as-default": 0,
     "jsx-a11y/media-has-caption": 0,
     "jsx-a11y/no-autofocus": 0,
-    "no-confusing-arrow": [
-      "error"
-    ],
+    "no-confusing-arrow": ["error"],
     "no-param-reassign": [
       "error",
       {
         "props": true,
-        "ignorePropertyModificationsFor": [
-          "draft"
-        ]
+        "ignorePropertyModificationsFor": ["draft"]
       }
     ],
     "no-warning-comments": 0,
@@ -72,6 +62,16 @@
       {
         "allowNamedFunctions": false,
         "allowUnboundThis": true
+      }
+    ],
+    "prefer-destructuring": [
+      "error",
+      {
+        "array": true,
+        "object": true
+      },
+      {
+        "enforceForRenamedProperties": false
       }
     ],
     "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
