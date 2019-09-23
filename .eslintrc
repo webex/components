@@ -13,14 +13,7 @@
   },
   "globals": {
     "expect": true,
-    "waitForAsync": true,
-    "intl": true,
-    "shallowWithIntl": true,
-    "mountWithIntl": true,
-    "renderWithIntl": true,
     "shallow": true,
-    "render": true,
-    "mount": true,
     "rxjs": true
   },
   "rules": {
