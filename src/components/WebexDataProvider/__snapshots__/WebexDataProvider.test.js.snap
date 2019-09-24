@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Webex Data Provider component matches snapshot 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "activitiesAdapter": Object {},
+      "peopleAdapter": Object {},
+      "roomsAdapter": Object {},
+    }
+  }
+>
+  <div
+    className="test"
+  />
+</ContextProvider>
+`;
