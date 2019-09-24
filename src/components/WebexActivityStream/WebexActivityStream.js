@@ -1,10 +1,11 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useRef} from 'react';
 import PropTypes from 'prop-types';
 import {ListSeparator} from '@momentum-ui/react';
 import {format, isToday, isSameWeek, isYesterday} from 'date-fns';
 
 import {RoomType} from '../../adapters/RoomsAdapter';
-import {useActivityStream, useRoom} from '../hooks';
+import {useActivityStream, useActivityScroll, useRoom} from '../hooks';
+import {PREPEND_ACTIVITIES} from '../hooks/useActivityStream';
 import WebexActivity from '../WebexActivity/WebexActivity';
 
 import './WebexActivityStream.scss';
@@ -179,8 +180,15 @@ TimeRuler.propTypes = {
 };
 
 export default function WebexActivityStream({roomID}) {
+  const [activitiesData, dispatch] = useActivityStream(roomID);
+  const loadPreviousActivities = (previousActivities) => {
+    dispatch({type: PREPEND_ACTIVITIES, payload: previousActivities});
+  };
+
   const {title, roomType} = useRoom(roomID);
-  const activitiesData = useActivityStream(roomID);
+  const activityStreamRef = useRef(null);
+  const showLoader = useActivityScroll(roomID, activityStreamRef, loadPreviousActivities);
+
   const personName = roomType === RoomType.DIRECT ? title : '';
   const activities = activitiesData.map((activity) => {
     // If the activity is an object with a date property, it is a time ruler
@@ -194,7 +202,8 @@ export default function WebexActivityStream({roomID}) {
   });
 
   return (
-    <div className="activity-stream">
+    <div className="activity-stream" ref={activityStreamRef}>
+      {showLoader && <div className="activity-stream-loader" />}
       {activities.length ? <Fragment>{activities}</Fragment> : <Greeting personName={personName} />}
     </div>
   );
