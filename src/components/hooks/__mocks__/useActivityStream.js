@@ -2,6 +2,11 @@ import {useContext} from 'react';
 
 export default function useActivityStream(ID) {
   const datasource = useContext();
+  let data = [];
 
-  return `${ID}-activities` in datasource.roomsAdapter ? datasource.roomsAdapter[`${ID}-activities`] : [];
+  if (`${ID}-activities` in datasource.roomsAdapter) {
+    data = datasource.roomsAdapter[`${ID}-activities`];
+  }
+
+  return [data, () => {}];
 }

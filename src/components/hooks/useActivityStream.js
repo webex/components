@@ -2,52 +2,57 @@ import {useContext, useEffect, useReducer} from 'react';
 
 import {AdapterContext} from '../../components/';
 
-const APPEND_ACTIVITIES = 'append_activities';
+export const PREPEND_ACTIVITIES = 'prepend_activities';
+export const APPEND_ACTIVITIES = 'append_activities';
 
 /**
- * Returns a new array of activityIDs based on the given action.
- * If no action is passed, it will return the same activityIDs
+ * Returns a new array of activities based on the given action.
+ * If no action is passed, it will return the same activities
  * array without any changes.
  *
- * @param {Array.<string>} activityIDs activityIDs associated to the room
- * @param {object} action action to apply to given activityIDs
- * @returns {Array.<string>} New activityIDs associated to the room
+ * @param {Array.<string|ActivityDate>} activities activities associated to the room
+ * @param {object} action action to apply to given activities
+ * @returns {Array.<string|ActivityDate>}
  */
-function reducer(activityIDs, action) {
-  let newActivityIDs = [];
+function reducer(activities, action) {
+  let newActivities = [];
 
   switch (action.type) {
+    case PREPEND_ACTIVITIES:
+      newActivities = action.payload.concat(activities);
+      break;
     case APPEND_ACTIVITIES:
-      newActivityIDs = activityIDs.concat(action.payload);
+      newActivities = activities.concat(action.payload);
       break;
     default:
-      newActivityIDs = activityIDs;
+      newActivities = activities;
       break;
   }
 
-  return newActivityIDs;
+  return newActivities;
 }
 
 /**
  * Custom hook that returns activity data associated to the room of the given ID.
  *
  * @param {string} roomID  ID of the room for which to return data.
- * @returns {Room} Activity ID associated to the room
+ * @returns {Array} Activities state and state setter
  */
 export default function useActivityStream(roomID) {
-  const [activityIDs, dispatch] = useReducer(reducer, []);
   const {roomsAdapter} = useContext(AdapterContext);
+  const [activities, dispatch] = useReducer(reducer, []);
 
+  // Subscribe to future updates on load
   useEffect(() => {
-    const subscription = roomsAdapter.getRoomActivities(roomID).subscribe((activities) => {
-      dispatch({type: APPEND_ACTIVITIES, payload: activities});
+    const activityUpdates = roomsAdapter.getRoomActivities(roomID).subscribe((activityData) => {
+      dispatch({type: APPEND_ACTIVITIES, payload: activityData});
     });
 
     return () => {
-      subscription.unsubscribe();
+      activityUpdates.unsubscribe();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return activityIDs;
+  return [activities, dispatch];
 }
