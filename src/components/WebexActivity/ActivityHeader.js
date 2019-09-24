@@ -27,7 +27,7 @@ export function formatMessageDate(timestamp) {
     formattedDate = format(timestamp, 'iiii p');
   } else {
     // 1/1/2020 12:00 PM
-    formattedDate = format(timestamp, 'P p');
+    formattedDate = format(timestamp, 'M/d/yy p');
   }
 
   return formattedDate;
