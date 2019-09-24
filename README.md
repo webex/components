@@ -90,7 +90,7 @@ import '@webex/components/dist/webexComponents.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {WebexJSONAdapter, WebexAvatar} from '@webex/components';
+import {WebexAvatar, WebexDataProvider, WebexJSONAdapter} from '@webex/components';
 
 const adapter = new WebexJSONAdapter(jsonData);
 
