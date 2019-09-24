@@ -21,10 +21,6 @@ import './TimeRuler.scss';
  */
 export function formatTimeRulerText(timestamp) {
   let formattedDate;
-  
-  console.log('today:',isToday(timestamp));
-  console.log('yesterday',isYesterday(timestamp));
-  // console.log('week', isSameWeek(timestamp, new Date()));
 
   if (isToday(timestamp)) {
     formattedDate = 'Today';
