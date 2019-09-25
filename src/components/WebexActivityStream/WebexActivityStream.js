@@ -4,7 +4,7 @@ import {ListSeparator} from '@momentum-ui/react';
 import {format, isToday, isSameWeek, isYesterday} from 'date-fns';
 
 import {RoomType} from '../../adapters/RoomsAdapter';
-import {useActivityStream, useActivityScroll, useRoom} from '../hooks';
+import {useActivityStream, useActivityScroll, useOverflowActivities, useRoom} from '../hooks';
 import {PREPEND_ACTIVITIES} from '../hooks/useActivityStream';
 import WebexActivity from '../WebexActivity/WebexActivity';
 
@@ -188,6 +188,7 @@ export default function WebexActivityStream({roomID}) {
   const {title, roomType} = useRoom(roomID);
   const activityStreamRef = useRef(null);
   const showLoader = useActivityScroll(roomID, activityStreamRef, loadPreviousActivities);
+  const lastActivityRef = useOverflowActivities(roomID, activityStreamRef, loadPreviousActivities);
 
   const personName = roomType === RoomType.DIRECT ? title : '';
   const activities = activitiesData.map((activity) => {
@@ -205,6 +206,7 @@ export default function WebexActivityStream({roomID}) {
     <div className="activity-stream" ref={activityStreamRef}>
       {showLoader && <div className="activity-stream-loader" />}
       {activities.length ? <Fragment>{activities}</Fragment> : <Greeting personName={personName} />}
+      <div className="last-activity" ref={lastActivityRef} />
     </div>
   );
 }

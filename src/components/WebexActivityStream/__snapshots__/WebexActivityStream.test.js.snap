@@ -186,6 +186,9 @@ exports[`Webex Activity Stream component Webex Activity Stream snapshots matches
     activityID="long"
     key="long"
   />
+  <div
+    className="last-activity"
+  />
 </div>
 `;
 
@@ -196,6 +199,9 @@ exports[`Webex Activity Stream component Webex Activity Stream snapshots matches
   <Greeting
     personName="Webex Component User"
   />
+  <div
+    className="last-activity"
+  />
 </div>
 `;
 
@@ -205,6 +211,9 @@ exports[`Webex Activity Stream component Webex Activity Stream snapshots matches
 >
   <Greeting
     personName=""
+  />
+  <div
+    className="last-activity"
   />
 </div>
 `;
@@ -236,6 +245,9 @@ exports[`Webex Activity Stream component Webex Activity Stream snapshots matches
   <WebexActivity
     activityID="multi-line"
     key="multi-line"
+  />
+  <div
+    className="last-activity"
   />
 </div>
 `;
