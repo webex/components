@@ -1,3 +1,13 @@
+# [1.18.0](https://github.com/webex/components/compare/v1.17.0...v1.18.0) (2019-10-07)
+
+
+### Features
+
+* **RoomsAdapter:** add hasMoreActivities to interface ([33ffc99](https://github.com/webex/components/commit/33ffc99))
+* **RoomsJSONAdapter:** implement get previous activities chunking ([9b2fd45](https://github.com/webex/components/commit/9b2fd45))
+* **ActivityStream:** load more activities on scroll up ([f4af0c8](https://github.com/webex/components/commit/f4af0c8))
+* **ActivityStream:** load previous activities until container is filled ([3a22bdf](https://github.com/webex/components/commit/3a22bdf))
+
 # [1.17.0](https://github.com/webex/components/compare/v1.16.0...v1.17.0) (2019-09-23)
 
 
