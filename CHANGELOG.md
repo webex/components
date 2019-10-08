@@ -1,3 +1,10 @@
+## [1.18.1](https://github.com/webex/components/compare/v1.18.0...v1.18.1) (2019-10-08)
+
+
+### Bug Fixes
+
+* **ActivityStream:** fix display order of previous activities ([fbc4dec](https://github.com/webex/components/commit/fbc4dec))
+
 # [1.18.0](https://github.com/webex/components/compare/v1.17.0...v1.18.0) (2019-10-07)
 
 
