@@ -72,7 +72,7 @@ export default class RoomsJSONAdapter extends RoomsAdapter {
    * Returns an observable that emits an array of the next chunk of previous
    * activity data of the given roomID. If `hasMoreActivities` returns false,
    * the observable will complete.
-   * **Previous activity data must be sorted oldest-to-latest.**
+   * **Previous activity data must be sorted newest-to-oldest.**
    *
    * The next chunk is based on the adapter's `dataChunkSize`.
    *

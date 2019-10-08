@@ -19,7 +19,7 @@ function reducer(activities, action) {
 
   switch (action.type) {
     case PREPEND_ACTIVITIES:
-      newActivities = action.payload.concat(activities);
+      newActivities = action.payload.reverse().concat(activities);
       break;
     case APPEND_ACTIVITIES:
       newActivities = activities.concat(action.payload);
