@@ -1,6 +1,5 @@
+import {RoomsAdapter} from '@webex/component-adapter-interfaces';
 import {Observable} from 'rxjs';
-
-import RoomsAdapter from './RoomsAdapter';
 
 /**
  * @typedef RoomJSON
