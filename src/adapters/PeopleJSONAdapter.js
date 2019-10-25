@@ -1,6 +1,5 @@
+import {PeopleAdapter} from '@webex/component-adapter-interfaces';
 import {Observable} from 'rxjs';
-
-import PeopleAdapter from './PeopleAdapter';
 
 /**
  * @typedef PeopleJSON

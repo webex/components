@@ -1,9 +1,9 @@
 import React, {Fragment, useRef} from 'react';
 import PropTypes from 'prop-types';
 import {ListSeparator} from '@momentum-ui/react';
+import {RoomType} from '@webex/component-adapter-interfaces';
 import {format, isToday, isSameWeek, isYesterday} from 'date-fns';
 
-import {RoomType} from '../../adapters/RoomsAdapter';
 import {useActivityStream, useActivityScroll, useOverflowActivities, useRoom} from '../hooks';
 import {PREPEND_ACTIVITIES} from '../hooks/useActivityStream';
 import WebexActivity from '../WebexActivity/WebexActivity';

@@ -1,6 +1,5 @@
 import React from 'react';
-
-import {PersonStatus} from '../../adapters/PeopleAdapter';
+import {PersonStatus} from '@webex/component-adapter-interfaces';
 
 import WebexAvatar from './WebexAvatar';
 

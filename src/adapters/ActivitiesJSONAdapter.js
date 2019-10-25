@@ -1,6 +1,5 @@
+import {ActivitiesAdapter} from '@webex/component-adapter-interfaces';
 import {Observable} from 'rxjs';
-
-import ActivitiesAdapter from './ActivitiesAdapter';
 
 /**
  * @typedef ActivitiesJSON

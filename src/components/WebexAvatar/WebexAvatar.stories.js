@@ -1,8 +1,8 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react';
+import {PersonStatus} from '@webex/component-adapter-interfaces';
 
 import jsonData from '../../data';
-import {PersonStatus} from '../../adapters/PeopleAdapter';
 import {WebexJSONAdapter} from '../../adapters';
 import {WebexAvatar, WebexDataProvider} from '../';
 
