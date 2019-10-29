@@ -1,3 +1,16 @@
+# [1.19.0](https://github.com/webex/components/compare/v1.18.1...v1.19.0) (2019-10-29)
+
+
+### Bug Fixes
+
+* **package:** install component adapter interfaces ([5a29ec7](https://github.com/webex/components/commit/5a29ec7be8c3e95cfa8b1244267742c60dc3d8d8))
+
+
+### Features
+
+* **adapters:** remove adapter interfaces ([77ed50e](https://github.com/webex/components/commit/77ed50ef239b0fe7887246140ff5e233290380de))
+* **adapters:** update interface imports ([472cf5a](https://github.com/webex/components/commit/472cf5a36558bff857b2044f744edb945e333efd))
+
 ## [1.18.1](https://github.com/webex/components/compare/v1.18.0...v1.18.1) (2019-10-08)
 
 
