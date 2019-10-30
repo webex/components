@@ -1,3 +1,10 @@
+## [1.19.1](https://github.com/webex/components/compare/v1.19.0...v1.19.1) (2019-10-30)
+
+
+### Bug Fixes
+
+* **package:** install meetings adapter interface ([d018094](https://github.com/webex/components/commit/d0180942304528d531dc3460c84a88df0606eadc))
+
 # [1.19.0](https://github.com/webex/components/compare/v1.18.1...v1.19.0) (2019-10-29)
 
 
