@@ -33,7 +33,7 @@
   "dependencies": {
     "@momentum-ui/react": "^20.1.1",
     "@webex/component-adapter-interfaces": "^1.4.0",
-    "date-fns": "^2.0.1",
+    "date-fns": "^2.6.0",
     "prop-types": "^15.7.2",
     "rxjs": "^6.5.2"
   },
