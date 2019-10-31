@@ -1,0 +1,14 @@
+{
+  "scheduledMeeting": {
+    "ID": "scheduledMeeting",
+    "title": "Our Scheduled Meeting",
+    "startTime": "2019-08-20T21:00:00.000Z",
+    "endTime": "2019-08-20T22:00:00.000Z",
+    "localVideo": {},
+    "remoteVideo": {},
+    "localAudio": {},
+    "remoteAudio": {},
+    "localShare": {},
+    "remoteShare": {}
+  }
+}
