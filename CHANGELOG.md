@@ -1,3 +1,12 @@
+## [1.19.2](https://github.com/webex/components/compare/v1.19.1...v1.19.2) (2019-10-31)
+
+
+### Bug Fixes
+
+* **package:** install mockdate ([edf655c](https://github.com/webex/components/commit/edf655c4019b37e2fafde281c2df730b932a45ff))
+* **mocks:** remove date-fns Jest mock ([9b81c8a](https://github.com/webex/components/commit/9b81c8a07a089b6f4d32f3abf8c69c11f50047c2))
+* **package:** update date-fns to 2.6.0 ([3dc8ad3](https://github.com/webex/components/commit/3dc8ad3a1f764cbc5a25830d68c2314cc3eb4900))
+
 ## [1.19.1](https://github.com/webex/components/compare/v1.19.0...v1.19.1) (2019-10-30)
 
 
