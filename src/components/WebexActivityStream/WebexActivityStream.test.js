@@ -5,8 +5,8 @@ import WebexActivityStream from './WebexActivityStream';
 jest.mock('../hooks/useRoom');
 jest.mock('../hooks/useActivityStream');
 
-describe('Webex Activity Stream component', () => {
-  describe('snapshot', () => {
+describe('Webex Activity Stream', () => {
+  describe('component snapshot', () => {
     test('matches with default stream', () => {
       expect(shallow(<WebexActivityStream roomID="default" />)).toMatchSnapshot();
     });

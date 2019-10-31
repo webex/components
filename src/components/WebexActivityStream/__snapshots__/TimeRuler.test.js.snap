@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Time Ruler component snapshot matches with older than a week time 1`] = `
+<ListSeparator
+  className="time-ruler"
+  lineColor={null}
+  margin={null}
+  role="listitem"
+  text="07/26/2019"
+  textColor={null}
+  textPadding={null}
+/>
+`;
+
+exports[`Time Ruler component snapshot matches with time from this week 1`] = `
+<ListSeparator
+  className="time-ruler"
+  lineColor={null}
+  margin={null}
+  role="listitem"
+  text="Sunday"
+  textColor={null}
+  textPadding={null}
+/>
+`;
+
+exports[`Time Ruler component snapshot matches with time from today 1`] = `
+<ListSeparator
+  className="time-ruler"
+  lineColor={null}
+  margin={null}
+  role="listitem"
+  text="Today"
+  textColor={null}
+  textPadding={null}
+/>
+`;
+
+exports[`Time Ruler component snapshot matches with time from yesterday 1`] = `
+<ListSeparator
+  className="time-ruler"
+  lineColor={null}
+  margin={null}
+  role="listitem"
+  text="Yesterday"
+  textColor={null}
+  textPadding={null}
+/>
+`;
