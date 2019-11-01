@@ -1,3 +1,10 @@
+# [1.20.0](https://github.com/webex/components/compare/v1.19.2...v1.20.0) (2019-11-01)
+
+
+### Features
+
+* **MeetingsJsonAdapter:** implement getMeeting ([ea11f34](https://github.com/webex/components/commit/ea11f344e1f351c6d8fd2a97f8d2962c20dc748a))
+
 ## [1.19.2](https://github.com/webex/components/compare/v1.19.1...v1.19.2) (2019-10-31)
 
 
