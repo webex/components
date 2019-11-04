@@ -1,3 +1,13 @@
+# [1.21.0](https://github.com/webex/components/compare/v1.20.0...v1.21.0) (2019-11-04)
+
+
+### Features
+
+* **WebexDataProvider:** add meetings adapter ([0568cb5](https://github.com/webex/components/commit/0568cb52d37a4cf9f407edaee046494e413274a2))
+* **data:** add meetings data ([2fb36ac](https://github.com/webex/components/commit/2fb36acb0cf66cf814f262209c888ecd0f969bcf))
+* **adapters:** add MeetingsJSONAdapter to export ([c13694f](https://github.com/webex/components/commit/c13694fdab7bc13e3e6d799ea514257bfaea3ab4))
+* **hooks:** add useMeeting hook ([904bc27](https://github.com/webex/components/commit/904bc27c83ea821677d7bff2d72f33b76b17c596))
+
 # [1.20.0](https://github.com/webex/components/compare/v1.19.2...v1.20.0) (2019-11-01)
 
 
