@@ -1,4 +1,4 @@
-import {ActivitiesJSONAdapter, PeopleJSONAdapter, RoomsJSONAdapter} from './';
+import {ActivitiesJSONAdapter, MeetingsJSONAdapter, PeopleJSONAdapter, RoomsJSONAdapter} from './';
 
 export default class WebexJSONAdapter {
   /**
@@ -14,6 +14,7 @@ export default class WebexJSONAdapter {
    */
   constructor(datasource) {
     this.activitiesAdapter = new ActivitiesJSONAdapter(datasource.activities);
+    this.meetingsAdapter = new MeetingsJSONAdapter(datasource.meetings);
     this.peopleAdapter = new PeopleJSONAdapter(datasource.people);
     this.roomsAdapter = new RoomsJSONAdapter(datasource.rooms);
   }
