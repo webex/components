@@ -9,9 +9,10 @@ export default function WebexDataProvider({adapter, children}) {
 
 WebexDataProvider.propTypes = {
   adapter: PropTypes.exact({
-    roomsAdapter: PropTypes.object.isRequired,
     activitiesAdapter: PropTypes.object.isRequired,
+    meetingsAdapter: PropTypes.object.isRequired,
     peopleAdapter: PropTypes.object.isRequired,
+    roomsAdapter: PropTypes.object.isRequired,
   }).isRequired,
   children: PropTypes.node.isRequired,
 };

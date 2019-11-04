@@ -4,8 +4,9 @@ import WebexDataProvider from './WebexDataProvider';
 
 describe('Webex Data Provider component', () => {
   const adapter = {
-    roomsAdapter: {},
     activitiesAdapter: {},
+    meetingsAdapter: {},
+    roomsAdapter: {},
     peopleAdapter: {},
   };
 
