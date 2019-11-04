@@ -1,7 +1,7 @@
 import meetings from './../data/meetings';
 import MeetingsJSONAdapter from './MeetingsJSONAdapter';
 
-describe('Meetings JSON Adapter Interface', () => {
+describe('Meetings JSON Adapter', () => {
   let meetingsJSONAdapter, meetingID;
 
   beforeEach(() => {
