@@ -21,5 +21,10 @@ global.rxjs = rxjs;
 
 // Mock react `useContext` method globally to return mock json object for every test module
 jest.spyOn(React, 'useContext').mockImplementation((context) => {
-  return {activitiesAdapter: jsonData.activities, peopleAdapter: jsonData.people, roomsAdapter: jsonData.rooms};
+  return {
+    activitiesAdapter: jsonData.activities,
+    meetingsAdapter: jsonData.meetings,
+    peopleAdapter: jsonData.people,
+    roomsAdapter: jsonData.rooms
+  };
 });
