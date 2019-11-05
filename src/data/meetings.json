@@ -1,9 +1,48 @@
 {
+  "loadingMeeting" : {
+    "ID": null
+  },
   "scheduledMeeting": {
     "ID": "scheduledMeeting",
     "title": "Our Scheduled Meeting",
     "startTime": "2019-08-20T21:00:00.000Z",
     "endTime": "2019-08-20T22:00:00.000Z",
+    "localVideo": {},
+    "remoteVideo": {},
+    "localAudio": {},
+    "remoteAudio": {},
+    "localShare": {},
+    "remoteShare": {}
+  },
+  "oneOnOneMeeting": {
+    "ID": "oneOnOneMeeting",
+    "title": "Jackie Tester's Personal Room",
+    "startTime": "",
+    "endTime": "",
+    "localVideo": {},
+    "remoteVideo": {},
+    "localAudio": {},
+    "remoteAudio": {},
+    "localShare": {},
+    "remoteShare": {}
+  },
+  "spaceMeeting": {
+    "ID": "spaceMeeting",
+    "title": "Ad Hoc Meeting Space",
+    "startTime": "",
+    "endTime": "",
+    "localVideo": {},
+    "remoteVideo": {},
+    "localAudio": {},
+    "remoteAudio": {},
+    "localShare": {},
+    "remoteShare": {}
+  },
+  "noMeetingTitle": {
+    "ID": "noMeetingTitle",
+    "title": "",
+    "startTime": "",
+    "endTime": "",
     "localVideo": {},
     "remoteVideo": {},
     "localAudio": {},
