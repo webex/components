@@ -95,6 +95,7 @@
     ]
   },
   "jest": {
+    "globalSetup": "./jest-global-setup.js",
     "reporters": [
       "default",
       "jest-junit"

@@ -7,7 +7,6 @@ import * as rxjs from 'rxjs';
 import jsonData from '../src/data';
 
 // Fix date-time for tests
-process.env.TZ = 'GMT';
 MockDate.set('2019-08-01T22:00:00.000Z');
 
 // React 16 Enzyme adapter
