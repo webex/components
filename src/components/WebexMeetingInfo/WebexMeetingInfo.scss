@@ -1,0 +1,19 @@
+.meeting-info {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.meeting-info h2 {
+  font-size: 28px;
+  font-family: $brand-font-extra-light;
+  color: $md-gray-100;
+}
+
+.meeting-info h3 {
+  font-family: $brand-font-extra-light;
+}
