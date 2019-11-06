@@ -1,6 +1,8 @@
 import {MeetingsAdapter} from '@webex/component-adapter-interfaces';
 import {Observable} from 'rxjs';
 
+export const MEETING_STATE_ACTIVE = 'ACTIVE';
+
 /**
  * @typedef MeetingsJSON
  * @param {object} datasource An object that contains a set of meetings keyed by ID.
@@ -25,6 +27,32 @@ import {Observable} from 'rxjs';
  * Implements the MeetingsAdapter interface with a JSON object as its datasource. See @MeetingsJSON
  */
 export default class MeetingsJSONAdapter extends MeetingsAdapter {
+  /**
+   * Creates an instance of MeetingsJSONAdapter.
+   * @param {Object} datasource
+   * @memberof MeetingsJSONAdapter
+   */
+  constructor(datasource) {
+    super(datasource);
+
+    this.meetingControls.join = {
+      ID: 'join',
+      alt: 'Join Meeting',
+      // A function will join user to meeting with the given meetingID
+      action: (ID) =>
+        Observable.create((observer) => {
+          if (this.datasource[ID]) {
+            observer.next(MEETING_STATE_ACTIVE);
+          } else {
+            observer.error(new Error(`Could not find meeting with ID "${ID}"`));
+          }
+          observer.complete();
+        }),
+      icon: null,
+      text: 'Join Meeting',
+    };
+  }
+
   /**
    * Returns an observable that emits a Meeting object.
    * Whenever there is an update to the meeting, the observable
