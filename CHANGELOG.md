@@ -1,3 +1,10 @@
+# [1.22.0](https://github.com/webex/components/compare/v1.21.0...v1.22.0) (2019-11-07)
+
+
+### Features
+
+* **WebexMeetingInfo:** add component ([b66411c](https://github.com/webex/components/commit/b66411c727610f70a6e6eb3dff4abbea3a77c70a))
+
 # [1.21.0](https://github.com/webex/components/compare/v1.20.0...v1.21.0) (2019-11-04)
 
 
