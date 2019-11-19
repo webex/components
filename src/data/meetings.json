@@ -61,5 +61,17 @@
     "remoteAudio": null,
     "localShare": null,
     "remoteShare": null
+  },
+  "localAudio": {
+    "ID": "localAudio",
+    "title": null,
+    "startTime": null,
+    "endTime": null,
+    "localVideo": null,
+    "remoteVideo": null,
+    "localAudio": {},
+    "remoteAudio": null,
+    "localShare": null,
+    "remoteShare": null
   }
 }
