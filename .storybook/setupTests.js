@@ -27,3 +27,6 @@ jest.spyOn(React, 'useContext').mockImplementation((context) => {
     roomsAdapter: jsonData.rooms
   };
 });
+
+// Mock event dispatching for things like meeting controls, etc.
+jest.spyOn(document, 'dispatchEvent').mockImplementation(() => {});
