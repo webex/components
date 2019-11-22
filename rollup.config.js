@@ -26,7 +26,7 @@ export default [
     ],
     plugins: [
       resolve(),
-      babel(),
+      babel({runtimeHelpers: true}),
       commonJS(),
       json(),
       scss({
