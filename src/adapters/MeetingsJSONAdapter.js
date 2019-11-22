@@ -1,6 +1,6 @@
+import {from, Observable} from 'rxjs';
+import {flatMap, map} from 'rxjs/operators';
 import {MeetingsAdapter} from '@webex/component-adapter-interfaces';
-import {Observable} from 'rxjs';
-
 /**
  * @typedef MeetingsJSON
  * @param {object} datasource An object that contains a set of meetings keyed by ID.
@@ -21,10 +21,31 @@ import {Observable} from 'rxjs';
  * }
  */
 
-/*
+/**
  * Implements the MeetingsAdapter interface with a JSON object as its datasource. See @MeetingsJSON
  */
 export default class MeetingsJSONAdapter extends MeetingsAdapter {
+  /**
+   * Returns a MediaStream object obtained from local user media.
+   * @returns {MediaStream}
+   */
+  async getLocalVideo() {
+    const constraints = {
+      video: true,
+      audio: false,
+    };
+    let stream;
+
+    try {
+      stream = await navigator.mediaDevices.getUserMedia(constraints);
+    } catch (reason) {
+      // eslint-disable-next-line no-console
+      console.error('Meetings JSON adapter can not display the user local stream', reason);
+    }
+
+    return stream;
+  }
+
   /**
    * Returns an observable that emits a Meeting object.
    * Whenever there is an update to the meeting, the observable
@@ -35,7 +56,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @memberof MeetingsJSONAdapter
    */
   getMeeting(ID) {
-    return Observable.create((observer) => {
+    const getMeeting$ = Observable.create((observer) => {
       if (this.datasource[ID]) {
         observer.next(this.datasource[ID]);
       } else {
@@ -44,5 +65,15 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
 
       observer.complete();
     });
+
+    return getMeeting$.pipe(
+      flatMap((meeting) =>
+        // Attach the localMedia stream if meeting localVideo
+        // property is not `null`. Since we can not attach the
+        // MediaStream object in out JSON module, the work needs
+        // to be done here.
+        from(this.getLocalVideo()).pipe(map((localVideo) => (meeting.localVideo ? {...meeting, localVideo} : meeting)))
+      )
+    );
   }
 }
