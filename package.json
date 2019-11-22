@@ -1,6 +1,6 @@
 {
   "name": "@webex/components",
-  "version": "1.22.0",
+  "version": "1.23.0",
   "main": "dist/webexComponents.cjs.js",
   "module": "dist/webexComponents.esm.js",
   "scripts": {

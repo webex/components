@@ -1,3 +1,13 @@
+# [1.23.0](https://github.com/webex/components/compare/v1.22.0...v1.23.0) (2019-11-22)
+
+
+### Features
+
+* **WebexLocalMedia:** implement a component ([73309fe](https://github.com/webex/components/commit/73309fe8b90236029b3320207169f2463bae6c7a))
+* **UseVideo:** implement a new hook ([65cb656](https://github.com/webex/components/commit/65cb65657b359c65f623fd292d411fa4cbc5f1e3))
+* **MeetingsJsonAdapter:** implement getLocalMedia method ([6f53f67](https://github.com/webex/components/commit/6f53f67c24990fd4806eebb91de5309867dba2ac))
+* **MeetingsData:** replace empty objects with null ([e205748](https://github.com/webex/components/commit/e2057482f0e6e742a9d7e5881a8b7619eb625470))
+
 # [1.22.0](https://github.com/webex/components/compare/v1.21.0...v1.22.0) (2019-11-07)
 
 
