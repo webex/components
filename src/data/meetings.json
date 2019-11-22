@@ -1,5 +1,5 @@
 {
-  "loadingMeeting" : {
+  "loadingMeeting": {
     "ID": null
   },
   "scheduledMeeting": {
@@ -7,47 +7,59 @@
     "title": "Our Scheduled Meeting",
     "startTime": "2019-08-20T21:00:00.000Z",
     "endTime": "2019-08-20T22:00:00.000Z",
-    "localVideo": {},
-    "remoteVideo": {},
-    "localAudio": {},
-    "remoteAudio": {},
-    "localShare": {},
-    "remoteShare": {}
+    "localVideo": null,
+    "remoteVideo": null,
+    "localAudio": null,
+    "remoteAudio": null,
+    "localShare": null,
+    "remoteShare": null
   },
   "oneOnOneMeeting": {
     "ID": "oneOnOneMeeting",
     "title": "Jackie Tester's Personal Room",
-    "startTime": "",
-    "endTime": "",
-    "localVideo": {},
-    "remoteVideo": {},
-    "localAudio": {},
-    "remoteAudio": {},
-    "localShare": {},
-    "remoteShare": {}
+    "startTime": null,
+    "endTime": null,
+    "localVideo": null,
+    "remoteVideo": null,
+    "localAudio": null,
+    "remoteAudio": null,
+    "localShare": null,
+    "remoteShare": null
   },
   "spaceMeeting": {
     "ID": "spaceMeeting",
     "title": "Ad Hoc Meeting Space",
-    "startTime": "",
-    "endTime": "",
-    "localVideo": {},
-    "remoteVideo": {},
-    "localAudio": {},
-    "remoteAudio": {},
-    "localShare": {},
-    "remoteShare": {}
+    "startTime": null,
+    "endTime": null,
+    "localVideo": null,
+    "remoteVideo": null,
+    "localAudio": null,
+    "remoteAudio": null,
+    "localShare": null,
+    "remoteShare": null
   },
   "noMeetingTitle": {
     "ID": "noMeetingTitle",
-    "title": "",
-    "startTime": "",
-    "endTime": "",
+    "title": null,
+    "startTime": null,
+    "endTime": null,
+    "localVideo": null,
+    "remoteVideo": null,
+    "localAudio": null,
+    "remoteAudio": null,
+    "localShare": null,
+    "remoteShare": null
+  },
+  "localVideo": {
+    "ID": "localVideo",
+    "title": null,
+    "startTime": null,
+    "endTime": null,
     "localVideo": {},
-    "remoteVideo": {},
-    "localAudio": {},
-    "remoteAudio": {},
-    "localShare": {},
-    "remoteShare": {}
+    "remoteVideo": null,
+    "localAudio": null,
+    "remoteAudio": null,
+    "localShare": null,
+    "remoteShare": null
   }
 }
