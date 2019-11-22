@@ -1,0 +1,17 @@
+.local-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.local-media video {
+  width: 100%;
+  height: 100%;
+}
+
+.local-media .md-avatar {
+  width: 6.25rem !important;
+  height: 6.25rem !important;
+}

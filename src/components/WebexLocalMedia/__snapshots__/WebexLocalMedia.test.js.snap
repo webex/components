@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Webex Local Media component snapshot matches snapshot of disabled local video 1`] = `
+<div
+  className="local-media"
+>
+  <WebexAvatar
+    personID="default"
+  />
+</div>
+`;
+
+exports[`Webex Local Media component snapshot matches snapshot of local video 1`] = `
+<div
+  className="local-media"
+>
+  <video
+    playsInline={true}
+  />
+</div>
+`;
