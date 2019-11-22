@@ -7,6 +7,7 @@ describe('Meetings JSON Adapter', () => {
   beforeEach(() => {
     [meetingID] = Object.keys(meetings);
     meetingsJSONAdapter = new MeetingsJSONAdapter(meetings);
+    meetingsJSONAdapter.getLocalVideo = jest.fn(() => Promise.resolve('mock-stream'));
   });
 
   test('getMeeting() returns an observable', () => {
@@ -41,6 +42,13 @@ describe('Meetings JSON Adapter', () => {
         done();
       }
     );
+  });
+
+  test('getMeeting() renders the local media if localVideo property is defined', (done) => {
+    meetingsJSONAdapter.getMeeting('localVideo').subscribe((data) => {
+      expect(data.localVideo).toEqual('mock-stream');
+      done();
+    });
   });
 
   afterEach(() => {
