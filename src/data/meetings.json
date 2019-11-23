@@ -73,5 +73,19 @@
     "remoteAudio": null,
     "localShare": null,
     "remoteShare": null
+  },
+  "mutedLocalAudio": {
+    "ID": "mutedLocalAudio",
+    "title": null,
+    "startTime": null,
+    "endTime": null,
+    "localVideo": null,
+    "remoteVideo": null,
+    "localAudio": {
+      "muted": true
+    },
+    "remoteAudio": null,
+    "localShare": null,
+    "remoteShare": null
   }
 }
