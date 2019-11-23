@@ -4,6 +4,9 @@ import {MeetingsAdapter, MeetingControlState} from '@webex/component-adapter-int
 
 // Defined meeting controls in Meetings JSON Adapter
 export const MUTE_AUDIO_CONTROL = 'mute-audio';
+export const JOIN_CONTROL = 'join-meeting';
+export const DISABLED_MUTE_AUDIO_CONTROL = 'disabled-mute-audio';
+export const DISABLED_JOIN_CONTROL = 'disabled-join-meeting';
 
 /**
  * @typedef MeetingsJSON
@@ -48,6 +51,24 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       ID: MUTE_AUDIO_CONTROL,
       action: this.toggleMuteAudio.bind(this),
       display: this.muteAudioControl.bind(this),
+    };
+
+    this.meetingControls[JOIN_CONTROL] = {
+      ID: JOIN_CONTROL,
+      action: () => {},
+      display: this.joinControl.bind(this),
+    };
+
+    this.meetingControls[DISABLED_MUTE_AUDIO_CONTROL] = {
+      ID: DISABLED_MUTE_AUDIO_CONTROL,
+      action: () => {},
+      display: this.disabledMuteAudioControl.bind(this),
+    };
+
+    this.meetingControls[DISABLED_JOIN_CONTROL] = {
+      ID: DISABLED_JOIN_CONTROL,
+      action: () => {},
+      display: this.disabledJoinControl.bind(this),
     };
   }
 
@@ -114,7 +135,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * Returns an observable that emits the display data of a meeting control.
    *
    * @param {string} ID ID of the meeting for which to update display
-   * @returns {Observable<MeetingControlDisplay>}
+   * @returns {Observable.<MeetingControlDisplay>}
    * @memberof MeetingJSONAdapter
    * @private
    */
@@ -170,5 +191,68 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
         document.dispatchEvent(muteEvent);
       }
     }
+  }
+
+  /**
+   * Returns an observable that emits the display data of a meeting control.
+   *
+   * @param {string} ID ID of the meeting for which to update display
+   * @returns {Observable.<MeetingControlDisplay>}
+   * @memberof MeetingJSONAdapter
+   * @private
+   */
+  joinControl() {
+    return Observable.create((observer) => {
+      observer.next({
+        ID: JOIN_CONTROL,
+        text: 'Join meeting',
+        tooltip: 'Join meeting',
+        state: MeetingControlState.ACTIVE,
+      });
+
+      observer.complete();
+    });
+  }
+
+  /**
+   * Returns an observable that emits the display data of a disabled meeting control.
+   *
+   * @param {string} ID ID of the meeting for which to update display
+   * @returns {Observable.<MeetingControlDisplay>}
+   * @memberof MeetingJSONAdapter
+   * @private
+   */
+  disabledJoinControl() {
+    return Observable.create((observer) => {
+      observer.next({
+        ID: JOIN_CONTROL,
+        text: 'Join meeting',
+        tooltip: 'Join meeting',
+        state: MeetingControlState.DISABLED,
+      });
+
+      observer.complete();
+    });
+  }
+
+  /**
+   * Returns an observable that emits the display data of a disabled meeting control.
+   *
+   * @param {string} ID ID of the meeting for which to update display
+   * @returns {Observable.<MeetingControlDisplay>}
+   * @memberof MeetingJSONAdapter
+   * @private
+   */
+  disabledMuteAudioControl() {
+    return Observable.create((observer) => {
+      observer.next({
+        ID: JOIN_CONTROL,
+        icon: 'microphone',
+        tooltip: 'Mute disabled',
+        state: MeetingControlState.DISABLED,
+      });
+
+      observer.complete();
+    });
   }
 }
