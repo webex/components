@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Webex Meeting Controls component matches snapshot 1`] = `
+<ContextProvider
+  value="my-meeting"
+>
+  <div
+    className="test"
+  />
+</ContextProvider>
+`;
