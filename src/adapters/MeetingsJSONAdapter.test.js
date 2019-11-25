@@ -13,6 +13,10 @@ describe('Meetings JSON Adapter', () => {
     meetingsJSONAdapter.getLocalVideo = jest.fn(() => Promise.resolve('mock-stream'));
   });
 
+  afterEach(() => {
+    meetingsJSONAdapter = null;
+  });
+
   describe('getMeeting()', () => {
     test('returns an observable', () => {
       expect(rxjs.isObservable(meetingsJSONAdapter.getMeeting())).toBeTruthy();
@@ -120,9 +124,5 @@ describe('Meetings JSON Adapter', () => {
       meetingsJSONAdapter.toggleMuteAudio(meetingID);
       expect(global.document.dispatchEvent).toHaveBeenCalled();
     });
-  });
-
-  afterEach(() => {
-    meetingsJSONAdapter = null;
   });
 });

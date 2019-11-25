@@ -9,6 +9,10 @@ describe('Rooms JSON Adapter Interface', () => {
     roomsJSONAdapter = new RoomsJSONAdapter(rooms);
   });
 
+  afterEach(() => {
+    roomsJSONAdapter = null;
+  });
+
   test('getRoom() returns an observable', () => {
     expect(rxjs.isObservable(roomsJSONAdapter.getRoom())).toBeTruthy();
   });
@@ -128,9 +132,5 @@ describe('Rooms JSON Adapter Interface', () => {
     roomsJSONAdapter.lastDataIndex[roomID] = rooms[`${roomID}-previous-activities`].length + 1;
 
     expect(roomsJSONAdapter.hasMoreActivities(roomID)).toBeFalsy();
-  });
-
-  afterEach(() => {
-    roomsJSONAdapter = null;
   });
 });

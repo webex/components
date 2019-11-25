@@ -9,6 +9,11 @@ describe('Activities JSON Adapter Interface', () => {
     activitiesJSONAdapter = new ActivitiesJSONAdapter(activities);
   });
 
+  afterEach(() => {
+    activityID = null;
+    activitiesJSONAdapter = null;
+  });
+
   test('getActivity() returns an observable', () => {
     expect(rxjs.isObservable(activitiesJSONAdapter.getActivity())).toBeTruthy();
   });
@@ -41,10 +46,5 @@ describe('Activities JSON Adapter Interface', () => {
         done();
       }
     );
-  });
-
-  afterEach(() => {
-    activityID = null;
-    activitiesJSONAdapter = null;
   });
 });
