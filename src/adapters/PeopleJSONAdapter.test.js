@@ -9,6 +9,10 @@ describe('People JSON Adapter Interface', () => {
     peopleJSONAdapter = new PeopleJSONAdapter(people);
   });
 
+  afterEach(() => {
+    peopleJSONAdapter = null;
+  });
+
   test('getPerson() returns an observable', () => {
     expect(rxjs.isObservable(peopleJSONAdapter.getPerson())).toBeTruthy();
   });
@@ -41,9 +45,5 @@ describe('People JSON Adapter Interface', () => {
         done();
       }
     );
-  });
-
-  afterEach(() => {
-    peopleJSONAdapter = null;
   });
 });
