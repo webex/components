@@ -6,7 +6,7 @@
     "plugin:prettier/recommended",
     "prettier/react"
   ],
-  "plugins": ["react", "jsx-a11y", "import", "prettier", "react-hooks"],
+  "plugins": ["react", "jsx-a11y", "import", "prettier", "react-hooks", "jest"],
   "env": {
     "browser": true,
     "jest": true
@@ -39,6 +39,7 @@
     "import/no-unresolved": 2,
     "import/prefer-default-export": 0,
     "import/no-named-as-default": 0,
+    "jest/prefer-hooks-on-top": "error",
     "jsx-a11y/media-has-caption": 0,
     "jsx-a11y/no-autofocus": 0,
     "no-confusing-arrow": ["error"],
