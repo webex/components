@@ -1,3 +1,10 @@
+# [1.24.0](https://github.com/webex/components/compare/v1.23.0...v1.24.0) (2019-11-27)
+
+
+### Features
+
+* **MeetingsJSONAdapter:** add mute-audio meeting control ([f6b7b98](https://github.com/webex/components/commit/f6b7b98eb3abde369ddbdf317f87202f4262cc5e))
+
 # [1.23.0](https://github.com/webex/components/compare/v1.22.0...v1.23.0) (2019-11-22)
 
 
