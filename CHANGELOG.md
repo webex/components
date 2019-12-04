@@ -1,3 +1,11 @@
+# [1.25.0](https://github.com/webex/components/compare/v1.24.0...v1.25.0) (2019-12-04)
+
+
+### Features
+
+* **WebexMeetingControl:** implement component ([b4fcf5a](https://github.com/webex/components/commit/b4fcf5abc645df1208fe400771136b088ab20954))
+* **WebexMeetingControls:** implement HOC ([5c89588](https://github.com/webex/components/commit/5c895880681996aaab2cd90cfc46457062f62190))
+
 # [1.24.0](https://github.com/webex/components/compare/v1.23.0...v1.24.0) (2019-11-27)
 
 
