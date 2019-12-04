@@ -92,11 +92,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {WebexAvatar, WebexDataProvider, WebexJSONAdapter} from '@webex/components';
 
-const adapter = new WebexJSONAdapter(jsonData);
+const adapter = new WebexJSONAdapter(jsonData); // jsonData represents an opened file
 
 ReactDOM.render(
-  <WebexDataProvider adapter={adapter}
-    <WebexAvatar personId="XYZ" />,
+  <WebexDataProvider adapter={adapter}>
+    <WebexAvatar personID="XYZ" />,
   </WebexDataProvider>
   document.getElementById('root')
 );
