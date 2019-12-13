@@ -13,37 +13,44 @@ describe('People JSON Adapter Interface', () => {
     peopleJSONAdapter = null;
   });
 
-  test('getPerson() returns an observable', () => {
-    expect(rxjs.isObservable(peopleJSONAdapter.getPerson())).toBeTruthy();
-  });
-
-  test('getPerson() returns a person data', (done) => {
-    peopleJSONAdapter.getPerson(personID).subscribe((data) => {
-      expect(data).toEqual(people[personID]);
-      done();
+  describe('getMe()', () => {
+    test('returns default person data', (done) => {
+      peopleJSONAdapter.getMe().subscribe((data) => {
+        expect(data).toEqual(people.default);
+        done();
+      });
     });
   });
 
-  test('getPerson() throws a proper error message', (done) => {
-    const wrongPersonID = 'wrongPersonID';
-
-    peopleJSONAdapter.getPerson(wrongPersonID).subscribe(
-      () => {},
-      (error) => {
-        expect(error.message).toBe(`Could not find person with ID "${wrongPersonID}"`);
+  describe('getPerson()', () => {
+    test('returns a person data', (done) => {
+      peopleJSONAdapter.getPerson(personID).subscribe((data) => {
+        expect(data).toEqual(people[personID]);
         done();
-      }
-    );
-  });
+      });
+    });
 
-  test('getPerson() completes the observable', (done) => {
-    peopleJSONAdapter.getPerson(personID).subscribe(
-      () => {},
-      () => {},
-      () => {
-        expect(true).toBeTruthy();
-        done();
-      }
-    );
+    test('throws a proper error message', (done) => {
+      const wrongPersonID = 'wrongPersonID';
+
+      peopleJSONAdapter.getPerson(wrongPersonID).subscribe(
+        () => {},
+        (error) => {
+          expect(error.message).toBe(`Could not find person with ID "${wrongPersonID}"`);
+          done();
+        }
+      );
+    });
+
+    test('completes the observable', (done) => {
+      peopleJSONAdapter.getPerson(personID).subscribe(
+        () => {},
+        () => {},
+        () => {
+          expect(true).toBeTruthy();
+          done();
+        }
+      );
+    });
   });
 });

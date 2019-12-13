@@ -22,14 +22,27 @@ import {Observable} from 'rxjs';
  * }
  */
 
-/*
- * Implements the PeopleAdapter interface with a JSON object as its datasource. See @PeopleJSON
+/**
+ * Implements the PeopleAdapter interface with a JSON object as its datasource.
+ *
+ * @see {@link PeopleJSON} for example datasource.
+ * @class
+ * @implements {PeopleAdapter}
  */
 export default class PeopleJSONAdapter extends PeopleAdapter {
-  constructor(datasource) {
-    super(datasource);
+  /**
+   * Returns an observable that emits person data of the default user.
+   *
+   * @returns {Observable.<Person>}
+   * @memberof PeopleJSONAdapter
+   */
+  getMe() {
+    const defaultUserID = 'default';
 
-    this.getPerson = this.getPerson.bind(this);
+    return Observable.create((observer) => {
+      observer.next(this.datasource[defaultUserID]);
+      observer.complete();
+    });
   }
 
   /**
