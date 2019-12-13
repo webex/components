@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {WebexAvatar} from '../';
-import {useMeeting, useVideo} from '../hooks';
+import {useMe, useMeeting, useVideo} from '../hooks';
 
 import './WebexLocalMedia.scss';
 
@@ -12,18 +12,18 @@ import './WebexLocalMedia.scss';
  * @param {object} props
  * @returns {object} JSX of the component
  */
-export default function WebexLocalMedia({meetingID, personID}) {
+export default function WebexLocalMedia({meetingID}) {
   const {localVideo} = useMeeting(meetingID);
   const videoRef = useVideo(localVideo);
+  const {ID} = useMe();
 
   return (
     <div className="local-media">
-      {localVideo ? <video ref={videoRef} playsInline /> : <WebexAvatar personID={personID} />}
+      {localVideo ? <video ref={videoRef} playsInline /> : <WebexAvatar personID={ID} />}
     </div>
   );
 }
 
 WebexLocalMedia.propTypes = {
   meetingID: PropTypes.string.isRequired,
-  personID: PropTypes.string.isRequired,
 };
