@@ -101,6 +101,15 @@
     "remoteVideo": {},
     "localAudio": null,
     "remoteAudio": {},
+    "localShare": null
+  },
+  "localMedia": {
+    "ID": "localMedia",
+    "title": "Ad Hoc Meeting Space",
+    "localVideo": {},
+    "remoteVideo": null,
+    "localAudio": {},
+    "remoteAudio": null,
     "localShare": null,
     "remoteShare": null
   }
