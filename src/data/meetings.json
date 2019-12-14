@@ -87,5 +87,15 @@
     "remoteAudio": null,
     "localShare": null,
     "remoteShare": null
+  },
+  "localMedia": {
+    "ID": "localMedia",
+    "title": "Ad Hoc Meeting Space",
+    "localVideo": {},
+    "remoteVideo": null,
+    "localAudio": {},
+    "remoteAudio": null,
+    "localShare": {},
+    "remoteShare": null
   }
 }

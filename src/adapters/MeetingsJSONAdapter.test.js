@@ -17,6 +17,19 @@ describe('Meetings JSON Adapter', () => {
     meetingsJSONAdapter = null;
   });
 
+  describe('createMeeting()', () => {
+    test('returns an observable', () => {
+      expect(rxjs.isObservable(meetingsJSONAdapter.createMeeting())).toBeTruthy();
+    });
+
+    test('returns new meeting', (done) => {
+      meetingsJSONAdapter.createMeeting().subscribe((meeting) => {
+        expect(meeting).toMatchObject(meetings.localMedia);
+        done();
+      });
+    });
+  });
+
   describe('getMeeting()', () => {
     test('returns an observable', () => {
       expect(rxjs.isObservable(meetingsJSONAdapter.getMeeting())).toBeTruthy();
