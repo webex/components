@@ -73,6 +73,24 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   }
 
   /**
+   * Creates a meeting for the given destination.
+   * Returns an observable that emits a Meeting object with the data from the newly
+   * created meeting.
+   * Observable completes after emitting data.
+   *
+   * @param {string} destination  Virtual location where the meeting should take place.
+   * @returns {Observable.<Meeting>}
+   * @memberof MeetingsAdapter
+   */
+  createMeeting() {
+    return Observable.create((observer) => {
+      // "localMedia" is the ID of a meeting object in the data folder
+      observer.next(this.datasource.localMedia);
+      observer.complete();
+    });
+  }
+
+  /**
    * Returns an observable that emits a Meeting object.
    * Whenever there is an update to the meeting, the observable
    * will emit a new updated Meeting object, if datasource permits.
