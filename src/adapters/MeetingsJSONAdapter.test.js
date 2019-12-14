@@ -22,10 +22,20 @@ describe('Meetings JSON Adapter', () => {
     });
 
     test('returns new meeting', (done) => {
-      meetingsJSONAdapter.createMeeting().subscribe((meeting) => {
+      meetingsJSONAdapter.createMeeting('destination').subscribe((meeting) => {
         expect(meeting).toMatchObject(meetings.localMedia);
         done();
       });
+    });
+
+    test('errors if there is no destination', (done) => {
+      meetingsJSONAdapter.createMeeting().subscribe(
+        () => {},
+        (error) => {
+          expect(error.message).toBe('Could not create meeting at destination "undefined"');
+          done();
+        }
+      );
     });
   });
 
