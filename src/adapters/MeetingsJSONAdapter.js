@@ -82,9 +82,14 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @returns {Observable.<Meeting>}
    * @memberof MeetingsAdapter
    */
-  createMeeting() {
+  createMeeting(destination) {
     return Observable.create((observer) => {
-      observer.next(this.datasource.localMedia);
+      if (destination) {
+        observer.next(this.datasource.localMedia);
+      } else {
+        observer.error(new Error(`Could not create meeting at destination "${destination}"`));
+      }
+
       observer.complete();
     });
   }
