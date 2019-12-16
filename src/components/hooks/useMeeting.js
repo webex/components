@@ -39,7 +39,9 @@ export default function useMeeting(meetingID, meetingDestination) {
     }
 
     return () => {
-      subscription.unsubscribe();
+      if (subscription) {
+        subscription.unsubscribe();
+      }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [meetingID, meetingDestination]);
