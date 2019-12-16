@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Webex Interstitial Meeting component snapshot matches snapshot of loading while meeting is created 1`] = `
+<div
+  className="interstitial-meeting"
+>
+  <Spinner
+    className=""
+    color="black"
+    percentage={null}
+    showCheck={false}
+    showPercentage={false}
+    size={36}
+  />
+</div>
+`;
+
+exports[`Webex Interstitial Meeting component snapshot matches snapshot of meeting destination 1`] = `
+<div
+  className="interstitial-meeting"
+>
+  <WebexMeetingInfo
+    meetingID="localMedia"
+  />
+  <WebexLocalMedia
+    meetingID="localMedia"
+  />
+</div>
+`;
