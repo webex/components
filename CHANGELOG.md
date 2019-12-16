@@ -1,3 +1,17 @@
+# [1.26.0](https://github.com/webex/components/compare/v1.25.0...v1.26.0) (2019-12-16)
+
+
+### Bug Fixes
+
+* **hooks:** usePerson updates whenver a new person ID is passed in ([32c3b35](https://github.com/webex/components/commit/32c3b3544825da60f39270bebd1d7696347596ae))
+
+
+### Features
+
+* **hooks:** add useMe hook ([89b8b6d](https://github.com/webex/components/commit/89b8b6d02f3876c2da208faab4ea6d3dc6b24628))
+* **PeopleJsonAdpater:** implement getMe() ([a708c1b](https://github.com/webex/components/commit/a708c1b7f6e3455f050714b2becd8b12edf0125c))
+* **LocalMedia:** use getMe hook instead of personID prop ([1e0c1f6](https://github.com/webex/components/commit/1e0c1f6994fe172354dfc0fff38e84a57c76db53))
+
 # [1.25.0](https://github.com/webex/components/compare/v1.24.0...v1.25.0) (2019-12-04)
 
 
