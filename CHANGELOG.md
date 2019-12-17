@@ -1,3 +1,10 @@
+## [1.26.1](https://github.com/webex/components/compare/v1.26.0...v1.26.1) (2019-12-17)
+
+
+### Bug Fixes
+
+* **WebexDataProvider:** replace exact proptype with shape ([7166846](https://github.com/webex/components/commit/7166846b04ef59a997bc610ce4fa7110b122ff0f))
+
 # [1.26.0](https://github.com/webex/components/compare/v1.25.0...v1.26.0) (2019-12-16)
 
 
