@@ -121,6 +121,11 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
           : of(meeting)
       ),
       flatMap((meeting) =>
+        meeting.localAudio
+          ? from(this.getStream({video: false, audio: true})).pipe(map((localAudio) => ({...meeting, localAudio})))
+          : of(meeting)
+      ),
+      flatMap((meeting) =>
         meeting.remoteVideo
           ? from(this.getStream({video: true, audio: false})).pipe(map((remoteVideo) => ({...meeting, remoteVideo})))
           : of(meeting)
@@ -143,6 +148,28 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   }
 
   /**
+   * Retrieves the local device media (video/audio) and adds them to the meeting
+   * with the some default media settings.
+   * Adding local media is performed as a side-effect and this method does not
+   * return a value. Instead, adding local media to a meeting should trigger
+   * getMeeting to emit a new updated Meeting object.
+   *
+   * @param {string} ID  ID of the meeting for which to add media.
+   * @memberof MeetingsJSONAdapter
+   */
+  async addLocalMedia(ID) {
+    if (this.datasource[ID].localVideo) {
+      // attach Video stream
+      await this.getStream({video: true, audio: false});
+    }
+
+    if (this.datasource[ID].localAudio) {
+      // attach Audio stream
+      await this.getStream({video: false, audio: true});
+    }
+  }
+
+  /**
    * Returns a MediaStream object obtained from user local media.
    * @param {MediaStreamConstraints} constraints  an object specifying the types of the media to request
    * @returns {MediaStream}
@@ -156,7 +183,9 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       // filter out either video or audio from a given constraints and return a new media stream
       if (constraints.video) {
         stream = new MediaStream([mediaStream.getVideoTracks()[0]]);
-      } else {
+      }
+
+      if (constraints.audio) {
         stream = new MediaStream([mediaStream.getAudioTracks()[0]]);
       }
     } catch (reason) {
