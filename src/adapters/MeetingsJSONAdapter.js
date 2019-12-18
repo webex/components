@@ -128,6 +128,19 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   }
 
   /**
+   * Retrieves the local device media (video/audio) and adds them to the meeting
+   * with the some default media settings.
+   * Adding local media is performed as a side-effect and this method does not
+   * return a value. Instead, adding local media to a meeting should trigger
+   * getMeeting to emit a new updated Meeting object.
+   *
+   * @memberof MeetingsJSONAdapter
+   */
+  async addLocalMedia() {
+    await this.getLocalVideo();
+  }
+
+  /**
    * Returns a MediaStream object obtained from local user media.
    * @returns {MediaStream}
    */
