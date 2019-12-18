@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {WebexAvatar} from '../';
-import {useMe, useMeeting, useVideo} from '../hooks';
+import {useMe, useMeeting, useStream} from '../hooks';
 
 import './WebexLocalMedia.scss';
 
@@ -14,8 +14,8 @@ import './WebexLocalMedia.scss';
  */
 export default function WebexLocalMedia({meetingID}) {
   const {localVideo} = useMeeting(meetingID);
-  const videoRef = useVideo(localVideo);
   const {ID} = useMe();
+  const videoRef = useStream(localVideo);
 
   return (
     <div className="local-media">

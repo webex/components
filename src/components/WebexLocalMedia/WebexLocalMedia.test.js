@@ -4,7 +4,7 @@ import WebexLocalMedia from './WebexLocalMedia';
 
 jest.mock('../hooks/useMe');
 jest.mock('../hooks/useMeeting');
-jest.mock('../hooks/useVideo');
+jest.mock('../hooks/useStream');
 
 describe('Webex Local Media component', () => {
   describe('snapshot', () => {
