@@ -94,6 +94,29 @@ describe('Meetings JSON Adapter', () => {
     });
   });
 
+  describe('addLocalMedia()', () => {
+    test('attaches local video stream if targeted meeting object requires one', async () => {
+      meetingsJSONAdapter.getStream = jest.fn();
+      await meetingsJSONAdapter.addLocalMedia('localVideo');
+
+      expect(meetingsJSONAdapter.getStream).toHaveBeenCalledWith({audio: false, video: true});
+    });
+
+    test('attaches local audio stream if targeted meeting object requires one', async () => {
+      meetingsJSONAdapter.getStream = jest.fn();
+      await meetingsJSONAdapter.addLocalMedia('localAudio');
+
+      expect(meetingsJSONAdapter.getStream).toHaveBeenCalledWith({audio: true, video: false});
+    });
+
+    test('does nothing if neither local audio nor local video are required', async () => {
+      meetingsJSONAdapter.getStream = jest.fn();
+      await meetingsJSONAdapter.addLocalMedia('oneOnOneMeeting');
+
+      expect(meetingsJSONAdapter.getStream).not.toHaveBeenCalledWith();
+    });
+  });
+
   describe('muteAudioControl() returns', () => {
     beforeEach(() => {
       meetingID = 'localAudio';
