@@ -30,21 +30,28 @@ describe('Meetings JSON Adapter', () => {
 
     test('renders the local media if localVideo property is defined', (done) => {
       meetingsJSONAdapter.getMeeting('localVideo').subscribe((data) => {
-        expect(data.localVideo).toEqual({control: 'video'});
+        expect(data.localVideo).toEqual(['remote-video']);
         done();
       });
     });
 
     test('renders the remote video if remoteVideo property is defined', (done) => {
       meetingsJSONAdapter.getMeeting('remoteVideo').subscribe((data) => {
-        expect(data.remoteVideo).toEqual({control: 'video'});
+        expect(data.remoteVideo).toEqual(['remote-video']);
         done();
       });
     });
 
     test('renders the remote audio if remoteAudio property is defined', (done) => {
       meetingsJSONAdapter.getMeeting('remoteAudio').subscribe((data) => {
-        expect(data.remoteAudio).toEqual({control: 'audio'});
+        expect(data.remoteAudio).toEqual(['remote-audio']);
+        done();
+      });
+    });
+
+    test('renders the remote audio if both remoteAudio and remoteVideo properties are defined', (done) => {
+      meetingsJSONAdapter.getMeeting('remoteAudio&Video').subscribe((data) => {
+        expect(data).toMatchObject({remoteAudio: ['remote-audio'], remoteVideo: ['remote-video']});
         done();
       });
     });

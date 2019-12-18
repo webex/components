@@ -6,3 +6,4 @@ export {default as WebexLocalMedia} from './WebexLocalMedia/WebexLocalMedia';
 export {default as WebexMeetingControl} from './WebexMeetingControl/WebexMeetingControl';
 export {default as WebexMeetingControls, MeetingContext} from './WebexMeetingControl/WebexMeetingControls';
 export {default as WebexMeetingInfo} from './WebexMeetingInfo/WebexMeetingInfo';
+export {default as WebexRemoteMedia} from './WebexRemoteMedia/WebexRemoteMedia';

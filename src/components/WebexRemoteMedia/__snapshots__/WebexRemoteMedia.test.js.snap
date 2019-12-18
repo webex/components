@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Webex Remote Media component snapshot matches snapshot of disabled remote audio 1`] = `
+<div
+  className="remote-media"
+>
+  <video
+    playsInline={true}
+  />
+</div>
+`;
+
+exports[`Webex Remote Media component snapshot matches snapshot of disabled remote video 1`] = `
+<div
+  className="remote-media"
+>
+  <audio />
+</div>
+`;
+
+exports[`Webex Remote Media component snapshot matches snapshot of enabled remote audio & video 1`] = `
+<div
+  className="remote-media"
+>
+  <video
+    playsInline={true}
+  />
+  <audio />
+</div>
+`;
