@@ -87,5 +87,41 @@
     "remoteAudio": null,
     "localShare": null,
     "remoteShare": null
+  },
+  "remoteVideo": {
+    "ID": "remoteVideo",
+    "title": null,
+    "startTime": null,
+    "endTime": null,
+    "localVideo": null,
+    "remoteVideo": {},
+    "localAudio": null,
+    "remoteAudio": null,
+    "localShare": null,
+    "remoteShare": null
+  },
+  "remoteAudio": {
+    "ID": "remoteAudio",
+    "title": null,
+    "startTime": null,
+    "endTime": null,
+    "localVideo": null,
+    "remoteVideo": null,
+    "localAudio": null,
+    "remoteAudio": {},
+    "localShare": null,
+    "remoteShare": null
+  },
+  "remoteAudio&Video": {
+    "ID": "remoteAudio&Video",
+    "title": null,
+    "startTime": null,
+    "endTime": null,
+    "localVideo": null,
+    "remoteVideo": {},
+    "localAudio": null,
+    "remoteAudio": {},
+    "localShare": null,
+    "remoteShare": null
   }
 }

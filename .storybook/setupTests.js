@@ -17,6 +17,13 @@ global.shallow = shallow;
 global.render = render;
 global.mount = mount;
 global.rxjs = rxjs;
+global.navigator.mediaDevices = {
+  getUserMedia: jest.fn(() => ({
+    getAudioTracks: () => ['remote-audio'],
+    getVideoTracks: () => ['remote-video'],
+  })),
+};
+global.MediaStream = jest.fn((stream) => stream);
 
 // Mock react `useContext` method globally to return mock json object for every test module
 jest.spyOn(React, 'useContext').mockImplementation((context) => {
@@ -24,7 +31,7 @@ jest.spyOn(React, 'useContext').mockImplementation((context) => {
     activitiesAdapter: jsonData.activities,
     meetingsAdapter: jsonData.meetings,
     peopleAdapter: jsonData.people,
-    roomsAdapter: jsonData.rooms
+    roomsAdapter: jsonData.rooms,
   };
 });
 
