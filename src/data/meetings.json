@@ -5,8 +5,6 @@
   "scheduledMeeting": {
     "ID": "scheduledMeeting",
     "title": "Our Scheduled Meeting",
-    "startTime": "2019-08-20T21:00:00.000Z",
-    "endTime": "2019-08-20T22:00:00.000Z",
     "localVideo": null,
     "remoteVideo": null,
     "localAudio": null,
@@ -17,8 +15,6 @@
   "oneOnOneMeeting": {
     "ID": "oneOnOneMeeting",
     "title": "Jackie Tester's Personal Room",
-    "startTime": null,
-    "endTime": null,
     "localVideo": null,
     "remoteVideo": null,
     "localAudio": null,
@@ -29,8 +25,6 @@
   "spaceMeeting": {
     "ID": "spaceMeeting",
     "title": "Ad Hoc Meeting Space",
-    "startTime": null,
-    "endTime": null,
     "localVideo": null,
     "remoteVideo": null,
     "localAudio": null,
@@ -41,8 +35,6 @@
   "noMeetingTitle": {
     "ID": "noMeetingTitle",
     "title": null,
-    "startTime": null,
-    "endTime": null,
     "localVideo": null,
     "remoteVideo": null,
     "localAudio": null,
@@ -53,8 +45,6 @@
   "localVideo": {
     "ID": "localVideo",
     "title": null,
-    "startTime": null,
-    "endTime": null,
     "localVideo": {},
     "remoteVideo": null,
     "localAudio": null,
@@ -65,8 +55,6 @@
   "localAudio": {
     "ID": "localAudio",
     "title": null,
-    "startTime": null,
-    "endTime": null,
     "localVideo": null,
     "remoteVideo": null,
     "localAudio": {},
@@ -77,8 +65,6 @@
   "mutedLocalAudio": {
     "ID": "mutedLocalAudio",
     "title": null,
-    "startTime": null,
-    "endTime": null,
     "localVideo": null,
     "remoteVideo": null,
     "localAudio": {
@@ -91,8 +77,6 @@
   "remoteVideo": {
     "ID": "remoteVideo",
     "title": null,
-    "startTime": null,
-    "endTime": null,
     "localVideo": null,
     "remoteVideo": {},
     "localAudio": null,
@@ -103,8 +87,6 @@
   "remoteAudio": {
     "ID": "remoteAudio",
     "title": null,
-    "startTime": null,
-    "endTime": null,
     "localVideo": null,
     "remoteVideo": null,
     "localAudio": null,
@@ -115,8 +97,6 @@
   "remoteAudio&Video": {
     "ID": "remoteAudio&Video",
     "title": null,
-    "startTime": null,
-    "endTime": null,
     "localVideo": null,
     "remoteVideo": {},
     "localAudio": null,
