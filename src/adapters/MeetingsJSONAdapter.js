@@ -1,4 +1,4 @@
-import {concat, from, fromEvent, Observable} from 'rxjs';
+import {concat, from, fromEvent, Observable, of} from 'rxjs';
 import {filter, flatMap, map} from 'rxjs/operators';
 import {MeetingsAdapter, MeetingControlState} from '@webex/component-adapter-interfaces';
 
@@ -92,13 +92,27 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       observer.complete();
     });
 
-    // Attach local media stream if meeting `localVideo` property is not `null`.
+    // Attach media stream if any of the meeting's media stream properties are not  `null`.
     // We can not attach the MediaStream object in a JSON module, the work needs
     // to be done here.
-    const getMeetingWithLocalMedia$ = getMeeting$.pipe(
+    const getMeetingWithMedia$ = getMeeting$.pipe(
+      /* eslint-disable no-confusing-arrow */
       flatMap((meeting) =>
-        from(this.getLocalVideo()).pipe(map((localVideo) => (meeting.localVideo ? {...meeting, localVideo} : meeting)))
+        meeting.localVideo
+          ? from(this.getStream({video: true, audio: false})).pipe(map((localVideo) => ({...meeting, localVideo})))
+          : of(meeting)
+      ),
+      flatMap((meeting) =>
+        meeting.remoteVideo
+          ? from(this.getStream({video: true, audio: false})).pipe(map((remoteVideo) => ({...meeting, remoteVideo})))
+          : of(meeting)
+      ),
+      flatMap((meeting) =>
+        meeting.remoteAudio
+          ? from(this.getStream({video: false, audio: true})).pipe(map((remoteAudio) => ({...meeting, remoteAudio})))
+          : of(meeting)
       )
+      /* eslint-enable no-confusing-arrow */
     );
 
     // Send updates on the meeting when a mute event is triggered
@@ -107,25 +121,29 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       map((event) => event.detail)
     );
 
-    return concat(getMeetingWithLocalMedia$, muteEvent$);
+    return concat(getMeetingWithMedia$, muteEvent$);
   }
 
   /**
-   * Returns a MediaStream object obtained from local user media.
+   * Returns a MediaStream object obtained from user local media.
+   * @param {MediaStreamConstraints} constraints  an object specifying the types of the media to request
    * @returns {MediaStream}
    */
-  async getLocalVideo() {
-    const constraints = {
-      video: true,
-      audio: false,
-    };
+  async getStream(constraints) {
     let stream;
 
     try {
-      stream = await navigator.mediaDevices.getUserMedia(constraints);
+      const mediaStream = await navigator.mediaDevices.getUserMedia(constraints);
+
+      // filter out either video or audio from a given constraints and return a new media stream
+      if (constraints.video) {
+        stream = new MediaStream([mediaStream.getVideoTracks()[0]]);
+      } else {
+        stream = new MediaStream([mediaStream.getAudioTracks()[0]]);
+      }
     } catch (reason) {
       // eslint-disable-next-line no-console
-      console.error('Meetings JSON adapter can not display the user local stream', reason);
+      console.error('Meetings JSON adapter can not display the local user stream', reason);
     }
 
     return stream;
