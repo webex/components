@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Spinner} from '@momentum-ui/react';
 
 import {WebexAvatar} from '../';
 import {useMe, useMeeting, useStream} from '../hooks';
@@ -16,12 +17,9 @@ export default function WebexLocalMedia({meetingID}) {
   const {localVideo} = useMeeting(meetingID);
   const {ID} = useMe();
   const videoRef = useStream(localVideo);
+  const disabledVideo = ID ? <WebexAvatar personID={ID} /> : <Spinner />;
 
-  return (
-    <div className="local-media">
-      {localVideo ? <video ref={videoRef} playsInline /> : <WebexAvatar personID={ID} />}
-    </div>
-  );
+  return <div className="local-media">{localVideo ? <video ref={videoRef} playsInline /> : disabledVideo}</div>;
 }
 
 WebexLocalMedia.propTypes = {
