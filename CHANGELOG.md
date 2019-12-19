@@ -1,3 +1,16 @@
+# [1.27.0](https://github.com/webex/components/compare/v1.26.1...v1.27.0) (2019-12-19)
+
+
+### Features
+
+* **MeetingJsonAdapter:** implement getStream ([1796006](https://github.com/webex/components/commit/17960063ebba78b0f261a67a58d5791cef2b44fc))
+* **RemoteMedia:** implement one ([d867b34](https://github.com/webex/components/commit/d867b34e26f9b7fa607a213b4bd5a80e04430213))
+* **UseStream:** implement one ([c2eb1ff](https://github.com/webex/components/commit/c2eb1ff1b6d137b73f7a50070da6385701c8624f))
+* **LocalMedia:** invoke useStream() ([21a99de](https://github.com/webex/components/commit/21a99defe163cfed53d59b41110f31835da332ff))
+* **MeetingsData:** remove start and end time properties ([bf6ca85](https://github.com/webex/components/commit/bf6ca858a87c2e062d3e50278656a7330c088e92))
+* **UseVideo:** remove the hook ([b608790](https://github.com/webex/components/commit/b6087904ef540fad5c2fd085b31cb52097b16374))
+* **hooks:** replace useStream with useVideo ([c63de3b](https://github.com/webex/components/commit/c63de3b0c093143c9138c6c39bf18d02ebe1e31c))
+
 ## [1.26.1](https://github.com/webex/components/compare/v1.26.0...v1.26.1) (2019-12-17)
 
 
