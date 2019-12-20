@@ -15,8 +15,11 @@ import './WebexInterstitialMeeting.css';
  * @param {object} props
  * @returns {object} JSX of the component
  */
-export default function WebexInterstitialMeeting({meetingDestination}) {
-  const {ID} = useMeeting(null, meetingDestination);
+export default function WebexInterstitialMeeting({meetingDestination, onMeeting}) {
+  const meeting = useMeeting(null, meetingDestination);
+  const {ID} = meeting;
+
+  onMeeting(meeting);
 
   return (
     <div className="interstitial-meeting">
@@ -34,4 +37,9 @@ export default function WebexInterstitialMeeting({meetingDestination}) {
 
 WebexInterstitialMeeting.propTypes = {
   meetingDestination: PropTypes.string.isRequired,
+  onMeeting: PropTypes.func,
+};
+
+WebexInterstitialMeeting.defaultProps = {
+  onMeeting: () => {},
 };

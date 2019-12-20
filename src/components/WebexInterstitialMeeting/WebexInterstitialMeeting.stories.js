@@ -37,3 +37,18 @@ stories.add('video disabled', () => {
     </div>
   );
 });
+
+stories.add('logs out meeting object after each change', () => {
+  const logMeeting = (meeting) => {
+    // eslint-disable-next-line no-console
+    console.log(meeting);
+  };
+
+  return (
+    <div style={wrapperStyle}>
+      <WebexDataProvider adapter={webexAdapter}>
+        <WebexInterstitialMeeting meetingDestination="localMedia" onMeeting={logMeeting} />
+      </WebexDataProvider>
+    </div>
+  );
+});
