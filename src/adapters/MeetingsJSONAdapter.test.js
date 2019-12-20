@@ -86,7 +86,7 @@ describe('Meetings JSON Adapter', () => {
         .getMeeting(meetingID)
         .pipe(tap(() => meetingsJSONAdapter.toggleMuteAudio(meetingID)))
         .subscribe((meeting) => {
-          expect(meeting.localAudio.muted).toBeTruthy();
+          expect(meeting.localAudio).toEqual(['remote-audio']);
           done();
         });
     });
@@ -153,7 +153,7 @@ describe('Meetings JSON Adapter', () => {
       rxjs.fromEvent = jest.fn(() => {
         const meeting = meetings[meetingID];
 
-        meeting.localAudio.muted = false; // Local audio is already muted
+        meeting.localAudio = null; // Local audio is already muted
 
         return from([{detail: meeting}]);
       });
