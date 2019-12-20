@@ -227,7 +227,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       const meeting = this.datasource[ID];
 
       if (meeting) {
-        observer.next(meeting.localAudio.muted ? muted : unmuted);
+        observer.next(meeting.localAudio ? muted : unmuted);
       } else {
         observer.error(new Error(`Could not find meeting with ID "${ID}"`));
       }
@@ -237,7 +237,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
 
     const muteEvent$ = fromEvent(document, MUTE_AUDIO_CONTROL).pipe(
       filter((event) => event.detail.ID === ID),
-      map((event) => (event.detail.localAudio.muted ? muted : unmuted))
+      map((event) => (event.detail.localAudio ? muted : unmuted))
     );
 
     return concat(default$, muteEvent$);
@@ -251,15 +251,18 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @memberof MeetingsJSONAdapter
    * @private
    */
-  toggleMuteAudio(ID) {
+  async toggleMuteAudio(ID) {
     if (this.datasource[ID]) {
       const meeting = {...this.datasource[ID]}; // Copy meeting to modify mute
       const muteEvent = new CustomEvent(MUTE_AUDIO_CONTROL, {detail: meeting});
 
       if (meeting.localAudio) {
-        meeting.localAudio.muted = !meeting.localAudio.muted;
-        document.dispatchEvent(muteEvent);
+        meeting.localAudio = null;
+      } else {
+        meeting.localAudio = await this.getStream({video: false, audio: true});
       }
+
+      document.dispatchEvent(muteEvent);
     }
   }
 
