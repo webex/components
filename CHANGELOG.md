@@ -1,3 +1,10 @@
+# [1.28.0](https://github.com/webex/components/compare/v1.27.0...v1.28.0) (2020-01-13)
+
+
+### Features
+
+* **RemoteMedia:** add README ([3b48af1](https://github.com/webex/components/commit/3b48af16665e01d9f04074a765b87161688c3482))
+
 # [1.27.0](https://github.com/webex/components/compare/v1.26.1...v1.27.0) (2019-12-19)
 
 
