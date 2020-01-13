@@ -1,3 +1,19 @@
+# [1.29.0](https://github.com/webex/components/compare/v1.28.0...v1.29.0) (2020-01-13)
+
+
+### Bug Fixes
+
+* **LocalMedia:** display spinner while user ID is retrieved ([120c46a](https://github.com/webex/components/commit/120c46aedb1d564fd89186ecc81633efd3ce2ed8))
+
+
+### Features
+
+* **Interstitial:** add interstitial meeting component ([dfa81d3](https://github.com/webex/components/commit/dfa81d3b34b8532be79844094d8ac3462705e89c))
+* **hooks:** getMeeting takes a destination to create a meeting ([beebe6f](https://github.com/webex/components/commit/beebe6f911835cbf0bf95a53edb29cf06d907a1e))
+* **MeetingsJsonAdapter:** implement addLocalMedia ([f825faa](https://github.com/webex/components/commit/f825faa792ac65af930a618b22758c6028b55f4c))
+* **MeetingsJsonAdapter:** implement createMeeting ([22fad7f](https://github.com/webex/components/commit/22fad7f01bd1fb076064c25a79af4d3673b18725))
+* **MeetingJsonAdapter:** remove mute property from the media ([bdd435e](https://github.com/webex/components/commit/bdd435e457295016b6e3ae4dd0dfb26ac414029b))
+
 # [1.28.0](https://github.com/webex/components/compare/v1.27.0...v1.28.0) (2020-01-13)
 
 
