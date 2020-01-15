@@ -1,3 +1,10 @@
+## [1.29.1](https://github.com/webex/components/compare/v1.29.0...v1.29.1) (2020-01-15)
+
+
+### Bug Fixes
+
+* **InterstitialMeeting:** meetingDest prop is replaced with meetingID ([69dd4e5](https://github.com/webex/components/commit/69dd4e5cf01958f6d01e8978c6f9a75b44fd7ca6))
+
 # [1.29.0](https://github.com/webex/components/compare/v1.28.0...v1.29.0) (2020-01-13)
 
 
