@@ -26,18 +26,10 @@ To see all the different possible states of the Webex Interstitial Meeting compo
     enclose it within [a data provider](../WebexDataProvider/WebexDataProvider.js)
     that takes the [component data adapter](../../adapters/WebexJSONAdapter.js) that we created previously
 
-<<<<<<< HEAD
     ```js
     <WebexDataProvider adapter={jsonAdapter}>
-      <WebexInterstitialMeeting meetingDestination="meetingDestination" onMeeting={this.onMeeting} />
+      <WebexInterstitialMeeting meetingID="meetingID" />
     </WebexDataProvider>
     ```
-=======
-        ```js
-        <WebexDataProvider adapter={jsonAdapter}>
-          <WebexInterstitialMeeting meetingDestination="meetingDestination"  setMeeting="this.setMeeting"/>
-        </WebexDataProvider>
-        ```
->>>>>>> 21b376e... docs(InterstitialMeeting): add README
 
 The component knows how to manage its data. If anything changes in the data source that the adapter manages, the component will also update on its own.
