@@ -7,11 +7,11 @@ jest.mock('../hooks/useMeeting');
 describe('Webex Interstitial Meeting component', () => {
   describe('snapshot', () => {
     test('matches snapshot of loading while meeting is created', () => {
-      expect(shallow(<WebexInterstitialMeeting meetingDestination="" />)).toMatchSnapshot();
+      expect(shallow(<WebexInterstitialMeeting meetingID="" />)).toMatchSnapshot();
     });
 
     test('matches snapshot of meeting destination', () => {
-      expect(shallow(<WebexInterstitialMeeting meetingDestination="localMedia" />)).toMatchSnapshot();
+      expect(shallow(<WebexInterstitialMeeting meetingID="localMedia" />)).toMatchSnapshot();
     });
   });
 });

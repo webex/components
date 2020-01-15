@@ -13,18 +13,22 @@ const wrapperStyle = {height: '500px', width: '800px', border: '1px solid black'
 stories.add('loading', () => (
   <div style={wrapperStyle}>
     <WebexDataProvider adapter={webexAdapter}>
-      <WebexInterstitialMeeting meetingDestination="" />
+      <WebexInterstitialMeeting meetingID="" />
     </WebexDataProvider>
   </div>
 ));
 
-stories.add('video enabled', () => (
-  <div style={wrapperStyle}>
-    <WebexDataProvider adapter={webexAdapter}>
-      <WebexInterstitialMeeting meetingDestination="localMedia" />
-    </WebexDataProvider>
-  </div>
-));
+stories.add('video enabled', () => {
+  jsonData.meetings.localMedia.localVideo = {};
+
+  return (
+    <div style={wrapperStyle}>
+      <WebexDataProvider adapter={webexAdapter}>
+        <WebexInterstitialMeeting meetingID="localMedia" />
+      </WebexDataProvider>
+    </div>
+  );
+});
 
 stories.add('video disabled', () => {
   jsonData.meetings.localMedia.localVideo = null;
@@ -32,7 +36,7 @@ stories.add('video disabled', () => {
   return (
     <div style={wrapperStyle}>
       <WebexDataProvider adapter={webexAdapter}>
-        <WebexInterstitialMeeting meetingDestination="localMedia" />
+        <WebexInterstitialMeeting meetingID="localMedia" />
       </WebexDataProvider>
     </div>
   );
