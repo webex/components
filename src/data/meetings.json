@@ -112,5 +112,25 @@
     "remoteAudio": null,
     "localShare": null,
     "remoteShare": null
+  },
+  "remoteMedia": {
+    "ID": "remoteMedia",
+    "title": "World of Light Meeting Space",
+    "localVideo": null,
+    "remoteVideo": {},
+    "localAudio": null,
+    "remoteAudio": {},
+    "localShare": null,
+    "remoteShare": null
+  },
+  "remote&localMedia": {
+    "ID": "remote&localMedia",
+    "title": "World of Light Meeting Space",
+    "localVideo": {},
+    "remoteVideo": {},
+    "localAudio": {},
+    "remoteAudio": {},
+    "localShare": null,
+    "remoteShare": null
   }
 }
