@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Webex InMeeting component snapshot matches snapshot of meeting 1`] = `
+<div
+  className="in-meeting"
+>
+  <WebexRemoteMedia
+    meetingID="remoteMedia"
+  />
+  <WebexLocalMedia
+    meetingID="remoteMedia"
+  />
+</div>
+`;

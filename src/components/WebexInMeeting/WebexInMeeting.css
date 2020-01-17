@@ -1,0 +1,20 @@
+.in-meeting {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.in-meeting .remote-media {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.in-meeting .local-media {
+  position: absolute;
+  bottom: 25%;
+  right: 3%;
+  width: 20%;
+  height: 20%;
+  z-index: 1;
+}
