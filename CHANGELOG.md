@@ -1,3 +1,11 @@
+# [1.30.0](https://github.com/webex/components/compare/v1.29.1...v1.30.0) (2020-01-22)
+
+
+### Features
+
+* **MeetingJson:** add remoteMedia object ([15b9064](https://github.com/webex/components/commit/15b9064bc59bd49dfb2bd653d3d068784e246f89))
+* **WebexInMeeting:** implement one ([cc5e17e](https://github.com/webex/components/commit/cc5e17e0af7d8eb5514afac4890070c6152f09cc))
+
 ## [1.29.1](https://github.com/webex/components/compare/v1.29.0...v1.29.1) (2020-01-15)
 
 
