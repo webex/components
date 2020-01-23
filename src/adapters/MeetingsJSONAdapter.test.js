@@ -1,13 +1,14 @@
 import {from} from 'rxjs';
-import {tap, skip} from 'rxjs/operators';
+import {tap, skip, delayWhen} from 'rxjs/operators';
 
-import meetings from './../data/meetings';
+import JSONData from './../data/meetings';
 import MeetingsJSONAdapter from './MeetingsJSONAdapter';
 
 describe('Meetings JSON Adapter', () => {
-  let meetingsJSONAdapter, meetingID;
+  let meetingsJSONAdapter, meetingID, meetings;
 
   beforeEach(() => {
+    meetings = {...JSONData};
     [meetingID] = Object.keys(meetings);
     meetingsJSONAdapter = new MeetingsJSONAdapter(meetings);
   });
@@ -79,14 +80,50 @@ describe('Meetings JSON Adapter', () => {
       });
     });
 
-    test('returns meeting data from mute event', (done) => {
+    test('returns meeting data from mute audio event', (done) => {
       meetingID = 'localAudio';
 
       meetingsJSONAdapter
         .getMeeting(meetingID)
         .pipe(tap(() => meetingsJSONAdapter.toggleMuteAudio(meetingID)))
         .subscribe((meeting) => {
-          expect(meeting.localAudio).toEqual(['remote-audio']);
+          expect(meeting.localAudio).toBeNull();
+          done();
+        });
+    });
+
+    test('returns meeting data from mute video event', (done) => {
+      meetingID = 'localVideo';
+
+      meetingsJSONAdapter
+        .getMeeting(meetingID)
+        .pipe(tap(() => meetingsJSONAdapter.toggleMuteVideo(meetingID)))
+        .subscribe((meeting) => {
+          expect(meeting.localVideo).toBeNull();
+          done();
+        });
+    });
+
+    test('returns meeting data from join event', (done) => {
+      meetingID = 'localMedia';
+
+      meetingsJSONAdapter
+        .getMeeting(meetingID)
+        .pipe(delayWhen(() => meetingsJSONAdapter.joinMeeting(meetingID)))
+        .subscribe((meeting) => {
+          expect(meeting.remoteVideo).toEqual(['remote-video']);
+          done();
+        });
+    });
+
+    test('returns meeting data from leave event', (done) => {
+      meetingID = 'remoteMedia';
+
+      meetingsJSONAdapter
+        .getMeeting(meetingID)
+        .pipe(tap(() => meetingsJSONAdapter.leaveMeeting(meetingID)))
+        .subscribe((meeting) => {
+          expect(meeting.remoteVideo).toBeNull();
           done();
         });
     });
@@ -183,11 +220,122 @@ describe('Meetings JSON Adapter', () => {
     });
   });
 
+  describe('muteVideoControl() returns', () => {
+    beforeEach(() => {
+      meetingID = 'localVideo';
+    });
+
+    test('active control display values', (done) => {
+      rxjs.fromEvent = jest.fn(() => from([{detail: meetings[meetingID]}]));
+
+      meetingsJSONAdapter
+        .muteVideoControl(meetingID)
+        .pipe(skip(1)) // Skip the "default" emission
+        .subscribe((display) => {
+          expect(display).toMatchObject({
+            ID: 'mute-video',
+            icon: 'camera-muted',
+            tooltip: 'Start video',
+            state: 'active',
+          });
+          done();
+        });
+    });
+
+    test('inactive control display values', (done) => {
+      rxjs.fromEvent = jest.fn(() => {
+        const meeting = meetings[meetingID];
+
+        meeting.localVideo = null; // Local video is already muted
+
+        return from([{detail: meeting}]);
+      });
+
+      meetingsJSONAdapter
+        .muteVideoControl(meetingID)
+        .pipe(skip(1)) // Skip the "default" emission
+        .subscribe((display) => {
+          expect(display).toMatchObject({
+            ID: 'mute-video',
+            icon: 'camera',
+            tooltip: 'Stop video',
+            state: 'inactive',
+          });
+          done();
+        });
+    });
+
+    test('error on invalid meeting ID', (done) => {
+      meetingsJSONAdapter.muteVideoControl('invalid').subscribe(
+        () => {},
+        (error) => {
+          expect(error.message).toEqual('Could not find meeting with ID "invalid"');
+          done();
+        }
+      );
+    });
+  });
+
+  describe('joinControl() returns', () => {
+    test('active conrorl display value', (done) => {
+      meetingsJSONAdapter.joinControl().subscribe((display) => {
+        expect(display).toMatchObject({
+          ID: 'join-meeting',
+          text: 'Join meeting',
+          tooltip: 'Join meeting',
+          state: 'active',
+        });
+        done();
+      });
+    });
+  });
+
+  describe('leaveControl() returns', () => {
+    test('active control display value', (done) => {
+      meetingsJSONAdapter.leaveControl().subscribe((display) => {
+        expect(display).toMatchObject({
+          ID: 'leave-meeting',
+          icon: 'cancel',
+          tooltip: 'Leave',
+          state: 'active',
+        });
+        done();
+      });
+    });
+  });
+
   describe('toggleMuteAudio()', () => {
-    test('dispatches a "mute-audio" event', () => {
+    test('dispatches a "mute-audio" event', async () => {
       meetingID = 'localAudio';
 
-      meetingsJSONAdapter.toggleMuteAudio(meetingID);
+      await meetingsJSONAdapter.toggleMuteAudio(meetingID);
+      expect(global.document.dispatchEvent).toHaveBeenCalled();
+    });
+  });
+
+  describe('toggleMuteVideo()', () => {
+    test('dispatches a "mute-video" event', async () => {
+      meetingID = 'localVideo';
+
+      await meetingsJSONAdapter.toggleMuteVideo(meetingID);
+      expect(global.document.dispatchEvent).toHaveBeenCalled();
+    });
+  });
+
+  describe('joinMeeting()', () => {
+    test('dispatches a "join-meeting" event', async () => {
+      meetingID = 'localMedia';
+
+      await meetingsJSONAdapter.toggleMuteVideo(meetingID);
+      expect(global.document.dispatchEvent).toHaveBeenCalled();
+    });
+  });
+
+  describe('leaveMeeting()', () => {
+    test('dispatches a "leave-meeting" event', async () => {
+      meetingID = 'remoteMedia';
+
+      await meetingsJSONAdapter.toggleMuteVideo(meetingID);
       expect(global.document.dispatchEvent).toHaveBeenCalled();
     });
   });
