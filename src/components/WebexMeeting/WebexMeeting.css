@@ -1,0 +1,15 @@
+.meeting {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.meeting .controls {
+  display: flex;
+  position: absolute;
+  align-self: flex-end;
+  bottom: 3rem;
+}

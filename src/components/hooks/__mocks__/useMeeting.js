@@ -7,7 +7,7 @@ export default function useMeeting(meetingID, meetingDestination) {
   if (meetingID in datasource.meetingsAdapter) {
     result = datasource.meetingsAdapter[meetingID];
   } else if (meetingDestination) {
-    result = datasource.meetingsAdapter.localMedia;
+    result = datasource.meetingsAdapter[meetingDestination];
   }
 
   return result;
