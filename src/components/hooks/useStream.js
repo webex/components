@@ -16,10 +16,6 @@ export default function useStream(stream) {
       mediaElement.srcObject = stream;
       mediaElement.play();
     }
-
-    return () => {
-      mediaElement.srcObject = undefined;
-    };
   }, [stream]);
 
   return streamRef;
