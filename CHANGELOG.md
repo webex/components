@@ -1,3 +1,19 @@
+# [1.31.0](https://github.com/webex/components/compare/v1.30.0...v1.31.0) (2020-01-23)
+
+
+### Bug Fixes
+
+* **UseStream:** no action needed when the video is unmounted ([ff14955](https://github.com/webex/components/commit/ff14955a36341dbb869e1bc9a6ba39c3ac618eef))
+
+
+### Features
+
+* **MeetingJsonAdapter:** add more controls functionalities and display ([f0ec657](https://github.com/webex/components/commit/f0ec6574e828a6b697efb9132148e7e4f298f510))
+* **UseMeeting:** add OnMeeting method ([f6368e3](https://github.com/webex/components/commit/f6368e3c06760a06e76e0bc03036f3327898bfe1))
+* **MeetingControls:** add parent div to wrap the controls ([cc60179](https://github.com/webex/components/commit/cc6017968ba81aae12ff10b4c9ca6e282c5c7125))
+* **UseMeetingControls:** check for available controls ([c0599d5](https://github.com/webex/components/commit/c0599d5347ad2ea17d9af25155f0664f1f3c560d))
+* **Meeting:** implement one ([338b85d](https://github.com/webex/components/commit/338b85dd274de1cbbe80128325d180cd7bed529e))
+
 # [1.30.0](https://github.com/webex/components/compare/v1.29.1...v1.30.0) (2020-01-22)
 
 
