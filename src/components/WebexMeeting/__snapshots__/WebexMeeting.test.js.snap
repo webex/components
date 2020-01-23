@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Webex Meeting component snapshot matches snapshot of a user that has joined a meeting 1`] = `
+<div
+  className="meeting"
+>
+  <WebexInMeeting
+    meetingID="remoteMedia"
+  />
+  <WebexMeetingControls
+    meetingID="remoteMedia"
+  >
+    <WebexMeetingControl
+      key="mute-audio"
+      type="mute-audio"
+    />
+    <WebexMeetingControl
+      key="mute-video"
+      type="mute-video"
+    />
+    <WebexMeetingControl
+      key="leave-meeting"
+      type="leave-meeting"
+    />
+  </WebexMeetingControls>
+</div>
+`;
+
+exports[`Webex Meeting component snapshot matches snapshot of a user that has joined a meeting with optional controls 1`] = `
+<div
+  className="meeting"
+>
+  <WebexInMeeting
+    meetingID="remoteMedia"
+  />
+  <WebexMeetingControls
+    meetingID="remoteMedia"
+  >
+    <WebexMeetingControl
+      key="leave-meeting"
+      type="leave-meeting"
+    />
+  </WebexMeetingControls>
+</div>
+`;
+
+exports[`Webex Meeting component snapshot matches snapshot of a user waiting to join a meeting 1`] = `
+<div
+  className="meeting"
+>
+  <WebexInterstitialMeeting
+    meetingID="localMedia"
+  />
+  <WebexMeetingControls
+    meetingID="localMedia"
+  >
+    <WebexMeetingControl
+      key="mute-audio"
+      type="mute-audio"
+    />
+    <WebexMeetingControl
+      key="mute-video"
+      type="mute-video"
+    />
+    <WebexMeetingControl
+      key="join-meeting"
+      type="join-meeting"
+    />
+  </WebexMeetingControls>
+</div>
+`;
+
+exports[`Webex Meeting component snapshot matches snapshot of a user waiting to join a meeting with optional controls 1`] = `
+<div
+  className="meeting"
+>
+  <WebexInterstitialMeeting
+    meetingID="localMedia"
+  />
+  <WebexMeetingControls
+    meetingID="localMedia"
+  >
+    <WebexMeetingControl
+      key="join-meeting"
+      type="join-meeting"
+    />
+  </WebexMeetingControls>
+</div>
+`;
+
+exports[`Webex Meeting component snapshot matches snapshot of loading while meeting is created 1`] = `
+<div
+  className="meeting"
+>
+  <Spinner
+    className=""
+    color="black"
+    percentage={null}
+    showCheck={false}
+    showPercentage={false}
+    size={36}
+  />
+</div>
+`;
