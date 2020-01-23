@@ -11,7 +11,11 @@ export const MeetingContext = React.createContext();
  * @returns {object} JSX of the component
  */
 export default function WebexMeetingControls({meetingID, children}) {
-  return <MeetingContext.Provider value={meetingID}>{children}</MeetingContext.Provider>;
+  return (
+    <MeetingContext.Provider value={meetingID}>
+      <div className="controls">{children}</div>
+    </MeetingContext.Provider>
+  );
 }
 
 WebexMeetingControls.propTypes = {
