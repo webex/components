@@ -1,10 +1,12 @@
-import {concat, from, fromEvent, Observable, of} from 'rxjs';
-import {filter, flatMap, map} from 'rxjs/operators';
+import {concat, from, fromEvent, Observable, of, merge} from 'rxjs';
+import {filter, flatMap, map, tap} from 'rxjs/operators';
 import {MeetingsAdapter, MeetingControlState} from '@webex/component-adapter-interfaces';
 
 // Defined meeting controls in Meetings JSON Adapter
 export const MUTE_AUDIO_CONTROL = 'mute-audio';
+export const MUTE_VIDEO_CONTROL = 'mute-video';
 export const JOIN_CONTROL = 'join-meeting';
+export const LEAVE_CONTROL = 'leave-meeting';
 export const DISABLED_MUTE_AUDIO_CONTROL = 'disabled-mute-audio';
 export const DISABLED_JOIN_CONTROL = 'disabled-join-meeting';
 
@@ -53,10 +55,22 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       display: this.muteAudioControl.bind(this),
     };
 
+    this.meetingControls[MUTE_VIDEO_CONTROL] = {
+      ID: MUTE_VIDEO_CONTROL,
+      action: this.toggleMuteVideo.bind(this),
+      display: this.muteVideoControl.bind(this),
+    };
+
     this.meetingControls[JOIN_CONTROL] = {
       ID: JOIN_CONTROL,
-      action: () => {},
+      action: this.joinMeeting.bind(this),
       display: this.joinControl.bind(this),
+    };
+
+    this.meetingControls[LEAVE_CONTROL] = {
+      ID: LEAVE_CONTROL,
+      action: this.leaveMeeting.bind(this),
+      display: this.leaveControl.bind(this),
     };
 
     this.meetingControls[DISABLED_MUTE_AUDIO_CONTROL] = {
@@ -143,13 +157,24 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       /* eslint-enable no-confusing-arrow */
     );
 
-    // Send updates on the meeting when a mute event is triggered
-    const muteEvent$ = fromEvent(document, MUTE_AUDIO_CONTROL).pipe(
+    // Send updates on the meeting when an action is triggered
+    const audioEvents$ = fromEvent(document, MUTE_AUDIO_CONTROL);
+    const videoEvents$ = fromEvent(document, MUTE_VIDEO_CONTROL);
+    const joinEvents$ = fromEvent(document, JOIN_CONTROL);
+    const leaveEvents$ = fromEvent(document, LEAVE_CONTROL);
+
+    const events$ = merge(audioEvents$, videoEvents$, joinEvents$, leaveEvents$).pipe(
       filter((event) => event.detail.ID === ID),
-      map((event) => event.detail)
+      // Make a copy of the meeting to treat it as if were immutable
+      map((event) => ({...event.detail}))
     );
 
-    return concat(getMeetingWithMedia$, muteEvent$);
+    return concat(getMeetingWithMedia$, events$).pipe(
+      tap((meeting) => {
+        // Update the static meeting object after each change accordingly
+        this.datasource[ID] = meeting;
+      })
+    );
   }
 
   /**
@@ -164,12 +189,12 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    */
   async addLocalMedia(ID) {
     if (this.datasource[ID].localVideo) {
-      // attach Video stream
+      // Attach Video stream
       await this.getStream({video: true, audio: false});
     }
 
     if (this.datasource[ID].localAudio) {
-      // attach Audio stream
+      // Attach Audio stream
       await this.getStream({video: false, audio: true});
     }
   }
@@ -185,7 +210,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
     try {
       const mediaStream = await navigator.mediaDevices.getUserMedia(constraints);
 
-      // filter out either video or audio from a given constraints and return a new media stream
+      // Filter out either video or audio from a given constraints and return a new media stream
       if (constraints.video) {
         stream = new MediaStream([mediaStream.getVideoTracks()[0]]);
       }
@@ -199,6 +224,88 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
     }
 
     return stream;
+  }
+
+  /**
+   * Toggles muting the local audio media stream track.
+   * Used by "mute-audio" meeting control.
+   *
+   * @param {string} ID  ID of the meeting for which to mute local audio.
+   * @memberof MeetingsJSONAdapter
+   * @private
+   */
+  async toggleMuteAudio(ID) {
+    if (this.datasource[ID]) {
+      const meeting = this.datasource[ID];
+
+      if (meeting.localAudio) {
+        meeting.localAudio = null;
+      } else {
+        meeting.localAudio = await this.getStream({video: false, audio: true});
+      }
+
+      document.dispatchEvent(new CustomEvent(MUTE_AUDIO_CONTROL, {detail: meeting}));
+    }
+  }
+
+  /**
+   * Toggles muting the local audio media stream track.
+   * Used by "mute-video" meeting control.
+   *
+   * @param {string} ID  ID of the meeting for which to mute local audio.
+   * @memberof MeetingsJSONAdapter
+   * @private
+   */
+  async toggleMuteVideo(ID) {
+    if (this.datasource[ID]) {
+      const meeting = this.datasource[ID];
+
+      if (meeting.localVideo) {
+        meeting.localVideo = null;
+      } else {
+        meeting.localVideo = await this.getStream({video: true, audio: false});
+      }
+
+      document.dispatchEvent(new CustomEvent(MUTE_VIDEO_CONTROL, {detail: meeting}));
+    }
+  }
+
+  /**
+   * Join the meeting by adding streams to the remote media
+   * Used by "join-meeting" meeting control.
+   *
+   * @param {string} ID  ID of the meeting for which to mute local audio.
+   * @memberof MeetingsJSONAdapter
+   * @private
+   */
+  async joinMeeting(ID) {
+    if (this.datasource[ID]) {
+      const meeting = this.datasource[ID];
+
+      meeting.remoteVideo = await this.getStream({video: true, audio: false});
+      meeting.remoteAudio = await this.getStream({video: false, audio: true});
+
+      document.dispatchEvent(new CustomEvent(JOIN_CONTROL, {detail: meeting}));
+    }
+  }
+
+  /**
+   * Join the meeting by removing the remote media
+   * Used by "leave-meeting" meeting control.
+   *
+   * @param {string} ID  ID of the meeting for which to mute local audio.
+   * @memberof MeetingsJSONAdapter
+   * @private
+   */
+  leaveMeeting(ID) {
+    if (this.datasource[ID]) {
+      const meeting = this.datasource[ID];
+
+      meeting.remoteVideo = null;
+      meeting.remoteAudio = null;
+
+      document.dispatchEvent(new CustomEvent(LEAVE_CONTROL, {detail: meeting}));
+    }
   }
 
   /**
@@ -244,26 +351,47 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   }
 
   /**
-   * Toggles muting the local audio media stream track.
-   * Used by "mute-audio" meeting control.
+   * Returns an observable that emits the display data of a meeting control.
    *
-   * @param {string} ID  ID of the meeting for which to mute local audio.
-   * @memberof MeetingsJSONAdapter
+   * @param {string} ID ID of the meeting for which to update display
+   * @returns {Observable.<MeetingControlDisplay>}
+   * @memberof MeetingJSONAdapter
    * @private
    */
-  async toggleMuteAudio(ID) {
-    if (this.datasource[ID]) {
-      const meeting = {...this.datasource[ID]}; // Copy meeting to modify mute
-      const muteEvent = new CustomEvent(MUTE_AUDIO_CONTROL, {detail: meeting});
+  muteVideoControl(ID) {
+    const muted = {
+      ID: MUTE_VIDEO_CONTROL,
+      icon: 'camera-muted',
+      tooltip: 'Start video',
+      state: MeetingControlState.ACTIVE,
+      text: null,
+    };
+    const unmuted = {
+      ID: MUTE_VIDEO_CONTROL,
+      icon: 'camera',
+      tooltip: 'Stop video',
+      state: MeetingControlState.INACTIVE,
+      text: null,
+    };
 
-      if (meeting.localAudio) {
-        meeting.localAudio = null;
+    const default$ = Observable.create((observer) => {
+      const meeting = this.datasource[ID];
+
+      if (meeting) {
+        observer.next(meeting.localVideo ? muted : unmuted);
       } else {
-        meeting.localAudio = await this.getStream({video: false, audio: true});
+        observer.error(new Error(`Could not find meeting with ID "${ID}"`));
       }
 
-      document.dispatchEvent(muteEvent);
-    }
+      observer.complete();
+    });
+
+    const muteEvent$ = fromEvent(document, MUTE_VIDEO_CONTROL).pipe(
+      filter((event) => event.detail.ID === ID),
+      map((event) => (event.detail.localVideo ? muted : unmuted))
+    );
+
+    return concat(default$, muteEvent$);
   }
 
   /**
@@ -280,6 +408,27 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
         ID: JOIN_CONTROL,
         text: 'Join meeting',
         tooltip: 'Join meeting',
+        state: MeetingControlState.ACTIVE,
+      });
+
+      observer.complete();
+    });
+  }
+
+  /**
+   * Returns an observable that emits the display data of a meeting control.
+   *
+   * @param {string} ID ID of the meeting for which to update display
+   * @returns {Observable.<MeetingControlDisplay>}
+   * @memberof MeetingJSONAdapter
+   * @private
+   */
+  leaveControl() {
+    return Observable.create((observer) => {
+      observer.next({
+        ID: LEAVE_CONTROL,
+        icon: 'cancel',
+        tooltip: 'Leave',
         state: MeetingControlState.ACTIVE,
       });
 
