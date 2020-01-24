@@ -15,6 +15,7 @@ exports[`Webex Local Media component snapshot matches snapshot of local video 1`
   className="local-media"
 >
   <video
+    autoPlay={true}
     playsInline={true}
   />
 </div>

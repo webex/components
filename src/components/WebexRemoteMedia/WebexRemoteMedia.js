@@ -20,8 +20,8 @@ export default function WebexRemoteMedia({meetingID}) {
 
   return (
     <div className="remote-media">
-      {remoteVideo ? <video ref={videoRef} playsInline /> : null}
-      {remoteAudio ? <audio ref={audioRef} /> : null}
+      {remoteVideo ? <video ref={videoRef} playsInline autoPlay /> : null}
+      {remoteAudio ? <audio ref={audioRef} autoPlay /> : null}
     </div>
   );
 }
