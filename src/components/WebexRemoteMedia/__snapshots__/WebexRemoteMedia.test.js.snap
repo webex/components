@@ -5,6 +5,7 @@ exports[`Webex Remote Media component snapshot matches snapshot of disabled remo
   className="remote-media"
 >
   <video
+    autoPlay={true}
     playsInline={true}
   />
 </div>
@@ -14,7 +15,9 @@ exports[`Webex Remote Media component snapshot matches snapshot of disabled remo
 <div
   className="remote-media"
 >
-  <audio />
+  <audio
+    autoPlay={true}
+  />
 </div>
 `;
 
@@ -23,8 +26,11 @@ exports[`Webex Remote Media component snapshot matches snapshot of enabled remot
   className="remote-media"
 >
   <video
+    autoPlay={true}
     playsInline={true}
   />
-  <audio />
+  <audio
+    autoPlay={true}
+  />
 </div>
 `;

@@ -19,7 +19,9 @@ export default function WebexLocalMedia({meetingID}) {
   const videoRef = useStream(localVideo);
   const disabledVideo = ID ? <WebexAvatar personID={ID} /> : <Spinner />;
 
-  return <div className="local-media">{localVideo ? <video ref={videoRef} playsInline /> : disabledVideo}</div>;
+  return (
+    <div className="local-media">{localVideo ? <video ref={videoRef} playsInline autoPlay /> : disabledVideo}</div>
+  );
 }
 
 WebexLocalMedia.propTypes = {
