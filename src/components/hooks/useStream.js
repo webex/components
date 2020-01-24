@@ -14,7 +14,6 @@ export default function useStream(stream) {
 
     if (stream instanceof MediaStream) {
       mediaElement.srcObject = stream;
-      mediaElement.play();
     }
   }, [stream]);
 
