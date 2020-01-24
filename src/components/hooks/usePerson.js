@@ -1,4 +1,5 @@
 import {useEffect, useContext, useState} from 'react';
+import {PersonStatus} from '@webex/component-adapter-interfaces';
 
 import {AdapterContext} from '../../components/';
 
@@ -21,7 +22,19 @@ export default function usePerson(personID) {
       // eslint-disable-next-line no-console
       console.error(error.message);
     };
-    const subscription = peopleAdapter.getPerson(personID).subscribe(setPerson, onError);
+    const onPerson = (data) => {
+      const newPerson = {...data};
+
+      // Convert the keys back to their corresponding
+      // values, if the status is key based
+      if (Object.keys(PersonStatus).includes(newPerson.status)) {
+        newPerson.status = PersonStatus[newPerson.status];
+      }
+
+      setPerson(newPerson);
+    };
+
+    const subscription = peopleAdapter.getPerson(personID).subscribe(onPerson, onError);
 
     return () => {
       subscription.unsubscribe();
