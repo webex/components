@@ -28,14 +28,14 @@
   "license": "MIT",
   "peerDependencies": {
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "rxjs": "^6.5.4"
   },
   "dependencies": {
     "@momentum-ui/react": "^20.1.1",
     "@webex/component-adapter-interfaces": "^1.4.0",
     "date-fns": "^2.6.0",
-    "prop-types": "^15.7.2",
-    "rxjs": "^6.5.2"
+    "prop-types": "^15.7.2"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
