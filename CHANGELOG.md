@@ -1,3 +1,12 @@
+# [1.32.0](https://github.com/webex/components/compare/v1.31.0...v1.32.0) (2020-01-25)
+
+
+### Features
+
+* **WebexMedia:** add autoPlay property to the media tags ([f48299c](https://github.com/webex/components/commit/f48299c050d68245ed398665f673b1344afba3af))
+* **UsePerson:** convert PersonStatus keys to values ([ed1cbc5](https://github.com/webex/components/commit/ed1cbc5cd63ba33af0d78da64b44b9dbf3a05ecc))
+* **UseStream:** remove play method from the hook ([0e3e137](https://github.com/webex/components/commit/0e3e137159c7e529e7834aab86b6131fc2ac22f6))
+
 # [1.31.0](https://github.com/webex/components/compare/v1.30.0...v1.31.0) (2020-01-23)
 
 
