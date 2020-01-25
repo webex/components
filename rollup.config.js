@@ -10,9 +10,10 @@ const output = (name, format) => ({
   format,
   sourcemap: true,
   globals: {
+    'prop-types': 'PropTypes',
     react: 'React',
     'react-dom': 'ReactDOM',
-    'prop-types': 'PropTypes',
+    rxjs: 'rxjs',
   },
 });
 
@@ -50,7 +51,7 @@ export default [
       // Use default for everything else
       warn(warning);
     },
-    external: ['react', 'react-dom', 'prop-types'],
+    external: ['prop-types', 'react', 'react-dom', 'rxjs'],
     context: 'null',
   },
 ];
