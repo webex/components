@@ -14,6 +14,7 @@ const output = (name, format) => ({
     react: 'React',
     'react-dom': 'ReactDOM',
     rxjs: 'rxjs',
+    'rxjs/operators': 'rxjs.operators',
   },
 });
 
@@ -51,7 +52,7 @@ export default [
       // Use default for everything else
       warn(warning);
     },
-    external: ['prop-types', 'react', 'react-dom', 'rxjs'],
+    external: ['prop-types', 'react', 'react-dom', 'rxjs', 'rxjs/operators'],
     context: 'null',
   },
 ];
