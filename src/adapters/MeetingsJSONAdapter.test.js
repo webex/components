@@ -156,8 +156,8 @@ describe('Meetings JSON Adapter', () => {
           expect(display).toMatchObject({
             ID: 'mute-audio',
             icon: 'microphone-muted',
-            tooltip: 'Unmute',
-            state: 'active',
+            tooltip: 'Mute',
+            state: 'inactive',
           });
           done();
         });
@@ -178,9 +178,9 @@ describe('Meetings JSON Adapter', () => {
         .subscribe((display) => {
           expect(display).toMatchObject({
             ID: 'mute-audio',
-            icon: 'microphone',
-            tooltip: 'Mute',
-            state: 'inactive',
+            icon: 'microphone-muted',
+            tooltip: 'Unmute',
+            state: 'active',
           });
           done();
         });
@@ -212,8 +212,8 @@ describe('Meetings JSON Adapter', () => {
           expect(display).toMatchObject({
             ID: 'mute-video',
             icon: 'camera-muted',
-            tooltip: 'Start video',
-            state: 'active',
+            tooltip: 'Stop video',
+            state: 'inactive',
           });
           done();
         });
@@ -234,9 +234,9 @@ describe('Meetings JSON Adapter', () => {
         .subscribe((display) => {
           expect(display).toMatchObject({
             ID: 'mute-video',
-            icon: 'camera',
-            tooltip: 'Stop video',
-            state: 'inactive',
+            icon: 'camera-muted',
+            tooltip: 'Start video',
+            state: 'active',
           });
           done();
         });
