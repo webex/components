@@ -297,7 +297,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   muteAudioControl(ID) {
     const unmuted = {
       ID: MUTE_AUDIO_CONTROL,
-      icon: 'microphone',
+      icon: 'microphone-muted',
       tooltip: 'Mute',
       state: MeetingControlState.INACTIVE,
     };
@@ -312,7 +312,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       const meeting = this.datasource[ID];
 
       if (meeting) {
-        observer.next(meeting.localAudio ? muted : unmuted);
+        observer.next(meeting.localAudio ? unmuted : muted);
       } else {
         observer.error(new Error(`Could not find meeting with ID "${ID}"`));
       }
@@ -322,7 +322,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
 
     const muteEvent$ = fromEvent(document, MUTE_AUDIO_CONTROL).pipe(
       filter((event) => event.detail.ID === ID),
-      map((event) => (event.detail.localAudio ? muted : unmuted))
+      map((event) => (event.detail.localAudio ? unmuted : muted))
     );
 
     return concat(default$, muteEvent$);
@@ -346,7 +346,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
     };
     const unmuted = {
       ID: MUTE_VIDEO_CONTROL,
-      icon: 'camera',
+      icon: 'camera-muted',
       tooltip: 'Stop video',
       state: MeetingControlState.INACTIVE,
       text: null,
@@ -356,7 +356,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       const meeting = this.datasource[ID];
 
       if (meeting) {
-        observer.next(meeting.localVideo ? muted : unmuted);
+        observer.next(meeting.localVideo ? unmuted : muted);
       } else {
         observer.error(new Error(`Could not find meeting with ID "${ID}"`));
       }
@@ -366,7 +366,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
 
     const muteEvent$ = fromEvent(document, MUTE_VIDEO_CONTROL).pipe(
       filter((event) => event.detail.ID === ID),
-      map((event) => (event.detail.localVideo ? muted : unmuted))
+      map((event) => (event.detail.localVideo ? unmuted : muted))
     );
 
     return concat(default$, muteEvent$);
