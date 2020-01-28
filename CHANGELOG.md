@@ -1,3 +1,10 @@
+## [1.32.1](https://github.com/webex/components/compare/v1.32.0...v1.32.1) (2020-01-28)
+
+
+### Bug Fixes
+
+* **package:** fix some volunerabilities ([d2929d3](https://github.com/webex/components/commit/d2929d3b84a300269e3bd4dba47820e9f4519e6e))
+
 # [1.32.0](https://github.com/webex/components/compare/v1.31.0...v1.32.0) (2020-01-25)
 
 
