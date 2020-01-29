@@ -2,7 +2,7 @@ import React from 'react';
 
 import WebexMeeting from './WebexMeeting';
 
-jest.mock('../hooks/useMeeting');
+jest.mock('../hooks/useMeetingDestination');
 
 describe('Webex Meeting component', () => {
   describe('snapshot', () => {

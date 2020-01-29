@@ -2,7 +2,7 @@ import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 import {Spinner} from '@momentum-ui/react';
 
-import {useMeeting} from '../hooks';
+import {useMeetingDestination} from '../hooks';
 
 import {WebexInMeeting, WebexInterstitialMeeting, WebexMeetingControl, WebexMeetingControls} from '..';
 
@@ -15,9 +15,7 @@ import './WebexMeeting.css';
  * @returns {object} JSX of the component
  */
 export default function WebexMeeting({meetingDestination, controls}) {
-  const {ID} = useMeeting(null, meetingDestination);
-  // Subscribe to meeting updates after meeting creation
-  const {remoteVideo} = useMeeting(ID);
+  const {ID, remoteVideo} = useMeetingDestination(meetingDestination);
   const isActive = remoteVideo !== null;
   const meetingControls = controls(isActive).map((key) => <WebexMeetingControl key={key} type={key} />);
 
