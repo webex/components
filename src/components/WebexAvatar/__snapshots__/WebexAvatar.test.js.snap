@@ -242,6 +242,28 @@ exports[`Webex Avatar component matches snapshot with "typing" person status 1`]
 />
 `;
 
+exports[`Webex Avatar component matches snapshot with no status 1`] = `
+<Avatar
+  alt="Webex Component User"
+  backgroundColor=""
+  buttonClassName=""
+  className={null}
+  color=""
+  failureBadge={false}
+  hasNotification={false}
+  hideDefaultTooltip={false}
+  icon={null}
+  isDecrypting={false}
+  isOverview={false}
+  onClick={null}
+  size="medium"
+  src="https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600"
+  theme={null}
+  title="Webex Component User"
+  type=""
+/>
+`;
+
 exports[`Webex Avatar component matches snapshot with wrong personID 1`] = `
 <Avatar
   alt=" "

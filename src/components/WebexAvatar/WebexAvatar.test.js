@@ -10,6 +10,10 @@ describe('Webex Avatar component', () => {
     expect(shallow(<WebexAvatar personID="default" />)).toMatchSnapshot();
   });
 
+  test('matches snapshot with no status', () => {
+    expect(shallow(<WebexAvatar personID="default" displayStatus={false} />)).toMatchSnapshot();
+  });
+
   test(`matches snapshot with "${PersonStatus.ACTIVE}" person status`, () => {
     expect(shallow(<WebexAvatar personID={PersonStatus.ACTIVE} />)).toMatchSnapshot();
   });
