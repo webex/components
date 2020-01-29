@@ -1,4 +1,4 @@
-import {concat, from, fromEvent, Observable, of, merge} from 'rxjs';
+import {concat, from, fromEvent, merge, Observable, of} from 'rxjs';
 import {filter, flatMap, map, tap} from 'rxjs/operators';
 import {MeetingsAdapter, MeetingControlState} from '@webex/component-adapter-interfaces';
 
@@ -99,8 +99,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   createMeeting(destination) {
     return Observable.create((observer) => {
       if (destination) {
-        // "localMedia" is the ID of a meeting object in the data folder
-        observer.next(this.datasource.localMedia);
+        observer.next(this.datasource[destination]);
       } else {
         observer.error(new Error(`Could not create meeting at destination "${destination}"`));
       }

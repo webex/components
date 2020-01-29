@@ -23,7 +23,7 @@ describe('Meetings JSON Adapter', () => {
     });
 
     test('returns new meeting', (done) => {
-      meetingsJSONAdapter.createMeeting('destination').subscribe((meeting) => {
+      meetingsJSONAdapter.createMeeting('localMedia').subscribe((meeting) => {
         expect(meeting).toMatchObject(meetings.localMedia);
         done();
       });
@@ -138,6 +138,22 @@ describe('Meetings JSON Adapter', () => {
           done();
         }
       );
+    });
+
+    test('completes when a meeting is left', (done) => {
+      rxjs.fromEvent = jest.fn(() => from([{detail: meetings[meetingID]}]));
+
+      meetingsJSONAdapter
+        .getMeeting(meetingID)
+        .pipe(tap(() => meetingsJSONAdapter.leaveMeeting(meetingID)))
+        .subscribe(
+          () => {},
+          () => {},
+          () => {
+            expect(true).toBeTruthy();
+            done();
+          }
+        );
     });
   });
 
