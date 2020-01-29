@@ -1,3 +1,18 @@
+# [1.34.0](https://github.com/webex/components/compare/v1.33.0...v1.34.0) (2020-01-29)
+
+
+### Bug Fixes
+
+* **hooks:** modify useMeeting so it will not create new meetings ([49b5559](https://github.com/webex/components/commit/49b5559f31bc17f233021651bc62836bf688e0de))
+* **MeetingsJsonAdapter:** update mute controls correct display ([f2dc0b5](https://github.com/webex/components/commit/f2dc0b53821664a7183e3935cd2b34f940023444))
+* **WebexMeeting:** update to only use useMeetingDestination ([4b563fe](https://github.com/webex/components/commit/4b563fec83633b2f6ebed59d1a2ddb28ddf6eaa0))
+
+
+### Features
+
+* **hooks:** add useMeetingDestination ([52e9851](https://github.com/webex/components/commit/52e98512de3e7c145e52db7a45fc4b0877b81b28))
+* **MeetingJsonAdapter:** modify getMeeting to complete when meeting is left ([b66455f](https://github.com/webex/components/commit/b66455f2912f443edc4783cb06b8794e3bd89f3e))
+
 # [1.33.0](https://github.com/webex/components/compare/v1.32.1...v1.33.0) (2020-01-29)
 
 
