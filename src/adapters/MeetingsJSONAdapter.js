@@ -1,5 +1,5 @@
-import {concat, from, fromEvent, merge, Observable, of} from 'rxjs';
-import {filter, flatMap, map, tap} from 'rxjs/operators';
+import {concat, from, fromEvent, merge, Observable, of, Subject} from 'rxjs';
+import {filter, flatMap, map, takeUntil, tap} from 'rxjs/operators';
 import {MeetingsAdapter, MeetingControlState} from '@webex/component-adapter-interfaces';
 
 // Defined meeting controls in Meetings JSON Adapter
@@ -118,6 +118,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @memberof MeetingsJSONAdapter
    */
   getMeeting(ID) {
+    const end$ = new Subject();
     const getMeeting$ = Observable.create((observer) => {
       if (this.datasource[ID]) {
         observer.next(this.datasource[ID]);
@@ -160,7 +161,9 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
     const audioEvents$ = fromEvent(document, MUTE_AUDIO_CONTROL);
     const videoEvents$ = fromEvent(document, MUTE_VIDEO_CONTROL);
     const joinEvents$ = fromEvent(document, JOIN_CONTROL);
-    const leaveEvents$ = fromEvent(document, LEAVE_CONTROL);
+    const leaveEvents$ = fromEvent(document, LEAVE_CONTROL).pipe(
+      tap(() => end$.next(`Meeting "${ID}" has completed.`))
+    );
 
     const events$ = merge(audioEvents$, videoEvents$, joinEvents$, leaveEvents$).pipe(
       filter((event) => event.detail.ID === ID),
@@ -172,7 +175,8 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       tap((meeting) => {
         // Update the static meeting object after each change accordingly
         this.datasource[ID] = meeting;
-      })
+      }),
+      takeUntil(end$)
     );
   }
 
