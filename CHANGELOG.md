@@ -1,3 +1,15 @@
+# [1.33.0](https://github.com/webex/components/compare/v1.32.1...v1.33.0) (2020-01-29)
+
+
+### Bug Fixes
+
+* **package:** update @webex/component-adapter-interfaces to 1.9.0 ([65375ff](https://github.com/webex/components/commit/65375ff2dd7ca752340d359e7e2f233b34f62bc5))
+
+
+### Features
+
+* **MeetingsJsonAdapter:** remote addLocalMedia() ([d33d7ce](https://github.com/webex/components/commit/d33d7cef493cc89232a731ad559840a3efc90174))
+
 ## [1.32.1](https://github.com/webex/components/compare/v1.32.0...v1.32.1) (2020-01-28)
 
 
