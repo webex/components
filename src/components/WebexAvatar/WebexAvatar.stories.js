@@ -13,7 +13,13 @@ const webexAdapter = new WebexJSONAdapter(jsonData);
 // Stories
 stories.add('default', () => (
   <WebexDataProvider adapter={webexAdapter}>
-    <WebexAvatar personID="default" adapter={webexAdapter} />
+    <WebexAvatar personID="default" />
+  </WebexDataProvider>
+));
+
+stories.add('no status', () => (
+  <WebexDataProvider adapter={webexAdapter}>
+    <WebexAvatar personID="default" displayStatus={false} />
   </WebexDataProvider>
 ));
 
