@@ -1,3 +1,15 @@
+# [1.35.0](https://github.com/webex/components/compare/v1.34.0...v1.35.0) (2020-01-30)
+
+
+### Bug Fixes
+
+* **WebexLocalMedia:** turn off avatar status display ([8f8242c](https://github.com/webex/components/commit/8f8242c213feaa933d7d8218550b24a876e42293))
+
+
+### Features
+
+* **WebexAvatar:** add prop to disable status display ([10114f0](https://github.com/webex/components/commit/10114f07f8d98e3ad99b2275600c051826b742f3))
+
 # [1.34.0](https://github.com/webex/components/compare/v1.33.0...v1.34.0) (2020-01-29)
 
 
