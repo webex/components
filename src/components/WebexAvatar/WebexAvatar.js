@@ -4,6 +4,14 @@ import {Avatar} from '@momentum-ui/react';
 
 import {usePerson} from '../hooks';
 
+/**
+ * Displays the avatar of a Webex user.
+ *
+ * @param {string} props.personID  ID of the person for which to display avatar
+ * @param {boolean} props.displayStatus  Whether or not to display the user's status
+ *
+ * @returns {object} JSX of the component
+ */
 export default function WebexAvatar({personID, displayStatus}) {
   const {avatar, displayName, status} = usePerson(personID);
   const type = displayStatus ? status : undefined;
