@@ -1,37 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Webex Meeting Control component snapshot matches with active icon button 1`] = `
-<Button
-  active={false}
+<ContextTransform(Button)
   ariaLabel="Mute"
-  ariaLabelledBy=""
   circle={true}
-  className=""
   color="red"
-  containerLarge={false}
   disabled={false}
-  expand={false}
-  href=""
-  index={null}
-  isButtonGroup={false}
-  label=""
-  large={false}
-  loading={false}
   onClick={[Function]}
-  removeStyle={false}
   size={56}
-  style={Object {}}
-  tag="button"
-  type="button"
 >
   <Icon
     append={false}
     ariaLabel={null}
     buttonClassName=""
+    buttonProps={null}
     className=""
     color=""
     description=""
-    isAria={true}
     name="microphone_28"
     onClick={null}
     prepend={false}
@@ -41,41 +26,26 @@ exports[`Webex Meeting Control component snapshot matches with active icon butto
     title=""
     type=""
   />
-</Button>
+</ContextTransform(Button)>
 `;
 
 exports[`Webex Meeting Control component snapshot matches with disabled icon button 1`] = `
-<Button
-  active={false}
+<ContextTransform(Button)
   ariaLabel="Mute disabled"
-  ariaLabelledBy=""
   circle={true}
-  className=""
   color=""
-  containerLarge={false}
   disabled={true}
-  expand={false}
-  href=""
-  index={null}
-  isButtonGroup={false}
-  label=""
-  large={false}
-  loading={false}
   onClick={[Function]}
-  removeStyle={false}
   size={56}
-  style={Object {}}
-  tag="button"
-  type="button"
 >
   <Icon
     append={false}
     ariaLabel={null}
     buttonClassName=""
+    buttonProps={null}
     className=""
     color=""
     description=""
-    isAria={true}
     name="microphone_28"
     onClick={null}
     prepend={false}
@@ -85,69 +55,38 @@ exports[`Webex Meeting Control component snapshot matches with disabled icon but
     title=""
     type=""
   />
-</Button>
+</ContextTransform(Button)>
 `;
 
 exports[`Webex Meeting Control component snapshot matches with disabled text button 1`] = `
-<Button
-  active={false}
+<ContextTransform(Button)
   ariaLabel="Join meeting disabled"
-  ariaLabelledBy=""
-  circle={false}
-  className=""
   color="green"
-  containerLarge={false}
   disabled={true}
-  expand={false}
-  href=""
-  index={null}
-  isButtonGroup={false}
-  label=""
-  large={false}
-  loading={false}
   onClick={[Function]}
-  removeStyle={false}
   size={52}
-  style={Object {}}
-  tag="button"
-  type="button"
 >
   Join meeting
-</Button>
+</ContextTransform(Button)>
 `;
 
 exports[`Webex Meeting Control component snapshot matches with inactive icon button 1`] = `
-<Button
-  active={false}
+<ContextTransform(Button)
   ariaLabel="Unmute"
-  ariaLabelledBy=""
   circle={true}
-  className=""
   color=""
-  containerLarge={false}
   disabled={false}
-  expand={false}
-  href=""
-  index={null}
-  isButtonGroup={false}
-  label=""
-  large={false}
-  loading={false}
   onClick={[Function]}
-  removeStyle={false}
   size={56}
-  style={Object {}}
-  tag="button"
-  type="button"
 >
   <Icon
     append={false}
     ariaLabel={null}
     buttonClassName=""
+    buttonProps={null}
     className=""
     color=""
     description=""
-    isAria={true}
     name="microphone-mute_28"
     onClick={null}
     prepend={false}
@@ -157,33 +96,17 @@ exports[`Webex Meeting Control component snapshot matches with inactive icon but
     title=""
     type=""
   />
-</Button>
+</ContextTransform(Button)>
 `;
 
 exports[`Webex Meeting Control component snapshot matches with text button 1`] = `
-<Button
-  active={false}
+<ContextTransform(Button)
   ariaLabel="Join meeting"
-  ariaLabelledBy=""
-  circle={false}
-  className=""
   color="green"
-  containerLarge={false}
   disabled={false}
-  expand={false}
-  href=""
-  index={null}
-  isButtonGroup={false}
-  label=""
-  large={false}
-  loading={false}
   onClick={[Function]}
-  removeStyle={false}
   size={52}
-  style={Object {}}
-  tag="button"
-  type="button"
 >
   Join meeting
-</Button>
+</ContextTransform(Button)>
 `;
