@@ -30,7 +30,7 @@ aimed at react developers that want to embed the components into their applicati
 ## Install
 
 ```bash
-npm install --save @webex/components
+npm install --save @webex/components rxjs
 ```
 
 ## Usage
