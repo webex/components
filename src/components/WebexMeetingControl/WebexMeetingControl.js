@@ -9,7 +9,7 @@ import {useMeetingControl} from '../hooks';
  * WebexMeetingControl component represents an action that can
  * be taken in a meeting.
  *
- * @param {object} props
+ * @param {string} props.type  Name of the control as defined in adapter
  * @returns {object} JSX of the component
  */
 export default function WebexMeetingControl({type}) {
