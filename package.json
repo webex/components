@@ -82,6 +82,7 @@
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-scss": "^1.0.2",
+    "rxjs": "^6.5.4",
     "sass-loader": "^7.1.0",
     "sass-resources-loader": "^2.0.1",
     "semantic-release": "^15.13.19",
