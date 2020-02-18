@@ -1,3 +1,10 @@
+## [1.35.2](https://github.com/webex/components/compare/v1.35.1...v1.35.2) (2020-02-18)
+
+
+### Bug Fixes
+
+* **package:** update Momentum UI to v23.2.1 ([4c40717](https://github.com/webex/components/commit/4c4071730e9acc44c278f2424b6607f160c44d96))
+
 ## [1.35.1](https://github.com/webex/components/compare/v1.35.0...v1.35.1) (2020-02-18)
 
 
