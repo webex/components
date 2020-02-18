@@ -1,3 +1,10 @@
+## [1.35.1](https://github.com/webex/components/compare/v1.35.0...v1.35.1) (2020-02-18)
+
+
+### Bug Fixes
+
+* **Index:** json adapters should not be part of the bundle ([d234185](https://github.com/webex/components/commit/d234185f6be1dad3e456f97d267d3b9c8877b187))
+
 # [1.35.0](https://github.com/webex/components/compare/v1.34.0...v1.35.0) (2020-01-30)
 
 
