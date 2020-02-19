@@ -3,15 +3,29 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+  min-height: 7.5rem; // Matches avatar's tallest height since transforms are just visual
   width: 100%;
-}
+  background: white;
 
-.local-media video {
-  width: 100%;
-  height: 100%;
-}
+  video {
+    width: 100%;
+    height: 100%;
+  }
 
-.local-media .md-avatar {
-  width: 6.25rem !important;
-  height: 6.25rem !important;
+  .md-avatar {
+    transform: scale(2); // Avatar is 40x40px, this makes it 80x80px
+    transform-origin: center center;
+  }
+
+  &-large {
+    .md-avatar {
+      transform: scale(3); // Avatar is 40x40px, this makes it 120x120px
+    }
+  }
+
+  @include media('>phone') {
+    .md-avatar {
+      transform: scale(3); // Avatar is 40x40px, this makes it 120x120px
+    }
+  }
 }

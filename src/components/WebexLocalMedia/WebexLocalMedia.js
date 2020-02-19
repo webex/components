@@ -8,10 +8,10 @@ import {useMe, useMeeting, useStream} from '../hooks';
 import './WebexLocalMedia.scss';
 
 /**
- * Webex Local Media component displays the user's local video
+ * Webex Local Media component displays the user's local video.
  *
- * @param {object} props
- * @returns {object} JSX of the component
+ * @param {string} props.meetingID  ID of the meeting from which to obtain local media
+ * @returns {Object} JSX of the component
  */
 export default function WebexLocalMedia({meetingID}) {
   const {localVideo} = useMeeting(meetingID);

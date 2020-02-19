@@ -16,13 +16,13 @@ To see all the different possible states of the Webex Local Media component, you
 
 ## Embed
 
-1.  Create a component adapter from which the data will be retrieved (See [adapters](../../adapters)). For instance:
+1. Create a component adapter from which the data will be retrieved (See [adapters](../../adapters)). For instance:
 
     ```js
     const jsonAdapter = new WebexJSONAdapter(jsonData);
     ```
 
-2.  Create a component instance by passing the person ID as a string and
+2. Create a component instance by passing the person ID as a string and
     enclose it within [a data provider](../WebexDataProvider/WebexDataProvider.js)
     that takes the [component data adapter](../../adapters/WebexJSONAdapter.js) that we created previously
 
