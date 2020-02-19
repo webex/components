@@ -13,7 +13,7 @@ describe('Webex Local Media component', () => {
     });
 
     test('matches snapshot of disabled local video', () => {
-      expect(shallow(<WebexLocalMedia meetingID="scheduledMeeting" />)).toMatchSnapshot();
+      expect(shallow(<WebexLocalMedia meetingID="noMedia" />)).toMatchSnapshot();
     });
   });
 });
