@@ -2,6 +2,16 @@
   "loadingMeeting": {
     "ID": null
   },
+  "noMedia": {
+    "ID": "noMedia",
+    "title": "Meeting with no Media",
+    "localVideo": null,
+    "remoteVideo": null,
+    "localAudio": null,
+    "remoteAudio": null,
+    "localShare": null,
+    "remoteShare": null
+  },
   "scheduledMeeting": {
     "ID": "scheduledMeeting",
     "title": "Our Scheduled Meeting",
