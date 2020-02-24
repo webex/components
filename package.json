@@ -32,6 +32,7 @@
     "rxjs": "^6.5.4"
   },
   "dependencies": {
+    "@juggle/resize-observer": "^3.0.2",
     "@momentum-ui/react": "^23.2.1",
     "@webex/component-adapter-interfaces": "^1.9.0",
     "date-fns": "^2.6.0",
