@@ -11,8 +11,9 @@ import './WebexMeeting.css';
 /**
  * Webex Meeting component displays the default Webex meeting experience.
  *
- * @param {object} props
- * @returns {object} JSX of the component
+ * @param {string} props.meetingDestination  ID of the virtual meeting location
+ * @param {Array} [props.controls]  Array of control names to display
+ * @returns {Object} JSX of the component
  */
 export default function WebexMeeting({meetingDestination, controls}) {
   const {ID, remoteVideo} = useMeetingDestination(meetingDestination);
