@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import {Spinner} from '@momentum-ui/react';
 
 import {WebexAvatar} from '../';
-import {useMe, useMeeting, useStream} from '../hooks';
+import {useElementDimensions, useMe, useMeeting, useStream} from '../hooks';
 
 import './WebexLocalMedia.scss';
 
@@ -15,18 +15,24 @@ import './WebexLocalMedia.scss';
  * @returns {Object} JSX of the component
  */
 export default function WebexLocalMedia({meetingID}) {
+  const [mediaRef, {width}] = useElementDimensions();
   const {localVideo} = useMeeting(meetingID);
   const {ID} = useMe();
   const videoRef = useStream(localVideo);
 
   const cssClasses = classNames({
     'local-media': true,
+    'local-media-desktop': width >= 425, // Standard large phone width
     'no-media': localVideo === null,
   });
 
   const disabledVideo = ID ? <WebexAvatar personID={ID} displayStatus={false} /> : <Spinner />;
 
-  return <div className={cssClasses}>{localVideo ? <video ref={videoRef} playsInline autoPlay /> : disabledVideo}</div>;
+  return (
+    <div ref={mediaRef} className={cssClasses}>
+      {localVideo ? <video ref={videoRef} playsInline autoPlay /> : disabledVideo}
+    </div>
+  );
 }
 
 WebexLocalMedia.propTypes = {
