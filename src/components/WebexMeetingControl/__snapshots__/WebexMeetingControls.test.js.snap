@@ -5,7 +5,7 @@ exports[`Webex Meeting Controls component matches snapshot 1`] = `
   value="my-meeting"
 >
   <div
-    className="controls"
+    className="meeting-controls"
   >
     <div
       className="test"
