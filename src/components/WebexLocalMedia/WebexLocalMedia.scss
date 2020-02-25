@@ -5,6 +5,8 @@
 
   height: 100%;
   width: 100%;
+  min-height: 7.5rem; // Smallest height for local media is the tallest an avatar can get through transforms
+  min-width: 7.5rem; // Smallest width for local media is the widest an avatar can get through transforms
 
   background: black;
 
@@ -14,8 +16,14 @@
   }
 
   .md-avatar {
-    width: 6.25rem !important;
-    height: 6.25rem !important;
+    transform: scale(2); // Avatar is 40x40px, this makes it 80x80px
+    transform-origin: center center;
+  }
+
+  &-desktop {
+    .md-avatar {
+      transform: scale(3); // Avatar is 40x40px, this makes it 120x120px
+    }
   }
 }
 
