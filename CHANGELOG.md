@@ -1,3 +1,10 @@
+## [1.35.3](https://github.com/webex/components/compare/v1.35.2...v1.35.3) (2020-02-25)
+
+
+### Bug Fixes
+
+* **InMeeting:** add style fixes ([eda8e60](https://github.com/webex/components/commit/eda8e6034d44e97c8b6d3523b2966ae9378d9050))
+
 ## [1.35.2](https://github.com/webex/components/compare/v1.35.1...v1.35.2) (2020-02-18)
 
 
