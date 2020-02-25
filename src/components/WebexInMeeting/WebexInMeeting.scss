@@ -1,0 +1,29 @@
+$shadow-offset: 0.25rem;
+$shadow-blur: 1rem;
+$shadow-spread: -0.125rem;
+$shadow-color: rgba(0, 0, 0, 0.2);
+
+.in-meeting {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .remote-media {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .local-media {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+
+    width: 13.5rem;
+    height: 7.5rem;
+
+    box-shadow: $shadow-offset $shadow-offset $shadow-blur $shadow-spread $shadow-color;
+    border-radius: 0.25rem;
+    z-index: 1;
+  }
+}
