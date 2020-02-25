@@ -13,7 +13,7 @@ export const MeetingContext = React.createContext();
 export default function WebexMeetingControls({meetingID, children}) {
   return (
     <MeetingContext.Provider value={meetingID}>
-      <div className="controls">{children}</div>
+      <div className="meeting-controls">{children}</div>
     </MeetingContext.Provider>
   );
 }
