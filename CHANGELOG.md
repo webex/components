@@ -1,3 +1,17 @@
+# [1.36.0](https://github.com/webex/components/compare/v1.35.3...v1.36.0) (2020-02-26)
+
+
+### Bug Fixes
+
+* **LocalMedia:** add 'no-media' CSS class when video is disabled ([3aa112f](https://github.com/webex/components/commit/3aa112fb3dcff31a7a6e247f9a7fab2fb6724765))
+* **package:** add @juggle/resize-observer as Resize Observer pollyfil ([5b5deb4](https://github.com/webex/components/commit/5b5deb41ba04515192a88d23531b6ac1573cdced))
+
+
+### Features
+
+* **LocalMedia:** add ability to size avatar based on container width ([455952e](https://github.com/webex/components/commit/455952eea8d2c5276b7f2044e3cefe35390cb45b))
+* **hooks:** add useElementDimensions ([39f1c78](https://github.com/webex/components/commit/39f1c78ec78471934dc807523502e5dfa9537846))
+
 ## [1.35.3](https://github.com/webex/components/compare/v1.35.2...v1.35.3) (2020-02-25)
 
 
