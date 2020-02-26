@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+
+import {useElementDimensions} from '../hooks';
 
 import {WebexLocalMedia, WebexRemoteMedia} from '..';
 
@@ -13,8 +16,15 @@ import './WebexInMeeting.scss';
  * @returns {Object} JSX of the component
  */
 export default function WebexInMeeting({meetingID}) {
+  const [meetingRef, {width}] = useElementDimensions();
+  const cssClasses = classNames({
+    'in-meeting': true,
+    'in-meeting-tablet': width >= 768 && width < 1024, // Standard tablet size
+    'in-meeting-desktop': width >= 1024,
+  });
+
   return (
-    <div className="in-meeting">
+    <div ref={meetingRef} className={cssClasses}>
       <WebexRemoteMedia meetingID={meetingID} />
       <WebexLocalMedia meetingID={meetingID} />
     </div>

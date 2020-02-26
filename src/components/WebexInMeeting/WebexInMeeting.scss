@@ -5,25 +5,49 @@ $shadow-color: rgba(0, 0, 0, 0.2);
 
 .in-meeting {
   position: relative;
-  width: 100%;
   height: 100%;
+  width: 100%;
+
+  background: black;
 
   .remote-media {
     position: relative;
-    width: 100%;
     height: 100%;
+    width: 100%;
   }
 
   .local-media {
     position: absolute;
-    bottom: 2rem;
-    right: 2rem;
+    top: 1rem;
+    bottom: auto;
+    right: 1rem;
 
-    width: 13.5rem;
     height: 7.5rem;
+    width: 13.5rem;
+
+    // Because local-media has minimum sizing, scaling makes sure that
+    // all elements within are scaled properly
+    transform: scale(0.5);
+    transform-origin: top right;
 
     box-shadow: $shadow-offset $shadow-offset $shadow-blur $shadow-spread $shadow-color;
     border-radius: 0.25rem;
     z-index: 1;
+  }
+
+  &-tablet {
+    .local-media {
+      transform: scale(1); // Reset to original size
+    }
+  }
+
+  &-desktop {
+    .local-media {
+      top: auto;
+      bottom: 2rem;
+      right: 2rem;
+
+      transform: scale(1); // Reset to original size
+    }
   }
 }
