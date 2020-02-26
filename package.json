@@ -1,6 +1,6 @@
 {
   "name": "@webex/components",
-  "version": "1.35.3",
+  "version": "1.36.0",
   "main": "dist/webexComponents.cjs.js",
   "module": "dist/webexComponents.esm.js",
   "scripts": {
@@ -32,6 +32,7 @@
     "rxjs": "^6.5.4"
   },
   "dependencies": {
+    "@juggle/resize-observer": "^3.0.2",
     "@momentum-ui/react": "^23.2.1",
     "@webex/component-adapter-interfaces": "^1.9.0",
     "date-fns": "^2.6.0",
@@ -55,6 +56,7 @@
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "classnames": "^2.2.6",
     "conventional-changelog-angular": "^5.0.3",
     "css-loader": "^3.1.0",
     "enzyme": "^3.10.0",
@@ -83,7 +85,7 @@
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-scss": "^1.0.2",
     "rxjs": "^6.5.4",
-    "sass-loader": "^7.1.0",
+    "sass-loader": "^8.0.2",
     "sass-resources-loader": "^2.0.1",
     "semantic-release": "^15.13.19",
     "style-loader": "^0.23.1"

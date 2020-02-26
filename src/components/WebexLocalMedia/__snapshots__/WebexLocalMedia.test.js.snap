@@ -2,7 +2,7 @@
 
 exports[`Webex Local Media component snapshot matches snapshot of disabled local video 1`] = `
 <div
-  className="local-media"
+  className="local-media no-media"
 >
   <WebexAvatar
     displayStatus={false}
