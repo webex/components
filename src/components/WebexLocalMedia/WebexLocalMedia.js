@@ -5,6 +5,7 @@ import {Spinner} from '@momentum-ui/react';
 
 import {WebexAvatar} from '../';
 import {useElementDimensions, useMe, useMeeting, useStream} from '../hooks';
+import {PHONE_LARGE} from '../breakpoints';
 
 import './WebexLocalMedia.scss';
 
@@ -22,7 +23,7 @@ export default function WebexLocalMedia({meetingID}) {
 
   const cssClasses = classNames({
     'local-media': true,
-    'local-media-desktop': width >= 425, // Standard large phone width
+    'local-media-desktop': width >= PHONE_LARGE,
     'no-media': localVideo === null,
   });
 
