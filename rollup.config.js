@@ -21,11 +21,7 @@ const output = (name, format) => ({
 export default [
   {
     input: 'src/index.js',
-    output: [
-      output('WebexComponents', 'cjs'),
-      output('UMDWebexComponents', 'umd'),
-      output('ESMWebexComponents', 'esm'),
-    ],
+    output: [output('ESMWebexComponents', 'esm')],
     plugins: [
       resolve(),
       babel({runtimeHelpers: true}),
