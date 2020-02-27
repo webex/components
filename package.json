@@ -1,7 +1,7 @@
 {
   "name": "@webex/components",
   "version": "1.36.2",
-  "main": "dist/webexComponents.cjs.js",
+  "main": "dist/webexComponents.esm.js",
   "module": "dist/webexComponents.esm.js",
   "scripts": {
     "build": "rollup -c",
