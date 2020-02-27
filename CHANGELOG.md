@@ -1,3 +1,10 @@
+## [1.36.1](https://github.com/webex/components/compare/v1.36.0...v1.36.1) (2020-02-27)
+
+
+### Bug Fixes
+
+* **InMeeting:** add mobile-first styling ([4563b88](https://github.com/webex/components/commit/4563b885346f9f42bb5f4532bf888f7774614b62))
+
 # [1.36.0](https://github.com/webex/components/compare/v1.35.3...v1.36.0) (2020-02-26)
 
 
