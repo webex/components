@@ -8,7 +8,9 @@ Webex remote media component displays the remote stream of a meeting.
 
 ## Preview
 
-To see all the different possible states of the Webex Remote Media component, you can run our Storybook:
+To see all the different possible states of the Webex Remote Media component,
+you can view our [storybook](https://webex.github.io/components/storybook/?path=/story/webex-remote-media--video-only)
+or run the following **NPM** command:
 
 ```shell
   npm start
