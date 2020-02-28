@@ -27,13 +27,37 @@
 
   &-active  {
     .meeting-controls {
+      .md-button {
         display: none;
+      }
+
+      // Display active controls
+      .md-button--red {
+        display: block;
+
+        background-color: rgba($color: #A12C23, $alpha: 0.4);
+        border: solid 1px #D93829;
+        color: #D93829;
+
+        // Assumes "leave" is last child
+        &:last-child {
+          display: none;
+        }
+      }
     }
   }
 
   &-active:hover, &-active:active {
     .meeting-controls {
-        display: flex;
+      .md-button {
+        display: block;
+      }
+
+      .md-button--red {
+        background: #FF5C4A;
+        border-color: transparent;
+        color: #FFFFFF;
+      }
     }
   }
 }
