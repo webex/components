@@ -8,7 +8,9 @@ Webex activity stream component displays a list of activities of a room.
 
 ## Preview
 
-To see all the different possible states of the Webex Activity Stream component, you can run our Storybook:
+To see all the different possible states of the Webex Activity Stream component,
+you can view our [storybook](https://webex.github.io/components/storybook/?path=/story/webex-activity-stream--default)
+or run the following **NPM** command:
 
 ```shell
   npm start
