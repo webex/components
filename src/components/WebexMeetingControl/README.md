@@ -8,7 +8,9 @@ Webex Meeting Control component displays a button that allows for control over a
 
 ## Preview
 
-To see all the different possible states of the Webex Meeting Control component, you can run our Storybook:
+To see all the different possible states of the Webex Meeting Control component,
+you can view our [storybook](https://webex.github.io/components/?path=/story/webex-meeting-control--text)
+or run the following **NPM** command:
 
 ```shell
   npm start
