@@ -20,12 +20,17 @@ aimed at react developers that want to embed the components into their applicati
 
 ## Table of Contents
 
+- [Demo](#demo)
 - [Install](#install)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 - [Support](#support)
 - [Team](#team)
+
+## Demo
+
+We use [Storybook](https://storybook.js.org) to showcase all supported components. Our Storybook can be found at https://webex.github.io/components/storybook.
 
 ## Install
 
