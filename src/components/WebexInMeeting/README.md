@@ -8,7 +8,9 @@ Webex In-Meeting component displays the [Webex Local Media](../WebexLocalMedia) 
 
 ## Preview
 
-To see all the different possible states of the Webex Interstitial Meeting component, you can run our Storybook:
+To see all the different possible states of the Webex Interstitial Meeting component,
+you can view our [storybook](https://webex.github.io/components/storybook/?path=/story/webex-inmeeting--remote-and-local-media-enabled)
+or run the following **NPM** command:
 
 ```shell
   npm start
