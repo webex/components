@@ -8,7 +8,9 @@ Webex avatar component displays the avatar and status of a _Webex Teams_ user.
 
 ## Preview
 
-To see all the different possible states of the Webex Avatar component, you can run our Storybook:
+To see all the different possible states of the Webex Avatar component,
+you can view our [storybook](https://webex.github.io/components/storybook/?path=/story/webex-avatar--default)
+or run the following **NPM** command:
 
 ```shell
   npm start
