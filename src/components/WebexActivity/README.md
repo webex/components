@@ -8,7 +8,9 @@ Webex activity component displays the activity content.
 
 ## Preview
 
-To see all the different possible states of the Webex Activity component, you can run our Storybook:
+To see all the different possible states of the Webex Activity component,
+you can view our [storybook](https://webex.github.io/components/storybook/?path=/story/webex-activity--default)
+or run the following **NPM** command:
 
 ```shell
   npm start
