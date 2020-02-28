@@ -65,6 +65,26 @@ jobs:
       - run:
           name: Release
           command: npm run release
+  
+  storybook:
+    executor: main-executor
+    steps:
+      - checkout_from_workspace
+      - run:
+          name: Build Storybook
+          command: npm run storybook:ci
+      - run:
+          name: Publish Storybook
+          command: |
+            # Check if `./docs/storybook` files have changed.
+            if [ -n "$(git status ./docs/storybook --porcelain)" ]; then
+              echo "storybook build has changed";
+              git add ./docs/storybook/
+              git commit -m "docs(storybook): update storybook [skip ci]"
+              git push origin HEAD:master
+            else
+              echo "storybook build has not changed"
+            fi
 
 # execute the jobs in a orderly manner
 workflows:
@@ -83,6 +103,12 @@ workflows:
       - release:
           requires:
             - build
+          filters:
+            branches:
+              only: master
+      - storybook:
+          requires:
+            - release
           filters:
             branches:
               only: master
