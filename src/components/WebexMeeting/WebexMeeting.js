@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import {Spinner} from '@momentum-ui/react';
 
 import {useMeetingDestination} from '../hooks';
@@ -18,10 +19,16 @@ import './WebexMeeting.scss';
 export default function WebexMeeting({meetingDestination, controls}) {
   const {ID, remoteVideo} = useMeetingDestination(meetingDestination);
   const isActive = remoteVideo !== null;
+
+  const cssClasses = classNames({
+    meeting: true,
+    'meeting-active': ID && isActive,
+  });
+
   const meetingControls = controls(isActive).map((key) => <WebexMeetingControl key={key} type={key} />);
 
   return (
-    <div className="meeting">
+    <div className={cssClasses}>
       {ID ? (
         <Fragment>
           {isActive ? <WebexInMeeting meetingID={ID} /> : <WebexInterstitialMeeting meetingID={ID} />}
