@@ -1,0 +1,27 @@
+.meeting {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-height: 25rem;
+  min-width: 20rem; // Standard small phone width
+
+  .meeting-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom: 2rem;
+
+    z-index: 100; // Arbitrary large number
+
+    > * {
+      margin: 0.3125rem;
+    }
+  }
+}
