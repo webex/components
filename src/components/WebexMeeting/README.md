@@ -8,7 +8,9 @@ Webex Meeting component displays the complete, default Webex meeting experience.
 
 ## Preview
 
-To see all the different possible states of the Webex Meeting component, you can run our Storybook:
+To see all the different possible states of the Webex Meeting component,
+you can view our [storybook](https://webex.github.io/components/storybook/storybook/?path=/story/webex-meeting--in-session)
+or run the following **NPM** command:
 
 ```shell
   npm start
