@@ -8,7 +8,9 @@ Webex local media component displays the user local stream, if enabled. If user'
 
 ## Preview
 
-To see all the different possible states of the Webex Local Media component, you can run our Storybook:
+To see all the different possible states of the Webex Local Media component,
+you can view our [storybook](https://webex.github.io/components/storybook/?path=/story/webex-local-media--enabled)
+or run the following **NPM** command:
 
 ```shell
   npm start
