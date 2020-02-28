@@ -6,7 +6,7 @@ import {useMeetingDestination} from '../hooks';
 
 import {WebexInMeeting, WebexInterstitialMeeting, WebexMeetingControl, WebexMeetingControls} from '..';
 
-import './WebexMeeting.css';
+import './WebexMeeting.scss';
 
 /**
  * Webex Meeting component displays the default Webex meeting experience.
