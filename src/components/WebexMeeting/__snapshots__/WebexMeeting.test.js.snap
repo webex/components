@@ -2,7 +2,7 @@
 
 exports[`Webex Meeting component snapshot matches snapshot of a user that has joined a meeting 1`] = `
 <div
-  className="meeting"
+  className="meeting meeting-active"
 >
   <WebexInMeeting
     meetingID="remoteMedia"
@@ -28,7 +28,7 @@ exports[`Webex Meeting component snapshot matches snapshot of a user that has jo
 
 exports[`Webex Meeting component snapshot matches snapshot of a user that has joined a meeting with optional controls 1`] = `
 <div
-  className="meeting"
+  className="meeting meeting-active"
 >
   <WebexInMeeting
     meetingID="remoteMedia"

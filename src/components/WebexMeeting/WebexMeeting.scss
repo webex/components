@@ -24,4 +24,16 @@
       margin: 0.3125rem;
     }
   }
+
+  &-active  {
+    .meeting-controls {
+        display: none;
+    }
+  }
+
+  &-active:hover, &-active:active {
+    .meeting-controls {
+        display: flex;
+    }
+  }
 }
