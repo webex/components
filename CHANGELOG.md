@@ -1,3 +1,12 @@
+## [1.36.2](https://github.com/webex/components/compare/v1.36.1...v1.36.2) (2020-03-02)
+
+
+### Bug Fixes
+
+* **Meeting:** add meeting control CSS styles on hover ([a467c4d](https://github.com/webex/components/commit/a467c4d6fe38a32bb0b539b40229854cbc0e24ee))
+* **Meeting:** add mobile-friendly and other style fixes ([ec37845](https://github.com/webex/components/commit/ec37845a2994bb48335ff8e2135c130b8c91c0c0))
+* **Meetings:** hide/show meeting controls on hover ([ac54314](https://github.com/webex/components/commit/ac543147893345133aba0fbba8821cad6a3c8d69))
+
 ## [1.36.1](https://github.com/webex/components/compare/v1.36.0...v1.36.1) (2020-02-27)
 
 
