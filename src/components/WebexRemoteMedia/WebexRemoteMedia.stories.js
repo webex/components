@@ -10,6 +10,14 @@ const stories = storiesOf('Webex Remote Media', module);
 const webexAdapter = new WebexJSONAdapter(jsonData);
 const wrapperStyle = {height: '500px', width: '800px', border: '1px solid black'};
 
+stories.add('loading', () => (
+  <div style={wrapperStyle}>
+    <WebexDataProvider adapter={webexAdapter}>
+      <WebexRemoteMedia meetingID="noMedia" />
+    </WebexDataProvider>
+  </div>
+));
+
 stories.add('video only', () => (
   <div style={wrapperStyle}>
     <WebexDataProvider adapter={webexAdapter}>

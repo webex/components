@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Badge, Spinner} from '@momentum-ui/react';
 
 import {useMeeting, useStream} from '../hooks';
 
@@ -17,9 +18,16 @@ export default function WebexRemoteMedia({meetingID}) {
   const {remoteAudio, remoteVideo} = useMeeting(meetingID);
   const audioRef = useStream(remoteAudio);
   const videoRef = useStream(remoteVideo);
+  const hasMedia = !!(remoteAudio || remoteVideo);
 
   return (
     <div className="remote-media">
+      {!hasMedia ? (
+        <Badge rounded>
+          <Spinner size={16} />
+          <div>Connecting</div>
+        </Badge>
+      ) : null}
       {remoteVideo ? <video ref={videoRef} playsInline autoPlay /> : null}
       {remoteAudio ? <audio ref={audioRef} autoPlay /> : null}
     </div>
