@@ -34,3 +34,26 @@ exports[`Webex Remote Media component snapshot matches snapshot of enabled remot
   />
 </div>
 `;
+
+exports[`Webex Remote Media component snapshot matches snapshot while loading 1`] = `
+<div
+  className="remote-media"
+>
+  <Badge
+    className=""
+    rounded={true}
+  >
+    <Spinner
+      className=""
+      color="black"
+      percentage={null}
+      showCheck={false}
+      showPercentage={false}
+      size={16}
+    />
+    <div>
+      Connecting
+    </div>
+  </Badge>
+</div>
+`;

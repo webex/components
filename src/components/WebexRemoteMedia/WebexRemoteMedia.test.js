@@ -7,6 +7,9 @@ jest.mock('../hooks/useStream');
 
 describe('Webex Remote Media component', () => {
   describe('snapshot', () => {
+    test('matches snapshot while loading', () => {
+      expect(shallow(<WebexRemoteMedia meetingID="noMedia" />)).toMatchSnapshot();
+    });
     test('matches snapshot of disabled remote audio', () => {
       expect(shallow(<WebexRemoteMedia meetingID="remoteVideo" />)).toMatchSnapshot();
     });

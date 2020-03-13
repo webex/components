@@ -4,9 +4,18 @@
   align-items: center;
   height: 100%;
   width: 100%;
-}
 
-.remote-media video {
-  width: 100%;
-  height: 100%;
+  .md-badge {
+    margin: auto;
+    padding: 0.4rem;
+
+    div {
+      margin-left: 0.4rem;
+    }
+  }
+
+  video {
+    height: 100%;
+    width: 100%;
+  }
 }
