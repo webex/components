@@ -1,3 +1,10 @@
+# [1.37.0](https://github.com/webex/components/compare/v1.36.2...v1.37.0) (2020-03-16)
+
+
+### Features
+
+* **RemoteMedia:** add loading media state ([a907915](https://github.com/webex/components/commit/a90791592146b61f2f1d4eac3620954d717af37e))
+
 ## [1.36.2](https://github.com/webex/components/compare/v1.36.1...v1.36.2) (2020-03-02)
 
 
