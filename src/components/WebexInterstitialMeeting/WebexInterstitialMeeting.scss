@@ -1,0 +1,19 @@
+@import '../../styles/variables';
+
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-interstitial-meeting {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  .meeting-info {
+    position: absolute;
+    align-self: flex-start;
+    width: 100%;
+    height: 25%;
+
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
