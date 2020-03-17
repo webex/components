@@ -2,7 +2,7 @@
 
 exports[`Webex Meeting Info component snapshot matches snapshot of loading 1`] = `
 <div
-  className="meeting-info"
+  className="wxc-meeting-info"
 >
   <Spinner
     className=""
@@ -17,7 +17,7 @@ exports[`Webex Meeting Info component snapshot matches snapshot of loading 1`] =
 
 exports[`Webex Meeting Info component snapshot matches snapshot of no meeting title 1`] = `
 <div
-  className="meeting-info"
+  className="wxc-meeting-info"
 >
   <h2>
     No Meeting Information
@@ -27,7 +27,7 @@ exports[`Webex Meeting Info component snapshot matches snapshot of no meeting ti
 
 exports[`Webex Meeting Info component snapshot matches snapshot of one on one meeting 1`] = `
 <div
-  className="meeting-info"
+  className="wxc-meeting-info"
 >
   <h2>
     Jackie Tester's Personal Room
@@ -37,7 +37,7 @@ exports[`Webex Meeting Info component snapshot matches snapshot of one on one me
 
 exports[`Webex Meeting Info component snapshot matches snapshot of scheduled meeting 1`] = `
 <div
-  className="meeting-info"
+  className="wxc-meeting-info"
 >
   <h2>
     Our Scheduled Meeting
@@ -47,7 +47,7 @@ exports[`Webex Meeting Info component snapshot matches snapshot of scheduled mee
 
 exports[`Webex Meeting Info component snapshot matches snapshot of space meeting 1`] = `
 <div
-  className="meeting-info"
+  className="wxc-meeting-info"
 >
   <h2>
     Ad Hoc Meeting Space
