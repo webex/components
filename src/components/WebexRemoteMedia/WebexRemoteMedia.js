@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Badge, Spinner} from '@momentum-ui/react';
 
+import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import {useMeeting, useStream} from '../hooks';
 
 import './WebexRemoteMedia.scss';
@@ -21,7 +22,7 @@ export default function WebexRemoteMedia({meetingID}) {
   const hasMedia = !!(remoteAudio || remoteVideo);
 
   return (
-    <div className="remote-media">
+    <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-remote-media`}>
       {!hasMedia ? (
         <Badge rounded>
           <Spinner size={16} />
