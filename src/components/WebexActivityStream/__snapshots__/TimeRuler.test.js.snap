@@ -2,7 +2,7 @@
 
 exports[`Time Ruler component snapshot matches with older than a week time 1`] = `
 <ListSeparator
-  className="time-ruler"
+  className="wxc-time-ruler"
   lineColor={null}
   margin={null}
   role="listitem"
@@ -14,7 +14,7 @@ exports[`Time Ruler component snapshot matches with older than a week time 1`] =
 
 exports[`Time Ruler component snapshot matches with time from this week 1`] = `
 <ListSeparator
-  className="time-ruler"
+  className="wxc-time-ruler"
   lineColor={null}
   margin={null}
   role="listitem"
@@ -26,7 +26,7 @@ exports[`Time Ruler component snapshot matches with time from this week 1`] = `
 
 exports[`Time Ruler component snapshot matches with time from today 1`] = `
 <ListSeparator
-  className="time-ruler"
+  className="wxc-time-ruler"
   lineColor={null}
   margin={null}
   role="listitem"
@@ -38,7 +38,7 @@ exports[`Time Ruler component snapshot matches with time from today 1`] = `
 
 exports[`Time Ruler component snapshot matches with time from yesterday 1`] = `
 <ListSeparator
-  className="time-ruler"
+  className="wxc-time-ruler"
   lineColor={null}
   margin={null}
   role="listitem"
