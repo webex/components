@@ -1,4 +1,6 @@
-.meeting {
+@import '../../styles/variables';
+
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting {
   display: flex;
   flex-direction: column;
   justify-content: center;

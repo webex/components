@@ -2,7 +2,7 @@
 
 exports[`Webex Meeting component snapshot matches snapshot of a user that has joined a meeting 1`] = `
 <div
-  className="meeting meeting-active"
+  className="wxc-meeting wxc-meeting-active"
 >
   <WebexInMeeting
     meetingID="remoteMedia"
@@ -28,7 +28,7 @@ exports[`Webex Meeting component snapshot matches snapshot of a user that has jo
 
 exports[`Webex Meeting component snapshot matches snapshot of a user that has joined a meeting with optional controls 1`] = `
 <div
-  className="meeting meeting-active"
+  className="wxc-meeting wxc-meeting-active"
 >
   <WebexInMeeting
     meetingID="remoteMedia"
@@ -46,7 +46,7 @@ exports[`Webex Meeting component snapshot matches snapshot of a user that has jo
 
 exports[`Webex Meeting component snapshot matches snapshot of a user waiting to join a meeting 1`] = `
 <div
-  className="meeting"
+  className="wxc-meeting"
 >
   <WebexInterstitialMeeting
     meetingID="localMedia"
@@ -72,7 +72,7 @@ exports[`Webex Meeting component snapshot matches snapshot of a user waiting to 
 
 exports[`Webex Meeting component snapshot matches snapshot of a user waiting to join a meeting with optional controls 1`] = `
 <div
-  className="meeting"
+  className="wxc-meeting"
 >
   <WebexInterstitialMeeting
     meetingID="localMedia"
@@ -90,7 +90,7 @@ exports[`Webex Meeting component snapshot matches snapshot of a user waiting to 
 
 exports[`Webex Meeting component snapshot matches snapshot of loading while meeting is created 1`] = `
 <div
-  className="meeting"
+  className="wxc-meeting"
 >
   <Spinner
     className=""
