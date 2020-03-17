@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {Spinner} from '@momentum-ui/react';
 
+import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import {useMeetingDestination} from '../hooks';
 
 import {WebexInMeeting, WebexInterstitialMeeting, WebexMeetingControl, WebexMeetingControls} from '..';
@@ -20,10 +21,13 @@ export default function WebexMeeting({meetingDestination, controls}) {
   const {ID, remoteVideo} = useMeetingDestination(meetingDestination);
   const isActive = remoteVideo !== null;
 
-  const cssClasses = classNames({
-    meeting: true,
-    'meeting-active': ID && isActive,
-  });
+  const classBaseName = 'meeting';
+  const classObjects = {};
+
+  classObjects[`${WEBEX_COMPONENTS_CLASS_PREFIX}-${classBaseName}`] = true;
+  classObjects[`${WEBEX_COMPONENTS_CLASS_PREFIX}-${classBaseName}-active`] = ID && isActive;
+
+  const cssClasses = classNames(classObjects);
 
   const meetingControls = controls(isActive).map((key) => <WebexMeetingControl key={key} type={key} />);
 
