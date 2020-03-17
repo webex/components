@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {format} from 'date-fns';
 import {Spinner} from '@momentum-ui/react';
 
+import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import {useMeeting} from '../hooks';
 
 import './WebexMeetingInfo.scss';
@@ -52,7 +53,7 @@ export default function WebexMeetingInfo({meetingID}) {
     );
   }
 
-  return <div className="meeting-info">{infoComponent}</div>;
+  return <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-info`}>{infoComponent}</div>;
 }
 
 WebexMeetingInfo.propTypes = {
