@@ -1,4 +1,6 @@
-.remote-media {
+@import '../../styles/variables';
+
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-media {
   display: flex;
   justify-content: center;
   align-items: center;

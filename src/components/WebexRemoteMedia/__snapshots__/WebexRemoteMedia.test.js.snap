@@ -2,7 +2,7 @@
 
 exports[`Webex Remote Media component snapshot matches snapshot of disabled remote audio 1`] = `
 <div
-  className="remote-media"
+  className="wxc-remote-media"
 >
   <video
     autoPlay={true}
@@ -13,7 +13,7 @@ exports[`Webex Remote Media component snapshot matches snapshot of disabled remo
 
 exports[`Webex Remote Media component snapshot matches snapshot of disabled remote video 1`] = `
 <div
-  className="remote-media"
+  className="wxc-remote-media"
 >
   <audio
     autoPlay={true}
@@ -23,7 +23,7 @@ exports[`Webex Remote Media component snapshot matches snapshot of disabled remo
 
 exports[`Webex Remote Media component snapshot matches snapshot of enabled remote audio & video 1`] = `
 <div
-  className="remote-media"
+  className="wxc-remote-media"
 >
   <video
     autoPlay={true}
@@ -37,7 +37,7 @@ exports[`Webex Remote Media component snapshot matches snapshot of enabled remot
 
 exports[`Webex Remote Media component snapshot matches snapshot while loading 1`] = `
 <div
-  className="remote-media"
+  className="wxc-remote-media"
 >
   <Badge
     className=""
