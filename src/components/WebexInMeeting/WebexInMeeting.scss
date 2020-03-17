@@ -1,9 +1,11 @@
+@import '../../styles/variables';
+
 $shadow-offset: 0.25rem;
 $shadow-blur: 1rem;
 $shadow-spread: -0.125rem;
 $shadow-color: rgba(0, 0, 0, 0.2);
 
-.in-meeting {
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-in-meeting {
   position: relative;
   height: 100%;
   width: 100%;

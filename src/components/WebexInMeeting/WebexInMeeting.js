@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import {WebexLocalMedia, WebexRemoteMedia} from '../';
 import {useElementDimensions} from '../hooks';
 import {TABLET, DESKTOP} from '../breakpoints';
@@ -17,11 +18,14 @@ import './WebexInMeeting.scss';
  */
 export default function WebexInMeeting({meetingID}) {
   const [meetingRef, {width}] = useElementDimensions();
-  const cssClasses = classNames({
-    'in-meeting': true,
-    'in-meeting-tablet': width >= TABLET && width < DESKTOP,
-    'in-meeting-desktop': width >= DESKTOP,
-  });
+  const classBaseName = 'in-meeting';
+  const classObjects = {};
+
+  classObjects[`${WEBEX_COMPONENTS_CLASS_PREFIX}-${classBaseName}`] = true;
+  classObjects[`${WEBEX_COMPONENTS_CLASS_PREFIX}-${classBaseName}-tablet`] = width >= TABLET && width < DESKTOP;
+  classObjects[`${WEBEX_COMPONENTS_CLASS_PREFIX}-${classBaseName}-desktop`] = width >= DESKTOP;
+
+  const cssClasses = classNames(classObjects);
 
   return (
     <div ref={meetingRef} className={cssClasses}>
