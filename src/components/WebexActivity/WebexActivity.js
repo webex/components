@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import {useActivity} from '../hooks';
 
 import ActivityHeader from './ActivityHeader';
@@ -17,7 +18,7 @@ export default function WebexActivity({activityID}) {
   const header = displayHeader ? <ActivityHeader personID={personID} timestamp={created} /> : null;
 
   return (
-    <div className="activity" key={ID}>
+    <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-activity`} key={ID}>
       {header}
       <div className="activity-content">{text}</div>
     </div>

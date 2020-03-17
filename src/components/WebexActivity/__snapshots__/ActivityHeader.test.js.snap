@@ -2,7 +2,7 @@
 
 exports[`Activity Header component snapshot matches header at 3:00 PM 1`] = `
 <div
-  className="activity-header"
+  className="wxc-activity-header"
 >
   <WebexAvatar
     displayStatus={true}

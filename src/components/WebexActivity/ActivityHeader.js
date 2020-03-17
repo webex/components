@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {format, isToday, isSameWeek, isYesterday} from 'date-fns';
 
+import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import WebexAvatar from '../WebexAvatar/WebexAvatar';
 import {usePerson} from '../hooks';
 
@@ -45,7 +46,7 @@ export default function ActivityHeader({personID, timestamp}) {
   const {displayName} = usePerson(personID);
 
   return (
-    <div className="activity-header">
+    <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-activity-header`}>
       <WebexAvatar personID={personID} />
       <div className="activity-author">
         <span>{displayName}</span>

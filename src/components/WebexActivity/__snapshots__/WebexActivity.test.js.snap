@@ -2,7 +2,7 @@
 
 exports[`Webex Activity component snapshot matches snapshot with "default" text 1`] = `
 <div
-  className="activity"
+  className="wxc-activity"
   key="default"
 >
   <ActivityHeader
@@ -19,7 +19,7 @@ exports[`Webex Activity component snapshot matches snapshot with "default" text 
 
 exports[`Webex Activity component snapshot matches snapshot with "long" text 1`] = `
 <div
-  className="activity"
+  className="wxc-activity"
   key="long"
 >
   <ActivityHeader
@@ -36,7 +36,7 @@ exports[`Webex Activity component snapshot matches snapshot with "long" text 1`]
 
 exports[`Webex Activity component snapshot matches snapshot with a text from the same week 1`] = `
 <div
-  className="activity"
+  className="wxc-activity"
   key="sameWeek"
 >
   <ActivityHeader
@@ -53,7 +53,7 @@ exports[`Webex Activity component snapshot matches snapshot with a text from the
 
 exports[`Webex Activity component snapshot matches snapshot with a text from today 1`] = `
 <div
-  className="activity"
+  className="wxc-activity"
   key="today"
 >
   <ActivityHeader
@@ -70,7 +70,7 @@ exports[`Webex Activity component snapshot matches snapshot with a text from tod
 
 exports[`Webex Activity component snapshot matches snapshot with a text from yesterday 1`] = `
 <div
-  className="activity"
+  className="wxc-activity"
   key="yesterday"
 >
   <ActivityHeader
@@ -87,7 +87,7 @@ exports[`Webex Activity component snapshot matches snapshot with a text from yes
 
 exports[`Webex Activity component snapshot matches snapshot with a text over a week ago 1`] = `
 <div
-  className="activity"
+  className="wxc-activity"
   key="old"
 >
   <ActivityHeader
@@ -104,7 +104,7 @@ exports[`Webex Activity component snapshot matches snapshot with a text over a w
 
 exports[`Webex Activity component snapshot matches snapshot with an activity without header 1`] = `
 <div
-  className="activity"
+  className="wxc-activity"
   key="no-header"
 >
   <div

@@ -1,6 +1,8 @@
+@import '../../styles/variables';
+
 $content-left-margin: 3.5rem; //avatar width + margin
 
-.activity-header {
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-activity-header {
   display: flex;
   flex-direction: column;
   position: relative;
