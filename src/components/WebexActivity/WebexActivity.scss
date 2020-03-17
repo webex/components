@@ -1,5 +1,8 @@
+@import '../../styles/variables';
+
 $content-left-margin: 3.5rem; //avatar width + margin
-.activity {
+
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-activity {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -18,3 +21,4 @@ $content-left-margin: 3.5rem; //avatar width + margin
     white-space: pre-wrap;
   }
 }
+
