@@ -2,12 +2,15 @@ import React, {Fragment, useRef} from 'react';
 import PropTypes from 'prop-types';
 import {RoomType} from '@webex/component-adapter-interfaces';
 
+import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import {useActivityStream, useActivityScroll, useOverflowActivities, useRoom} from '../hooks';
 import {PREPEND_ACTIVITIES} from '../hooks/useActivityStream';
 import WebexActivity from '../WebexActivity/WebexActivity';
 
 import Greeting from './Greeting';
 import TimeRuler from './TimeRuler';
+
+import './WebexActivityStream.scss';
 
 /**
  * Webex Activity Stream component displays all activities that
@@ -42,8 +45,8 @@ export default function WebexActivityStream({roomID}) {
   });
 
   return (
-    <div className="activity-stream" ref={activityStreamRef}>
-      {showLoader && <div className="activity-stream-loader" />}
+    <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-activity-stream`} ref={activityStreamRef}>
+      {showLoader && <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-activity-stream-loader`} />}
       {activities.length ? <Fragment>{activities}</Fragment> : <Greeting personName={personName} />}
       <div className="last-activity" ref={lastActivityRef} />
     </div>

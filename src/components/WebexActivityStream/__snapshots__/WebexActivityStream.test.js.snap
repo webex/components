@@ -2,7 +2,7 @@
 
 exports[`Webex Activity Stream component snapshot matches with default stream 1`] = `
 <div
-  className="activity-stream"
+  className="wxc-activity-stream"
 >
   <WebexActivity
     activityID="default"
@@ -24,7 +24,7 @@ exports[`Webex Activity Stream component snapshot matches with default stream 1`
 
 exports[`Webex Activity Stream component snapshot matches with empty direct stream 1`] = `
 <div
-  className="activity-stream"
+  className="wxc-activity-stream"
 >
   <Greeting
     personName="Webex Component User"
@@ -37,7 +37,7 @@ exports[`Webex Activity Stream component snapshot matches with empty direct stre
 
 exports[`Webex Activity Stream component snapshot matches with empty group stream 1`] = `
 <div
-  className="activity-stream"
+  className="wxc-activity-stream"
 >
   <Greeting
     personName=""
@@ -50,7 +50,7 @@ exports[`Webex Activity Stream component snapshot matches with empty group strea
 
 exports[`Webex Activity Stream component snapshot matches with time rulers stream 1`] = `
 <div
-  className="activity-stream"
+  className="wxc-activity-stream"
 >
   <TimeRuler
     date="2019-08-20T21:00:07.047Z"

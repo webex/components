@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import './Greeting.scss';
 
 /**
@@ -137,7 +138,7 @@ export default function Greeting({personName}) {
   }
 
   return (
-    <div className="greeting">
+    <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-greeting`}>
       <div className="greeting-header">
         {svg}
         <div className="greeting-description">{description}</div>

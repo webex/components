@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {ListSeparator} from '@momentum-ui/react';
 import {format, isSameWeek, isToday, isYesterday} from 'date-fns';
 
+import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import './TimeRuler.scss';
 
 /**
@@ -45,7 +46,7 @@ export function formatTimeRulerText(timestamp) {
 export default function TimeRuler({date}) {
   const text = formatTimeRulerText(new Date(date));
 
-  return <ListSeparator className="time-ruler" role="listitem" text={text} />;
+  return <ListSeparator className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-time-ruler`} role="listitem" text={text} />;
 }
 
 TimeRuler.propTypes = {
