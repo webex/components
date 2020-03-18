@@ -1,3 +1,19 @@
+# [1.38.0](https://github.com/webex/components/compare/v1.37.0...v1.38.0) (2020-03-18)
+
+
+### Features
+
+* **constants:** add prefix constant ([9cc434d](https://github.com/webex/components/commit/9cc434d761ee6d3cd00e8630acd0d72d14630ca9))
+* **styles:** add prefix variable ([e61ec05](https://github.com/webex/components/commit/e61ec050e3448d0a2d8415d7ff23bfbac1839a26))
+* **WebexActivity:** use class prefix ([7f8f920](https://github.com/webex/components/commit/7f8f9207c0d78842b5c7a5f4d82473c68e39d7a2))
+* **WebexActivityStream:** use class prefix ([44a5364](https://github.com/webex/components/commit/44a5364ec9e824d46acba066c2ac0d742a5357a5))
+* **WebexInMeeting:** use class prefix ([55dbec7](https://github.com/webex/components/commit/55dbec75ff78a9b313ff997a3bb142331a3f4e42))
+* **WebexInterstitialMeeting:** use class prefix ([a539699](https://github.com/webex/components/commit/a539699759af70929e0b92fbda7e45273fd1bf30))
+* **WebexLocalMedia:** use class prefix ([fe6547e](https://github.com/webex/components/commit/fe6547e132387df162efa863fa3845cc529452c8))
+* **WebexMeeting:** use class prefix ([210cae8](https://github.com/webex/components/commit/210cae8b38b7f759efa275a7f8737d1ff6a569bb))
+* **WebexMeetingInfo:** use class prefix ([6e70df5](https://github.com/webex/components/commit/6e70df58221c9c4d721fd4adc1b3b568e8765a72))
+* **WebexRemoteMedia:** use class prefix ([46f585f](https://github.com/webex/components/commit/46f585fa502ed436399ec391e5ec006e954ae190))
+
 # [1.37.0](https://github.com/webex/components/compare/v1.36.2...v1.37.0) (2020-03-16)
 
 
