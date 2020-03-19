@@ -20,9 +20,11 @@ exports[`Webex Interstitial Meeting component snapshot matches snapshot of meeti
   className="wxc-interstitial-meeting"
 >
   <WebexMeetingInfo
+    className="interstitial-meeting-info"
     meetingID="localMedia"
   />
   <WebexLocalMedia
+    className=""
     meetingID="localMedia"
   />
 </div>

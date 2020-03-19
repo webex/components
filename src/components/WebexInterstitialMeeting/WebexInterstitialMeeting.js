@@ -20,7 +20,7 @@ export default function WebexInterstitialMeeting({meetingID}) {
     <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-interstitial-meeting`}>
       {meetingID ? (
         <React.Fragment>
-          <WebexMeetingInfo meetingID={meetingID} />
+          <WebexMeetingInfo className="interstitial-meeting-info" meetingID={meetingID} />
           <WebexLocalMedia meetingID={meetingID} />
         </React.Fragment>
       ) : (
