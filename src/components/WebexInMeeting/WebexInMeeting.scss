@@ -12,13 +12,13 @@ $shadow-color: rgba(0, 0, 0, 0.2);
 
   background: black;
 
-  .remote-media {
+  .remote-media-in-meeting {
     position: relative;
     height: 100%;
     width: 100%;
   }
 
-  .local-media {
+  .local-media-in-meeting {
     position: absolute;
     top: 1rem;
     bottom: auto;
