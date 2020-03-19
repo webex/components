@@ -41,3 +41,11 @@ stories.add('video and audio', () => (
     </WebexDataProvider>
   </div>
 ));
+
+stories.add('error', () => (
+  <div style={wrapperStyle}>
+    <WebexDataProvider adapter={webexAdapter}>
+      <WebexRemoteMedia meetingID="failMeetingID" />
+    </WebexDataProvider>
+  </div>
+));

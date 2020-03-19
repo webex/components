@@ -21,5 +21,9 @@ describe('Webex Remote Media component', () => {
     test('matches snapshot of enabled remote audio & video', () => {
       expect(shallow(<WebexRemoteMedia meetingID="remoteAudio&Video" />)).toMatchSnapshot();
     });
+
+    test('matches snapshot on error', () => {
+      expect(shallow(<WebexRemoteMedia meetingID="failMeetingID" />)).toMatchSnapshot();
+    });
   });
 });

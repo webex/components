@@ -2,6 +2,10 @@
   "loadingMeeting": {
     "ID": null
   },
+  "failMeetingID": {
+    "ID": null,
+    "error": true
+  },
   "noMedia": {
     "ID": "noMedia",
     "title": "Meeting with no Media",
