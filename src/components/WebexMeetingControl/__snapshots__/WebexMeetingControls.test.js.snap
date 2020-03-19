@@ -5,7 +5,21 @@ exports[`Webex Meeting Controls component matches snapshot 1`] = `
   value="my-meeting"
 >
   <div
-    className="meeting-controls"
+    className="wxc-meeting-controls"
+  >
+    <div
+      className="test"
+    />
+  </div>
+</ContextProvider>
+`;
+
+exports[`Webex Meeting Controls component matches snapshot with custom CSS class 1`] = `
+<ContextProvider
+  value="my-meeting"
+>
+  <div
+    className="wxc-meeting-controls my-custom-class"
   >
     <div
       className="test"

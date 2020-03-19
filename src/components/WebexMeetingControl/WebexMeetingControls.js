@@ -1,5 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+
+import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
+
+import './WebexMeetingControls.scss';
 
 export const MeetingContext = React.createContext();
 
@@ -10,15 +15,25 @@ export const MeetingContext = React.createContext();
  * @param {object} props
  * @returns {object} JSX of the component
  */
-export default function WebexMeetingControls({meetingID, children}) {
+export default function WebexMeetingControls({children, className, meetingID}) {
+  const mainClasses = {
+    [`${WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-controls`]: true,
+    [className]: !!className,
+  };
+
   return (
     <MeetingContext.Provider value={meetingID}>
-      <div className="meeting-controls">{children}</div>
+      <div className={classNames(mainClasses)}>{children}</div>
     </MeetingContext.Provider>
   );
 }
 
 WebexMeetingControls.propTypes = {
-  meetingID: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  meetingID: PropTypes.string.isRequired,
+};
+
+WebexMeetingControls.defaultProps = {
+  className: '',
 };

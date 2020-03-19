@@ -4,9 +4,18 @@ import WebexMeetingControls from './WebexMeetingControls';
 
 describe('Webex Meeting Controls component', () => {
   test('matches snapshot', () => {
-    const meetingID = 'my-meeting';
     const component = shallow(
-      <WebexMeetingControls meetingID={meetingID}>
+      <WebexMeetingControls meetingID="my-meeting">
+        <div className="test" />
+      </WebexMeetingControls>
+    );
+
+    expect(component).toMatchSnapshot();
+  });
+
+  test('matches snapshot with custom CSS class', () => {
+    const component = shallow(
+      <WebexMeetingControls className="my-custom-class" meetingID="my-meeting">
         <div className="test" />
       </WebexMeetingControls>
     );
