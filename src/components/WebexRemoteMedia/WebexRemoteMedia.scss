@@ -6,6 +6,13 @@
   align-items: center;
   height: 100%;
   width: 100%;
+  position: relative;
+
+  .md-alert-banner {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
 
   .md-badge {
     margin: auto;

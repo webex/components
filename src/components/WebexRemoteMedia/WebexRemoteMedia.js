@@ -22,13 +22,13 @@ export default function WebexRemoteMedia({meetingID}) {
   const hasMedia = !!(remoteAudio || remoteVideo);
 
   return (
-    <React.Fragment>
+    <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-remote-media`}>
       {error ? (
         <AlertBanner show type="warning">
           Having trouble joining the meeting? Please check your connection.
         </AlertBanner>
       ) : (
-        <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-remote-media`}>
+        <React.Fragment>
           {!hasMedia ? (
             <Badge rounded>
               <Spinner size={16} />
@@ -37,9 +37,9 @@ export default function WebexRemoteMedia({meetingID}) {
           ) : null}
           {remoteVideo ? <video ref={videoRef} playsInline autoPlay /> : null}
           {remoteAudio ? <audio ref={audioRef} autoPlay /> : null}
-        </div>
+        </React.Fragment>
       )}
-    </React.Fragment>
+    </div>
   );
 }
 
