@@ -16,6 +16,7 @@ export default function useMeeting(meetingID) {
     localVideo: null,
     remoteAudio: null,
     remoteVideo: null,
+    error: null,
   };
 
   const [meeting, setMeeting] = useState(emptyMeeting);
@@ -29,6 +30,11 @@ export default function useMeeting(meetingID) {
       setMeeting({...newMeeting});
     };
     const onError = (error) => {
+      setMeeting({
+        ...emptyMeeting,
+        error,
+      });
+
       throw error;
     };
     const onComplete = () => {
