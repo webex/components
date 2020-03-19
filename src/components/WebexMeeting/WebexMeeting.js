@@ -21,22 +21,22 @@ export default function WebexMeeting({meetingDestination, controls}) {
   const {ID, remoteVideo} = useMeetingDestination(meetingDestination);
   const isActive = remoteVideo !== null;
 
-  const classBaseName = 'meeting';
-  const classObjects = {};
-
-  classObjects[`${WEBEX_COMPONENTS_CLASS_PREFIX}-${classBaseName}`] = true;
-  classObjects[`${WEBEX_COMPONENTS_CLASS_PREFIX}-${classBaseName}-active`] = ID && isActive;
-
-  const cssClasses = classNames(classObjects);
+  const classBaseName = `${WEBEX_COMPONENTS_CLASS_PREFIX}-meeting`;
+  const mainClasses = {
+    [classBaseName]: true,
+    [`${classBaseName}-active`]: ID && isActive,
+  };
 
   const meetingControls = controls(isActive).map((key) => <WebexMeetingControl key={key} type={key} />);
 
   return (
-    <div className={cssClasses}>
+    <div className={classNames(mainClasses)}>
       {ID ? (
         <Fragment>
           {isActive ? <WebexInMeeting meetingID={ID} /> : <WebexInterstitialMeeting meetingID={ID} />}
-          <WebexMeetingControls meetingID={ID}>{meetingControls}</WebexMeetingControls>
+          <WebexMeetingControls className="meeting-controls-container" meetingID={ID}>
+            {meetingControls}
+          </WebexMeetingControls>
         </Fragment>
       ) : (
         <Spinner />
