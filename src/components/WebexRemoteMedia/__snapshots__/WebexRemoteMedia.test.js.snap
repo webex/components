@@ -1,48 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Webex Remote Media component snapshot matches snapshot of disabled remote audio 1`] = `
-<Fragment>
-  <div
-    className="wxc-remote-media"
-  >
-    <video
-      autoPlay={true}
-      playsInline={true}
-    />
-  </div>
-</Fragment>
+<div
+  className="wxc-remote-media"
+>
+  <video
+    autoPlay={true}
+    playsInline={true}
+  />
+</div>
 `;
 
 exports[`Webex Remote Media component snapshot matches snapshot of disabled remote video 1`] = `
-<Fragment>
-  <div
-    className="wxc-remote-media"
-  >
-    <audio
-      autoPlay={true}
-    />
-  </div>
-</Fragment>
+<div
+  className="wxc-remote-media"
+>
+  <audio
+    autoPlay={true}
+  />
+</div>
 `;
 
 exports[`Webex Remote Media component snapshot matches snapshot of enabled remote audio & video 1`] = `
-<Fragment>
-  <div
-    className="wxc-remote-media"
-  >
-    <video
-      autoPlay={true}
-      playsInline={true}
-    />
-    <audio
-      autoPlay={true}
-    />
-  </div>
-</Fragment>
+<div
+  className="wxc-remote-media"
+>
+  <video
+    autoPlay={true}
+    playsInline={true}
+  />
+  <audio
+    autoPlay={true}
+  />
+</div>
 `;
 
 exports[`Webex Remote Media component snapshot matches snapshot on error 1`] = `
-<Fragment>
+<div
+  className="wxc-remote-media"
+>
   <AlertBanner
     className=""
     closable={false}
@@ -54,30 +50,28 @@ exports[`Webex Remote Media component snapshot matches snapshot on error 1`] = `
   >
     Having trouble joining the meeting? Please check your connection.
   </AlertBanner>
-</Fragment>
+</div>
 `;
 
 exports[`Webex Remote Media component snapshot matches snapshot while loading 1`] = `
-<Fragment>
-  <div
-    className="wxc-remote-media"
+<div
+  className="wxc-remote-media"
+>
+  <Badge
+    className=""
+    rounded={true}
   >
-    <Badge
+    <Spinner
       className=""
-      rounded={true}
-    >
-      <Spinner
-        className=""
-        color="black"
-        percentage={null}
-        showCheck={false}
-        showPercentage={false}
-        size={16}
-      />
-      <div>
-        Connecting
-      </div>
-    </Badge>
-  </div>
-</Fragment>
+      color="black"
+      percentage={null}
+      showCheck={false}
+      showPercentage={false}
+      size={16}
+    />
+    <div>
+      Connecting
+    </div>
+  </Badge>
+</div>
 `;
