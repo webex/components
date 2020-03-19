@@ -1,3 +1,16 @@
+# [1.39.0](https://github.com/webex/components/compare/v1.38.0...v1.39.0) (2020-03-19)
+
+
+### Bug Fixes
+
+* **WebexRemoveMedia:** move AlertBanner inside the main div ([dcf0aba](https://github.com/webex/components/commit/dcf0aba00d029d4ab5a68cec2cb9ee33983cabbc))
+
+
+### Features
+
+* **hooks:** add error prop to useMeeting ([6c0632c](https://github.com/webex/components/commit/6c0632cfe0895ca7eec89674b3f7d48d19bdb70a))
+* **WebexRemoteMedia:** add error state ([bb7d666](https://github.com/webex/components/commit/bb7d6669eeb9dabc02396cc3ebd5050b1887136b))
+
 # [1.38.0](https://github.com/webex/components/compare/v1.37.0...v1.38.0) (2020-03-18)
 
 
