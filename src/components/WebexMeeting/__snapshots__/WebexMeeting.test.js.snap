@@ -8,6 +8,7 @@ exports[`Webex Meeting component snapshot matches snapshot of a user that has jo
     meetingID="remoteMedia"
   />
   <WebexMeetingControls
+    className="meeting-controls-container"
     meetingID="remoteMedia"
   >
     <WebexMeetingControl
@@ -34,6 +35,7 @@ exports[`Webex Meeting component snapshot matches snapshot of a user that has jo
     meetingID="remoteMedia"
   />
   <WebexMeetingControls
+    className="meeting-controls-container"
     meetingID="remoteMedia"
   >
     <WebexMeetingControl
@@ -52,6 +54,7 @@ exports[`Webex Meeting component snapshot matches snapshot of a user waiting to 
     meetingID="localMedia"
   />
   <WebexMeetingControls
+    className="meeting-controls-container"
     meetingID="localMedia"
   >
     <WebexMeetingControl
@@ -78,6 +81,7 @@ exports[`Webex Meeting component snapshot matches snapshot of a user waiting to 
     meetingID="localMedia"
   />
   <WebexMeetingControls
+    className="meeting-controls-container"
     meetingID="localMedia"
   >
     <WebexMeetingControl
