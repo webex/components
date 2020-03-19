@@ -18,19 +18,17 @@ import './WebexInMeeting.scss';
  */
 export default function WebexInMeeting({meetingID}) {
   const [meetingRef, {width}] = useElementDimensions();
-  const classBaseName = 'in-meeting';
-  const classObjects = {};
-
-  classObjects[`${WEBEX_COMPONENTS_CLASS_PREFIX}-${classBaseName}`] = true;
-  classObjects[`${WEBEX_COMPONENTS_CLASS_PREFIX}-${classBaseName}-tablet`] = width >= TABLET && width < DESKTOP;
-  classObjects[`${WEBEX_COMPONENTS_CLASS_PREFIX}-${classBaseName}-desktop`] = width >= DESKTOP;
-
-  const cssClasses = classNames(classObjects);
+  const classBaseName = `${WEBEX_COMPONENTS_CLASS_PREFIX}-in-meeting`;
+  const mainClasses = {
+    [`${classBaseName}`]: true,
+    [`${classBaseName}-tablet`]: width >= TABLET && width < DESKTOP,
+    [`${classBaseName}-desktop`]: width >= DESKTOP,
+  };
 
   return (
-    <div ref={meetingRef} className={cssClasses}>
-      <WebexRemoteMedia meetingID={meetingID} />
-      <WebexLocalMedia meetingID={meetingID} />
+    <div ref={meetingRef} className={classNames(mainClasses)}>
+      <WebexRemoteMedia className="remote-media-in-meeting" meetingID={meetingID} />
+      <WebexLocalMedia className="local-media-in-meeting" meetingID={meetingID} />
     </div>
   );
 }

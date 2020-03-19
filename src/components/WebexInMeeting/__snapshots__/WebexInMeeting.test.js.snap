@@ -5,9 +5,11 @@ exports[`Webex InMeeting component snapshot matches snapshot of meeting 1`] = `
   className="wxc-in-meeting"
 >
   <WebexRemoteMedia
+    className="remote-media-in-meeting"
     meetingID="remoteMedia"
   />
   <WebexLocalMedia
+    className="local-media-in-meeting"
     meetingID="remoteMedia"
   />
 </div>
