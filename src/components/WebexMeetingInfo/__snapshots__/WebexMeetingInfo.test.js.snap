@@ -45,6 +45,16 @@ exports[`Webex Meeting Info component snapshot matches snapshot of scheduled mee
 </div>
 `;
 
+exports[`Webex Meeting Info component snapshot matches snapshot of scheduled meeting with custom CSS class 1`] = `
+<div
+  className="wxc-meeting-info my-custom-class"
+>
+  <h2>
+    Our Scheduled Meeting
+  </h2>
+</div>
+`;
+
 exports[`Webex Meeting Info component snapshot matches snapshot of space meeting 1`] = `
 <div
   className="wxc-meeting-info"

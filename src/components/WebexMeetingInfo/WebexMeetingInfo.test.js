@@ -10,6 +10,10 @@ describe('Webex Meeting Info component', () => {
       expect(shallow(<WebexMeetingInfo meetingID="scheduledMeeting" />)).toMatchSnapshot();
     });
 
+    test('matches snapshot of scheduled meeting with custom CSS class', () => {
+      expect(shallow(<WebexMeetingInfo className="my-custom-class" meetingID="scheduledMeeting" />)).toMatchSnapshot();
+    });
+
     test('matches snapshot of one on one meeting', () => {
       expect(shallow(<WebexMeetingInfo meetingID="oneOnOneMeeting" />)).toMatchSnapshot();
     });
