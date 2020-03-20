@@ -15,5 +15,9 @@ describe('Webex Local Media component', () => {
     test('matches snapshot of disabled local video', () => {
       expect(shallow(<WebexLocalMedia meetingID="noMedia" />)).toMatchSnapshot();
     });
+
+    test('matches snapshot of local video with custom CSS class', () => {
+      expect(shallow(<WebexLocalMedia className="my-custom-class" meetingID="noMedia" />)).toMatchSnapshot();
+    });
   });
 });

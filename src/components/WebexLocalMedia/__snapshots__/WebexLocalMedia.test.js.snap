@@ -2,7 +2,7 @@
 
 exports[`Webex Local Media component snapshot matches snapshot of disabled local video 1`] = `
 <div
-  className="wxc-local-media wxc-no-media"
+  className="wxc-local-media wxc-local-media-no-media"
 >
   <WebexAvatar
     displayStatus={false}
@@ -18,6 +18,17 @@ exports[`Webex Local Media component snapshot matches snapshot of local video 1`
   <video
     autoPlay={true}
     playsInline={true}
+  />
+</div>
+`;
+
+exports[`Webex Local Media component snapshot matches snapshot of local video with custom CSS class 1`] = `
+<div
+  className="wxc-local-media wxc-local-media-no-media my-custom-class"
+>
+  <WebexAvatar
+    displayStatus={false}
+    personID="default"
   />
 </div>
 `;

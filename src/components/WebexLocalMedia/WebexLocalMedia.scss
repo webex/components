@@ -27,8 +27,8 @@
       transform: scale(3); // Avatar is 40x40px, this makes it 120x120px
     }
   }
-}
 
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-no-media {
-  background: white;
+  &-no-media {
+    background: white;
+  }
 }
