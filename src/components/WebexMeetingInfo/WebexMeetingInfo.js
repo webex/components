@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import {format} from 'date-fns';
 import {Spinner} from '@momentum-ui/react';
 
@@ -31,9 +32,13 @@ export function formatMeetingTime(startDate, endDate) {
  * @param {object} props
  * @returns {object} JSX of the component
  */
-export default function WebexMeetingInfo({meetingID}) {
+export default function WebexMeetingInfo({className, meetingID}) {
   const {ID, startTime, endTime, title} = useMeeting(meetingID);
   let infoComponent;
+  const mainClasses = {
+    [`${WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-info`]: true,
+    [className]: !!className,
+  };
 
   if (ID) {
     const meetingTime = startTime ? <h3>{formatMeetingTime(new Date(startTime), new Date(endTime))}</h3> : null;
@@ -53,9 +58,14 @@ export default function WebexMeetingInfo({meetingID}) {
     );
   }
 
-  return <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-info`}>{infoComponent}</div>;
+  return <div className={classNames(mainClasses)}>{infoComponent}</div>;
 }
 
 WebexMeetingInfo.propTypes = {
+  className: PropTypes.string,
   meetingID: PropTypes.string.isRequired,
+};
+
+WebexMeetingInfo.defaultProps = {
+  className: '',
 };
