@@ -1,3 +1,20 @@
+# [1.40.0](https://github.com/webex/components/compare/v1.39.0...v1.40.0) (2020-03-20)
+
+
+### Bug Fixes
+
+* **WebexInMeeting:** use local component styles for layout ([8f085c2](https://github.com/webex/components/commit/8f085c221890e3cd105a49e7bb7a9edcd9a944eb))
+* **WebexInterstitialMeeting:** use local component styles for layout ([b6d3b1a](https://github.com/webex/components/commit/b6d3b1af41ddfcb7d4cb7e5c3b84050a6ce89c99))
+* **WebexMeeting:** use local component styles for layout ([64067f5](https://github.com/webex/components/commit/64067f548af81f4b6a0a3babd2353d3512cfcc9f))
+
+
+### Features
+
+* **WebexLocalMedia:** add className prop ([08ca8ec](https://github.com/webex/components/commit/08ca8ecd527cf74b20753e9dcd3ece5092ade77a))
+* **WebexMeetingInfo:** add className prop ([26bf668](https://github.com/webex/components/commit/26bf66844c6492da0298db72a131a1f4fb70db5e))
+* **WebexRemoteMedia:** add className prop ([e7e8081](https://github.com/webex/components/commit/e7e80810787a8be6ca3909c6defb06b5b4eba402))
+* **WebexMeetingControls:** add layout styling ([a26c7ea](https://github.com/webex/components/commit/a26c7ea42199f0825831a3669bf832a2d9b8bb03))
+
 # [1.39.0](https://github.com/webex/components/compare/v1.38.0...v1.39.0) (2020-03-19)
 
 
