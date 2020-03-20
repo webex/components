@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import {Badge, Spinner, AlertBanner} from '@momentum-ui/react';
 
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
@@ -15,14 +16,18 @@ import './WebexRemoteMedia.scss';
  *
  * NOTE: waiting for the UX for a design on what to display if there is no remote video
  */
-export default function WebexRemoteMedia({meetingID}) {
+export default function WebexRemoteMedia({className, meetingID}) {
   const {remoteAudio, remoteVideo, error} = useMeeting(meetingID);
   const audioRef = useStream(remoteAudio);
   const videoRef = useStream(remoteVideo);
   const hasMedia = !!(remoteAudio || remoteVideo);
+  const mainClasses = {
+    [`${WEBEX_COMPONENTS_CLASS_PREFIX}-remote-media`]: true,
+    [className]: !!className,
+  };
 
   return (
-    <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-remote-media`}>
+    <div className={classNames(mainClasses)}>
       {error ? (
         <AlertBanner show type="warning">
           Having trouble joining the meeting? Please check your connection.
@@ -44,5 +49,10 @@ export default function WebexRemoteMedia({meetingID}) {
 }
 
 WebexRemoteMedia.propTypes = {
+  className: PropTypes.string,
   meetingID: PropTypes.string.isRequired,
+};
+
+WebexRemoteMedia.defaultProps = {
+  className: '',
 };

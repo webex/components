@@ -35,6 +35,20 @@ exports[`Webex Remote Media component snapshot matches snapshot of enabled remot
 </div>
 `;
 
+exports[`Webex Remote Media component snapshot matches snapshot of enabled remote audio & video with custom CSS class 1`] = `
+<div
+  className="wxc-remote-media my-custom-class"
+>
+  <video
+    autoPlay={true}
+    playsInline={true}
+  />
+  <audio
+    autoPlay={true}
+  />
+</div>
+`;
+
 exports[`Webex Remote Media component snapshot matches snapshot on error 1`] = `
 <div
   className="wxc-remote-media"

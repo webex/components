@@ -10,6 +10,7 @@ describe('Webex Remote Media component', () => {
     test('matches snapshot while loading', () => {
       expect(shallow(<WebexRemoteMedia meetingID="noMedia" />)).toMatchSnapshot();
     });
+
     test('matches snapshot of disabled remote audio', () => {
       expect(shallow(<WebexRemoteMedia meetingID="remoteVideo" />)).toMatchSnapshot();
     });
@@ -24,6 +25,10 @@ describe('Webex Remote Media component', () => {
 
     test('matches snapshot on error', () => {
       expect(shallow(<WebexRemoteMedia meetingID="failMeetingID" />)).toMatchSnapshot();
+    });
+
+    test('matches snapshot of enabled remote audio & video with custom CSS class', () => {
+      expect(shallow(<WebexRemoteMedia className="my-custom-class" meetingID="remoteAudio&Video" />)).toMatchSnapshot();
     });
   });
 });
