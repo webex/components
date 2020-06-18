@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Webex Participant Roster component snapshot matches snapshot of webex participant roster 1`] = `
+<List
+  active={null}
+  className=""
+  focus={null}
+  focusFirst={true}
+  focusFirstQuery=""
+  focusQuery=""
+  id={null}
+  itemRole="listitem"
+  onSelect={null}
+  role="list"
+  shouldFocusActive={false}
+  shouldFocusInitial={true}
+  shouldLoop={true}
+  tabType="vertical"
+  trackActive={true}
+  type={null}
+  wrap={false}
+/>
+`;
