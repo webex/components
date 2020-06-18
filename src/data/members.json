@@ -1,0 +1,7 @@
+{
+  "default_membership": {
+    "ID": "default",
+    "destinationID": "",
+    "members": [{"personID": "default"}, {"personID": "self"}, {"personID": "call"}, {"personID": "presenting"}]
+  }
+}
