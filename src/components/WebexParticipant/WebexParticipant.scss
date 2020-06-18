@@ -1,0 +1,15 @@
+@import '../../styles/variables';
+
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-participant {
+  display: flex;
+  padding: 0.625rem 0 0.625rem 0;
+
+  .participant-name {
+    @include body-fonts;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 0.25rem;
+  }
+}

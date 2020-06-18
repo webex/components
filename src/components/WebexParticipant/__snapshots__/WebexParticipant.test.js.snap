@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Webex Participant component snapshot matches snapshot of webex participant 1`] = `
+<ContextTransform(ListItem)
+  className="wxc-participant"
+>
+  <WebexAvatar
+    displayStatus={false}
+    personID="default"
+  />
+  <div
+    className="participant-name"
+  >
+    Webex Component User
+  </div>
+</ContextTransform(ListItem)>
+`;
