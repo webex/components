@@ -20,6 +20,10 @@ exports[`Webex Meeting component snapshot matches snapshot of a user that has jo
       type="mute-video"
     />
     <WebexMeetingControl
+      key="share-screen"
+      type="share-screen"
+    />
+    <WebexMeetingControl
       key="leave-meeting"
       type="leave-meeting"
     />

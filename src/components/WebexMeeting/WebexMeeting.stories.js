@@ -11,7 +11,7 @@ const webexAdapter = new WebexJSONAdapter(jsonData);
 
 stories.add('default', () => (
   <WebexDataProvider adapter={webexAdapter}>
-    <WebexMeeting meetingDestination="localMedia" />
+    <WebexMeeting meetingDestination="remote&localMedia" />
   </WebexDataProvider>
 ));
 
