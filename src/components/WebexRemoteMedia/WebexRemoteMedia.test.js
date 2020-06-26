@@ -4,7 +4,6 @@ import WebexRemoteMedia from './WebexRemoteMedia';
 
 jest.mock('../hooks/useMeeting');
 jest.mock('../hooks/useStream');
-jest.mock('../hooks/useMeetingControl');
 
 describe('Webex Remote Media component', () => {
   describe('snapshot', () => {
