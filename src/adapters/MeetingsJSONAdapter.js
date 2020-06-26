@@ -5,6 +5,7 @@ import {MeetingsAdapter, MeetingControlState} from '@webex/component-adapter-int
 // Defined meeting controls in Meetings JSON Adapter
 export const MUTE_AUDIO_CONTROL = 'mute-audio';
 export const MUTE_VIDEO_CONTROL = 'mute-video';
+export const SHARE_CONTROL = 'share-screen';
 export const JOIN_CONTROL = 'join-meeting';
 export const LEAVE_CONTROL = 'leave-meeting';
 export const DISABLED_MUTE_AUDIO_CONTROL = 'disabled-mute-audio';
@@ -59,6 +60,12 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       ID: MUTE_VIDEO_CONTROL,
       action: this.toggleMuteVideo.bind(this),
       display: this.muteVideoControl.bind(this),
+    };
+
+    this.meetingControls[SHARE_CONTROL] = {
+      ID: SHARE_CONTROL,
+      action: this.handleLocalShare.bind(this),
+      display: this.shareControl.bind(this),
     };
 
     this.meetingControls[JOIN_CONTROL] = {
@@ -158,6 +165,15 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
     );
 
     // Send updates on the meeting when an action is triggered
+    const shareEvents$ = fromEvent(document, SHARE_CONTROL).pipe(
+      tap(() => {
+        const meeting = this.datasource[ID];
+
+        // Use local screen share to fake a remote user's screen sharing
+        meeting.remoteShare = meeting.localShare;
+      })
+    );
+
     const audioEvents$ = fromEvent(document, MUTE_AUDIO_CONTROL);
     const videoEvents$ = fromEvent(document, MUTE_VIDEO_CONTROL);
     const joinEvents$ = fromEvent(document, JOIN_CONTROL);
@@ -165,7 +181,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       tap(() => end$.next(`Meeting "${ID}" has completed.`))
     );
 
-    const events$ = merge(audioEvents$, videoEvents$, joinEvents$, leaveEvents$).pipe(
+    const events$ = merge(audioEvents$, videoEvents$, joinEvents$, leaveEvents$, shareEvents$).pipe(
       filter((event) => event.detail.ID === ID),
       // Make a copy of the meeting to treat it as if were immutable
       map((event) => ({...event.detail}))
@@ -205,6 +221,26 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
     }
 
     return stream;
+  }
+
+  /**
+   * Returns a promise to a MediaStream object that captures the contents of a user local display.
+   *
+   * @returns {Promise.<MediaStream>}
+   * @memberof MeetingJSONAdapter
+   * @private
+   */
+  async getDisplayStream() {
+    let captureStream = null;
+
+    try {
+      captureStream = await navigator.mediaDevices.getDisplayMedia();
+    } catch (reason) {
+      // eslint-disable-next-line no-console
+      console.error('Meetings JSON adapter can not display the local user sharing stream', reason);
+    }
+
+    return captureStream;
   }
 
   /**
@@ -436,6 +472,77 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
 
       observer.complete();
     });
+  }
+
+  /**
+   * Handles the starting and stopping of the local screen capture media stream.
+   *
+   * @param {string} ID ID of the meeting for which to update display
+   * @memberof MeetingJSONAdapter
+   * @private
+   */
+  async handleLocalShare(ID) {
+    const meeting = this.datasource[ID];
+
+    if (meeting.localShare) {
+      meeting.localShare.getTracks()[0].stop();
+      meeting.localShare = null;
+    } else {
+      meeting.localShare = await this.getDisplayStream();
+
+      if (meeting.localShare) {
+        // Handle browser's built-in stop Button
+        meeting.localShare.getVideoTracks()[0].onended = () => {
+          meeting.localShare = null;
+          meeting.remoteShare = null;
+          document.dispatchEvent(new CustomEvent(SHARE_CONTROL, {detail: meeting}));
+        };
+      }
+    }
+
+    document.dispatchEvent(new CustomEvent(SHARE_CONTROL, {detail: meeting}));
+  }
+
+  /**
+   * Returns an observable that emits the display data of a meeting control.
+   *
+   * @param {string} ID ID of the meeting for which to update display
+   * @returns {Observable.<MeetingControlDisplay>}
+   * @memberof MeetingJSONAdapter
+   * @private
+   */
+  shareControl(ID) {
+    const inactive = {
+      ID: SHARE_CONTROL,
+      icon: 'share',
+      tooltip: 'Start Sharing',
+      state: MeetingControlState.INACTIVE,
+    };
+    const active = {
+      ID: SHARE_CONTROL,
+      icon: 'share',
+      tooltip: 'Stop Sharing',
+      state: MeetingControlState.ACTIVE,
+    };
+
+    const default$ = Observable.create((observer) => {
+      const meeting = this.datasource[ID];
+
+      if (meeting) {
+        observer.next(meeting.localShare ? active : inactive);
+      } else {
+        observer.error(new Error(`Could not find meeting with ID "${ID}"`));
+      }
+
+      observer.complete();
+    });
+
+    const shareEvent$ = fromEvent(document, SHARE_CONTROL).pipe(
+      filter((event) => event.detail.ID === ID),
+      map((event) => (event.detail.localShare ? active : inactive))
+    );
+
+    return concat(default$, shareEvent$);
   }
 
   /**
