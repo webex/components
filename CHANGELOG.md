@@ -1,3 +1,15 @@
+# [1.41.0](https://github.com/webex/components/compare/v1.40.0...v1.41.0) (2020-06-26)
+
+
+### Features
+
+* **hooks:** add remoteShare attribute to meeting ([5f9f1d0](https://github.com/webex/components/commit/5f9f1d0f1ccb4ff38080804b3e4dc92d64a006b0))
+* **hooks:** add sanity check for mediaElement ([9f33bf5](https://github.com/webex/components/commit/9f33bf5721d43d99962ff91bc01ac8c991388a13))
+* **MeetingJsonAdapter:** add screen share functionalities ([4eb8b5b](https://github.com/webex/components/commit/4eb8b5bf7688e9a04e6a8140c4414443fe708684))
+* **WebexMeeting:** add screen share functionalities ([432da00](https://github.com/webex/components/commit/432da00071ef72edac67577165ccd0a74a77b56f))
+* **WebexRemoteMedia:** add split-screen videos for remoteShare ([a73c484](https://github.com/webex/components/commit/a73c484a86389340a37362878a2fa2c2949e9db0))
+* **WebexMeetingControl:** add stories for screen share button ([e3b7510](https://github.com/webex/components/commit/e3b7510516108dd5301e627b0ed9cb201f200289))
+
 # [1.40.0](https://github.com/webex/components/compare/v1.39.0...v1.40.0) (2020-03-20)
 
 
