@@ -10,9 +10,9 @@ export default function useStream(stream) {
   const streamRef = useRef({});
 
   useEffect(() => {
-    const mediaElement = streamRef.current;
+    const mediaElement = streamRef.current || null;
 
-    if (stream instanceof MediaStream) {
+    if (mediaElement && stream instanceof MediaStream) {
       mediaElement.srcObject = stream;
     }
   }, [stream]);
