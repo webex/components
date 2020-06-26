@@ -59,5 +59,7 @@ WebexMeeting.defaultProps = {
    */
   // eslint-disable-next-line no-confusing-arrow
   controls: (isActive) =>
-    isActive ? ['mute-audio', 'mute-video', 'leave-meeting'] : ['mute-audio', 'mute-video', 'join-meeting'],
+    isActive
+      ? ['mute-audio', 'mute-video', 'share-screen', 'leave-meeting']
+      : ['mute-audio', 'mute-video', 'join-meeting'],
 };
