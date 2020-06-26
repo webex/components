@@ -5,7 +5,6 @@ import {Badge, Spinner, AlertBanner} from '@momentum-ui/react';
 
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import {useMeeting, useStream} from '../hooks';
-
 import './WebexRemoteMedia.scss';
 
 /**
@@ -17,13 +16,16 @@ import './WebexRemoteMedia.scss';
  * NOTE: waiting for the UX for a design on what to display if there is no remote video
  */
 export default function WebexRemoteMedia({className, meetingID}) {
-  const {remoteAudio, remoteVideo, error} = useMeeting(meetingID);
+  const {remoteAudio, remoteVideo, remoteShare, error} = useMeeting(meetingID);
   const audioRef = useStream(remoteAudio);
   const videoRef = useStream(remoteVideo);
-  const hasMedia = !!(remoteAudio || remoteVideo);
+  const shareRef = useStream(remoteShare);
+  const hasMedia = !!(remoteAudio || remoteVideo || remoteShare);
+  const hasTwoMedia = remoteVideo && remoteShare;
   const mainClasses = {
     [`${WEBEX_COMPONENTS_CLASS_PREFIX}-remote-media`]: true,
     [className]: !!className,
+    'split-screen': hasTwoMedia,
   };
 
   return (
@@ -40,7 +42,11 @@ export default function WebexRemoteMedia({className, meetingID}) {
               <div>Connecting</div>
             </Badge>
           ) : null}
+
           {remoteVideo ? <video ref={videoRef} playsInline autoPlay /> : null}
+
+          {remoteShare ? <video ref={shareRef} playsInline autoPlay /> : null}
+
           {remoteAudio ? <audio ref={audioRef} autoPlay /> : null}
         </React.Fragment>
       )}
