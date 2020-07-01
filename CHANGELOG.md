@@ -1,3 +1,12 @@
+# [1.42.0](https://github.com/webex/components/compare/v1.41.0...v1.42.0) (2020-07-01)
+
+
+### Features
+
+* **MembershipAdapter:** add membership sub-adapter ([7497cc0](https://github.com/webex/components/commit/7497cc0a38703407f93affe69640d237ad3fbc42))
+* **WebexParticipant:** add participant component ([69d46d5](https://github.com/webex/components/commit/69d46d5c120473227222b46344bb85d5b63c4a92))
+* **WebexParticipantRoster:** add participant roster component ([d53a34e](https://github.com/webex/components/commit/d53a34eb965ac4e9efbec6df7891e1f5c79e63f7))
+
 # [1.41.0](https://github.com/webex/components/compare/v1.40.0...v1.41.0) (2020-06-26)
 
 
