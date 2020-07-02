@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@juggle/resize-observer": "^3.0.2",
-    "@momentum-ui/react": "^23.2.1",
+    "@momentum-ui/react": "23.15.3",
     "@webex/component-adapter-interfaces": "^1.9.0",
     "date-fns": "^2.6.0",
     "prop-types": "^15.7.2"
