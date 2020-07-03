@@ -1,3 +1,10 @@
+## [1.42.1](https://github.com/webex/components/compare/v1.42.0...v1.42.1) (2020-07-03)
+
+
+### Bug Fixes
+
+* **packages:** update momentum-ui ([14542c5](https://github.com/webex/components/commit/14542c5961d9130ded04a9586e3454b93c606534))
+
 # [1.42.0](https://github.com/webex/components/compare/v1.41.0...v1.42.0) (2020-07-01)
 
 
