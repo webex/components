@@ -1,3 +1,10 @@
+## [1.42.2](https://github.com/webex/components/compare/v1.42.1...v1.42.2) (2020-07-06)
+
+
+### Bug Fixes
+
+* **hooks:** cloned members before setting state ([4410875](https://github.com/webex/components/commit/4410875e0e3d91993c1d3ababa80085ad549e8a0))
+
 ## [1.42.1](https://github.com/webex/components/compare/v1.42.0...v1.42.1) (2020-07-03)
 
 
