@@ -20,7 +20,7 @@ export default function useParticipants(membershipID) {
       console.error(error.message);
     };
     const onMembers = (data) => {
-      setParticipants(data.members);
+      setParticipants([...data.members]);
     };
 
     const subscription = membershipsAdapter.getMembers(membershipID).subscribe(onMembers, onError);
