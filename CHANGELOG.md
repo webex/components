@@ -1,3 +1,10 @@
+## [1.42.3](https://github.com/webex/components/compare/v1.42.2...v1.42.3) (2020-07-07)
+
+
+### Bug Fixes
+
+* **WebexParticipantRoster:** add key property to WebexParticipant ([937f068](https://github.com/webex/components/commit/937f068826bb4a953d421eb9738fedeb8dfed5f0))
+
 ## [1.42.2](https://github.com/webex/components/compare/v1.42.1...v1.42.2) (2020-07-06)
 
 
