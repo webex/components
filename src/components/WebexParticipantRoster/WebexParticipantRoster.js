@@ -15,7 +15,9 @@ import useParticipants from '../hooks/useParticipants';
 export default function WebexParticipantRoster({destination}) {
   const participants = useParticipants(destination);
 
-  const participantList = participants.map((participant) => <WebexParticipant personID={participant.personID} />);
+  const participantList = participants.map((participant) => (
+    <WebexParticipant key={participant.personID} personID={participant.personID} />
+  ));
 
   return <List>{participantList}</List>;
 }
