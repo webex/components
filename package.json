@@ -50,8 +50,8 @@
     "@babel/preset-react": "^7.10.4",
     "@commitlint/cli": "^9.1.1",
     "@commitlint/config-conventional": "^9.1.1",
-    "@semantic-release/changelog": "^3.0.4",
-    "@semantic-release/git": "^7.0.16",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
     "@storybook/react": "^5.1.9",
     "@webex/eslint-config-base": "^0.8.0",
     "@webex/eslint-config-react": "^0.8.0",
@@ -87,7 +87,7 @@
     "rxjs": "^6.5.4",
     "sass-loader": "^8.0.2",
     "sass-resources-loader": "^2.0.1",
-    "semantic-release": "^15.13.19",
+    "semantic-release": "^17.1.1",
     "style-loader": "^0.23.1"
   },
   "babel": {
