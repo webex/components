@@ -1,6 +1,6 @@
 import {useContext, useState, useEffect} from 'react';
 
-import {AdapterContext} from '../../components/';
+import {AdapterContext} from './contexts';
 
 /**
  * Custom hook that returns activity data of the given ID.

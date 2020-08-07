@@ -42,6 +42,8 @@ export default function useMeetingControl(type) {
         state: 'disabled',
       };
       break;
+    default:
+      break;
   }
 
   return [() => {}, control];

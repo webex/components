@@ -1,8 +1,11 @@
-import activities from './../data/activities';
+import {isObservable} from 'rxjs';
+
+import activities from '../data/activities.json';
 import ActivitiesJSONAdapter from './ActivitiesJSONAdapter';
 
 describe('Activities JSON Adapter Interface', () => {
-  let activitiesJSONAdapter, activityID;
+  let activityID;
+  let activitiesJSONAdapter;
 
   beforeEach(() => {
     [activityID] = Object.keys(activities);
@@ -15,7 +18,7 @@ describe('Activities JSON Adapter Interface', () => {
   });
 
   test('getActivity() returns an observable', () => {
-    expect(rxjs.isObservable(activitiesJSONAdapter.getActivity())).toBeTruthy();
+    expect(isObservable(activitiesJSONAdapter.getActivity())).toBeTruthy();
   });
 
   test('getActivity() returns an activity', (done) => {
@@ -25,7 +28,7 @@ describe('Activities JSON Adapter Interface', () => {
     });
   });
 
-  test(`getActivity() throws a proper error message when activity doesn't exist`, (done) => {
+  test('getActivity() throws a proper error message when activity doesn\'t exist', (done) => {
     const wrongActivityID = 'wrongActivityID';
 
     activitiesJSONAdapter.getActivity(wrongActivityID).subscribe(
@@ -33,7 +36,7 @@ describe('Activities JSON Adapter Interface', () => {
       (error) => {
         expect(error.message).toBe(`Could not find activity with ID "${wrongActivityID}"`);
         done();
-      }
+      },
     );
   });
 
@@ -44,7 +47,7 @@ describe('Activities JSON Adapter Interface', () => {
       () => {
         expect(true).toBeTruthy();
         done();
-      }
+      },
     );
   });
 });

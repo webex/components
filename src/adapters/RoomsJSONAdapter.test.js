@@ -1,8 +1,9 @@
-import rooms from './../data/rooms';
+import rooms from '../data/rooms.json';
 import RoomsJSONAdapter from './RoomsJSONAdapter';
 
 describe('Rooms JSON Adapter Interface', () => {
-  let roomsJSONAdapter, roomID;
+  let roomID;
+  let roomsJSONAdapter;
 
   beforeEach(() => {
     [roomID] = Object.keys(rooms);
@@ -32,7 +33,7 @@ describe('Rooms JSON Adapter Interface', () => {
       (error) => {
         expect(error.message).toBe(`Could not find room with ID "${wrongRoomID}"`);
         done();
-      }
+      },
     );
   });
 
@@ -43,7 +44,7 @@ describe('Rooms JSON Adapter Interface', () => {
       () => {
         expect(true).toBeTruthy();
         done();
-      }
+      },
     );
   });
 
@@ -83,7 +84,7 @@ describe('Rooms JSON Adapter Interface', () => {
       () => {
         expect(true).toBeTruthy();
         done();
-      }
+      },
     );
   });
 
@@ -103,7 +104,7 @@ describe('Rooms JSON Adapter Interface', () => {
       (error) => {
         expect(error.message).toEqual(message);
         done();
-      }
+      },
     );
   });
 
@@ -117,7 +118,7 @@ describe('Rooms JSON Adapter Interface', () => {
       () => {
         expect(true).toBeTruthy();
         done();
-      }
+      },
     );
   });
 

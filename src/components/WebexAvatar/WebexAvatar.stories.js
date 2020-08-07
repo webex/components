@@ -4,7 +4,7 @@ import {PersonStatus} from '@webex/component-adapter-interfaces';
 
 import jsonData from '../../data';
 import {WebexJSONAdapter} from '../../adapters';
-import {WebexAvatar, WebexDataProvider} from '../';
+import {WebexAvatar, WebexDataProvider} from '..';
 
 // Setup for the stories
 const stories = storiesOf('Webex Avatar', module);

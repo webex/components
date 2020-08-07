@@ -1,8 +1,13 @@
-import {useContext, useEffect, useRef, useState} from 'react';
 import {Observable} from 'rxjs';
 import {flatMap} from 'rxjs/operators';
+import {
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 
-import {AdapterContext} from '..';
+import {AdapterContext} from './contexts';
 
 /**
  * Callback function to execute once data has been fetched.

@@ -1,7 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {ListSeparator} from '@momentum-ui/react';
-import {format, isSameWeek, isToday, isYesterday} from 'date-fns';
+import {
+  format,
+  isSameWeek,
+  isToday,
+  isYesterday,
+} from 'date-fns';
 
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import './TimeRuler.scss';

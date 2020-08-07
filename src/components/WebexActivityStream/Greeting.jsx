@@ -130,7 +130,7 @@ export function GreetingSpaceSVG() {
  */
 export default function Greeting({personName}) {
   let svg = <GreetingSpaceSVG />;
-  let description = `This is a shared space between you and other group members. Here's where you'll see shared messages, files, and a call history with this space.`;
+  let description = 'This is a shared space between you and other group members. Here\'s where you\'ll see shared messages, files, and a call history with this space.';
 
   if (personName) {
     svg = <GreetingDirectSVG />;

@@ -1,11 +1,13 @@
-import {from} from 'rxjs';
+import {from, isObservable} from 'rxjs';
 import {tap, skip, delayWhen} from 'rxjs/operators';
 
-import JSONData from './../data/meetings';
+import JSONData from '../data/meetings.json';
 import MeetingsJSONAdapter from './MeetingsJSONAdapter';
 
 describe('Meetings JSON Adapter', () => {
-  let meetingsJSONAdapter, meetingID, meetings;
+  let meetings;
+  let meetingID;
+  let meetingsJSONAdapter;
 
   beforeEach(() => {
     meetings = {...JSONData};
@@ -19,7 +21,7 @@ describe('Meetings JSON Adapter', () => {
 
   describe('createMeeting()', () => {
     test('returns an observable', () => {
-      expect(rxjs.isObservable(meetingsJSONAdapter.createMeeting())).toBeTruthy();
+      expect(isObservable(meetingsJSONAdapter.createMeeting())).toBeTruthy();
     });
 
     test('returns new meeting', (done) => {
@@ -35,14 +37,14 @@ describe('Meetings JSON Adapter', () => {
         (error) => {
           expect(error.message).toBe('Could not create meeting at destination "undefined"');
           done();
-        }
+        },
       );
     });
   });
 
   describe('getMeeting()', () => {
     test('returns an observable', () => {
-      expect(rxjs.isObservable(meetingsJSONAdapter.getMeeting())).toBeTruthy();
+      expect(isObservable(meetingsJSONAdapter.getMeeting())).toBeTruthy();
     });
 
     test('returns meeting data', (done) => {
@@ -136,7 +138,7 @@ describe('Meetings JSON Adapter', () => {
         (error) => {
           expect(error.message).toBe(`Could not find meeting with ID "${wrongMeetingID}"`);
           done();
-        }
+        },
       );
     });
 
@@ -152,7 +154,7 @@ describe('Meetings JSON Adapter', () => {
           () => {
             expect(true).toBeTruthy();
             done();
-          }
+          },
         );
     });
   });
@@ -208,7 +210,7 @@ describe('Meetings JSON Adapter', () => {
         (error) => {
           expect(error.message).toEqual('Could not find meeting with ID "invalid"');
           done();
-        }
+        },
       );
     });
   });
@@ -264,13 +266,13 @@ describe('Meetings JSON Adapter', () => {
         (error) => {
           expect(error.message).toEqual('Could not find meeting with ID "invalid"');
           done();
-        }
+        },
       );
     });
   });
 
   describe('joinControl() returns', () => {
-    test('active conrorl display value', (done) => {
+    test('active control display value', (done) => {
       meetingsJSONAdapter.joinControl().subscribe((display) => {
         expect(display).toMatchObject({
           ID: 'join-meeting',

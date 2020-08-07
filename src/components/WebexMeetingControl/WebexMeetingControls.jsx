@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import {MeetingContext} from '../hooks';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 
 import './WebexMeetingControls.scss';
-
-export const MeetingContext = React.createContext();
 
 /**
  * WebexMeetingControls is a higher-order component that pass a meeting

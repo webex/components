@@ -1,9 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {format, isToday, isSameWeek, isYesterday} from 'date-fns';
+import {
+  format,
+  isToday,
+  isSameWeek,
+  isYesterday,
+} from 'date-fns';
 
-import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import WebexAvatar from '../WebexAvatar/WebexAvatar';
+import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import {usePerson} from '../hooks';
 
 import './ActivityHeader.scss';

@@ -1,5 +1,9 @@
-import {concat, from, fromEvent, merge, Observable, of, Subject} from 'rxjs';
-import {filter, flatMap, map, takeUntil, tap} from 'rxjs/operators';
+import {
+  concat, from, fromEvent, merge, Observable, of, Subject,
+} from 'rxjs';
+import {
+  filter, flatMap, map, takeUntil, tap,
+} from 'rxjs/operators';
 import {MeetingsAdapter, MeetingControlState} from '@webex/component-adapter-interfaces';
 
 // Defined meeting controls in Meetings JSON Adapter
@@ -141,27 +145,26 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
     // to be done here.
     const getMeetingWithMedia$ = getMeeting$.pipe(
       /* eslint-disable no-confusing-arrow */
-      flatMap((meeting) =>
-        meeting.localVideo
-          ? from(this.getStream({video: true, audio: false})).pipe(map((localVideo) => ({...meeting, localVideo})))
-          : of(meeting)
-      ),
-      flatMap((meeting) =>
-        meeting.localAudio
-          ? from(this.getStream({video: false, audio: true})).pipe(map((localAudio) => ({...meeting, localAudio})))
-          : of(meeting)
-      ),
-      flatMap((meeting) =>
-        meeting.remoteVideo
-          ? from(this.getStream({video: true, audio: false})).pipe(map((remoteVideo) => ({...meeting, remoteVideo})))
-          : of(meeting)
-      ),
-      flatMap((meeting) =>
-        meeting.remoteAudio
-          ? from(this.getStream({video: false, audio: true})).pipe(map((remoteAudio) => ({...meeting, remoteAudio})))
-          : of(meeting)
-      )
-      /* eslint-enable no-confusing-arrow */
+      flatMap((meeting) => meeting.localVideo
+        ? from(this.getStream({video: true, audio: false})).pipe(
+          map((localVideo) => ({...meeting, localVideo})),
+        )
+        : of(meeting)),
+      flatMap((meeting) => meeting.localAudio
+        ? from(this.getStream({video: false, audio: true})).pipe(
+          map((localAudio) => ({...meeting, localAudio})),
+        )
+        : of(meeting)),
+      flatMap((meeting) => meeting.remoteVideo
+        ? from(this.getStream({video: true, audio: false})).pipe(
+          map((remoteVideo) => ({...meeting, remoteVideo})),
+        )
+        : of(meeting)),
+      flatMap((meeting) => meeting.remoteAudio
+        ? from(this.getStream({video: false, audio: true})).pipe(
+          map((remoteAudio) => ({...meeting, remoteAudio})),
+        )
+        : of(meeting)),
     );
 
     // Send updates on the meeting when an action is triggered
@@ -171,20 +174,20 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
 
         // Use local screen share to fake a remote user's screen sharing
         meeting.remoteShare = meeting.localShare;
-      })
+      }),
     );
 
     const audioEvents$ = fromEvent(document, MUTE_AUDIO_CONTROL);
     const videoEvents$ = fromEvent(document, MUTE_VIDEO_CONTROL);
     const joinEvents$ = fromEvent(document, JOIN_CONTROL);
     const leaveEvents$ = fromEvent(document, LEAVE_CONTROL).pipe(
-      tap(() => end$.next(`Meeting "${ID}" has completed.`))
+      tap(() => end$.next(`Meeting "${ID}" has completed.`)),
     );
 
     const events$ = merge(audioEvents$, videoEvents$, joinEvents$, leaveEvents$, shareEvents$).pipe(
       filter((event) => event.detail.ID === ID),
       // Make a copy of the meeting to treat it as if were immutable
-      map((event) => ({...event.detail}))
+      map((event) => ({...event.detail})),
     );
 
     return concat(getMeetingWithMedia$, events$).pipe(
@@ -192,7 +195,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
         // Update the static meeting object after each change accordingly
         this.datasource[ID] = meeting;
       }),
-      takeUntil(end$)
+      takeUntil(end$),
     );
   }
 
@@ -201,6 +204,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @param {MediaStreamConstraints} constraints  an object specifying the types of the media to request
    * @returns {MediaStream}
    */
+  // eslint-disable-next-line class-methods-use-this
   async getStream(constraints) {
     let stream;
 
@@ -230,6 +234,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @memberof MeetingJSONAdapter
    * @private
    */
+  // eslint-disable-next-line class-methods-use-this
   async getDisplayStream() {
     let captureStream = null;
 
@@ -361,7 +366,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
 
     const muteEvent$ = fromEvent(document, MUTE_AUDIO_CONTROL).pipe(
       filter((event) => event.detail.ID === ID),
-      map((event) => (event.detail.localAudio ? unmuted : muted))
+      map((event) => (event.detail.localAudio ? unmuted : muted)),
     );
 
     return concat(default$, muteEvent$);
@@ -405,7 +410,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
 
     const muteEvent$ = fromEvent(document, MUTE_VIDEO_CONTROL).pipe(
       filter((event) => event.detail.ID === ID),
-      map((event) => (event.detail.localVideo ? unmuted : muted))
+      map((event) => (event.detail.localVideo ? unmuted : muted)),
     );
 
     return concat(default$, muteEvent$);
@@ -419,6 +424,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @memberof MeetingJSONAdapter
    * @private
    */
+  // eslint-disable-next-line class-methods-use-this
   joinControl() {
     return Observable.create((observer) => {
       observer.next({
@@ -440,6 +446,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @memberof MeetingJSONAdapter
    * @private
    */
+  // eslint-disable-next-line class-methods-use-this
   leaveControl() {
     return Observable.create((observer) => {
       observer.next({
@@ -461,6 +468,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @memberof MeetingJSONAdapter
    * @private
    */
+  // eslint-disable-next-line class-methods-use-this
   disabledJoinControl() {
     return Observable.create((observer) => {
       observer.next({
@@ -539,7 +547,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
 
     const shareEvent$ = fromEvent(document, SHARE_CONTROL).pipe(
       filter((event) => event.detail.ID === ID),
-      map((event) => (event.detail.localShare ? active : inactive))
+      map((event) => (event.detail.localShare ? active : inactive)),
     );
 
     return concat(default$, shareEvent$);
@@ -553,6 +561,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @memberof MeetingJSONAdapter
    * @private
    */
+  // eslint-disable-next-line class-methods-use-this
   disabledMuteAudioControl() {
     return Observable.create((observer) => {
       observer.next({

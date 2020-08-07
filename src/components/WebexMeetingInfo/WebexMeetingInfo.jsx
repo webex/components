@@ -33,28 +33,30 @@ export function formatMeetingTime(startDate, endDate) {
  * @returns {object} JSX of the component
  */
 export default function WebexMeetingInfo({className, meetingID}) {
-  const {ID, startTime, endTime, title} = useMeeting(meetingID);
-  let infoComponent;
+  const {
+    ID,
+    startTime,
+    endTime,
+    title,
+  } = useMeeting(meetingID);
   const mainClasses = {
     [`${WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-info`]: true,
     [className]: !!className,
   };
+  let infoComponent = <Spinner />;
 
   if (ID) {
-    const meetingTime = startTime ? <h3>{formatMeetingTime(new Date(startTime), new Date(endTime))}</h3> : null;
     const displayTitle = title || 'No Meeting Information';
 
     infoComponent = (
-      <React.Fragment>
+      <>
         <h2>{displayTitle}</h2>
-        {meetingTime}
-      </React.Fragment>
-    );
-  } else {
-    infoComponent = (
-      <React.Fragment>
-        <Spinner />
-      </React.Fragment>
+        {
+          startTime
+          && endTime
+          && <h3>{formatMeetingTime(new Date(startTime), new Date(endTime))}</h3>
+        }
+      </>
     );
   }
 

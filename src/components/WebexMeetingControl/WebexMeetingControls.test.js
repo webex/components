@@ -7,7 +7,7 @@ describe('Webex Meeting Controls component', () => {
     const component = shallow(
       <WebexMeetingControls meetingID="my-meeting">
         <div className="test" />
-      </WebexMeetingControls>
+      </WebexMeetingControls>,
     );
 
     expect(component).toMatchSnapshot();
@@ -17,7 +17,7 @@ describe('Webex Meeting Controls component', () => {
     const component = shallow(
       <WebexMeetingControls className="my-custom-class" meetingID="my-meeting">
         <div className="test" />
-      </WebexMeetingControls>
+      </WebexMeetingControls>,
     );
 
     expect(component).toMatchSnapshot();

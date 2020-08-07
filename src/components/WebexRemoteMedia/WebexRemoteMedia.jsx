@@ -16,7 +16,12 @@ import './WebexRemoteMedia.scss';
  * NOTE: waiting for the UX for a design on what to display if there is no remote video
  */
 export default function WebexRemoteMedia({className, meetingID}) {
-  const {remoteAudio, remoteVideo, remoteShare, error} = useMeeting(meetingID);
+  const {
+    remoteAudio,
+    remoteVideo,
+    remoteShare,
+    error,
+  } = useMeeting(meetingID);
   const audioRef = useStream(remoteAudio);
   const videoRef = useStream(remoteVideo);
   const shareRef = useStream(remoteShare);
@@ -35,7 +40,7 @@ export default function WebexRemoteMedia({className, meetingID}) {
           Having trouble joining the meeting? Please check your connection.
         </AlertBanner>
       ) : (
-        <React.Fragment>
+        <>
           {!hasMedia ? (
             <Badge rounded>
               <Spinner size={16} />
@@ -48,7 +53,7 @@ export default function WebexRemoteMedia({className, meetingID}) {
           {remoteShare ? <video ref={shareRef} playsInline autoPlay /> : null}
 
           {remoteAudio ? <audio ref={audioRef} autoPlay /> : null}
-        </React.Fragment>
+        </>
       )}
     </div>
   );

@@ -1,10 +1,8 @@
-import {
-  ActivitiesJSONAdapter,
-  MeetingsJSONAdapter,
-  MembershipJSONAdapter,
-  PeopleJSONAdapter,
-  RoomsJSONAdapter,
-} from './';
+import ActivitiesJSONAdapter from './ActivitiesJSONAdapter';
+import MeetingsJSONAdapter from './MeetingsJSONAdapter';
+import MembershipJSONAdapter from './MembershipJSONAdapter';
+import PeopleJSONAdapter from './PeopleJSONAdapter';
+import RoomsJSONAdapter from './RoomsJSONAdapter';
 
 export default class WebexJSONAdapter {
   /**

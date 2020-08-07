@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import WebexLocalMedia from '../WebexLocalMedia/WebexLocalMedia';
+import WebexRemoteMedia from '../WebexRemoteMedia/WebexRemoteMedia';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
-import {WebexLocalMedia, WebexRemoteMedia} from '../';
 import {useElementDimensions} from '../hooks';
 import {TABLET, DESKTOP} from '../breakpoints';
 

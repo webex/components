@@ -3,10 +3,15 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {Spinner} from '@momentum-ui/react';
 
+import WebexAvatar from '../WebexAvatar/WebexAvatar';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
-import {WebexAvatar} from '../';
-import {useElementDimensions, useMe, useMeeting, useStream} from '../hooks';
 import {PHONE_LARGE} from '../breakpoints';
+import {
+  useElementDimensions,
+  useMe,
+  useMeeting,
+  useStream,
+} from '../hooks';
 
 import './WebexLocalMedia.scss';
 

@@ -1,6 +1,6 @@
 import {useEffect, useContext, useState} from 'react';
 
-import {AdapterContext} from '../../components/';
+import {AdapterContext} from './contexts';
 
 /**
  * Custom hook that returns room data of the given ID.

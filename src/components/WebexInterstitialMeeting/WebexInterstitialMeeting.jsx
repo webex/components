@@ -4,7 +4,8 @@ import {Spinner} from '@momentum-ui/react';
 
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 
-import {WebexLocalMedia, WebexMeetingInfo} from '..';
+import WebexLocalMedia from '../WebexLocalMedia/WebexLocalMedia';
+import WebexMeetingInfo from '../WebexMeetingInfo/WebexMeetingInfo';
 
 import './WebexInterstitialMeeting.scss';
 
@@ -19,10 +20,10 @@ export default function WebexInterstitialMeeting({meetingID}) {
   return (
     <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-interstitial-meeting`}>
       {meetingID ? (
-        <React.Fragment>
+        <>
           <WebexMeetingInfo className="interstitial-meeting-info" meetingID={meetingID} />
           <WebexLocalMedia meetingID={meetingID} />
-        </React.Fragment>
+        </>
       ) : (
         <Spinner />
       )}

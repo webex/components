@@ -1,10 +1,17 @@
 import React from 'react';
-import {startOfToday, startOfWeek, startOfYesterday, subDays} from 'date-fns';
+import {
+  startOfToday,
+  startOfWeek,
+  startOfYesterday,
+  subDays,
+} from 'date-fns';
 
 import TimeRuler, {formatTimeRulerText} from './TimeRuler';
 
 describe('Time Ruler', () => {
-  let today, yesterday, sunday;
+  let today;
+  let sunday;
+  let yesterday;
 
   beforeEach(() => {
     today = startOfToday(); // Mock date is set to Thu, Aug 1 2019 00:00
@@ -43,7 +50,7 @@ describe('Time Ruler', () => {
       expect(formatTimeRulerText(sunday)).toEqual('Sunday');
     });
 
-    test('formated date for dates older than a week', () => {
+    test('formatted date for dates older than a week', () => {
       expect(formatTimeRulerText(subDays(sunday, 2))).toEqual('07/26/2019');
     });
   });
