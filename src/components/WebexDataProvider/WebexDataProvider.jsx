@@ -1,7 +1,8 @@
+/* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const AdapterContext = React.createContext();
+import {AdapterContext} from '../hooks';
 
 export default function WebexDataProvider({adapter, children}) {
   return <AdapterContext.Provider value={adapter}>{children}</AdapterContext.Provider>;

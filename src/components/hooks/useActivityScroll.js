@@ -2,7 +2,7 @@ import {useContext, useEffect, useState} from 'react';
 import {empty, fromEvent} from 'rxjs';
 import {filter, flatMap} from 'rxjs/operators';
 
-import {AdapterContext} from '../../components/';
+import {AdapterContext} from './contexts';
 
 /**
  * Callback function to execute once data has been fetched.
@@ -45,7 +45,7 @@ export default function useActivityScroll(roomID, elementRef, callback) {
 
             return loadMoreItems;
           }),
-          flatMap(() => roomsAdapter.getPreviousRoomActivities(roomID))
+          flatMap(() => roomsAdapter.getPreviousRoomActivities(roomID)),
         )
         .subscribe((previousActivities) => {
           // Show loader for half second

@@ -3,7 +3,7 @@ import {storiesOf} from '@storybook/react';
 
 import jsonData from '../../data';
 import {WebexJSONAdapter} from '../../adapters';
-import {WebexDataProvider, WebexMeetingControl, WebexMeetingControls} from '../';
+import {WebexDataProvider, WebexMeetingControl, WebexMeetingControls} from '..';
 
 // Setup for the stories
 const stories = storiesOf('Webex Meeting Control', module);

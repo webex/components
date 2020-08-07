@@ -1,3 +1,5 @@
+export {AdapterContext, MeetingContext} from './contexts';
+
 export {default as useActivity} from './useActivity';
 export {default as useActivityScroll} from './useActivityScroll';
 export {default as useActivityStream} from './useActivityStream';

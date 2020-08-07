@@ -3,7 +3,7 @@ import {storiesOf} from '@storybook/react';
 
 import jsonData from '../../data';
 import {WebexJSONAdapter} from '../../adapters';
-import {WebexInterstitialMeeting, WebexDataProvider} from '../';
+import {WebexInterstitialMeeting, WebexDataProvider} from '..';
 
 // Setup for the stories
 const stories = storiesOf('Webex Interstitial Meeting', module);

@@ -14,7 +14,7 @@ describe('Webex Data Provider component', () => {
     const component = shallow(
       <WebexDataProvider adapter={adapter}>
         <div className="test" />
-      </WebexDataProvider>
+      </WebexDataProvider>,
     );
 
     expect(component).toMatchSnapshot();

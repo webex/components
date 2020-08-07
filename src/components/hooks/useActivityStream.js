@@ -1,6 +1,6 @@
 import {useContext, useEffect, useReducer} from 'react';
 
-import {AdapterContext} from '../../components/';
+import {AdapterContext} from './contexts';
 
 export const PREPEND_ACTIVITIES = 'prepend_activities';
 export const APPEND_ACTIVITIES = 'append_activities';

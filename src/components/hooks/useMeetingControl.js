@@ -1,6 +1,6 @@
 import {useContext, useEffect, useState} from 'react';
 
-import {AdapterContext, MeetingContext} from '../../components/';
+import {AdapterContext, MeetingContext} from './contexts';
 
 /**
  * Custom hook that returns the display state of the requested meeting control.

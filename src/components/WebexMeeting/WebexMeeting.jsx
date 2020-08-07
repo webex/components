@@ -1,12 +1,14 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {Spinner} from '@momentum-ui/react';
 
+import WebexInMeeting from '../WebexInMeeting/WebexInMeeting';
+import WebexInterstitialMeeting from '../WebexInterstitialMeeting/WebexInterstitialMeeting';
+import WebexMeetingControl from '../WebexMeetingControl/WebexMeetingControl';
+import WebexMeetingControls from '../WebexMeetingControl/WebexMeetingControls';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import {useMeetingDestination} from '../hooks';
-
-import {WebexInMeeting, WebexInterstitialMeeting, WebexMeetingControl, WebexMeetingControls} from '..';
 
 import './WebexMeeting.scss';
 
@@ -27,17 +29,21 @@ export default function WebexMeeting({meetingDestination, controls}) {
     [`${classBaseName}-active`]: ID && isActive,
   };
 
-  const meetingControls = controls(isActive).map((key) => <WebexMeetingControl key={key} type={key} />);
+  const meetingControls = controls(isActive).map(
+    (key) => <WebexMeetingControl key={key} type={key} />,
+  );
 
   return (
     <div className={classNames(mainClasses)}>
       {ID ? (
-        <Fragment>
-          {isActive ? <WebexInMeeting meetingID={ID} /> : <WebexInterstitialMeeting meetingID={ID} />}
+        <>
+          {isActive
+            ? <WebexInMeeting meetingID={ID} />
+            : <WebexInterstitialMeeting meetingID={ID} />}
           <WebexMeetingControls className="meeting-controls-container" meetingID={ID}>
             {meetingControls}
           </WebexMeetingControls>
-        </Fragment>
+        </>
       ) : (
         <Spinner />
       )}

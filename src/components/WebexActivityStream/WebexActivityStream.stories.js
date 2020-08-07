@@ -3,7 +3,7 @@ import {storiesOf} from '@storybook/react';
 
 import jsonData from '../../data';
 import {WebexJSONAdapter} from '../../adapters';
-import {WebexActivityStream, WebexDataProvider} from '../';
+import {WebexActivityStream, WebexDataProvider} from '..';
 
 // Setup for the stories
 const stories = storiesOf('Webex Activity Stream', module);

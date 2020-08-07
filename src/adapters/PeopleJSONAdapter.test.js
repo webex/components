@@ -1,8 +1,9 @@
-import people from './../data/people';
+import people from '../data/people.json';
 import PeopleJSONAdapter from './PeopleJSONAdapter';
 
 describe('People JSON Adapter Interface', () => {
-  let peopleJSONAdapter, personID;
+  let personID;
+  let peopleJSONAdapter;
 
   beforeEach(() => {
     [personID] = Object.keys(people);
@@ -38,7 +39,7 @@ describe('People JSON Adapter Interface', () => {
         (error) => {
           expect(error.message).toBe(`Could not find person with ID "${wrongPersonID}"`);
           done();
-        }
+        },
       );
     });
 
@@ -49,7 +50,7 @@ describe('People JSON Adapter Interface', () => {
         () => {
           expect(true).toBeTruthy();
           done();
-        }
+        },
       );
     });
   });

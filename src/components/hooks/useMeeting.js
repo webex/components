@@ -1,6 +1,6 @@
 import {useEffect, useContext, useState} from 'react';
 
-import {AdapterContext} from '../../components/';
+import {AdapterContext} from './contexts';
 
 /**
  * Custom hook that returns meeting data of the given ID.
@@ -42,7 +42,9 @@ export default function useMeeting(meetingID) {
       setMeeting(emptyMeeting);
     };
 
-    const subscription = meetingsAdapter.getMeeting(meetingID).subscribe(onMeeting, onError, onComplete);
+    const subscription = meetingsAdapter
+      .getMeeting(meetingID)
+      .subscribe(onMeeting, onError, onComplete);
 
     return () => {
       subscription.unsubscribe();

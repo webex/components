@@ -1,7 +1,7 @@
 import {useEffect, useContext, useState} from 'react';
 import {concatMap} from 'rxjs/operators';
 
-import {AdapterContext} from '../../components/';
+import {AdapterContext} from './contexts';
 
 /**
  * Custom hook that returns meeting data of a newly created meeting

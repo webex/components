@@ -1,12 +1,20 @@
 import React from 'react';
-import {addDays, addHours, startOfToday, startOfWeek, startOfYesterday, subDays} from 'date-fns';
+import {
+  addDays,
+  addHours,
+  startOfToday,
+  startOfWeek,
+  startOfYesterday,
+  subDays,
+} from 'date-fns';
 
 import ActivityHeader, {formatMessageDate} from './ActivityHeader';
 
 jest.mock('../hooks/usePerson');
 
 describe('Activity Header', () => {
-  let today, sunday;
+  let today;
+  let sunday;
 
   beforeEach(() => {
     today = startOfToday(); // Mock date is set to Thu, Aug 1 2019 00:00

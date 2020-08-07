@@ -1,6 +1,6 @@
 import React from 'react';
 
-import WebexInMeeting from '../WebexInMeeting/WebexInMeeting';
+import WebexInMeeting from './WebexInMeeting';
 
 jest.mock('../hooks/useMeeting');
 
