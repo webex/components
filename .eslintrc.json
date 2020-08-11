@@ -7,9 +7,14 @@
   "parserOptions": {
     "sourceType": "module"
   },
+  "plugins": [
+    "jest"
+  ],
   "extends": [
     "airbnb",
-    "airbnb/hooks"
+    "airbnb/hooks",
+    "plugin:jest/recommended",
+    "plugin:jest/style"
   ],
   "globals": {
     "rxjs": "readonly",
@@ -75,6 +80,7 @@
         "*.test.js"
       ],
       "rules": {
+        "jest/no-test-callback": "off",
         "react/jsx-filename-extension": "off"
       }
     },
