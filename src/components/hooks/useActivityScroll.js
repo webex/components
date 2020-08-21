@@ -4,6 +4,14 @@ import {filter, flatMap} from 'rxjs/operators';
 
 import {AdapterContext} from './contexts';
 
+// TODO: Figure out how to import JS Doc definitions and remove duplication.
+/**
+ * An activity that should be displayed as a time ruler.
+ *
+ * @external ActivityDate
+ * @see {@link https://github.com/webex/component-adapter-interfaces/blob/master/src/RoomsAdapter.js#L16}
+ */
+
 /**
  * Callback function to execute once data has been fetched.
  *
@@ -11,8 +19,6 @@ import {AdapterContext} from './contexts';
  * @param {Array.<string|ActivityDate>} previousActivities Array of previous activities fetched.
  * @returns undefined
  */
-
-/**
 
 /**
  * Custom hook returns a loading state to indicate when data is being fetched,

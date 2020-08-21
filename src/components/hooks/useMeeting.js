@@ -2,6 +2,15 @@ import {useEffect, useContext, useState} from 'react';
 
 import {AdapterContext} from './contexts';
 
+// TODO: Figure out how to import JS Doc definitions and remove duplication.
+/**
+ * A video conference in Webex over WebRTC.
+ *
+ * @external Meeting
+ * @see {@link https://github.com/webex/component-adapter-interfaces/blob/master/src/MeetingsAdapter.js#L20}
+ * @see {@link https://webrtc.org}
+ */
+
 /**
  * Custom hook that returns meeting data of the given ID.
  *

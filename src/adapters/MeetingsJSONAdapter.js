@@ -6,7 +6,7 @@ import {
 } from 'rxjs/operators';
 import {MeetingsAdapter, MeetingControlState} from '@webex/component-adapter-interfaces';
 
-// Defined meeting controls in Meetings JSON Adapter
+// Meeting control names
 export const MUTE_AUDIO_CONTROL = 'mute-audio';
 export const MUTE_VIDEO_CONTROL = 'mute-video';
 export const SHARE_CONTROL = 'share-screen';
@@ -15,40 +15,67 @@ export const LEAVE_CONTROL = 'leave-meeting';
 export const DISABLED_MUTE_AUDIO_CONTROL = 'disabled-mute-audio';
 export const DISABLED_JOIN_CONTROL = 'disabled-join-meeting';
 
+// TODO: Figure out how to import JS Doc definitions and remove duplication.
+/**
+ * A video conference in Webex over WebRTC.
+ *
+ * @external Meeting
+ * @see {@link https://github.com/webex/component-adapter-interfaces/blob/master/src/MeetingsAdapter.js#L20}
+ * @see {@link https://webrtc.org}
+ */
+
+// TODO: Figure out how to import JS Doc definitions and remove duplication.
+/**
+ * Display options of a meeting control.
+ *
+ * @external MeetingControlDisplay
+ * @see {@link https://github.com/webex/component-adapter-interfaces/blob/master/src/MeetingsAdapter.js#L58}
+ */
+
+/**
+ * Settings that specify what kind of tracks should be included in a media stream.
+ *
+ * @external MediaStreamConstraints
+ * @see MediaStream
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamConstraints}
+ */
+
 /**
  * @typedef MeetingsJSON
- * @param {object} datasource An object that contains a set of meetings keyed by ID.
+ * @param {object} datasource An object that contains meetings keyed by ID
  * @example
  * {
- *  "meeting-1": {
+ *   "meeting-1": {
  *     "ID": "meeting-1",
- *     "title": "Meeting Title",
- *     "startTime": "2019-08-20T21:00:00.000Z",
- *     "endTime": "2019-08-20T22:00:00.000Z",
- *     "localVideo": {},
- *     "remoteVideo": {},
+ *     "title": "Development Standup",
  *     "localAudio": {},
+ *     "localVideo": {},
+ *     "localShare": null,
  *     "remoteAudio": {},
- *     "localShare": {},
+ *     "remoteVideo": {},
  *     "remoteShare": {}
- *  }
+ *   },
+ *   "meeting-2": {
+ *     "ID": "meeting-2",
+ *     "title": "Sprint Demos",
+ *     "localAudio": {},
+ *     "localVideo": {},
+ *     "localShare": {},
+ *     "remoteAudio": {},
+ *     "remoteVideo": {},
+ *     "remoteShare": {}
+ *   }
  * }
  */
 
 /**
- * Implements the MeetingsAdapter interface with a JSON object as its datasource.
+ * `MeetingsJSONAdapter` is an implementation of the `MeetingsAdapter` interface.
+ * This implementation utilizes a JSON object as its source of meeting data.
  *
- * @see {@link MeetingsJSON} for example datasource.
- * @class
+ * @see {@link MeetingsJSON}
  * @implements {MeetingsAdapter}
  */
 export default class MeetingsJSONAdapter extends MeetingsAdapter {
-  /**
-   * Creates a new MeetingJSONAdapter.
-   *
-   * @param {object} datasource An object that contains a set of meetings keyed by ID.
-   * @hideconstructor
-   */
   constructor(datasource) {
     super(datasource);
 
@@ -99,13 +126,11 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
 
   /**
    * Creates a meeting for the given destination.
-   * Returns an observable that emits a Meeting object with the data from the newly
-   * created meeting.
-   * Observable completes after emitting data.
+   * Returns an observable that emits a Meeting object with the data from the newly created meeting.
+   * Observable completes after meeting is created and data is emitted.
    *
-   * @param {string} destination  Virtual location where the meeting should take place.
-   * @returns {Observable.<Meeting>}
-   * @memberof MeetingsAdapter
+   * @param {string} destination  Virtual location where the meeting should take place
+   * @returns {Observable.<Meeting>} Observable that emits data of the newly created meeting
    */
   createMeeting(destination) {
     return Observable.create((observer) => {
@@ -120,13 +145,16 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   }
 
   /**
-   * Returns an observable that emits a Meeting object.
-   * Whenever there is an update to the meeting, the observable
-   * will emit a new updated Meeting object, if datasource permits.
+   * Returns an observable that emits data of a meeting of the given ID.
+   * Observable will complete once the current user leaves the meeting.
+   * The observable will emit whenever there is a change in the meeting.
+   * Changes observed:
+   * - Initial data request
+   * - Screen hare/unshare
+   * - Audio & video mute/unmute
    *
-   * @param {string} ID  ID of the meeting to get.
-   * @returns {Observable.<Meeting>}
-   * @memberof MeetingsJSONAdapter
+   * @param {string} ID  ID of the meeting to get
+   * @returns {Observable.<Meeting>} Observable that emits data of the given ID
    */
   getMeeting(ID) {
     const end$ = new Subject();
@@ -200,9 +228,11 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   }
 
   /**
-   * Returns a MediaStream object obtained from user local media.
-   * @param {MediaStreamConstraints} constraints  an object specifying the types of the media to request
-   * @returns {MediaStream}
+   * Returns a promise to a MediaStream object obtained from the user's browser.
+   *
+   * @param {MediaStreamConstraints} constraints  Object specifying media settings
+   * @returns {Promise.<MediaStream>} Media stream that matches given constraints
+   * @private
    */
   // eslint-disable-next-line class-methods-use-this
   async getStream(constraints) {
@@ -228,10 +258,9 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   }
 
   /**
-   * Returns a promise to a MediaStream object that captures the contents of a user local display.
+   * Returns a promise to a MediaStream object that captures the contents of a user display.
    *
-   * @returns {Promise.<MediaStream>}
-   * @memberof MeetingJSONAdapter
+   * @returns {Promise.<MediaStream>} Media stream that captures display
    * @private
    */
   // eslint-disable-next-line class-methods-use-this
@@ -252,8 +281,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * Toggles muting the local audio media stream track.
    * Used by "mute-audio" meeting control.
    *
-   * @param {string} ID  ID of the meeting for which to mute local audio.
-   * @memberof MeetingsJSONAdapter
+   * @param {string} ID  ID of the meeting for which to mute local audio
    * @private
    */
   async toggleMuteAudio(ID) {
@@ -274,8 +302,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * Toggles muting the local audio media stream track.
    * Used by "mute-video" meeting control.
    *
-   * @param {string} ID  ID of the meeting for which to mute local audio.
-   * @memberof MeetingsJSONAdapter
+   * @param {string} ID  ID of the meeting for which to mute local video
    * @private
    */
   async toggleMuteVideo(ID) {
@@ -293,11 +320,10 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   }
 
   /**
-   * Join the meeting by adding streams to the remote media
+   * Joins the meeting by adding remote media streams.
    * Used by "join-meeting" meeting control.
    *
-   * @param {string} ID  ID of the meeting for which to mute local audio.
-   * @memberof MeetingsJSONAdapter
+   * @param {string} ID  ID of the meeting for which to join
    * @private
    */
   async joinMeeting(ID) {
@@ -312,11 +338,10 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   }
 
   /**
-   * Join the meeting by removing the remote media
+   * Leaves the meeting and removes the remote media streams.
    * Used by "leave-meeting" meeting control.
    *
-   * @param {string} ID  ID of the meeting for which to mute local audio.
-   * @memberof MeetingsJSONAdapter
+   * @param {string} ID  ID of the meeting for which to leave
    * @private
    */
   leaveMeeting(ID) {
@@ -331,11 +356,10 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   }
 
   /**
-   * Returns an observable that emits the display data of a meeting control.
+   * Returns an observable that emits the display data of the audio mute control.
    *
    * @param {string} ID ID of the meeting for which to update display
-   * @returns {Observable.<MeetingControlDisplay>}
-   * @memberof MeetingJSONAdapter
+   * @returns {Observable.<MeetingControlDisplay>} Observable that emits control display data
    * @private
    */
   muteAudioControl(ID) {
@@ -373,11 +397,10 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   }
 
   /**
-   * Returns an observable that emits the display data of a meeting control.
+   * Returns an observable that emits the display data of the video mute control.
    *
    * @param {string} ID ID of the meeting for which to update display
-   * @returns {Observable.<MeetingControlDisplay>}
-   * @memberof MeetingJSONAdapter
+   * @returns {Observable.<MeetingControlDisplay>} Observable that emits control display data
    * @private
    */
   muteVideoControl(ID) {
@@ -417,11 +440,9 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   }
 
   /**
-   * Returns an observable that emits the display data of a meeting control.
+   * Returns an observable that emits the display data of the join meeting control.
    *
-   * @param {string} ID ID of the meeting for which to update display
-   * @returns {Observable.<MeetingControlDisplay>}
-   * @memberof MeetingJSONAdapter
+   * @returns {Observable.<MeetingControlDisplay>} Observable that emits control display data
    * @private
    */
   // eslint-disable-next-line class-methods-use-this
@@ -439,11 +460,9 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   }
 
   /**
-   * Returns an observable that emits the display data of a meeting control.
+   * Returns an observable that emits the display data of the leave meeting control.
    *
-   * @param {string} ID ID of the meeting for which to update display
-   * @returns {Observable.<MeetingControlDisplay>}
-   * @memberof MeetingJSONAdapter
+   * @returns {Observable.<MeetingControlDisplay>} Observable that emits control display data
    * @private
    */
   // eslint-disable-next-line class-methods-use-this
@@ -463,9 +482,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   /**
    * Returns an observable that emits the display data of a disabled meeting control.
    *
-   * @param {string} ID ID of the meeting for which to update display
-   * @returns {Observable.<MeetingControlDisplay>}
-   * @memberof MeetingJSONAdapter
+   * @returns {Observable.<MeetingControlDisplay>} Observable that emits control display data
    * @private
    */
   // eslint-disable-next-line class-methods-use-this
@@ -483,10 +500,9 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   }
 
   /**
-   * Handles the starting and stopping of the local screen capture media stream.
+   * Handles the starting and stopping of the local screen share.
    *
    * @param {string} ID ID of the meeting for which to update display
-   * @memberof MeetingJSONAdapter
    * @private
    */
   async handleLocalShare(ID) {
@@ -512,11 +528,10 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   }
 
   /**
-   * Returns an observable that emits the display data of a meeting control.
+   * Returns an observable that emits the display data of the share screen control.
    *
    * @param {string} ID ID of the meeting for which to update display
-   * @returns {Observable.<MeetingControlDisplay>}
-   * @memberof MeetingJSONAdapter
+   * @returns {Observable.<MeetingControlDisplay>} Observable that emits control display data
    * @private
    */
   shareControl(ID) {
@@ -556,9 +571,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   /**
    * Returns an observable that emits the display data of a disabled meeting control.
    *
-   * @param {string} ID ID of the meeting for which to update display
-   * @returns {Observable.<MeetingControlDisplay>}
-   * @memberof MeetingJSONAdapter
+   * @returns {Observable.<MeetingControlDisplay>} Observable that emits control display data
    * @private
    */
   // eslint-disable-next-line class-methods-use-this

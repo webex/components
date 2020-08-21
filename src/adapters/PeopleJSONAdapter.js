@@ -1,40 +1,63 @@
 import {PeopleAdapter} from '@webex/component-adapter-interfaces';
 import {Observable} from 'rxjs';
 
+// TODO: Figure out how to import JS Doc definitions and remove duplication.
+/**
+ * A Webex user.
+ *
+ * @external Person
+ * @see {@link https://github.com/webex/component-adapter-interfaces/blob/master/src/PeopleAdapter.js#L6}
+ */
+
 /**
  * @typedef PeopleJSON
- * @param {object} datasource An object that contains a set of people keyed by ID.
+ * @param {object} datasource An object that contains people keyed by ID.
  * @example
  * {
- *   "userid-1": {
- *     "ID": "userid-1",
+ *   "user-1": {
+ *     "ID": "user-1",
  *     "emails": [
- *       "webexcmps@gmail.com"
+ *       "barbara.german@acme.com"
  *     ],
- *     "displayName": "Webex Component User",
- *     "firstName": "Webex",
- *     "lastName": "Component User",
- *     "nickName": "Webex",
- *     "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~697607d5347442a990719dd5d80ce379~1600",
- *     "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
- *     "status": "unknown"
- *    }
+ *     "displayName": "Barbara German",
+ *     "firstName": "Barbara",
+ *     "lastName": "German",
+ *     "nickName": "",
+ *     "avatar": "<URL to avatar>",
+ *     "orgID": "",
+ *     "status": null
+ *   },
+ *   "user-2": {
+ *     "ID": "user-2",
+ *     "emails": [
+ *       "giacomo.drago@acme.com"
+ *     ],
+ *     "displayName": "Giacomo Drago",
+ *     "firstName": "Giacomo",
+ *     "lastName": "Drago",
+ *     "nickName": "",
+ *     "avatar": "<URL to avatar>",
+ *     "orgID": "",
+ *     "status": "active"
+ *   }
  * }
  */
 
 /**
- * Implements the PeopleAdapter interface with a JSON object as its datasource.
+ * `PersonJSONAdapter` is an implementation of the `PeopleAdapter` interface.
+ * This implementation utilizes a JSON object as its source of people data.
  *
- * @see {@link PeopleJSON} for example datasource.
- * @class
+ * @see {@link PeopleJSON}
  * @implements {PeopleAdapter}
  */
 export default class PeopleJSONAdapter extends PeopleAdapter {
   /**
-   * Returns an observable that emits person data of the default user.
+   * Returns an observable that emits person data of the current user.
+   * Once the data is emitted, the observable completes.
+   * To listen for data updates, `getMe()` should be concatenated with `getPerson()`.
    *
-   * @returns {Observable.<Person>}
-   * @memberof PeopleJSONAdapter
+   * @see {@link getPerson}
+   * @returns {Observable.<Person>} Observable that emits data of the "current" user
    */
   getMe() {
     const defaultUserID = 'default';
@@ -47,10 +70,10 @@ export default class PeopleJSONAdapter extends PeopleAdapter {
 
   /**
    * Returns an observable that emits person data of the given ID.
+   * For this implementation, once the data is emitted, the observable completes.
    *
    * @param {string} ID ID of person to get
-   * @returns {Observable.<Person>}
-   * @memberof PeopleJSONAdapter
+   * @returns {Observable.<Person>} Observable that emits data of the given person ID
    */
   getPerson(ID) {
     return Observable.create((observer) => {

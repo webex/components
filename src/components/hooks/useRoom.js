@@ -1,6 +1,12 @@
 import {useEffect, useContext, useState} from 'react';
 
 import {AdapterContext} from './contexts';
+/**
+ * A virtual space where people can collaborate in Webex.
+ *
+ * @external Room
+ * @see {@link https://github.com/webex/component-adapter-interfaces/blob/master/src/RoomsAdapter.js#L7}
+ */
 
 /**
  * Custom hook that returns room data of the given ID.

@@ -2,6 +2,14 @@ import {useContext, useEffect, useState} from 'react';
 
 import {AdapterContext, MeetingContext} from './contexts';
 
+// TODO: Figure out how to import JS Doc definitions and remove duplication.
+/**
+ * Display options of a meeting control.
+ *
+ * @external MeetingControlDisplay
+ * @see {@link https://github.com/webex/component-adapter-interfaces/blob/master/src/MeetingsAdapter.js#L58}
+ */
+
 /**
  * Custom hook that returns the display state of the requested meeting control.
  *

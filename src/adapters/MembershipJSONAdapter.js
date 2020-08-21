@@ -1,36 +1,54 @@
+import {MembershipsAdapter} from '@webex/component-adapter-interfaces';
 import {Observable} from 'rxjs';
 
+// TODO: Figure out how to import JS Doc definitions and remove duplication.
 /**
- * @typedef MembershipJSON
- * @param {object} datasource An object that maps meeting/space "locations" (some unique identifier) to
- * an array of member objects
+ * A relationship between a destination (e.g. room, meeting) in Webex and people.
+ *
+ * @external Membership
+ * @see {@link https://github.com/webex/component-adapter-interfaces/blob/master/src/MembershipsAdapter.js#L6}
+ */
+
+// TODO: Figure out how to import JS Doc definitions and remove duplication.
+/**
+ * Enum for types of destinations.
+ *
+ * @external DestinationType
+ * @see {@link https://github.com/webex/component-adapter-interfaces/blob/master/src/MembershipsAdapter.js#L21}
+ */
+
+/**
+ * @typedef MembershipsJSON
+ * @param {object} datasource An object that contains memberships keyed by ID
  * @example
  * {
- *   "default_membership": {
- *   "ID": "default",
- *   "destinationID": "",
- *   "members": [{"personID": "default"}, {"personID": "self"}, {"personID": "call"}, {"personID": "presenting"}]
+ *   "membership-1": {
+ *     "ID": "membership-1",
+ *     "destinationID": "room-3",
+ *     "destinationType": "room"
+ *     "members": [
+ *       {"personID": "person-1"},
+ *       {"personID": "person-2"},
+ *       {"personID": "person-5"},
+ *     ]
+ *   }
  * }
-}
-
  */
 
 /**
- * @see {@link MemberJSON}
- * @class
+ * `MembershipsJSONAdapter` is an implementation of the `MembershipAdapter` interface.
+ * The implementation utilizes a JSON object as its source of membership data.
+ *
+ * @see {@link MembershipsJSON}
+ * @implements {MembershipsAdapter}
  */
-export default class MembershipJSONAdapter {
+export default class MembershipJSONAdapter extends MembershipsAdapter {
   /**
-   * @param {object} datasource An object that maps meeting/space "locations" (some unique identifier) to
-   * an array of member objects
-   */
-  constructor(datasource) {
-    this.datasource = datasource;
-  }
-
-  /**
+   * Returns an observable that emits membership data for the given destination.
+   * For this implementation, once the data is emitted, the observable completes.
+   *
    * @param {string} destinationID A unique identifier for a meeting/space location
-   * @returns {Observable.<Membership>}
+   * @returns {Observable.<Membership>} Observable that emits data of the given ID
    */
   getMembers(destinationID) {
     return Observable.create((observer) => {
