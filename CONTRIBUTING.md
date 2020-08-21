@@ -49,7 +49,7 @@ We take testing very seriously, all code changes must include unit, integration 
 - **End-to-end**: Tests the application in a system
 
 ### Code Style
-Code style is enforced by [linters](https://eslint.org). Use `npm run test:eslint` to verify that your code is beautiful, too!
+Code style is enforced by [linters](https://eslint.org). Use `npm run linter` to verify that your code is beautiful, too!
 We highly discourage disabling eslint rules.
 Unless there is an exceptional use case, we may request additional changes to your PR.
 

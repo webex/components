@@ -5,7 +5,7 @@
   "module": "dist/webexComponents.esm.js",
   "scripts": {
     "build": "rollup -c",
-    "test:eslint": "eslint src/",
+    "linter": "eslint src/",
     "release": "semantic-release",
     "release:debug": "semantic-release --debug",
     "release:dry-run": "semantic-release --dry-run",
@@ -130,7 +130,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test:eslint",
+      "pre-commit": "npm run linter",
       "pre-push": "npm run test",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
