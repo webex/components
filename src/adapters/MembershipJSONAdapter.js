@@ -48,15 +48,20 @@ export default class MembershipJSONAdapter extends MembershipsAdapter {
    * For this implementation, once the data is emitted, the observable completes.
    *
    * @param {string} destinationID A unique identifier for a meeting/space location
+   * @param {DestinationType} destinationType Type of destination of the membership
    * @returns {Observable.<Membership>} Observable that emits data of the given ID
    */
-  getMembers(destinationID) {
+  getMembers(destinationID, destinationType) {
     return Observable.create((observer) => {
-      if (this.datasource[destinationID]) {
-        observer.next(this.datasource[destinationID]);
+      const data = this.datasource[destinationID];
+
+      if (data && data.destinationType === destinationType) {
+        observer.next(data);
       } else {
         observer.error(new Error(`Could not find members for destination "${destinationID}"`));
       }
+
+      observer.complete();
     });
   }
 }
