@@ -4,6 +4,13 @@ import {PersonStatus} from '@webex/component-adapter-interfaces';
 import {AdapterContext} from './contexts';
 
 /**
+ * A Webex user.
+ *
+ * @external Person
+ * @see {@link https://github.com/webex/component-adapter-interfaces/blob/master/src/PeopleAdapter.js#L6}
+ */
+
+/**
  * Custom hook that returns person data of the given ID.
  *
  * @param {string} personID  ID of the person for which to return data.

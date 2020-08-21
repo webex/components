@@ -8,13 +8,15 @@
     "sourceType": "module"
   },
   "plugins": [
-    "jest"
+    "jest",
+    "jsdoc"
   ],
   "extends": [
     "airbnb",
     "airbnb/hooks",
     "plugin:jest/recommended",
-    "plugin:jest/style"
+    "plugin:jest/style",
+    "plugin:jsdoc/recommended"
   ],
   "globals": {
     "rxjs": "readonly",
@@ -91,6 +93,14 @@
       "rules": {
         "import/no-extraneous-dependencies": "off",
         "react/jsx-filename-extension": "off"
+      }
+    },
+    {
+      "files": [
+        "**/__mocks__/**"
+      ],
+      "rules": {
+       "jsdoc/require-jsdoc": "off"
       }
     }
   ]

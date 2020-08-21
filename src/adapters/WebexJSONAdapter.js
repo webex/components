@@ -4,18 +4,12 @@ import MembershipJSONAdapter from './MembershipJSONAdapter';
 import PeopleJSONAdapter from './PeopleJSONAdapter';
 import RoomsJSONAdapter from './RoomsJSONAdapter';
 
+/**
+ * Entry point for the JSON component adapter.
+ *
+ * @param {object} datasource JSON object that contains all component data
+ */
 export default class WebexJSONAdapter {
-  /**
-   * Creates a new instance of the WebexAdapter.
-   * The primary datasource model comes from the following structure:
-   * WebexJSONAdapter = {
-   *  activitiesJSONAdapter: activitiesData,
-   *  peopleJSONAdapter: peopleData,
-   *  roomsJSONAdapter: roomsData
-   * }
-   *
-   * @param {Object} datasource The primary datasource the json adapter will be using.
-   */
   constructor(datasource) {
     this.activitiesAdapter = new ActivitiesJSONAdapter(datasource.activities);
     this.meetingsAdapter = new MeetingsJSONAdapter(datasource.meetings);

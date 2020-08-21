@@ -2,6 +2,14 @@ import {useEffect, useContext, useState} from 'react';
 
 import {AdapterContext} from './contexts';
 
+// TODO: Figure out how to import JS Doc definitions and remove duplication.
+/**
+ * A Webex user.
+ *
+ * @external Person
+ * @see {@link https://github.com/webex/component-adapter-interfaces/blob/master/src/PeopleAdapter.js#L6}
+ */
+
 /**
  * Custom hook that returns person data of the current user.
  *
