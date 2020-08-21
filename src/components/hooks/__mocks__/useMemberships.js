@@ -1,6 +1,6 @@
 import {useContext} from 'react';
 
-export default function useParticipants(membershipID) {
+export default function useMemberships(membershipID) {
   const datasource = useContext();
   let participants = {...datasource.membershipsAdapter[membershipID]};
 

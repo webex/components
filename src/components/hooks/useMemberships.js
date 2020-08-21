@@ -10,24 +10,24 @@ import {AdapterContext} from './contexts';
  */
 
 /**
- * Custom hook that returns a list of participant IDs given a membership ID.
+ * Custom hook that returns a list of member IDs given a membership ID.
  *
- * @param {string} membershipID  ID of the room/meeting that contains the participants
+ * @param {string} membershipID  ID of the room/meeting that contains the memberships
  * @returns {Array.<Person>} List of the person IDs from the participants
  */
-export default function useParticipants(membershipID) {
-  const [participants, setParticipants] = useState([]);
+export default function useMemberships(membershipID) {
+  const [members, setMembers] = useState([]);
   const {membershipsAdapter} = useContext(AdapterContext);
 
   useEffect(() => {
     const onError = (error) => {
-      setParticipants([]);
+      setMembers([]);
 
       // eslint-disable-next-line no-console
       console.error(error.message);
     };
     const onMembers = (data) => {
-      setParticipants([...data.members]);
+      setMembers([...data.members]);
     };
 
     const subscription = membershipsAdapter.getMembers(membershipID).subscribe(onMembers, onError);
@@ -37,5 +37,5 @@ export default function useParticipants(membershipID) {
     };
   }, [membershipsAdapter, membershipID]);
 
-  return participants;
+  return members;
 }

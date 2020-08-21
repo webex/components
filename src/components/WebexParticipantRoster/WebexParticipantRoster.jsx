@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {List} from '@momentum-ui/react';
 
 import WebexParticipant from '../WebexParticipant/WebexParticipant';
-import useParticipants from '../hooks/useParticipants';
+import useMemberships from '../hooks/useMemberships';
 
 /**
  * Displays the roster of Webex meeting or room participants.
@@ -13,7 +13,7 @@ import useParticipants from '../hooks/useParticipants';
  * @returns {object} JSX of the component
  */
 export default function WebexParticipantRoster({destination}) {
-  const participants = useParticipants(destination);
+  const participants = useMemberships(destination);
 
   const participantList = participants.map((participant) => (
     <WebexParticipant key={participant.personID} personID={participant.personID} />
