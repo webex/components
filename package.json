@@ -1,8 +1,8 @@
 {
   "name": "@webex/components",
   "version": "1.42.3",
-  "main": "dist/webexComponents.esm.js",
-  "module": "dist/webexComponents.esm.js",
+  "browser": "dist/webex-components.es.min.js",
+  "module": "dist/webex-components.es.min.js",
   "scripts": {
     "build": "rollup -c",
     "linter": "eslint src/",
@@ -29,6 +29,8 @@
   "author": "devsupport@webex.com",
   "license": "MIT",
   "peerDependencies": {
+    "@babel/runtime": "^7.11.2",
+    "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "rxjs": "^6.5.4"
@@ -38,16 +40,19 @@
     "@momentum-ui/react": "23.15.3",
     "@webex/component-adapter-interfaces": "^1.11.0",
     "classnames": "^2.2.6",
-    "date-fns": "^2.6.0",
-    "prop-types": "^15.7.2"
+    "date-fns": "^2.6.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.5",
-    "@babel/plugin-transform-runtime": "^7.10.5",
-    "@babel/preset-env": "^7.10.4",
+    "@babel/core": "^7.11.4",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
     "@commitlint/cli": "^9.1.1",
     "@commitlint/config-conventional": "^9.1.1",
+    "@rollup/plugin-babel": "^5.2.0",
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
     "@storybook/react": "^5.1.9",
@@ -69,14 +74,12 @@
     "jest": "^26.1.0",
     "jest-junit": "^11.0.1",
     "mockdate": "^3.0.2",
-    "node-sass": "^4.12.0",
+    "node-sass": "~4.12.0",
     "rimraf": "^3.0.2",
-    "rollup": "^1.17.0",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-commonjs": "^10.0.1",
-    "rollup-plugin-json": "^4.0.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-scss": "^1.0.2",
+    "rollup": "^2.26.4",
+    "rollup-plugin-scss": "^2.6.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "rollup-plugin-visualizer": "^4.1.0",
     "rxjs": "^6.5.4",
     "sass-loader": "^8.0.2",
     "sass-resources-loader": "^2.0.1",
@@ -157,8 +160,8 @@
         {
           "assets": [
             {
-              "path": "dist/webexComponents.esm.js",
-              "label": "ECMAScript (ESM) bundle"
+              "path": "dist/webex-components.es.min.js",
+              "label": "ECMAScript (ESM) minified bundle"
             }
           ]
         }

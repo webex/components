@@ -35,7 +35,7 @@ We use [Storybook](https://storybook.js.org) to showcase all supported component
 ## Install
 
 ```bash
-npm install --save @webex/components rxjs
+npx install-peerdeps @webex/components
 ```
 
 ## Usage
@@ -43,7 +43,7 @@ npm install --save @webex/components rxjs
 ### Styles
 
 In order to properly style Webex Components, we need to import all the fonts, icons, images and core _CSS_ manually.
-Import `@webex/components/dist/webexComponents.css` into your main entry file.
+Import `@webex/components/dist/webex-components.css` into your main entry file.
 
 There are two ways to do this:
 
@@ -52,7 +52,7 @@ There are two ways to do this:
 In your `index.js`, add the following import:
 
 ```js
-import '@webex/components/dist/webexComponents.css';
+import '@webex/components/dist/webex-components.css';
 ...
 ```
 
@@ -63,7 +63,7 @@ In the `<head>` of your `index.html`, add the following import:
 ```html
 <head>
   ...
-  <link rel="stylesheet" type="text/css" href="node_modules/@webex/components/dist/webexComponents.css" />
+  <link rel="stylesheet" type="text/css" href="node_modules/@webex/components/dist/webex-components.css" />
 </head>
 ```
 
@@ -91,7 +91,7 @@ We also are working on offering [an adapter](https://github.com/webex/sdk-compon
 Putting everything together - styles, adapters and components - this is a simple example of how using a component would look like:
 
 ```js
-import '@webex/components/dist/webexComponents.css';
+import '@webex/components/dist/webex-components.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
