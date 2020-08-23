@@ -124,24 +124,6 @@ Here are some [guidelines](https://github.com/webex/components/blob/master/CONTR
 Please open an [issue](https://github.com/webex/components/issues) and we will get to it in an orderly manner.
 Please leave as much as information as possible for a better understanding.
 
-### Release Process
-
-There is a list of commit types provided [here](https://github.com/webex/components/blob/master/CONTRIBUTING.md#type). However, not all commits trigger our release process.
-We are using [semantic-release](https://github.com/semantic-release/semantic-release) to fully automate the version management and package publishing.
-By default `semantic-release` uses the [Angular Commit Message Conventions](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines) and triggers release and publishing based on the following rules:
-
-| Commit                             | Release type  |
-| ---------------------------------- | ------------- |
-| Commit with type `BREAKING CHANGE` | Major release |
-| Commit with type `feat`            | Minor release |
-| Commit with type `fix`             | Patch release |
-| Commit with type `perf`            | Patch release |
-
-#### Commit linter
-
-We are using [commitlint](https://github.com/conventional-changelog/commitlint) to lintify the commit messages.
-Please make sure to choose the appropriate commit [type](https://github.com/webex/components/blob/master/CONTRIBUTING.md#type), [scope](https://github.com/webex/components/blob/master/CONTRIBUTING.md#scope) and [subject](https://github.com/webex/components/blob/master/CONTRIBUTING.md#scope).
-
 ## License
 
 [MIT License](https://opensource.org/licenses/MIT)
