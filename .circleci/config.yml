@@ -56,7 +56,9 @@ jobs:
           command: npm run build
       - persist_to_workspace:
           root: .
-          paths: dist
+          paths:
+            - dist
+            - docs/bundle-analysis-*
 
   storybook:
     executor: main-executor

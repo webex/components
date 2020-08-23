@@ -43,26 +43,31 @@ npx install-peerdeps @webex/components
 ### Styles
 
 In order to properly style Webex Components, we need to import all the fonts, icons, images and core _CSS_ manually.
-Import `@webex/components/dist/webex-components.css` into your main entry file.
+You will need to add [Momentum UI](https://momentum.design)'s styles in addition to the components' styles.
+[Momentum UI](https://momentum.design) is Webex design system.
 
 There are two ways to do this:
 
 #### JavaScript
 
-In your `index.js`, add the following import:
+In your `index.js`, add the following imports:
 
 ```js
+import '@momentum-ui/core/css/momentum-ui.min.css';
 import '@webex/components/dist/webex-components.css';
+
 ...
 ```
 
 #### HTML
 
-In the `<head>` of your `index.html`, add the following import:
+In the `<head>` of your `index.html`, add the following imports:
 
 ```html
 <head>
   ...
+
+  <link rel="stylesheet" type="text/css" href="node_modules/@momentum-ui/core/css/momentum-ui.min.css" />
   <link rel="stylesheet" type="text/css" href="node_modules/@webex/components/dist/webex-components.css" />
 </head>
 ```
@@ -91,6 +96,7 @@ We also are working on offering [an adapter](https://github.com/webex/sdk-compon
 Putting everything together - styles, adapters and components - this is a simple example of how using a component would look like:
 
 ```js
+import '@momentum-ui/core/css/momentum-ui.min.css';
 import '@webex/components/dist/webex-components.css';
 
 import React from 'react';

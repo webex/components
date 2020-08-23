@@ -21,17 +21,6 @@ const plugins = [
     babelHelpers: 'runtime',
     exclude: 'node_modules/**',
   }),
-  json(),
-  scss({
-    output: `${modulePath}.css`,
-    outputStyle: 'compressed',
-    failOnError: true,
-    // Search for Sass in third-party packages e.g. Momentum UI
-    includePaths: ['node_modules'],
-    // Remove Webpack-style imports
-    // Webpack-style imports are left in code because Storybook uses Webpack
-    importer: (path) => ({file: path[0] === '~' ? path.slice(1) : path}),
-  }),
 ];
 
 export default [
@@ -52,6 +41,16 @@ export default [
     ],
     plugins: [
       ...plugins,
+      scss({
+        output: `${modulePath}.css`,
+        outputStyle: 'compressed',
+        failOnError: true,
+        // Search for Sass in third-party packages e.g. Momentum UI
+        includePaths: ['node_modules'],
+        // Remove Webpack-style imports
+        // Webpack-style imports are left in code because Storybook uses Webpack
+        importer: (path) => ({file: path[0] === '~' ? path.slice(1) : path}),
+      }),
       visualizer({
         filename: 'docs/bundle-analysis-esm.html',
         title: 'Webex Components Library ESM Bundle Analysis',
@@ -59,13 +58,15 @@ export default [
     ],
     external: [
       /^@babel\/runtime/,
+      /^@momentum-ui/,
       /^prop-types/,
       /^react/,
       /^rxjs/,
     ],
   },
   {
-    input: 'src/index.js',
+    // TODO: Remove UMD entry point when there is a Momentum UI UMD bundle
+    input: 'src/index.umd.js',
     output: [
       {
         file: `${modulePath}.umd.js`,
@@ -97,6 +98,19 @@ export default [
     ],
     plugins: [
       ...plugins,
+      // TODO: Remove JSON plugin when there is a Momentum UI UMD bundle
+      json(),
+      // TODO: Remove separate UMD CSS when there is a Momentum UI UMD bundle
+      scss({
+        output: `${modulePath}.umd.css`,
+        outputStyle: 'compressed',
+        failOnError: true,
+        // Search for Sass in third-party packages e.g. Momentum UI
+        includePaths: ['node_modules'],
+        // Remove Webpack-style imports
+        // Webpack-style imports are left in code because Storybook uses Webpack
+        importer: (path) => ({file: path[0] === '~' ? path.slice(1) : path}),
+      }),
       visualizer({
         filename: 'docs/bundle-analysis-umd.html',
         title: 'Webex Components Library UMD Bundle Analysis',
