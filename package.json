@@ -162,6 +162,10 @@
             {
               "path": "dist/webex-components.es.min.js",
               "label": "ECMAScript (ESM) minified bundle"
+            },
+            {
+              "path": "dist/webex-components.umd.min.js",
+              "label": "Universal Module Definition (UMD) minified bundle"
             }
           ]
         }
