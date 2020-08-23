@@ -26,7 +26,6 @@ aimed at react developers that want to embed the components into their applicati
 - [Contributing](#contributing)
 - [License](#license)
 - [Support](#support)
-- [Team](#team)
 
 ## Demo
 
@@ -117,21 +116,13 @@ _Happy Coding!_
 
 ## Contributing
 
-We'd love for you to contribute to our source code and to make **Webex Components** even better than it is today! Here are some [guidelines](https://github.com/webex/components/blob/master/CONTRIBUTING.md) that we'd like you to follow.
+We'd love for you to contribute to our source code and to make **Webex Components** even better than it is today!
+Here are some [guidelines](https://github.com/webex/components/blob/master/CONTRIBUTING.md) that we'd like you to follow.
 
 ### Issues
 
 Please open an [issue](https://github.com/webex/components/issues) and we will get to it in an orderly manner.
 Please leave as much as information as possible for a better understanding.
-
-### Contributing Code
-
-We are using [Webex Style Guide eslint rule](https://github.com/webex/web-styleguide/tree/master/packages/node_modules/%40webex/eslint-config-react) and [prettier](https://github.com/prettier/prettier) to lint the code style.
-You can "prettify" your code before committing via:
-
-```bash
-npm run prettier:write
-```
 
 ### Release Process
 
@@ -158,9 +149,3 @@ Please make sure to choose the appropriate commit [type](https://github.com/webe
 ## Support
 
 For more developer resources, tutorials and support, visit the Webex developer portal, https://developer.webex.com.
-
-## Team
-
-| [![Adam Weeks](https://github.com/adamweeks.png?size=100)](https://github.com/adamweeks) | [![Arash Koushkebaghi](https://github.com/akoushke.png?size=100)](https://github.com/akoushke) | [![Lalli Flores](https://github.com/lalli-flores.png?size=100)](https://github.com/lalli-flores) | [![Timothy Scheuering](https://github.com/InteractiveTimmy.png?size=100)](https://github.com/InteractiveTimmy) | [![David Hoff](https://github.com/harborhoffer.png?size=100)](https://github.com/harborhoffer) |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| [Adam Weeks](https://github.com/adamweeks)                                               | [Arash Koushkebaghi](https://github.com/akoushke)                                              | [Lalli Flores](https://github.com/lalli-flores)                                                  | [Timothy Scheuering](https://github.com/InteractiveTimmy)                                                      | [David Hoff](https://github.com/harborhoffer)                                                  |
