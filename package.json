@@ -1,7 +1,7 @@
 {
   "name": "@webex/components",
   "version": "1.42.3",
-  "browser": "dist/webex-components.es.min.js",
+  "browser": "dist/webex-components.umd.min.js",
   "module": "dist/webex-components.es.min.js",
   "scripts": {
     "build": "rollup -c",
