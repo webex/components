@@ -5,7 +5,6 @@ If you would like to contribute to this repository by adding features, enhanceme
   1. [Create an issue](https://github.com/webex/components/issues) to propose your solution _before_ you get coding
   2. Let core members know about your proposal by posting a message in the [contributor's Webex Teams space](https://eurl.io/#Bk9WGfRcB)
   3. A core member will review your proposal and if necessary may suggest to have a meeting to better understand your approach
-      - You are welcomed you join our [weekly review meeting](https://cisco.webex.com/m/f4ebbec6-c306-49ca-83f4-fb2d098fc946) (Thursdays, 11:30a-12:30p PST) to propose your contribution as well
   4. If your proposal is approved you should start coding at this point
   5. We recommend opening a draft PR to receive feedback before finalizing your solution
       - When opening a draft PR, specify with PR comments where in the code you would like to get feedback
@@ -25,6 +24,7 @@ If you would like to contribute to this repository by adding features, enhanceme
   - [Testing](#testing)
   - [Code Style](#code-style)
   - [Git Commit](#git-commit)
+- [Release Process](#release-process)
 
 ## Opening an Issue
 The title of a Bug or Enhancement should clearly indicate what is broken or desired. Use the description to explain possible solutions or add details and (especially for Enhancements) explain *how* or *why* the issue is broken or desired. Follow the template!
@@ -102,3 +102,16 @@ Just as in the **subject** the imperative, present tense: "change" not "changed"
 The footer should contain any information about **Breaking changes** and is also the place to reference GitHub issues that this commit **closes**.
 
 **Breaking Changes** should start with the word `BREAKING CHANGE:` with a space or two newlines. The rest of the commit message is then used for this.
+
+## Release Process
+
+There is a list of commit types provided [here](https://github.com/webex/components/blob/master/CONTRIBUTING.md#type). However, not all commits trigger our release process.
+We are using [semantic-release](https://github.com/semantic-release/semantic-release) to fully automate the version management and package publishing.
+By default `semantic-release` uses the [Angular Commit Message Conventions](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines) and triggers release and publishing based on the following rules:
+
+| Commit                             | Release type  |
+| ---------------------------------- | ------------- |
+| Commit with type `BREAKING CHANGE` | Major release |
+| Commit with type `feat`            | Minor release |
+| Commit with type `fix`             | Patch release |
+| Commit with type `perf`            | Patch release |
