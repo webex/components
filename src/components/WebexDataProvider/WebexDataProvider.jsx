@@ -12,6 +12,7 @@ WebexDataProvider.propTypes = {
   adapter: PropTypes.shape({
     activitiesAdapter: PropTypes.object.isRequired,
     meetingsAdapter: PropTypes.object.isRequired,
+    membershipsAdapter: PropTypes.object.isRequired,
     peopleAdapter: PropTypes.object.isRequired,
     roomsAdapter: PropTypes.object.isRequired,
   }).isRequired,

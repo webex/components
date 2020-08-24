@@ -15,6 +15,6 @@ const webexAdapter = new WebexJSONAdapter(jsonData);
 // Stories
 stories.add('default', () => (
   <WebexDataProvider adapter={webexAdapter}>
-    <WebexParticipantRoster destination="default_membership" />
+    <WebexParticipantRoster destinationID="default_membership" destinationType="room" />
   </WebexDataProvider>
 ));

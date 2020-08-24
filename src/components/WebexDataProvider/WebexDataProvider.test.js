@@ -6,6 +6,7 @@ describe('Webex Data Provider component', () => {
   const adapter = {
     activitiesAdapter: {},
     meetingsAdapter: {},
+    membershipsAdapter: {},
     roomsAdapter: {},
     peopleAdapter: {},
   };

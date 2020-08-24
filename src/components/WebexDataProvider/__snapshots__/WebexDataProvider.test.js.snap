@@ -6,6 +6,7 @@ exports[`Webex Data Provider component matches snapshot 1`] = `
     Object {
       "activitiesAdapter": Object {},
       "meetingsAdapter": Object {},
+      "membershipsAdapter": Object {},
       "peopleAdapter": Object {},
       "roomsAdapter": Object {},
     }
