@@ -51,7 +51,7 @@ export default class MembershipJSONAdapter extends MembershipsAdapter {
    * @param {DestinationType} destinationType Type of destination of the membership
    * @returns {Observable.<Membership>} Observable that emits data of the given ID
    */
-  getMembers(destinationID, destinationType) {
+  getMembersFromDestination(destinationID, destinationType) {
     return Observable.create((observer) => {
       const data = this.datasource[destinationID];
 

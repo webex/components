@@ -1,7 +1,8 @@
 {
   "default_membership": {
     "ID": "default",
-    "destinationID": "",
+    "destinationID": "default_membership",
+    "destinationType": "room",
     "members": [{"personID": "default"}, {"personID": "self"}, {"personID": "call"}, {"personID": "presenting"}]
   }
 }

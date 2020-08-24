@@ -8,14 +8,22 @@ import {AdapterContext} from './contexts';
  * @external Person
  * @see {@link https://github.com/webex/component-adapter-interfaces/blob/master/src/PeopleAdapter.js#L6}
  */
+// TODO: Figure out how to import JS Doc definitions and remove duplication.
+/**
+ * Enum for types of destinations.
+ *
+ * @external DestinationType
+ * @see {@link https://github.com/webex/component-adapter-interfaces/blob/master/src/MembershipsAdapter.js#L21}
+ */
 
 /**
  * Custom hook that returns a list of member IDs given a membership ID.
  *
- * @param {string} membershipID  ID of the room/meeting that contains the memberships
+ * @param {string} destinationID  ID of the room/meeting that contains the memberships
+ * @param {DestinationType} destinationType Type of destination of the membership
  * @returns {Array.<Person>} List of the person IDs from the participants
  */
-export default function useMemberships(membershipID) {
+export default function useMemberships(destinationID, destinationType) {
   const [members, setMembers] = useState([]);
   const {membershipsAdapter} = useContext(AdapterContext);
 
@@ -30,12 +38,14 @@ export default function useMemberships(membershipID) {
       setMembers([...data.members]);
     };
 
-    const subscription = membershipsAdapter.getMembers(membershipID).subscribe(onMembers, onError);
+    const subscription = membershipsAdapter
+      .getMembersFromDestination(destinationID, destinationType)
+      .subscribe(onMembers, onError);
 
     return () => {
       subscription.unsubscribe();
     };
-  }, [membershipsAdapter, membershipID]);
+  }, [membershipsAdapter, destinationID, destinationType]);
 
   return members;
 }

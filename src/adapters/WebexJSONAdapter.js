@@ -13,8 +13,8 @@ export default class WebexJSONAdapter {
   constructor(datasource) {
     this.activitiesAdapter = new ActivitiesJSONAdapter(datasource.activities);
     this.meetingsAdapter = new MeetingsJSONAdapter(datasource.meetings);
+    this.membershipsAdapter = new MembershipJSONAdapter(datasource.memberships);
     this.peopleAdapter = new PeopleJSONAdapter(datasource.people);
     this.roomsAdapter = new RoomsJSONAdapter(datasource.rooms);
-    this.membershipsAdapter = new MembershipJSONAdapter(datasource.members);
   }
 }

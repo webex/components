@@ -1,6 +1,6 @@
 import activities from './activities.json';
 import meetings from './meetings.json';
-import members from './members.json';
+import memberships from './memberships.json';
 import people from './people.json';
 import rooms from './rooms.json';
 
@@ -8,7 +8,7 @@ import rooms from './rooms.json';
 export default {
   activities,
   meetings,
-  members,
+  memberships,
   people,
   rooms,
 };
