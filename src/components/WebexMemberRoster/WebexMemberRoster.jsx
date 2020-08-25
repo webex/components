@@ -14,7 +14,7 @@ import useMemberships from '../hooks/useMemberships';
  */
 
 /**
- * Displays the roster of Webex meeting or room participants.
+ * Displays the roster of Webex meeting or room members.
  *
  * @param {string} props.destinationID  ID of the destination for which to get members
  * @param {string} props.destinationType Type of destination of the membership roster
@@ -22,13 +22,13 @@ import useMemberships from '../hooks/useMemberships';
  * @returns {object} JSX of the component
  */
 export default function WebexMemberRoster({destinationID, destinationType}) {
-  const participants = useMemberships(destinationID, destinationType);
+  const members = useMemberships(destinationID, destinationType);
 
-  const participantList = participants.map((participant) => (
-    <WebexMember key={participant.personID} personID={participant.personID} />
+  const memberList = members.map((member) => (
+    <WebexMember key={member.personID} personID={member.personID} />
   ));
 
-  return <List>{participantList}</List>;
+  return <List>{memberList}</List>;
 }
 
 WebexMemberRoster.propTypes = {
