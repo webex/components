@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ListItem from '@momentum-ui/react/lib/ListItem';
+import {ListItem} from '@momentum-ui/react';
 
 import {usePerson} from '../hooks';
 import WebexAvatar from '../WebexAvatar/WebexAvatar';
