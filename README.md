@@ -53,7 +53,7 @@ In your `index.js`, add the following imports:
 
 ```js
 import '@momentum-ui/core/css/momentum-ui.min.css';
-import '@webex/components/dist/webex-components.css';
+import '@webex/components/dist/css/webex-components.css';
 
 ...
 ```
@@ -67,7 +67,7 @@ In the `<head>` of your `index.html`, add the following imports:
   ...
 
   <link rel="stylesheet" type="text/css" href="node_modules/@momentum-ui/core/css/momentum-ui.min.css" />
-  <link rel="stylesheet" type="text/css" href="node_modules/@webex/components/dist/webex-components.css" />
+  <link rel="stylesheet" type="text/css" href="node_modules/@webex/components/dist/css/webex-components.css" />
 </head>
 ```
 
