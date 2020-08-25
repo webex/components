@@ -4,17 +4,17 @@ import {storiesOf} from '@storybook/react';
 import jsonData from '../../data';
 import {WebexJSONAdapter} from '../../adapters';
 
-import WebexParticipant from './WebexParticipant';
+import WebexMember from './WebexMember';
 
 import {WebexDataProvider} from '..';
 
 // Setup for the stories
-const stories = storiesOf('Webex Participant', module);
+const stories = storiesOf('Webex Member', module);
 const webexAdapter = new WebexJSONAdapter(jsonData);
 
 // Stories
 stories.add('default', () => (
   <WebexDataProvider adapter={webexAdapter}>
-    <WebexParticipant personID="default" />
+    <WebexMember personID="default" />
   </WebexDataProvider>
 ));

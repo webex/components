@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {List} from '@momentum-ui/react';
 
-import WebexParticipant from '../WebexParticipant/WebexParticipant';
+import WebexMember from '../WebexMember/WebexMember';
 import useMemberships from '../hooks/useMemberships';
 
 // TODO: Figure out how to import JS Doc definitions and remove duplication.
@@ -25,7 +25,7 @@ export default function WebexMemberRoster({destinationID, destinationType}) {
   const participants = useMemberships(destinationID, destinationType);
 
   const participantList = participants.map((participant) => (
-    <WebexParticipant key={participant.personID} personID={participant.personID} />
+    <WebexMember key={participant.personID} personID={participant.personID} />
   ));
 
   return <List>{participantList}</List>;
