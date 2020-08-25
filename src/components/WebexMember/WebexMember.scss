@@ -1,10 +1,10 @@
 @import '../../styles/variables';
 
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-participant {
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-member {
   display: flex;
   padding: 0.625rem 0 0.625rem 0;
 
-  .participant-name {
+  .member-name {
     @include body-fonts;
     align-items: center;
     white-space: nowrap;
