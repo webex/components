@@ -9,6 +9,6 @@ export {default as WebexMeeting} from './WebexMeeting/WebexMeeting';
 export {default as WebexMeetingControl} from './WebexMeetingControl/WebexMeetingControl';
 export {default as WebexMeetingControls} from './WebexMeetingControl/WebexMeetingControls';
 export {default as WebexMeetingInfo} from './WebexMeetingInfo/WebexMeetingInfo';
+export {default as WebexMemberRoster} from './WebexMemberRoster/WebexMemberRoster';
 export {default as WebexRemoteMedia} from './WebexRemoteMedia/WebexRemoteMedia';
 export {default as WebexParticipant} from './WebexParticipant/WebexParticipant';
-export {default as WebexParticipantRoster} from './WebexParticipantRoster/WebexParticipantRoster';

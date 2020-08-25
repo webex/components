@@ -21,7 +21,7 @@ import useMemberships from '../hooks/useMemberships';
  *
  * @returns {object} JSX of the component
  */
-export default function WebexParticipantRoster({destinationID, destinationType}) {
+export default function WebexMemberRoster({destinationID, destinationType}) {
   const participants = useMemberships(destinationID, destinationType);
 
   const participantList = participants.map((participant) => (
@@ -31,7 +31,7 @@ export default function WebexParticipantRoster({destinationID, destinationType})
   return <List>{participantList}</List>;
 }
 
-WebexParticipantRoster.propTypes = {
+WebexMemberRoster.propTypes = {
   destinationID: PropTypes.string.isRequired,
   destinationType: PropTypes.string.isRequired
 };

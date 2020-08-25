@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Webex Participant Roster component snapshot matches snapshot of webex participant roster 1`] = `
+exports[`Webex Member Roster component snapshot matches snapshot of webex member roster 1`] = `
 <List
   active={null}
   ariaConfig={null}
