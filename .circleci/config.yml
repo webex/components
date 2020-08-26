@@ -69,7 +69,7 @@ jobs:
           command: rm -rf docs/storybook && npm run storybook:build
       - persist_to_workspace:
           root: .
-          paths: docs
+          paths: docs/storybook
 
   release:
     executor: main-executor
