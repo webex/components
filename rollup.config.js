@@ -1,6 +1,7 @@
 import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import copy from 'rollup-plugin-copy';
+import license from 'rollup-plugin-license';
 import scss from 'rollup-plugin-scss';
 import visualizer from 'rollup-plugin-visualizer';
 import {nodeResolve} from '@rollup/plugin-node-resolve';
@@ -33,6 +34,14 @@ const plugins = [
     // Remove Webpack-style imports
     // Webpack-style imports are left in code because Storybook uses Webpack
     importer: (path) => ({file: path[0] === '~' ? path.slice(1) : path}),
+  }),
+  license({
+    banner: `
+    Webex Component System.
+    Copyright (c) <%= moment().format('YYYY') %> Cisco Systems, Inc and its affiliates.
+
+    This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+    `,
   }),
   copy({
     targets: [
