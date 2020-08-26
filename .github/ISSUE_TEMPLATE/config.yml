@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Webex Support
+    url: https://developer.webex.com/support
+    about: For questions and support requests go here.
+  - name: Webex Feature Ideas
+    url: https://ciscocollaboration.aha.io/
+    about: For feature request and product ideas go here.
