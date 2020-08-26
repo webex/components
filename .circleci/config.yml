@@ -66,7 +66,7 @@ jobs:
       - checkout_from_workspace
       - run:
           name: Build Storybook
-          command: npm run storybook:ci
+          command: rm -rf docs/storybook && npm run storybook:build
       - persist_to_workspace:
           root: .
           paths: docs
