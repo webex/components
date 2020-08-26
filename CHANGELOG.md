@@ -1,3 +1,16 @@
+# [1.43.0](https://github.com/webex/components/compare/v1.42.3...v1.43.0) (2020-08-26)
+
+
+### Bug Fixes
+
+* **package:** add UMD bundle as main entry point ([7d12729](https://github.com/webex/components/commit/7d12729ca1a584bc996764f40eb5e727e7dfb544))
+* **package:** update dependencies ([98112f7](https://github.com/webex/components/commit/98112f77141b4a0623d7703017fe32760a382edb))
+
+
+### Features
+
+* **adapters:** export JSON adapter as part of distribution ([dd665c4](https://github.com/webex/components/commit/dd665c4dde3eeafc5b2527de59b77a595dbf06b6))
+
 ## [1.42.3](https://github.com/webex/components/compare/v1.42.2...v1.42.3) (2020-07-07)
 
 
