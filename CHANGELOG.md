@@ -1,3 +1,16 @@
+# [1.44.0](https://github.com/webex/components/compare/v1.43.0...v1.44.0) (2020-08-26)
+
+
+### Bug Fixes
+
+* **memberships:** use defined method from interface ([413cb6c](https://github.com/webex/components/commit/413cb6c0804546f034888c2e47bd97b6accd7d12))
+
+
+### Features
+
+* **WebexMember:** rename from WebexParticipant ([c4bbcf8](https://github.com/webex/components/commit/c4bbcf871e268357e50d47b889fc774af6caa97d))
+* **WebexMemberRoster:** rename WebexParticipantRoster component ([e98e76b](https://github.com/webex/components/commit/e98e76b2cecaaec2e12180cb52458bad8c334ef2))
+
 # [1.43.0](https://github.com/webex/components/compare/v1.42.3...v1.43.0) (2020-08-26)
 
 
