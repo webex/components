@@ -1,4 +1,4 @@
-import people from '../data/people.json';
+import people from '../data/people';
 import PeopleJSONAdapter from './PeopleJSONAdapter';
 
 describe('People JSON Adapter Interface', () => {

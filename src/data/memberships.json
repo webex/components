@@ -1,44 +1,72 @@
 {
-  "default_membership": {
-    "ID": "default",
-    "destinationID": "default_membership",
+  "membership1": {
+    "ID": "membership1",
+    "destinationID": "room1",
     "destinationType": "room",
-    "members": [{"personID": "default"}, {"personID": "self"}, {"personID": "call"}, {"personID": "presenting"}]
+    "members": [
+      {"personID": "user1"},
+      {"personID": "user2"},
+      {"personID": "user3"},
+      {"personID": "user4"}
+    ]
   },
-  "remoteVideo": {
-    "ID": "remoteVideo",
-    "destinationID": "remoteVideo",
-    "destinationType": "meeting",
-    "members": [{"personID": "default"}, {"personID": "self"}, {"personID": "call"}, {"personID": "presenting"}]
+  "membership2": {
+    "ID": "membership2",
+    "destinationID": "room2",
+    "destinationType": "room",
+    "members": [
+      {"personID": "user1"},
+      {"personID": "user5"},
+      {"personID": "user6"}
+    ]
   },
-  "remoteAudio": {
-    "ID": "remoteAudio",
-    "destinationID": "remoteAudio",
+  "membership3": {
+    "ID": "membership3",
+    "destinationID": "meeting1",
     "destinationType": "meeting",
-    "members": [{"personID": "default"}, {"personID": "self"}, {"personID": "call"}, {"personID": "presenting"}]
+    "members": [
+      {"personID": "user1"},
+      {"personID": "user2"},
+      {"personID": "user3"}
+    ]
   },
-  "remoteAudio&Video": {
-    "ID": "remoteAudio&Video",
-    "destinationID": "remoteAudio&Video",
+  "membership4": {
+    "ID": "membership4",
+    "destinationID": "meeting2",
     "destinationType": "meeting",
-    "members": [{"personID": "default"}, {"personID": "self"}, {"personID": "call"}, {"personID": "presenting"}]
+    "members": [
+      {"personID": "user1"},
+      {"personID": "user2"},
+      {"personID": "user3"},
+      {"personID": "user4"},
+      {"personID": "user5"},
+      {"personID": "user6"}
+    ]
   },
-  "noMedia": {
-    "ID": "noMedia",
-    "destinationID": "noMedia",
+  "membership5": {
+    "ID": "membership5",
+    "destinationID": "meeting4",
     "destinationType": "meeting",
-    "members": [{"personID": "default"}, {"personID": "self"}, {"personID": "call"}, {"personID": "presenting"}]
+    "members": [
+      {"personID": "user1"}
+    ]
   },
-  "noMembers": {
-    "ID": "noMembers",
-    "destinationID": "noMembers",
+  "membership6": {
+    "ID": "membership6",
+    "destinationID": "meeting5",
     "destinationType": "meeting",
-    "members": [{"personID": "self"}]
+    "members": [
+      {"personID": "user1"},
+      {"personID": "user2"}
+    ]
   },
-  "failMeetingID": {
-    "ID": "failMeetingID",
-    "destinationID": "failMeetingID",
+  "membership7": {
+    "ID": "membership7",
+    "destinationID": "meeting6",
     "destinationType": "meeting",
-    "members": [{"personID": "self"}]
+    "members": [
+      {"personID": "user1"},
+      {"personID": "user2"}
+    ]
   }
 }

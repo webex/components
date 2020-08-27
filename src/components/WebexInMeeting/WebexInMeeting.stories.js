@@ -11,10 +11,10 @@ const Template = (args) => <WebexInMeeting {...args} />;
 
 export const AllMedia = Template.bind({});
 AllMedia.args = {
-  meetingID: 'remote&localMedia',
+  meetingID: 'meeting1',
 };
 
 export const RemoteMediaOnly = Template.bind({});
 RemoteMediaOnly.args = {
-  meetingID: 'remoteMedia',
+  meetingID: 'meeting2',
 };

@@ -12,13 +12,18 @@ const wrapperStyles = {
 };
 const Template = (args) => <div style={wrapperStyles}><WebexMeeting {...args} /></div>;
 
+export const Loading = Template.bind({});
+Loading.args = {
+  meetingDestination: 'meeting8',
+};
+
 export const Default = Template.bind({});
 Default.args = {
-  meetingDestination: 'remote&localMedia',
+  meetingDestination: 'meeting3',
 };
 
 export const CustomControls = Template.bind({});
 CustomControls.args = {
-  meetingDestination: 'remote&localMedia',
+  meetingDestination: 'meeting3',
   controls: (isActive) => (isActive ? ['leave-meeting'] : ['join-meeting']),
 };

@@ -1,66 +1,66 @@
 {
-  "default": {
-    "ID": "default",
-    "roomID": "roomID",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "personID": "default",
-    "created": "2019-08-20T21:00:07.047Z",
+  "activity1": {
+    "ID": "activity1",
+    "roomID": "room1",
+    "text": "I'm having some issues setting up my environment 💻",
+    "personID": "user3",
+    "created": "2020-08-20T21:00:07.047Z",
     "displayHeader": true
   },
-  "no-header": {
-    "ID": "no-header",
-    "roomID": "roomID",
-    "text": "no header text",
-    "personID": "default",
-    "created": "2019-08-20T21:00:07.047Z",
+  "activity2": {
+    "ID": "activity2",
+    "roomID": "room1",
+    "text": "Can someone help me troubleshoot?",
+    "personID": "user3",
+    "created": "2020-08-20T21:00:07.047Z",
     "displayHeader": false
   },
-  "long": {
-    "ID": "long",
-    "roomID": "roomID",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "personID": "default",
-    "created": "2019-08-20T21:00:07.047Z",
+  "activity3": {
+    "ID": "activity3",
+    "roomID": "room1",
+    "text": "I ran into the same issue before! Have you checked your OS permissions?\nSometimes that is disabled for the browser and causes the app to not load properly.\nLet me know if you need more help! Maybe we can talk about it during standup",
+    "personID": "user2",
+    "created": "2020-08-20T21:05:07.047Z",
     "displayHeader": true
   },
-  "multi-line": {
-    "ID": "multi-line",
-    "roomID": "roomID",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "personID": "default",
-    "created": "2019-08-20T21:00:07.047Z",
+  "activity4": {
+    "ID": "activity4",
+    "roomID": "room1",
+    "text": "Thanks, Gio! Let's talk about it then 👍🏼",
+    "personID": "user3",
+    "created": "2020-08-20T21:05:08.047Z",
     "displayHeader": true
   },
-  "today": {
-    "ID": "today",
-    "roomID": "roomID",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "personID": "default",
-    "created": "today",
+  "activity5": {
+    "ID": "activity5",
+    "roomID": "room1",
+    "text": "Hey guys! I'm going to skip standup today, not feeling great 🤢",
+    "personID": "user4",
+    "created": "2020-08-20T22:08:07.047Z",
     "displayHeader": true
   },
-  "yesterday": {
-    "ID": "yesterday",
-    "roomID": "roomID",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "personID": "default",
-    "created": "yesterday",
+  "activity6": {
+    "ID": "activity6",
+    "roomID": "room2",
+    "text": "The login page seems to be confusing a lot of people! Let's brainstorm some new designs",
+    "personID": "user1",
+    "created": "2020-08-20T21:00:07.047Z",
     "displayHeader": true
   },
-  "sameWeek": {
-    "ID": "sameWeek",
-    "roomID": "roomID",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "personID": "default",
-    "created": "sameWeek",
+  "activity7": {
+    "ID": "activity7",
+    "roomID": "room2",
+    "text": "Got some of the new designs for the login page, will send the Figma links tomorrow",
+    "personID": "user5",
+    "created": "2020-08-20T21:00:07.047Z",
     "displayHeader": true
   },
-  "old": {
-    "ID": "old",
-    "roomID": "roomID",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "personID": "default",
-    "created": "old",
+  "activity8": {
+    "ID": "activity8",
+    "roomID": "room2",
+    "text": "Following up on our last task. Seems like we need more time?",
+    "personID": "user1",
+    "created": "2020-08-20T21:00:07.047Z",
     "displayHeader": true
   }
 }

@@ -1,4 +1,7 @@
 import React from 'react';
+import {subDays} from 'date-fns';
+import activities from '../../data/activities.json';
+import rooms from '../../data/rooms.json';
 import WebexActivityStream from './WebexActivityStream';
 
 export default {
@@ -10,20 +13,46 @@ const Template = (args) => <WebexActivityStream {...args} />;
 
 export const Conversation = Template.bind({});
 Conversation.args = {
-  roomID: 'default',
+  roomID: 'room1',
 };
 
-export const NewDirect = Template.bind({});
-NewDirect.args = {
-  roomID: 'empty-direct',
+export const TimeRulers = Template.bind({});
+TimeRulers.args = {
+  roomID: 'room2',
+};
+// Modify time data on the fly
+TimeRulers.parameters = {
+  mockData: {
+    rooms: {
+      ...rooms,
+      'room2-activities': [
+        'activity6',
+        {date: subDays(new Date(), 1).toString()},
+        'activity7',
+        {date: new Date().toString()},
+        'activity8',
+      ],
+    },
+    activities: {
+      ...activities,
+      activity7: {
+        ...activities.activity7,
+        created: subDays(new Date(), 1).toString(),
+      },
+      activity8: {
+        ...activities.activity8,
+        created: new Date().toString(),
+      },
+    },
+  },
 };
 
 export const NewSpace = Template.bind({});
 NewSpace.args = {
-  roomID: 'empty-space',
+  roomID: 'room3',
 };
 
-export const WithTimeRuler = Template.bind({});
-WithTimeRuler.args = {
-  roomID: 'time-rulers',
+export const NewDirect = Template.bind({});
+NewDirect.args = {
+  roomID: 'room4',
 };

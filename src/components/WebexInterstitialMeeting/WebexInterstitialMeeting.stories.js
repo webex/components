@@ -15,10 +15,10 @@ Loading.args = {
 
 export const VideoEnabled = Template.bind({});
 VideoEnabled.args = {
-  meetingID: 'localMedia',
+  meetingID: 'meeting1',
 };
 
 export const VideoDisabled = Template.bind({});
 VideoDisabled.args = {
-  meetingID: 'noMedia',
+  meetingID: 'meeting2',
 };

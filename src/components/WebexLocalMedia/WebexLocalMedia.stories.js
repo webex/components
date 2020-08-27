@@ -10,10 +10,10 @@ const Template = (args) => <WebexLocalMedia {...args} />;
 
 export const MediaEnabled = Template.bind({});
 MediaEnabled.args = {
-  meetingID: 'localVideo',
+  meetingID: 'meeting1',
 };
 
 export const MediaDisabled = Template.bind({});
 MediaDisabled.args = {
-  meetingID: 'noMedia',
+  meetingID: 'meeting2',
 };

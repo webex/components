@@ -44,7 +44,8 @@ import {Observable} from 'rxjs';
  */
 export default class MembershipJSONAdapter extends MembershipsAdapter {
   /**
-   * Returns an observable that emits membership data for the given destination.
+   * Returns an observable that emits membership data for the first destination
+   * found that matches the given ID and type.
    * For this implementation, once the data is emitted, the observable completes.
    *
    * @param {string} destinationID A unique identifier for a meeting/space location
@@ -53,10 +54,13 @@ export default class MembershipJSONAdapter extends MembershipsAdapter {
    */
   getMembersFromDestination(destinationID, destinationType) {
     return Observable.create((observer) => {
-      const data = this.datasource[destinationID];
+      const membership = Object.values(this.datasource).find(
+        (destination) => destination.destinationID === destinationID
+          && destination.destinationType === destinationType,
+      );
 
-      if (data && data.destinationType === destinationType) {
-        observer.next(data);
+      if (membership) {
+        observer.next(membership);
       } else {
         observer.error(new Error(`Could not find members for destination "${destinationID}"`));
       }

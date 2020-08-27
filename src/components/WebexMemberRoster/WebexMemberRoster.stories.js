@@ -8,8 +8,8 @@ export default {
 
 const Template = (args) => <WebexMemberRoster {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
-  destinationID: 'default_membership',
+export const Space = Template.bind({});
+Space.args = {
+  destinationID: 'membership1',
   destinationType: 'room',
 };
