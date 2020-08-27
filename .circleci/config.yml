@@ -1,10 +1,10 @@
 version: 2.1
-# reusable environment for all jobs
+
 executors:
-  main-executor:
+  node-erbium-executor:
     working_directory: ~/webex-components
     docker:
-      - image: circleci/node:12.7.0
+      - image: circleci/node:erbium
 
 # reusable command for all jobs
 commands:
@@ -18,7 +18,7 @@ commands:
 # define jobs
 jobs:
   install:
-    executor: main-executor
+    executor: node-erbium-executor
     steps:
       - checkout
       - restore_cache:
@@ -35,7 +35,7 @@ jobs:
           paths: node_modules
 
   test:
-    executor: main-executor
+    executor: node-erbium-executor
     steps:
       - checkout_from_workspace
       - run:
@@ -48,7 +48,7 @@ jobs:
           path: test_results
 
   build:
-    executor: main-executor
+    executor: node-erbium-executor
     steps:
       - checkout_from_workspace
       - run:
@@ -61,7 +61,7 @@ jobs:
             - docs/bundle-analysis-*
 
   storybook:
-    executor: main-executor
+    executor: node-erbium-executor
     steps:
       - checkout_from_workspace
       - run:
@@ -72,7 +72,7 @@ jobs:
           paths: docs/storybook
 
   release:
-    executor: main-executor
+    executor: node-erbium-executor
     steps:
       - checkout_from_workspace
       - run:
