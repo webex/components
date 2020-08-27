@@ -8,8 +8,6 @@ import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import {useElementDimensions} from '../hooks';
 import {TABLET, DESKTOP} from '../breakpoints';
 
-import './WebexInMeeting.scss';
-
 /**
  * Webex In-Meeting component displays the remote stream plus
  * the local stream at the bottom right corner.

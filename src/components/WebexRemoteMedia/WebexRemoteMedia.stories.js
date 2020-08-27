@@ -1,59 +1,39 @@
 import React from 'react';
-import {storiesOf} from '@storybook/react';
+import WebexRemoteMedia from './WebexRemoteMedia';
 
-import jsonData from '../../data';
-import {WebexJSONAdapter} from '../../adapters';
-import {WebexRemoteMedia, WebexDataProvider} from '..';
+export default {
+  title: 'Meetings/Webex Remote Media',
+  component: WebexRemoteMedia,
+};
 
-// Setup for the stories
-const stories = storiesOf('Webex Remote Media', module);
-const webexAdapter = new WebexJSONAdapter(jsonData);
-const wrapperStyle = {height: '500px', width: '800px', border: '1px solid black'};
+const Template = (args) => <WebexRemoteMedia {...args} />;
 
-stories.add('loading', () => (
-  <div style={wrapperStyle}>
-    <WebexDataProvider adapter={webexAdapter}>
-      <WebexRemoteMedia meetingID="noMedia" />
-    </WebexDataProvider>
-  </div>
-));
+export const Loading = Template.bind({});
+Loading.args = {
+  meetingID: 'noMedia',
+};
 
-stories.add('waiting for others', () => (
-  <div style={wrapperStyle}>
-    <WebexDataProvider adapter={webexAdapter}>
-      <WebexRemoteMedia meetingID="noMembers" />
-    </WebexDataProvider>
-  </div>
-));
+export const WaitingForOthers = Template.bind({});
+WaitingForOthers.args = {
+  meetingID: 'noMembers',
+};
 
-stories.add('video only', () => (
-  <div style={wrapperStyle}>
-    <WebexDataProvider adapter={webexAdapter}>
-      <WebexRemoteMedia meetingID="remoteVideo" />
-    </WebexDataProvider>
-  </div>
-));
+export const RemoteAudioOnly = Template.bind({});
+RemoteAudioOnly.args = {
+  meetingID: 'remoteAudio',
+};
 
-stories.add('audio only', () => (
-  <div style={wrapperStyle}>
-    <WebexDataProvider adapter={webexAdapter}>
-      <WebexRemoteMedia meetingID="remoteAudio" />
-    </WebexDataProvider>
-  </div>
-));
+export const RemoteVideoOnly = Template.bind({});
+RemoteVideoOnly.args = {
+  meetingID: 'remoteVideo',
+};
 
-stories.add('video and audio', () => (
-  <div style={wrapperStyle}>
-    <WebexDataProvider adapter={webexAdapter}>
-      <WebexRemoteMedia meetingID="remoteAudio&Video" />
-    </WebexDataProvider>
-  </div>
-));
+export const AllRemoteMedia = Template.bind({});
+AllRemoteMedia.args = {
+  meetingID: 'remoteAudio&Video',
+};
 
-stories.add('error', () => (
-  <div style={wrapperStyle}>
-    <WebexDataProvider adapter={webexAdapter}>
-      <WebexRemoteMedia meetingID="failMeetingID" />
-    </WebexDataProvider>
-  </div>
-));
+export const Error = Template.bind({});
+Error.args = {
+  meetingID: 'failMeetingID',
+};

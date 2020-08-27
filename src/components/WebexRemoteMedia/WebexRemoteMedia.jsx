@@ -6,7 +6,6 @@ import {Badge, Spinner, AlertBanner} from '@momentum-ui/react';
 
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import {useMeeting, useMemberships, useStream} from '../hooks';
-import './WebexRemoteMedia.scss';
 
 /**
  * Webex Remote Media component displays the meeting's remote video

@@ -10,8 +10,6 @@ import WebexMeetingControls from '../WebexMeetingControl/WebexMeetingControls';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import {useMeetingDestination} from '../hooks';
 
-import './WebexMeeting.scss';
-
 /**
  * Webex Meeting component displays the default Webex meeting experience.
  *

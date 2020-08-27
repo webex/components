@@ -1,35 +1,29 @@
 import React from 'react';
-import {storiesOf} from '@storybook/react';
+import WebexActivityStream from './WebexActivityStream';
 
-import jsonData from '../../data';
-import {WebexJSONAdapter} from '../../adapters';
-import {WebexActivityStream, WebexDataProvider} from '..';
+export default {
+  title: 'Messaging/Webex Activity Stream',
+  component: WebexActivityStream,
+};
 
-// Setup for the stories
-const stories = storiesOf('Webex Activity Stream', module);
-const adapter = new WebexJSONAdapter(jsonData);
+const Template = (args) => <WebexActivityStream {...args} />;
 
-// Stories
-stories.add('default', () => (
-  <WebexDataProvider adapter={adapter}>
-    <WebexActivityStream roomID="default" />
-  </WebexDataProvider>
-));
+export const Conversation = Template.bind({});
+Conversation.args = {
+  roomID: 'default',
+};
 
-stories.add('empty group stream', () => (
-  <WebexDataProvider adapter={adapter}>
-    <WebexActivityStream roomID="empty-space" />
-  </WebexDataProvider>
-));
+export const NewDirect = Template.bind({});
+NewDirect.args = {
+  roomID: 'empty-direct',
+};
 
-stories.add('with time rulers', () => (
-  <WebexDataProvider adapter={adapter}>
-    <WebexActivityStream roomID="time-rulers" />
-  </WebexDataProvider>
-));
+export const NewSpace = Template.bind({});
+NewSpace.args = {
+  roomID: 'empty-space',
+};
 
-stories.add('empty 1:1 stream', () => (
-  <WebexDataProvider adapter={adapter}>
-    <WebexActivityStream roomID="empty-direct" />
-  </WebexDataProvider>
-));
+export const WithTimeRuler = Template.bind({});
+WithTimeRuler.args = {
+  roomID: 'time-rulers',
+};

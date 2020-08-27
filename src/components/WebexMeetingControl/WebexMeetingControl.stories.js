@@ -1,61 +1,36 @@
 import React from 'react';
-import {storiesOf} from '@storybook/react';
+import WebexMeetingControl from './WebexMeetingControl';
+import WebexMeetingControls from './WebexMeetingControls';
 
-import jsonData from '../../data';
-import {WebexJSONAdapter} from '../../adapters';
-import {WebexDataProvider, WebexMeetingControl, WebexMeetingControls} from '..';
+export default {
+  title: 'Meetings/Webex Meeting Control',
+  component: WebexMeetingControl,
+  decorators: [(Story) => <WebexMeetingControls meetingID="scheduledMeeting"><Story /></WebexMeetingControls>],
+};
 
-// Setup for the stories
-const stories = storiesOf('Webex Meeting Control', module);
-const webexAdapter = new WebexJSONAdapter(jsonData);
+const Template = (args) => <WebexMeetingControl {...args} />;
 
-// Stories
-stories.add('text', () => (
-  <WebexDataProvider adapter={webexAdapter}>
-    <WebexMeetingControls meetingID="scheduledMeeting">
-      <WebexMeetingControl type="join-meeting" />
-    </WebexMeetingControls>
-  </WebexDataProvider>
-));
+export const ActiveIcon = Template.bind({});
+ActiveIcon.args = {
+  type: 'mute-audio',
+};
 
-stories.add('disabled text', () => (
-  <WebexDataProvider adapter={webexAdapter}>
-    <WebexMeetingControls meetingID="scheduledMeeting">
-      <WebexMeetingControl type="disabled-join-meeting" />
-    </WebexMeetingControls>
-  </WebexDataProvider>
-));
+export const InactiveIcon = Template.bind({});
+InactiveIcon.args = {
+  type: 'mute-audio',
+};
 
-stories.add('active icon', () => (
-  <WebexDataProvider adapter={webexAdapter}>
-    <WebexMeetingControls meetingID="mutedLocalAudio">
-      <WebexMeetingControl type="mute-audio" />
-    </WebexMeetingControls>
-  </WebexDataProvider>
-));
+export const DisabledIcon = Template.bind({});
+DisabledIcon.args = {
+  type: 'disabled-mute-audio',
+};
 
-stories.add('inactive icon', () => (
-  <WebexDataProvider adapter={webexAdapter}>
-    <WebexMeetingControls meetingID="localAudio">
-      <WebexMeetingControl type="mute-audio" />
-    </WebexMeetingControls>
-  </WebexDataProvider>
-));
+export const Text = Template.bind({});
+Text.args = {
+  type: 'join-meeting',
+};
 
-stories.add('disabled icon', () => (
-  <WebexDataProvider adapter={webexAdapter}>
-    <WebexMeetingControls meetingID="mutedLocalAudio">
-      <WebexMeetingControl type="disabled-mute-audio" />
-    </WebexMeetingControls>
-  </WebexDataProvider>
-));
-
-stories.add('multiple icons', () => (
-  <WebexDataProvider adapter={webexAdapter}>
-    <WebexMeetingControls meetingID="localMedia">
-      <WebexMeetingControl type="mute-audio" />
-      <WebexMeetingControl type="mute-video" />
-      <WebexMeetingControl type="share-screen" />
-    </WebexMeetingControls>
-  </WebexDataProvider>
-));
+export const DisabledText = Template.bind({});
+DisabledText.args = {
+  type: 'disabled-join-meeting',
+};

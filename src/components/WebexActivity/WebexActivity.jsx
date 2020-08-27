@@ -5,7 +5,6 @@ import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import {useActivity} from '../hooks';
 
 import ActivityHeader from './ActivityHeader';
-import './WebexActivity.scss';
 
 /**
  * WebexActivity component displays activity content.

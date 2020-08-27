@@ -1,20 +1,14 @@
 import React from 'react';
-import {storiesOf} from '@storybook/react';
-
-import jsonData from '../../data';
-import {WebexJSONAdapter} from '../../adapters';
-
 import WebexMember from './WebexMember';
 
-import {WebexDataProvider} from '..';
+export default {
+  title: 'Platform/Webex Member',
+  component: WebexMember,
+};
 
-// Setup for the stories
-const stories = storiesOf('Webex Member', module);
-const webexAdapter = new WebexJSONAdapter(jsonData);
+const Template = (args) => <WebexMember {...args} />;
 
-// Stories
-stories.add('default', () => (
-  <WebexDataProvider adapter={webexAdapter}>
-    <WebexMember personID="default" />
-  </WebexDataProvider>
-));
+export const Default = Template.bind({});
+Default.args = {
+  personID: 'default',
+};

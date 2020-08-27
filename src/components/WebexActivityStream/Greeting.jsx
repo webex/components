@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
-import './Greeting.scss';
 
 /**
  * SVG used for the greeting on a new 1:1 room.

@@ -1,9 +1,5 @@
-@import '../../styles/variables';
-
-// For Storybook, so that activity stream loads content properly
-#root {
-  height: 100%;
-}
+@import 'Greeting';
+@import 'TimeRuler';
 
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-activity-stream {
   position: relative;

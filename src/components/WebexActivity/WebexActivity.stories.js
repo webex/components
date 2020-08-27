@@ -1,103 +1,89 @@
 import React from 'react';
-import {storiesOf} from '@storybook/react';
 import {addDays, getDay, subDays} from 'date-fns';
+import activities from '../../data/activities.json';
+import WebexActivity from './WebexActivity';
 
-import jsonData from '../../data';
-import {WebexJSONAdapter} from '../../adapters';
-import {WebexActivity, WebexDataProvider} from '..';
+export default {
+  title: 'Messaging/Webex Activity',
+  component: WebexActivity,
+};
 
-// Setup for the stories
-const stories = storiesOf('Webex Activity', module);
-const adapter = new WebexJSONAdapter(jsonData);
+const Template = (args) => <WebexActivity {...args} />;
 
-// Stories
-stories.add('default', () => (
-  <WebexDataProvider adapter={adapter}>
-    <WebexActivity activityID="default" />
-  </WebexDataProvider>
-));
+export const Default = Template.bind({});
+Default.args = {
+  activityID: 'default',
+};
 
-stories.add('no header', () => (
-  <WebexDataProvider adapter={adapter}>
-    <WebexActivity activityID="no-header" />
-  </WebexDataProvider>
-));
+export const NoHeader = Template.bind({});
+NoHeader.args = {
+  activityID: 'no-header',
+};
 
-stories.add('multi-line text', () => (
-  <WebexDataProvider adapter={adapter}>
-    <WebexActivity activityID="multi-line" />
-  </WebexDataProvider>
-));
+export const MultiLine = Template.bind({});
+MultiLine.args = {
+  activityID: 'multi-line',
+};
 
-stories.add('long text', () => (
-  <WebexDataProvider adapter={adapter}>
-    <WebexActivity activityID="long" />
-  </WebexDataProvider>
-));
+export const CreatedToday = Template.bind({});
+CreatedToday.args = {
+  activityID: 'default',
+};
+CreatedToday.parameters = {
+  jsonData: {
+    activities: {
+      default: {
+        ...activities.default,
+        created: new Date().toString(),
+      },
+    },
+  },
+};
 
-stories.add('created today', () => {
-  const today = new Date().toString();
+export const CreatedYesterday = Template.bind({});
+CreatedYesterday.args = {
+  activityID: 'default',
+};
+CreatedYesterday.parameters = {
+  jsonData: {
+    activities: {
+      default: {
+        ...activities.default,
+        created: subDays(new Date(), 1).toString(),
+      },
+    },
+  },
+};
 
-  jsonData.activities.today = {
-    ...jsonData.activities.today,
-    created: today,
-    text: today,
-  };
+export const CreatedThisWeek = Template.bind({});
+CreatedThisWeek.args = {
+  activityID: 'default',
+};
+CreatedThisWeek.parameters = {
+  jsonData: {
+    activities: {
+      default: {
+        ...activities.default,
+        // If it's Sunday, make it a Monday, otherwise pick the day before today
+        created: getDay(new Date()) === 0
+          ? addDays(new Date(), 1)
+          : subDays(new Date(), 2).toString(),
+      },
+    },
+  },
+};
 
-  return (
-    <WebexDataProvider adapter={adapter}>
-      <WebexActivity activityID="today" />
-    </WebexDataProvider>
-  );
-});
-
-stories.add('created yesterday', () => {
-  const yesterday = subDays(new Date(), 1).toString();
-
-  jsonData.activities.yesterday = {
-    ...jsonData.activities.yesterday,
-    created: yesterday,
-    text: yesterday,
-  };
-
-  return (
-    <WebexDataProvider adapter={adapter}>
-      <WebexActivity activityID="yesterday" />
-    </WebexDataProvider>
-  );
-});
-
-stories.add('created this week', () => {
-  // if it's sunday, make it a monday, otherwise pick the day before today
-  const thisWeek = getDay(new Date()) === 0
-    ? addDays(new Date(), 1)
-    : subDays(new Date(), 2).toString();
-
-  jsonData.activities.sameWeek = {
-    ...jsonData.activities.sameWeek,
-    created: thisWeek,
-    text: thisWeek,
-  };
-
-  return (
-    <WebexDataProvider adapter={adapter}>
-      <WebexActivity activityID="sameWeek" />
-    </WebexDataProvider>
-  );
-});
-
-stories.add('created over a week ago', () => {
-  const oldDate = subDays(new Date(), 7).toString();
-
-  jsonData.activities.old = {
-    ...jsonData.activities.old,
-    created: oldDate,
-    text: oldDate,
-  };
-
-  return (
-    <WebexDataProvider adapter={adapter}>
-      <WebexActivity activityID="old" />
-    </WebexDataProvider>
-  );
-});
+export const CreatedLongBack = Template.bind({});
+CreatedLongBack.args = {
+  activityID: 'default',
+};
+CreatedLongBack.parameters = {
+  jsonData: {
+    activities: {
+      default: {
+        ...activities.default,
+        created: subDays(new Date(), 7).toString(),
+      },
+    },
+  },
+};

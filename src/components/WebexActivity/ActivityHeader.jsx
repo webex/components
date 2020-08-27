@@ -11,8 +11,6 @@ import WebexAvatar from '../WebexAvatar/WebexAvatar';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import {usePerson} from '../hooks';
 
-import './ActivityHeader.scss';
-
 /**
  * Returns a formatted timestamp based on the given date's offset from the current time.
  *

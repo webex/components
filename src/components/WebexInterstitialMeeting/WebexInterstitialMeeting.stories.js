@@ -1,43 +1,24 @@
 import React from 'react';
-import {storiesOf} from '@storybook/react';
+import WebexInterstitialMeeting from './WebexInterstitialMeeting';
 
-import jsonData from '../../data';
-import {WebexJSONAdapter} from '../../adapters';
-import {WebexInterstitialMeeting, WebexDataProvider} from '..';
+export default {
+  title: 'Meetings/Webex Interstitial Meeting',
+  component: WebexInterstitialMeeting,
+};
 
-// Setup for the stories
-const stories = storiesOf('Webex Interstitial Meeting', module);
-const webexAdapter = new WebexJSONAdapter(jsonData);
-const wrapperStyle = {height: '500px', width: '800px', border: '1px solid black'};
+const Template = (args) => <WebexInterstitialMeeting {...args} />;
 
-stories.add('loading', () => (
-  <div style={wrapperStyle}>
-    <WebexDataProvider adapter={webexAdapter}>
-      <WebexInterstitialMeeting meetingID="" />
-    </WebexDataProvider>
-  </div>
-));
+export const Loading = Template.bind({});
+Loading.args = {
+  meetingID: '',
+};
 
-stories.add('video enabled', () => {
-  jsonData.meetings.localMedia.localVideo = {};
+export const VideoEnabled = Template.bind({});
+VideoEnabled.args = {
+  meetingID: 'localMedia',
+};
 
-  return (
-    <div style={wrapperStyle}>
-      <WebexDataProvider adapter={webexAdapter}>
-        <WebexInterstitialMeeting meetingID="localMedia" />
-      </WebexDataProvider>
-    </div>
-  );
-});
-
-stories.add('video disabled', () => {
-  jsonData.meetings.localMedia.localVideo = null;
-
-  return (
-    <div style={wrapperStyle}>
-      <WebexDataProvider adapter={webexAdapter}>
-        <WebexInterstitialMeeting meetingID="localMedia" />
-      </WebexDataProvider>
-    </div>
-  );
-});
+export const VideoDisabled = Template.bind({});
+VideoDisabled.args = {
+  meetingID: 'noMedia',
+};

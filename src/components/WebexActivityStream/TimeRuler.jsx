@@ -9,7 +9,6 @@ import {
 } from 'date-fns';
 
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
-import './TimeRuler.scss';
 
 /**
  * Returns a formatted timestamp based on the given date's offset from the current time.

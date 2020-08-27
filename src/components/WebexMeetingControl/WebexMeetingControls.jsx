@@ -5,8 +5,6 @@ import classNames from 'classnames';
 import {MeetingContext} from '../hooks';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 
-import './WebexMeetingControls.scss';
-
 /**
  * WebexMeetingControls is a higher-order component that pass a meeting
  * context to several WebexMeetingControl components.

@@ -15,8 +15,6 @@ import {
 import Greeting from './Greeting';
 import TimeRuler from './TimeRuler';
 
-import './WebexActivityStream.scss';
-
 /**
  * Webex Activity Stream component displays all activities that
  * happened on the given room ID. While mounted, the component

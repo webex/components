@@ -7,8 +7,6 @@ import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import WebexLocalMedia from '../WebexLocalMedia/WebexLocalMedia';
 import WebexMeetingInfo from '../WebexMeetingInfo/WebexMeetingInfo';
 
-import './WebexInterstitialMeeting.scss';
-
 /**
  * Webex Interstitial component displays the user's local video and
  * meeting info, in preparation to joining a meeting.

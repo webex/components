@@ -1,21 +1,19 @@
 import React from 'react';
-import {storiesOf} from '@storybook/react';
+import WebexLocalMedia from './WebexLocalMedia';
 
-import jsonData from '../../data';
-import {WebexJSONAdapter} from '../../adapters';
-import {WebexLocalMedia, WebexDataProvider} from '..';
+export default {
+  title: 'Meetings/Webex Local Media',
+  component: WebexLocalMedia,
+};
 
-const stories = storiesOf('Webex Local Media', module);
-const webexAdapter = new WebexJSONAdapter(jsonData);
+const Template = (args) => <WebexLocalMedia {...args} />;
 
-stories.add('enabled', () => (
-  <WebexDataProvider adapter={webexAdapter}>
-    <WebexLocalMedia meetingID="localVideo" />
-  </WebexDataProvider>
-));
+export const MediaEnabled = Template.bind({});
+MediaEnabled.args = {
+  meetingID: 'localVideo',
+};
 
-stories.add('disabled', () => (
-  <WebexDataProvider adapter={webexAdapter}>
-    <WebexLocalMedia meetingID="noMedia" />
-  </WebexDataProvider>
-));
+export const MediaDisabled = Template.bind({});
+MediaDisabled.args = {
+  meetingID: 'noMedia',
+};
