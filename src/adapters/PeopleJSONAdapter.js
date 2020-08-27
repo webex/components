@@ -60,7 +60,7 @@ export default class PeopleJSONAdapter extends PeopleAdapter {
    * @returns {Observable.<Person>} Observable that emits data of the "current" user
    */
   getMe() {
-    const defaultUserID = 'default';
+    const defaultUserID = 'user1';
 
     return Observable.create((observer) => {
       observer.next(this.datasource[defaultUserID]);

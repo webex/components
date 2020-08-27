@@ -8,7 +8,12 @@ export default {
 
 const Template = (args) => <WebexMember {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
-  personID: 'default',
+export const Space = Template.bind({});
+Space.args = {
+  personID: 'user1',
+};
+export const StatusEnabled = Template.bind({});
+StatusEnabled.args = {
+  personID: 'user1',
+  displayStatus: true,
 };

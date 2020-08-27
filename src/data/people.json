@@ -1,123 +1,78 @@
 {
-  "default": {
-    "ID": "default",
-    "emails": ["webexcmps@gmail.com"],
-    "displayName": "Webex Component User",
-    "firstName": "Webex",
-    "lastName": "Component User",
-    "nickName": "Webex",
-    "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
-    "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
-    "status": null
-  },
-  "active": {
-    "ID": "active",
-    "emails": ["webexcmps@gmail.com"],
-    "displayName": "Webex Component User",
-    "firstName": "Webex",
-    "lastName": "Component User",
-    "nickName": "Webex",
-    "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
-    "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
-    "status": "active"
-  },
-  "bot": {
-    "ID": "bot",
-    "emails": ["webexcmps@gmail.com"],
-    "displayName": "Webex Component User",
-    "firstName": "Webex",
-    "lastName": "Component User",
-    "nickName": "Webex",
-    "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
-    "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
-    "status": "bot"
-  },
-  "call": {
-    "ID": "call",
-    "emails": ["webexcmps@gmail.com"],
-    "displayName": "Webex Component User",
-    "firstName": "Webex",
-    "lastName": "Component User",
-    "nickName": "Webex",
-    "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
-    "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
-    "status": "call"
-  },
-  "dnd": {
-    "ID": "dnd",
-    "emails": ["webexcmps@gmail.com"],
-    "displayName": "Webex Component User",
-    "firstName": "Webex",
-    "lastName": "Component User",
-    "nickName": "Webex",
-    "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
-    "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
+  "user1": {
+    "ID": "user1",
+    "emails": ["barbara@acme.com"],
+    "displayName": "Barbara German",
+    "firstName": "Barbara",
+    "lastName": "German",
+    "nickName": "Barbara",
+    "avatar": "./images/barbara.png",
+    "orgID": "org1",
     "status": "dnd"
   },
-  "inactive": {
-    "ID": "inactive",
-    "emails": ["webexcmps@gmail.com"],
-    "displayName": "Webex Component User",
-    "firstName": "Webex",
-    "lastName": "Component User",
-    "nickName": "Webex",
-    "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
-    "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
-    "status": "inactive"
+  "user2": {
+    "ID": "user2",
+    "emails": [
+      "giacomo@acme.com"
+    ],
+    "displayName": "Giacomo Edwards",
+    "firstName": "Giacomo",
+    "lastName": "Edwards",
+    "nickName": "Gio",
+    "avatar": "./images/giacomo.png",
+    "orgID": "org1",
+    "status": null
   },
-  "meeting": {
-    "ID": "meeting",
-    "emails": ["webexcmps@gmail.com"],
-    "displayName": "Webex Component User",
-    "firstName": "Webex",
-    "lastName": "Component User",
-    "nickName": "Webex",
-    "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
-    "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
-    "status": "meeting"
+  "user3": {
+    "ID": "user3",
+    "emails": [
+      "brenda@acme.com"
+    ],
+    "displayName": "Brenda Song",
+    "firstName": "Brenda",
+    "lastName": "Song",
+    "nickName": "Brenda",
+    "avatar": "./images/brenda.png",
+    "orgID": "org1",
+    "status": null
   },
-  "ooo": {
-    "ID": "ooo",
-    "emails": ["webexcmps@gmail.com"],
-    "displayName": "Webex Component User",
-    "firstName": "Webex",
-    "lastName": "Component User",
-    "nickName": "Webex",
-    "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
-    "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
-    "status": "ooo"
+  "user4": {
+    "ID": "user4",
+    "emails": [
+      "simon@acme.com"
+    ],
+    "displayName": "Simon Damiano",
+    "firstName": "Simon",
+    "lastName": "Damiano",
+    "nickName": "Simon",
+    "avatar": "./images/simon.png",
+    "orgID": "org1",
+    "status": null
   },
-  "presenting": {
-    "ID": "presenting",
-    "emails": ["webexcmps@gmail.com"],
-    "displayName": "Webex Component User",
-    "firstName": "Webex",
-    "lastName": "Component User",
-    "nickName": "Webex",
-    "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
-    "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
-    "status": "presenting"
+  "user5": {
+    "ID": "user5",
+    "emails": [
+      "brandon@acme.com"
+    ],
+    "displayName": "Brandon Seeger",
+    "firstName": "Brandon",
+    "lastName": "Seeger",
+    "nickName": "Brandon",
+    "avatar": "../images/brandon.png",
+    "orgID": "org1",
+    "status": null
   },
-  "self": {
-    "ID": "self",
-    "emails": ["webexcmps@gmail.com"],
-    "displayName": "Webex Component User",
-    "firstName": "Webex",
-    "lastName": "Component User",
-    "nickName": "Webex",
-    "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
-    "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
-    "status": "self"
-  },
-  "typing": {
-    "ID": "typing",
-    "emails": ["webexcmps@gmail.com"],
-    "displayName": "Webex Component User",
-    "firstName": "Webex",
-    "lastName": "Component User",
-    "nickName": "Webex",
-    "avatar": "https://4b4dc97add6b1dcc891a-54bf3b4e4579920861d23cc001530c2a.ssl.cf1.rackcdn.com/V1~b33cb17c-42e3-41ac-a045-497e4002646c~b18d4572b17a4e98a16708797343ee7a~1600",
-    "orgID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jb25zdW1lcg",
-    "status": "typing"
+  "user6": {
+    "ID": "user6",
+    "emails": [
+      "maria@acme.com"
+    ],
+    "displayName": "Maria Rossi",
+    "firstName": "Maria",
+    "lastName": "Rossi",
+    "nickName": "Maria",
+    "avatar": "../images/maria.png",
+    "orgID": "org1",
+    "status": null
   }
 }

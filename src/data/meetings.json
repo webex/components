@@ -1,160 +1,75 @@
 {
-  "loadingMeeting": {
-    "ID": null
+  "meeting1": {
+    "ID": "meeting1",
+    "title": "Weekly Backlog Grooming",
+    "localAudio": {},
+    "localVideo": {},
+    "localShare": {},
+    "remoteAudio": {},
+    "remoteVideo": {},
+    "remoteShare": {}
   },
-  "failMeetingID": {
-    "ID": null,
+  "meeting2": {
+    "ID": "meeting2",
+    "title": "Lunch and Learn",
+    "localAudio": null,
+    "localVideo": null,
+    "localShare": null,
+    "remoteAudio": {},
+    "remoteVideo": {},
+    "remoteShare": {}
+  },
+  "meeting3": {
+    "ID": "meeting3",
+    "title": "Quarterly Financial Report",
+    "localAudio": {},
+    "localVideo": {},
+    "localShare": {},
+    "remoteAudio": null,
+    "remoteVideo": null,
+    "remoteShare": null
+  },
+  "meeting4": {
+    "ID": "meeting4",
+    "title": "1:1 Barbara/Brandon",
+    "localAudio": {},
+    "localVideo": {},
+    "localShare": null,
+    "remoteAudio": {},
+    "remoteVideo": {},
+    "remoteShare": null
+  },
+  "meeting5": {
+    "ID": "meeting5",
+    "title": "Barbara German",
+    "localAudio": {},
+    "localVideo": null,
+    "localShare": null,
+    "remoteAudio": {},
+    "remoteVideo": null,
+    "remoteShare": null
+  },
+  "meeting6": {
+    "ID": "meeting6",
+    "title": "Audio Trouble",
+    "localAudio": null,
+    "localVideo": {},
+    "localShare": null,
+    "remoteAudio": null,
+    "remoteVideo": {},
+    "remoteShare": null
+  },
+  "meeting7": {
+    "ID": "meeting7",
+    "title": null,
+    "localAudio": null,
+    "localVideo": null,
+    "localShare": null,
+    "remoteAudio": null,
+    "remoteVideo": null,
+    "remoteShare": null
+  },
+  "meeting8": {
     "error": true
-  },
-  "noMedia": {
-    "ID": "noMedia",
-    "title": "Meeting with no Media",
-    "localVideo": null,
-    "remoteVideo": null,
-    "localAudio": null,
-    "remoteAudio": null,
-    "localShare": null,
-    "remoteShare": null
-  },
-  "scheduledMeeting": {
-    "ID": "scheduledMeeting",
-    "title": "Our Scheduled Meeting",
-    "localVideo": null,
-    "remoteVideo": null,
-    "localAudio": null,
-    "remoteAudio": null,
-    "localShare": null,
-    "remoteShare": null
-  },
-  "oneOnOneMeeting": {
-    "ID": "oneOnOneMeeting",
-    "title": "Jackie Tester's Personal Room",
-    "localVideo": null,
-    "remoteVideo": null,
-    "localAudio": null,
-    "remoteAudio": null,
-    "localShare": null,
-    "remoteShare": null
-  },
-  "spaceMeeting": {
-    "ID": "spaceMeeting",
-    "title": "Ad Hoc Meeting Space",
-    "localVideo": null,
-    "remoteVideo": null,
-    "localAudio": null,
-    "remoteAudio": null,
-    "localShare": null,
-    "remoteShare": null
-  },
-  "noMeetingTitle": {
-    "ID": "noMeetingTitle",
-    "title": null,
-    "localVideo": null,
-    "remoteVideo": null,
-    "localAudio": null,
-    "remoteAudio": null,
-    "localShare": null,
-    "remoteShare": null
-  },
-  "localVideo": {
-    "ID": "localVideo",
-    "title": null,
-    "localVideo": {},
-    "remoteVideo": null,
-    "localAudio": null,
-    "remoteAudio": null,
-    "localShare": null,
-    "remoteShare": null
-  },
-  "localAudio": {
-    "ID": "localAudio",
-    "title": null,
-    "localVideo": null,
-    "remoteVideo": null,
-    "localAudio": {},
-    "remoteAudio": null,
-    "localShare": null,
-    "remoteShare": null
-  },
-  "mutedLocalAudio": {
-    "ID": "mutedLocalAudio",
-    "title": null,
-    "localVideo": null,
-    "remoteVideo": null,
-    "localAudio": {
-      "muted": true
-    },
-    "remoteAudio": null,
-    "localShare": null,
-    "remoteShare": null
-  },
-  "remoteVideo": {
-    "ID": "remoteVideo",
-    "title": null,
-    "localVideo": null,
-    "remoteVideo": {},
-    "localAudio": null,
-    "remoteAudio": null,
-    "localShare": null,
-    "remoteShare": null
-  },
-  "remoteAudio": {
-    "ID": "remoteAudio",
-    "title": null,
-    "localVideo": null,
-    "remoteVideo": null,
-    "localAudio": null,
-    "remoteAudio": {},
-    "localShare": null,
-    "remoteShare": null
-  },
-  "remoteAudio&Video": {
-    "ID": "remoteAudio&Video",
-    "title": null,
-    "localVideo": null,
-    "remoteVideo": {},
-    "localAudio": null,
-    "remoteAudio": {},
-    "localShare": null
-  },
-  "localMedia": {
-    "ID": "localMedia",
-    "title": "Ad Hoc Meeting Space",
-    "localVideo": {},
-    "remoteVideo": null,
-    "localAudio": {},
-    "remoteAudio": null,
-    "localShare": null,
-    "remoteShare": null
-  },
-  "remoteMedia": {
-    "ID": "remoteMedia",
-    "title": "World of Light Meeting Space",
-    "localVideo": null,
-    "remoteVideo": {},
-    "localAudio": null,
-    "remoteAudio": {},
-    "localShare": null,
-    "remoteShare": null
-  },
-  "remote&localMedia": {
-    "ID": "remote&localMedia",
-    "title": "World of Light Meeting Space",
-    "localVideo": {},
-    "remoteVideo": {},
-    "localAudio": {},
-    "remoteAudio": {},
-    "localShare": null,
-    "remoteShare": null
-  },
-  "noMembers": {
-    "ID": "noMembers",
-    "title": "World of Light Meeting Space",
-    "localVideo": {},
-    "remoteVideo": {},
-    "localAudio": {},
-    "remoteAudio": {},
-    "localShare": null,
-    "remoteShare": null
   }
 }

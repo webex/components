@@ -228,6 +228,42 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   }
 
   /**
+   * Joins the meeting by adding remote media streams.
+   * Used by "join-meeting" meeting control.
+   *
+   * @param {string} ID  ID of the meeting for which to join
+   * @private
+   */
+  async joinMeeting(ID) {
+    if (this.datasource[ID]) {
+      const meeting = this.datasource[ID];
+
+      meeting.remoteVideo = await this.getStream({video: true, audio: false});
+      meeting.remoteAudio = await this.getStream({video: false, audio: true});
+
+      document.dispatchEvent(new CustomEvent(JOIN_CONTROL, {detail: meeting}));
+    }
+  }
+
+  /**
+   * Leaves the meeting and removes the remote media streams.
+   * Used by "leave-meeting" meeting control.
+   *
+   * @param {string} ID  ID of the meeting for which to leave
+   * @private
+   */
+  leaveMeeting(ID) {
+    if (this.datasource[ID]) {
+      const meeting = this.datasource[ID];
+
+      meeting.remoteVideo = null;
+      meeting.remoteAudio = null;
+
+      document.dispatchEvent(new CustomEvent(LEAVE_CONTROL, {detail: meeting}));
+    }
+  }
+
+  /**
    * Returns a promise to a MediaStream object obtained from the user's browser.
    *
    * @param {MediaStreamConstraints} constraints  Object specifying media settings
@@ -316,42 +352,6 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       }
 
       document.dispatchEvent(new CustomEvent(MUTE_VIDEO_CONTROL, {detail: meeting}));
-    }
-  }
-
-  /**
-   * Joins the meeting by adding remote media streams.
-   * Used by "join-meeting" meeting control.
-   *
-   * @param {string} ID  ID of the meeting for which to join
-   * @private
-   */
-  async joinMeeting(ID) {
-    if (this.datasource[ID]) {
-      const meeting = this.datasource[ID];
-
-      meeting.remoteVideo = await this.getStream({video: true, audio: false});
-      meeting.remoteAudio = await this.getStream({video: false, audio: true});
-
-      document.dispatchEvent(new CustomEvent(JOIN_CONTROL, {detail: meeting}));
-    }
-  }
-
-  /**
-   * Leaves the meeting and removes the remote media streams.
-   * Used by "leave-meeting" meeting control.
-   *
-   * @param {string} ID  ID of the meeting for which to leave
-   * @private
-   */
-  leaveMeeting(ID) {
-    if (this.datasource[ID]) {
-      const meeting = this.datasource[ID];
-
-      meeting.remoteVideo = null;
-      meeting.remoteAudio = null;
-
-      document.dispatchEvent(new CustomEvent(LEAVE_CONTROL, {detail: meeting}));
     }
   }
 

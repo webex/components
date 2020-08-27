@@ -1,4 +1,4 @@
-import rooms from '../data/rooms.json';
+import rooms from '../data/rooms';
 import RoomsJSONAdapter from './RoomsJSONAdapter';
 
 describe('Rooms JSON Adapter Interface', () => {

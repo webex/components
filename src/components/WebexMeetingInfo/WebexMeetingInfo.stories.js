@@ -10,20 +10,20 @@ const Template = (args) => <WebexMeetingInfo {...args} />;
 
 export const Loading = Template.bind({});
 Loading.args = {
-  meetingID: '',
+  meetingID: 'meeting8',
 };
 
 export const Error = Template.bind({});
 Error.args = {
-  meetingID: 'noMeetingTitle',
+  meetingID: 'meeting7',
 };
 
 export const Direct = Template.bind({});
 Direct.args = {
-  meetingID: 'oneOnOneMeeting',
+  meetingID: 'meeting5',
 };
 
 export const Space = Template.bind({});
 Space.args = {
-  meetingID: 'spaceMeeting',
+  meetingID: 'meeting1',
 };
