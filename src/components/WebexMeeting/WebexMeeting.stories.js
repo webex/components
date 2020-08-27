@@ -1,26 +1,24 @@
 import React from 'react';
-import {storiesOf} from '@storybook/react';
+import WebexMeeting from './WebexMeeting';
 
-import jsonData from '../../data';
-import {WebexJSONAdapter} from '../../adapters';
+export default {
+  title: 'Meetings/Webex Meeting',
+  component: WebexMeeting,
+};
 
-import {WebexMeeting, WebexDataProvider} from '..';
+const wrapperStyles = {
+  height: '500px',
+  width: '650px',
+};
+const Template = (args) => <div style={wrapperStyles}><WebexMeeting {...args} /></div>;
 
-const stories = storiesOf('Webex Meeting', module);
-const webexAdapter = new WebexJSONAdapter(jsonData);
+export const Default = Template.bind({});
+Default.args = {
+  meetingDestination: 'remote&localMedia',
+};
 
-stories.add('default', () => (
-  <WebexDataProvider adapter={webexAdapter}>
-    <WebexMeeting meetingDestination="remote&localMedia" />
-  </WebexDataProvider>
-));
-
-stories.add('custom controls', () => {
-  const controls = (isActive) => (isActive ? ['leave-meeting'] : ['join-meeting']);
-
-  return (
-    <WebexDataProvider adapter={webexAdapter}>
-      <WebexMeeting meetingDestination="localMedia" controls={controls} />
-    </WebexDataProvider>
-  );
-});
+export const CustomControls = Template.bind({});
+CustomControls.args = {
+  meetingDestination: 'remote&localMedia',
+  controls: (isActive) => (isActive ? ['leave-meeting'] : ['join-meeting']),
+};

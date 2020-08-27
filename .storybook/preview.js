@@ -24,4 +24,31 @@ export const decorators = [
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   layout: 'centered',
+  options: {
+    storySort: {
+      order: [
+        'Platform',
+        [
+          'Webex Avatar',
+          'Webex Member Roster',
+          'Webex Member',
+        ],
+        'Messaging',
+        [
+          'Webex Activity Stream',
+          'Webex Activity',
+        ],
+        'Meetings',
+        [
+          'Webex Meeting',
+          'Webex Meeting Info',
+          'Webex Interstitial Meeting',
+          'Webex In-Meeting',
+          'Webex Local Media',
+          'Webex Remote Media',
+          'Webex Meeting Control'
+        ],
+      ],
+    },
+  },
 };

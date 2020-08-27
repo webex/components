@@ -1,51 +1,29 @@
 import React from 'react';
-import {storiesOf} from '@storybook/react';
+import WebexMeetingInfo from './WebexMeetingInfo';
 
-import jsonData from '../../data';
-import {WebexJSONAdapter} from '../../adapters';
-import {WebexMeetingInfo, WebexDataProvider} from '..';
+export default {
+  title: 'Meetings/Webex Meeting Info',
+  component: WebexMeetingInfo,
+};
 
-// Setup for the stories
-const stories = storiesOf('Webex Meeting Info', module);
-const webexAdapter = new WebexJSONAdapter(jsonData);
-const wrapperStyle = {height: '150px', width: '500px', border: '1px solid black'};
+const Template = (args) => <WebexMeetingInfo {...args} />;
 
-stories.add('scheduled meeting', () => (
-  <div style={wrapperStyle}>
-    <WebexDataProvider adapter={webexAdapter}>
-      <WebexMeetingInfo meetingID="scheduledMeeting" />
-    </WebexDataProvider>
-  </div>
-));
+export const Loading = Template.bind({});
+Loading.args = {
+  meetingID: '',
+};
 
-stories.add('1:1 meeting', () => (
-  <div style={wrapperStyle}>
-    <WebexDataProvider adapter={webexAdapter}>
-      <WebexMeetingInfo meetingID="oneOnOneMeeting" />
-    </WebexDataProvider>
-  </div>
-));
+export const Error = Template.bind({});
+Error.args = {
+  meetingID: 'noMeetingTitle',
+};
 
-stories.add('space meeting', () => (
-  <div style={wrapperStyle}>
-    <WebexDataProvider adapter={webexAdapter}>
-      <WebexMeetingInfo meetingID="spaceMeeting" />
-    </WebexDataProvider>
-  </div>
-));
+export const Direct = Template.bind({});
+Direct.args = {
+  meetingID: 'oneOnOneMeeting',
+};
 
-stories.add('no meeting information', () => (
-  <div style={wrapperStyle}>
-    <WebexDataProvider adapter={webexAdapter}>
-      <WebexMeetingInfo meetingID="noMeetingTitle" />
-    </WebexDataProvider>
-  </div>
-));
-
-stories.add('loading', () => (
-  <div style={wrapperStyle}>
-    <WebexDataProvider adapter={webexAdapter}>
-      <WebexMeetingInfo meetingID="loadingMeeting" />
-    </WebexDataProvider>
-  </div>
-));
+export const Space = Template.bind({});
+Space.args = {
+  meetingID: 'spaceMeeting',
+};

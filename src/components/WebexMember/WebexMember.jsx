@@ -4,7 +4,6 @@ import {ListItem} from '@momentum-ui/react';
 
 import {usePerson} from '../hooks';
 import WebexAvatar from '../WebexAvatar/WebexAvatar';
-import './WebexMember.scss';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 
 /**

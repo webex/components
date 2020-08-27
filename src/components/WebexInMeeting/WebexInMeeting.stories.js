@@ -1,22 +1,20 @@
 import React from 'react';
-import {storiesOf} from '@storybook/react';
 
-import jsonData from '../../data';
-import {WebexJSONAdapter} from '../../adapters';
+import WebexInMeeting from './WebexInMeeting';
 
-import {WebexInMeeting, WebexDataProvider} from '..';
+export default {
+  title: 'Meetings/Webex In-Meeting',
+  component: WebexInMeeting,
+};
 
-const stories = storiesOf('Webex InMeeting', module);
-const webexAdapter = new WebexJSONAdapter(jsonData);
+const Template = (args) => <WebexInMeeting {...args} />;
 
-stories.add('remote and local media enabled', () => (
-  <WebexDataProvider adapter={webexAdapter}>
-    <WebexInMeeting meetingID="remote&localMedia" />
-  </WebexDataProvider>
-));
+export const AllMedia = Template.bind({});
+AllMedia.args = {
+  meetingID: 'remote&localMedia',
+};
 
-stories.add('only remote media enabled', () => (
-  <WebexDataProvider adapter={webexAdapter}>
-    <WebexInMeeting meetingID="remoteMedia" />
-  </WebexDataProvider>
-));
+export const RemoteMediaOnly = Template.bind({});
+RemoteMediaOnly.args = {
+  meetingID: 'remoteMedia',
+};

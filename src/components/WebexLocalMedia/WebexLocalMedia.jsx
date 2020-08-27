@@ -13,8 +13,6 @@ import {
   useStream,
 } from '../hooks';
 
-import './WebexLocalMedia.scss';
-
 /**
  * Webex Local Media component displays the user's local video.
  *

@@ -7,8 +7,6 @@ import {Spinner} from '@momentum-ui/react';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import {useMeeting} from '../hooks';
 
-import './WebexMeetingInfo.scss';
-
 /**
  * Formats a start and end date to a readable string.
  * Example: "5:00 PM - 6:00 PM"

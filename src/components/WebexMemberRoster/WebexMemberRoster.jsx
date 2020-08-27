@@ -33,5 +33,5 @@ export default function WebexMemberRoster({destinationID, destinationType}) {
 
 WebexMemberRoster.propTypes = {
   destinationID: PropTypes.string.isRequired,
-  destinationType: PropTypes.string.isRequired
+  destinationType: PropTypes.string.isRequired,
 };

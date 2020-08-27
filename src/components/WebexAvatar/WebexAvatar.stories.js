@@ -1,90 +1,172 @@
 import React from 'react';
-import {storiesOf} from '@storybook/react';
 import {PersonStatus} from '@webex/component-adapter-interfaces';
+import people from '../../data/people.json';
+import WebexAvatar from './WebexAvatar';
 
-import jsonData from '../../data';
-import {WebexJSONAdapter} from '../../adapters';
-import {WebexAvatar, WebexDataProvider} from '..';
+export default {
+  title: 'Platform/Webex Avatar',
+  component: WebexAvatar,
+};
 
-// Setup for the stories
-const stories = storiesOf('Webex Avatar', module);
-const webexAdapter = new WebexJSONAdapter(jsonData);
+const Template = (args) => <WebexAvatar {...args} />;
 
-// Stories
-stories.add('default', () => (
-  <WebexDataProvider adapter={webexAdapter}>
-    <WebexAvatar personID="default" />
-  </WebexDataProvider>
-));
+export const NoStatus = Template.bind({});
+NoStatus.args = {
+  personID: 'default',
+  displayStatus: false,
+};
 
-stories.add('no status', () => (
-  <WebexDataProvider adapter={webexAdapter}>
-    <WebexAvatar personID="default" displayStatus={false} />
-  </WebexDataProvider>
-));
+export const Active = Template.bind({});
+Active.args = {
+  personID: 'default',
+};
+Active.parameters = {
+  jsonData: {
+    people: {
+      default: {
+        ...people.default,
+        status: PersonStatus.ACTIVE,
+      },
+    },
+  },
+};
 
-stories.add(PersonStatus.ACTIVE, () => (
-  <WebexDataProvider adapter={webexAdapter}>
-    <WebexAvatar personID={PersonStatus.ACTIVE} />
-  </WebexDataProvider>
-));
+export const Call = Template.bind({});
+Call.args = {
+  personID: 'default',
+};
+Call.parameters = {
+  jsonData: {
+    people: {
+      default: {
+        ...people.default,
+        status: PersonStatus.CALL,
+      },
+    },
+  },
+};
 
-stories.add(PersonStatus.BOT, () => (
-  <WebexDataProvider adapter={webexAdapter}>
-    <WebexAvatar personID={PersonStatus.BOT} />
-  </WebexDataProvider>
-));
+export const Bot = Template.bind({});
+Bot.args = {
+  personID: 'default',
+};
+Bot.parameters = {
+  jsonData: {
+    people: {
+      default: {
+        ...people.default,
+        status: PersonStatus.BOT,
+      },
+    },
+  },
+};
 
-stories.add(PersonStatus.CALL, () => (
-  <WebexDataProvider adapter={webexAdapter}>
-    <WebexAvatar personID={PersonStatus.CALL} />
-  </WebexDataProvider>
-));
+export const DoNotDisturb = Template.bind({});
+DoNotDisturb.args = {
+  personID: 'default',
+};
+DoNotDisturb.parameters = {
+  jsonData: {
+    people: {
+      default: {
+        ...people.default,
+        status: PersonStatus.DO_NOT_DISTURB,
+      },
+    },
+  },
+};
 
-stories.add(PersonStatus.DO_NOT_DISTURB, () => (
-  <WebexDataProvider adapter={webexAdapter}>
-    <WebexAvatar personID={PersonStatus.DO_NOT_DISTURB} />
-  </WebexDataProvider>
-));
+export const Inactive = Template.bind({});
+Inactive.args = {
+  personID: 'default',
+};
+Inactive.parameters = {
+  jsonData: {
+    people: {
+      default: {
+        ...people.default,
+        status: PersonStatus.INACTIVE,
+      },
+    },
+  },
+};
 
-stories.add(PersonStatus.INACTIVE, () => (
-  <WebexDataProvider adapter={webexAdapter}>
-    <WebexAvatar personID={PersonStatus.INACTIVE} />
-  </WebexDataProvider>
-));
+export const Meeting = Template.bind({});
+Meeting.args = {
+  personID: 'default',
+};
+Meeting.parameters = {
+  jsonData: {
+    people: {
+      default: {
+        ...people.default,
+        status: PersonStatus.MEETING,
+      },
+    },
+  },
+};
 
-stories.add(PersonStatus.MEETING, () => (
-  <WebexDataProvider adapter={webexAdapter}>
-    <WebexAvatar personID={PersonStatus.MEETING} />
-  </WebexDataProvider>
-));
+export const OutOfOffice = Template.bind({});
+OutOfOffice.args = {
+  personID: 'default',
+};
+OutOfOffice.parameters = {
+  jsonData: {
+    people: {
+      default: {
+        ...people.default,
+        status: PersonStatus.OUT_OF_OFFICE,
+      },
+    },
+  },
+};
 
-stories.add(PersonStatus.OUT_OF_OFFICE, () => (
-  <WebexDataProvider adapter={webexAdapter}>
-    <WebexAvatar personID={PersonStatus.OUT_OF_OFFICE} />
-  </WebexDataProvider>
-));
+export const Presenting = Template.bind({});
+Presenting.args = {
+  personID: 'default',
+};
+Presenting.parameters = {
+  jsonData: {
+    people: {
+      default: {
+        ...people.default,
+        status: PersonStatus.PRESENTING,
+      },
+    },
+  },
+};
 
-stories.add(PersonStatus.PRESENTING, () => (
-  <WebexDataProvider adapter={webexAdapter}>
-    <WebexAvatar personID={PersonStatus.PRESENTING} />
-  </WebexDataProvider>
-));
+export const Self = Template.bind({});
+Self.args = {
+  personID: 'default',
+};
+Self.parameters = {
+  jsonData: {
+    people: {
+      default: {
+        ...people.default,
+        status: PersonStatus.SELF,
+      },
+    },
+  },
+};
 
-stories.add(PersonStatus.SELF, () => (
-  <WebexDataProvider adapter={webexAdapter}>
-    <WebexAvatar personID={PersonStatus.SELF} />
-  </WebexDataProvider>
-));
+export const Typing = Template.bind({});
+Typing.args = {
+  personID: 'default',
+};
+Typing.parameters = {
+  jsonData: {
+    people: {
+      default: {
+        ...people.default,
+        status: PersonStatus.TYPING,
+      },
+    },
+  },
+};
 
-stories.add(PersonStatus.TYPING, () => (
-  <WebexDataProvider adapter={webexAdapter}>
-    <WebexAvatar personID={PersonStatus.TYPING} />
-  </WebexDataProvider>
-));
-
-stories.add('wrong PersonID', () => (
-  <WebexDataProvider adapter={webexAdapter}>
-    <WebexAvatar personID="Wrong personID" />
-  </WebexDataProvider>
-));
+export const Invalid = Template.bind({});
+Invalid.args = {
+  personID: '123',
+};
