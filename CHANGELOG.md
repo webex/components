@@ -1,3 +1,10 @@
+## [1.44.1](https://github.com/webex/components/compare/v1.44.0...v1.44.1) (2020-08-27)
+
+
+### Bug Fixes
+
+* **package:** remove .npmignore in favor of files ([dc3387b](https://github.com/webex/components/commit/dc3387b1eecdc983671eb4c120864f08eef3c6cd))
+
 # [1.44.0](https://github.com/webex/components/compare/v1.43.0...v1.44.0) (2020-08-26)
 
 
