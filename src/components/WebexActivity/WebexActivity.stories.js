@@ -1,6 +1,6 @@
 import React from 'react';
 import {addDays, getDay, subDays} from 'date-fns';
-import activities from '../../data/activities.json';
+import activities from '../../data/activities';
 import WebexActivity from './WebexActivity';
 
 export default {

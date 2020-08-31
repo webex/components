@@ -1,6 +1,6 @@
 import {isObservable} from 'rxjs';
 
-import activities from '../data/activities.json';
+import activities from '../data/activities';
 import ActivitiesJSONAdapter from './ActivitiesJSONAdapter';
 
 describe('Activities JSON Adapter Interface', () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import {PersonStatus} from '@webex/component-adapter-interfaces';
-import people from '../../data/people.json';
+import people from '../../data/people';
 import WebexAvatar from './WebexAvatar';
 
 export default {

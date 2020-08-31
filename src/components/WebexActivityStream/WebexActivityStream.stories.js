@@ -1,7 +1,7 @@
 import React from 'react';
 import {subDays} from 'date-fns';
-import activities from '../../data/activities.json';
-import rooms from '../../data/rooms.json';
+import activities from '../../data/activities';
+import rooms from '../../data/rooms';
 import WebexActivityStream from './WebexActivityStream';
 
 export default {

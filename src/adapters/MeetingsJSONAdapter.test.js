@@ -1,7 +1,7 @@
 import {isObservable} from 'rxjs';
 import {skip} from 'rxjs/operators';
 
-import JSONData from '../data/meetings.json';
+import JSONData from '../data/meetings';
 import MeetingsJSONAdapter from './MeetingsJSONAdapter';
 
 describe('Meetings JSON Adapter', () => {
