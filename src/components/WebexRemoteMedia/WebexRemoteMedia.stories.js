@@ -18,6 +18,14 @@ stories.add('loading', () => (
   </div>
 ));
 
+stories.add('waiting for others', () => (
+  <div style={wrapperStyle}>
+    <WebexDataProvider adapter={webexAdapter}>
+      <WebexRemoteMedia meetingID="noMembers" />
+    </WebexDataProvider>
+  </div>
+));
+
 stories.add('video only', () => (
   <div style={wrapperStyle}>
     <WebexDataProvider adapter={webexAdapter}>

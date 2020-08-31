@@ -4,5 +4,41 @@
     "destinationID": "default_membership",
     "destinationType": "room",
     "members": [{"personID": "default"}, {"personID": "self"}, {"personID": "call"}, {"personID": "presenting"}]
+  },
+  "remoteVideo": {
+    "ID": "remoteVideo",
+    "destinationID": "remoteVideo",
+    "destinationType": "meeting",
+    "members": [{"personID": "default"}, {"personID": "self"}, {"personID": "call"}, {"personID": "presenting"}]
+  },
+  "remoteAudio": {
+    "ID": "remoteAudio",
+    "destinationID": "remoteAudio",
+    "destinationType": "meeting",
+    "members": [{"personID": "default"}, {"personID": "self"}, {"personID": "call"}, {"personID": "presenting"}]
+  },
+  "remoteAudio&Video": {
+    "ID": "remoteAudio&Video",
+    "destinationID": "remoteAudio&Video",
+    "destinationType": "meeting",
+    "members": [{"personID": "default"}, {"personID": "self"}, {"personID": "call"}, {"personID": "presenting"}]
+  },
+  "noMedia": {
+    "ID": "noMedia",
+    "destinationID": "noMedia",
+    "destinationType": "meeting",
+    "members": [{"personID": "default"}, {"personID": "self"}, {"personID": "call"}, {"personID": "presenting"}]
+  },
+  "noMembers": {
+    "ID": "noMembers",
+    "destinationID": "noMembers",
+    "destinationType": "meeting",
+    "members": [{"personID": "self"}]
+  },
+  "failMeetingID": {
+    "ID": "failMeetingID",
+    "destinationID": "failMeetingID",
+    "destinationType": "meeting",
+    "members": [{"personID": "self"}]
   }
 }
