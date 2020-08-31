@@ -1,8 +1,8 @@
 import {
-  concat, from, fromEvent, merge, Observable, of, Subject,
+  concat, fromEvent, merge, Observable, Subject,
 } from 'rxjs';
 import {
-  filter, flatMap, map, takeUntil, tap,
+  filter, map, takeUntil, tap,
 } from 'rxjs/operators';
 import {MeetingsAdapter, MeetingControlState} from '@webex/component-adapter-interfaces';
 
@@ -168,33 +168,6 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       observer.complete();
     });
 
-    // Attach media stream if any of the meeting's media stream properties are not  `null`.
-    // We can not attach the MediaStream object in a JSON module, the work needs
-    // to be done here.
-    const getMeetingWithMedia$ = getMeeting$.pipe(
-      /* eslint-disable no-confusing-arrow */
-      flatMap((meeting) => meeting.localVideo
-        ? from(this.getStream({video: true, audio: false})).pipe(
-          map((localVideo) => ({...meeting, localVideo})),
-        )
-        : of(meeting)),
-      flatMap((meeting) => meeting.localAudio
-        ? from(this.getStream({video: false, audio: true})).pipe(
-          map((localAudio) => ({...meeting, localAudio})),
-        )
-        : of(meeting)),
-      flatMap((meeting) => meeting.remoteVideo
-        ? from(this.getStream({video: true, audio: false})).pipe(
-          map((remoteVideo) => ({...meeting, remoteVideo})),
-        )
-        : of(meeting)),
-      flatMap((meeting) => meeting.remoteAudio
-        ? from(this.getStream({video: false, audio: true})).pipe(
-          map((remoteAudio) => ({...meeting, remoteAudio})),
-        )
-        : of(meeting)),
-    );
-
     // Send updates on the meeting when an action is triggered
     const shareEvents$ = fromEvent(document, SHARE_CONTROL).pipe(
       tap(() => {
@@ -218,7 +191,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       map((event) => ({...event.detail})),
     );
 
-    return concat(getMeetingWithMedia$, events$).pipe(
+    return concat(getMeeting$, events$).pipe(
       tap((meeting) => {
         // Update the static meeting object after each change accordingly
         this.datasource[ID] = meeting;
