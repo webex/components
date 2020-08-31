@@ -30,6 +30,7 @@ jest.spyOn(React, 'useContext').mockImplementation((context) => {
   return {
     activitiesAdapter: jsonData.activities,
     meetingsAdapter: jsonData.meetings,
+    membershipsAdapter: jsonData.memberships,
     peopleAdapter: jsonData.people,
     roomsAdapter: jsonData.rooms,
   };
