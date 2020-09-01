@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Meetings/Webex Local Media Media Disabled 1`] = `
+<div
+  className="wxc-local-media wxc-local-media-no-media"
+>
+  <div
+    className="md-avatar md-avatar--medium"
+    title="Barbara German"
+  >
+    <span
+      className="md-avatar__letter"
+      style={
+        Object {
+          "backgroundColor": "",
+          "color": "",
+        }
+      }
+    >
+      BG
+    </span>
+    <img
+      alt="Barbara German"
+      className="md-avatar__img md-avatar__img--hidden"
+      draggable={false}
+      onError={[Function]}
+      onLoad={[Function]}
+      src="./images/barbara.png"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Meetings/Webex Local Media Media Enabled 1`] = `
+<div
+  className="wxc-local-media"
+>
+  <video
+    autoPlay={true}
+    playsInline={true}
+  />
+</div>
+`;

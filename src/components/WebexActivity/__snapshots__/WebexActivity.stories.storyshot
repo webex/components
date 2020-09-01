@@ -1,0 +1,275 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Messaging/Webex Activity Created Long Back 1`] = `
+<div
+  className="wxc-activity"
+>
+  <div
+    className="wxc-activity-header"
+  >
+    <div
+      className="md-avatar md-avatar--dnd md-avatar--medium"
+      title="Barbara German"
+    >
+      <span
+        className="md-avatar__letter"
+        style={
+          Object {
+            "backgroundColor": "",
+            "color": "",
+          }
+        }
+      >
+        BG
+      </span>
+      <img
+        alt="Barbara German"
+        className="md-avatar__img md-avatar__img--hidden"
+        draggable={false}
+        onError={[Function]}
+        onLoad={[Function]}
+        src="./images/barbara.png"
+      />
+    </div>
+    <div
+      className="activity-author"
+    >
+      <span>
+        Barbara German
+      </span>
+      <span
+        className="activity-timestamp"
+      >
+        07/25/2020, 10:00 AM
+      </span>
+    </div>
+  </div>
+  <div
+    className="activity-content"
+  >
+    The login page seems to be confusing a lot of people! Let's brainstorm some new designs
+  </div>
+</div>
+`;
+
+exports[`Storyshots Messaging/Webex Activity Created This Week 1`] = `
+<div
+  className="wxc-activity"
+>
+  <div
+    className="wxc-activity-header"
+  >
+    <div
+      className="md-avatar md-avatar--dnd md-avatar--medium"
+      title="Barbara German"
+    >
+      <span
+        className="md-avatar__letter"
+        style={
+          Object {
+            "backgroundColor": "",
+            "color": "",
+          }
+        }
+      >
+        BG
+      </span>
+      <img
+        alt="Barbara German"
+        className="md-avatar__img md-avatar__img--hidden"
+        draggable={false}
+        onError={[Function]}
+        onLoad={[Function]}
+        src="./images/barbara.png"
+      />
+    </div>
+    <div
+      className="activity-author"
+    >
+      <span>
+        Barbara German
+      </span>
+      <span
+        className="activity-timestamp"
+      >
+        Thursday, 10:00 AM
+      </span>
+    </div>
+  </div>
+  <div
+    className="activity-content"
+  >
+    Following up on our last task. Seems like we need more time?
+  </div>
+</div>
+`;
+
+exports[`Storyshots Messaging/Webex Activity Created Today 1`] = `
+<div
+  className="wxc-activity"
+>
+  <div
+    className="wxc-activity-header"
+  >
+    <div
+      className="md-avatar md-avatar--medium"
+      title="Simon Damiano"
+    >
+      <span
+        className="md-avatar__letter"
+        style={
+          Object {
+            "backgroundColor": "",
+            "color": "",
+          }
+        }
+      >
+        SD
+      </span>
+      <img
+        alt="Simon Damiano"
+        className="md-avatar__img md-avatar__img--hidden"
+        draggable={false}
+        onError={[Function]}
+        onLoad={[Function]}
+        src="./images/simon.png"
+      />
+    </div>
+    <div
+      className="activity-author"
+    >
+      <span>
+        Simon Damiano
+      </span>
+      <span
+        className="activity-timestamp"
+      >
+        10:00 AM
+      </span>
+    </div>
+  </div>
+  <div
+    className="activity-content"
+  >
+    Hey guys! I'm going to skip standup today, not feeling great 🤢
+  </div>
+</div>
+`;
+
+exports[`Storyshots Messaging/Webex Activity Created Yesterday 1`] = `
+<div
+  className="wxc-activity"
+>
+  <div
+    className="wxc-activity-header"
+  >
+    <div
+      className="md-avatar md-avatar--medium"
+      title="Brandon Seeger"
+    >
+      <span
+        className="md-avatar__letter"
+        style={
+          Object {
+            "backgroundColor": "",
+            "color": "",
+          }
+        }
+      >
+        BS
+      </span>
+      <img
+        alt="Brandon Seeger"
+        className="md-avatar__img md-avatar__img--hidden"
+        draggable={false}
+        onError={[Function]}
+        onLoad={[Function]}
+        src="../images/brandon.png"
+      />
+    </div>
+    <div
+      className="activity-author"
+    >
+      <span>
+        Brandon Seeger
+      </span>
+      <span
+        className="activity-timestamp"
+      >
+        Yesterday, 10:00 AM
+      </span>
+    </div>
+  </div>
+  <div
+    className="activity-content"
+  >
+    Got some of the new designs for the login page, will send the Figma links tomorrow
+  </div>
+</div>
+`;
+
+exports[`Storyshots Messaging/Webex Activity Multi Line 1`] = `
+<div
+  className="wxc-activity"
+>
+  <div
+    className="wxc-activity-header"
+  >
+    <div
+      className="md-avatar md-avatar--medium"
+      title="Giacomo Edwards"
+    >
+      <span
+        className="md-avatar__letter"
+        style={
+          Object {
+            "backgroundColor": "",
+            "color": "",
+          }
+        }
+      >
+        GE
+      </span>
+      <img
+        alt="Giacomo Edwards"
+        className="md-avatar__img md-avatar__img--hidden"
+        draggable={false}
+        onError={[Function]}
+        onLoad={[Function]}
+        src="./images/giacomo.png"
+      />
+    </div>
+    <div
+      className="activity-author"
+    >
+      <span>
+        Giacomo Edwards
+      </span>
+      <span
+        className="activity-timestamp"
+      >
+        10:05 AM
+      </span>
+    </div>
+  </div>
+  <div
+    className="activity-content"
+  >
+    I ran into the same issue before! Have you checked your OS permissions?
+Sometimes that is disabled for the browser and causes the app to not load properly.
+Let me know if you need more help! Maybe we can talk about it during standup
+  </div>
+</div>
+`;
+
+exports[`Storyshots Messaging/Webex Activity No Header 1`] = `
+<div
+  className="wxc-activity"
+>
+  <div
+    className="activity-content"
+  >
+    Can someone help me troubleshoot?
+  </div>
+</div>
+`;

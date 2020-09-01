@@ -17,3 +17,5 @@ export const MediaDisabled = Template.bind({});
 MediaDisabled.args = {
   meetingID: 'meeting2',
 };
+
+// TODO: Missing custom styling story

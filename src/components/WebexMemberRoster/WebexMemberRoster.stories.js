@@ -10,6 +10,6 @@ const Template = (args) => <WebexMemberRoster {...args} />;
 
 export const Space = Template.bind({});
 Space.args = {
-  destinationID: 'membership1',
+  destinationID: 'room1',
   destinationType: 'room',
 };

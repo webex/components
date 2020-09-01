@@ -4,7 +4,7 @@ export default {
     roomID: 'room1',
     text: 'I\'m having some issues setting up my environment 💻',
     personID: 'user3',
-    created: '2020-08-20T21:00:07.047Z',
+    created: 'August 1, 2020 10:00:00 UTC',
     displayHeader: true,
   },
   activity2: {
@@ -12,7 +12,7 @@ export default {
     roomID: 'room1',
     text: 'Can someone help me troubleshoot?',
     personID: 'user3',
-    created: '2020-08-20T21:00:07.047Z',
+    created: 'August 1, 2020 10:00:00 UTC',
     displayHeader: false,
   },
   activity3: {
@@ -20,7 +20,7 @@ export default {
     roomID: 'room1',
     text: 'I ran into the same issue before! Have you checked your OS permissions?\nSometimes that is disabled for the browser and causes the app to not load properly.\nLet me know if you need more help! Maybe we can talk about it during standup',
     personID: 'user2',
-    created: '2020-08-20T21:05:07.047Z',
+    created: 'August 1, 2020 10:05:00 UTC',
     displayHeader: true,
   },
   activity4: {
@@ -28,7 +28,7 @@ export default {
     roomID: 'room1',
     text: 'Thanks, Gio! Let\'s talk about it then 👍🏼',
     personID: 'user3',
-    created: '2020-08-20T21:05:08.047Z',
+    created: 'August 1, 2020 10:05:00 UTC',
     displayHeader: true,
   },
   activity5: {
@@ -36,7 +36,7 @@ export default {
     roomID: 'room1',
     text: 'Hey guys! I\'m going to skip standup today, not feeling great 🤢',
     personID: 'user4',
-    created: '2020-08-20T22:08:07.047Z',
+    created: 'August 1, 2020 10:08:00 UTC',
     displayHeader: true,
   },
   activity6: {
@@ -44,7 +44,7 @@ export default {
     roomID: 'room2',
     text: 'The login page seems to be confusing a lot of people! Let\'s brainstorm some new designs',
     personID: 'user1',
-    created: '2020-08-20T21:00:07.047Z',
+    created: 'August 3, 2020 13:24:00 UTC',
     displayHeader: true,
   },
   activity7: {
@@ -52,7 +52,7 @@ export default {
     roomID: 'room2',
     text: 'Got some of the new designs for the login page, will send the Figma links tomorrow',
     personID: 'user5',
-    created: '2020-08-20T21:00:07.047Z',
+    created: 'August 4, 2020 10:19:00 UTC',
     displayHeader: true,
   },
   activity8: {
@@ -60,7 +60,7 @@ export default {
     roomID: 'room2',
     text: 'Following up on our last task. Seems like we need more time?',
     personID: 'user1',
-    created: '2020-08-20T21:00:07.047Z',
+    created: 'August 5, 2020 11:08:00 UTC',
     displayHeader: true,
   },
 };

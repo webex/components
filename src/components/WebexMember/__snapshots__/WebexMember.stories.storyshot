@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Platform/Webex Member Space 1`] = `
+<div
+  className="wxc-member"
+>
+  <div
+    className="md-avatar md-avatar--medium"
+    title="Barbara German"
+  >
+    <span
+      className="md-avatar__letter"
+      style={
+        Object {
+          "backgroundColor": "",
+          "color": "",
+        }
+      }
+    >
+      BG
+    </span>
+    <img
+      alt="Barbara German"
+      className="md-avatar__img md-avatar__img--hidden"
+      draggable={false}
+      onError={[Function]}
+      onLoad={[Function]}
+      src="./images/barbara.png"
+    />
+  </div>
+  <div
+    className="member-name"
+  >
+    Barbara German
+  </div>
+</div>
+`;
+
+exports[`Storyshots Platform/Webex Member Status Enabled 1`] = `
+<div
+  className="wxc-member"
+>
+  <div
+    className="md-avatar md-avatar--dnd md-avatar--medium"
+    title="Barbara German"
+  >
+    <span
+      className="md-avatar__letter"
+      style={
+        Object {
+          "backgroundColor": "",
+          "color": "",
+        }
+      }
+    >
+      BG
+    </span>
+    <img
+      alt="Barbara German"
+      className="md-avatar__img md-avatar__img--hidden"
+      draggable={false}
+      onError={[Function]}
+      onLoad={[Function]}
+      src="./images/barbara.png"
+    />
+  </div>
+  <div
+    className="member-name"
+  >
+    Barbara German
+  </div>
+</div>
+`;

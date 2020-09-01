@@ -1,0 +1,207 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Meetings/Webex Meeting Control Active Icon 1`] = `
+<div
+  className="wxc-meeting-controls"
+>
+  <button
+    alt="Mute"
+    aria-label="Mute"
+    aria-pressed={null}
+    className="md-button md-button--circle md-button--56"
+    data-md-event-key="md-button-5"
+    disabled={false}
+    id="md-button-5"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    style={
+      Object {
+        "style": Object {},
+      }
+    }
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="md-button__children"
+      style={
+        Object {
+          "opacity": "1",
+        }
+      }
+    >
+      <i
+        aria-label={null}
+        className="md-icon icon icon-microphone-muted_28"
+        style={
+          Object {
+            "fontSize": 28,
+          }
+        }
+      />
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Meetings/Webex Meeting Control Disabled Icon 1`] = `
+<div
+  className="wxc-meeting-controls"
+>
+  <button
+    alt="Mute disabled"
+    aria-label="Mute disabled"
+    aria-pressed={null}
+    className="md-button md-button--circle md-button--56"
+    data-md-event-key="md-button-8"
+    disabled={true}
+    id="md-button-8"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    style={
+      Object {
+        "style": Object {},
+      }
+    }
+    tabIndex={null}
+    type="button"
+  >
+    <span
+      className="md-button__children"
+      style={
+        Object {
+          "opacity": "1",
+        }
+      }
+    >
+      <i
+        aria-label={null}
+        className="md-icon icon icon-microphone_28"
+        style={
+          Object {
+            "fontSize": 28,
+          }
+        }
+      />
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Meetings/Webex Meeting Control Disabled Text 1`] = `
+<div
+  className="wxc-meeting-controls"
+>
+  <button
+    alt="Join meeting"
+    aria-label="Join meeting"
+    aria-pressed={null}
+    className="md-button md-button--52 md-button--green"
+    data-md-event-key="md-button-10"
+    data-md-keyboard-key="join-meeting"
+    disabled={true}
+    id="md-button-10"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    style={
+      Object {
+        "style": Object {},
+      }
+    }
+    tabIndex={null}
+    type="button"
+  >
+    <span
+      className="md-button__children"
+      style={
+        Object {
+          "opacity": "1",
+        }
+      }
+    >
+      Join meeting
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Meetings/Webex Meeting Control Inactive Icon 1`] = `
+<div
+  className="wxc-meeting-controls"
+>
+  <button
+    alt="Mute"
+    aria-label="Mute"
+    aria-pressed={null}
+    className="md-button md-button--circle md-button--56"
+    data-md-event-key="md-button-7"
+    disabled={false}
+    id="md-button-7"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    style={
+      Object {
+        "style": Object {},
+      }
+    }
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="md-button__children"
+      style={
+        Object {
+          "opacity": "1",
+        }
+      }
+    >
+      <i
+        aria-label={null}
+        className="md-icon icon icon-microphone-muted_28"
+        style={
+          Object {
+            "fontSize": 28,
+          }
+        }
+      />
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Meetings/Webex Meeting Control Text 1`] = `
+<div
+  className="wxc-meeting-controls"
+>
+  <button
+    alt="Join meeting"
+    aria-label="Join meeting"
+    aria-pressed={null}
+    className="md-button md-button--52 md-button--green"
+    data-md-event-key="md-button-9"
+    data-md-keyboard-key="join-meeting"
+    disabled={false}
+    id="md-button-9"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    style={
+      Object {
+        "style": Object {},
+      }
+    }
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="md-button__children"
+      style={
+        Object {
+          "opacity": "1",
+        }
+      }
+    >
+      Join meeting
+    </span>
+  </button>
+</div>
+`;

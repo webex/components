@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Meetings/Webex Remote Media All Remote Media 1`] = `
+<div
+  className="wxc-remote-media split-screen"
+>
+  <video
+    autoPlay={true}
+    playsInline={true}
+  />
+  <video
+    autoPlay={true}
+    playsInline={true}
+  />
+  <audio
+    autoPlay={true}
+  />
+</div>
+`;
+
+exports[`Storyshots Meetings/Webex Remote Media Error 1`] = `
+<div
+  className="wxc-remote-media"
+>
+  <div
+    className="md-alert-banner md-alert-banner--warning"
+  >
+    <div
+      className="md-alert-banner__text"
+    >
+      Having trouble joining the meeting? Please check your connection.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Meetings/Webex Remote Media Loading 1`] = `
+<div
+  className="wxc-remote-media"
+>
+  <span
+    className="md-badge md-badge--round"
+  >
+    <i
+      className="md-spinner md-spinner--16 md-spinner--black"
+    />
+    <div>
+      Connecting
+    </div>
+  </span>
+</div>
+`;
+
+exports[`Storyshots Meetings/Webex Remote Media Remote Audio Only 1`] = `
+<div
+  className="wxc-remote-media"
+>
+  <audio
+    autoPlay={true}
+  />
+</div>
+`;
+
+exports[`Storyshots Meetings/Webex Remote Media Remote Video Only 1`] = `
+<div
+  className="wxc-remote-media"
+>
+  <video
+    autoPlay={true}
+    playsInline={true}
+  />
+</div>
+`;
+
+exports[`Storyshots Meetings/Webex Remote Media Waiting For Others 1`] = `
+<div
+  className="wxc-remote-media"
+>
+  <h4>
+    Waiting for others to join...
+  </h4>
+</div>
+`;

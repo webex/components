@@ -28,6 +28,8 @@ RemoteVideoOnly.args = {
   meetingID: 'meeting6',
 };
 
+// TODO: Add story with share only, once share is fixed
+
 export const AllRemoteMedia = Template.bind({});
 AllRemoteMedia.args = {
   meetingID: 'meeting2',

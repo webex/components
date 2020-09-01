@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Meetings/Webex Meeting Info Direct 1`] = `
+<div
+  className="wxc-meeting-info"
+>
+  <h2>
+    Barbara German
+  </h2>
+</div>
+`;
+
+exports[`Storyshots Meetings/Webex Meeting Info Error 1`] = `
+<div
+  className="wxc-meeting-info"
+>
+  <h2>
+    No Meeting Information
+  </h2>
+</div>
+`;
+
+exports[`Storyshots Meetings/Webex Meeting Info Loading 1`] = `
+<div
+  className="wxc-meeting-info"
+>
+  <i
+    className="md-spinner md-spinner--36 md-spinner--black"
+  />
+</div>
+`;
+
+exports[`Storyshots Meetings/Webex Meeting Info Space 1`] = `
+<div
+  className="wxc-meeting-info"
+>
+  <h2>
+    Weekly Backlog Grooming
+  </h2>
+</div>
+`;
