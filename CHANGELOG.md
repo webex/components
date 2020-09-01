@@ -1,3 +1,10 @@
+# [1.45.0](https://github.com/webex/components/compare/v1.44.1...v1.45.0) (2020-09-01)
+
+
+### Features
+
+* **RemoteMedia:** add waiting state ([270285d](https://github.com/webex/components/commit/270285d537dc08ef75e7e02a4cb9a71ec7e48cfe))
+
 ## [1.44.1](https://github.com/webex/components/compare/v1.44.0...v1.44.1) (2020-08-27)
 
 
