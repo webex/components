@@ -12,6 +12,7 @@ export const Space = Template.bind({});
 Space.args = {
   personID: 'user1',
 };
+
 export const StatusEnabled = Template.bind({});
 StatusEnabled.args = {
   personID: 'user1',

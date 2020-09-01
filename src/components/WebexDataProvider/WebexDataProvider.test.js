@@ -1,23 +1,26 @@
 import React from 'react';
+import TestRenderer from 'react-test-renderer';
 
 import WebexDataProvider from './WebexDataProvider';
 
-describe('Webex Data Provider component', () => {
-  const adapter = {
-    activitiesAdapter: {},
-    meetingsAdapter: {},
-    membershipsAdapter: {},
-    roomsAdapter: {},
-    peopleAdapter: {},
-  };
+describe('Webex Data Provider', () => {
+  describe('snapshot', () => {
+    const adapter = {
+      activitiesAdapter: {},
+      meetingsAdapter: {},
+      membershipsAdapter: {},
+      roomsAdapter: {},
+      peopleAdapter: {},
+    };
 
-  test('matches snapshot', () => {
-    const component = shallow(
-      <WebexDataProvider adapter={adapter}>
-        <div className="test" />
-      </WebexDataProvider>,
-    );
+    test('matches snapshot', () => {
+      const component = TestRenderer.create(
+        <WebexDataProvider adapter={adapter}>
+          <div className="test" />
+        </WebexDataProvider>,
+      );
 
-    expect(component).toMatchSnapshot();
+      expect(component.toJSON()).toMatchSnapshot();
+    });
   });
 });

@@ -15,6 +15,7 @@ ActiveIcon.args = {
   type: 'mute-audio',
 };
 
+// BUG: Snapshot test fails
 export const InactiveIcon = Template.bind({});
 InactiveIcon.args = {
   type: 'mute-audio',

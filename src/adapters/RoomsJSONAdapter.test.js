@@ -1,3 +1,5 @@
+import {isObservable} from 'rxjs';
+
 import rooms from '../data/rooms';
 import RoomsJSONAdapter from './RoomsJSONAdapter';
 
@@ -15,7 +17,7 @@ describe('Rooms JSON Adapter Interface', () => {
   });
 
   test('getRoom() returns an observable', () => {
-    expect(rxjs.isObservable(roomsJSONAdapter.getRoom())).toBeTruthy();
+    expect(isObservable(roomsJSONAdapter.getRoom())).toBeTruthy();
   });
 
   test('getRoom() returns a room data', (done) => {
@@ -49,7 +51,7 @@ describe('Rooms JSON Adapter Interface', () => {
   });
 
   test('getRoomActivities() returns an observable', () => {
-    expect(rxjs.isObservable(roomsJSONAdapter.getRoomActivities())).toBeTruthy();
+    expect(isObservable(roomsJSONAdapter.getRoomActivities())).toBeTruthy();
   });
 
   test('getRoomActivities() returns an array of previous activity IDs', (done) => {

@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Platform/Webex Member Roster Space 1`] = `
+<div
+  className="wxc-roster"
+>
+  <div
+    className="wxc-member"
+  >
+    <div
+      className="md-avatar md-avatar--medium"
+      title="Barbara German"
+    >
+      <span
+        className="md-avatar__letter"
+        style={
+          Object {
+            "backgroundColor": "",
+            "color": "",
+          }
+        }
+      >
+        BG
+      </span>
+      <img
+        alt="Barbara German"
+        className="md-avatar__img md-avatar__img--hidden"
+        draggable={false}
+        onError={[Function]}
+        onLoad={[Function]}
+        src="./images/barbara.png"
+      />
+    </div>
+    <div
+      className="member-name"
+    >
+      Barbara German
+    </div>
+  </div>
+  <div
+    className="wxc-member"
+  >
+    <div
+      className="md-avatar md-avatar--medium"
+      title="Giacomo Edwards"
+    >
+      <span
+        className="md-avatar__letter"
+        style={
+          Object {
+            "backgroundColor": "",
+            "color": "",
+          }
+        }
+      >
+        GE
+      </span>
+      <img
+        alt="Giacomo Edwards"
+        className="md-avatar__img md-avatar__img--hidden"
+        draggable={false}
+        onError={[Function]}
+        onLoad={[Function]}
+        src="./images/giacomo.png"
+      />
+    </div>
+    <div
+      className="member-name"
+    >
+      Giacomo Edwards
+    </div>
+  </div>
+  <div
+    className="wxc-member"
+  >
+    <div
+      className="md-avatar md-avatar--medium"
+      title="Brenda Song"
+    >
+      <span
+        className="md-avatar__letter"
+        style={
+          Object {
+            "backgroundColor": "",
+            "color": "",
+          }
+        }
+      >
+        BS
+      </span>
+      <img
+        alt="Brenda Song"
+        className="md-avatar__img md-avatar__img--hidden"
+        draggable={false}
+        onError={[Function]}
+        onLoad={[Function]}
+        src="./images/brenda.png"
+      />
+    </div>
+    <div
+      className="member-name"
+    >
+      Brenda Song
+    </div>
+  </div>
+  <div
+    className="wxc-member"
+  >
+    <div
+      className="md-avatar md-avatar--medium"
+      title="Simon Damiano"
+    >
+      <span
+        className="md-avatar__letter"
+        style={
+          Object {
+            "backgroundColor": "",
+            "color": "",
+          }
+        }
+      >
+        SD
+      </span>
+      <img
+        alt="Simon Damiano"
+        className="md-avatar__img md-avatar__img--hidden"
+        draggable={false}
+        onError={[Function]}
+        onLoad={[Function]}
+        src="./images/simon.png"
+      />
+    </div>
+    <div
+      className="member-name"
+    >
+      Simon Damiano
+    </div>
+  </div>
+</div>
+`;

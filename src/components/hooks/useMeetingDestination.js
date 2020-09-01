@@ -30,13 +30,13 @@ export default function useMeetingDestination(meetingDestination) {
   };
 
   const [meeting, setMeeting] = useState(emptyMeeting);
-  const [createNewMeeting, setCreateNewMeeting] = useState(false);
+  // const [createNewMeeting, setCreateNewMeeting] = useState(false);
   const {meetingsAdapter} = useContext(AdapterContext);
 
   useEffect(() => {
     // React won't recognize the meeting attributes have been updated
-    // since the state is the meeting object itself. We need to create a new
-    // meeting object trigger the state change
+    // since the state is the meeting object itself
+    // We need to create a new meeting object trigger the state change
     const onMeeting = (newMeeting) => {
       setMeeting({...newMeeting});
     };
@@ -44,7 +44,7 @@ export default function useMeetingDestination(meetingDestination) {
       throw error;
     };
     const onComplete = () => {
-      setCreateNewMeeting(!createNewMeeting);
+      // setCreateNewMeeting(!createNewMeeting);
       setMeeting(emptyMeeting);
     };
 
@@ -57,7 +57,7 @@ export default function useMeetingDestination(meetingDestination) {
       subscription.unsubscribe();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [meetingDestination, createNewMeeting]);
+  }, [meetingDestination]);
 
   return meeting;
 }

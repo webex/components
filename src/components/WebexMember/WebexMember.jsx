@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {ListItem} from '@momentum-ui/react';
 
 import {usePerson} from '../hooks';
 import WebexAvatar from '../WebexAvatar/WebexAvatar';
@@ -18,10 +17,10 @@ export default function WebexMember({personID, displayStatus}) {
   const {firstName, lastName} = usePerson(personID);
 
   return (
-    <ListItem className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-member`}>
+    <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-member`}>
       <WebexAvatar personID={personID} displayStatus={displayStatus} />
       <div className="member-name">{`${firstName} ${lastName}`}</div>
-    </ListItem>
+    </div>
   );
 }
 

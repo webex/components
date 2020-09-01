@@ -1,29 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Webex Meeting Controls component matches snapshot 1`] = `
-<ContextProvider
-  value="my-meeting"
+exports[`Webex Meeting Controls snapshot matches snapshot 1`] = `
+<div
+  className="wxc-meeting-controls"
 >
   <div
-    className="wxc-meeting-controls"
-  >
-    <div
-      className="test"
-    />
-  </div>
-</ContextProvider>
+    id="test"
+  />
+</div>
 `;
 
-exports[`Webex Meeting Controls component matches snapshot with custom CSS class 1`] = `
-<ContextProvider
-  value="my-meeting"
+exports[`Webex Meeting Controls snapshot matches snapshot with custom CSS class 1`] = `
+<div
+  className="wxc-meeting-controls my-custom-css-class"
 >
   <div
-    className="wxc-meeting-controls my-custom-class"
-  >
-    <div
-      className="test"
-    />
-  </div>
-</ContextProvider>
+    id="test"
+  />
+</div>
 `;

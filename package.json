@@ -59,13 +59,11 @@
     "@storybook/addon-actions": "^6.0.21",
     "@storybook/addon-essentials": "^6.0.21",
     "@storybook/addon-links": "^6.0.21",
+    "@storybook/addon-storyshots": "^6.0.21",
     "@storybook/preset-scss": "^1.0.2",
     "@storybook/react": "^6.0.21",
     "babel-loader": "^8.1.0",
     "css-loader": "^4.2.2",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "enzyme-to-json": "^3.5.0",
     "eslint": "^7.2.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.22.0",
@@ -80,6 +78,7 @@
     "jest-junit": "^11.0.1",
     "mockdate": "^3.0.2",
     "node-sass": "~4.12.0",
+    "react-test-renderer": "^16.13.1",
     "rollup": "^2.26.4",
     "rollup-plugin-copy": "^3.3.0",
     "rollup-plugin-license": "^2.2.0",
@@ -100,21 +99,19 @@
     ]
   },
   "jest": {
-    "globalSetup": "./jest-global-setup.js",
-    "reporters": [
-      "default",
-      "jest-junit"
-    ],
+    "globalSetup": "<rootDir>/jest.global.setup.js",
     "setupFiles": [
-      "<rootDir>/.storybook/setupTests.js"
+      "<rootDir>/jest.setup.js"
     ],
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ],
+    "verbose": true,
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less|scss)$": "identity-obj-proxy"
-    }
+    },
+    "reporters": [
+      "default",
+      "jest-junit"
+    ]
   },
   "jest-junit": {
     "outputDirectory": "test_results/jest",
