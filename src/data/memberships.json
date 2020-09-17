@@ -5,6 +5,12 @@
     "destinationType": "room",
     "members": [{"personID": "default"}, {"personID": "self"}, {"personID": "call"}, {"personID": "presenting"}]
   },
+  "remoteMedia": {
+    "ID": "remoteMedia",
+    "destinationID": "remoteMedia",
+    "destinationType": "meeting",
+    "members": [{"personID": "default"}, {"personID": "self"}, {"personID": "call"}, {"personID": "presenting"}]
+  },
   "remoteVideo": {
     "ID": "remoteVideo",
     "destinationID": "remoteVideo",
@@ -14,6 +20,12 @@
   "remoteAudio": {
     "ID": "remoteAudio",
     "destinationID": "remoteAudio",
+    "destinationType": "meeting",
+    "members": [{"personID": "default"}, {"personID": "self"}, {"personID": "call"}, {"personID": "presenting"}]
+  },
+  "remote&localMedia": {
+    "ID": "remote&localMedia",
+    "destinationID": "remote&localMedia",
     "destinationType": "meeting",
     "members": [{"personID": "default"}, {"personID": "self"}, {"personID": "call"}, {"personID": "presenting"}]
   },
