@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Remote Media Display component snapshot matches snapshot of empty component 1`] = `<Fragment />`;
+
+exports[`Remote Media Display component snapshot matches snapshot of remote audio 1`] = `
+<Fragment>
+  <audio
+    autoPlay={true}
+  />
+</Fragment>
+`;
+
+exports[`Remote Media Display component snapshot matches snapshot of remote audio and Video 1`] = `
+<Fragment>
+  <video
+    autoPlay={true}
+    playsInline={true}
+  />
+  <audio
+    autoPlay={true}
+  />
+</Fragment>
+`;
+
+exports[`Remote Media Display component snapshot matches snapshot of remote audio, video, and share 1`] = `
+<Fragment>
+  <video
+    autoPlay={true}
+    playsInline={true}
+  />
+  <video
+    autoPlay={true}
+    playsInline={true}
+  />
+  <audio
+    autoPlay={true}
+  />
+</Fragment>
+`;
+
+exports[`Remote Media Display component snapshot matches snapshot of remote share 1`] = `
+<Fragment>
+  <video
+    autoPlay={true}
+    playsInline={true}
+  />
+</Fragment>
+`;
+
+exports[`Remote Media Display component snapshot matches snapshot of remote video 1`] = `
+<Fragment>
+  <video
+    autoPlay={true}
+    playsInline={true}
+  />
+</Fragment>
+`;

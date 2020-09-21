@@ -4,9 +4,10 @@ exports[`Webex Remote Media component snapshot matches snapshot of disabled remo
 <div
   className="wxc-remote-media"
 >
-  <video
-    autoPlay={true}
-    playsInline={true}
+  <RemoteMediaDisplay
+    remoteAudio={null}
+    remoteShare={null}
+    remoteVideo={Object {}}
   />
 </div>
 `;
@@ -15,8 +16,10 @@ exports[`Webex Remote Media component snapshot matches snapshot of disabled remo
 <div
   className="wxc-remote-media"
 >
-  <audio
-    autoPlay={true}
+  <RemoteMediaDisplay
+    remoteAudio={Object {}}
+    remoteShare={null}
+    remoteVideo={null}
   />
 </div>
 `;
@@ -25,12 +28,10 @@ exports[`Webex Remote Media component snapshot matches snapshot of enabled remot
 <div
   className="wxc-remote-media"
 >
-  <video
-    autoPlay={true}
-    playsInline={true}
-  />
-  <audio
-    autoPlay={true}
+  <RemoteMediaDisplay
+    remoteAudio={Object {}}
+    remoteShare={null}
+    remoteVideo={Object {}}
   />
 </div>
 `;
@@ -39,12 +40,10 @@ exports[`Webex Remote Media component snapshot matches snapshot of enabled remot
 <div
   className="wxc-remote-media my-custom-class"
 >
-  <video
-    autoPlay={true}
-    playsInline={true}
-  />
-  <audio
-    autoPlay={true}
+  <RemoteMediaDisplay
+    remoteAudio={Object {}}
+    remoteShare={null}
+    remoteVideo={Object {}}
   />
 </div>
 `;

@@ -5,7 +5,8 @@ import classNames from 'classnames';
 import {Badge, Spinner, AlertBanner} from '@momentum-ui/react';
 
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
-import {useMeeting, useMemberships, useStream} from '../hooks';
+import {useMeeting, useMemberships} from '../hooks';
+import RemoteMediaDisplay from './RemoteMediaDisplay';
 import './WebexRemoteMedia.scss';
 
 /**
@@ -26,9 +27,6 @@ export default function WebexRemoteMedia({className, meetingID}) {
     error,
   } = useMeeting(meetingID);
   const members = useMemberships(meetingID, 'meeting');
-  const audioRef = useStream(remoteAudio);
-  const videoRef = useStream(remoteVideo);
-  const shareRef = useStream(remoteShare);
   const hasOtherMembers = members.length > 1;
   const hasMedia = !!(remoteAudio || remoteVideo || remoteShare);
   const hasTwoMedia = remoteVideo && remoteShare;
@@ -47,13 +45,11 @@ export default function WebexRemoteMedia({className, meetingID}) {
     );
   } else if (hasMedia && hasOtherMembers) {
     remoteDisplay = (
-      <>
-        {remoteVideo ? <video ref={videoRef} playsInline autoPlay /> : null}
-
-        {remoteShare ? <video ref={shareRef} playsInline autoPlay /> : null}
-
-        {remoteAudio ? <audio ref={audioRef} autoPlay /> : null}
-      </>
+      <RemoteMediaDisplay
+        remoteAudio={remoteAudio}
+        remoteVideo={remoteVideo}
+        remoteShare={remoteShare}
+      />
     );
   } else if (hasMedia && !hasOtherMembers) {
     remoteDisplay = (
