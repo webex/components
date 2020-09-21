@@ -1,3 +1,10 @@
+## [1.45.1](https://github.com/webex/components/compare/v1.45.0...v1.45.1) (2020-09-21)
+
+
+### Bug Fixes
+
+* **WebexRemoteMedia:** correct color for waiting text ([d41684d](https://github.com/webex/components/commit/d41684d1da1d73679e06f35b00ce281ab4459cd0))
+
 # [1.45.0](https://github.com/webex/components/compare/v1.44.1...v1.45.0) (2020-09-01)
 
 
