@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Meetings/Webex Meeting Control Active Icon 1`] = `
+exports[`Storyshots Meetings/Webex Meeting Custom Controls 1`] = `
 <div
   style={
     Object {
@@ -40,9 +40,9 @@ exports[`Storyshots Meetings/Webex Meeting Control Active Icon 1`] = `
         aria-label="Leave"
         aria-pressed={null}
         className="md-button md-button--circle md-button--56 md-button--red"
-        data-md-event-key="md-button-6"
+        data-md-event-key="md-button-5"
         disabled={false}
-        id="md-button-6"
+        id="md-button-5"
         onClick={[Function]}
         onKeyDown={[Function]}
         style={

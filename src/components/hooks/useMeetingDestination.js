@@ -41,7 +41,9 @@ export default function useMeetingDestination(meetingDestination) {
       setMeeting({...newMeeting});
     };
     const onError = (error) => {
-      throw error;
+      setMeeting(emptyMeeting);
+      // eslint-disable-next-line no-console
+      console.log(error);
     };
     const onComplete = () => {
       // setCreateNewMeeting(!createNewMeeting);
