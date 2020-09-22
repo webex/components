@@ -1,4 +1,4 @@
-import {useEffect, useRef} from 'react';
+import {useCallback} from 'react';
 
 /**
  * Custom hook that returns a media element reference with given stream object attached to it.
@@ -7,13 +7,10 @@ import {useEffect, useRef} from 'react';
  * @returns {Element} Video element reference
  */
 export default function useStream(stream) {
-  const streamRef = useRef({});
-
-  useEffect(() => {
-    const mediaElement = streamRef.current || null;
-
-    if (mediaElement && stream instanceof MediaStream) {
-      mediaElement.srcObject = stream;
+  const streamRef = useCallback((node) => {
+    if (node !== null && stream instanceof MediaStream) {
+      // eslint-disable-next-line no-param-reassign
+      node.srcObject = stream;
     }
   }, [stream]);
 
