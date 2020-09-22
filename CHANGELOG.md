@@ -1,3 +1,10 @@
+## [1.45.2](https://github.com/webex/components/compare/v1.45.1...v1.45.2) (2020-09-22)
+
+
+### Bug Fixes
+
+* **useStream:** add support for empty ref ([16da808](https://github.com/webex/components/commit/16da8089b6b7c9e0b54117acb214ae5468c3139a))
+
 ## [1.45.1](https://github.com/webex/components/compare/v1.45.0...v1.45.1) (2020-09-21)
 
 
