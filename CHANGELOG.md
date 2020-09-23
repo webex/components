@@ -1,3 +1,10 @@
+## [1.45.3](https://github.com/webex/components/compare/v1.45.2...v1.45.3) (2020-09-23)
+
+
+### Bug Fixes
+
+* **hooks:** set empty meeting instead of throwing error ([a2f7a28](https://github.com/webex/components/commit/a2f7a28eabf26f069272051f59a453878d91fe5b))
+
 ## [1.45.2](https://github.com/webex/components/compare/v1.45.1...v1.45.2) (2020-09-22)
 
 
