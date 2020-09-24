@@ -25,7 +25,7 @@ exports[`Storyshots Meetings/Webex Local Media Media Disabled 1`] = `
       draggable={false}
       onError={[Function]}
       onLoad={[Function]}
-      src="./images/barbara.png"
+      src="../assets/images/barbara.png"
     />
   </div>
 </div>

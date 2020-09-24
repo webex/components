@@ -28,7 +28,7 @@ exports[`Storyshots Messaging/Webex Activity Created Long Back 1`] = `
         draggable={false}
         onError={[Function]}
         onLoad={[Function]}
-        src="./images/barbara.png"
+        src="../assets/images/barbara.png"
       />
     </div>
     <div
@@ -80,7 +80,7 @@ exports[`Storyshots Messaging/Webex Activity Created This Week 1`] = `
         draggable={false}
         onError={[Function]}
         onLoad={[Function]}
-        src="./images/barbara.png"
+        src="../assets/images/barbara.png"
       />
     </div>
     <div
@@ -132,7 +132,7 @@ exports[`Storyshots Messaging/Webex Activity Created Today 1`] = `
         draggable={false}
         onError={[Function]}
         onLoad={[Function]}
-        src="./images/simon.png"
+        src="../assets/images/simon.png"
       />
     </div>
     <div
@@ -184,7 +184,7 @@ exports[`Storyshots Messaging/Webex Activity Created Yesterday 1`] = `
         draggable={false}
         onError={[Function]}
         onLoad={[Function]}
-        src="../images/brandon.png"
+        src="../assets/images/brandon.png"
       />
     </div>
     <div
@@ -236,7 +236,7 @@ exports[`Storyshots Messaging/Webex Activity Multi Line 1`] = `
         draggable={false}
         onError={[Function]}
         onLoad={[Function]}
-        src="./images/giacomo.png"
+        src="../assets/images/giacomo.png"
       />
     </div>
     <div
