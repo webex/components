@@ -14,7 +14,7 @@ const Template = (args) => <div style={wrapperStyles}><WebexMeeting {...args} />
 
 export const Interstitial = Template.bind({});
 Interstitial.args = {
-  meetingDestination: 'meeting4',
+  meetingDestination: 'meeting3',
 };
 
 export const Loading = Template.bind({});
@@ -22,7 +22,15 @@ Loading.args = {
   meetingDestination: 'meeting8',
 };
 
-// TODO: Add story started while "in meeting"
+export const WaitingForOthers = Template.bind({});
+WaitingForOthers.args = {
+  meetingDestination: 'meeting4',
+};
+
+export const InMeeting = Template.bind({});
+InMeeting.args = {
+  meetingDestination: 'meeting1',
+};
 
 export const CustomControls = Template.bind({});
 CustomControls.args = {
