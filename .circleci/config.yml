@@ -66,7 +66,11 @@ jobs:
       - checkout_from_workspace
       - run:
           name: Build Storybook
-          command: rm -rf docs/storybook && npm run storybook:build
+          command: |
+            rm -rf docs/storybook
+            npm run storybook:build
+            git add docs/storybook
+            git commit -m "docs: build Storybook [skip ci]"
       - persist_to_workspace:
           root: .
           paths: docs/storybook
