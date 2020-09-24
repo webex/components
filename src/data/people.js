@@ -1,3 +1,6 @@
+// Asset paths are relative to where storybook is served
+// See https://storybook.js.org/docs/react/configure/images-and-assets#absolute-versus-relative-paths
+
 export default {
   user1: {
     ID: 'user1',
@@ -8,7 +11,7 @@ export default {
     firstName: 'Barbara',
     lastName: 'German',
     nickname: 'Barbara',
-    avatar: './images/barbara.png',
+    avatar: '../assets/images/barbara.png',
     orgID: 'org1',
     status: 'dnd',
   },
@@ -21,7 +24,7 @@ export default {
     firstName: 'Giacomo',
     lastName: 'Edwards',
     nickname: 'Gio',
-    avatar: './images/giacomo.png',
+    avatar: '../assets/images/giacomo.png',
     orgID: 'org1',
     status: null,
   },
@@ -34,7 +37,7 @@ export default {
     firstName: 'Brenda',
     lastName: 'Song',
     nickname: 'Brenda',
-    avatar: './images/brenda.png',
+    avatar: '../assets/images/brenda.png',
     orgID: 'org1',
     status: null,
   },
@@ -47,7 +50,7 @@ export default {
     firstName: 'Simon',
     lastName: 'Damiano',
     nickname: 'Simon',
-    avatar: './images/simon.png',
+    avatar: '../assets/images/simon.png',
     orgID: 'org1',
     status: null,
   },
@@ -60,7 +63,7 @@ export default {
     firstName: 'Brandon',
     lastName: 'Seeger',
     nickname: 'Brandon',
-    avatar: '../images/brandon.png',
+    avatar: '../assets/images/brandon.png',
     orgID: 'org1',
     status: null,
   },
@@ -73,7 +76,7 @@ export default {
     firstName: 'Maria',
     lastName: 'Rossi',
     nickname: 'Maria',
-    avatar: '../images/maria.png',
+    avatar: '../assets/images/maria.png',
     orgID: 'org1',
     status: null,
   },

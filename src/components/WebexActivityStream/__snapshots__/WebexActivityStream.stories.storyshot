@@ -31,7 +31,7 @@ exports[`Storyshots Messaging/Webex Activity Stream Conversation 1`] = `
           draggable={false}
           onError={[Function]}
           onLoad={[Function]}
-          src="./images/brenda.png"
+          src="../assets/images/brenda.png"
         />
       </div>
       <div
@@ -89,7 +89,7 @@ exports[`Storyshots Messaging/Webex Activity Stream Conversation 1`] = `
           draggable={false}
           onError={[Function]}
           onLoad={[Function]}
-          src="./images/giacomo.png"
+          src="../assets/images/giacomo.png"
         />
       </div>
       <div
@@ -140,7 +140,7 @@ Let me know if you need more help! Maybe we can talk about it during standup
           draggable={false}
           onError={[Function]}
           onLoad={[Function]}
-          src="./images/brenda.png"
+          src="../assets/images/brenda.png"
         />
       </div>
       <div
@@ -189,7 +189,7 @@ Let me know if you need more help! Maybe we can talk about it during standup
           draggable={false}
           onError={[Function]}
           onLoad={[Function]}
-          src="./images/simon.png"
+          src="../assets/images/simon.png"
         />
       </div>
       <div
@@ -424,7 +424,7 @@ exports[`Storyshots Messaging/Webex Activity Stream Time Rulers 1`] = `
           draggable={false}
           onError={[Function]}
           onLoad={[Function]}
-          src="./images/barbara.png"
+          src="../assets/images/barbara.png"
         />
       </div>
       <div
@@ -489,7 +489,7 @@ exports[`Storyshots Messaging/Webex Activity Stream Time Rulers 1`] = `
           draggable={false}
           onError={[Function]}
           onLoad={[Function]}
-          src="../images/brandon.png"
+          src="../assets/images/brandon.png"
         />
       </div>
       <div
@@ -554,7 +554,7 @@ exports[`Storyshots Messaging/Webex Activity Stream Time Rulers 1`] = `
           draggable={false}
           onError={[Function]}
           onLoad={[Function]}
-          src="./images/barbara.png"
+          src="../assets/images/barbara.png"
         />
       </div>
       <div

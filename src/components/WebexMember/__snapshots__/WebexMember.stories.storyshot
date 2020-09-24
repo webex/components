@@ -25,7 +25,7 @@ exports[`Storyshots Platform/Webex Member Space 1`] = `
       draggable={false}
       onError={[Function]}
       onLoad={[Function]}
-      src="./images/barbara.png"
+      src="../assets/images/barbara.png"
     />
   </div>
   <div
@@ -61,7 +61,7 @@ exports[`Storyshots Platform/Webex Member Status Enabled 1`] = `
       draggable={false}
       onError={[Function]}
       onLoad={[Function]}
-      src="./images/barbara.png"
+      src="../assets/images/barbara.png"
     />
   </div>
   <div
