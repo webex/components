@@ -22,6 +22,7 @@ aimed at react developers that want to embed the components into their applicati
 
 - [Demo](#demo)
 - [Install](#install)
+- [Webex Components vs Webex Widgets](#webex-components-vs-webex-widgets)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -37,12 +38,33 @@ We use [Storybook](https://storybook.js.org) to showcase all supported component
 npx install-peerdeps @webex/components
 ```
 
+## Webex Components vs Webex Widgets
+
+In addition to the Webex Component System, we also offer the
+[Webex Widgets](https://github.com/webex/widgets#webex-widgets).
+The Webex Component System (sometimes shortened as _Webex Components_) is a set of
+React components that, while following Webex styling, allow for more granularity
+in terms of layout and source of data.
+
+Webex Widgets are based on Webex Components but include the adapter that uses
+our [Javascript SDK](https://github.com/webex/webex-js-sdk) to talk to Webex services for you.
+This means that the Webex Widgets use the
+[SDK Component Adapter](https://github.com/webex/sdk-component-adapter#webex-sdk-component-adapter)
+to inject the Webex data.
+All you need is a valid access token and a few parameters based on the widget you want to use.
+
+You have to take the Widget layout as-is, but the benefit is that there are no configurations needed.
+Install, copy-paste and you have the power of Webex in your application!
+
+To learn more on the Webex Widgets head to its Github repository at
+https://github.com/webex/widgets.
+
 ## Usage
 
 ### Styles
 
 In order to properly style Webex Components, we need to import all the fonts, icons, images and core _CSS_ manually.
-You will need to add [Momentum UI](https://momentum.design)'s styles in addition to the components' styles.
+You will need to add [Momentum UI](https://momentum.design) styles in addition to the components' styles.
 [Momentum UI](https://momentum.design) is Webex design system.
 
 There are two ways to do this:
@@ -70,6 +92,9 @@ In the `<head>` of your `index.html`, add the following imports:
   <link rel="stylesheet" type="text/css" href="node_modules/@webex/components/dist/css/webex-components.css" />
 </head>
 ```
+
+> *Important:* Import Momentum UI styles before importing the Webex Component ones.
+> Webex Components may override certain Momentum UI styles
 
 ### Adapters
 
