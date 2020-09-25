@@ -44,7 +44,7 @@ In addition to the Webex Component System, we also offer the
 [Webex Widgets](https://github.com/webex/widgets#webex-widgets).
 The Webex Component System (sometimes shortened as _Webex Components_) is a set of
 React components that, while following Webex styling, allow for more granularity
-in terms of layout and source of data.
+in terms of layout and source of data. See [usage](#usage) section.
 
 Webex Widgets are based on Webex Components but include the adapter that uses
 our [Javascript SDK](https://github.com/webex/webex-js-sdk) to talk to Webex services for you.
