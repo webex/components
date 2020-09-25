@@ -18,8 +18,6 @@ If you would like to contribute to this repository by adding features, enhanceme
 ## Table of Contents
 
 - [Development Setup](#development-setup)
-- [Opening an Issue](#opening-an-issue)
-  - [Grammar](#grammar)
 - [Pull Request Guidelines](#pull-request-guidelines)
   - [Documentation](#documentation)
   - [Testing](#testing)
@@ -51,15 +49,6 @@ To get started developing for contributions, follow these steps:
     ```
 
 4. Open the code with your favorite editor. You're ready! 👍🏼
-
-## Opening an Issue
-The title of a Bug or Enhancement should clearly indicate what is broken or desired. Use the description to explain possible solutions or add details and (especially for Enhancements) explain *how* or *why* the issue is broken or desired. Follow the template!
-
-### Grammar
-While quibbling about grammar in issue titles may seem a bit pedantic, adhering to some simple rules can make it much easier to understand a Bug or an Enhancement from the title alone. For example, is the title **"Browsers should support blinking text"** a bug or a feature request?
-
-- Enhancements: The title should be an imperative statement of how things should be. **"Add support for blinking text"**
-- Bugs: The title should be a declarative statement of how things are. **"Text does not blink"**
 
 ## Pull Request Guidelines
 Pull requests must include code documentation, tests, follow code style and commits format.
