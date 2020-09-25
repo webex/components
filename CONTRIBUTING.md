@@ -65,20 +65,23 @@ We take testing very seriously, all code changes must include unit, integration 
 
 ### Code Style
 Code style is enforced by [linters](https://eslint.org). Use `npm run linter` to verify that your code is beautiful, too!
+
 We highly discourage disabling eslint rules.
 Unless there is an exceptional use case, we may request additional changes to your PR.
 
 ### Git Commit
-As part of the build process, commits are run through [conventional changelog](https://github.com/conventional-changelog/conventional-changelog) to generate the changelog. Please adhere to the following guidelines when formatting your commit messages.
+As part of the build process, commits are run through [conventional changelog](https://github.com/conventional-changelog/conventional-changelog) to generate the changelog. Please adhere to the following guidelines when formatting your commit messages as the commit message will become part of the changelog word by word.
 
 #### Commit Message Format
 Each commit message consists of a **header**, a **body** and a **footer**. The header has a special format that includes a **type**, a **scope** and a **subject**:
 
-    <type>(<scope>): <subject>
-    <BLANK LINE>
-    <body>
-    <BLANK LINE>
-    <footer>
+```none
+<type>(<scope>): <subject>
+<BLANK LINE>
+<body>
+<BLANK LINE>
+<footer>
+```
 
 The **header** is mandatory and the scope of the header is optional.
 
@@ -86,6 +89,12 @@ Any line of the commit message cannot be longer 100 characters! This allows the 
 
 #### Revert
 If the commit reverts a previous commit, it should begin with `revert:`, followed by the header of the reverted commit. In the body it should say: `This reverts commit <hash>`., where the hash is the SHA of the commit being reverted.
+
+You may use Git to revert changes:
+
+```bash
+git revert <commit hash>
+```
 
 #### Type
 Must be one of the following:
@@ -101,7 +110,10 @@ Must be one of the following:
 - **test**: Adding missing tests or correcting existing tests
 
 #### Scope
-The scope should indicate what is being changed. Generally, these should match component or adapter names. For example, `WebexComponent`, `WebexAdapter`, etc. Other than those, `tooling` tends to be the most common.
+The scope should indicate what is being changed. Generally, these should match name of the file where the change occurs. For example, `WebexAvatar`, `PeopleJsonAdapter`, etc.
+Other than those, for tooling changes, use the name of the tool where changes occur.
+
+Following these guidelines will help you separate your changes into commits that reflect discrete, incremental changes.
 
 #### Subject
 The subject contains succinct description of the change:
@@ -109,6 +121,16 @@ The subject contains succinct description of the change:
 - use the imperative, present tense: "change" not "changed" nor "changes"
 - don't capitalize first letter
 - no dot (.) at the end
+
+You can think as the subject as a command that you give to Git as to how execute your changes.
+Each change will add up to create the current state of the code base.
+For instance (commits ordered from newest to oldest):
+
+```none
+fix(operators): add divide as named export
+feat(operators): add multiply method
+refactor(math): rename math module to operators
+```
 
 #### Body
 Just as in the **subject** the imperative, present tense: "change" not "changed" nor "changes". The body should include the motivation for the change and contrast this with previous behavior.
