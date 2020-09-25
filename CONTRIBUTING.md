@@ -17,6 +17,7 @@ If you would like to contribute to this repository by adding features, enhanceme
 
 ## Table of Contents
 
+- [Development Setup](#development-setup)
 - [Opening an Issue](#opening-an-issue)
   - [Grammar](#grammar)
 - [Pull Request Guidelines](#pull-request-guidelines)
@@ -25,6 +26,31 @@ If you would like to contribute to this repository by adding features, enhanceme
   - [Code Style](#code-style)
   - [Git Commit](#git-commit)
 - [Release Process](#release-process)
+
+## Development Setup
+### Getting Started
+To get started developing for contributions, follow these steps:
+
+1. Fork the component repository
+
+    1. Click on the `Fork` button on the top-right corner
+    2. Wait for Github to finish forking the repository
+    3. Head over to your newly created repository fork
+
+2. Clone your repository fork locally
+
+    ```bash
+    git clone git@github.com:{your username}/components.git
+    ```
+
+3. Install all project and peer dependencies
+
+    ```bash
+    cd components
+    npx npm-install-peers
+    ```
+
+4. Open the code with your favorite editor. You're ready! 👍🏼
 
 ## Opening an Issue
 The title of a Bug or Enhancement should clearly indicate what is broken or desired. Use the description to explain possible solutions or add details and (especially for Enhancements) explain *how* or *why* the issue is broken or desired. Follow the template!
