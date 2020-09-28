@@ -45,7 +45,7 @@ exports[`Storyshots Meetings/Webex Interstitial Meeting Video Disabled 1`] = `
         draggable={false}
         onError={[Function]}
         onLoad={[Function]}
-        src="../assets/images/barbara.png"
+        src="./images/barbara.png"
       />
     </div>
   </div>
