@@ -22,7 +22,7 @@ exports[`Storyshots Platform/Webex Avatar Active 1`] = `
     draggable={false}
     onError={[Function]}
     onLoad={[Function]}
-    src="../assets/images/barbara.png"
+    src="./images/barbara.png"
   />
 </div>
 `;
@@ -49,7 +49,7 @@ exports[`Storyshots Platform/Webex Avatar Bot 1`] = `
     draggable={false}
     onError={[Function]}
     onLoad={[Function]}
-    src="../assets/images/barbara.png"
+    src="./images/barbara.png"
   />
 </div>
 `;
@@ -76,7 +76,7 @@ exports[`Storyshots Platform/Webex Avatar Call 1`] = `
     draggable={false}
     onError={[Function]}
     onLoad={[Function]}
-    src="../assets/images/barbara.png"
+    src="./images/barbara.png"
   />
 </div>
 `;
@@ -103,7 +103,7 @@ exports[`Storyshots Platform/Webex Avatar Do Not Disturb 1`] = `
     draggable={false}
     onError={[Function]}
     onLoad={[Function]}
-    src="../assets/images/barbara.png"
+    src="./images/barbara.png"
   />
 </div>
 `;
@@ -130,7 +130,7 @@ exports[`Storyshots Platform/Webex Avatar Inactive 1`] = `
     draggable={false}
     onError={[Function]}
     onLoad={[Function]}
-    src="../assets/images/barbara.png"
+    src="./images/barbara.png"
   />
 </div>
 `;
@@ -176,7 +176,7 @@ exports[`Storyshots Platform/Webex Avatar Meeting 1`] = `
     draggable={false}
     onError={[Function]}
     onLoad={[Function]}
-    src="../assets/images/barbara.png"
+    src="./images/barbara.png"
   />
 </div>
 `;
@@ -203,7 +203,7 @@ exports[`Storyshots Platform/Webex Avatar No Status 1`] = `
     draggable={false}
     onError={[Function]}
     onLoad={[Function]}
-    src="../assets/images/barbara.png"
+    src="./images/barbara.png"
   />
 </div>
 `;
@@ -230,7 +230,7 @@ exports[`Storyshots Platform/Webex Avatar Out Of Office 1`] = `
     draggable={false}
     onError={[Function]}
     onLoad={[Function]}
-    src="../assets/images/barbara.png"
+    src="./images/barbara.png"
   />
 </div>
 `;
@@ -257,7 +257,7 @@ exports[`Storyshots Platform/Webex Avatar Presenting 1`] = `
     draggable={false}
     onError={[Function]}
     onLoad={[Function]}
-    src="../assets/images/barbara.png"
+    src="./images/barbara.png"
   />
 </div>
 `;
@@ -311,7 +311,7 @@ exports[`Storyshots Platform/Webex Avatar Typing 1`] = `
     draggable={false}
     onError={[Function]}
     onLoad={[Function]}
-    src="../assets/images/barbara.png"
+    src="./images/barbara.png"
   />
   <div
     className="md-loading"

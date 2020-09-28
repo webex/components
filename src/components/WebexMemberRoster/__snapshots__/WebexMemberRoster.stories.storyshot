@@ -28,7 +28,7 @@ exports[`Storyshots Platform/Webex Member Roster Space 1`] = `
         draggable={false}
         onError={[Function]}
         onLoad={[Function]}
-        src="../assets/images/barbara.png"
+        src="./images/barbara.png"
       />
     </div>
     <div
@@ -61,7 +61,7 @@ exports[`Storyshots Platform/Webex Member Roster Space 1`] = `
         draggable={false}
         onError={[Function]}
         onLoad={[Function]}
-        src="../assets/images/giacomo.png"
+        src="./images/giacomo.png"
       />
     </div>
     <div
@@ -94,7 +94,7 @@ exports[`Storyshots Platform/Webex Member Roster Space 1`] = `
         draggable={false}
         onError={[Function]}
         onLoad={[Function]}
-        src="../assets/images/brenda.png"
+        src="./images/brenda.png"
       />
     </div>
     <div
@@ -127,7 +127,7 @@ exports[`Storyshots Platform/Webex Member Roster Space 1`] = `
         draggable={false}
         onError={[Function]}
         onLoad={[Function]}
-        src="../assets/images/simon.png"
+        src="./images/simon.png"
       />
     </div>
     <div
