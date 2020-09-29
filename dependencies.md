@@ -278,6 +278,8 @@ Because Webpack is included only for Storybook, it's packages are also described
   Default preset of Storybook add-ons
 - [@storybook/addon-actions](https://www.npmjs.com/package/@storybook/addon-actions):
   Displays the data received by event handlers within Storybook
+- [@storybook/addon-links](https://www.npmjs.com/package/@storybook/addon-links):
+  Allows for inter-story linking
 - [@storybook/addon-storyshots](https://www.npmjs.com/package/@storybook/addon-storyshots):
   Automatically creates snapshot tests from stories
 - [@storybook/preset-scss](https://www.npmjs.com/package/@storybook/preset-scss):
