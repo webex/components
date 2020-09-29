@@ -73,8 +73,8 @@ jobs:
             rm -rf docs/storybook
             npm run storybook:build
 
-            git config user.name $GIT_AUTHOR_NAME
-            git config user.email $GIT_AUTHOR_EMAIL
+            git config --local user.name $GIT_AUTHOR_NAME
+            git config --local user.email $GIT_AUTHOR_EMAIL
 
             git add docs/storybook
             git commit -m "docs: build Storybook [skip ci]"
