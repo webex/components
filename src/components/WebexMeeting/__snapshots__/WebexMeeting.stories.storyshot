@@ -10,21 +10,20 @@ exports[`Storyshots Meetings/Webex Meeting Custom Controls 1`] = `
   }
 >
   <div
-    className="wxc-meeting wxc-meeting-active"
+    className="wxc-meeting"
   >
     <div
-      className="wxc-in-meeting"
+      className="wxc-interstitial-meeting"
     >
       <div
-        className="wxc-remote-media remote-media-in-meeting"
+        className="wxc-meeting-info interstitial-meeting-info"
       >
-        <video
-          autoPlay={true}
-          playsInline={true}
-        />
+        <h2>
+          Quarterly Financial Report
+        </h2>
       </div>
       <div
-        className="wxc-local-media local-media-in-meeting"
+        className="wxc-local-media"
       >
         <video
           autoPlay={true}
@@ -36,11 +35,12 @@ exports[`Storyshots Meetings/Webex Meeting Custom Controls 1`] = `
       className="wxc-meeting-controls meeting-controls-container"
     >
       <button
-        alt="Leave"
-        aria-label="Leave"
+        alt="Join meeting"
+        aria-label="Join meeting"
         aria-pressed={null}
-        className="md-button md-button--circle md-button--56 md-button--red"
+        className="md-button md-button--52 md-button--green"
         data-md-event-key="md-button-0"
+        data-md-keyboard-key="join-meeting"
         disabled={false}
         id="md-button-0"
         onClick={[Function]}
@@ -61,15 +61,7 @@ exports[`Storyshots Meetings/Webex Meeting Custom Controls 1`] = `
             }
           }
         >
-          <i
-            aria-label={null}
-            className="md-icon icon icon-cancel_28"
-            style={
-              Object {
-                "fontSize": 28,
-              }
-            }
-          />
+          Join meeting
         </span>
       </button>
     </div>
@@ -411,6 +403,23 @@ exports[`Storyshots Meetings/Webex Meeting Interstitial 1`] = `
         </span>
       </button>
     </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Meetings/Webex Meeting Left Meeting 1`] = `
+<div
+  style={
+    Object {
+      "height": "500px",
+      "width": "650px",
+    }
+  }
+>
+  <div
+    className="wxc-meeting"
+  >
+    You've successfully left the meeting
   </div>
 </div>
 `;
