@@ -194,6 +194,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
     const videoEvents$ = fromEvent(document, MUTE_VIDEO_CONTROL);
     const joinEvents$ = fromEvent(document, JOIN_CONTROL);
     const leaveEvents$ = fromEvent(document, LEAVE_CONTROL).pipe(
+      filter((event) => event.detail.ID === ID),
       tap(() => end$.next(`Meeting "${ID}" has completed.`)),
     );
 
