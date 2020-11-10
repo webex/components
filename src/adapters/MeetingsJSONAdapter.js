@@ -159,7 +159,19 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   getMeeting(ID) {
     const end$ = new Subject();
     const getMeeting$ = Observable.create((observer) => {
-      if (this.datasource[ID]) {
+      // A null ID signifies that the meeting is over, in the past or invalid
+      if (ID === null) {
+        observer.next({
+          ID: null,
+          title: null,
+          localAudio: null,
+          localVideo: null,
+          localShare: null,
+          remoteAudio: null,
+          remoteVideo: null,
+          remoteShare: null,
+        });
+      } else if (this.datasource[ID]) {
         observer.next(this.datasource[ID]);
       } else {
         observer.error(new Error(`Could not find meeting with ID "${ID}"`));
