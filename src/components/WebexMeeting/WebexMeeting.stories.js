@@ -19,7 +19,7 @@ Interstitial.args = {
 
 export const Loading = Template.bind({});
 Loading.args = {
-  meetingDestination: 'meeting8',
+  meetingDestination: 'meeting9',
 };
 
 export const WaitingForOthers = Template.bind({});

@@ -70,6 +70,16 @@ export default {
     remoteShare: null,
   },
   meeting8: {
+    ID: null,
+    title: null,
+    localAudio: null,
+    localVideo: null,
+    localShare: null,
+    remoteAudio: null,
+    remoteVideo: null,
+    remoteShare: null,
+  },
+  meeting9: {
     error: true,
   },
 };
