@@ -65,6 +65,22 @@ describe('Meetings JSON Adapter', () => {
       });
     });
 
+    test('emits an empty Meeting object when ID is null', (done) => {
+      meetingsJSONAdapter.getMeeting(null).subscribe((meeting) => {
+        expect(meeting).toMatchObject({
+          ID: null,
+          title: null,
+          localAudio: null,
+          localVideo: null,
+          localShare: null,
+          remoteAudio: null,
+          remoteVideo: null,
+          remoteShare: null,
+        });
+        done();
+      });
+    });
+
     test('emits Meeting object with null local audio on mute audio event', (done) => {
       meetingsJSONAdapter
         .getMeeting(meetingID)
