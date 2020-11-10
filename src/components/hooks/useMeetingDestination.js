@@ -21,16 +21,18 @@ import {AdapterContext} from './contexts';
  */
 export default function useMeetingDestination(meetingDestination) {
   const emptyMeeting = {
-    ID: null,
     title: null,
     localAudio: null,
     localVideo: null,
     remoteAudio: null,
     remoteVideo: null,
   };
+  const endedMeeting = {
+    ...emptyMeeting,
+    ID: null,
+  };
 
   const [meeting, setMeeting] = useState(emptyMeeting);
-  // const [createNewMeeting, setCreateNewMeeting] = useState(false);
   const {meetingsAdapter} = useContext(AdapterContext);
 
   useEffect(() => {
@@ -46,8 +48,7 @@ export default function useMeetingDestination(meetingDestination) {
       console.log(error);
     };
     const onComplete = () => {
-      // setCreateNewMeeting(!createNewMeeting);
-      setMeeting(emptyMeeting);
+      setMeeting(endedMeeting);
     };
 
     const subscription = meetingsAdapter

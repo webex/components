@@ -32,8 +32,13 @@ InMeeting.args = {
   meetingDestination: 'meeting1',
 };
 
+export const LeftMeeting = Template.bind({});
+LeftMeeting.args = {
+  meetingDestination: 'meeting8',
+};
+
 export const CustomControls = Template.bind({});
 CustomControls.args = {
-  meetingDestination: 'meeting6',
+  meetingDestination: 'meeting3',
   controls: (isActive) => (isActive ? ['leave-meeting'] : ['join-meeting']),
 };

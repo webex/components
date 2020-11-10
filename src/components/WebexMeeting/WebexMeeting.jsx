@@ -31,20 +31,30 @@ export default function WebexMeeting({meetingDestination, controls}) {
     (key) => <WebexMeetingControl key={key} type={key} />,
   );
 
+  let meetingDisplay;
+
+  // Undefined meeting ID means that a meeting has never been set
+  if (ID === undefined) {
+    meetingDisplay = <Spinner />;
+  // A null meeting ID means that a meeting is no longer valid (e.g. user left or kicked out)
+  } else if (ID === null) {
+    meetingDisplay = "You've successfully left the meeting";
+  } else {
+    meetingDisplay = (
+      <>
+        {isActive
+          ? <WebexInMeeting meetingID={ID} />
+          : <WebexInterstitialMeeting meetingID={ID} />}
+        <WebexMeetingControls className="meeting-controls-container" meetingID={ID}>
+          {meetingControls}
+        </WebexMeetingControls>
+      </>
+    );
+  }
+
   return (
     <div className={classNames(mainClasses)}>
-      {ID ? (
-        <>
-          {isActive
-            ? <WebexInMeeting meetingID={ID} />
-            : <WebexInterstitialMeeting meetingID={ID} />}
-          <WebexMeetingControls className="meeting-controls-container" meetingID={ID}>
-            {meetingControls}
-          </WebexMeetingControls>
-        </>
-      ) : (
-        <Spinner />
-      )}
+      {meetingDisplay}
     </div>
   );
 }
