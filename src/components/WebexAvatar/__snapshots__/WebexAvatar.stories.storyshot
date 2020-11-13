@@ -1,330 +1,474 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Platform/Webex Avatar Active 1`] = `
-<div
-  className="md-avatar md-avatar--active md-avatar--medium"
-  title="Barbara German"
->
-  <span
-    className="md-avatar__letter"
-    style={
-      Object {
-        "backgroundColor": "",
-        "color": "",
-      }
-    }
+Array [
+  <div
+    className="md-avatar md-avatar--active md-avatar--medium"
+    title="Barbara German"
   >
-    BG
-  </span>
-  <img
-    alt="Barbara German"
-    className="md-avatar__img md-avatar__img--hidden"
-    draggable={false}
-    onError={[Function]}
-    onLoad={[Function]}
-    src="./images/barbara.png"
-  />
-</div>
+    <span
+      className="md-avatar__letter"
+      style={
+        Object {
+          "backgroundColor": "",
+          "color": "",
+        }
+      }
+    >
+      BG
+    </span>
+    <img
+      alt="Barbara German"
+      className="md-avatar__img md-avatar__img--hidden"
+      draggable={false}
+      onError={[Function]}
+      onLoad={[Function]}
+      src="./images/barbara.png"
+    />
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
 `;
 
 exports[`Storyshots Platform/Webex Avatar Bot 1`] = `
-<div
-  className="md-avatar md-avatar--bot md-avatar--medium"
-  title="Barbara German"
->
-  <span
-    className="md-avatar__letter"
-    style={
-      Object {
-        "backgroundColor": "",
-        "color": "",
-      }
-    }
+Array [
+  <div
+    className="md-avatar md-avatar--bot md-avatar--medium"
+    title="Barbara German"
   >
-    BG
-  </span>
-  <img
-    alt="Barbara German"
-    className="md-avatar__img md-avatar__img--hidden"
-    draggable={false}
-    onError={[Function]}
-    onLoad={[Function]}
-    src="./images/barbara.png"
-  />
-</div>
+    <span
+      className="md-avatar__letter"
+      style={
+        Object {
+          "backgroundColor": "",
+          "color": "",
+        }
+      }
+    >
+      BG
+    </span>
+    <img
+      alt="Barbara German"
+      className="md-avatar__img md-avatar__img--hidden"
+      draggable={false}
+      onError={[Function]}
+      onLoad={[Function]}
+      src="./images/barbara.png"
+    />
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
 `;
 
 exports[`Storyshots Platform/Webex Avatar Call 1`] = `
-<div
-  className="md-avatar md-avatar--call md-avatar--medium"
-  title="Barbara German"
->
-  <span
-    className="md-avatar__letter"
-    style={
-      Object {
-        "backgroundColor": "",
-        "color": "",
-      }
-    }
+Array [
+  <div
+    className="md-avatar md-avatar--call md-avatar--medium"
+    title="Barbara German"
   >
-    BG
-  </span>
-  <img
-    alt="Barbara German"
-    className="md-avatar__img md-avatar__img--hidden"
-    draggable={false}
-    onError={[Function]}
-    onLoad={[Function]}
-    src="./images/barbara.png"
-  />
-</div>
+    <span
+      className="md-avatar__letter"
+      style={
+        Object {
+          "backgroundColor": "",
+          "color": "",
+        }
+      }
+    >
+      BG
+    </span>
+    <img
+      alt="Barbara German"
+      className="md-avatar__img md-avatar__img--hidden"
+      draggable={false}
+      onError={[Function]}
+      onLoad={[Function]}
+      src="./images/barbara.png"
+    />
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
 `;
 
 exports[`Storyshots Platform/Webex Avatar Do Not Disturb 1`] = `
-<div
-  className="md-avatar md-avatar--dnd md-avatar--medium"
-  title="Barbara German"
->
-  <span
-    className="md-avatar__letter"
-    style={
-      Object {
-        "backgroundColor": "",
-        "color": "",
-      }
-    }
+Array [
+  <div
+    className="md-avatar md-avatar--dnd md-avatar--medium"
+    title="Barbara German"
   >
-    BG
-  </span>
-  <img
-    alt="Barbara German"
-    className="md-avatar__img md-avatar__img--hidden"
-    draggable={false}
-    onError={[Function]}
-    onLoad={[Function]}
-    src="./images/barbara.png"
-  />
-</div>
+    <span
+      className="md-avatar__letter"
+      style={
+        Object {
+          "backgroundColor": "",
+          "color": "",
+        }
+      }
+    >
+      BG
+    </span>
+    <img
+      alt="Barbara German"
+      className="md-avatar__img md-avatar__img--hidden"
+      draggable={false}
+      onError={[Function]}
+      onLoad={[Function]}
+      src="./images/barbara.png"
+    />
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
 `;
 
 exports[`Storyshots Platform/Webex Avatar Inactive 1`] = `
-<div
-  className="md-avatar md-avatar--inactive md-avatar--medium"
-  title="Barbara German"
->
-  <span
-    className="md-avatar__letter"
-    style={
-      Object {
-        "backgroundColor": "",
-        "color": "",
-      }
-    }
+Array [
+  <div
+    className="md-avatar md-avatar--inactive md-avatar--medium"
+    title="Barbara German"
   >
-    BG
-  </span>
-  <img
-    alt="Barbara German"
-    className="md-avatar__img md-avatar__img--hidden"
-    draggable={false}
-    onError={[Function]}
-    onLoad={[Function]}
-    src="./images/barbara.png"
-  />
-</div>
+    <span
+      className="md-avatar__letter"
+      style={
+        Object {
+          "backgroundColor": "",
+          "color": "",
+        }
+      }
+    >
+      BG
+    </span>
+    <img
+      alt="Barbara German"
+      className="md-avatar__img md-avatar__img--hidden"
+      draggable={false}
+      onError={[Function]}
+      onLoad={[Function]}
+      src="./images/barbara.png"
+    />
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
 `;
 
 exports[`Storyshots Platform/Webex Avatar Invalid 1`] = `
-<div
-  className="md-avatar md-avatar--medium"
-  title=" "
->
-  <span
-    className="md-avatar__letter"
-    style={
-      Object {
-        "backgroundColor": "",
-        "color": "",
-      }
-    }
+Array [
+  <div
+    className="md-avatar md-avatar--medium"
+    title=" "
   >
-    
-  </span>
-</div>
+    <span
+      className="md-avatar__letter"
+      style={
+        Object {
+          "backgroundColor": "",
+          "color": "",
+        }
+      }
+    >
+      
+    </span>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
 `;
 
 exports[`Storyshots Platform/Webex Avatar Meeting 1`] = `
-<div
-  className="md-avatar md-avatar--meeting md-avatar--medium"
-  title="Barbara German"
->
-  <span
-    className="md-avatar__letter"
-    style={
-      Object {
-        "backgroundColor": "",
-        "color": "",
-      }
-    }
+Array [
+  <div
+    className="md-avatar md-avatar--meeting md-avatar--medium"
+    title="Barbara German"
   >
-    BG
-  </span>
-  <img
-    alt="Barbara German"
-    className="md-avatar__img md-avatar__img--hidden"
-    draggable={false}
-    onError={[Function]}
-    onLoad={[Function]}
-    src="./images/barbara.png"
-  />
-</div>
+    <span
+      className="md-avatar__letter"
+      style={
+        Object {
+          "backgroundColor": "",
+          "color": "",
+        }
+      }
+    >
+      BG
+    </span>
+    <img
+      alt="Barbara German"
+      className="md-avatar__img md-avatar__img--hidden"
+      draggable={false}
+      onError={[Function]}
+      onLoad={[Function]}
+      src="./images/barbara.png"
+    />
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
 `;
 
 exports[`Storyshots Platform/Webex Avatar No Status 1`] = `
-<div
-  className="md-avatar md-avatar--medium"
-  title="Barbara German"
->
-  <span
-    className="md-avatar__letter"
-    style={
-      Object {
-        "backgroundColor": "",
-        "color": "",
-      }
-    }
+Array [
+  <div
+    className="md-avatar md-avatar--medium"
+    title="Barbara German"
   >
-    BG
-  </span>
-  <img
-    alt="Barbara German"
-    className="md-avatar__img md-avatar__img--hidden"
-    draggable={false}
-    onError={[Function]}
-    onLoad={[Function]}
-    src="./images/barbara.png"
-  />
-</div>
+    <span
+      className="md-avatar__letter"
+      style={
+        Object {
+          "backgroundColor": "",
+          "color": "",
+        }
+      }
+    >
+      BG
+    </span>
+    <img
+      alt="Barbara German"
+      className="md-avatar__img md-avatar__img--hidden"
+      draggable={false}
+      onError={[Function]}
+      onLoad={[Function]}
+      src="./images/barbara.png"
+    />
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
 `;
 
 exports[`Storyshots Platform/Webex Avatar Out Of Office 1`] = `
-<div
-  className="md-avatar md-avatar--ooo md-avatar--medium"
-  title="Barbara German"
->
-  <span
-    className="md-avatar__letter"
-    style={
-      Object {
-        "backgroundColor": "",
-        "color": "",
-      }
-    }
+Array [
+  <div
+    className="md-avatar md-avatar--ooo md-avatar--medium"
+    title="Barbara German"
   >
-    BG
-  </span>
-  <img
-    alt="Barbara German"
-    className="md-avatar__img md-avatar__img--hidden"
-    draggable={false}
-    onError={[Function]}
-    onLoad={[Function]}
-    src="./images/barbara.png"
-  />
-</div>
+    <span
+      className="md-avatar__letter"
+      style={
+        Object {
+          "backgroundColor": "",
+          "color": "",
+        }
+      }
+    >
+      BG
+    </span>
+    <img
+      alt="Barbara German"
+      className="md-avatar__img md-avatar__img--hidden"
+      draggable={false}
+      onError={[Function]}
+      onLoad={[Function]}
+      src="./images/barbara.png"
+    />
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
 `;
 
 exports[`Storyshots Platform/Webex Avatar Presenting 1`] = `
-<div
-  className="md-avatar md-avatar--presenting md-avatar--medium"
-  title="Barbara German"
->
-  <span
-    className="md-avatar__letter"
-    style={
-      Object {
-        "backgroundColor": "",
-        "color": "",
-      }
-    }
+Array [
+  <div
+    className="md-avatar md-avatar--presenting md-avatar--medium"
+    title="Barbara German"
   >
-    BG
-  </span>
-  <img
-    alt="Barbara German"
-    className="md-avatar__img md-avatar__img--hidden"
-    draggable={false}
-    onError={[Function]}
-    onLoad={[Function]}
-    src="./images/barbara.png"
-  />
-</div>
+    <span
+      className="md-avatar__letter"
+      style={
+        Object {
+          "backgroundColor": "",
+          "color": "",
+        }
+      }
+    >
+      BG
+    </span>
+    <img
+      alt="Barbara German"
+      className="md-avatar__img md-avatar__img--hidden"
+      draggable={false}
+      onError={[Function]}
+      onLoad={[Function]}
+      src="./images/barbara.png"
+    />
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
 `;
 
 exports[`Storyshots Platform/Webex Avatar Self 1`] = `
-<div
-  className="md-avatar md-avatar--self md-avatar--medium"
-  title="Barbara German"
->
-  <span
-    className="md-avatar__self"
-    style={
-      Object {
-        "backgroundColor": "",
-        "color": "",
-      }
-    }
+Array [
+  <div
+    className="md-avatar md-avatar--self md-avatar--medium"
+    title="Barbara German"
   >
-    <i
-      aria-label={null}
-      className="md-icon icon icon-chat-active_18"
+    <span
+      className="md-avatar__self"
       style={
         Object {
-          "fontSize": 18,
+          "backgroundColor": "",
+          "color": "",
         }
       }
-    />
-  </span>
-</div>
+    >
+      <i
+        aria-label={null}
+        className="md-icon icon icon-chat-active_18"
+        style={
+          Object {
+            "fontSize": 18,
+          }
+        }
+      />
+    </span>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
 `;
 
 exports[`Storyshots Platform/Webex Avatar Typing 1`] = `
-<div
-  className="md-avatar md-avatar--typing md-avatar--medium"
-  title="Barbara German"
->
-  <span
-    className="md-avatar__letter"
-    style={
-      Object {
-        "backgroundColor": "",
-        "color": "",
-      }
-    }
-  >
-    BG
-  </span>
-  <img
-    alt="Barbara German"
-    className="md-avatar__img md-avatar__img--hidden"
-    draggable={false}
-    onError={[Function]}
-    onLoad={[Function]}
-    src="./images/barbara.png"
-  />
+Array [
   <div
-    className="md-loading"
+    className="md-avatar md-avatar--typing md-avatar--medium"
+    title="Barbara German"
   >
     <span
-      className="md-loading__icon"
+      className="md-avatar__letter"
+      style={
+        Object {
+          "backgroundColor": "",
+          "color": "",
+        }
+      }
+    >
+      BG
+    </span>
+    <img
+      alt="Barbara German"
+      className="md-avatar__img md-avatar__img--hidden"
+      draggable={false}
+      onError={[Function]}
+      onLoad={[Function]}
+      src="./images/barbara.png"
     />
-    <span
-      className="md-loading__icon"
-    />
-    <span
-      className="md-loading__icon"
-    />
-  </div>
-</div>
+    <div
+      className="md-loading"
+    >
+      <span
+        className="md-loading__icon"
+      />
+      <span
+        className="md-loading__icon"
+      />
+      <span
+        className="md-loading__icon"
+      />
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
 `;
