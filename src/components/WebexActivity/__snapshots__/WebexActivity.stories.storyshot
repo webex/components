@@ -1,275 +1,347 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Messaging/Webex Activity Created Long Back 1`] = `
-<div
-  className="wxc-activity"
->
+Array [
   <div
-    className="wxc-activity-header"
+    className="wxc-activity"
   >
     <div
-      className="md-avatar md-avatar--dnd md-avatar--medium"
-      title="Barbara German"
+      className="wxc-activity-header"
     >
-      <span
-        className="md-avatar__letter"
-        style={
-          Object {
-            "backgroundColor": "",
-            "color": "",
+      <div
+        className="md-avatar md-avatar--dnd md-avatar--medium"
+        title="Barbara German"
+      >
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
           }
-        }
+        >
+          BG
+        </span>
+        <img
+          alt="Barbara German"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/barbara.png"
+        />
+      </div>
+      <div
+        className="activity-author"
       >
-        BG
-      </span>
-      <img
-        alt="Barbara German"
-        className="md-avatar__img md-avatar__img--hidden"
-        draggable={false}
-        onError={[Function]}
-        onLoad={[Function]}
-        src="./images/barbara.png"
-      />
+        <span>
+          Barbara German
+        </span>
+        <span
+          className="activity-timestamp"
+        >
+          07/25/2020, 10:00 AM
+        </span>
+      </div>
     </div>
     <div
-      className="activity-author"
+      className="activity-content"
     >
-      <span>
-        Barbara German
-      </span>
-      <span
-        className="activity-timestamp"
-      >
-        07/25/2020, 10:00 AM
-      </span>
+      The login page seems to be confusing a lot of people! Let's brainstorm some new designs
     </div>
-  </div>
-  <div
-    className="activity-content"
-  >
-    The login page seems to be confusing a lot of people! Let's brainstorm some new designs
-  </div>
-</div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
 `;
 
 exports[`Storyshots Messaging/Webex Activity Created This Week 1`] = `
-<div
-  className="wxc-activity"
->
+Array [
   <div
-    className="wxc-activity-header"
+    className="wxc-activity"
   >
     <div
-      className="md-avatar md-avatar--dnd md-avatar--medium"
-      title="Barbara German"
+      className="wxc-activity-header"
     >
-      <span
-        className="md-avatar__letter"
-        style={
-          Object {
-            "backgroundColor": "",
-            "color": "",
+      <div
+        className="md-avatar md-avatar--dnd md-avatar--medium"
+        title="Barbara German"
+      >
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
           }
-        }
+        >
+          BG
+        </span>
+        <img
+          alt="Barbara German"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/barbara.png"
+        />
+      </div>
+      <div
+        className="activity-author"
       >
-        BG
-      </span>
-      <img
-        alt="Barbara German"
-        className="md-avatar__img md-avatar__img--hidden"
-        draggable={false}
-        onError={[Function]}
-        onLoad={[Function]}
-        src="./images/barbara.png"
-      />
+        <span>
+          Barbara German
+        </span>
+        <span
+          className="activity-timestamp"
+        >
+          Thursday, 10:00 AM
+        </span>
+      </div>
     </div>
     <div
-      className="activity-author"
+      className="activity-content"
     >
-      <span>
-        Barbara German
-      </span>
-      <span
-        className="activity-timestamp"
-      >
-        Thursday, 10:00 AM
-      </span>
+      Following up on our last task. Seems like we need more time?
     </div>
-  </div>
-  <div
-    className="activity-content"
-  >
-    Following up on our last task. Seems like we need more time?
-  </div>
-</div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
 `;
 
 exports[`Storyshots Messaging/Webex Activity Created Today 1`] = `
-<div
-  className="wxc-activity"
->
+Array [
   <div
-    className="wxc-activity-header"
+    className="wxc-activity"
   >
     <div
-      className="md-avatar md-avatar--medium"
-      title="Simon Damiano"
+      className="wxc-activity-header"
     >
-      <span
-        className="md-avatar__letter"
-        style={
-          Object {
-            "backgroundColor": "",
-            "color": "",
+      <div
+        className="md-avatar md-avatar--medium"
+        title="Simon Damiano"
+      >
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
           }
-        }
+        >
+          SD
+        </span>
+        <img
+          alt="Simon Damiano"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/simon.png"
+        />
+      </div>
+      <div
+        className="activity-author"
       >
-        SD
-      </span>
-      <img
-        alt="Simon Damiano"
-        className="md-avatar__img md-avatar__img--hidden"
-        draggable={false}
-        onError={[Function]}
-        onLoad={[Function]}
-        src="./images/simon.png"
-      />
+        <span>
+          Simon Damiano
+        </span>
+        <span
+          className="activity-timestamp"
+        >
+          10:00 AM
+        </span>
+      </div>
     </div>
     <div
-      className="activity-author"
+      className="activity-content"
     >
-      <span>
-        Simon Damiano
-      </span>
-      <span
-        className="activity-timestamp"
-      >
-        10:00 AM
-      </span>
+      Hey guys! I'm going to skip standup today, not feeling great 🤢
     </div>
-  </div>
-  <div
-    className="activity-content"
-  >
-    Hey guys! I'm going to skip standup today, not feeling great 🤢
-  </div>
-</div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
 `;
 
 exports[`Storyshots Messaging/Webex Activity Created Yesterday 1`] = `
-<div
-  className="wxc-activity"
->
+Array [
   <div
-    className="wxc-activity-header"
+    className="wxc-activity"
   >
     <div
-      className="md-avatar md-avatar--medium"
-      title="Brandon Seeger"
+      className="wxc-activity-header"
     >
-      <span
-        className="md-avatar__letter"
-        style={
-          Object {
-            "backgroundColor": "",
-            "color": "",
+      <div
+        className="md-avatar md-avatar--medium"
+        title="Brandon Seeger"
+      >
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
           }
-        }
+        >
+          BS
+        </span>
+        <img
+          alt="Brandon Seeger"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/brandon.png"
+        />
+      </div>
+      <div
+        className="activity-author"
       >
-        BS
-      </span>
-      <img
-        alt="Brandon Seeger"
-        className="md-avatar__img md-avatar__img--hidden"
-        draggable={false}
-        onError={[Function]}
-        onLoad={[Function]}
-        src="./images/brandon.png"
-      />
+        <span>
+          Brandon Seeger
+        </span>
+        <span
+          className="activity-timestamp"
+        >
+          Yesterday, 10:00 AM
+        </span>
+      </div>
     </div>
     <div
-      className="activity-author"
+      className="activity-content"
     >
-      <span>
-        Brandon Seeger
-      </span>
-      <span
-        className="activity-timestamp"
-      >
-        Yesterday, 10:00 AM
-      </span>
+      Got some of the new designs for the login page, will send the Figma links tomorrow
     </div>
-  </div>
-  <div
-    className="activity-content"
-  >
-    Got some of the new designs for the login page, will send the Figma links tomorrow
-  </div>
-</div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
 `;
 
 exports[`Storyshots Messaging/Webex Activity Multi Line 1`] = `
-<div
-  className="wxc-activity"
->
+Array [
   <div
-    className="wxc-activity-header"
+    className="wxc-activity"
   >
     <div
-      className="md-avatar md-avatar--medium"
-      title="Giacomo Edwards"
+      className="wxc-activity-header"
     >
-      <span
-        className="md-avatar__letter"
-        style={
-          Object {
-            "backgroundColor": "",
-            "color": "",
+      <div
+        className="md-avatar md-avatar--medium"
+        title="Giacomo Edwards"
+      >
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
           }
-        }
+        >
+          GE
+        </span>
+        <img
+          alt="Giacomo Edwards"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/giacomo.png"
+        />
+      </div>
+      <div
+        className="activity-author"
       >
-        GE
-      </span>
-      <img
-        alt="Giacomo Edwards"
-        className="md-avatar__img md-avatar__img--hidden"
-        draggable={false}
-        onError={[Function]}
-        onLoad={[Function]}
-        src="./images/giacomo.png"
-      />
+        <span>
+          Giacomo Edwards
+        </span>
+        <span
+          className="activity-timestamp"
+        >
+          10:05 AM
+        </span>
+      </div>
     </div>
     <div
-      className="activity-author"
+      className="activity-content"
     >
-      <span>
-        Giacomo Edwards
-      </span>
-      <span
-        className="activity-timestamp"
-      >
-        10:05 AM
-      </span>
-    </div>
-  </div>
-  <div
-    className="activity-content"
-  >
-    I ran into the same issue before! Have you checked your OS permissions?
+      I ran into the same issue before! Have you checked your OS permissions?
 Sometimes that is disabled for the browser and causes the app to not load properly.
 Let me know if you need more help! Maybe we can talk about it during standup
-  </div>
-</div>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
 `;
 
 exports[`Storyshots Messaging/Webex Activity No Header 1`] = `
-<div
-  className="wxc-activity"
->
+Array [
   <div
-    className="activity-content"
+    className="wxc-activity"
   >
-    Can someone help me troubleshoot?
-  </div>
-</div>
+    <div
+      className="activity-content"
+    >
+      Can someone help me troubleshoot?
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
 `;

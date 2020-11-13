@@ -15,9 +15,13 @@ export const decorators = [
     const webexAdapter = new WebexJSONAdapter(data);
 
     return (
-    <WebexDataProvider adapter={webexAdapter}>
-      <Story />
-    </WebexDataProvider>
+    <>
+      <WebexDataProvider adapter={webexAdapter}>
+        <Story />
+      </WebexDataProvider>
+
+      <video id="remote-video" src="./video/ongoing-meeting.mp4" muted autoPlay playsInline loop width="0" height="0" />
+    </>
   )},
 ];
 
