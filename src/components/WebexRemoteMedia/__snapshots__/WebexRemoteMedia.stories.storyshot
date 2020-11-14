@@ -3,14 +3,18 @@
 exports[`Storyshots Meetings/Webex Remote Media All Remote Media 1`] = `
 Array [
   <div
-    className="wxc-remote-media split-screen"
+    className="wxc-remote-media remote-video-n-share"
   >
     <video
       autoPlay={true}
+      className="wxc-remote-video"
+      muted={true}
       playsInline={true}
     />
     <video
       autoPlay={true}
+      className="wxc-remote-share"
+      muted={true}
       playsInline={true}
     />
     <audio
@@ -116,6 +120,8 @@ Array [
   >
     <video
       autoPlay={true}
+      className="wxc-remote-video"
+      muted={true}
       playsInline={true}
     />
   </div>,

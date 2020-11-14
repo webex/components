@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   height: 100%;
   width: 100%;
   position: relative;
@@ -10,6 +11,7 @@
   .md-alert-banner {
     position: absolute;
     top: 0;
+
     width: 100%;
   }
 
@@ -27,10 +29,56 @@
     width: 100%;
   }
 
-  &.split-screen{
-    video {
-      width: 50%;
-      height: auto;
+  &.remote-video-n-share {
+    .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-video {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+
+      height: 5rem;
+      width: 9rem;
+
+      box-shadow: $shadow-offset $shadow-offset $shadow-blur $shadow-spread $shadow-color;
+      border-radius: 0.25rem;
+      z-index: 1;
+    }
+
+    .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-share {
+      flex-grow: 1;
+    }
+  }
+
+
+  &-tablet {
+      &.remote-video-n-share {
+      .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-video {
+        top: 1rem;
+        right: 1rem;
+
+        height: 7.5rem;
+        width: 13.5rem;
+      }
+    }
+  }
+
+  &-desktop {
+    &.remote-video-n-share {
+     .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-video {
+        height: 7.5rem;
+        width: 13.5rem;
+      }
+    }
+  }
+
+  &-desktop-xl {
+    &.remote-video-n-share {
+     .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-video {
+        top: 2rem;
+        right: 2rem;
+
+        height: 9.5rem;
+        width: 17rem;
+      }
     }
   }
 }

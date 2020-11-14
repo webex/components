@@ -6,14 +6,18 @@ Array [
     className="wxc-in-meeting"
   >
     <div
-      className="wxc-remote-media remote-media-in-meeting split-screen"
+      className="wxc-remote-media remote-media-in-meeting remote-video-n-share"
     >
       <video
         autoPlay={true}
+        className="wxc-remote-video"
+        muted={true}
         playsInline={true}
       />
       <video
         autoPlay={true}
+        className="wxc-remote-share"
+        muted={true}
         playsInline={true}
       />
       <audio
@@ -48,14 +52,18 @@ Array [
     className="wxc-in-meeting"
   >
     <div
-      className="wxc-remote-media remote-media-in-meeting split-screen"
+      className="wxc-remote-media remote-media-in-meeting remote-video-n-share"
     >
       <video
         autoPlay={true}
+        className="wxc-remote-video"
+        muted={true}
         playsInline={true}
       />
       <video
         autoPlay={true}
+        className="wxc-remote-share"
+        muted={true}
         playsInline={true}
       />
       <audio
