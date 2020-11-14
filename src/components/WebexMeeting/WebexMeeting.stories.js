@@ -6,11 +6,7 @@ export default {
   component: WebexMeeting,
 };
 
-const wrapperStyles = {
-  height: '500px',
-  width: '650px',
-};
-const Template = (args) => <div style={wrapperStyles}><WebexMeeting {...args} /></div>;
+const Template = (args) => <WebexMeeting {...args} />;
 
 export const Interstitial = Template.bind({});
 Interstitial.args = {
