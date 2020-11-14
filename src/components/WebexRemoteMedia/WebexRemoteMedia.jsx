@@ -5,7 +5,13 @@ import classNames from 'classnames';
 import {Badge, Spinner, AlertBanner} from '@momentum-ui/react';
 
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
-import {useMeeting, useMemberships, useStream} from '../hooks';
+import {TABLET, DESKTOP, DESKTOP_LARGE} from '../breakpoints';
+import {
+  useElementDimensions,
+  useMeeting,
+  useMemberships,
+  useStream,
+} from '../hooks';
 
 /**
  * Webex Remote Media component displays the meeting's remote video
@@ -28,14 +34,21 @@ export default function WebexRemoteMedia({className, meetingID}) {
   const audioRef = useStream(remoteAudio);
   const videoRef = useStream(remoteVideo);
   const shareRef = useStream(remoteShare);
+  const [remoteMediaRef, {width}] = useElementDimensions();
+
   const hasOtherMembers = members.length > 1;
   const hasMedia = !!(remoteAudio || remoteVideo || remoteShare);
-  const hasTwoMedia = remoteVideo && remoteShare;
+
+  const classBaseName = `${WEBEX_COMPONENTS_CLASS_PREFIX}-remote-media`;
   const mainClasses = {
-    [`${WEBEX_COMPONENTS_CLASS_PREFIX}-remote-media`]: true,
+    [`${classBaseName}`]: true,
+    [`${classBaseName}-tablet`]: width >= TABLET && width < DESKTOP,
+    [`${classBaseName}-desktop`]: width >= DESKTOP && width < DESKTOP_LARGE,
+    [`${classBaseName}-desktop-xl`]: width >= DESKTOP_LARGE,
     [className]: !!className,
-    'split-screen': hasTwoMedia,
+    'remote-video-n-share': remoteVideo && remoteShare,
   };
+
   let remoteDisplay;
 
   if (error) {
@@ -47,11 +60,11 @@ export default function WebexRemoteMedia({className, meetingID}) {
   } else if (hasMedia && hasOtherMembers) {
     remoteDisplay = (
       <>
-        {remoteVideo ? <video ref={videoRef} playsInline autoPlay /> : null}
-
-        {remoteShare ? <video ref={shareRef} playsInline autoPlay /> : null}
-
-        {remoteAudio ? <audio ref={audioRef} autoPlay /> : null}
+        {remoteVideo
+          && <video className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-remote-video`} ref={videoRef} muted playsInline autoPlay />}
+        {remoteShare
+          && <video className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-remote-share`} ref={shareRef} muted playsInline autoPlay />}
+        {remoteAudio && <audio ref={audioRef} autoPlay />}
       </>
     );
   } else if (hasMedia && !hasOtherMembers) {
@@ -70,7 +83,7 @@ export default function WebexRemoteMedia({className, meetingID}) {
   }
 
   return (
-    <div className={classNames(mainClasses)}>
+    <div ref={remoteMediaRef} className={classNames(mainClasses)}>
       {remoteDisplay}
     </div>
   );
