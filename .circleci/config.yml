@@ -86,7 +86,9 @@ jobs:
       - checkout_from_workspace
       - run:
           name: Release
-          command: npm run release
+          command: |
+            git fetch
+            npm run release
 
 # execute the jobs in a orderly manner
 workflows:
