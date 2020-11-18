@@ -1,3 +1,12 @@
+## [1.45.4](https://github.com/webex/components/compare/v1.45.3...v1.45.4) (2020-11-18)
+
+
+### Bug Fixes
+
+* **MeetingJsonAdapter:** trigger leave event for only the meeting on which it was called ([84319f6](https://github.com/webex/components/commit/84319f60a8f1a6410e65a7c40dcd32faa5fb0563))
+* **MeetingsJsonAdapter:** handle null meeting IDs ([aa33984](https://github.com/webex/components/commit/aa339843c826d0b2ed93127b5ce367d1a354ad16))
+* **WebexMeeting:** handle use case where user leaves a meeting ([ca85d47](https://github.com/webex/components/commit/ca85d473a597ce900bf32df1af4dbd3ce47d3891))
+
 ## [1.45.3](https://github.com/webex/components/compare/v1.45.2...v1.45.3) (2020-09-23)
 
 
