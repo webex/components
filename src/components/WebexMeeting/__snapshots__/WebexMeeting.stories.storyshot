@@ -16,7 +16,7 @@ Array [
         </h2>
       </div>
       <div
-        className="wxc-local-media"
+        className="wxc-local-media interstitial-media"
       >
         <video
           autoPlay={true}
@@ -290,7 +290,7 @@ Array [
         </h2>
       </div>
       <div
-        className="wxc-local-media"
+        className="wxc-local-media interstitial-media"
       >
         <video
           autoPlay={true}

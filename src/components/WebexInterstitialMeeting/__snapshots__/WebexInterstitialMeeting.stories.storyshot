@@ -35,7 +35,7 @@ Array [
       </h2>
     </div>
     <div
-      className="wxc-local-media wxc-local-media-no-media"
+      className="wxc-local-media wxc-local-media-no-media interstitial-media"
     >
       <div
         className="md-avatar md-avatar--medium"
@@ -89,7 +89,7 @@ Array [
       </h2>
     </div>
     <div
-      className="wxc-local-media"
+      className="wxc-local-media interstitial-media"
     >
       <video
         autoPlay={true}
