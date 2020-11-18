@@ -1,6 +1,9 @@
 // Note, this string must match the one from src/constants.js
 $WEBEX_COMPONENTS_CLASS_PREFIX: 'wxc';
 
+$WEBEX_MEETING_MIN_HEIGHT: 25rem;
+$WEBEX_MEETING_MIN_WIDTH: 17rem; // Standard small phone width is 20rem, leaving some padding
+
 @import '~@momentum-ui/core/scss/colors/settings';
 @import '~@momentum-ui/core/scss/settings/media';
 @import '~@momentum-ui/core/scss/settings/rem';
