@@ -34,16 +34,7 @@
 
   &.remote-video-n-share {
     .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-video {
-      position: absolute;
-      top: 0.5rem;
-      right: 0.5rem;
-
-      height: 5rem;
-      width: 9rem;
-
-      box-shadow: $shadow-offset $shadow-offset $shadow-blur $shadow-spread $shadow-color;
-      border-radius: 0.25rem;
-      z-index: 1;
+      @include media-preview-mobile();
     }
 
     .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-share {
@@ -55,11 +46,7 @@
   &-tablet {
       &.remote-video-n-share {
       .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-video {
-        top: 1rem;
-        right: 1rem;
-
-        height: 7.5rem;
-        width: 13.5rem;
+        @include media-preview-tablet();
       }
     }
   }
@@ -67,8 +54,7 @@
   &-desktop {
     &.remote-video-n-share {
      .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-video {
-        height: 7.5rem;
-        width: 13.5rem;
+        @include media-preview-tablet();
       }
     }
   }
@@ -76,11 +62,7 @@
   &-desktop-xl {
     &.remote-video-n-share {
      .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-video {
-        top: 2rem;
-        right: 2rem;
-
-        height: 9.5rem;
-        width: 17rem;
+        @include media-preview-desktop-xl();
       }
     }
   }

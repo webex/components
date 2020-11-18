@@ -1,3 +1,8 @@
+$shadow-offset: 0.25rem;
+$shadow-blur: 1rem;
+$shadow-spread: -0.125rem;
+$shadow-color: rgba(0, 0, 0, 0.2);
+
 @mixin noselect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -20,4 +25,48 @@
   font-size: 1rem;
   line-height: 1.5rem;
   letter-spacing: 0.01875rem;
+}
+
+@mixin media-shadow {
+  box-shadow: $shadow-offset $shadow-offset $shadow-blur $shadow-spread $shadow-color;
+  border-radius: 0.25rem;
+}
+
+@mixin media-preview-mobile {
+  @include media-shadow();
+
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+
+  height: 5rem;
+  width: 9rem;
+
+  z-index: 1;
+}
+
+@mixin media-preview-tablet {
+  @include media-shadow();
+
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  height: 7.5rem;
+  width: 13.5rem;
+
+  z-index: 1;
+}
+
+@mixin media-preview-desktop-xl {
+  @include media-shadow();
+
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+
+  height: 9.5rem;
+  width: 17rem;
+
+  z-index: 1;
 }
