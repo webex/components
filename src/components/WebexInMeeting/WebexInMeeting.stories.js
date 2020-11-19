@@ -9,12 +9,22 @@ export default {
 
 const Template = (args) => <WebexInMeeting {...args} />;
 
-export const AllMedia = Template.bind({});
-AllMedia.args = {
-  meetingID: 'meeting1',
+export const VideoOnly = Template.bind({});
+VideoOnly.args = {
+  meetingID: 'meeting6',
 };
 
-export const RemoteMediaOnly = Template.bind({});
-RemoteMediaOnly.args = {
+export const Connecting = Template.bind({});
+Connecting.args = {
+  meetingID: 'meeting3',
+};
+
+export const AudioOnly = Template.bind({});
+AudioOnly.args = {
+  meetingID: 'meeting5',
+};
+
+export const AllMedia = Template.bind({});
+AllMedia.args = {
   meetingID: 'meeting2',
 };

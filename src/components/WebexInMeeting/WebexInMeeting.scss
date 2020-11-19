@@ -10,44 +10,50 @@ $shadow-color: rgba(0, 0, 0, 0.2);
 
   background: black;
 
-  .remote-media-in-meeting {
-    position: relative;
-    height: 100%;
-    width: 100%;
-  }
-
-  .local-media-in-meeting {
-    position: absolute;
-    top: 1rem;
-    bottom: auto;
-    right: 1rem;
-
-    height: 7.5rem;
-    width: 13.5rem;
-
-    // Because local-media has minimum sizing, scaling makes sure that
-    // all elements within are scaled properly
-    transform: scale(0.5);
-    transform-origin: top right;
-
-    box-shadow: $shadow-offset $shadow-offset $shadow-blur $shadow-spread $shadow-color;
-    border-radius: 0.25rem;
-    z-index: 1;
-  }
-
-  &-tablet {
-    .local-media {
-      transform: scale(1); // Reset to original size
+  &.remote-sharing {
+    .local-media-in-meeting {
+      display: none;
     }
   }
 
-  &-desktop {
-    .local-media {
-      top: auto;
-      bottom: 2rem;
-      right: 2rem;
+  .local-media-in-meeting {
+    @include media-preview-mobile();
 
-      transform: scale(1); // Reset to original size
+    min-width: auto;
+    min-height: auto;
+
+    .md-avatar {
+      transform: none; // Avatar is 40x40px, resets any transforms
+    }
+  }
+
+  &-tablet {
+    .local-media-in-meeting {
+      @include media-preview-tablet();
+
+      .md-avatar {
+        transform: scale(2); // Avatar is 40x40px, this makes it 80x80px
+      }
+    }
+  }
+
+    &-desktop {
+    .local-media-in-meeting {
+      @include media-preview-tablet();
+
+      .md-avatar {
+        transform: scale(2); // Avatar is 40x40px, this makes it 120x120px
+      }
+    }
+  }
+
+  &-desktop-xl {
+    .local-media-in-meeting {
+      @include media-preview-desktop-xl();
+
+      .md-avatar {
+        transform: scale(3); // Avatar is 40x40px, this makes it 120x120px
+      }
     }
   }
 }

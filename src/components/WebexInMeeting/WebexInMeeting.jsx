@@ -5,8 +5,8 @@ import classNames from 'classnames';
 import WebexLocalMedia from '../WebexLocalMedia/WebexLocalMedia';
 import WebexRemoteMedia from '../WebexRemoteMedia/WebexRemoteMedia';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
-import {useElementDimensions} from '../hooks';
-import {TABLET, DESKTOP} from '../breakpoints';
+import {useElementDimensions, useMeeting} from '../hooks';
+import {TABLET, DESKTOP, DESKTOP_LARGE} from '../breakpoints';
 
 /**
  * Webex In-Meeting component displays the remote stream plus
@@ -16,12 +16,15 @@ import {TABLET, DESKTOP} from '../breakpoints';
  * @returns {Object} JSX of the component
  */
 export default function WebexInMeeting({meetingID}) {
+  const {remoteShare} = useMeeting(meetingID);
   const [meetingRef, {width}] = useElementDimensions();
   const classBaseName = `${WEBEX_COMPONENTS_CLASS_PREFIX}-in-meeting`;
   const mainClasses = {
     [`${classBaseName}`]: true,
     [`${classBaseName}-tablet`]: width >= TABLET && width < DESKTOP,
-    [`${classBaseName}-desktop`]: width >= DESKTOP,
+    [`${classBaseName}-desktop`]: width >= DESKTOP && width < DESKTOP_LARGE,
+    [`${classBaseName}-desktop-xl`]: width >= DESKTOP_LARGE,
+    'remote-sharing': remoteShare !== null,
   };
 
   return (
