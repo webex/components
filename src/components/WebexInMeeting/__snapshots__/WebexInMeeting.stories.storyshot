@@ -3,53 +3,7 @@
 exports[`Storyshots Meetings/Webex In-Meeting All Media 1`] = `
 Array [
   <div
-    className="wxc-in-meeting"
-  >
-    <div
-      className="wxc-remote-media remote-media-in-meeting remote-video-n-share"
-    >
-      <video
-        autoPlay={true}
-        className="wxc-remote-video"
-        muted={true}
-        playsInline={true}
-      />
-      <video
-        autoPlay={true}
-        className="wxc-remote-share"
-        muted={true}
-        playsInline={true}
-      />
-      <audio
-        autoPlay={true}
-      />
-    </div>
-    <div
-      className="wxc-local-media local-media-in-meeting"
-    >
-      <video
-        autoPlay={true}
-        playsInline={true}
-      />
-    </div>
-  </div>,
-  <video
-    autoPlay={true}
-    height="0"
-    id="remote-video"
-    loop={true}
-    muted={true}
-    playsInline={true}
-    src="./video/ongoing-meeting.mp4"
-    width="0"
-  />,
-]
-`;
-
-exports[`Storyshots Meetings/Webex In-Meeting Remote Media Only 1`] = `
-Array [
-  <div
-    className="wxc-in-meeting"
+    className="wxc-in-meeting remote-sharing"
   >
     <div
       className="wxc-remote-media remote-media-in-meeting remote-video-n-share"
@@ -97,6 +51,138 @@ Array [
           src="./images/barbara.png"
         />
       </div>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex In-Meeting Audio Only 1`] = `
+Array [
+  <div
+    className="wxc-in-meeting"
+  >
+    <div
+      className="wxc-remote-media remote-media-in-meeting"
+    >
+      <audio
+        autoPlay={true}
+      />
+    </div>
+    <div
+      className="wxc-local-media wxc-local-media-no-media local-media-in-meeting"
+    >
+      <div
+        className="md-avatar md-avatar--medium"
+        title="Barbara German"
+      >
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
+          }
+        >
+          BG
+        </span>
+        <img
+          alt="Barbara German"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/barbara.png"
+        />
+      </div>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex In-Meeting Connecting 1`] = `
+Array [
+  <div
+    className="wxc-in-meeting"
+  >
+    <div
+      className="wxc-remote-media remote-media-in-meeting"
+    >
+      <span
+        className="md-badge md-badge--round"
+      >
+        <i
+          className="md-spinner md-spinner--16 md-spinner--black"
+        />
+        <div>
+          Connecting
+        </div>
+      </span>
+    </div>
+    <div
+      className="wxc-local-media local-media-in-meeting"
+    >
+      <video
+        autoPlay={true}
+        playsInline={true}
+      />
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex In-Meeting Video Only 1`] = `
+Array [
+  <div
+    className="wxc-in-meeting"
+  >
+    <div
+      className="wxc-remote-media remote-media-in-meeting"
+    >
+      <video
+        autoPlay={true}
+        className="wxc-remote-video"
+        muted={true}
+        playsInline={true}
+      />
+    </div>
+    <div
+      className="wxc-local-media local-media-in-meeting"
+    >
+      <video
+        autoPlay={true}
+        playsInline={true}
+      />
     </div>
   </div>,
   <video

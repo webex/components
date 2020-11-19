@@ -78,7 +78,7 @@ Array [
     className="wxc-meeting wxc-meeting-active"
   >
     <div
-      className="wxc-in-meeting"
+      className="wxc-in-meeting remote-sharing"
     >
       <div
         className="wxc-remote-media remote-media-in-meeting remote-video-n-share"
