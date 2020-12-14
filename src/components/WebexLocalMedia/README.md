@@ -1,6 +1,6 @@
 # Webex Local Media Component
 
-Webex local media component displays the user local stream, if enabled. If user's local media is disabled the avatar of the current _Webex Teams_ user is displayed.
+Webex local media component displays the user local stream, if enabled. If user's local media is disabled the avatar of the current _Webex_ user is displayed.
 
 <p align="center">
   <img src="./WebexLocalMedia.png" alt="Default Webex Local Media" />
