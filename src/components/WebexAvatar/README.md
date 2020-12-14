@@ -1,6 +1,6 @@
 # Webex Avatar Component
 
-Webex avatar component displays the avatar and status of a _Webex Teams_ user.
+Webex avatar component displays the avatar and status of a _Webex_ user.
 
 <p align="center">
   <img src="./WebexAvatar.png" alt="Default Webex Avatar" />
