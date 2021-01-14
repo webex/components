@@ -6,16 +6,6 @@ executors:
     docker:
       - image: circleci/node:erbium
 
-# reusable command for all jobs
-commands:
-  checkout_from_workspace:
-    description: 'To checkout and attach the workspace'
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/webex-components
-
-# define jobs
 jobs:
   install:
     executor: node-erbium-executor
@@ -25,7 +15,7 @@ jobs:
           keys:
             - dependency-cache-{{ checksum "package-lock.json" }}
       - run:
-          name: Install Dependencies & Peer Dependencies
+          name: Install dependencies & peer dependencies
           command: npx npm-install-peers
       - save_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
@@ -37,7 +27,8 @@ jobs:
   test:
     executor: node-erbium-executor
     steps:
-      - checkout_from_workspace
+      - attach_workspace:
+        - at: .
       - run:
           name: Linting
           command: npm run linter
@@ -50,7 +41,8 @@ jobs:
   build:
     executor: node-erbium-executor
     steps:
-      - checkout_from_workspace
+      - attach_workspace:
+        - at: .
       - run:
           name: Build
           command: npm run build
@@ -63,10 +55,8 @@ jobs:
   storybook:
     executor: node-erbium-executor
     steps:
-      - checkout_from_workspace
-      - add_ssh_keys:
-          fingerprints:
-            - $RW_FINGERPRINT
+      - attach_workspace:
+        - at: .
       - run:
           name: Build Storybook
           command: |
@@ -86,14 +76,13 @@ jobs:
   release:
     executor: node-erbium-executor
     steps:
-      - checkout_from_workspace
+      - attach_workspace:
+        - at: .
+      - checkout
       - run:
           name: Release
-          command: |
-            git fetch
-            npm run release
+          command: npm run release
 
-# execute the jobs in a orderly manner
 workflows:
   setup_test_release:
     jobs:
