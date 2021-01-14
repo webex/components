@@ -1,14 +1,14 @@
 version: 2.1
 
 executors:
-  node-erbium-executor:
+  node-fermium-executor:
     working_directory: ~/webex-components
     docker:
-      - image: circleci/node:erbium
+      - image: circleci/node:fermium
 
 jobs:
   install:
-    executor: node-erbium-executor
+    executor: node-fermium-executor
     steps:
       - checkout
       - restore_cache:
@@ -25,7 +25,7 @@ jobs:
           paths: node_modules
 
   test:
-    executor: node-erbium-executor
+    executor: node-fermium-executor
     steps:
       - attach_workspace:
         - at: .
@@ -39,7 +39,7 @@ jobs:
           path: test_results
 
   build:
-    executor: node-erbium-executor
+    executor: node-fermium-executor
     steps:
       - attach_workspace:
         - at: .
@@ -53,7 +53,7 @@ jobs:
             - docs/bundle-analysis-*
 
   storybook:
-    executor: node-erbium-executor
+    executor: node-fermium-executor
     steps:
       - attach_workspace:
         - at: .
@@ -74,7 +74,7 @@ jobs:
           paths: docs/storybook
 
   release:
-    executor: node-erbium-executor
+    executor: node-fermium-executor
     steps:
       - attach_workspace:
         - at: .
