@@ -1,3 +1,13 @@
+## [1.45.5](https://github.com/webex/components/compare/v1.45.4...v1.45.5) (2021-01-14)
+
+
+### Bug Fixes
+
+* **WebexInMeeting:** handle mobile screens ([ebbd342](https://github.com/webex/components/commit/ebbd3420a69024c792a3e255a3013ff7aa7bdf78))
+* **WebexInterstitialMeeting:** expand media to container size ([d223040](https://github.com/webex/components/commit/d223040f809d62823cbcb4fcade475abcb9d25bd))
+* **WebexRemoteMedia:** expand media to container size ([6039249](https://github.com/webex/components/commit/6039249dfb294e93e8c30d9984d6df46b074b231))
+* **WebexRemoteMedia:** update video and share styles ([7fb2cf0](https://github.com/webex/components/commit/7fb2cf0b124698973e30fbdde7791275ee1b7d4a))
+
 ## [1.45.4](https://github.com/webex/components/compare/v1.45.3...v1.45.4) (2020-11-18)
 
 
