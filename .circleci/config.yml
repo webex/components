@@ -22,16 +22,22 @@ jobs:
           paths: node_modules
       - persist_to_workspace:
           root: .
-          paths: node_modules
+          paths: .
 
-  test:
+  lint:
     executor: node-fermium-executor
     steps:
       - attach_workspace:
-        - at: .
+          at: .
       - run:
-          name: Linting
+          name: Code linting
           command: npm run linter
+
+  unit_test:
+    executor: node-fermium-executor
+    steps:
+      - attach_workspace:
+          at: .
       - run:
           name: Unit Test Coverage
           command: npm run test:coverage
@@ -42,7 +48,7 @@ jobs:
     executor: node-fermium-executor
     steps:
       - attach_workspace:
-        - at: .
+          at: .
       - run:
           name: Build
           command: npm run build
@@ -52,13 +58,25 @@ jobs:
             - dist
             - docs/bundle-analysis-*
 
-  storybook:
+  release:
     executor: node-fermium-executor
     steps:
       - attach_workspace:
-        - at: .
+          at: .
       - run:
-          name: Build Storybook
+          name: Release
+          command: npm run release
+
+  storybook:
+    executor: node-fermium-executor
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - $RW_FINGERPRINT
+      - attach_workspace:
+          at: .
+      - run:
+          name: Update Storybook
           command: |
             rm -rf docs/storybook
             npm run storybook:build
@@ -69,43 +87,33 @@ jobs:
               git commit -m "docs: build Storybook [skip ci]"
               git push origin master
             fi
-      - persist_to_workspace:
-          root: .
-          paths: docs/storybook
-
-  release:
-    executor: node-fermium-executor
-    steps:
-      - attach_workspace:
-        - at: .
-      - checkout
-      - run:
-          name: Release
-          command: npm run release
 
 workflows:
-  setup_test_release:
+  test_and_release:
     jobs:
       - install
-      - test:
+      - lint:
+          requires:
+            - install
+      - unit_test:
           requires:
             - install
       - build:
           requires:
-            - test
-          filters:
-            branches:
-              only: master
-      - storybook:
-          requires:
-            - test
+            - lint
+            - unit_test
           filters:
             branches:
               only: master
       - release:
           requires:
             - build
-            - storybook
+          filters:
+            branches:
+              only: master
+      - storybook:
+          requires:
+            - release
           filters:
             branches:
               only: master
