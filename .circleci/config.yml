@@ -73,8 +73,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - $RW_FINGERPRINT
-      - attach_workspace:
-          at: .
+      - checkout
       - run:
           name: Update Storybook
           command: |
