@@ -70,16 +70,20 @@ jobs:
   storybook:
     executor: node-fermium-executor
     steps:
+      - attach_workspace:
+          at: .
       - add_ssh_keys:
           fingerprints:
             - $RW_FINGERPRINT
       - checkout
       - run:
-          name: Update Storybook
+          name: Build Storybook
           command: |
             rm -rf docs/storybook
             npm run storybook:build
-
+      - run:
+          name: Push Storybook updates to Github
+          command: |
             # Check if there's anything to commit
             if [ -n "$(git status --porcelain)" ]; then
               git add docs/storybook
