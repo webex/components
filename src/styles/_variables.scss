@@ -4,7 +4,37 @@ $WEBEX_COMPONENTS_CLASS_PREFIX: 'wxc';
 $WEBEX_MEETING_MIN_HEIGHT: 25rem;
 $WEBEX_MEETING_MIN_WIDTH: 17rem; // Standard small phone width is 20rem, leaving some padding
 
-@import '~@momentum-ui/core/scss/colors/settings';
-@import '~@momentum-ui/core/scss/settings/media';
-@import '~@momentum-ui/core/scss/settings/rem';
-@import '~@momentum-ui/core/scss/typography/settings';
+// Momentum UI Colors
+// See https://momentum.design/tokens/color
+$md-gray-05: #F7F7F7 !default;
+$md-gray-10: #EDEDED !default;
+$md-gray-20: #DEDEDE !default;
+$md-gray-30: #CCCCCC !default;
+$md-gray-40: #B2B2B2 !default;
+$md-gray-50: #949494 !default;
+$md-gray-60: #707070 !default;
+$md-gray-70: #545454 !default;
+$md-gray-80: #3B3B3B !default;
+$md-gray-90: #292929 !default;
+$md-gray-95: #1C1C1C !default;
+$md-gray-100: #121212 !default;
+
+$md-black-100: #000000;
+
+// Momentum UI Fonts
+$font-family-sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-serif: Georgia, Cambria, 'Times New Roman', Times, serif;
+$font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
+
+$brand-font-bold: 'CiscoSansTT Bold', $font-family-sans-serif;
+$brand-font-bold-oblique: 'CiscoSansTT Bold Oblique', $font-family-sans-serif;
+$brand-font-extra-light: 'CiscoSansTT Extra Light', $font-family-sans-serif;
+$brand-font-extra-light-oblique: 'CiscoSansTT Extra Light Oblique', $font-family-sans-serif;
+$brand-font-heavy: 'CiscoSansTT Heavy', $font-family-sans-serif;
+$brand-font-heavy-oblique: 'CiscoSansTT Heavy Oblique', $font-family-sans-serif;
+$brand-font-light: 'CiscoSansTT Light', $font-family-sans-serif;
+$brand-font-light-Oblique: 'CiscoSansTT Light Oblique', $font-family-sans-serif;
+$brand-font-regular: 'CiscoSansTT Regular', $font-family-sans-serif;
+$brand-font-regular-oblique: 'CiscoSansTT Regular Oblique', $font-family-sans-serif;
+$brand-font-thin: 'CiscoSansTT Thin', $font-family-sans-serif;
+$brand-font-thin-oblique: 'CiscoSansTT Thin Oblique', $font-family-sans-serif;

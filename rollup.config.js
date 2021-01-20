@@ -29,11 +29,6 @@ const plugins = [
     output: `dist/css/${moduleName}.css`,
     outputStyle: 'compressed',
     failOnError: true,
-    // Search for Sass in third-party packages e.g. Momentum UI
-    includePaths: ['node_modules'],
-    // Remove Webpack-style imports
-    // Webpack-style imports are left in code because Storybook uses Webpack
-    importer: (path) => ({file: path[0] === '~' ? path.slice(1) : path}),
   }),
   license({
     banner: `
