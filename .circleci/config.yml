@@ -86,6 +86,7 @@ jobs:
           command: |
             # Check if there's anything to commit
             if [ -n "$(git status --porcelain)" ]; then
+              git pull
               git add docs/storybook
               git commit -m "docs: build Storybook [skip ci]"
               git push origin master
