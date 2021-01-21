@@ -1,3 +1,10 @@
+## [1.45.6](https://github.com/webex/components/compare/v1.45.5...v1.45.6) (2021-01-21)
+
+
+### Bug Fixes
+
+* **styles:** remove Momentum UI from styles ([bfb7293](https://github.com/webex/components/commit/bfb729315ed563439d6b0b356eda0310822232e7))
+
 ## [1.45.5](https://github.com/webex/components/compare/v1.45.4...v1.45.5) (2021-01-14)
 
 
