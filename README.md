@@ -103,12 +103,12 @@ If you don't have a directory, create a public directory from which the fonts to
     $images-path: '<path to images directory>';
     ```
 
-3. Import `@momentum-ui/core/scss/momentum-ui.scss` into your main entry Sass file _after_ the variables
+3. Import `@momentum-ui/core/scss/momentum-ui-components.scss` into your main entry Sass file _after_ the variables
 
     ```CSS
     ...
 
-    @import '@momentum-ui/core/scss/momentum-ui';
+    @import '@momentum-ui/core/scss/momentum-ui-components';
     ```
 
 4. Compile your Sass using your static compiler or bundler
