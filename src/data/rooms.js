@@ -19,9 +19,9 @@ export default {
   },
   'room2-activities': [
     'activity6',
-    {date: '2019-08-15T21:00:07.047Z'},
+    {date: '2019-08-15T21:00:07.047'},
     'activity7',
-    {date: '2019-08-20T21:00:07.047Z'},
+    {date: '2019-08-20T21:00:07.047'},
     'activity8',
   ],
   room3: {
