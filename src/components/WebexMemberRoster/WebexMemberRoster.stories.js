@@ -13,3 +13,9 @@ Space.args = {
   destinationID: 'room1',
   destinationType: 'room',
 };
+
+export const Meeting = Template.bind({});
+Meeting.args = {
+  destinationID: 'meeting1',
+  destinationType: 'meeting',
+};

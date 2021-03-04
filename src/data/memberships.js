@@ -4,10 +4,10 @@ export default {
     destinationID: 'room1',
     destinationType: 'room',
     members: [
-      {personID: 'user1'},
-      {personID: 'user2'},
-      {personID: 'user3'},
-      {personID: 'user4'},
+      {personID: 'user1', inMeeting: null},
+      {personID: 'user2', inMeeting: null},
+      {personID: 'user3', inMeeting: null},
+      {personID: 'user4', inMeeting: null},
     ],
   },
   membership2: {
@@ -15,9 +15,9 @@ export default {
     destinationID: 'room2',
     destinationType: 'room',
     members: [
-      {personID: 'user1'},
-      {personID: 'user5'},
-      {personID: 'user6'},
+      {personID: 'user1', inMeeting: null},
+      {personID: 'user5', inMeeting: null},
+      {personID: 'user6', inMeeting: null},
     ],
   },
   membership3: {
@@ -25,9 +25,9 @@ export default {
     destinationID: 'meeting1',
     destinationType: 'meeting',
     members: [
-      {personID: 'user1'},
-      {personID: 'user2'},
-      {personID: 'user3'},
+      {personID: 'user1', inMeeting: false},
+      {personID: 'user2', inMeeting: true},
+      {personID: 'user3', inMeeting: true},
     ],
   },
   membership4: {
@@ -35,12 +35,12 @@ export default {
     destinationID: 'meeting2',
     destinationType: 'meeting',
     members: [
-      {personID: 'user1'},
-      {personID: 'user2'},
-      {personID: 'user3'},
-      {personID: 'user4'},
-      {personID: 'user5'},
-      {personID: 'user6'},
+      {personID: 'user1', inMeeting: true},
+      {personID: 'user2', inMeeting: true},
+      {personID: 'user3', inMeeting: true},
+      {personID: 'user4', inMeeting: true},
+      {personID: 'user5', inMeeting: true},
+      {personID: 'user6', inMeeting: true},
     ],
   },
   membership5: {
@@ -48,7 +48,7 @@ export default {
     destinationID: 'meeting4',
     destinationType: 'meeting',
     members: [
-      {personID: 'user1'},
+      {personID: 'user1', inMeeting: true},
     ],
   },
   membership6: {
@@ -56,8 +56,8 @@ export default {
     destinationID: 'meeting5',
     destinationType: 'meeting',
     members: [
-      {personID: 'user1'},
-      {personID: 'user2'},
+      {personID: 'user1', inMeeting: true},
+      {personID: 'user2', inMeeting: false},
     ],
   },
   membership7: {
@@ -65,8 +65,8 @@ export default {
     destinationID: 'meeting6',
     destinationType: 'meeting',
     members: [
-      {personID: 'user1'},
-      {personID: 'user2'},
+      {personID: 'user1', inMeeting: false},
+      {personID: 'user2', inMeeting: true},
     ],
   },
 };

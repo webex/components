@@ -35,7 +35,7 @@ export default function WebexRemoteMedia({className, meetingID}) {
   const videoRef = useStream(remoteVideo);
   const shareRef = useStream(remoteShare);
   const [remoteMediaRef, {width}] = useElementDimensions();
-
+  
   const hasOtherMembers = members.length > 1;
   const hasMedia = !!(remoteAudio || remoteVideo || remoteShare);
 
