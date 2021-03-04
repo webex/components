@@ -1,30 +1,45 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {usePerson} from '../hooks';
+import {usePerson, useMemberships} from '../hooks';
 import WebexAvatar from '../WebexAvatar/WebexAvatar';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 
 /**
  * Displays a webex meeting member.
  *
+ * @param {string} props.destinationType Type of destination of the membership roster
+ * @param {string} props.destinationID  ID of the destination for which to get members
  * @param {string} props.personID  ID of the person for which to display avatar
  * @param {boolean} props.displayStatus  Whether or not to display the user's status
  *
  * @returns {object} JSX of the component
  */
-export default function WebexMember({personID, displayStatus}) {
+export default function WebexMember({
+  destinationType,
+  destinationID,
+  personID,
+  displayStatus,
+}) {
   const {firstName, lastName} = usePerson(personID);
+  const members = useMemberships(destinationID, destinationType);
+  const member = members
+    .find((itemMember) => itemMember.personID === personID);
+
+  const isMuted = member && member.muted;
 
   return (
     <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-member`}>
       <WebexAvatar personID={personID} displayStatus={displayStatus} />
       <div className="member-name">{`${firstName} ${lastName}`}</div>
+      {isMuted && <div className="member-muted"><span className="icon icon-microphone-muted_24" /></div>}
     </div>
   );
 }
 
 WebexMember.propTypes = {
+  destinationType: PropTypes.string.isRequired,
+  destinationID: PropTypes.string.isRequired,
   personID: PropTypes.string.isRequired,
   displayStatus: PropTypes.bool,
 };

@@ -25,13 +25,20 @@ import useMemberships from '../hooks/useMemberships';
 export default function WebexMemberRoster({destinationID, destinationType}) {
   const memberships = useMemberships(destinationID, destinationType);
   const members = memberships.map(
-    (member) => <WebexMember key={member.personID} personID={member.personID} />,
+    (member) => (
+      <WebexMember
+        destinationType={destinationType}
+        destinationID={destinationID}
+        personID={member.personID}
+        key={member.personID}
+      />
+    ),
   );
 
   return <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-roster`}>{members}</div>;
 }
 
 WebexMemberRoster.propTypes = {
-  destinationID: PropTypes.string.isRequired,
   destinationType: PropTypes.string.isRequired,
+  destinationID: PropTypes.string.isRequired,
 };

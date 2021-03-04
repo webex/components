@@ -18,3 +18,10 @@ StatusEnabled.args = {
   personID: 'user1',
   displayStatus: true,
 };
+
+export const Muted = Template.bind({});
+Muted.args = {
+  destinationType: 'meeting',
+  destinationID: 'meeting2',
+  personID: 'user2',
+};
