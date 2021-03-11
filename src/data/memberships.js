@@ -1,6 +1,6 @@
 export default {
   membership1: {
-    ID: 'membership1',
+    ID: 'room-room1',
     destinationID: 'room1',
     destinationType: 'room',
     members: [
@@ -11,7 +11,7 @@ export default {
     ],
   },
   membership2: {
-    ID: 'membership2',
+    ID: 'room-room2',
     destinationID: 'room2',
     destinationType: 'room',
     members: [
@@ -21,7 +21,7 @@ export default {
     ],
   },
   membership3: {
-    ID: 'membership3',
+    ID: 'meeting-meeting1',
     destinationID: 'meeting1',
     destinationType: 'meeting',
     members: [
@@ -31,7 +31,7 @@ export default {
     ],
   },
   membership4: {
-    ID: 'membership4',
+    ID: 'meeting-meeting2',
     destinationID: 'meeting2',
     destinationType: 'meeting',
     members: [
@@ -44,15 +44,28 @@ export default {
     ],
   },
   membership5: {
-    ID: 'membership5',
+    ID: 'meeting-meeting3',
+    destinationID: 'meeting3',
+    destinationType: 'meeting',
+    members: [
+      {personID: 'user1'},
+      {personID: 'user2'},
+      {personID: 'user3'},
+      {personID: 'user4'},
+      {personID: 'user5'},
+      {personID: 'user6'},
+    ],
+  },
+  membership6: {
+    ID: 'meeting-meeting4',
     destinationID: 'meeting4',
     destinationType: 'meeting',
     members: [
       {personID: 'user1'},
     ],
   },
-  membership6: {
-    ID: 'membership6',
+  membership7: {
+    ID: 'meeting-meeting5',
     destinationID: 'meeting5',
     destinationType: 'meeting',
     members: [
@@ -60,13 +73,33 @@ export default {
       {personID: 'user2'},
     ],
   },
-  membership7: {
-    ID: 'membership7',
+  membership8: {
+    ID: 'meeting-meeting6',
     destinationID: 'meeting6',
     destinationType: 'meeting',
     members: [
       {personID: 'user1'},
       {personID: 'user2'},
+    ],
+  },
+  membership9: {
+    ID: 'meeting-meeting7',
+    destinationID: 'meeting7',
+    destinationType: 'meeting',
+    members: [
+      {personID: 'user1'},
+      {personID: 'user2'},
+    ],
+  },
+  membership10: {
+    ID: 'meeting-meeting8',
+    destinationID: 'meeting8',
+    destinationType: 'meeting',
+    members: [
+      {personID: 'user1'},
+      {personID: 'user2'},
+      {personID: 'user3'},
+      {personID: 'user4'},
     ],
   },
 };

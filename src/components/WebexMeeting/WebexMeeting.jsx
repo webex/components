@@ -1,12 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {Spinner} from '@momentum-ui/react';
+import {Button, Icon} from '@momentum-ui/react';
+import {DestinationType} from '@webex/component-adapter-interfaces';
 
 import WebexInMeeting from '../WebexInMeeting/WebexInMeeting';
 import WebexInterstitialMeeting from '../WebexInterstitialMeeting/WebexInterstitialMeeting';
 import WebexMeetingControl from '../WebexMeetingControl/WebexMeetingControl';
 import WebexMeetingControls from '../WebexMeetingControl/WebexMeetingControls';
+import WebexMemberRoster from '../WebexMemberRoster/WebexMemberRoster';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import {useMeetingDestination} from '../hooks';
 
@@ -20,6 +23,7 @@ import {useMeetingDestination} from '../hooks';
 export default function WebexMeeting({meetingDestination, controls}) {
   const {ID, remoteVideo} = useMeetingDestination(meetingDestination);
   const isActive = remoteVideo !== null;
+  const [isRosterVisible, setIsRosterVisible] = useState(true);
 
   const classBaseName = `${WEBEX_COMPONENTS_CLASS_PREFIX}-meeting`;
   const mainClasses = {
@@ -30,6 +34,8 @@ export default function WebexMeeting({meetingDestination, controls}) {
   const meetingControls = controls(isActive).map(
     (key) => <WebexMeetingControl key={key} type={key} />,
   );
+
+  const toggleRoster = () => setIsRosterVisible((visible) => !visible);
 
   let meetingDisplay;
 
@@ -43,10 +49,28 @@ export default function WebexMeeting({meetingDestination, controls}) {
     meetingDisplay = (
       <>
         {isActive
-          ? <WebexInMeeting meetingID={ID} />
+          ? (
+            <div className="meeting-body">
+              <WebexInMeeting meetingID={ID} />
+              {isRosterVisible && (
+                <WebexMemberRoster
+                  destinationID={ID}
+                  destinationType={DestinationType.MEETING}
+                />
+              )}
+            </div>
+          )
           : <WebexInterstitialMeeting meetingID={ID} />}
         <WebexMeetingControls className="meeting-controls-container" meetingID={ID}>
-          {meetingControls}
+          <div className="meeting-controls-left" />
+          <div className="meeting-controls-center">{meetingControls}</div>
+          <div className="meeting-controls-right">
+            {isActive && (
+              <Button circle size={56} onClick={toggleRoster}>
+                <Icon name="icon-participant-list_24" />
+              </Button>
+            )}
+          </div>
         </WebexMeetingControls>
       </>
     );

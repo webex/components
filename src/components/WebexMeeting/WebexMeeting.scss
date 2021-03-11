@@ -1,21 +1,37 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  position: relative;
   height: 100%;
   width: 100%;
   min-height: $WEBEX_MEETING_MIN_HEIGHT;
   min-width: $WEBEX_MEETING_MIN_WIDTH;
 
-  .meeting-controls-container {
-    position: absolute;
-    bottom: 2rem;
-
-    z-index: 100; // Arbitrary large number
+  .meeting-body {
+    flex: 1;
+    min-height: 0;
+    display: flex;
   }
+
+  .meeting-controls-container {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  .meeting-controls-left {
+    flex: 1;
+  } 
+
+  .meeting-controls-center {
+    display: flex;
+    align-items: center;
+  }
+
+  .meeting-controls-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  } 
 
   &-active  {
     .meeting-controls {

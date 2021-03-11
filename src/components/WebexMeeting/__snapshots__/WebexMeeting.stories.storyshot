@@ -27,36 +27,46 @@ Array [
     <div
       className="wxc-meeting-controls meeting-controls-container"
     >
-      <button
-        alt="Join meeting"
-        aria-label="Join meeting"
-        aria-pressed={null}
-        className="md-button md-button--52 md-button--green"
-        data-md-event-key="md-button-0"
-        data-md-keyboard-key="join-meeting"
-        disabled={false}
-        id="md-button-0"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        style={
-          Object {
-            "style": Object {},
-          }
-        }
-        tabIndex={0}
-        type="button"
+      <div
+        className="meeting-controls-left"
+      />
+      <div
+        className="meeting-controls-center"
       >
-        <span
-          className="md-button__children"
+        <button
+          alt="Join meeting"
+          aria-label="Join meeting"
+          aria-pressed={null}
+          className="md-button md-button--52 md-button--green"
+          data-md-event-key="md-button-0"
+          data-md-keyboard-key="join-meeting"
+          disabled={false}
+          id="md-button-0"
+          onClick={[Function]}
+          onKeyDown={[Function]}
           style={
             Object {
-              "opacity": "1",
+              "style": Object {},
             }
           }
+          tabIndex={0}
+          type="button"
         >
-          Join meeting
-        </span>
-      </button>
+          <span
+            className="md-button__children"
+            style={
+              Object {
+                "opacity": "1",
+              }
+            }
+          >
+            Join meeting
+          </span>
+        </button>
+      </div>
+      <div
+        className="meeting-controls-right"
+      />
     </div>
   </div>,
   <video
@@ -78,187 +88,342 @@ Array [
     className="wxc-meeting wxc-meeting-active"
   >
     <div
-      className="wxc-in-meeting remote-sharing"
+      className="meeting-body"
     >
       <div
-        className="wxc-remote-media remote-media-in-meeting remote-video-n-share"
+        className="wxc-in-meeting remote-sharing"
       >
-        <video
-          autoPlay={true}
-          className="wxc-remote-video"
-          muted={true}
-          playsInline={true}
-        />
-        <video
-          autoPlay={true}
-          className="wxc-remote-share"
-          muted={true}
-          playsInline={true}
-        />
-        <audio
-          autoPlay={true}
-        />
+        <div
+          className="wxc-remote-media remote-media-in-meeting remote-video-n-share"
+        >
+          <video
+            autoPlay={true}
+            className="wxc-remote-video"
+            muted={true}
+            playsInline={true}
+          />
+          <video
+            autoPlay={true}
+            className="wxc-remote-share"
+            muted={true}
+            playsInline={true}
+          />
+          <audio
+            autoPlay={true}
+          />
+        </div>
+        <div
+          className="wxc-local-media local-media-in-meeting"
+        >
+          <video
+            autoPlay={true}
+            playsInline={true}
+          />
+        </div>
       </div>
       <div
-        className="wxc-local-media local-media-in-meeting"
+        className="wxc-roster"
       >
-        <video
-          autoPlay={true}
-          playsInline={true}
-        />
+        <div
+          className="wxc-member"
+        >
+          <div
+            className="md-avatar md-avatar--medium"
+            title="Barbara German"
+          >
+            <span
+              className="md-avatar__letter"
+              style={
+                Object {
+                  "backgroundColor": "",
+                  "color": "",
+                }
+              }
+            >
+              BG
+            </span>
+            <img
+              alt="Barbara German"
+              className="md-avatar__img md-avatar__img--hidden"
+              draggable={false}
+              onError={[Function]}
+              onLoad={[Function]}
+              src="./images/barbara.png"
+            />
+          </div>
+          <div
+            className="member-name"
+          >
+            Barbara German
+          </div>
+        </div>
+        <div
+          className="wxc-member"
+        >
+          <div
+            className="md-avatar md-avatar--medium"
+            title="Giacomo Edwards"
+          >
+            <span
+              className="md-avatar__letter"
+              style={
+                Object {
+                  "backgroundColor": "",
+                  "color": "",
+                }
+              }
+            >
+              GE
+            </span>
+            <img
+              alt="Giacomo Edwards"
+              className="md-avatar__img md-avatar__img--hidden"
+              draggable={false}
+              onError={[Function]}
+              onLoad={[Function]}
+              src="./images/giacomo.png"
+            />
+          </div>
+          <div
+            className="member-name"
+          >
+            Giacomo Edwards
+          </div>
+        </div>
+        <div
+          className="wxc-member"
+        >
+          <div
+            className="md-avatar md-avatar--medium"
+            title="Brenda Song"
+          >
+            <span
+              className="md-avatar__letter"
+              style={
+                Object {
+                  "backgroundColor": "",
+                  "color": "",
+                }
+              }
+            >
+              BS
+            </span>
+            <img
+              alt="Brenda Song"
+              className="md-avatar__img md-avatar__img--hidden"
+              draggable={false}
+              onError={[Function]}
+              onLoad={[Function]}
+              src="./images/brenda.png"
+            />
+          </div>
+          <div
+            className="member-name"
+          >
+            Brenda Song
+          </div>
+        </div>
       </div>
     </div>
     <div
       className="wxc-meeting-controls meeting-controls-container"
     >
-      <button
-        alt="Mute"
-        aria-label="Mute"
-        aria-pressed={null}
-        className="md-button md-button--circle md-button--56"
-        data-md-event-key="md-button-0"
-        disabled={false}
-        id="md-button-0"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        style={
-          Object {
-            "style": Object {},
-          }
-        }
-        tabIndex={0}
-        type="button"
+      <div
+        className="meeting-controls-left"
+      />
+      <div
+        className="meeting-controls-center"
       >
-        <span
-          className="md-button__children"
+        <button
+          alt="Mute"
+          aria-label="Mute"
+          aria-pressed={null}
+          className="md-button md-button--circle md-button--56"
+          data-md-event-key="md-button-0"
+          disabled={false}
+          id="md-button-0"
+          onClick={[Function]}
+          onKeyDown={[Function]}
           style={
             Object {
-              "opacity": "1",
+              "style": Object {},
             }
           }
+          tabIndex={0}
+          type="button"
         >
-          <i
-            aria-label={null}
-            className="md-icon icon icon-microphone-muted_28"
+          <span
+            className="md-button__children"
             style={
               Object {
-                "fontSize": 28,
+                "opacity": "1",
               }
             }
-          />
-        </span>
-      </button>
-      <button
-        alt="Stop video"
-        aria-label="Stop video"
-        aria-pressed={null}
-        className="md-button md-button--circle md-button--56"
-        data-md-event-key="md-button-0"
-        disabled={false}
-        id="md-button-0"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        style={
-          Object {
-            "style": Object {},
-          }
-        }
-        tabIndex={0}
-        type="button"
-      >
-        <span
-          className="md-button__children"
+          >
+            <i
+              aria-label={null}
+              className="md-icon icon icon-microphone-muted_28"
+              style={
+                Object {
+                  "fontSize": 28,
+                }
+              }
+            />
+          </span>
+        </button>
+        <button
+          alt="Stop video"
+          aria-label="Stop video"
+          aria-pressed={null}
+          className="md-button md-button--circle md-button--56"
+          data-md-event-key="md-button-0"
+          disabled={false}
+          id="md-button-0"
+          onClick={[Function]}
+          onKeyDown={[Function]}
           style={
             Object {
-              "opacity": "1",
+              "style": Object {},
             }
           }
+          tabIndex={0}
+          type="button"
         >
-          <i
-            aria-label={null}
-            className="md-icon icon icon-camera-muted_28"
+          <span
+            className="md-button__children"
             style={
               Object {
-                "fontSize": 28,
+                "opacity": "1",
               }
             }
-          />
-        </span>
-      </button>
-      <button
-        alt="Stop Sharing"
-        aria-label="Stop Sharing"
-        aria-pressed={null}
-        className="md-button md-button--circle md-button--56 md-button--red"
-        data-md-event-key="md-button-0"
-        disabled={false}
-        id="md-button-0"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        style={
-          Object {
-            "style": Object {},
-          }
-        }
-        tabIndex={0}
-        type="button"
-      >
-        <span
-          className="md-button__children"
+          >
+            <i
+              aria-label={null}
+              className="md-icon icon icon-camera-muted_28"
+              style={
+                Object {
+                  "fontSize": 28,
+                }
+              }
+            />
+          </span>
+        </button>
+        <button
+          alt="Stop Sharing"
+          aria-label="Stop Sharing"
+          aria-pressed={null}
+          className="md-button md-button--circle md-button--56 md-button--red"
+          data-md-event-key="md-button-0"
+          disabled={false}
+          id="md-button-0"
+          onClick={[Function]}
+          onKeyDown={[Function]}
           style={
             Object {
-              "opacity": "1",
+              "style": Object {},
             }
           }
+          tabIndex={0}
+          type="button"
         >
-          <i
-            aria-label={null}
-            className="md-icon icon icon-share_28"
+          <span
+            className="md-button__children"
             style={
               Object {
-                "fontSize": 28,
+                "opacity": "1",
               }
             }
-          />
-        </span>
-      </button>
-      <button
-        alt="Leave"
-        aria-label="Leave"
-        aria-pressed={null}
-        className="md-button md-button--circle md-button--56 md-button--red"
-        data-md-event-key="md-button-0"
-        disabled={false}
-        id="md-button-0"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        style={
-          Object {
-            "style": Object {},
-          }
-        }
-        tabIndex={0}
-        type="button"
-      >
-        <span
-          className="md-button__children"
+          >
+            <i
+              aria-label={null}
+              className="md-icon icon icon-share_28"
+              style={
+                Object {
+                  "fontSize": 28,
+                }
+              }
+            />
+          </span>
+        </button>
+        <button
+          alt="Leave"
+          aria-label="Leave"
+          aria-pressed={null}
+          className="md-button md-button--circle md-button--56 md-button--red"
+          data-md-event-key="md-button-0"
+          disabled={false}
+          id="md-button-0"
+          onClick={[Function]}
+          onKeyDown={[Function]}
           style={
             Object {
-              "opacity": "1",
+              "style": Object {},
             }
           }
+          tabIndex={0}
+          type="button"
         >
-          <i
-            aria-label={null}
-            className="md-icon icon icon-cancel_28"
+          <span
+            className="md-button__children"
             style={
               Object {
-                "fontSize": 28,
+                "opacity": "1",
               }
             }
-          />
-        </span>
-      </button>
+          >
+            <i
+              aria-label={null}
+              className="md-icon icon icon-cancel_28"
+              style={
+                Object {
+                  "fontSize": 28,
+                }
+              }
+            />
+          </span>
+        </button>
+      </div>
+      <div
+        className="meeting-controls-right"
+      >
+        <button
+          alt=""
+          aria-labelledby=""
+          aria-pressed={null}
+          className="md-button md-button--circle md-button--56"
+          data-md-event-key="md-button-0"
+          disabled={false}
+          id="md-button-0"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          style={
+            Object {
+              "style": Object {},
+            }
+          }
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="md-button__children"
+            style={
+              Object {
+                "opacity": "1",
+              }
+            }
+          >
+            <i
+              aria-label={null}
+              className="md-icon icon icon-participant-list_24"
+              style={
+                Object {
+                  "fontSize": 24,
+                }
+              }
+            />
+          </span>
+        </button>
+      </div>
     </div>
   </div>,
   <video
@@ -301,110 +466,120 @@ Array [
     <div
       className="wxc-meeting-controls meeting-controls-container"
     >
-      <button
-        alt="Mute"
-        aria-label="Mute"
-        aria-pressed={null}
-        className="md-button md-button--circle md-button--56"
-        data-md-event-key="md-button-0"
-        disabled={false}
-        id="md-button-0"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        style={
-          Object {
-            "style": Object {},
-          }
-        }
-        tabIndex={0}
-        type="button"
+      <div
+        className="meeting-controls-left"
+      />
+      <div
+        className="meeting-controls-center"
       >
-        <span
-          className="md-button__children"
+        <button
+          alt="Mute"
+          aria-label="Mute"
+          aria-pressed={null}
+          className="md-button md-button--circle md-button--56"
+          data-md-event-key="md-button-0"
+          disabled={false}
+          id="md-button-0"
+          onClick={[Function]}
+          onKeyDown={[Function]}
           style={
             Object {
-              "opacity": "1",
+              "style": Object {},
             }
           }
+          tabIndex={0}
+          type="button"
         >
-          <i
-            aria-label={null}
-            className="md-icon icon icon-microphone-muted_28"
+          <span
+            className="md-button__children"
             style={
               Object {
-                "fontSize": 28,
+                "opacity": "1",
               }
             }
-          />
-        </span>
-      </button>
-      <button
-        alt="Stop video"
-        aria-label="Stop video"
-        aria-pressed={null}
-        className="md-button md-button--circle md-button--56"
-        data-md-event-key="md-button-0"
-        disabled={false}
-        id="md-button-0"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        style={
-          Object {
-            "style": Object {},
-          }
-        }
-        tabIndex={0}
-        type="button"
-      >
-        <span
-          className="md-button__children"
+          >
+            <i
+              aria-label={null}
+              className="md-icon icon icon-microphone-muted_28"
+              style={
+                Object {
+                  "fontSize": 28,
+                }
+              }
+            />
+          </span>
+        </button>
+        <button
+          alt="Stop video"
+          aria-label="Stop video"
+          aria-pressed={null}
+          className="md-button md-button--circle md-button--56"
+          data-md-event-key="md-button-0"
+          disabled={false}
+          id="md-button-0"
+          onClick={[Function]}
+          onKeyDown={[Function]}
           style={
             Object {
-              "opacity": "1",
+              "style": Object {},
             }
           }
+          tabIndex={0}
+          type="button"
         >
-          <i
-            aria-label={null}
-            className="md-icon icon icon-camera-muted_28"
+          <span
+            className="md-button__children"
             style={
               Object {
-                "fontSize": 28,
+                "opacity": "1",
               }
             }
-          />
-        </span>
-      </button>
-      <button
-        alt="Join meeting"
-        aria-label="Join meeting"
-        aria-pressed={null}
-        className="md-button md-button--52 md-button--green"
-        data-md-event-key="md-button-0"
-        data-md-keyboard-key="join-meeting"
-        disabled={false}
-        id="md-button-0"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        style={
-          Object {
-            "style": Object {},
-          }
-        }
-        tabIndex={0}
-        type="button"
-      >
-        <span
-          className="md-button__children"
+          >
+            <i
+              aria-label={null}
+              className="md-icon icon icon-camera-muted_28"
+              style={
+                Object {
+                  "fontSize": 28,
+                }
+              }
+            />
+          </span>
+        </button>
+        <button
+          alt="Join meeting"
+          aria-label="Join meeting"
+          aria-pressed={null}
+          className="md-button md-button--52 md-button--green"
+          data-md-event-key="md-button-0"
+          data-md-keyboard-key="join-meeting"
+          disabled={false}
+          id="md-button-0"
+          onClick={[Function]}
+          onKeyDown={[Function]}
           style={
             Object {
-              "opacity": "1",
+              "style": Object {},
             }
           }
+          tabIndex={0}
+          type="button"
         >
-          Join meeting
-        </span>
-      </button>
+          <span
+            className="md-button__children"
+            style={
+              Object {
+                "opacity": "1",
+              }
+            }
+          >
+            Join meeting
+          </span>
+        </button>
+      </div>
+      <div
+        className="meeting-controls-right"
+      />
     </div>
   </div>,
   <video
@@ -468,175 +643,264 @@ Array [
     className="wxc-meeting wxc-meeting-active"
   >
     <div
-      className="wxc-in-meeting"
+      className="meeting-body"
     >
       <div
-        className="wxc-remote-media remote-media-in-meeting"
+        className="wxc-in-meeting"
       >
-        <h4>
-          Waiting for others to join...
-        </h4>
+        <div
+          className="wxc-remote-media remote-media-in-meeting"
+        >
+          <h4>
+            Waiting for others to join...
+          </h4>
+        </div>
+        <div
+          className="wxc-local-media local-media-in-meeting"
+        >
+          <video
+            autoPlay={true}
+            playsInline={true}
+          />
+        </div>
       </div>
       <div
-        className="wxc-local-media local-media-in-meeting"
+        className="wxc-roster"
       >
-        <video
-          autoPlay={true}
-          playsInline={true}
-        />
+        <div
+          className="wxc-member"
+        >
+          <div
+            className="md-avatar md-avatar--medium"
+            title="Barbara German"
+          >
+            <span
+              className="md-avatar__letter"
+              style={
+                Object {
+                  "backgroundColor": "",
+                  "color": "",
+                }
+              }
+            >
+              BG
+            </span>
+            <img
+              alt="Barbara German"
+              className="md-avatar__img md-avatar__img--hidden"
+              draggable={false}
+              onError={[Function]}
+              onLoad={[Function]}
+              src="./images/barbara.png"
+            />
+          </div>
+          <div
+            className="member-name"
+          >
+            Barbara German
+          </div>
+        </div>
       </div>
     </div>
     <div
       className="wxc-meeting-controls meeting-controls-container"
     >
-      <button
-        alt="Mute"
-        aria-label="Mute"
-        aria-pressed={null}
-        className="md-button md-button--circle md-button--56"
-        data-md-event-key="md-button-0"
-        disabled={false}
-        id="md-button-0"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        style={
-          Object {
-            "style": Object {},
-          }
-        }
-        tabIndex={0}
-        type="button"
+      <div
+        className="meeting-controls-left"
+      />
+      <div
+        className="meeting-controls-center"
       >
-        <span
-          className="md-button__children"
+        <button
+          alt="Mute"
+          aria-label="Mute"
+          aria-pressed={null}
+          className="md-button md-button--circle md-button--56"
+          data-md-event-key="md-button-0"
+          disabled={false}
+          id="md-button-0"
+          onClick={[Function]}
+          onKeyDown={[Function]}
           style={
             Object {
-              "opacity": "1",
+              "style": Object {},
             }
           }
+          tabIndex={0}
+          type="button"
         >
-          <i
-            aria-label={null}
-            className="md-icon icon icon-microphone-muted_28"
+          <span
+            className="md-button__children"
             style={
               Object {
-                "fontSize": 28,
+                "opacity": "1",
               }
             }
-          />
-        </span>
-      </button>
-      <button
-        alt="Stop video"
-        aria-label="Stop video"
-        aria-pressed={null}
-        className="md-button md-button--circle md-button--56"
-        data-md-event-key="md-button-0"
-        disabled={false}
-        id="md-button-0"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        style={
-          Object {
-            "style": Object {},
-          }
-        }
-        tabIndex={0}
-        type="button"
-      >
-        <span
-          className="md-button__children"
+          >
+            <i
+              aria-label={null}
+              className="md-icon icon icon-microphone-muted_28"
+              style={
+                Object {
+                  "fontSize": 28,
+                }
+              }
+            />
+          </span>
+        </button>
+        <button
+          alt="Stop video"
+          aria-label="Stop video"
+          aria-pressed={null}
+          className="md-button md-button--circle md-button--56"
+          data-md-event-key="md-button-0"
+          disabled={false}
+          id="md-button-0"
+          onClick={[Function]}
+          onKeyDown={[Function]}
           style={
             Object {
-              "opacity": "1",
+              "style": Object {},
             }
           }
+          tabIndex={0}
+          type="button"
         >
-          <i
-            aria-label={null}
-            className="md-icon icon icon-camera-muted_28"
+          <span
+            className="md-button__children"
             style={
               Object {
-                "fontSize": 28,
+                "opacity": "1",
               }
             }
-          />
-        </span>
-      </button>
-      <button
-        alt="Start Sharing"
-        aria-label="Start Sharing"
-        aria-pressed={null}
-        className="md-button md-button--circle md-button--56"
-        data-md-event-key="md-button-0"
-        disabled={false}
-        id="md-button-0"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        style={
-          Object {
-            "style": Object {},
-          }
-        }
-        tabIndex={0}
-        type="button"
-      >
-        <span
-          className="md-button__children"
+          >
+            <i
+              aria-label={null}
+              className="md-icon icon icon-camera-muted_28"
+              style={
+                Object {
+                  "fontSize": 28,
+                }
+              }
+            />
+          </span>
+        </button>
+        <button
+          alt="Start Sharing"
+          aria-label="Start Sharing"
+          aria-pressed={null}
+          className="md-button md-button--circle md-button--56"
+          data-md-event-key="md-button-0"
+          disabled={false}
+          id="md-button-0"
+          onClick={[Function]}
+          onKeyDown={[Function]}
           style={
             Object {
-              "opacity": "1",
+              "style": Object {},
             }
           }
+          tabIndex={0}
+          type="button"
         >
-          <i
-            aria-label={null}
-            className="md-icon icon icon-share_28"
+          <span
+            className="md-button__children"
             style={
               Object {
-                "fontSize": 28,
+                "opacity": "1",
               }
             }
-          />
-        </span>
-      </button>
-      <button
-        alt="Leave"
-        aria-label="Leave"
-        aria-pressed={null}
-        className="md-button md-button--circle md-button--56 md-button--red"
-        data-md-event-key="md-button-0"
-        disabled={false}
-        id="md-button-0"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        style={
-          Object {
-            "style": Object {},
-          }
-        }
-        tabIndex={0}
-        type="button"
-      >
-        <span
-          className="md-button__children"
+          >
+            <i
+              aria-label={null}
+              className="md-icon icon icon-share_28"
+              style={
+                Object {
+                  "fontSize": 28,
+                }
+              }
+            />
+          </span>
+        </button>
+        <button
+          alt="Leave"
+          aria-label="Leave"
+          aria-pressed={null}
+          className="md-button md-button--circle md-button--56 md-button--red"
+          data-md-event-key="md-button-0"
+          disabled={false}
+          id="md-button-0"
+          onClick={[Function]}
+          onKeyDown={[Function]}
           style={
             Object {
-              "opacity": "1",
+              "style": Object {},
             }
           }
+          tabIndex={0}
+          type="button"
         >
-          <i
-            aria-label={null}
-            className="md-icon icon icon-cancel_28"
+          <span
+            className="md-button__children"
             style={
               Object {
-                "fontSize": 28,
+                "opacity": "1",
               }
             }
-          />
-        </span>
-      </button>
+          >
+            <i
+              aria-label={null}
+              className="md-icon icon icon-cancel_28"
+              style={
+                Object {
+                  "fontSize": 28,
+                }
+              }
+            />
+          </span>
+        </button>
+      </div>
+      <div
+        className="meeting-controls-right"
+      >
+        <button
+          alt=""
+          aria-labelledby=""
+          aria-pressed={null}
+          className="md-button md-button--circle md-button--56"
+          data-md-event-key="md-button-0"
+          disabled={false}
+          id="md-button-0"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          style={
+            Object {
+              "style": Object {},
+            }
+          }
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="md-button__children"
+            style={
+              Object {
+                "opacity": "1",
+              }
+            }
+          >
+            <i
+              aria-label={null}
+              className="md-icon icon icon-participant-list_24"
+              style={
+                Object {
+                  "fontSize": 24,
+                }
+              }
+            />
+          </span>
+        </button>
+      </div>
     </div>
   </div>,
   <video
