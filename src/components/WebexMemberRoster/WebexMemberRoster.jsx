@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 
 import WebexMember from '../WebexMember/WebexMember';
-import useMemberships from '../hooks/useMemberships';
+import useMembers from '../hooks/useMembers';
 
 // TODO: Figure out how to import JS Doc definitions and remove duplication.
 /**
@@ -23,7 +23,7 @@ import useMemberships from '../hooks/useMemberships';
  * @returns {object} JSX of the component
  */
 export default function WebexMemberRoster({destinationID, destinationType}) {
-  const memberships = useMemberships(destinationID, destinationType);
+  const memberships = useMembers(destinationID, destinationType);
   const members = memberships.map(
     (member) => <WebexMember key={member.personID} personID={member.personID} />,
   );
