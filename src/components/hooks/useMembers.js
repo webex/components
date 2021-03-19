@@ -34,8 +34,8 @@ export default function useMembers(destinationID, destinationType) {
       // eslint-disable-next-line no-console
       console.error(error.message);
     };
-    const onMembers = (data) => {
-      setMembers([...data.members]);
+    const onMembers = (updatedMembers) => {
+      setMembers([...updatedMembers]);
     };
 
     const subscription = membershipsAdapter
