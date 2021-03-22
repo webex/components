@@ -1,3 +1,10 @@
+# [1.46.0](https://github.com/webex/components/compare/v1.45.6...v1.46.0) (2021-03-22)
+
+
+### Features
+
+* **WebexMember:** display icon when member is muted ([2c760c4](https://github.com/webex/components/commit/2c760c42bae29021678d76aa93acc09d03040d8a))
+
 ## [1.45.6](https://github.com/webex/components/compare/v1.45.5...v1.45.6) (2021-01-21)
 
 
