@@ -5,6 +5,7 @@ import {usePerson} from '../hooks';
 import WebexAvatar from '../WebexAvatar/WebexAvatar';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 
+
 /**
  * Displays a webex meeting member.
  *
