@@ -8,8 +8,41 @@ Array [
     <h4
       className="section-title"
     >
-      In meeting
+      Not in meeting
     </h4>
+    <div
+      className="wxc-member"
+    >
+      <div
+        className="md-avatar md-avatar--medium"
+        title="Barbara German"
+      >
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
+          }
+        >
+          BG
+        </span>
+        <img
+          alt="Barbara German"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/barbara.png"
+        />
+      </div>
+      <div
+        className="member-name"
+      >
+        Barbara German
+      </div>
+    </div>
     <div
       className="wxc-member"
     >
@@ -74,44 +107,6 @@ Array [
         className="member-name"
       >
         Brenda Song
-      </div>
-    </div>
-    <h4
-      className="section-title"
-    >
-      Not in meeting
-    </h4>
-    <div
-      className="wxc-member"
-    >
-      <div
-        className="md-avatar md-avatar--medium"
-        title="Barbara German"
-      >
-        <span
-          className="md-avatar__letter"
-          style={
-            Object {
-              "backgroundColor": "",
-              "color": "",
-            }
-          }
-        >
-          BG
-        </span>
-        <img
-          alt="Barbara German"
-          className="md-avatar__img md-avatar__img--hidden"
-          draggable={false}
-          onError={[Function]}
-          onLoad={[Function]}
-          src="./images/barbara.png"
-        />
-      </div>
-      <div
-        className="member-name"
-      >
-        Barbara German
       </div>
     </div>
   </div>,
