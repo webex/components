@@ -1,7 +1,7 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-member-roster {
-    .section-title {
-      @include body-fonts;
-      color: $md-gray-40;
-      border-bottom: 0.1rem solid $md-gray-30;
-    }
+  .section-title {
+    @include body-fonts;
+    color: $md-gray-40;
+    border-bottom: 0.1rem solid $md-gray-30;
   }
+}

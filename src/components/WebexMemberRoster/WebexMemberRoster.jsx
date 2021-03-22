@@ -25,27 +25,27 @@ import useMemberships from '../hooks/useMemberships';
 export default function WebexMemberRoster({destinationID, destinationType}) {
   const members = useMemberships(destinationID, destinationType);
 
-  const renderMembers = (members) => members.map(
-    (member) => <WebexMember key={member.personID} personID={member.personID} />,
+  const renderMembers = (data) => data.map(
+    ({personID}) => <WebexMember key={personID} personID={personID} />,
   );
 
-  const renderSection = (members, title) => members.length > 0 && (
+  const renderSection = (data, title) => data.length > 0 && (
     <>
       <h4 className="section-title">{title}</h4>
-      {renderMembers(members)}
+      {renderMembers(data)}
     </>
-  )
+  );
 
   return (
     <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-member-roster`}>
       {destinationType !== DestinationType.MEETING
-      ? renderMembers(members) 
-      : (
-        <>
-          {renderSection(members.filter(member => member.inMeeting), 'In meeting')}
-          {renderSection(members.filter(member => !member.inMeeting), 'Not in meeting')}
-        </>
-      )}
+        ? renderMembers(members)
+        : (
+          <>
+            {renderSection(members.filter((member) => member.inMeeting), 'In meeting')}
+            {renderSection(members.filter((member) => !member.inMeeting), 'Not in meeting')}
+          </>
+        )}
     </div>
   );
 }
