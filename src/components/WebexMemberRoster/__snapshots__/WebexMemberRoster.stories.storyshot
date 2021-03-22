@@ -1,9 +1,137 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Platform/Webex Member Roster Meeting 1`] = `
+Array [
+  <div
+    className="wxc-member-roster"
+  >
+    <h4
+      className="section-title"
+    >
+      In meeting
+    </h4>
+    <div
+      className="wxc-member"
+    >
+      <div
+        className="md-avatar md-avatar--medium"
+        title="Giacomo Edwards"
+      >
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
+          }
+        >
+          GE
+        </span>
+        <img
+          alt="Giacomo Edwards"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/giacomo.png"
+        />
+      </div>
+      <div
+        className="member-name"
+      >
+        Giacomo Edwards
+      </div>
+    </div>
+    <div
+      className="wxc-member"
+    >
+      <div
+        className="md-avatar md-avatar--medium"
+        title="Brenda Song"
+      >
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
+          }
+        >
+          BS
+        </span>
+        <img
+          alt="Brenda Song"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/brenda.png"
+        />
+      </div>
+      <div
+        className="member-name"
+      >
+        Brenda Song
+      </div>
+    </div>
+    <h4
+      className="section-title"
+    >
+      Not in meeting
+    </h4>
+    <div
+      className="wxc-member"
+    >
+      <div
+        className="md-avatar md-avatar--medium"
+        title="Barbara German"
+      >
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
+          }
+        >
+          BG
+        </span>
+        <img
+          alt="Barbara German"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/barbara.png"
+        />
+      </div>
+      <div
+        className="member-name"
+      >
+        Barbara German
+      </div>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
+`;
+
 exports[`Storyshots Platform/Webex Member Roster Space 1`] = `
 Array [
   <div
-    className="wxc-roster"
+    className="wxc-member-roster"
   >
     <div
       className="wxc-member"
