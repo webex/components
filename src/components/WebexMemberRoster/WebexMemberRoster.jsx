@@ -4,7 +4,7 @@ import {DestinationType} from '@webex/component-adapter-interfaces';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 
 import WebexMember from '../WebexMember/WebexMember';
-import useMemberships from '../hooks/useMemberships';
+import useMembers from '../hooks/useMembers';
 
 // TODO: Figure out how to import JS Doc definitions and remove duplication.
 /**
@@ -23,7 +23,7 @@ import useMemberships from '../hooks/useMemberships';
  * @returns {object} JSX of the component
  */
 export default function WebexMemberRoster({destinationID, destinationType}) {
-  const members = useMemberships(destinationID, destinationType);
+  const members = useMembers(destinationID, destinationType);
 
   const renderMembers = (data) => data.map(
     ({personID}) => (
@@ -58,6 +58,6 @@ export default function WebexMemberRoster({destinationID, destinationType}) {
 }
 
 WebexMemberRoster.propTypes = {
-  destinationID: PropTypes.string.isRequired,
   destinationType: PropTypes.string.isRequired,
+  destinationID: PropTypes.string.isRequired,
 };

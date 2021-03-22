@@ -25,10 +25,10 @@ describe('Membership JSON Adapter', () => {
       expect(isObservable(membershipJSONAdapter.getMembersFromDestination())).toBeTruthy();
     });
 
-    test('emits a Membership object on subscription', (done) => {
+    test('emits a list of Member objects on subscription', (done) => {
       membershipJSONAdapter.getMembersFromDestination(destinationID, destinationType)
-        .subscribe((membership) => {
-          expect(membership).toMatchObject(testMembership);
+        .subscribe((members) => {
+          expect(members).toMatchObject(testMembership.members);
           done();
         });
     });
