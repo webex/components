@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import {DestinationType} from '@webex/component-adapter-interfaces';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 
 import WebexMember from '../WebexMember/WebexMember';
@@ -23,19 +23,38 @@ import useMembers from '../hooks/useMembers';
  * @returns {object} JSX of the component
  */
 export default function WebexMemberRoster({destinationID, destinationType}) {
-  const memberships = useMembers(destinationID, destinationType);
-  const members = memberships.map(
-    (member) => (
+  const members = useMembers(destinationID, destinationType);
+
+  const renderMembers = (data) => data.map(
+    ({personID}) => (
       <WebexMember
         destinationType={destinationType}
         destinationID={destinationID}
-        personID={member.personID}
-        key={member.personID}
+        personID={personID}
+        key={personID}
       />
     ),
   );
 
-  return <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-roster`}>{members}</div>;
+  const renderSection = (data, title) => data.length > 0 && (
+    <>
+      <h4 className="section-title">{title}</h4>
+      {renderMembers(data)}
+    </>
+  );
+
+  return (
+    <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-member-roster`}>
+      {destinationType !== DestinationType.MEETING
+        ? renderMembers(members)
+        : (
+          <>
+            {renderSection(members.filter((member) => member.inMeeting), 'In meeting')}
+            {renderSection(members.filter((member) => !member.inMeeting), 'Not in meeting')}
+          </>
+        )}
+    </div>
+  );
 }
 
 WebexMemberRoster.propTypes = {
