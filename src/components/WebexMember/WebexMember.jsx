@@ -16,6 +16,7 @@ import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 export default function WebexMember({personID, displayStatus}) {
   const {firstName, lastName} = usePerson(personID);
 
+  
   return (
     <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-member`}>
       <WebexAvatar personID={personID} displayStatus={displayStatus} />
