@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {usePerson, useMemberships} from '../hooks';
+import {usePerson, useMembers} from '../hooks';
 import WebexAvatar from '../WebexAvatar/WebexAvatar';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 
@@ -22,7 +22,7 @@ export default function WebexMember({
   displayStatus,
 }) {
   const {firstName, lastName} = usePerson(personID);
-  const members = useMemberships(destinationID, destinationType);
+  const members = useMembers(destinationID, destinationType);
   const member = members
     .find((itemMember) => itemMember.personID === personID);
 

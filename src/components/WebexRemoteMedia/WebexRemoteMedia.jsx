@@ -9,7 +9,7 @@ import {TABLET, DESKTOP, DESKTOP_LARGE} from '../breakpoints';
 import {
   useElementDimensions,
   useMeeting,
-  useMemberships,
+  useMembers,
   useStream,
 } from '../hooks';
 
@@ -30,7 +30,7 @@ export default function WebexRemoteMedia({className, meetingID}) {
     remoteShare,
     error,
   } = useMeeting(meetingID);
-  const members = useMemberships(meetingID, 'meeting');
+  const members = useMembers(meetingID, 'meeting');
   const audioRef = useStream(remoteAudio);
   const videoRef = useStream(remoteVideo);
   const shareRef = useStream(remoteShare);
