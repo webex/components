@@ -23,7 +23,7 @@ import {AdapterContext} from './contexts';
  * @param {DestinationType} destinationType Type of destination of the membership
  * @returns {Array.<Person>} List of the person IDs from the participants
  */
-export default function useMemberships(destinationID, destinationType) {
+export default function useMembers(destinationID, destinationType) {
   const [members, setMembers] = useState([]);
   const {membershipsAdapter} = useContext(AdapterContext);
 
