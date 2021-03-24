@@ -5,7 +5,13 @@ exports[`Webex Meeting Controls snapshot matches snapshot 1`] = `
   className="wxc-meeting-controls"
 >
   <div
-    id="test"
+    className="control-left"
+  />
+  <div
+    className="control-center"
+  />
+  <div
+    className="control-right"
   />
 </div>
 `;
@@ -15,7 +21,13 @@ exports[`Webex Meeting Controls snapshot matches snapshot with custom CSS class 
   className="wxc-meeting-controls my-custom-css-class"
 >
   <div
-    id="test"
+    className="control-left"
+  />
+  <div
+    className="control-center"
+  />
+  <div
+    className="control-right"
   />
 </div>
 `;

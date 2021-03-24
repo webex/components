@@ -5,43 +5,53 @@ Array [
   <div
     className="wxc-meeting-controls"
   >
-    <button
-      alt="Mute"
-      aria-label="Mute"
-      aria-pressed={null}
-      className="md-button md-button--circle md-button--56"
-      data-md-event-key="md-button-0"
-      disabled={false}
-      id="md-button-0"
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      style={
-        Object {
-          "style": Object {},
-        }
-      }
-      tabIndex={0}
-      type="button"
+    <div
+      className="control-left"
+    />
+    <div
+      className="control-center"
     >
-      <span
-        className="md-button__children"
+      <button
+        alt="Mute"
+        aria-label="Mute"
+        aria-pressed={null}
+        className="md-button md-button--circle md-button--56"
+        data-md-event-key="md-button-0"
+        disabled={false}
+        id="md-button-0"
+        onClick={[Function]}
+        onKeyDown={[Function]}
         style={
           Object {
-            "opacity": "1",
+            "style": Object {},
           }
         }
+        tabIndex={0}
+        type="button"
       >
-        <i
-          aria-label={null}
-          className="md-icon icon icon-microphone-muted_28"
+        <span
+          className="md-button__children"
           style={
             Object {
-              "fontSize": 28,
+              "opacity": "1",
             }
           }
-        />
-      </span>
-    </button>
+        >
+          <i
+            aria-label={null}
+            className="md-icon icon icon-microphone-muted_28"
+            style={
+              Object {
+                "fontSize": 28,
+              }
+            }
+          />
+        </span>
+      </button>
+    </div>
+    <div
+      className="control-right"
+    />
   </div>,
   <video
     autoPlay={true}
@@ -61,43 +71,53 @@ Array [
   <div
     className="wxc-meeting-controls"
   >
-    <button
-      alt="Mute disabled"
-      aria-label="Mute disabled"
-      aria-pressed={null}
-      className="md-button md-button--circle md-button--56"
-      data-md-event-key="md-button-0"
-      disabled={true}
-      id="md-button-0"
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      style={
-        Object {
-          "style": Object {},
-        }
-      }
-      tabIndex={null}
-      type="button"
+    <div
+      className="control-left"
+    />
+    <div
+      className="control-center"
     >
-      <span
-        className="md-button__children"
+      <button
+        alt="Mute disabled"
+        aria-label="Mute disabled"
+        aria-pressed={null}
+        className="md-button md-button--circle md-button--56"
+        data-md-event-key="md-button-0"
+        disabled={true}
+        id="md-button-0"
+        onClick={[Function]}
+        onKeyDown={[Function]}
         style={
           Object {
-            "opacity": "1",
+            "style": Object {},
           }
         }
+        tabIndex={null}
+        type="button"
       >
-        <i
-          aria-label={null}
-          className="md-icon icon icon-microphone_28"
+        <span
+          className="md-button__children"
           style={
             Object {
-              "fontSize": 28,
+              "opacity": "1",
             }
           }
-        />
-      </span>
-    </button>
+        >
+          <i
+            aria-label={null}
+            className="md-icon icon icon-microphone_28"
+            style={
+              Object {
+                "fontSize": 28,
+              }
+            }
+          />
+        </span>
+      </button>
+    </div>
+    <div
+      className="control-right"
+    />
   </div>,
   <video
     autoPlay={true}
@@ -117,36 +137,46 @@ Array [
   <div
     className="wxc-meeting-controls"
   >
-    <button
-      alt="Join meeting"
-      aria-label="Join meeting"
-      aria-pressed={null}
-      className="md-button md-button--52 md-button--green"
-      data-md-event-key="md-button-0"
-      data-md-keyboard-key="join-meeting"
-      disabled={true}
-      id="md-button-0"
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      style={
-        Object {
-          "style": Object {},
-        }
-      }
-      tabIndex={null}
-      type="button"
+    <div
+      className="control-left"
+    />
+    <div
+      className="control-center"
     >
-      <span
-        className="md-button__children"
+      <button
+        alt="Join meeting"
+        aria-label="Join meeting"
+        aria-pressed={null}
+        className="md-button md-button--52 md-button--green"
+        data-md-event-key="md-button-0"
+        data-md-keyboard-key="join-meeting"
+        disabled={true}
+        id="md-button-0"
+        onClick={[Function]}
+        onKeyDown={[Function]}
         style={
           Object {
-            "opacity": "1",
+            "style": Object {},
           }
         }
+        tabIndex={null}
+        type="button"
       >
-        Join meeting
-      </span>
-    </button>
+        <span
+          className="md-button__children"
+          style={
+            Object {
+              "opacity": "1",
+            }
+          }
+        >
+          Join meeting
+        </span>
+      </button>
+    </div>
+    <div
+      className="control-right"
+    />
   </div>,
   <video
     autoPlay={true}
@@ -166,43 +196,53 @@ Array [
   <div
     className="wxc-meeting-controls"
   >
-    <button
-      alt="Mute"
-      aria-label="Mute"
-      aria-pressed={null}
-      className="md-button md-button--circle md-button--56"
-      data-md-event-key="md-button-0"
-      disabled={false}
-      id="md-button-0"
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      style={
-        Object {
-          "style": Object {},
-        }
-      }
-      tabIndex={0}
-      type="button"
+    <div
+      className="control-left"
+    />
+    <div
+      className="control-center"
     >
-      <span
-        className="md-button__children"
+      <button
+        alt="Mute"
+        aria-label="Mute"
+        aria-pressed={null}
+        className="md-button md-button--circle md-button--56"
+        data-md-event-key="md-button-0"
+        disabled={false}
+        id="md-button-0"
+        onClick={[Function]}
+        onKeyDown={[Function]}
         style={
           Object {
-            "opacity": "1",
+            "style": Object {},
           }
         }
+        tabIndex={0}
+        type="button"
       >
-        <i
-          aria-label={null}
-          className="md-icon icon icon-microphone-muted_28"
+        <span
+          className="md-button__children"
           style={
             Object {
-              "fontSize": 28,
+              "opacity": "1",
             }
           }
-        />
-      </span>
-    </button>
+        >
+          <i
+            aria-label={null}
+            className="md-icon icon icon-microphone-muted_28"
+            style={
+              Object {
+                "fontSize": 28,
+              }
+            }
+          />
+        </span>
+      </button>
+    </div>
+    <div
+      className="control-right"
+    />
   </div>,
   <video
     autoPlay={true}
@@ -222,36 +262,46 @@ Array [
   <div
     className="wxc-meeting-controls"
   >
-    <button
-      alt="Join meeting"
-      aria-label="Join meeting"
-      aria-pressed={null}
-      className="md-button md-button--52 md-button--green"
-      data-md-event-key="md-button-0"
-      data-md-keyboard-key="join-meeting"
-      disabled={false}
-      id="md-button-0"
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      style={
-        Object {
-          "style": Object {},
-        }
-      }
-      tabIndex={0}
-      type="button"
+    <div
+      className="control-left"
+    />
+    <div
+      className="control-center"
     >
-      <span
-        className="md-button__children"
+      <button
+        alt="Join meeting"
+        aria-label="Join meeting"
+        aria-pressed={null}
+        className="md-button md-button--52 md-button--green"
+        data-md-event-key="md-button-0"
+        data-md-keyboard-key="join-meeting"
+        disabled={false}
+        id="md-button-0"
+        onClick={[Function]}
+        onKeyDown={[Function]}
         style={
           Object {
-            "opacity": "1",
+            "style": Object {},
           }
         }
+        tabIndex={0}
+        type="button"
       >
-        Join meeting
-      </span>
-    </button>
+        <span
+          className="md-button__children"
+          style={
+            Object {
+              "opacity": "1",
+            }
+          }
+        >
+          Join meeting
+        </span>
+      </button>
+    </div>
+    <div
+      className="control-right"
+    />
   </div>,
   <video
     autoPlay={true}

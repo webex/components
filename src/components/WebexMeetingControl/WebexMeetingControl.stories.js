@@ -5,7 +5,7 @@ import WebexMeetingControls from './WebexMeetingControls';
 export default {
   title: 'Meetings/Webex Meeting Control',
   component: WebexMeetingControl,
-  decorators: [(Story) => <WebexMeetingControls meetingID="meeting1"><Story /></WebexMeetingControls>],
+  decorators: [(Story) => <WebexMeetingControls meetingID="meeting1" centerControls={[<Story />]} />],
 };
 
 const Template = (args) => <WebexMeetingControl {...args} />;

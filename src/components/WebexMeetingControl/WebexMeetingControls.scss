@@ -2,8 +2,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 
   > * {
     margin: 0.3125rem;
+  }
+  .control-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .control-right {
+    @extend .control-center;
+    position: absolute;
+    right: 0.625rem;
+    top: 0;
+  }
+
+  .control-left {
+    @extend .control-center;
+    position: absolute;
+    left: 0.625rem;
+    top: 0;
   }
 }

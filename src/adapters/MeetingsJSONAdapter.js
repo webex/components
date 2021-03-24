@@ -9,6 +9,7 @@ import {MeetingsAdapter, MeetingControlState} from '@webex/component-adapter-int
 // Meeting control names
 export const MUTE_AUDIO_CONTROL = 'mute-audio';
 export const MUTE_VIDEO_CONTROL = 'mute-video';
+export const SHOW_PARTICIPANTS = 'participant-list';
 export const SHARE_CONTROL = 'share-screen';
 export const JOIN_CONTROL = 'join-meeting';
 export const LEAVE_CONTROL = 'leave-meeting';
@@ -85,6 +86,12 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       ID: MUTE_AUDIO_CONTROL,
       action: this.toggleMuteAudio.bind(this),
       display: this.muteAudioControl.bind(this),
+    };
+
+    this.meetingControls[SHOW_PARTICIPANTS] = {
+      ID: SHOW_PARTICIPANTS,
+      action: this.toggleParticipantList.bind(this),
+      display: this.participantList.bind(this),
     };
 
     this.meetingControls[MUTE_VIDEO_CONTROL] = {
@@ -348,6 +355,20 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   }
 
   /**
+   * Toggle participant list.
+   * Used by "participant-list" meeting control.
+   *
+   * @param {string} ID  ID of the meeting for which toggle participant list
+   * @private
+   */
+  async toggleParticipantList(ID) {
+    if (this.datasource[ID]) {
+      // const meeting = this.datasource[ID];
+      // TODO: implement event
+    }
+  }
+
+  /**
    * Toggles muting the local audio media stream track.
    * Used by "mute-video" meeting control.
    *
@@ -404,6 +425,41 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
     const muteEvent$ = fromEvent(document, MUTE_AUDIO_CONTROL).pipe(
       filter((event) => event.detail.ID === ID),
       map((event) => (event.detail.localAudio ? unmuted : muted)),
+    );
+
+    return concat(default$, muteEvent$);
+  }
+
+  participantList(ID) {
+    const show = {
+      ID: SHOW_PARTICIPANTS,
+      icon: 'participant-list',
+      tooltip: 'Show',
+      state: MeetingControlState.INACTIVE,
+    };
+
+    const hide = {
+      ID: SHOW_PARTICIPANTS,
+      icon: 'participant-list',
+      tooltip: 'Hide',
+      state: MeetingControlState.ACTIVE,
+    };
+
+    const default$ = Observable.create((observer) => {
+      const meeting = this.datasource[ID];
+
+      if (meeting) {
+        observer.next(meeting.localAudio ? show : hide);
+      } else {
+        observer.error(new Error(`Could not find meeting with ID "${ID}"`));
+      }
+
+      observer.complete();
+    });
+
+    const muteEvent$ = fromEvent(document, MUTE_AUDIO_CONTROL).pipe(
+      filter((event) => event.detail.ID === ID),
+      map((event) => (event.detail.localAudio ? show : hide)),
     );
 
     return concat(default$, muteEvent$);

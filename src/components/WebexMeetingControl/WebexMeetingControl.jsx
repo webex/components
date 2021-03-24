@@ -13,6 +13,7 @@ import {useMeetingControl} from '../hooks';
  * @returns {object} JSX of the component
  */
 export default function WebexMeetingControl({type}) {
+  console.log('BUTTON');
   const [action, display] = useMeetingControl(type);
   const {icon, text, tooltip} = display;
   const isDisabled = display.state === MeetingControlState.DISABLED;
@@ -30,7 +31,6 @@ export default function WebexMeetingControl({type}) {
       </Button>
     );
   }
-
   return button;
 }
 

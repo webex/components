@@ -15,11 +15,12 @@ import {useMeetingDestination} from '../hooks';
  *
  * @param {string} props.meetingDestination  ID of the virtual meeting location
  * @param {Array} [props.controls]  Array of control names to display
- * @returns {Object} JSX of the component
+ * @returns {object} JSX of the component
  */
 export default function WebexMeeting({meetingDestination, controls}) {
   const {ID, remoteVideo} = useMeetingDestination(meetingDestination);
   const isActive = remoteVideo !== null;
+  const activeControls = controls(isActive);
 
   const classBaseName = `${WEBEX_COMPONENTS_CLASS_PREFIX}-meeting`;
   const mainClasses = {
@@ -27,7 +28,15 @@ export default function WebexMeeting({meetingDestination, controls}) {
     [`${classBaseName}-active`]: ID && isActive,
   };
 
-  const meetingControls = controls(isActive).map(
+  const centerMeetingControls = (activeControls.center || []).map(
+    (key) => <WebexMeetingControl key={key} type={key} />,
+  );
+
+  const rightMeetingControls = (activeControls.right || []).map(
+    (key) => <WebexMeetingControl key={key} type={key} />,
+  );
+
+  const leftMeetingControls = (activeControls.left || []).map(
     (key) => <WebexMeetingControl key={key} type={key} />,
   );
 
@@ -45,9 +54,13 @@ export default function WebexMeeting({meetingDestination, controls}) {
         {isActive
           ? <WebexInMeeting meetingID={ID} />
           : <WebexInterstitialMeeting meetingID={ID} />}
-        <WebexMeetingControls className="meeting-controls-container" meetingID={ID}>
-          {meetingControls}
-        </WebexMeetingControls>
+        <WebexMeetingControls
+          className="meeting-controls-container"
+          leftControls={leftMeetingControls}
+          centerControls={centerMeetingControls}
+          rightControls={rightMeetingControls}
+          meetingID={ID}
+        />
       </>
     );
   }
@@ -71,9 +84,15 @@ WebexMeeting.defaultProps = {
    *
    * @param {boolean} isActive  Whether or not the meeting is active
    */
-  // eslint-disable-next-line no-confusing-arrow
-  controls: (isActive) =>
-    isActive
-      ? ['mute-audio', 'mute-video', 'share-screen', 'leave-meeting']
-      : ['mute-audio', 'mute-video', 'join-meeting'],
+  controls: (isActive) => (isActive
+    ? {
+      center: ['mute-audio', 'mute-video', 'share-screen', 'leave-meeting'],
+      right: ['participant-list'],
+      left: [],
+    }
+    : {
+      center: ['mute-audio', 'mute-video', 'join-meeting'],
+      right: ['participant-list'],
+      left: [],
+    }),
 };

@@ -12,7 +12,11 @@ import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
  * @param {object} props
  * @returns {object} JSX of the component
  */
-export default function WebexMeetingControls({children, className, meetingID}) {
+export default function WebexMeetingControls(props) {
+  const {
+    className, meetingID, centerControls, rightControls, leftControls,
+  } = props;
+
   const mainClasses = {
     [`${WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-controls`]: true,
     [className]: !!className,
@@ -20,17 +24,26 @@ export default function WebexMeetingControls({children, className, meetingID}) {
 
   return (
     <MeetingContext.Provider value={meetingID}>
-      <div className={classNames(mainClasses)}>{children}</div>
+      <div className={classNames(mainClasses)}>
+        <div className="control-left">{leftControls}</div>
+        <div className="control-center">{centerControls}</div>
+        <div className="control-right">{rightControls}</div>
+      </div>
     </MeetingContext.Provider>
   );
 }
 
 WebexMeetingControls.propTypes = {
-  children: PropTypes.node.isRequired,
+  centerControls: PropTypes.node,
+  rightControls: PropTypes.node,
+  leftControls: PropTypes.node,
   className: PropTypes.string,
   meetingID: PropTypes.string.isRequired,
 };
 
 WebexMeetingControls.defaultProps = {
   className: '',
+  centerControls: null,
+  rightControls: null,
+  leftControls: null,
 };
