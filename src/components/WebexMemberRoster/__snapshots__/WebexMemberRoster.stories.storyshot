@@ -15,7 +15,7 @@ Array [
     >
       <div
         className="md-avatar md-avatar--medium"
-        title="Giacomo Edwards"
+        title="Barbara German"
       >
         <span
           className="md-avatar__letter"
@@ -26,28 +26,28 @@ Array [
             }
           }
         >
-          GE
+          BG
         </span>
         <img
-          alt="Giacomo Edwards"
+          alt="Barbara German"
           className="md-avatar__img md-avatar__img--hidden"
           draggable={false}
           onError={[Function]}
           onLoad={[Function]}
-          src="./images/giacomo.png"
+          src="./images/barbara.png"
         />
       </div>
       <div
         className="member-name"
       >
-        Giacomo Edwards
-      </div>
-      <div
-        className="member-muted"
-      >
-        <span
-          className="icon icon-microphone-muted_24"
-        />
+        <div>
+          Barbara German
+        </div>
+        <div
+          className="member-subtitle"
+        >
+          You
+        </div>
       </div>
     </div>
     <div
@@ -80,7 +80,9 @@ Array [
       <div
         className="member-name"
       >
-        Brenda Song
+        <div>
+          Brenda Song
+        </div>
       </div>
       <div
         className="member-muted"
@@ -100,7 +102,7 @@ Array [
     >
       <div
         className="md-avatar md-avatar--medium"
-        title="Barbara German"
+        title="Giacomo Edwards"
       >
         <span
           className="md-avatar__letter"
@@ -111,21 +113,30 @@ Array [
             }
           }
         >
-          BG
+          GE
         </span>
         <img
-          alt="Barbara German"
+          alt="Giacomo Edwards"
           className="md-avatar__img md-avatar__img--hidden"
           draggable={false}
           onError={[Function]}
           onLoad={[Function]}
-          src="./images/barbara.png"
+          src="./images/giacomo.png"
         />
       </div>
       <div
         className="member-name"
       >
-        Barbara German
+        <div>
+          Giacomo Edwards
+        </div>
+      </div>
+      <div
+        className="member-muted"
+      >
+        <span
+          className="icon icon-microphone-muted_24"
+        />
       </div>
     </div>
   </div>,
@@ -177,7 +188,9 @@ Array [
       <div
         className="member-name"
       >
-        Barbara German
+        <div>
+          Barbara German
+        </div>
       </div>
     </div>
     <div
@@ -210,7 +223,9 @@ Array [
       <div
         className="member-name"
       >
-        Giacomo Edwards
+        <div>
+          Giacomo Edwards
+        </div>
       </div>
     </div>
     <div
@@ -243,7 +258,9 @@ Array [
       <div
         className="member-name"
       >
-        Brenda Song
+        <div>
+          Brenda Song
+        </div>
       </div>
     </div>
     <div
@@ -276,7 +293,9 @@ Array [
       <div
         className="member-name"
       >
-        Simon Damiano
+        <div>
+          Simon Damiano
+        </div>
       </div>
     </div>
   </div>,

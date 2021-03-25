@@ -12,6 +12,7 @@ import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
  * @param {string} props.destinationID  ID of the destination for which to get members
  * @param {string} props.personID  ID of the person for which to display avatar
  * @param {boolean} props.displayStatus  Whether or not to display the user's status
+ * @param {boolean} props.showMe Indicate who current use id
  *
  * @returns {object} JSX of the component
  */
@@ -20,6 +21,7 @@ export default function WebexMember({
   destinationID,
   personID,
   displayStatus,
+  showMe,
 }) {
   const {firstName, lastName} = usePerson(personID);
   const members = useMembers(destinationID, destinationType);
@@ -31,7 +33,10 @@ export default function WebexMember({
   return (
     <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-member`}>
       <WebexAvatar personID={personID} displayStatus={displayStatus} />
-      <div className="member-name">{`${firstName} ${lastName}`}</div>
+      <div className="member-name">
+        <div>{`${firstName} ${lastName}`}</div>
+        {showMe && <div className="member-subtitle">You</div>}
+      </div>
       {isMuted && <div className="member-muted"><span className="icon icon-microphone-muted_24" /></div>}
     </div>
   );
@@ -42,8 +47,10 @@ WebexMember.propTypes = {
   destinationID: PropTypes.string.isRequired,
   personID: PropTypes.string.isRequired,
   displayStatus: PropTypes.bool,
+  showMe: PropTypes.bool,
 };
 
 WebexMember.defaultProps = {
   displayStatus: false,
+  showMe: false,
 };

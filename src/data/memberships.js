@@ -25,8 +25,8 @@ export default {
     destinationID: 'meeting1',
     destinationType: 'meeting',
     members: [
-      {personID: 'user1', muted: false, inMeeting: false},
-      {personID: 'user2', muted: true, inMeeting: true},
+      {personID: 'user1', muted: false, inMeeting: true},
+      {personID: 'user2', muted: true, inMeeting: false},
       {personID: 'user3', muted: true, inMeeting: true},
     ],
   },

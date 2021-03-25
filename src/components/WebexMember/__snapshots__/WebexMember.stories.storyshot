@@ -32,7 +32,9 @@ Array [
     <div
       className="member-name"
     >
-      Giacomo Edwards
+      <div>
+        Giacomo Edwards
+      </div>
     </div>
     <div
       className="member-muted"
@@ -87,7 +89,9 @@ Array [
     <div
       className="member-name"
     >
-      Barbara German
+      <div>
+        Barbara German
+      </div>
     </div>
   </div>,
   <video
@@ -135,7 +139,9 @@ Array [
     <div
       className="member-name"
     >
-      Barbara German
+      <div>
+        Barbara German
+      </div>
     </div>
   </div>,
   <video
