@@ -1,3 +1,11 @@
+# [1.47.0](https://github.com/webex/components/compare/v1.46.0...v1.47.0) (2021-03-25)
+
+
+### Features
+
+* **MemberRoster:** show in meeting and not in meeting members ([496eaf2](https://github.com/webex/components/commit/496eaf2a4220989c086c209c310297d7ecc24afc))
+* **WebexRemoteMedia:** handle inMeeting members ([96a0008](https://github.com/webex/components/commit/96a0008fe02db1ef6ff485ce03db23c8dc338411))
+
 # [1.46.0](https://github.com/webex/components/compare/v1.45.6...v1.46.0) (2021-03-22)
 
 
