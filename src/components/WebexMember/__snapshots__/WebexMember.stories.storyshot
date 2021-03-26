@@ -3,42 +3,56 @@
 exports[`Storyshots Platform/Webex Member Muted 1`] = `
 Array [
   <div
-    className="wxc-member"
+    style={
+      Object {
+        "width": "20rem",
+      }
+    }
   >
     <div
-      className="md-avatar md-avatar--medium"
-      title="Giacomo Edwards"
+      className="wxc-member"
     >
-      <span
-        className="md-avatar__letter"
+      <div
+        className="md-avatar md-avatar--medium"
+        title="Giacomo Edwards"
+      >
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
+          }
+        >
+          GE
+        </span>
+        <img
+          alt="Giacomo Edwards"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/giacomo.png"
+        />
+      </div>
+      <div
+        className="details"
+      >
+        <div
+          className="name"
+        >
+          Giacomo Edwards
+        </div>
+      </div>
+      <i
+        aria-label={null}
+        className="md-icon icon icon-microphone-muted_16 muted"
         style={
           Object {
-            "backgroundColor": "",
-            "color": "",
+            "fontSize": 16,
           }
         }
-      >
-        GE
-      </span>
-      <img
-        alt="Giacomo Edwards"
-        className="md-avatar__img md-avatar__img--hidden"
-        draggable={false}
-        onError={[Function]}
-        onLoad={[Function]}
-        src="./images/giacomo.png"
-      />
-    </div>
-    <div
-      className="member-name"
-    >
-      Giacomo Edwards
-    </div>
-    <div
-      className="member-muted"
-    >
-      <span
-        className="icon icon-microphone-muted_24"
       />
     </div>
   </div>,
@@ -58,36 +72,48 @@ Array [
 exports[`Storyshots Platform/Webex Member Space 1`] = `
 Array [
   <div
-    className="wxc-member"
+    style={
+      Object {
+        "width": "20rem",
+      }
+    }
   >
     <div
-      className="md-avatar md-avatar--medium"
-      title="Barbara German"
+      className="wxc-member"
     >
-      <span
-        className="md-avatar__letter"
-        style={
-          Object {
-            "backgroundColor": "",
-            "color": "",
-          }
-        }
+      <div
+        className="md-avatar md-avatar--medium"
+        title="Barbara German"
       >
-        BG
-      </span>
-      <img
-        alt="Barbara German"
-        className="md-avatar__img md-avatar__img--hidden"
-        draggable={false}
-        onError={[Function]}
-        onLoad={[Function]}
-        src="./images/barbara.png"
-      />
-    </div>
-    <div
-      className="member-name"
-    >
-      Barbara German
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
+          }
+        >
+          BG
+        </span>
+        <img
+          alt="Barbara German"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/barbara.png"
+        />
+      </div>
+      <div
+        className="details"
+      >
+        <div
+          className="name"
+        >
+          Barbara German
+        </div>
+      </div>
     </div>
   </div>,
   <video
@@ -106,36 +132,48 @@ Array [
 exports[`Storyshots Platform/Webex Member Status Enabled 1`] = `
 Array [
   <div
-    className="wxc-member"
+    style={
+      Object {
+        "width": "20rem",
+      }
+    }
   >
     <div
-      className="md-avatar md-avatar--dnd md-avatar--medium"
-      title="Barbara German"
+      className="wxc-member"
     >
-      <span
-        className="md-avatar__letter"
-        style={
-          Object {
-            "backgroundColor": "",
-            "color": "",
-          }
-        }
+      <div
+        className="md-avatar md-avatar--dnd md-avatar--medium"
+        title="Barbara German"
       >
-        BG
-      </span>
-      <img
-        alt="Barbara German"
-        className="md-avatar__img md-avatar__img--hidden"
-        draggable={false}
-        onError={[Function]}
-        onLoad={[Function]}
-        src="./images/barbara.png"
-      />
-    </div>
-    <div
-      className="member-name"
-    >
-      Barbara German
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
+          }
+        >
+          BG
+        </span>
+        <img
+          alt="Barbara German"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/barbara.png"
+        />
+      </div>
+      <div
+        className="details"
+      >
+        <div
+          className="name"
+        >
+          Barbara German
+        </div>
+      </div>
     </div>
   </div>,
   <video

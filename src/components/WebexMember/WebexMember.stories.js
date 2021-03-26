@@ -4,6 +4,7 @@ import WebexMember from './WebexMember';
 export default {
   title: 'Platform/Webex Member',
   component: WebexMember,
+  decorators: [(Story) => <div style={{width: '20rem'}}><Story /></div>],
 };
 
 const Template = (args) => <WebexMember {...args} />;

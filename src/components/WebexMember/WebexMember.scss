@@ -3,18 +3,20 @@
   align-items: center;
   padding: 0.625rem 0 0.625rem 0;
 
-  .member-name {
+  .details {
+    flex: 1;
+    min-width: 0;
+    margin-left: 0.25rem;
+  }
+
+  .name {
     @include body-fonts;
-    align-items: center;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding-left: 0.25rem;
   }
 
-  .member-muted {
-    flex: 1;
-    text-align: right;
-    color: #ff0000;
+  .muted {
+    color: $md-red-60;
   }
 }

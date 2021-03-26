@@ -4,6 +4,7 @@ import WebexMemberRoster from './WebexMemberRoster';
 export default {
   title: 'Platform/Webex Member Roster',
   component: WebexMemberRoster,
+  decorators: [(Story) => <div style={{width: '20rem'}}><Story /></div>],
 };
 
 const Template = (args) => <WebexMemberRoster {...args} />;
