@@ -1,5 +1,140 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Platform/Webex Member Roster External Member 1`] = `
+Array [
+  <div
+    className="wxc-member-roster"
+  >
+    <div
+      className="external-user-warning"
+    >
+      <i
+        aria-label={null}
+        className="md-icon icon icon-external-user_20"
+        style={
+          Object {
+            "color": "rgba(252, 157, 3, 1)",
+            "fontSize": 20,
+          }
+        }
+      />
+      <h5>
+        People outside your company are included in this space
+      </h5>
+    </div>
+    <div
+      className="wxc-member"
+    >
+      <div
+        className="md-avatar md-avatar--medium"
+        title="Barbara German"
+      >
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
+          }
+        >
+          BG
+        </span>
+        <img
+          alt="Barbara German"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/barbara.png"
+        />
+      </div>
+      <div
+        className="member-name"
+      >
+        Barbara German
+      </div>
+    </div>
+    <div
+      className="wxc-member"
+    >
+      <div
+        className="md-avatar md-avatar--medium"
+        title="Brandon Seeger"
+      >
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
+          }
+        >
+          BS
+        </span>
+        <img
+          alt="Brandon Seeger"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/brandon.png"
+        />
+      </div>
+      <div
+        className="member-name"
+      >
+        Brandon Seeger
+      </div>
+    </div>
+    <div
+      className="wxc-member"
+    >
+      <div
+        className="md-avatar md-avatar--medium"
+        title="Maria Rossi"
+      >
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
+          }
+        >
+          MR
+        </span>
+        <img
+          alt="Maria Rossi"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/maria.png"
+        />
+      </div>
+      <div
+        className="member-name"
+      >
+        Maria Rossi
+      </div>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
+`;
+
 exports[`Storyshots Platform/Webex Member Roster Meeting 1`] = `
 Array [
   <div

@@ -4,4 +4,16 @@
     color: $md-gray-40;
     border-bottom: 0.1rem solid $md-gray-30;
   }
+
+  .external-user-warning {
+    color: $md-yellow-40;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.25rem 0 0.25rem 0;
+
+    h5 {
+      margin-left: 0.625rem;
+    }
+  }
 }

@@ -64,7 +64,7 @@ export default {
     lastName: 'Seeger',
     nickname: 'Brandon',
     avatar: './images/brandon.png',
-    orgID: 'org1',
+    orgID: 'org2',
     status: null,
   },
   user6: {
