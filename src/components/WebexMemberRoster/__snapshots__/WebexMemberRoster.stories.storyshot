@@ -3,122 +3,142 @@
 exports[`Storyshots Platform/Webex Member Roster External Member 1`] = `
 Array [
   <div
-    className="wxc-member-roster"
+    style={
+      Object {
+        "width": "20rem",
+      }
+    }
   >
     <div
-      className="external-user-warning"
-    >
-      <i
-        aria-label={null}
-        className="md-icon icon icon-external-user_20"
-        style={
-          Object {
-            "color": "rgba(252, 157, 3, 1)",
-            "fontSize": 20,
-          }
-        }
-      />
-      <h5>
-        People outside your company are included in this space
-      </h5>
-    </div>
-    <div
-      className="wxc-member"
+      className="wxc-member-roster"
     >
       <div
-        className="md-avatar md-avatar--medium"
-        title="Barbara German"
+        className="external-user-warning"
       >
-        <span
-          className="md-avatar__letter"
+        <i
+          aria-label={null}
+          className="md-icon icon icon-external-user_20"
           style={
             Object {
-              "backgroundColor": "",
-              "color": "",
+              "color": "rgba(252, 157, 3, 1)",
+              "fontSize": 20,
             }
           }
-        >
-          BG
-        </span>
-        <img
-          alt="Barbara German"
-          className="md-avatar__img md-avatar__img--hidden"
-          draggable={false}
-          onError={[Function]}
-          onLoad={[Function]}
-          src="./images/barbara.png"
         />
+        <h5>
+          People outside your company are included in this space
+        </h5>
       </div>
       <div
-        className="member-name"
+        className="wxc-member"
       >
-        Barbara German
-      </div>
-    </div>
-    <div
-      className="wxc-member"
-    >
-      <div
-        className="md-avatar md-avatar--medium"
-        title="Brandon Seeger"
-      >
-        <span
-          className="md-avatar__letter"
-          style={
-            Object {
-              "backgroundColor": "",
-              "color": "",
+        <div
+          className="md-avatar md-avatar--medium"
+          title="Barbara German"
+        >
+          <span
+            className="md-avatar__letter"
+            style={
+              Object {
+                "backgroundColor": "",
+                "color": "",
+              }
             }
-          }
+          >
+            BG
+          </span>
+          <img
+            alt="Barbara German"
+            className="md-avatar__img md-avatar__img--hidden"
+            draggable={false}
+            onError={[Function]}
+            onLoad={[Function]}
+            src="./images/barbara.png"
+          />
+        </div>
+        <div
+          className="details"
         >
-          BS
-        </span>
-        <img
-          alt="Brandon Seeger"
-          className="md-avatar__img md-avatar__img--hidden"
-          draggable={false}
-          onError={[Function]}
-          onLoad={[Function]}
-          src="./images/brandon.png"
-        />
+          <div
+            className="name"
+          >
+            Barbara German
+          </div>
+        </div>
       </div>
       <div
-        className="member-name"
+        className="wxc-member"
       >
-        Brandon Seeger
-      </div>
-    </div>
-    <div
-      className="wxc-member"
-    >
-      <div
-        className="md-avatar md-avatar--medium"
-        title="Maria Rossi"
-      >
-        <span
-          className="md-avatar__letter"
-          style={
-            Object {
-              "backgroundColor": "",
-              "color": "",
+        <div
+          className="md-avatar md-avatar--medium"
+          title="Brandon Seeger"
+        >
+          <span
+            className="md-avatar__letter"
+            style={
+              Object {
+                "backgroundColor": "",
+                "color": "",
+              }
             }
-          }
+          >
+            BS
+          </span>
+          <img
+            alt="Brandon Seeger"
+            className="md-avatar__img md-avatar__img--hidden"
+            draggable={false}
+            onError={[Function]}
+            onLoad={[Function]}
+            src="./images/brandon.png"
+          />
+        </div>
+        <div
+          className="details"
         >
-          MR
-        </span>
-        <img
-          alt="Maria Rossi"
-          className="md-avatar__img md-avatar__img--hidden"
-          draggable={false}
-          onError={[Function]}
-          onLoad={[Function]}
-          src="./images/maria.png"
-        />
+          <div
+            className="name"
+          >
+            Brandon Seeger
+          </div>
+        </div>
       </div>
       <div
-        className="member-name"
+        className="wxc-member"
       >
-        Maria Rossi
+        <div
+          className="md-avatar md-avatar--medium"
+          title="Maria Rossi"
+        >
+          <span
+            className="md-avatar__letter"
+            style={
+              Object {
+                "backgroundColor": "",
+                "color": "",
+              }
+            }
+          >
+            MR
+          </span>
+          <img
+            alt="Maria Rossi"
+            className="md-avatar__img md-avatar__img--hidden"
+            draggable={false}
+            onError={[Function]}
+            onLoad={[Function]}
+            src="./images/maria.png"
+          />
+        </div>
+        <div
+          className="details"
+        >
+          <div
+            className="name"
+          >
+            Maria Rossi
+          </div>
+        </div>
       </div>
     </div>
   </div>,
@@ -138,129 +158,153 @@ Array [
 exports[`Storyshots Platform/Webex Member Roster Meeting 1`] = `
 Array [
   <div
-    className="wxc-member-roster"
+    style={
+      Object {
+        "width": "20rem",
+      }
+    }
   >
-    <h4
-      className="section-title"
-    >
-      In meeting
-    </h4>
     <div
-      className="wxc-member"
+      className="wxc-member-roster"
     >
-      <div
-        className="md-avatar md-avatar--medium"
-        title="Giacomo Edwards"
+      <h4
+        className="section-title"
       >
-        <span
-          className="md-avatar__letter"
+        In meeting
+      </h4>
+      <div
+        className="wxc-member"
+      >
+        <div
+          className="md-avatar md-avatar--medium"
+          title="Giacomo Edwards"
+        >
+          <span
+            className="md-avatar__letter"
+            style={
+              Object {
+                "backgroundColor": "",
+                "color": "",
+              }
+            }
+          >
+            GE
+          </span>
+          <img
+            alt="Giacomo Edwards"
+            className="md-avatar__img md-avatar__img--hidden"
+            draggable={false}
+            onError={[Function]}
+            onLoad={[Function]}
+            src="./images/giacomo.png"
+          />
+        </div>
+        <div
+          className="details"
+        >
+          <div
+            className="name"
+          >
+            Giacomo Edwards
+          </div>
+        </div>
+        <i
+          aria-label={null}
+          className="md-icon icon icon-microphone-muted_16 muted"
           style={
             Object {
-              "backgroundColor": "",
-              "color": "",
+              "fontSize": 16,
             }
           }
+        />
+      </div>
+      <div
+        className="wxc-member"
+      >
+        <div
+          className="md-avatar md-avatar--medium"
+          title="Brenda Song"
         >
-          GE
-        </span>
-        <img
-          alt="Giacomo Edwards"
-          className="md-avatar__img md-avatar__img--hidden"
-          draggable={false}
-          onError={[Function]}
-          onLoad={[Function]}
-          src="./images/giacomo.png"
-        />
-      </div>
-      <div
-        className="member-name"
-      >
-        Giacomo Edwards
-      </div>
-      <div
-        className="member-muted"
-      >
-        <span
-          className="icon icon-microphone-muted_24"
-        />
-      </div>
-    </div>
-    <div
-      className="wxc-member"
-    >
-      <div
-        className="md-avatar md-avatar--medium"
-        title="Brenda Song"
-      >
-        <span
-          className="md-avatar__letter"
+          <span
+            className="md-avatar__letter"
+            style={
+              Object {
+                "backgroundColor": "",
+                "color": "",
+              }
+            }
+          >
+            BS
+          </span>
+          <img
+            alt="Brenda Song"
+            className="md-avatar__img md-avatar__img--hidden"
+            draggable={false}
+            onError={[Function]}
+            onLoad={[Function]}
+            src="./images/brenda.png"
+          />
+        </div>
+        <div
+          className="details"
+        >
+          <div
+            className="name"
+          >
+            Brenda Song
+          </div>
+        </div>
+        <i
+          aria-label={null}
+          className="md-icon icon icon-microphone-muted_16 muted"
           style={
             Object {
-              "backgroundColor": "",
-              "color": "",
+              "fontSize": 16,
             }
           }
+        />
+      </div>
+      <h4
+        className="section-title"
+      >
+        Not in meeting
+      </h4>
+      <div
+        className="wxc-member"
+      >
+        <div
+          className="md-avatar md-avatar--medium"
+          title="Barbara German"
         >
-          BS
-        </span>
-        <img
-          alt="Brenda Song"
-          className="md-avatar__img md-avatar__img--hidden"
-          draggable={false}
-          onError={[Function]}
-          onLoad={[Function]}
-          src="./images/brenda.png"
-        />
-      </div>
-      <div
-        className="member-name"
-      >
-        Brenda Song
-      </div>
-      <div
-        className="member-muted"
-      >
-        <span
-          className="icon icon-microphone-muted_24"
-        />
-      </div>
-    </div>
-    <h4
-      className="section-title"
-    >
-      Not in meeting
-    </h4>
-    <div
-      className="wxc-member"
-    >
-      <div
-        className="md-avatar md-avatar--medium"
-        title="Barbara German"
-      >
-        <span
-          className="md-avatar__letter"
-          style={
-            Object {
-              "backgroundColor": "",
-              "color": "",
+          <span
+            className="md-avatar__letter"
+            style={
+              Object {
+                "backgroundColor": "",
+                "color": "",
+              }
             }
-          }
+          >
+            BG
+          </span>
+          <img
+            alt="Barbara German"
+            className="md-avatar__img md-avatar__img--hidden"
+            draggable={false}
+            onError={[Function]}
+            onLoad={[Function]}
+            src="./images/barbara.png"
+          />
+        </div>
+        <div
+          className="details"
         >
-          BG
-        </span>
-        <img
-          alt="Barbara German"
-          className="md-avatar__img md-avatar__img--hidden"
-          draggable={false}
-          onError={[Function]}
-          onLoad={[Function]}
-          src="./images/barbara.png"
-        />
-      </div>
-      <div
-        className="member-name"
-      >
-        Barbara German
+          <div
+            className="name"
+          >
+            Barbara German
+          </div>
+        </div>
       </div>
     </div>
   </div>,
@@ -280,138 +324,162 @@ Array [
 exports[`Storyshots Platform/Webex Member Roster Space 1`] = `
 Array [
   <div
-    className="wxc-member-roster"
+    style={
+      Object {
+        "width": "20rem",
+      }
+    }
   >
     <div
-      className="wxc-member"
+      className="wxc-member-roster"
     >
       <div
-        className="md-avatar md-avatar--medium"
-        title="Barbara German"
+        className="wxc-member"
       >
-        <span
-          className="md-avatar__letter"
-          style={
-            Object {
-              "backgroundColor": "",
-              "color": "",
-            }
-          }
+        <div
+          className="md-avatar md-avatar--medium"
+          title="Barbara German"
         >
-          BG
-        </span>
-        <img
-          alt="Barbara German"
-          className="md-avatar__img md-avatar__img--hidden"
-          draggable={false}
-          onError={[Function]}
-          onLoad={[Function]}
-          src="./images/barbara.png"
-        />
-      </div>
-      <div
-        className="member-name"
-      >
-        Barbara German
-      </div>
-    </div>
-    <div
-      className="wxc-member"
-    >
-      <div
-        className="md-avatar md-avatar--medium"
-        title="Giacomo Edwards"
-      >
-        <span
-          className="md-avatar__letter"
-          style={
-            Object {
-              "backgroundColor": "",
-              "color": "",
+          <span
+            className="md-avatar__letter"
+            style={
+              Object {
+                "backgroundColor": "",
+                "color": "",
+              }
             }
-          }
+          >
+            BG
+          </span>
+          <img
+            alt="Barbara German"
+            className="md-avatar__img md-avatar__img--hidden"
+            draggable={false}
+            onError={[Function]}
+            onLoad={[Function]}
+            src="./images/barbara.png"
+          />
+        </div>
+        <div
+          className="details"
         >
-          GE
-        </span>
-        <img
-          alt="Giacomo Edwards"
-          className="md-avatar__img md-avatar__img--hidden"
-          draggable={false}
-          onError={[Function]}
-          onLoad={[Function]}
-          src="./images/giacomo.png"
-        />
+          <div
+            className="name"
+          >
+            Barbara German
+          </div>
+        </div>
       </div>
       <div
-        className="member-name"
+        className="wxc-member"
       >
-        Giacomo Edwards
-      </div>
-    </div>
-    <div
-      className="wxc-member"
-    >
-      <div
-        className="md-avatar md-avatar--medium"
-        title="Brenda Song"
-      >
-        <span
-          className="md-avatar__letter"
-          style={
-            Object {
-              "backgroundColor": "",
-              "color": "",
+        <div
+          className="md-avatar md-avatar--medium"
+          title="Giacomo Edwards"
+        >
+          <span
+            className="md-avatar__letter"
+            style={
+              Object {
+                "backgroundColor": "",
+                "color": "",
+              }
             }
-          }
+          >
+            GE
+          </span>
+          <img
+            alt="Giacomo Edwards"
+            className="md-avatar__img md-avatar__img--hidden"
+            draggable={false}
+            onError={[Function]}
+            onLoad={[Function]}
+            src="./images/giacomo.png"
+          />
+        </div>
+        <div
+          className="details"
         >
-          BS
-        </span>
-        <img
-          alt="Brenda Song"
-          className="md-avatar__img md-avatar__img--hidden"
-          draggable={false}
-          onError={[Function]}
-          onLoad={[Function]}
-          src="./images/brenda.png"
-        />
+          <div
+            className="name"
+          >
+            Giacomo Edwards
+          </div>
+        </div>
       </div>
       <div
-        className="member-name"
+        className="wxc-member"
       >
-        Brenda Song
-      </div>
-    </div>
-    <div
-      className="wxc-member"
-    >
-      <div
-        className="md-avatar md-avatar--medium"
-        title="Simon Damiano"
-      >
-        <span
-          className="md-avatar__letter"
-          style={
-            Object {
-              "backgroundColor": "",
-              "color": "",
+        <div
+          className="md-avatar md-avatar--medium"
+          title="Brenda Song"
+        >
+          <span
+            className="md-avatar__letter"
+            style={
+              Object {
+                "backgroundColor": "",
+                "color": "",
+              }
             }
-          }
+          >
+            BS
+          </span>
+          <img
+            alt="Brenda Song"
+            className="md-avatar__img md-avatar__img--hidden"
+            draggable={false}
+            onError={[Function]}
+            onLoad={[Function]}
+            src="./images/brenda.png"
+          />
+        </div>
+        <div
+          className="details"
         >
-          SD
-        </span>
-        <img
-          alt="Simon Damiano"
-          className="md-avatar__img md-avatar__img--hidden"
-          draggable={false}
-          onError={[Function]}
-          onLoad={[Function]}
-          src="./images/simon.png"
-        />
+          <div
+            className="name"
+          >
+            Brenda Song
+          </div>
+        </div>
       </div>
       <div
-        className="member-name"
+        className="wxc-member"
       >
-        Simon Damiano
+        <div
+          className="md-avatar md-avatar--medium"
+          title="Simon Damiano"
+        >
+          <span
+            className="md-avatar__letter"
+            style={
+              Object {
+                "backgroundColor": "",
+                "color": "",
+              }
+            }
+          >
+            SD
+          </span>
+          <img
+            alt="Simon Damiano"
+            className="md-avatar__img md-avatar__img--hidden"
+            draggable={false}
+            onError={[Function]}
+            onLoad={[Function]}
+            src="./images/simon.png"
+          />
+        </div>
+        <div
+          className="details"
+        >
+          <div
+            className="name"
+          >
+            Simon Damiano
+          </div>
+        </div>
       </div>
     </div>
   </div>,
