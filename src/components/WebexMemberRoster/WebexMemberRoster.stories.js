@@ -19,3 +19,9 @@ Meeting.args = {
   destinationID: 'meeting1',
   destinationType: 'meeting',
 };
+
+export const ExternalMember = Template.bind({});
+ExternalMember.args = {
+  destinationID: 'room2',
+  destinationType: 'room',
+};
