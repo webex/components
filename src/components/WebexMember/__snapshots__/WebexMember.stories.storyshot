@@ -38,7 +38,7 @@ Array [
       className="member-muted"
     >
       <span
-        className="icon icon-microphone-muted_24"
+        className="icon icon-microphone-muted_16"
       />
     </div>
   </div>,

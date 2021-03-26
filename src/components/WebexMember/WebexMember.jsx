@@ -32,7 +32,7 @@ export default function WebexMember({
     <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-member`}>
       <WebexAvatar personID={personID} displayStatus={displayStatus} />
       <div className="member-name">{`${firstName} ${lastName}`}</div>
-      {isMuted && <div className="member-muted"><span className="icon icon-microphone-muted_24" /></div>}
+      {isMuted && <div className="member-muted"><span className="icon icon-microphone-muted_16" /></div>}
     </div>
   );
 }
