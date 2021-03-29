@@ -3,7 +3,13 @@
   align-items: center;
   padding: 0.625rem 0 0.625rem 0;
 
-  .member-name {
+  .description {
+    flex: 1;
+    min-width: 0;
+    padding-right: 0.25rem;
+  }
+
+  .name {
     @include body-fonts;
     align-items: center;
     white-space: nowrap;
@@ -12,9 +18,19 @@
     padding-left: 0.25rem;
   }
 
-  .member-muted {
-    flex: 1;
+  .muted {
     text-align: right;
     color: #ff0000;
+  }
+
+  .sharing {
+    padding-right: 40px;
+    .icon {
+      line-height: 1.5rem;
+    }  
+  }
+  
+  .presenter {
+    padding-left: 0.25rem;
   }
 }

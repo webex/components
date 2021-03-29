@@ -4,6 +4,7 @@ import WebexMember from './WebexMember';
 export default {
   title: 'Platform/Webex Member',
   component: WebexMember,
+  decorators: [(Story) => <div style={{width: '20rem'}}><Story /></div>],
 };
 
 const Template = (args) => <WebexMember {...args} />;
@@ -24,4 +25,11 @@ Muted.args = {
   destinationType: 'meeting',
   destinationID: 'meeting2',
   personID: 'user2',
+};
+
+export const ScreenSharing = Template.bind({});
+ScreenSharing.args = {
+  destinationType: 'meeting',
+  destinationID: 'meeting2',
+  personID: 'user3',
 };

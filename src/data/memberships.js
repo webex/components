@@ -4,10 +4,10 @@ export default {
     destinationID: 'room1',
     destinationType: 'room',
     members: [
-      {personID: 'user1', muted: null},
-      {personID: 'user2', muted: null},
-      {personID: 'user3', muted: null},
-      {personID: 'user4', muted: null},
+      {personID: 'user1', muted: null, sharing: null},
+      {personID: 'user2', muted: null, sharing: null},
+      {personID: 'user3', muted: null, sharing: null},
+      {personID: 'user4', muted: null, sharing: null},
     ],
   },
   membership2: {
@@ -15,9 +15,9 @@ export default {
     destinationID: 'room2',
     destinationType: 'room',
     members: [
-      {personID: 'user1', muted: null},
-      {personID: 'user5', muted: null},
-      {personID: 'user6', muted: null},
+      {personID: 'user1', muted: null, sharing: null},
+      {personID: 'user5', muted: null, sharing: null},
+      {personID: 'user6', muted: null, sharing: null},
     ],
   },
   membership3: {
@@ -25,9 +25,9 @@ export default {
     destinationID: 'meeting1',
     destinationType: 'meeting',
     members: [
-      {personID: 'user1', muted: false},
-      {personID: 'user2', muted: true},
-      {personID: 'user3', muted: true},
+      {personID: 'user1', muted: false, sharing: true},
+      {personID: 'user2', muted: true, sharing: false},
+      {personID: 'user3', muted: true, sharing: false},
     ],
   },
   membership4: {
@@ -35,12 +35,12 @@ export default {
     destinationID: 'meeting2',
     destinationType: 'meeting',
     members: [
-      {personID: 'user1', muted: false},
-      {personID: 'user2', muted: true},
-      {personID: 'user3', muted: false},
-      {personID: 'user4', muted: true},
-      {personID: 'user5', muted: false},
-      {personID: 'user6', muted: true},
+      {personID: 'user1', muted: false, sharing: false},
+      {personID: 'user2', muted: true, sharing: false},
+      {personID: 'user3', muted: false, sharing: true},
+      {personID: 'user4', muted: true, sharing: false},
+      {personID: 'user5', muted: false, sharing: false},
+      {personID: 'user6', muted: true, sharing: false},
     ],
   },
   membership5: {
@@ -48,7 +48,7 @@ export default {
     destinationID: 'meeting4',
     destinationType: 'meeting',
     members: [
-      {personID: 'user1', muted: false},
+      {personID: 'user1', muted: false, sharing: true},
     ],
   },
   membership6: {
@@ -56,8 +56,8 @@ export default {
     destinationID: 'meeting5',
     destinationType: 'meeting',
     members: [
-      {personID: 'user1', muted: false},
-      {personID: 'user2', muted: true},
+      {personID: 'user1', muted: false, sharing: true},
+      {personID: 'user2', muted: true, sharing: false},
     ],
   },
   membership7: {
@@ -65,8 +65,8 @@ export default {
     destinationID: 'meeting6',
     destinationType: 'meeting',
     members: [
-      {personID: 'user1', muted: false},
-      {personID: 'user2', muted: true},
+      {personID: 'user1', muted: false, sharing: true},
+      {personID: 'user2', muted: true, sharing: false},
     ],
   },
 };

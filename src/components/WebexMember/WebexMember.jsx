@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Icon} from '@momentum-ui/react';
 
 import {usePerson, useMemberships} from '../hooks';
 import WebexAvatar from '../WebexAvatar/WebexAvatar';
@@ -27,12 +28,17 @@ export default function WebexMember({
     .find((itemMember) => itemMember.personID === personID);
 
   const isMuted = member && member.muted;
+  const isSharing = member && member.sharing;
 
   return (
     <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-member`}>
       <WebexAvatar personID={personID} displayStatus={displayStatus} />
-      <div className="member-name">{`${firstName} ${lastName}`}</div>
-      {isMuted && <div className="member-muted"><span className="icon icon-microphone-muted_24" /></div>}
+      <div className="description">
+        <div className="name">{`${firstName} ${lastName}`}</div>
+        {isSharing && <div className="presenter">Presenter</div>}
+      </div>
+      {isSharing && <div className="sharing"><Icon name="icon-content-share_16" /></div>}
+      {isMuted && <div className="muted"><span className="icon icon-microphone-muted_24" /></div>}
     </div>
   );
 }
