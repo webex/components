@@ -14,6 +14,7 @@ export const JOIN_CONTROL = 'join-meeting';
 export const LEAVE_CONTROL = 'leave-meeting';
 export const DISABLED_MUTE_AUDIO_CONTROL = 'disabled-mute-audio';
 export const DISABLED_JOIN_CONTROL = 'disabled-join-meeting';
+export const ROSTER_CONTROL = 'member-roster';
 
 // TODO: Figure out how to import JS Doc definitions and remove duplication.
 /**
@@ -122,6 +123,12 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       action: () => {},
       display: this.disabledJoinControl.bind(this),
     };
+
+    this.meetingControls[ROSTER_CONTROL] = {
+      ID: ROSTER_CONTROL,
+      action: this.toggleRoster.bind(this),
+      display: this.rosterControl.bind(this),
+    };
   }
 
   /**
@@ -170,6 +177,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
           remoteAudio: null,
           remoteVideo: null,
           remoteShare: null,
+          showRoster: null,
         });
       } else if (this.datasource[ID]) {
         const meeting = this.datasource[ID];
@@ -204,8 +212,16 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       filter((event) => event.detail.ID === ID),
       tap(() => end$.next(`Meeting "${ID}" has completed.`)),
     );
+    const rosterEvents$ = fromEvent(document, ROSTER_CONTROL);
 
-    const events$ = merge(audioEvents$, videoEvents$, joinEvents$, leaveEvents$, shareEvents$).pipe(
+    const events$ = merge(
+      audioEvents$,
+      videoEvents$,
+      joinEvents$,
+      leaveEvents$,
+      shareEvents$,
+      rosterEvents$,
+    ).pipe(
       filter((event) => event.detail.ID === ID),
       // Make a copy of the meeting to treat it as if were immutable
       map((event) => ({...event.detail})),
@@ -579,6 +595,64 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
     );
 
     return concat(default$, shareEvent$);
+  }
+
+  /**
+   * Handles the toggle of the roster.
+   *
+   * @param {string} ID ID of the meeting for which to update display
+   * @private
+   */
+  async toggleRoster(ID) {
+    const meeting = this.datasource[ID];
+
+    meeting.showRoster = !meeting.showRoster;
+
+    document.dispatchEvent(new CustomEvent(ROSTER_CONTROL, {detail: meeting}));
+  }
+
+  /**
+   * Returns an observable that emits the display data of a roster control.
+   *
+   * @private
+   * @param {string} ID ID of the meeting to toggle roster
+   * @returns {Observable.<MeetingControlDisplay>} Observable stream that emits display data of the roster control
+   */
+  rosterControl(ID) {
+    const active = {
+      ID: ROSTER_CONTROL,
+      icon: 'participant-list',
+      tooltip: 'Hide participants panel',
+      state: MeetingControlState.ACTIVE,
+      text: 'Participants',
+    };
+    const inactive = {
+      ID: ROSTER_CONTROL,
+      icon: 'participant-list',
+      tooltip: 'Show participants panel',
+      state: MeetingControlState.INACTIVE,
+      text: 'Participants',
+    };
+
+    const initialState$ = new Observable((observer) => {
+      const meeting = this.datasource[ID];
+
+      if (meeting) {
+        const initialControl = meeting.showRoster ? active : inactive;
+
+        observer.next(initialControl);
+        observer.complete();
+      } else {
+        observer.error(new Error(`Could not find meeting with ID "${ID}" to add roster control`));
+      }
+    });
+
+    const rosterEvent$ = fromEvent(document, ROSTER_CONTROL).pipe(
+      filter((event) => event.detail.ID === ID),
+      map((event) => (event.detail.showRoster ? active : inactive)),
+    );
+
+    return concat(initialState$, rosterEvent$);
   }
 
   /**
