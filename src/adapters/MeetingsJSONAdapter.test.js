@@ -27,6 +27,7 @@ describe('Meetings JSON Adapter', () => {
       remoteAudio: null,
       remoteVideo: null,
       remoteShare: null,
+      showRoster: null,
     };
   });
 
@@ -418,6 +419,71 @@ describe('Meetings JSON Adapter', () => {
         () => {},
         (error) => {
           expect(error.message).toEqual('Could not find meeting with ID "invalid"');
+          done();
+        },
+      );
+    });
+  });
+
+  describe('toggleRoster()', () => {
+    let dispatchSpy;
+
+    beforeEach(() => {
+      dispatchSpy = jest.spyOn(document, 'dispatchEvent');
+    });
+
+    afterEach(() => {
+      dispatchSpy.mockRestore();
+    });
+
+    test('dispatches a "member-roster" event', async () => {
+      await meetingsJSONAdapter.toggleRoster(meetingID);
+      expect(dispatchSpy).toHaveBeenCalled();
+    });
+  });
+
+  describe('rosterControl()', () => {
+    test('returns an observable', () => {
+      expect(isObservable(meetingsJSONAdapter.rosterControl())).toBeTruthy();
+    });
+
+    test('emits inactive roster icon control if roster is not displayed', (done) => {
+      meetingsJSONAdapter
+        .rosterControl(meetingID)
+        .subscribe((display) => {
+          expect(display).toMatchObject({
+            ID: 'member-roster',
+            icon: 'participant-list',
+            tooltip: 'Show participants panel',
+            state: 'inactive',
+            text: 'Participants',
+          });
+          done();
+        });
+    });
+
+    test('emits active roster icon control if roster is displayed', (done) => {
+      testMeeting.showRoster = true;
+
+      meetingsJSONAdapter
+        .rosterControl(meetingID)
+        .subscribe((display) => {
+          expect(display).toMatchObject({
+            ID: 'member-roster',
+            icon: 'participant-list',
+            tooltip: 'Hide participants panel',
+            state: 'active',
+            text: 'Participants',
+          });
+          done();
+        });
+    });
+
+    test('throws error on invalid meeting ID', (done) => {
+      meetingsJSONAdapter.rosterControl('invalid').subscribe(
+        () => {},
+        (error) => {
+          expect(error.message).toEqual('Could not find meeting with ID "invalid" to add roster control');
           done();
         },
       );

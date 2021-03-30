@@ -8,6 +8,7 @@ export default {
     remoteAudio: new MediaStream(),
     remoteVideo: new MediaStream(),
     remoteShare: new MediaStream(),
+    showRoster: false,
   },
   meeting2: {
     ID: 'meeting2',
@@ -18,6 +19,7 @@ export default {
     remoteAudio: new MediaStream(),
     remoteVideo: new MediaStream(),
     remoteShare: new MediaStream(),
+    showRoster: false,
   },
   meeting3: {
     ID: 'meeting3',
@@ -28,6 +30,7 @@ export default {
     remoteAudio: null,
     remoteVideo: null,
     remoteShare: null,
+    showRoster: false,
   },
   meeting4: {
     ID: 'meeting4',
@@ -38,6 +41,7 @@ export default {
     remoteAudio: new MediaStream(),
     remoteVideo: new MediaStream(),
     remoteShare: null,
+    showRoster: false,
   },
   meeting5: {
     ID: 'meeting5',
@@ -48,6 +52,7 @@ export default {
     remoteAudio: new MediaStream(),
     remoteVideo: null,
     remoteShare: null,
+    showRoster: true,
   },
   meeting6: {
     ID: 'meeting6',
@@ -58,6 +63,7 @@ export default {
     remoteAudio: null,
     remoteVideo: new MediaStream(),
     remoteShare: null,
+    showRoster: false,
   },
   meeting7: {
     ID: 'meeting7',
@@ -68,6 +74,7 @@ export default {
     remoteAudio: null,
     remoteVideo: null,
     remoteShare: null,
+    showRoster: false,
   },
   meeting8: {
     ID: null,
@@ -78,6 +85,7 @@ export default {
     remoteAudio: null,
     remoteVideo: null,
     remoteShare: null,
+    showRoster: false,
   },
   meeting9: {
     error: true,
