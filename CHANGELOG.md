@@ -1,3 +1,10 @@
+# [1.48.0](https://github.com/webex/components/compare/v1.47.0...v1.48.0) (2021-03-31)
+
+
+### Features
+
+* **WebexMemberRoster:** show warning if member from different org exists ([ddcd9f0](https://github.com/webex/components/commit/ddcd9f0d817e35456509e1a9f1908a6bc15cf599))
+
 # [1.47.0](https://github.com/webex/components/compare/v1.46.0...v1.47.0) (2021-03-25)
 
 
