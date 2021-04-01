@@ -72,14 +72,14 @@ export default {
         orgID: 'org1',
         muted: false,
         sharing: true,
-        inMeeting: false,
+        inMeeting: true,
       },
       {
         personID: 'user2',
         orgID: 'org1',
         muted: true,
         sharing: false,
-        inMeeting: true,
+        inMeeting: false,
       },
       {
         personID: 'user3',

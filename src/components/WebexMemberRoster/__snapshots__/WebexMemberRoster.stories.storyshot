@@ -177,7 +177,7 @@ Array [
       >
         <div
           className="md-avatar md-avatar--medium"
-          title="Giacomo Edwards"
+          title="Barbara German"
         >
           <span
             className="md-avatar__letter"
@@ -188,15 +188,15 @@ Array [
               }
             }
           >
-            GE
+            BG
           </span>
           <img
-            alt="Giacomo Edwards"
+            alt="Barbara German"
             className="md-avatar__img md-avatar__img--hidden"
             draggable={false}
             onError={[Function]}
             onLoad={[Function]}
-            src="./images/giacomo.png"
+            src="./images/barbara.png"
           />
         </div>
         <div
@@ -205,12 +205,22 @@ Array [
           <div
             className="name"
           >
-            Giacomo Edwards
+            Barbara German
+          </div>
+          <div
+            className="subtext"
+          >
+            You
+          </div>
+          <div
+            className="presenter"
+          >
+            Presenter
           </div>
         </div>
         <i
           aria-label={null}
-          className="md-icon icon icon-microphone-muted_16 muted"
+          className="md-icon icon icon-content-share_16 sharing"
           style={
             Object {
               "fontSize": 16,
@@ -274,7 +284,7 @@ Array [
       >
         <div
           className="md-avatar md-avatar--medium"
-          title="Barbara German"
+          title="Giacomo Edwards"
         >
           <span
             className="md-avatar__letter"
@@ -285,15 +295,15 @@ Array [
               }
             }
           >
-            BG
+            GE
           </span>
           <img
-            alt="Barbara German"
+            alt="Giacomo Edwards"
             className="md-avatar__img md-avatar__img--hidden"
             draggable={false}
             onError={[Function]}
             onLoad={[Function]}
-            src="./images/barbara.png"
+            src="./images/giacomo.png"
           />
         </div>
         <div
@@ -302,17 +312,12 @@ Array [
           <div
             className="name"
           >
-            Barbara German
-          </div>
-          <div
-            className="presenter"
-          >
-            Presenter
+            Giacomo Edwards
           </div>
         </div>
         <i
           aria-label={null}
-          className="md-icon icon icon-content-share_16 sharing"
+          className="md-icon icon icon-microphone-muted_16 muted"
           style={
             Object {
               "fontSize": 16,
