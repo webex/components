@@ -1,6 +1,7 @@
 import activities from './activities';
 import meetings from './meetings';
 import memberships from './memberships';
+import organizations from './organizations';
 import people from './people';
 import rooms from './rooms';
 
@@ -9,6 +10,7 @@ export default {
   activities,
   meetings,
   memberships,
+  organizations,
   people,
   rooms,
 };
