@@ -30,7 +30,7 @@ that takes the [component data adapter](../../adapters/WebexJSONAdapter.js) that
 
     ```js
     <WebexDataProvider adapter={jsonAdapter}>
-      <WebexAvatar personID="personID" />
+      <WebexAvatar id="id" />
     </WebexDataProvider>
     ```
 

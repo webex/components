@@ -3,7 +3,7 @@
 
 export default {
   user1: {
-    ID: 'user1',
+    id: 'user1',
     emails: [
       'barbara@acme.com',
     ],
@@ -16,7 +16,7 @@ export default {
     status: 'dnd',
   },
   user2: {
-    ID: 'user2',
+    id: 'user2',
     emails: [
       'giacomo@acme.com',
     ],
@@ -29,7 +29,7 @@ export default {
     status: null,
   },
   user3: {
-    ID: 'user3',
+    id: 'user3',
     emails: [
       'brenda@acme.com',
     ],
@@ -42,7 +42,7 @@ export default {
     status: null,
   },
   user4: {
-    ID: 'user4',
+    id: 'user4',
     emails: [
       'simon@acme.com',
     ],
@@ -55,7 +55,7 @@ export default {
     status: null,
   },
   user5: {
-    ID: 'user5',
+    id: 'user5',
     emails: [
       'brandon@acme.com',
     ],
@@ -68,7 +68,7 @@ export default {
     status: null,
   },
   user6: {
-    ID: 'user6',
+    id: 'user6',
     emails: [
       'maria@acme.com',
     ],

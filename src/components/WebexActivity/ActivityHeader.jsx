@@ -50,7 +50,7 @@ export default function ActivityHeader({personID, timestamp}) {
 
   return (
     <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-activity-header`}>
-      <WebexAvatar personID={personID} />
+      <WebexAvatar id={personID} />
       <div className="activity-author">
         <span>{displayName}</span>
         <span className="activity-timestamp">{formatMessageDate(new Date(timestamp))}</span>

@@ -22,7 +22,7 @@ import {
 export default function WebexLocalMedia({className, meetingID}) {
   const [mediaRef, {width}] = useElementDimensions();
   const {localVideo} = useMeeting(meetingID);
-  const {ID} = useMe();
+  const {id} = useMe();
   const videoRef = useStream(localVideo);
 
   const classBaseName = `${WEBEX_COMPONENTS_CLASS_PREFIX}-local-media`;
@@ -32,7 +32,7 @@ export default function WebexLocalMedia({className, meetingID}) {
     [`${classBaseName}-no-media`]: localVideo === null,
     [className]: !!className,
   };
-  const disabledVideo = ID ? <WebexAvatar personID={ID} displayStatus={false} /> : <Spinner />;
+  const disabledVideo = id ? <WebexAvatar id={id} displayStatus={false} /> : <Spinner />;
 
   return (
     <div ref={mediaRef} className={classNames(mainClasses)}>

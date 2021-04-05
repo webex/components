@@ -12,13 +12,13 @@ const Template = (args) => <WebexAvatar {...args} />;
 
 export const NoStatus = Template.bind({});
 NoStatus.args = {
-  personID: 'user1',
+  id: 'user1',
   displayStatus: false,
 };
 
 export const Active = Template.bind({});
 Active.args = {
-  personID: 'user1',
+  id: 'user1',
 };
 Active.parameters = {
   mockData: {
@@ -33,7 +33,7 @@ Active.parameters = {
 
 export const Call = Template.bind({});
 Call.args = {
-  personID: 'user1',
+  id: 'user1',
 };
 Call.parameters = {
   mockData: {
@@ -48,7 +48,7 @@ Call.parameters = {
 
 export const Bot = Template.bind({});
 Bot.args = {
-  personID: 'user1',
+  id: 'user1',
 };
 Bot.parameters = {
   mockData: {
@@ -63,7 +63,7 @@ Bot.parameters = {
 
 export const DoNotDisturb = Template.bind({});
 DoNotDisturb.args = {
-  personID: 'user1',
+  id: 'user1',
 };
 DoNotDisturb.parameters = {
   mockData: {
@@ -78,7 +78,7 @@ DoNotDisturb.parameters = {
 
 export const Inactive = Template.bind({});
 Inactive.args = {
-  personID: 'user1',
+  id: 'user1',
 };
 Inactive.parameters = {
   mockData: {
@@ -93,7 +93,7 @@ Inactive.parameters = {
 
 export const Meeting = Template.bind({});
 Meeting.args = {
-  personID: 'user1',
+  id: 'user1',
 };
 Meeting.parameters = {
   mockData: {
@@ -108,7 +108,7 @@ Meeting.parameters = {
 
 export const OutOfOffice = Template.bind({});
 OutOfOffice.args = {
-  personID: 'user1',
+  id: 'user1',
 };
 OutOfOffice.parameters = {
   mockData: {
@@ -123,7 +123,7 @@ OutOfOffice.parameters = {
 
 export const Presenting = Template.bind({});
 Presenting.args = {
-  personID: 'user1',
+  id: 'user1',
 };
 Presenting.parameters = {
   mockData: {
@@ -138,7 +138,7 @@ Presenting.parameters = {
 
 export const Self = Template.bind({});
 Self.args = {
-  personID: 'user1',
+  id: 'user1',
 };
 Self.parameters = {
   mockData: {
@@ -153,7 +153,7 @@ Self.parameters = {
 
 export const Typing = Template.bind({});
 Typing.args = {
-  personID: 'user1',
+  id: 'user1',
 };
 Typing.parameters = {
   mockData: {
@@ -168,5 +168,5 @@ Typing.parameters = {
 
 export const Invalid = Template.bind({});
 Invalid.args = {
-  personID: 'user-7',
+  id: 'user-7',
 };

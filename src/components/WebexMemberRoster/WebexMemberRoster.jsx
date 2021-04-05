@@ -29,12 +29,12 @@ export default function WebexMemberRoster({destinationID, destinationType}) {
   const {orgID} = useMe();
 
   const renderMembers = (data) => data.map(
-    ({personID}) => (
+    ({id}) => (
       <WebexMember
         destinationType={destinationType}
         destinationID={destinationID}
-        personID={personID}
-        key={personID}
+        id={id}
+        key={id}
       />
     ),
   );

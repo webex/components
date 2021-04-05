@@ -185,7 +185,7 @@ const adapter = new WebexJSONAdapter(jsonData);
 
 ReactDOM.render(
   <WebexDataProvider adapter={adapter}>
-    <WebexAvatar personID="XYZ" />
+    <WebexAvatar id="XYZ" />
   </WebexDataProvider>,
   document.getElementById('root')
 );

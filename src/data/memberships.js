@@ -5,16 +5,16 @@ export default {
     destinationType: 'room',
     members: [
       {
-        personID: 'user1', muted: null, inMeeting: null, orgID: 'org1',
+        id: 'user1', muted: null, inMeeting: null, orgID: 'org1',
       },
       {
-        personID: 'user2', muted: null, inMeeting: null, orgID: 'org1',
+        id: 'user2', muted: null, inMeeting: null, orgID: 'org1',
       },
       {
-        personID: 'user3', muted: null, inMeeting: null, orgID: 'org1',
+        id: 'user3', muted: null, inMeeting: null, orgID: 'org1',
       },
       {
-        personID: 'user4', muted: null, inMeeting: null, orgID: 'org1',
+        id: 'user4', muted: null, inMeeting: null, orgID: 'org1',
       },
     ],
   },
@@ -24,13 +24,13 @@ export default {
     destinationType: 'room',
     members: [
       {
-        personID: 'user1', muted: null, inMeeting: null, orgID: 'org1',
+        id: 'user1', muted: null, inMeeting: null, orgID: 'org1',
       },
       {
-        personID: 'user5', muted: null, inMeeting: null, orgID: 'org2',
+        id: 'user5', muted: null, inMeeting: null, orgID: 'org2',
       },
       {
-        personID: 'user6', muted: null, inMeeting: null, orgID: 'org1',
+        id: 'user6', muted: null, inMeeting: null, orgID: 'org1',
       },
     ],
   },
@@ -40,13 +40,13 @@ export default {
     destinationType: 'meeting',
     members: [
       {
-        personID: 'user1', muted: false, inMeeting: false, orgID: 'org1',
+        id: 'user1', muted: false, inMeeting: false, orgID: 'org1',
       },
       {
-        personID: 'user2', muted: true, inMeeting: true, orgID: 'org1',
+        id: 'user2', muted: true, inMeeting: true, orgID: 'org1',
       },
       {
-        personID: 'user3', muted: true, inMeeting: true, orgID: 'org1',
+        id: 'user3', muted: true, inMeeting: true, orgID: 'org1',
       },
     ],
   },
@@ -56,22 +56,22 @@ export default {
     destinationType: 'meeting',
     members: [
       {
-        personID: 'user1', muted: false, inMeeting: true, orgID: 'org1',
+        id: 'user1', muted: false, inMeeting: true, orgID: 'org1',
       },
       {
-        personID: 'user2', muted: true, inMeeting: true, orgID: 'org1',
+        id: 'user2', muted: true, inMeeting: true, orgID: 'org1',
       },
       {
-        personID: 'user3', muted: false, inMeeting: true, orgID: 'org1',
+        id: 'user3', muted: false, inMeeting: true, orgID: 'org1',
       },
       {
-        personID: 'user4', muted: true, inMeeting: true, orgID: 'org1',
+        id: 'user4', muted: true, inMeeting: true, orgID: 'org1',
       },
       {
-        personID: 'user5', muted: false, inMeeting: true, orgID: 'org2',
+        id: 'user5', muted: false, inMeeting: true, orgID: 'org2',
       },
       {
-        personID: 'user6', muted: true, inMeeting: true, orgID: 'org1',
+        id: 'user6', muted: true, inMeeting: true, orgID: 'org1',
       },
     ],
   },
@@ -81,7 +81,7 @@ export default {
     destinationType: 'meeting',
     members: [
       {
-        personID: 'user1', muted: false, inMeeting: true, orgID: 'org1',
+        id: 'user1', muted: false, inMeeting: true, orgID: 'org1',
       },
     ],
   },
@@ -91,13 +91,13 @@ export default {
     destinationType: 'meeting',
     members: [
       {
-        personID: 'user1', muted: false, inMeeting: true, orgID: 'org1',
+        id: 'user1', muted: false, inMeeting: true, orgID: 'org1',
       },
       {
-        personID: 'user2', muted: true, inMeeting: true, orgID: 'org1',
+        id: 'user2', muted: true, inMeeting: true, orgID: 'org1',
       },
       {
-        personID: 'user3', inMeeting: false, orgID: 'org1',
+        id: 'user3', inMeeting: false, orgID: 'org1',
       },
     ],
   },
@@ -107,10 +107,10 @@ export default {
     destinationType: 'meeting',
     members: [
       {
-        personID: 'user1', muted: false, inMeeting: true, orgID: 'org1',
+        id: 'user1', muted: false, inMeeting: true, orgID: 'org1',
       },
       {
-        personID: 'user2', muted: true, inMeeting: true, orgID: 'org1',
+        id: 'user2', muted: true, inMeeting: true, orgID: 'org1',
       },
     ],
   },

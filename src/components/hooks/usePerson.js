@@ -13,10 +13,10 @@ import {AdapterContext} from './contexts';
 /**
  * Custom hook that returns person data of the given ID.
  *
- * @param {string} personID  ID of the person for which to return data.
+ * @param {string} id  ID of the person for which to return data.
  * @returns {Person} Data of the person
  */
-export default function usePerson(personID) {
+export default function usePerson(id) {
   const [person, setPerson] = useState({});
   const {peopleAdapter} = useContext(AdapterContext);
 
@@ -41,12 +41,12 @@ export default function usePerson(personID) {
       setPerson(newPerson);
     };
 
-    const subscription = peopleAdapter.getPerson(personID).subscribe(onPerson, onError);
+    const subscription = peopleAdapter.getPerson(id).subscribe(onPerson, onError);
 
     return () => {
       subscription.unsubscribe();
     };
-  }, [peopleAdapter, personID]);
+  }, [peopleAdapter, id]);
 
   return person;
 }
