@@ -26,3 +26,10 @@ Muted.args = {
   destinationID: 'meeting2',
   personID: 'user2',
 };
+
+export const ScreenSharing = Template.bind({});
+ScreenSharing.args = {
+  destinationType: 'meeting',
+  destinationID: 'meeting2',
+  personID: 'user3',
+};

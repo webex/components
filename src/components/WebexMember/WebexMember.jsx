@@ -28,13 +28,16 @@ export default function WebexMember({
     .find((itemMember) => itemMember.personID === personID);
 
   const isMuted = member && member.muted;
+  const isSharing = member && member.sharing;
 
   return (
     <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-member`}>
       <WebexAvatar personID={personID} displayStatus={displayStatus} />
       <div className="details">
         <div className="name">{`${firstName} ${lastName}`}</div>
+        {isSharing && <div className="presenter">Presenter</div>}
       </div>
+      {isSharing && <Icon name="icon-content-share_16" className="sharing" />}
       {isMuted && <Icon name="icon-microphone-muted_16" className="muted" />}
     </div>
   );
