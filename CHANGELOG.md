@@ -1,3 +1,10 @@
+# [1.49.0](https://github.com/webex/components/compare/v1.48.0...v1.49.0) (2021-04-01)
+
+
+### Features
+
+* **OrganizationsJsonAdapter:** implement the organizationsJSONAdapter ([c06fbde](https://github.com/webex/components/commit/c06fbdeb635f0aea84c8b9172272c05da1843ea0))
+
 # [1.48.0](https://github.com/webex/components/compare/v1.47.0...v1.48.0) (2021-03-31)
 
 
