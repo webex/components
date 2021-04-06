@@ -16,13 +16,9 @@
     text-overflow: ellipsis;
   }
 
-  .subtext {
+  .subtext, .roles {
     font-size: 0.875rem;
     color: $md-gray-70;
-  }
-
-  .presenter {
-    @extend .subtext;
   }
 
   .sharing {

@@ -208,14 +208,9 @@ Array [
             Barbara German
           </div>
           <div
-            className="subtext"
+            className="roles"
           >
-            You
-          </div>
-          <div
-            className="presenter"
-          >
-            Presenter
+            You, Presenter
           </div>
         </div>
         <i
@@ -262,6 +257,11 @@ Array [
             className="name"
           >
             Brenda Song
+          </div>
+          <div
+            className="roles"
+          >
+            Host
           </div>
         </div>
         <i
