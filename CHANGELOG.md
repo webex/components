@@ -1,3 +1,10 @@
+# [1.50.0](https://github.com/webex/components/compare/v1.49.1...v1.50.0) (2021-04-06)
+
+
+### Features
+
+* **hooks:** add useOrganization hook ([60e305e](https://github.com/webex/components/commit/60e305e483a443d40282f28489b29a44f2f711f0))
+
 ## [1.49.1](https://github.com/webex/components/compare/v1.49.0...v1.49.1) (2021-04-06)
 
 
