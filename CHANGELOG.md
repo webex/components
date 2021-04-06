@@ -1,3 +1,10 @@
+## [1.49.1](https://github.com/webex/components/compare/v1.49.0...v1.49.1) (2021-04-06)
+
+
+### Bug Fixes
+
+* **WebexMember:** make muted icon proportional with text ([2a79fc8](https://github.com/webex/components/commit/2a79fc89610eb9d5b85b676d43050283e8143e60))
+
 # [1.49.0](https://github.com/webex/components/compare/v1.48.0...v1.49.0) (2021-04-01)
 
 
