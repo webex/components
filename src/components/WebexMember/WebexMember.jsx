@@ -25,7 +25,7 @@ export default function WebexMember({
   const {firstName, lastName} = usePerson(personID);
   const members = useMembers(destinationID, destinationType);
   const member = members
-    .find((itemMember) => itemMember.personID === personID);
+    .find((itemMember) => itemMember.ID === personID);
 
   const isMuted = member && member.muted;
   const isSharing = member && member.sharing;
