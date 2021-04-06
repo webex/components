@@ -5,28 +5,28 @@ export default {
     destinationType: 'room',
     members: [
       {
-        personID: 'user1',
+        ID: 'user1',
         orgID: 'org1',
         muted: null,
         sharing: null,
         inMeeting: null,
       },
       {
-        personID: 'user2',
+        ID: 'user2',
         orgID: 'org1',
         muted: null,
         sharing: null,
         inMeeting: null,
       },
       {
-        personID: 'user3',
+        ID: 'user3',
         orgID: 'org1',
         muted: null,
         sharing: null,
         inMeeting: null,
       },
       {
-        personID: 'user4',
+        ID: 'user4',
         orgID: 'org1',
         muted: null,
         sharing: null,
@@ -40,21 +40,21 @@ export default {
     destinationType: 'room',
     members: [
       {
-        personID: 'user1',
+        ID: 'user1',
         orgID: 'org1',
         muted: null,
         sharing: null,
         inMeeting: null,
       },
       {
-        personID: 'user5',
+        ID: 'user5',
         orgID: 'org2',
         muted: null,
         sharing: null,
         inMeeting: null,
       },
       {
-        personID: 'user6',
+        ID: 'user6',
         orgID: 'org1',
         muted: null,
         sharing: null,
@@ -68,21 +68,21 @@ export default {
     destinationType: 'meeting',
     members: [
       {
-        personID: 'user1',
+        ID: 'user1',
         orgID: 'org1',
         muted: false,
         sharing: true,
         inMeeting: false,
       },
       {
-        personID: 'user2',
+        ID: 'user2',
         orgID: 'org1',
         muted: true,
         sharing: false,
         inMeeting: true,
       },
       {
-        personID: 'user3',
+        ID: 'user3',
         orgID: 'org1',
         muted: true,
         sharing: false,
@@ -96,42 +96,42 @@ export default {
     destinationType: 'meeting',
     members: [
       {
-        personID: 'user1',
+        ID: 'user1',
         orgID: 'org1',
         muted: false,
         sharing: false,
         inMeeting: true,
       },
       {
-        personID: 'user2',
+        ID: 'user2',
         orgID: 'org1',
         muted: true,
         sharing: false,
         inMeeting: true,
       },
       {
-        personID: 'user3',
+        ID: 'user3',
         orgID: 'org1',
         muted: false,
         sharing: true,
         inMeeting: true,
       },
       {
-        personID: 'user4',
+        ID: 'user4',
         orgID: 'org1',
         muted: true,
         sharing: false,
         inMeeting: true,
       },
       {
-        personID: 'user5',
+        ID: 'user5',
         orgID: 'org2',
         muted: false,
         sharing: false,
         inMeeting: true,
       },
       {
-        personID: 'user6',
+        ID: 'user6',
         orgID: 'org1',
         muted: true,
         sharing: false,
@@ -145,7 +145,7 @@ export default {
     destinationType: 'meeting',
     members: [
       {
-        personID: 'user1',
+        ID: 'user1',
         orgID: 'org1',
         muted: false,
         sharing: true,
@@ -159,21 +159,21 @@ export default {
     destinationType: 'meeting',
     members: [
       {
-        personID: 'user1',
+        ID: 'user1',
         orgID: 'org1',
         muted: false,
         sharing: true,
         inMeeting: true,
       },
       {
-        personID: 'user2',
+        ID: 'user2',
         orgID: 'org1',
         muted: true,
         sharing: false,
         inMeeting: true,
       },
       {
-        personID: 'user3',
+        ID: 'user3',
         orgID: 'org1',
         muted: false,
         sharing: false,
@@ -187,14 +187,14 @@ export default {
     destinationType: 'meeting',
     members: [
       {
-        personID: 'user1',
+        ID: 'user1',
         orgID: 'org1',
         muted: false,
         sharing: true,
         inMeeting: true,
       },
       {
-        personID: 'user2',
+        ID: 'user2',
         orgID: 'org1',
         muted: true,
         sharing: false,
