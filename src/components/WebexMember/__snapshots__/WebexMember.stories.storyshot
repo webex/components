@@ -69,6 +69,80 @@ Array [
 ]
 `;
 
+exports[`Storyshots Platform/Webex Member Screen Sharing 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "width": "20rem",
+      }
+    }
+  >
+    <div
+      className="wxc-member"
+    >
+      <div
+        className="md-avatar md-avatar--medium"
+        title="Brenda Song"
+      >
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
+          }
+        >
+          BS
+        </span>
+        <img
+          alt="Brenda Song"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/brenda.png"
+        />
+      </div>
+      <div
+        className="details"
+      >
+        <div
+          className="name"
+        >
+          Brenda Song
+        </div>
+        <div
+          className="presenter"
+        >
+          Presenter
+        </div>
+      </div>
+      <i
+        aria-label={null}
+        className="md-icon icon icon-content-share_16 sharing"
+        style={
+          Object {
+            "fontSize": 16,
+          }
+        }
+      />
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
+`;
+
 exports[`Storyshots Platform/Webex Member Space 1`] = `
 Array [
   <div
