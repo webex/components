@@ -1,3 +1,10 @@
+# [1.51.0](https://github.com/webex/components/compare/v1.50.0...v1.51.0) (2021-04-07)
+
+
+### Features
+
+* **WebexMember:** display icon when member is sharing ([18073da](https://github.com/webex/components/commit/18073dac9e995d62956fca211a30bf039d7beefc))
+
 # [1.50.0](https://github.com/webex/components/compare/v1.49.1...v1.50.0) (2021-04-06)
 
 
