@@ -27,9 +27,9 @@ import {Observable} from 'rxjs';
  *     "destinationID": "room-3",
  *     "destinationType": "room"
  *     "members": [
- *       {"personID": "person-1"},
- *       {"personID": "person-2"},
- *       {"personID": "person-5"},
+ *       {"ID": "person-1"},
+ *       {"ID": "person-2"},
+ *       {"ID": "person-5"},
  *     ]
  *   }
  * }
