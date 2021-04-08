@@ -8,17 +8,17 @@ import WebexInterstitialMeeting from '../WebexInterstitialMeeting/WebexInterstit
 import WebexMeetingControl from '../WebexMeetingControl/WebexMeetingControl';
 import WebexMeetingControls from '../WebexMeetingControl/WebexMeetingControls';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
-import {useMeetingDestination} from '../hooks';
+import {useMeeting} from '../hooks';
 
 /**
  * Webex Meeting component displays the default Webex meeting experience.
  *
- * @param {string} props.meetingDestination  ID of the virtual meeting location
- * @param {Array} [props.controls]  Array of control names to display
- * @returns {Object} JSX of the component
+ * @param {string} props.meetingID  ID of the meeting
+ * @param {array} [props.controls]  Array of control names to display
+ * @returns {object} JSX of the component
  */
-export default function WebexMeeting({meetingDestination, controls}) {
-  const {ID, remoteVideo} = useMeetingDestination(meetingDestination);
+export default function WebexMeeting({meetingID, controls}) {
+  const {ID, remoteVideo} = useMeeting(meetingID);
   const isActive = remoteVideo !== null;
 
   const classBaseName = `${WEBEX_COMPONENTS_CLASS_PREFIX}-meeting`;
@@ -60,7 +60,7 @@ export default function WebexMeeting({meetingDestination, controls}) {
 }
 
 WebexMeeting.propTypes = {
-  meetingDestination: PropTypes.string.isRequired,
+  meetingID: PropTypes.string.isRequired,
   controls: PropTypes.func,
 };
 
