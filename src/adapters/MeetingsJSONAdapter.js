@@ -378,13 +378,13 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   muteAudioControl(ID) {
     const unmuted = {
       ID: MUTE_AUDIO_CONTROL,
-      icon: 'microphone-muted',
+      icon: 'microphone-muted_28',
       tooltip: 'Mute',
       state: MeetingControlState.INACTIVE,
     };
     const muted = {
       ID: MUTE_AUDIO_CONTROL,
-      icon: 'microphone-muted',
+      icon: 'microphone-muted_28',
       tooltip: 'Unmute',
       state: MeetingControlState.ACTIVE,
     };
@@ -419,14 +419,14 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   muteVideoControl(ID) {
     const muted = {
       ID: MUTE_VIDEO_CONTROL,
-      icon: 'camera-muted',
+      icon: 'camera-muted_28',
       tooltip: 'Start video',
       state: MeetingControlState.ACTIVE,
       text: null,
     };
     const unmuted = {
       ID: MUTE_VIDEO_CONTROL,
-      icon: 'camera-muted',
+      icon: 'camera-muted_28',
       tooltip: 'Stop video',
       state: MeetingControlState.INACTIVE,
       text: null,
@@ -483,7 +483,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
     return Observable.create((observer) => {
       observer.next({
         ID: LEAVE_CONTROL,
-        icon: 'cancel',
+        icon: 'cancel_28',
         tooltip: 'Leave',
         state: MeetingControlState.ACTIVE,
       });
@@ -550,13 +550,13 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   shareControl(ID) {
     const inactive = {
       ID: SHARE_CONTROL,
-      icon: 'share',
+      icon: 'share-screen-presence-stroke_26',
       tooltip: 'Start Sharing',
       state: MeetingControlState.INACTIVE,
     };
     const active = {
       ID: SHARE_CONTROL,
-      icon: 'share',
+      icon: 'share-screen-presence-stroke_26',
       tooltip: 'Stop Sharing',
       state: MeetingControlState.ACTIVE,
     };
@@ -592,7 +592,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
     return Observable.create((observer) => {
       observer.next({
         ID: JOIN_CONTROL,
-        icon: 'microphone',
+        icon: 'microphone_28',
         tooltip: 'Mute disabled',
         state: MeetingControlState.DISABLED,
       });

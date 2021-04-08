@@ -283,7 +283,7 @@ describe('Meetings JSON Adapter', () => {
       meetingsJSONAdapter.leaveControl().subscribe((display) => {
         expect(display).toMatchObject({
           ID: 'leave-meeting',
-          icon: 'cancel',
+          icon: 'cancel_28',
           tooltip: 'Leave',
           state: 'active',
         });
@@ -305,7 +305,7 @@ describe('Meetings JSON Adapter', () => {
         .subscribe((display) => {
           expect(display).toMatchObject({
             ID: 'mute-audio',
-            icon: 'microphone-muted',
+            icon: 'microphone-muted_28',
             tooltip: 'Mute',
             state: 'inactive',
           });
@@ -321,7 +321,7 @@ describe('Meetings JSON Adapter', () => {
         .subscribe((display) => {
           expect(display).toMatchObject({
             ID: 'mute-audio',
-            icon: 'microphone-muted',
+            icon: 'microphone-muted_28',
             tooltip: 'Unmute',
             state: 'active',
           });
@@ -336,7 +336,7 @@ describe('Meetings JSON Adapter', () => {
         .subscribe((display) => {
           expect(display).toMatchObject({
             ID: 'mute-audio',
-            icon: 'microphone-muted',
+            icon: 'microphone-muted_28',
             tooltip: 'Unmute',
             state: 'active',
           });
@@ -371,7 +371,7 @@ describe('Meetings JSON Adapter', () => {
         .subscribe((display) => {
           expect(display).toMatchObject({
             ID: 'mute-video',
-            icon: 'camera-muted',
+            icon: 'camera-muted_28',
             tooltip: 'Stop video',
             state: 'inactive',
           });
@@ -387,7 +387,7 @@ describe('Meetings JSON Adapter', () => {
         .subscribe((display) => {
           expect(display).toMatchObject({
             ID: 'mute-video',
-            icon: 'camera-muted',
+            icon: 'camera-muted_28',
             tooltip: 'Start video',
             state: 'active',
           });
@@ -402,7 +402,7 @@ describe('Meetings JSON Adapter', () => {
         .subscribe((display) => {
           expect(display).toMatchObject({
             ID: 'mute-video',
-            icon: 'camera-muted',
+            icon: 'camera-muted_28',
             tooltip: 'Start video',
             state: 'active',
           });
