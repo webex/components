@@ -1,5 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Platform/Webex Member External Organization 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "width": "20rem",
+      }
+    }
+  >
+    <div
+      className="wxc-member"
+    >
+      <div
+        className="md-avatar md-avatar--medium"
+        title="Brandon Seeger"
+      >
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
+          }
+        >
+          BS
+        </span>
+        <img
+          alt="Brandon Seeger"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/brandon.png"
+        />
+      </div>
+      <div
+        className="details"
+      >
+        <div
+          className="name"
+        >
+          Brandon Seeger
+        </div>
+        <div
+          className="organization"
+        >
+          Gmail.com
+        </div>
+      </div>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
+`;
+
 exports[`Storyshots Platform/Webex Member Host 1`] = `
 Array [
   <div
