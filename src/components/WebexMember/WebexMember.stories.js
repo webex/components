@@ -27,6 +27,13 @@ Muted.args = {
   personID: 'user2',
 };
 
+export const ExternalOrganization = Template.bind({});
+ExternalOrganization.args = {
+  destinationType: 'room',
+  destinationID: 'room2',
+  personID: 'user5',
+};
+
 export const Host = Template.bind({});
 Host.args = {
   destinationType: 'meeting',
