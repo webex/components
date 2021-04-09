@@ -1,3 +1,11 @@
+# [1.52.0](https://github.com/webex/components/compare/v1.51.0...v1.52.0) (2021-04-09)
+
+
+### Features
+
+* **WebexMeeting:** set meetingID as component prop ([1fbc506](https://github.com/webex/components/commit/1fbc506f75d27d3b25e781ce6cda8fb8a809d063))
+* **WebexMember:** indicate current user if in meeting ([6635b44](https://github.com/webex/components/commit/6635b4490b7a558a83da75ed6c74be104e771982))
+
 # [1.51.0](https://github.com/webex/components/compare/v1.50.0...v1.51.0) (2021-04-07)
 
 
