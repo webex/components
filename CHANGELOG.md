@@ -1,3 +1,10 @@
+## [1.52.1](https://github.com/webex/components/compare/v1.52.0...v1.52.1) (2021-04-10)
+
+
+### Bug Fixes
+
+* **WebexMeetingControl:** update screen sharing icon ([d2b00de](https://github.com/webex/components/commit/d2b00dea8cd322e4808e7f19ecb7ca88a39a4069))
+
 # [1.52.0](https://github.com/webex/components/compare/v1.51.0...v1.52.0) (2021-04-09)
 
 
