@@ -35,7 +35,7 @@ the [component data adapter](../../adapters/WebexJSONAdapter.js) that we created
     const controls = (isActive) => isActive ? ['join-meeting'] : ['leave-meeting'];
 
     <WebexDataProvider adapter={jsonAdapter}>
-      <WebexMeeting meetingDestination="meetingDestination" controls?={controls}/>
+      <WebexMeeting meetingID="meetingID" controls?={controls}/>
     </WebexDataProvider>
     ```
 
