@@ -213,7 +213,7 @@ Array [
         >
           <i
             aria-label={null}
-            className="md-icon icon icon-share_28"
+            className="md-icon icon icon-share-screen-presence-stroke_26"
             style={
               Object {
                 "fontSize": 28,
@@ -591,7 +591,7 @@ Array [
         >
           <i
             aria-label={null}
-            className="md-icon icon icon-share_28"
+            className="md-icon icon icon-share-screen-presence-stroke_26"
             style={
               Object {
                 "fontSize": 28,

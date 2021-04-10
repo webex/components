@@ -26,7 +26,7 @@ export default function WebexMeetingControl({type}) {
   if (icon) {
     button = (
       <Button circle color={iconColor} size={56} ariaLabel={tooltip} onClick={action} disabled={isDisabled}>
-        <Icon name={`${icon}_28`} />
+        <Icon name={icon} size={28} />
       </Button>
     );
   }
