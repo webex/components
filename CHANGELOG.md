@@ -1,3 +1,10 @@
+# [1.53.0](https://github.com/webex/components/compare/v1.52.1...v1.53.0) (2021-04-10)
+
+
+### Features
+
+* **WebexMember:** display if user is host ([f8bd87a](https://github.com/webex/components/commit/f8bd87a56d3ada424c8e4c26329ac5a834c2a8a1))
+
 ## [1.52.1](https://github.com/webex/components/compare/v1.52.0...v1.52.1) (2021-04-10)
 
 
