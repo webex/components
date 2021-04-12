@@ -318,6 +318,11 @@ Array [
             className="name"
           >
             Giacomo Edwards
+            <span
+              className="guest"
+            >
+               (Guest)
+            </span>
           </div>
         </div>
         <i

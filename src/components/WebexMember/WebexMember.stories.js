@@ -41,6 +41,13 @@ Host.args = {
   personID: 'user4',
 };
 
+export const Guest = Template.bind({});
+Guest.args = {
+  destinationType: 'meeting',
+  destinationID: 'meeting2',
+  personID: 'user6',
+};
+
 export const ScreenSharing = Template.bind({});
 ScreenSharing.args = {
   destinationType: 'meeting',

@@ -35,7 +35,8 @@ export default function WebexMember({
   const isSharing = member && member.sharing;
   const showMe = me.ID === personID && destinationType === DestinationType.MEETING;
   const isHost = member && member.host;
-  
+  const isGuest = member && member.guest;
+
   const roles = [
     showMe && 'You',
     isHost && 'Host',
@@ -46,7 +47,10 @@ export default function WebexMember({
     <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-member`}>
       <WebexAvatar personID={personID} displayStatus={displayStatus} />
       <div className="details">
-        <div className="name">{`${firstName} ${lastName}`}</div>
+        <div className="name">
+          {`${firstName} ${lastName}`} 
+          {isGuest && <span className="guest"> (Guest)</span>}
+        </div>
         {roles.length > 0 && <div className="roles">{roles.join(', ')}</div>}
         {isExternal && <div className="organization">{organization.name}</div>}
       </div>
