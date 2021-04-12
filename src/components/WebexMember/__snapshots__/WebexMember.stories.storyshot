@@ -65,6 +65,80 @@ Array [
 ]
 `;
 
+exports[`Storyshots Platform/Webex Member Guest 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "width": "20rem",
+      }
+    }
+  >
+    <div
+      className="wxc-member"
+    >
+      <div
+        className="md-avatar md-avatar--medium"
+        title="Maria Rossi"
+      >
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
+          }
+        >
+          MR
+        </span>
+        <img
+          alt="Maria Rossi"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/maria.png"
+        />
+      </div>
+      <div
+        className="details"
+      >
+        <div
+          className="name"
+        >
+          Maria Rossi
+          <span
+            className="guest"
+          >
+             (Guest)
+          </span>
+        </div>
+      </div>
+      <i
+        aria-label={null}
+        className="md-icon icon icon-microphone-muted_16 muted"
+        style={
+          Object {
+            "fontSize": 16,
+          }
+        }
+      />
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
+`;
+
 exports[`Storyshots Platform/Webex Member Host 1`] = `
 Array [
   <div

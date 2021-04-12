@@ -14,6 +14,10 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    .guest {
+      color: $md-gray-70;
+    }
   }
 
   .subtext, .roles {

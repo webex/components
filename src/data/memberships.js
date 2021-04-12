@@ -11,6 +11,7 @@ export default {
         sharing: null,
         inMeeting: null,
         host: null,
+        guest: null,
       },
       {
         ID: 'user2',
@@ -19,6 +20,7 @@ export default {
         sharing: null,
         inMeeting: null,
         host: null,
+        guest: null,
       },
       {
         ID: 'user3',
@@ -27,6 +29,7 @@ export default {
         sharing: null,
         inMeeting: null,
         host: null,
+        guest: null,
       },
       {
         ID: 'user4',
@@ -35,6 +38,7 @@ export default {
         sharing: null,
         inMeeting: null,
         host: null,
+        guest: null,
       },
     ],
   },
@@ -50,6 +54,7 @@ export default {
         sharing: null,
         inMeeting: null,
         host: null,
+        guest: null,
       },
       {
         ID: 'user5',
@@ -58,6 +63,7 @@ export default {
         sharing: null,
         inMeeting: null,
         host: null,
+        guest: null,
       },
       {
         ID: 'user6',
@@ -66,6 +72,7 @@ export default {
         sharing: null,
         inMeeting: null,
         host: null,
+        guest: null,
       },
     ],
   },
@@ -81,6 +88,7 @@ export default {
         sharing: true,
         inMeeting: true,
         host: false,
+        guest: false,
       },
       {
         ID: 'user2',
@@ -89,6 +97,7 @@ export default {
         sharing: false,
         inMeeting: false,
         host: false,
+        guest: true,
       },
       {
         ID: 'user3',
@@ -97,6 +106,7 @@ export default {
         sharing: false,
         inMeeting: true,
         host: true,
+        guest: false,
       },
     ],
   },
@@ -112,6 +122,7 @@ export default {
         sharing: false,
         inMeeting: true,
         host: false,
+        guest: false,
       },
       {
         ID: 'user2',
@@ -120,6 +131,7 @@ export default {
         sharing: false,
         inMeeting: true,
         host: false,
+        guest: false,
       },
       {
         ID: 'user3',
@@ -128,6 +140,7 @@ export default {
         sharing: true,
         inMeeting: true,
         host: false,
+        guest: false,
       },
       {
         ID: 'user4',
@@ -136,6 +149,7 @@ export default {
         sharing: false,
         inMeeting: true,
         host: true,
+        guest: false,
       },
       {
         ID: 'user5',
@@ -144,6 +158,7 @@ export default {
         sharing: false,
         inMeeting: true,
         host: false,
+        guest: true,
       },
       {
         ID: 'user6',
@@ -152,6 +167,7 @@ export default {
         sharing: false,
         inMeeting: true,
         host: false,
+        guest: true,
       },
     ],
   },
@@ -167,6 +183,7 @@ export default {
         sharing: true,
         inMeeting: true,
         host: false,
+        guest: false,
       },
     ],
   },
@@ -182,6 +199,7 @@ export default {
         sharing: true,
         inMeeting: true,
         host: false,
+        guest: false,
       },
       {
         ID: 'user2',
@@ -190,6 +208,7 @@ export default {
         sharing: false,
         inMeeting: true,
         host: false,
+        guest: false,
       },
       {
         ID: 'user3',
@@ -198,6 +217,7 @@ export default {
         sharing: false,
         inMeeting: false,
         host: false,
+        guest: false,
       },
     ],
   },
@@ -213,6 +233,7 @@ export default {
         sharing: true,
         inMeeting: true,
         host: false,
+        guest: false,
       },
       {
         ID: 'user2',
@@ -221,6 +242,7 @@ export default {
         sharing: false,
         inMeeting: true,
         host: false,
+        guest: false,
       },
     ],
   },
