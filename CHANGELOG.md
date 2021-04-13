@@ -1,3 +1,10 @@
+# [1.56.0](https://github.com/webex/components/compare/v1.55.0...v1.56.0) (2021-04-13)
+
+
+### Features
+
+* **MeetingsJsonAdapter:** add member-roster control ([4e49a62](https://github.com/webex/components/commit/4e49a62d8b8c67fef7f8e5f26e0f80b3d4473bc3))
+
 # [1.55.0](https://github.com/webex/components/compare/v1.54.0...v1.55.0) (2021-04-13)
 
 
