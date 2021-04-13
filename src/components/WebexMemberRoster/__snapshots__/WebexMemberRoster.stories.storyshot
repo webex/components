@@ -101,6 +101,11 @@ Array [
           >
             Brandon Seeger
           </div>
+          <div
+            className="organization"
+          >
+            Gmail.com
+          </div>
         </div>
       </div>
       <div

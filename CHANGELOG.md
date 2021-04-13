@@ -1,3 +1,17 @@
+# [1.55.0](https://github.com/webex/components/compare/v1.54.0...v1.55.0) (2021-04-13)
+
+
+### Features
+
+* **hooks:** export useMeetingDestination ([9c982bd](https://github.com/webex/components/commit/9c982bde52e52a88d85a273af87e9772f3b3c929))
+
+# [1.54.0](https://github.com/webex/components/compare/v1.53.0...v1.54.0) (2021-04-13)
+
+
+### Features
+
+* **WebexMember:** display exernal user's organization ([41e35c3](https://github.com/webex/components/commit/41e35c30ca471d62cb98721e75df85310af36f8e))
+
 # [1.53.0](https://github.com/webex/components/compare/v1.52.1...v1.53.0) (2021-04-10)
 
 
