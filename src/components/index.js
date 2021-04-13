@@ -12,3 +12,4 @@ export {default as WebexMeetingInfo} from './WebexMeetingInfo/WebexMeetingInfo';
 export {default as WebexMember} from './WebexMember/WebexMember';
 export {default as WebexMemberRoster} from './WebexMemberRoster/WebexMemberRoster';
 export {default as WebexRemoteMedia} from './WebexRemoteMedia/WebexRemoteMedia';
+export {default as useMeetingDestination} from './hooks/useMeetingDestination';
