@@ -1,3 +1,10 @@
+# [1.55.0](https://github.com/webex/components/compare/v1.54.0...v1.55.0) (2021-04-13)
+
+
+### Features
+
+* **hooks:** export useMeetingDestination ([9c982bd](https://github.com/webex/components/commit/9c982bde52e52a88d85a273af87e9772f3b3c929))
+
 # [1.54.0](https://github.com/webex/components/compare/v1.53.0...v1.54.0) (2021-04-13)
 
 
