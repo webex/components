@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {DestinationType} from '@webex/component-adapter-interfaces';
 import {Icon} from '@momentum-ui/react';
 
-import {usePerson, useMembers, useMe} from '../hooks';
+import {usePerson, useMembers, useMe, useOrganization} from '../hooks';
 import WebexAvatar from '../WebexAvatar/WebexAvatar';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 
@@ -23,13 +23,15 @@ export default function WebexMember({
   personID,
   displayStatus,
 }) {
-  const {firstName, lastName} = usePerson(personID);
+  const {firstName, lastName, orgID} = usePerson(personID);
   const me = useMe();
   const members = useMembers(destinationID, destinationType);
   const member = members
     .find((itemMember) => itemMember.ID === personID);
+  const organization = useOrganization(orgID);
 
   const isMuted = member && member.muted;
+  const isExternal = me.orgID !== orgID;
   const isSharing = member && member.sharing;
   const showMe = me.ID === personID && destinationType === DestinationType.MEETING;
   const isHost = member && member.host;
@@ -46,6 +48,7 @@ export default function WebexMember({
       <div className="details">
         <div className="name">{`${firstName} ${lastName}`}</div>
         {roles.length > 0 && <div className="roles">{roles.join(', ')}</div>}
+        {isExternal && <div className="organization">{organization.name}</div>}
       </div>
       {isSharing && <Icon name="icon-content-share_16" className="sharing" />}
       {isMuted && <Icon name="icon-microphone-muted_16" className="muted" />}
