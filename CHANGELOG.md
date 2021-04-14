@@ -1,3 +1,10 @@
+# [1.57.0](https://github.com/webex/components/compare/v1.56.0...v1.57.0) (2021-04-14)
+
+
+### Features
+
+* **WebexMember:** display if user is guest ([5b2ac94](https://github.com/webex/components/commit/5b2ac94c72e7da2e5a74a1675b8945b9b77eac57))
+
 # [1.56.0](https://github.com/webex/components/compare/v1.55.0...v1.56.0) (2021-04-13)
 
 
