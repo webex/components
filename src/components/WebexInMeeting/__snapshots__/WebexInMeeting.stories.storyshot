@@ -161,6 +161,57 @@ Array [
 ]
 `;
 
+exports[`Storyshots Meetings/Webex In-Meeting Sharing 1`] = `
+Array [
+  <div
+    className="wxc-in-meeting remote-sharing"
+  >
+    <div
+      className="wxc-remote-media remote-media-in-meeting remote-video-n-share"
+    >
+      <video
+        autoPlay={true}
+        className="wxc-remote-video"
+        muted={true}
+        playsInline={true}
+      />
+      <video
+        autoPlay={true}
+        className="wxc-remote-share"
+        muted={true}
+        playsInline={true}
+      />
+      <audio
+        autoPlay={true}
+      />
+    </div>
+    <div
+      className="wxc-local-media local-media-in-meeting"
+    >
+      <video
+        autoPlay={true}
+        playsInline={true}
+      />
+    </div>
+    <div
+      className="share-notice"
+    >
+      You're sharing your screen
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+]
+`;
+
 exports[`Storyshots Meetings/Webex In-Meeting Video Only 1`] = `
 Array [
   <div

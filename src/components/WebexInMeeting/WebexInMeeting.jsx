@@ -16,7 +16,7 @@ import {TABLET, DESKTOP, DESKTOP_LARGE} from '../breakpoints';
  * @returns {Object} JSX of the component
  */
 export default function WebexInMeeting({meetingID}) {
-  const {remoteShare} = useMeeting(meetingID);
+  const {remoteShare, localShare} = useMeeting(meetingID);
   const [meetingRef, {width}] = useElementDimensions();
   const classBaseName = `${WEBEX_COMPONENTS_CLASS_PREFIX}-in-meeting`;
   const mainClasses = {
@@ -31,6 +31,7 @@ export default function WebexInMeeting({meetingID}) {
     <div ref={meetingRef} className={classNames(mainClasses)}>
       <WebexRemoteMedia className="remote-media-in-meeting" meetingID={meetingID} />
       <WebexLocalMedia className="local-media-in-meeting" meetingID={meetingID} />
+      {localShare && <div className="share-notice">You&apos;re sharing your screen</div>}
     </div>
   );
 }
