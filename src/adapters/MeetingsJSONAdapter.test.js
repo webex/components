@@ -453,7 +453,7 @@ describe('Meetings JSON Adapter', () => {
         .subscribe((display) => {
           expect(display).toMatchObject({
             ID: 'member-roster',
-            icon: 'participant-list',
+            icon: 'participant-list_28',
             tooltip: 'Show participants panel',
             state: 'inactive',
             text: 'Participants',
@@ -470,7 +470,7 @@ describe('Meetings JSON Adapter', () => {
         .subscribe((display) => {
           expect(display).toMatchObject({
             ID: 'member-roster',
-            icon: 'participant-list',
+            icon: 'participant-list_28',
             tooltip: 'Hide participants panel',
             state: 'active',
             text: 'Participants',
