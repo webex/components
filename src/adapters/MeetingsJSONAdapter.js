@@ -621,14 +621,14 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   rosterControl(ID) {
     const active = {
       ID: ROSTER_CONTROL,
-      icon: 'participant-list',
+      icon: 'participant-list_28',
       tooltip: 'Hide participants panel',
       state: MeetingControlState.ACTIVE,
       text: 'Participants',
     };
     const inactive = {
       ID: ROSTER_CONTROL,
-      icon: 'participant-list',
+      icon: 'participant-list_28',
       tooltip: 'Show participants panel',
       state: MeetingControlState.INACTIVE,
       text: 'Participants',
