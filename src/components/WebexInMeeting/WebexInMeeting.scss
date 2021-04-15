@@ -16,6 +16,17 @@ $shadow-color: rgba(0, 0, 0, 0.2);
     }
   }
 
+  .share-notice {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba($md-gray-70, .5);
+    color: $md-white;
+    padding-top: 0.425rem;
+    padding-bottom: 0.425rem;
+  }
+
   .local-media-in-meeting {
     @include media-preview-mobile();
 

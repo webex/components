@@ -107,6 +107,11 @@ Array [
           playsInline={true}
         />
       </div>
+      <div
+        className="share-notice"
+      >
+        You're sharing your screen
+      </div>
     </div>
     <div
       className="wxc-meeting-controls meeting-controls-container"
@@ -485,6 +490,11 @@ Array [
           playsInline={true}
         />
       </div>
+      <div
+        className="share-notice"
+      >
+        You're sharing your screen
+      </div>
     </div>
     <div
       className="wxc-meeting-controls meeting-controls-container"
@@ -564,10 +574,10 @@ Array [
         </span>
       </button>
       <button
-        alt="Start Sharing"
-        aria-label="Start Sharing"
+        alt="Stop Sharing"
+        aria-label="Stop Sharing"
         aria-pressed={null}
-        className="md-button md-button--circle md-button--56"
+        className="md-button md-button--circle md-button--56 md-button--red"
         data-md-event-key="md-button-0"
         disabled={false}
         id="md-button-0"
