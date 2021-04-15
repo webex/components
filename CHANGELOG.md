@@ -1,3 +1,10 @@
+# [1.58.0](https://github.com/webex/components/compare/v1.57.0...v1.58.0) (2021-04-15)
+
+
+### Features
+
+* **WebexMeeting:** add an overlay banner when screen sharing ([e3e2901](https://github.com/webex/components/commit/e3e290101bc25441f338af381a0797f971c046f0))
+
 # [1.57.0](https://github.com/webex/components/compare/v1.56.0...v1.57.0) (2021-04-14)
 
 
