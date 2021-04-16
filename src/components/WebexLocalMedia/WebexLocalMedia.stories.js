@@ -8,14 +8,22 @@ export default {
 
 const Template = (args) => <WebexLocalMedia {...args} />;
 
-export const MediaEnabled = Template.bind({});
-MediaEnabled.args = {
+export const Video = Template.bind({});
+Video.args = {
   meetingID: 'meeting1',
+  mediaType: 'video',
 };
 
-export const MediaDisabled = Template.bind({});
-MediaDisabled.args = {
+export const ScreenShare = Template.bind({});
+ScreenShare.args = {
+  meetingID: 'meeting1',
+  mediaType: 'screen',
+};
+
+export const NoMedia = Template.bind({});
+NoMedia.args = {
   meetingID: 'meeting2',
+  mediaType: 'video',
 };
 
 // TODO: Missing custom styling story
