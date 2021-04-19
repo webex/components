@@ -1,3 +1,10 @@
+## [1.58.1](https://github.com/webex/components/compare/v1.58.0...v1.58.1) (2021-04-19)
+
+
+### Bug Fixes
+
+* **WebexMeetingControl:** update size for participant list icon ([1fbfe5f](https://github.com/webex/components/commit/1fbfe5f5ca1c93f8592db9a5be1a0a8a942a6548))
+
 # [1.58.0](https://github.com/webex/components/compare/v1.57.0...v1.58.0) (2021-04-15)
 
 
