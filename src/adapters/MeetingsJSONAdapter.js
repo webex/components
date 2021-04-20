@@ -187,6 +187,11 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
           meeting.remoteVideo = this.getVideoStream();
         }
 
+        // Add a share stream as if it were a remote sharing
+        if (meeting.remoteShare instanceof MediaStream) {
+          meeting.remoteShare = this.getShareStream();
+        }
+
         observer.next(meeting);
       } else {
         observer.error(new Error(`Could not find meeting with ID "${ID}"`));
@@ -321,8 +326,8 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @private
    */
   // eslint-disable-next-line class-methods-use-this
-  getVideoStream() {
-    const video = document.getElementById('remote-video');
+  getStreamFromElement(id) {
+    const video = document.getElementById(id);
     let stream = new MediaStream();
 
     if (video && video.captureStream) {
@@ -332,6 +337,28 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
     }
 
     return stream;
+  }
+
+  /**
+   * Returns a promise to a MediaStream object that captures the contents of a video.
+   *
+   * @returns {Promise.<MediaStream>} Media stream that captures display
+   * @private
+   */
+  // eslint-disable-next-line class-methods-use-this
+  getVideoStream() {
+    return this.getStreamFromElement('remote-video');
+  }
+
+  /**
+   * Returns a promise to a MediaStream object that captures the contents of a screen share
+   *
+   * @returns {Promise.<MediaStream>} Media stream that captures display
+   * @private
+   */
+  // eslint-disable-next-line class-methods-use-this
+  getShareStream() {
+    return this.getStreamFromElement('remote-share');
   }
 
   /**
