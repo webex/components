@@ -7,7 +7,7 @@ export default {
     localShare: new MediaStream(),
     remoteAudio: new MediaStream(),
     remoteVideo: new MediaStream(),
-    remoteShare: new MediaStream(),
+    remoteShare: null,
     showRoster: false,
   },
   meeting2: {
