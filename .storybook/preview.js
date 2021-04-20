@@ -21,6 +21,7 @@ export const decorators = [
       </WebexDataProvider>
 
       <video id="remote-video" src="./video/ongoing-meeting.mp4" muted autoPlay playsInline loop width="0" height="0" />
+      <video id="remote-share" src="./video/ongoing-share.mp4" muted autoPlay playsInline loop width="0" height="0" />
     </>
   )},
 ];

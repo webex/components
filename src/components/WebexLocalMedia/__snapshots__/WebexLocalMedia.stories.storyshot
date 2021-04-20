@@ -40,6 +40,16 @@ Array [
     src="./video/ongoing-meeting.mp4"
     width="0"
   />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
 ]
 `;
 
@@ -61,6 +71,16 @@ Array [
     muted={true}
     playsInline={true}
     src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
     width="0"
   />,
 ]
