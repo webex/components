@@ -191,7 +191,7 @@ Array [
 ]
 `;
 
-exports[`Storyshots Meetings/Webex In-Meeting Sharing 1`] = `
+exports[`Storyshots Meetings/Webex In-Meeting Local Share 1`] = `
 Array [
   <div
     className="wxc-in-meeting"
@@ -221,6 +221,82 @@ Array [
       className="share-notice"
     >
       You're sharing your screen
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex In-Meeting Remote Share 1`] = `
+Array [
+  <div
+    className="wxc-in-meeting remote-sharing"
+  >
+    <div
+      className="wxc-remote-media remote-media-in-meeting remote-video-n-share"
+    >
+      <video
+        autoPlay={true}
+        className="wxc-remote-video"
+        muted={true}
+        playsInline={true}
+      />
+      <video
+        autoPlay={true}
+        className="wxc-remote-share"
+        muted={true}
+        playsInline={true}
+      />
+      <audio
+        autoPlay={true}
+      />
+    </div>
+    <div
+      className="wxc-local-media wxc-local-media-no-media local-media-in-meeting"
+    >
+      <div
+        className="md-avatar md-avatar--medium"
+        title="Barbara German"
+      >
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
+          }
+        >
+          BG
+        </span>
+        <img
+          alt="Barbara German"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/barbara.png"
+        />
+      </div>
     </div>
   </div>,
   <video
