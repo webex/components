@@ -196,15 +196,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
     });
 
     // Send updates on the meeting when an action is triggered
-    const shareEvents$ = fromEvent(document, SHARE_CONTROL).pipe(
-      tap(() => {
-        const meeting = this.datasource[ID];
-
-        // Use local screen share to fake a remote user's screen sharing
-        meeting.remoteShare = meeting.localShare;
-      }),
-    );
-
+    const shareEvents$ = fromEvent(document, SHARE_CONTROL);
     const audioEvents$ = fromEvent(document, MUTE_AUDIO_CONTROL);
     const videoEvents$ = fromEvent(document, MUTE_VIDEO_CONTROL);
     const joinEvents$ = fromEvent(document, JOIN_CONTROL);
@@ -542,12 +534,12 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       meeting.localShare = null;
     } else {
       meeting.localShare = await this.getDisplayStream();
+      meeting.remoteShare = null;
 
       if (meeting.localShare) {
         // Handle browser's built-in stop Button
         meeting.localShare.getVideoTracks()[0].onended = () => {
           meeting.localShare = null;
-          meeting.remoteShare = null;
           document.dispatchEvent(new CustomEvent(SHARE_CONTROL, {detail: meeting}));
         };
       }
