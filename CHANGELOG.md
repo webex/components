@@ -1,3 +1,10 @@
+# [1.60.0](https://github.com/webex/components/compare/v1.59.0...v1.60.0) (2021-04-21)
+
+
+### Features
+
+* **WebexJsonAdaptor:** add demonstration video for remote sharing ([bf0d65b](https://github.com/webex/components/commit/bf0d65b1c2e2752da22c459880691d5bf748a220))
+
 # [1.59.0](https://github.com/webex/components/compare/v1.58.1...v1.59.0) (2021-04-21)
 
 
