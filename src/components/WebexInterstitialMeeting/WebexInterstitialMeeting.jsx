@@ -20,7 +20,7 @@ export default function WebexInterstitialMeeting({meetingID}) {
       {meetingID ? (
         <>
           <WebexMeetingInfo className="interstitial-meeting-info" meetingID={meetingID} />
-          <WebexLocalMedia className="interstitial-media" meetingID={meetingID} />
+          <WebexLocalMedia className="interstitial-media" meetingID={meetingID} mediaType="video" />
         </>
       ) : (
         <Spinner />

@@ -18,6 +18,7 @@ import {TABLET, DESKTOP, DESKTOP_LARGE} from '../breakpoints';
 export default function WebexInMeeting({meetingID}) {
   const {remoteShare, localShare} = useMeeting(meetingID);
   const [meetingRef, {width}] = useElementDimensions();
+  const localMediaType = localShare ? 'screen' : 'video';
   const classBaseName = `${WEBEX_COMPONENTS_CLASS_PREFIX}-in-meeting`;
   const mainClasses = {
     [`${classBaseName}`]: true,
@@ -30,7 +31,7 @@ export default function WebexInMeeting({meetingID}) {
   return (
     <div ref={meetingRef} className={classNames(mainClasses)}>
       <WebexRemoteMedia className="remote-media-in-meeting" meetingID={meetingID} />
-      <WebexLocalMedia className="local-media-in-meeting" meetingID={meetingID} />
+      <WebexLocalMedia className="local-media-in-meeting" meetingID={meetingID} mediaType={localMediaType} />
       {localShare && <div className="share-notice">You&apos;re sharing your screen</div>}
     </div>
   );

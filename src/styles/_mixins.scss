@@ -36,7 +36,7 @@ $shadow-color: rgba(0, 0, 0, 0.2);
   @include media-shadow();
 
   position: absolute;
-  top: 0.5rem;
+  top: 2.8rem;
   right: 0.5rem;
 
   height: 5rem;
@@ -49,7 +49,7 @@ $shadow-color: rgba(0, 0, 0, 0.2);
   @include media-shadow();
 
   position: absolute;
-  top: 1rem;
+  top: 2.8rem;
   right: 1rem;
 
   height: 7.5rem;
@@ -62,7 +62,7 @@ $shadow-color: rgba(0, 0, 0, 0.2);
   @include media-shadow();
 
   position: absolute;
-  top: 2rem;
+  top: 2.8em;
   right: 2rem;
 
   height: 9.5rem;
