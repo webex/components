@@ -1,3 +1,10 @@
+# [1.59.0](https://github.com/webex/components/compare/v1.58.1...v1.59.0) (2021-04-21)
+
+
+### Features
+
+* **hoc:** add a withMeeting HOC for class components ([48f508b](https://github.com/webex/components/commit/48f508bdc9b86092c4621559bf49f7abf85f95fa))
+
 ## [1.58.1](https://github.com/webex/components/compare/v1.58.0...v1.58.1) (2021-04-19)
 
 

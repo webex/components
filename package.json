@@ -1,6 +1,6 @@
 {
   "name": "@webex/components",
-  "version": "1.58.1",
+  "version": "1.59.0",
   "browser": "dist/umd/webex-components.umd.min.js",
   "unpkg": "dist/umd/webex-components.umd.min.js",
   "module": "dist/es/webex-components.es.min.js",
@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "@juggle/resize-observer": "^3.2.0",
-    "@webex/component-adapter-interfaces": "^1.13.0",
+    "@webex/component-adapter-interfaces": "^1.16.1",
     "classnames": "^2.2.6",
     "date-fns": "^2.15.0"
   },
