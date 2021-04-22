@@ -55,7 +55,7 @@ export default class ActivitiesJSONAdapter extends ActivitiesAdapter {
       } else {
         observer.error(new Error(`Could not find activity with ID "${ID}"`));
       }
-
+      console.log(123);
       observer.complete();
     });
   }
