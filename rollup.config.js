@@ -4,6 +4,8 @@ import copy from 'rollup-plugin-copy';
 import license from 'rollup-plugin-license';
 import scss from 'rollup-plugin-scss';
 import visualizer from 'rollup-plugin-visualizer';
+import postcss from 'rollup-plugin-postcss';
+import url from 'postcss-url';
 import {nodeResolve} from '@rollup/plugin-node-resolve';
 import {terser} from 'rollup-plugin-terser';
 
@@ -21,6 +23,20 @@ const plugins = [
     ],
   }),
   commonjs(),
+  postcss({
+    extract: 'webexWidgets.css',
+    minimize: true,
+    plugins: [
+      url({
+        url: 'copy',
+        assetsPath: 'assets/',
+        useHash: true,
+      }),
+    ],
+    // to is required by the postcss-url plugin to
+    // properly resolve assets path
+    to: 'dist/webexWidgets.css',
+  }),
   babel({
     babelHelpers: 'runtime',
     exclude: 'node_modules/**',
@@ -124,3 +140,4 @@ export default [
     external,
   },
 ];
+
