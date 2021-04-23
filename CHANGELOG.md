@@ -1,3 +1,11 @@
+# [1.61.0](https://github.com/webex/components/compare/v1.60.0...v1.61.0) (2021-04-23)
+
+
+### Features
+
+* **WebexLocalMedia:** add mediaType prop ([dcbed3c](https://github.com/webex/components/commit/dcbed3c4372694d0a2ed28698c76c567612d8b41))
+* **WebexMeeting:** replace self-view with local share ([d55fac3](https://github.com/webex/components/commit/d55fac31e8df06ec73fe4bd15f45e6bb815cc1cc))
+
 # [1.60.0](https://github.com/webex/components/compare/v1.59.0...v1.60.0) (2021-04-21)
 
 
