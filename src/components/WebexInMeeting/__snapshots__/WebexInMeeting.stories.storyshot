@@ -191,7 +191,7 @@ Array [
 ]
 `;
 
-exports[`Storyshots Meetings/Webex In-Meeting Sharing 1`] = `
+exports[`Storyshots Meetings/Webex In-Meeting Sharing Test 1`] = `
 Array [
   <div
     className="wxc-in-meeting"
