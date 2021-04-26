@@ -1,7 +1,7 @@
-import React, {useEffect, useContext, useState} from 'react';
-import {concatMap} from 'rxjs/operators';
+import React from 'react';
 import PropTypes from 'prop-types';
-import {AdapterContext} from '../hooks/contexts';
+
+import {useMeetingDestination} from '../hooks';
 
 /**
  * withMeeting is a higher-order component that takes a component (WrappedComponent)
@@ -29,27 +29,8 @@ export default function withMeeting(WrappedComponent) {
    * @returns {object} JSX of the component
    */
   function WithMeeting(props) {
-    const [meeting, setMeeting] = useState({});
-    const {meetingsAdapter} = useContext(AdapterContext);
     const {meetingDestination} = props;
-
-    useEffect(() => {
-      const subscription = meetingsAdapter
-        .createMeeting(meetingDestination)
-        .pipe(concatMap(({ID}) => meetingsAdapter.getMeeting(ID)))
-        .subscribe(
-          (newMeeting) => setMeeting({...newMeeting}),
-          (error) => {
-            setMeeting({error});
-            // eslint-disable-next-line no-console
-            console.log(error);
-          },
-        );
-
-      return () => {
-        subscription.unsubscribe();
-      };
-    }, [meetingsAdapter, meetingDestination]);
+    const meeting = useMeetingDestination(meetingDestination);
 
     // eslint-disable-next-line react/jsx-props-no-spreading
     return <WrappedComponent meeting={meeting} {...props} />;
