@@ -3,14 +3,20 @@ import PropTypes from 'prop-types';
 import {DestinationType} from '@webex/component-adapter-interfaces';
 import {Icon} from '@momentum-ui/react';
 
-import {usePerson, useMembers, useMe, useOrganization} from '../hooks';
+import {
+  useMembers,
+  useMe,
+  useOrganization,
+  usePerson,
+} from '../hooks';
 import WebexAvatar from '../WebexAvatar/WebexAvatar';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 
 /**
  * Displays a webex meeting member.
  *
- * @param {string} props.destinationType Type of destination of the membership roster
+ * @param {object} props  Data passed to the component
+ * @param {string} props.destinationType  Type of destination of the membership roster
  * @param {string} props.destinationID  ID of the destination for which to get members
  * @param {string} props.personID  ID of the person for which to display avatar
  * @param {boolean} props.displayStatus  Whether or not to display the user's status
@@ -48,7 +54,7 @@ export default function WebexMember({
       <WebexAvatar personID={personID} displayStatus={displayStatus} />
       <div className="details">
         <div className="name">
-          {`${firstName} ${lastName}`} 
+          {`${firstName} ${lastName}`}
           {isGuest && <span className="guest"> (Guest)</span>}
         </div>
         {roles.length > 0 && <div className="roles">{roles.join(', ')}</div>}

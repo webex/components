@@ -9,7 +9,10 @@ import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
  * WebexMeetingControls is a higher-order component that pass a meeting
  * context to several WebexMeetingControl components.
  *
- * @param {object} props
+ * @param {object} props  Data passed to the component
+ * @param {string} props.meetingID  ID of the meeting to control
+ * @param {string} props.className  Custom CSS class to apply
+ * @param {object} props.children  Controls to display
  * @returns {object} JSX of the component
  */
 export default function WebexMeetingControls({children, className, meetingID}) {

@@ -9,7 +9,8 @@ import ActivityHeader from './ActivityHeader';
 /**
  * WebexActivity component displays activity content.
  *
- * @param {object} props
+ * @param {object} props  Data passed to the component
+ * @param {string} props.activityID  ID of the activity
  * @returns {object} JSX of the component
  */
 export default function WebexActivity({activityID}) {

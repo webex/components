@@ -21,7 +21,8 @@ import TimeRuler from './TimeRuler';
  * listens for activity updates to the room and also displays
  * those as they come in.
  *
- * @param {object} props
+ * @param {object} props  Data passed to the component
+ * @param {string} props.roomID  ID of the room for which to display activities
  * @returns {object} JSX of the component
  */
 export default function WebexActivityStream({roomID}) {

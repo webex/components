@@ -11,7 +11,8 @@ import WebexMeetingInfo from '../WebexMeetingInfo/WebexMeetingInfo';
  * Webex Interstitial component displays the user's local video and
  * meeting info, in preparation to joining a meeting.
  *
- * @param {object} props
+ * @param {object} props  Data passed to the component
+ * @param {string} props.meetingID  ID of the meeting
  * @returns {object} JSX of the component
  */
 export default function WebexInterstitialMeeting({meetingID}) {
