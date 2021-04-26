@@ -24,8 +24,8 @@ import {AdapterContext} from '../hooks/contexts';
  */
 export default function withMeeting(WrappedComponent) {
   /**
-   * @param props Props to be forwarded to WrappedComponent
-   * @param {string} props.meetingDestination Virtual location where the meeting should take place.
+   * @param {object} props  Data to be forwarded to WrappedComponent
+   * @param {string} props.meetingDestination Virtual location where the meeting should take place
    * @returns {object} JSX of the component
    */
   function WithMeeting(props) {
@@ -34,31 +34,25 @@ export default function withMeeting(WrappedComponent) {
     const {meetingDestination} = props;
 
     useEffect(() => {
-      let cleanup;
-      if (!meetingDestination) {
-        setMeeting({});
-        cleanup = undefined;
-      } else {
-        const meetingSubscription = meetingsAdapter
+      const subscription = meetingsAdapter
         .createMeeting(meetingDestination)
         .pipe(concatMap(({ID}) => meetingsAdapter.getMeeting(ID)))
         .subscribe(
-          (meeting) => setMeeting({...meeting}),
+          (newMeeting) => setMeeting({...newMeeting}),
           (error) => {
             setMeeting({error});
+            // eslint-disable-next-line no-console
             console.log(error);
           },
         );
-        cleanup = () => {
-          meetingSubscription.unsubscribe();
-        };
-      }
-      return cleanup;
-    }, [meetingDestination]);
 
-    return (
-      <WrappedComponent meeting={meeting} {...props} />
-    );
+      return () => {
+        subscription.unsubscribe();
+      };
+    }, [meetingsAdapter, meetingDestination]);
+
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    return <WrappedComponent meeting={meeting} {...props} />;
   }
 
   WithMeeting.propTypes = {

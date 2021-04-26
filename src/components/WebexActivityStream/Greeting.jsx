@@ -124,7 +124,8 @@ export function GreetingSpaceSVG() {
 /**
  * Greeting displayed on a new/empty room.
  *
- * @param {object} props
+ * @param {object} props  Data passed to the component
+ * @param {string} props.personName  Name of the person to greet
  * @returns {object} JSX of the component
  */
 export default function Greeting({personName}) {

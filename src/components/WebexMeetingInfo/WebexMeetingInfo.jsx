@@ -11,10 +11,9 @@ import {useMeeting} from '../hooks';
  * Formats a start and end date to a readable string.
  * Example: "5:00 PM - 6:00 PM"
  *
- * @export
- * @param {Date} startDate
- * @param {Date} endDate
- * @returns {String} formatted time range
+ * @param {Date} startDate  Meeting start time
+ * @param {Date} endDate  Meeting end time
+ * @returns {string} Formatted time range
  */
 export function formatMeetingTime(startDate, endDate) {
   const formattedStartTime = format(startDate, 'p');
@@ -27,7 +26,9 @@ export function formatMeetingTime(startDate, endDate) {
  * Webex Meeting Info component displays the information associated with
  * a given meetingID.
  *
- * @param {object} props
+ * @param {object} props  Data passed to the component
+ * @param {string} props.meetingID  ID of the meeting
+ * @param {string} props.className  Custome CSS class to apply
  * @returns {object} JSX of the component
  */
 export default function WebexMeetingInfo({className, meetingID}) {

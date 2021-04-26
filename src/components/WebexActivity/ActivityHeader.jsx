@@ -42,7 +42,9 @@ export function formatMessageDate(timestamp) {
  * Header includes the avatar of the activity author as well as the
  * activity timestamp.
  *
- * @param {object} props
+ * @param {object} props Data passed to the component
+ * @param {string} props.personID  ID of the activity author
+ * @param {string} props.timestamp  Activity timestamp
  * @returns {object} JSX of the component
  */
 export default function ActivityHeader({personID, timestamp}) {

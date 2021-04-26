@@ -16,9 +16,9 @@ import {
 /**
  * Webex Remote Media component displays the meeting's remote video
  *
- * @param {object} props
- * @param {string} props.className
- * @param {string} props.meetingID
+ * @param {object} props  Data passed to the component
+ * @param {string} props.meetingID  ID of the meeting
+ * @param {string} props.className  Custome CSS class to apply
  * @returns {object} JSX of the component
  *
  * NOTE: waiting for the UX for a design on what to display if there is no remote video
@@ -36,7 +36,7 @@ export default function WebexRemoteMedia({className, meetingID}) {
   const shareRef = useStream(remoteShare);
   const [remoteMediaRef, {width}] = useElementDimensions();
 
-  const hasOtherMembers = members.filter(member => member.inMeeting).length > 1;
+  const hasOtherMembers = members.filter((member) => member.inMeeting).length > 1;
   const hasMedia = !!(remoteAudio || remoteVideo || remoteShare);
 
   const classBaseName = `${WEBEX_COMPONENTS_CLASS_PREFIX}-remote-media`;

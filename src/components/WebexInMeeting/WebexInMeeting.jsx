@@ -12,8 +12,9 @@ import {TABLET, DESKTOP, DESKTOP_LARGE} from '../breakpoints';
  * Webex In-Meeting component displays the remote stream plus
  * the local stream at the bottom right corner.
  *
+ * @param {object} props  Data passed to the component
  * @param {string} props.meetingID  ID of the meeting for which to show media
- * @returns {Object} JSX of the component
+ * @returns {object} JSX of the component
  */
 export default function WebexInMeeting({meetingID}) {
   const {remoteShare, localShare} = useMeeting(meetingID);
