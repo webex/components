@@ -4,7 +4,7 @@ import {
 import {
   filter, map, takeUntil, tap,
 } from 'rxjs/operators';
-import {MeetingsAdapter, MeetingControlState} from '@webex/component-adapter-interfaces';
+import {MeetingsAdapter, MeetingControlState, MeetingState} from '@webex/component-adapter-interfaces';
 
 // Meeting control names
 export const MUTE_AUDIO_CONTROL = 'mute-audio';
@@ -54,7 +54,8 @@ export const ROSTER_CONTROL = 'member-roster';
  *     "localShare": null,
  *     "remoteAudio": {},
  *     "remoteVideo": {},
- *     "remoteShare": {}
+ *     "remoteShare": {},
+ *     "state": "JOINED"
  *   },
  *   "meeting-2": {
  *     "ID": "meeting-2",
@@ -64,7 +65,8 @@ export const ROSTER_CONTROL = 'member-roster';
  *     "localShare": {},
  *     "remoteAudio": {},
  *     "remoteVideo": {},
- *     "remoteShare": {}
+ *     "remoteShare": {},
+ *     "state": "NOT_JOINED"
  *   }
  * }
  */
@@ -166,8 +168,8 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   getMeeting(ID) {
     const end$ = new Subject();
     const getMeeting$ = Observable.create((observer) => {
-      // A null ID signifies that the meeting is over, in the past or invalid
-      if (ID === null) {
+      // A falsy ID signifies that the meeting was not yet created, or is invalid
+      if (!ID) {
         observer.next({
           ID: null,
           title: null,
@@ -177,6 +179,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
           remoteAudio: null,
           remoteVideo: null,
           remoteShare: null,
+          state: null,
           showRoster: null,
         });
       } else if (this.datasource[ID]) {
@@ -246,6 +249,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
 
       meeting.remoteVideo = await this.getStream({video: true, audio: false});
       meeting.remoteAudio = await this.getStream({video: false, audio: true});
+      meeting.state = MeetingState.JOINED;
 
       document.dispatchEvent(new CustomEvent(JOIN_CONTROL, {detail: meeting}));
     }
@@ -264,6 +268,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
 
       meeting.remoteVideo = null;
       meeting.remoteAudio = null;
+      meeting.state = MeetingState.LEFT;
 
       document.dispatchEvent(new CustomEvent(LEAVE_CONTROL, {detail: meeting}));
     }

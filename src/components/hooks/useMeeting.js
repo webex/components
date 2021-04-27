@@ -26,6 +26,7 @@ export default function useMeeting(meetingID) {
     remoteAudio: null,
     remoteVideo: null,
     remoteShare: null,
+    state: null,
     showRoster: null,
     error: null,
   };

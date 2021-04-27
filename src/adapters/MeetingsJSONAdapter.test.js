@@ -1,5 +1,6 @@
 import {isObservable} from 'rxjs';
 import {skip} from 'rxjs/operators';
+import {MeetingState} from '@webex/component-adapter-interfaces';
 
 import JSONData from '../data/meetings';
 import MeetingsJSONAdapter from './MeetingsJSONAdapter';
@@ -27,6 +28,7 @@ describe('Meetings JSON Adapter', () => {
       remoteAudio: null,
       remoteVideo: null,
       remoteShare: null,
+      status: MeetingState.NOT_JOINED,
       showRoster: null,
     };
   });
@@ -77,6 +79,8 @@ describe('Meetings JSON Adapter', () => {
           remoteAudio: null,
           remoteVideo: null,
           remoteShare: null,
+          state: null,
+          showRoster: null,
         });
         done();
       });
@@ -129,7 +133,7 @@ describe('Meetings JSON Adapter', () => {
           () => {},
           () => {},
           () => {
-            expect(true).toBeTruthy();
+            expect(testMeeting.state).toBe(MeetingState.LEFT);
             done();
           },
         );
@@ -154,6 +158,7 @@ describe('Meetings JSON Adapter', () => {
 
     beforeEach(() => {
       dispatchSpy = jest.spyOn(document, 'dispatchEvent');
+      testMeeting.state = MeetingState.NOT_JOINED;
     });
 
     afterEach(() => {
@@ -164,6 +169,11 @@ describe('Meetings JSON Adapter', () => {
       await meetingsJSONAdapter.joinMeeting(meetingID);
       expect(testMeeting.remoteAudio).toBeInstanceOf(MediaStream);
       expect(testMeeting.remoteVideo).toBeInstanceOf(MediaStream);
+    });
+
+    test('sets meeting state to JOINED', async () => {
+      await meetingsJSONAdapter.joinMeeting(meetingID);
+      expect(testMeeting.state).toBe(MeetingState.JOINED);
     });
 
     test('dispatches a "join-meeting" event', async () => {
@@ -177,6 +187,7 @@ describe('Meetings JSON Adapter', () => {
 
     beforeEach(() => {
       dispatchSpy = jest.spyOn(document, 'dispatchEvent');
+      testMeeting.state = MeetingState.JOINED;
     });
 
     afterEach(() => {
@@ -187,6 +198,11 @@ describe('Meetings JSON Adapter', () => {
       await meetingsJSONAdapter.leaveMeeting(meetingID);
       expect(testMeeting.remoteAudio).toBeNull();
       expect(testMeeting.remoteVideo).toBeNull();
+    });
+
+    test('sets meeting state to LEFT', async () => {
+      await meetingsJSONAdapter.leaveMeeting(meetingID);
+      expect(testMeeting.state).toBe(MeetingState.LEFT);
     });
 
     test('dispatches a "leave-meeting" event', async () => {

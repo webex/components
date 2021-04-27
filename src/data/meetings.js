@@ -1,3 +1,5 @@
+import {MeetingState} from '@webex/component-adapter-interfaces';
+
 export default {
   meeting1: {
     ID: 'meeting1',
@@ -8,6 +10,7 @@ export default {
     remoteAudio: new MediaStream(),
     remoteVideo: new MediaStream(),
     remoteShare: null,
+    state: MeetingState.JOINED,
     showRoster: false,
   },
   meeting2: {
@@ -19,6 +22,7 @@ export default {
     remoteAudio: new MediaStream(),
     remoteVideo: new MediaStream(),
     remoteShare: new MediaStream(),
+    state: MeetingState.NOT_JOINED,
     showRoster: false,
   },
   meeting3: {
@@ -30,6 +34,7 @@ export default {
     remoteAudio: null,
     remoteVideo: null,
     remoteShare: null,
+    state: MeetingState.NOT_JOINED,
     showRoster: false,
   },
   meeting4: {
@@ -41,6 +46,7 @@ export default {
     remoteAudio: new MediaStream(),
     remoteVideo: new MediaStream(),
     remoteShare: null,
+    state: MeetingState.JOINED,
     showRoster: false,
   },
   meeting5: {
@@ -52,6 +58,7 @@ export default {
     remoteAudio: new MediaStream(),
     remoteVideo: null,
     remoteShare: null,
+    state: MeetingState.JOINED,
     showRoster: true,
   },
   meeting6: {
@@ -63,6 +70,7 @@ export default {
     remoteAudio: null,
     remoteVideo: new MediaStream(),
     remoteShare: null,
+    state: MeetingState.JOINED,
     showRoster: false,
   },
   meeting7: {
@@ -74,6 +82,7 @@ export default {
     remoteAudio: null,
     remoteVideo: null,
     remoteShare: null,
+    state: null,
     showRoster: false,
   },
   meeting8: {
@@ -86,6 +95,7 @@ export default {
     remoteVideo: null,
     remoteShare: null,
     showRoster: false,
+    state: MeetingState.LEFT,
   },
   meeting9: {
     error: true,
