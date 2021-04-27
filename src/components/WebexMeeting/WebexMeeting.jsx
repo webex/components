@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {Spinner} from '@momentum-ui/react';
+import {MeetingState} from '@webex/component-adapter-interfaces';
 
 import WebexInMeeting from '../WebexInMeeting/WebexInMeeting';
 import WebexInterstitialMeeting from '../WebexInterstitialMeeting/WebexInterstitialMeeting';
@@ -19,8 +20,9 @@ import {useMeeting} from '../hooks';
  * @returns {object} JSX of the component
  */
 export default function WebexMeeting({meetingID, controls}) {
-  const {ID, remoteVideo} = useMeeting(meetingID);
-  const isActive = remoteVideo !== null;
+  const {ID, state} = useMeeting(meetingID);
+  const {JOINED, LEFT} = MeetingState;
+  const isActive = state === JOINED;
 
   const classBaseName = `${WEBEX_COMPONENTS_CLASS_PREFIX}-meeting`;
   const mainClasses = {
@@ -34,11 +36,10 @@ export default function WebexMeeting({meetingID, controls}) {
 
   let meetingDisplay;
 
-  // Undefined meeting ID means that a meeting has never been set
-  if (ID === undefined) {
+  // A meeting with a falsy state means that the meeting has not been created
+  if (!state) {
     meetingDisplay = <Spinner />;
-  // A null meeting ID means that a meeting is no longer valid (e.g. user left or kicked out)
-  } else if (ID === null) {
+  } else if (state === LEFT) {
     meetingDisplay = "You've successfully left the meeting";
   } else {
     meetingDisplay = (
