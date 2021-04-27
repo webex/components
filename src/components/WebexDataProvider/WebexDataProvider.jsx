@@ -4,6 +4,14 @@ import PropTypes from 'prop-types';
 
 import {AdapterContext} from '../hooks';
 
+/**
+ * Provides an adapter context to the wrapped component.
+ *
+ * @param {object} props  Data passed to the provider
+ * @param {object} props.adapter  Adapter for context
+ * @param {React.Component} props.children  Component children to wrap
+ * @returns {React.Component} Component with access to the adapter context
+ */
 export default function WebexDataProvider({adapter, children}) {
   return <AdapterContext.Provider value={adapter}>{children}</AdapterContext.Provider>;
 }

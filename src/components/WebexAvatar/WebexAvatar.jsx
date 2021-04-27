@@ -7,6 +7,7 @@ import {usePerson} from '../hooks';
 /**
  * Displays the avatar of a Webex user.
  *
+ * @param {object} props  Data passed to the component
  * @param {string} props.personID  ID of the person for which to display avatar
  * @param {boolean} props.displayStatus  Whether or not to display the user's status
  *

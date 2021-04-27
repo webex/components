@@ -9,6 +9,7 @@ import {useMeetingControl} from '../hooks';
  * WebexMeetingControl component represents an action that can
  * be taken in a meeting.
  *
+ * @param {object} props  Data passed to the component
  * @param {string} props.type  Name of the control as defined in adapter
  * @returns {object} JSX of the component
  */
@@ -25,7 +26,14 @@ export default function WebexMeetingControl({type}) {
 
   if (icon) {
     button = (
-      <Button circle color={iconColor} size={56} ariaLabel={tooltip} onClick={action} disabled={isDisabled}>
+      <Button
+        circle
+        color={iconColor}
+        size={56}
+        ariaLabel={tooltip}
+        onClick={action}
+        disabled={isDisabled}
+      >
         <Icon name={icon} size={28} />
       </Button>
     );

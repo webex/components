@@ -44,7 +44,8 @@ export function formatTimeRulerText(timestamp) {
  * Time Ruler component is used by the activity stream
  * to separate activities from different days.
  *
- * @param {object} props
+ * @param {object} props  Data passed to the component
+ * @param {Date} props.date  Date to display in the time ruler
  * @returns {object} JSX of the component
  */
 export default function TimeRuler({date}) {

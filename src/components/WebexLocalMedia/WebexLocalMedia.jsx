@@ -16,8 +16,11 @@ import {
 /**
  * Webex Local Media component displays the user's local video or local share.
  *
+ * @param {object} props  Data passed to the component
  * @param {string} props.meetingID  ID of the meeting from which to obtain local media
- * @returns {Object} JSX of the component
+ * @param {string} props.mediaType  Type of local media to display
+ * @param {string} props.className  Custom CSS class to apply
+ * @returns {object} JSX of the component
  */
 export default function WebexLocalMedia({className, meetingID, mediaType}) {
   const [mediaRef, {width}] = useElementDimensions();
@@ -50,7 +53,10 @@ export default function WebexLocalMedia({className, meetingID, mediaType}) {
 
   return (
     <div ref={mediaRef} className={classNames(mainClasses)}>
-      {stream ? <video ref={ref} playsInline autoPlay /> : disabledVideo}
+      {
+        /* eslint-disable-next-line jsx-a11y/media-has-caption */
+        stream ? <video ref={ref} playsInline autoPlay /> : disabledVideo
+      }
     </div>
   );
 }

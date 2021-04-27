@@ -5,7 +5,11 @@
     "jest": true
   },
   "parserOptions": {
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaVersion": 11,
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
   "plugins": [
     "jest",

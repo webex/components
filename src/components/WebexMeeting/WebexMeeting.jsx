@@ -13,8 +13,9 @@ import {useMeeting} from '../hooks';
 /**
  * Webex Meeting component displays the default Webex meeting experience.
  *
+ * @param {object} props  Data passed to the component
  * @param {string} props.meetingID  ID of the meeting
- * @param {array} [props.controls]  Array of control names to display
+ * @param {Array.<string>} [props.controls]  Array of control names to display
  * @returns {object} JSX of the component
  */
 export default function WebexMeeting({meetingID, controls}) {
@@ -70,10 +71,11 @@ WebexMeeting.defaultProps = {
    * Control name must match with the adapter implementation of the control.
    *
    * @param {boolean} isActive  Whether or not the meeting is active
+   * @returns {Array.<string>} List of controls to display
    */
-  // eslint-disable-next-line no-confusing-arrow
-  controls: (isActive) =>
+  controls: (isActive) => (
     isActive
       ? ['mute-audio', 'mute-video', 'share-screen', 'leave-meeting']
-      : ['mute-audio', 'mute-video', 'join-meeting'],
+      : ['mute-audio', 'mute-video', 'join-meeting']
+  ),
 };

@@ -19,6 +19,7 @@ import {useMe} from '../hooks';
 /**
  * Displays the roster of Webex meeting or room members.
  *
+ * @param {object} props  Data passed to the component
  * @param {string} props.destinationID  ID of the destination for which to get members
  * @param {string} props.destinationType Type of destination of the membership roster
  *

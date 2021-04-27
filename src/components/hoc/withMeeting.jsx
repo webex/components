@@ -1,7 +1,7 @@
-import React, {useEffect, useContext, useState} from 'react';
-import {concatMap} from 'rxjs/operators';
+import React from 'react';
 import PropTypes from 'prop-types';
-import {AdapterContext} from '../hooks/contexts';
+
+import {useMeetingDestination} from '../hooks';
 
 /**
  * withMeeting is a higher-order component that takes a component (WrappedComponent)
@@ -24,41 +24,16 @@ import {AdapterContext} from '../hooks/contexts';
  */
 export default function withMeeting(WrappedComponent) {
   /**
-   * @param props Props to be forwarded to WrappedComponent
-   * @param {string} props.meetingDestination Virtual location where the meeting should take place.
+   * @param {object} props  Data to be forwarded to WrappedComponent
+   * @param {string} props.meetingDestination Virtual location where the meeting should take place
    * @returns {object} JSX of the component
    */
   function WithMeeting(props) {
-    const [meeting, setMeeting] = useState({});
-    const {meetingsAdapter} = useContext(AdapterContext);
     const {meetingDestination} = props;
+    const meeting = useMeetingDestination(meetingDestination);
 
-    useEffect(() => {
-      let cleanup;
-      if (!meetingDestination) {
-        setMeeting({});
-        cleanup = undefined;
-      } else {
-        const meetingSubscription = meetingsAdapter
-        .createMeeting(meetingDestination)
-        .pipe(concatMap(({ID}) => meetingsAdapter.getMeeting(ID)))
-        .subscribe(
-          (meeting) => setMeeting({...meeting}),
-          (error) => {
-            setMeeting({error});
-            console.log(error);
-          },
-        );
-        cleanup = () => {
-          meetingSubscription.unsubscribe();
-        };
-      }
-      return cleanup;
-    }, [meetingDestination]);
-
-    return (
-      <WrappedComponent meeting={meeting} {...props} />
-    );
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    return <WrappedComponent meeting={meeting} {...props} />;
   }
 
   WithMeeting.propTypes = {
