@@ -19,4 +19,22 @@ export default class WebexJSONAdapter {
     this.peopleAdapter = new PeopleJSONAdapter(datasource.people);
     this.roomsAdapter = new RoomsJSONAdapter(datasource.rooms);
   }
+
+  /**
+   * Connects the adapter to its datasource.
+   *
+   * @returns {Promise} A promise that resolves when the adapter finishes connecting
+   */
+  connect() {
+    return Promise.resolve(this);
+  }
+
+  /**
+   * Disconnects the adapter from its datasource.
+   *
+   * @returns {Promise} A promise that resolves when the adapter finishes disconnecting
+   */
+  disconnect() {
+    return Promise.resolve(this);
+  }
 }
