@@ -1,3 +1,11 @@
+# [1.62.0](https://github.com/webex/components/compare/v1.61.0...v1.62.0) (2021-04-28)
+
+
+### Features
+
+* **WebexJsonAdapter:** add connect() and disconnect() functions ([de407f5](https://github.com/webex/components/commit/de407f5ae6013d789e95c67b4f5bc93a94a4ce98))
+* **WebexMeeting:** implement meeting state ([7e889f5](https://github.com/webex/components/commit/7e889f5ab503bb443ac9ebb018380daf8a2a9cdd))
+
 # [1.61.0](https://github.com/webex/components/compare/v1.60.0...v1.61.0) (2021-04-23)
 
 
