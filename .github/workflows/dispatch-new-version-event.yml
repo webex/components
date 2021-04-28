@@ -1,0 +1,25 @@
+name: Dispatch new version event
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  dispatch-new-version-event:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+      - name: Dispatch new version event
+        run: |
+          CURRENT_VERSION=$(node -p -e "require('./package.json').version")
+          git checkout HEAD~1
+          PREVIOUS_VERSION=$(node -p -e "require('./package.json').version")
+
+          if [ "$CURRENT_VERSION" != "$PREVIOUS_VERSION" ]; then
+            curl -X POST https://api.github.com/repos/webex/widgets/dispatches \
+              -H 'Accept: application/vnd.github.everest-preview+json' \
+              -u ${{ secrets.ACCESS_TOKEN }} \
+              --data '{"event_type": "components:version-changed", "client_payload": { "version": "'"${CURRENT_VERSION}"'"}'
+          fi
