@@ -125,12 +125,16 @@ workflows:
             branches:
               only: master
       - release:
+          context:
+            - webex-embed
           requires:
             - build
           filters:
             branches:
               only: master
       - storybook:
+          context:
+            - webex-embed
           requires:
             - release
           filters:
