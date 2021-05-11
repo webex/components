@@ -14,3 +14,4 @@ export {default as WebexMemberRoster} from './WebexMemberRoster/WebexMemberRoste
 export {default as WebexRemoteMedia} from './WebexRemoteMedia/WebexRemoteMedia';
 export {default as useMeetingDestination} from './hooks/useMeetingDestination';
 export {default as withMeeting} from './hoc/withMeeting';
+export {default as withAdapter} from './hoc/withAdapter';
