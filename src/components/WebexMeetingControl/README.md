@@ -24,17 +24,13 @@ or run the following **NPM** command:
     const jsonAdapter = new WebexJSONAdapter(jsonData);
     ```
 
-2. Create a component instance by passing the control _type_ as a string and
+2. Create a component instance by passing the control _type_ as a string and the meetingID as a string and 
 enclose it within [a data provider](../WebexDataProvider/WebexDataProvider.js)
 that takes the [component data adapter](../../adapters/WebexJSONAdapter.js) that we created previously.
-A Webex Meeting Control must also be enclosed by a [Webex Meeting Controls](./WebexMeetingControls.js) component that contains the
-meeting context for the control
 
     ```js
     <WebexDataProvider adapter={jsonAdapter}>
-      <WebexMeetingControls meetingID="meetingID">
-        <WebexMeetingControl type="mute-audio" />
-      </WebexMeetingControls>
+        <WebexMeetingControl type="mute-audio" meetingID="meetingID"/>
     </WebexDataProvider>
     ```
 

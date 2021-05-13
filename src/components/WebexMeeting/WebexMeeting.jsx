@@ -31,7 +31,7 @@ export default function WebexMeeting({meetingID, controls}) {
   };
 
   const meetingControls = controls(isActive).map(
-    (key) => <WebexMeetingControl key={key} type={key} />,
+    (key) => <WebexMeetingControl key={key} type={key} meetingID={ID} />,
   );
 
   let meetingDisplay;
