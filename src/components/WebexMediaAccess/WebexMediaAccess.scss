@@ -1,0 +1,25 @@
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-media-access {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+
+  .title {
+    margin-top: 1.2rem;
+    font-size: .875rem;
+    font-weight: bold;
+  }
+
+  .body {
+    margin: 1.2rem 0;
+    text-align: center;
+
+    .allow {
+      text-decoration: underline;
+    }
+  }
+
+  .join {
+    margin-top: 1.2rem;
+  }
+}
