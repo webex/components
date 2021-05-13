@@ -11,6 +11,7 @@ export const MUTE_AUDIO_CONTROL = 'mute-audio';
 export const MUTE_VIDEO_CONTROL = 'mute-video';
 export const SHARE_CONTROL = 'share-screen';
 export const JOIN_CONTROL = 'join-meeting';
+export const JOIN_WITHOUT_CAMERA_CONTROL = 'join-without-camera';
 export const LEAVE_CONTROL = 'leave-meeting';
 export const DISABLED_MUTE_AUDIO_CONTROL = 'disabled-mute-audio';
 export const DISABLED_JOIN_CONTROL = 'disabled-join-meeting';
@@ -106,6 +107,12 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       ID: JOIN_CONTROL,
       action: this.joinMeeting.bind(this),
       display: this.joinControl.bind(this),
+    };
+
+    this.meetingControls[JOIN_WITHOUT_CAMERA_CONTROL] = {
+      ID: JOIN_WITHOUT_CAMERA_CONTROL,
+      action: this.joinMeetingWithoutCamera.bind(this),
+      display: this.joinWithoutCameraControl.bind(this),
     };
 
     this.meetingControls[LEAVE_CONTROL] = {
@@ -208,6 +215,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
     const audioEvents$ = fromEvent(document, MUTE_AUDIO_CONTROL);
     const videoEvents$ = fromEvent(document, MUTE_VIDEO_CONTROL);
     const joinEvents$ = fromEvent(document, JOIN_CONTROL);
+    const joinWithoutCameraEvents$ = fromEvent(document, JOIN_WITHOUT_CAMERA_CONTROL);
     const leaveEvents$ = fromEvent(document, LEAVE_CONTROL).pipe(
       filter((event) => event.detail.ID === ID),
       tap(() => end$.next(`Meeting "${ID}" has completed.`)),
@@ -218,6 +226,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       audioEvents$,
       videoEvents$,
       joinEvents$,
+      joinWithoutCameraEvents$,
       leaveEvents$,
       shareEvents$,
       rosterEvents$,
@@ -252,6 +261,22 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       meeting.state = MeetingState.JOINED;
 
       document.dispatchEvent(new CustomEvent(JOIN_CONTROL, {detail: meeting}));
+    }
+  }
+
+  /**
+   * Joins the meeting without camera
+   *
+   * @param {string} ID ID of the meeting for which to join
+   * @private
+   */
+  async joinMeetingWithoutCamera(ID) {
+    if (this.datasource[ID]) {
+      const meeting = this.datasource[ID];
+
+      meeting.state = MeetingState.JOINED;
+
+      document.dispatchEvent(new CustomEvent(JOIN_WITHOUT_CAMERA_CONTROL, {detail: meeting}));
     }
   }
 
@@ -505,6 +530,26 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
         ID: JOIN_CONTROL,
         text: 'Join meeting',
         tooltip: 'Join meeting',
+        state: MeetingControlState.ACTIVE,
+      });
+
+      observer.complete();
+    });
+  }
+
+  /**
+   * Returns an observable that emits the display data of the join meeting without camera control.
+   *
+   * @returns {Observable.<MeetingControlDisplay>} Observable that emits control display data
+   * @private
+   */
+  // eslint-disable-next-line class-methods-use-this
+  joinWithoutCameraControl() {
+    return Observable.create((observer) => {
+      observer.next({
+        ID: JOIN_WITHOUT_CAMERA_CONTROL,
+        text: 'Join without camera',
+        tooltip: 'Join without camera',
         state: MeetingControlState.ACTIVE,
       });
 
