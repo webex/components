@@ -11,10 +11,11 @@ import {useMeetingControl} from '../hooks';
  *
  * @param {object} props  Data passed to the component
  * @param {string} props.type  Name of the control as defined in adapter
+ * @param {string} props.meetingID  ID of the meeting
  * @returns {object} JSX of the component
  */
-export default function WebexMeetingControl({type}) {
-  const [action, display] = useMeetingControl(type);
+export default function WebexMeetingControl({type, meetingID}) {
+  const [action, display] = useMeetingControl(type, meetingID);
   const {icon, text, tooltip} = display;
   const isDisabled = display.state === MeetingControlState.DISABLED;
   const iconColor = display.state === MeetingControlState.ACTIVE ? 'red' : '';
@@ -44,4 +45,5 @@ export default function WebexMeetingControl({type}) {
 
 WebexMeetingControl.propTypes = {
   type: PropTypes.string.isRequired,
+  meetingID: PropTypes.string.isRequired,
 };

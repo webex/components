@@ -1,11 +1,9 @@
 import React from 'react';
 import WebexMeetingControl from './WebexMeetingControl';
-import WebexMeetingControls from './WebexMeetingControls';
 
 export default {
   title: 'Meetings/Webex Meeting Control',
   component: WebexMeetingControl,
-  decorators: [(Story) => <WebexMeetingControls meetingID="meeting1"><Story /></WebexMeetingControls>],
 };
 
 const Template = (args) => <WebexMeetingControl {...args} />;
@@ -13,25 +11,30 @@ const Template = (args) => <WebexMeetingControl {...args} />;
 export const ActiveIcon = Template.bind({});
 ActiveIcon.args = {
   type: 'mute-audio',
+  meetingID: 'meeting1',
 };
 
 // BUG: Snapshot test fails
 export const InactiveIcon = Template.bind({});
 InactiveIcon.args = {
   type: 'mute-audio',
+  meetingID: 'meeting1',
 };
 
 export const DisabledIcon = Template.bind({});
 DisabledIcon.args = {
   type: 'disabled-mute-audio',
+  meetingID: 'meeting1',
 };
 
 export const Text = Template.bind({});
 Text.args = {
   type: 'join-meeting',
+  meetingID: 'meeting1',
 };
 
 export const DisabledText = Template.bind({});
 DisabledText.args = {
   type: 'disabled-join-meeting',
+  meetingID: 'meeting1',
 };
