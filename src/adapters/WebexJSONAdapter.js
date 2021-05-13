@@ -1,3 +1,4 @@
+import {WebexAdapter} from '@webex/component-adapter-interfaces';
 import ActivitiesJSONAdapter from './ActivitiesJSONAdapter';
 import MeetingsJSONAdapter from './MeetingsJSONAdapter';
 import MembershipJSONAdapter from './MembershipJSONAdapter';
@@ -10,8 +11,10 @@ import RoomsJSONAdapter from './RoomsJSONAdapter';
  *
  * @param {object} datasource JSON object that contains all component data
  */
-export default class WebexJSONAdapter {
+export default class WebexJSONAdapter extends WebexAdapter {
   constructor(datasource) {
+    super(datasource);
+
     this.activitiesAdapter = new ActivitiesJSONAdapter(datasource.activities);
     this.meetingsAdapter = new MeetingsJSONAdapter(datasource.meetings);
     this.membershipsAdapter = new MembershipJSONAdapter(datasource.memberships);

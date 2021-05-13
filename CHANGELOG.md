@@ -1,3 +1,10 @@
+# [1.63.0](https://github.com/webex/components/compare/v1.62.0...v1.63.0) (2021-05-11)
+
+
+### Features
+
+* **WithAdapter:** create withAdapter hoc ([be76fd6](https://github.com/webex/components/commit/be76fd6b68e7f5f1dcd9154955c573694b8065d5))
+
 # [1.62.0](https://github.com/webex/components/compare/v1.61.0...v1.62.0) (2021-04-28)
 
 

@@ -44,6 +44,15 @@ jobs:
       - store_test_results:
           path: test_results
 
+  storybook_preview:
+    executor: node-fermium-executor
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: Generate Storybook Preview in Chromatic
+          command: npm run chromatic -- --project-token=$CHROMATIC_PROJECT_TOKEN --exit-zero-on-changes
+
   build:
     executor: node-fermium-executor
     steps:
@@ -102,6 +111,12 @@ workflows:
       - unit_test:
           requires:
             - install
+      - storybook_preview:
+          requires:
+            - unit_test
+          filters:
+            branches:
+              ignore: master
       - build:
           requires:
             - lint
@@ -110,12 +125,16 @@ workflows:
             branches:
               only: master
       - release:
+          context:
+            - webex-embed
           requires:
             - build
           filters:
             branches:
               only: master
       - storybook:
+          context:
+            - webex-embed
           requires:
             - release
           filters:
