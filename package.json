@@ -89,7 +89,8 @@
     "rollup-plugin-visualizer": "^4.1.0",
     "sass-loader": "^10.0.1",
     "semantic-release": "^17.2.3",
-    "style-loader": "^1.2.1"
+    "style-loader": "^1.2.1",
+    "wait-for-expect": "^3.0.2"
   },
   "babel": {
     "plugins": [

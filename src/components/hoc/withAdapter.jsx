@@ -71,11 +71,21 @@ export default function withAdapter(WrappedComponent, adapterFactory) {
     useEffect(() => {
       let cleanup;
 
+      /**
+       * Helper function to connect adapter asynchronously in hook.
+       *
+       * @returns {Promise} A promise that resolves when the adapter finishes connecting
+       */
       async function connect() {
         await adapter.connect();
         setAdapterConnected(true);
       }
 
+      /**
+       * Helper function to disconnect adapter asynchronously after tearing down hook.
+       *
+       * @returns {Promise} A promise that resolves when the adapter finishes disconnecting
+       */
       async function disconnect() {
         setAdapterConnected(false);
         await adapter.disconnect();
