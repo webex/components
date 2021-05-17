@@ -45,10 +45,10 @@ Array [
       </h2>
     </div>
     <div
-      className="wxc-local-media wxc-local-media-no-media interstitial-media"
+      className="wxc-local-media interstitial-media no-media"
     >
       <div
-        className="md-avatar md-avatar--medium"
+        className="md-avatar md-avatar--medium wxc-avatar"
         title="Barbara German"
       >
         <span

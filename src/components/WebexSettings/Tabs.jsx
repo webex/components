@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
+import webexComponentClasses from '../helpers';
 
 /**
  * @typedef {object} Tab
@@ -13,17 +13,27 @@ import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
  * Tabs component
  *
  * @param {object} props  Data passed to the component
- * @param {Tab[]} props.tabs  The tabs to be rendered
- * @param {string} props.selected  Specifies which tab is active
+ * @param {string} props.className  Custom CSS class to apply
  * @param {Function} props.onSelect  A callback to be executed on selecting active tab
- *
+ * @param {string} props.selected  Specifies which tab is active
+ * @param {object} props.style  Custom style to apply
+ * @param {Tab[]} props.tabs  The tabs to be rendered
  * @returns {object} JSX of the component
+ *
  */
-export default function Tabs({tabs, selected, onSelect}) {
+
+export default function Tabs({
+  className,
+  onSelect,
+  selected,
+  style,
+  tabs,
+}) {
   const {content} = tabs.find((tab) => tab.key === selected);
+  const cssClasses = webexComponentClasses('tabs', className);
 
   return (
-    <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-tabs`}>
+    <div className={cssClasses} style={style}>
       <ul className="tabs-list">
         {
           tabs.map((tab) => (
@@ -49,7 +59,14 @@ export default function Tabs({tabs, selected, onSelect}) {
 }
 
 Tabs.propTypes = {
-  tabs: PropTypes.arrayOf(PropTypes.object).isRequired,
-  selected: PropTypes.string.isRequired,
+  className: PropTypes.string,
   onSelect: PropTypes.func.isRequired,
+  selected: PropTypes.string.isRequired,
+  style: PropTypes.shape(),
+  tabs: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
+
+Tabs.defaultProps = {
+  className: '',
+  style: undefined,
 };

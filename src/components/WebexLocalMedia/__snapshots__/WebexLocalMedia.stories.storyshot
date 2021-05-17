@@ -3,10 +3,10 @@
 exports[`Storyshots Meetings/Webex Local Media No Media 1`] = `
 Array [
   <div
-    className="wxc-local-media wxc-local-media-no-media"
+    className="wxc-local-media no-media"
   >
     <div
-      className="md-avatar md-avatar--medium"
+      className="md-avatar md-avatar--medium wxc-avatar"
       title="Barbara German"
     >
       <span

@@ -25,10 +25,10 @@ Array [
       />
     </div>
     <div
-      className="wxc-local-media wxc-local-media-no-media local-media-in-meeting"
+      className="wxc-local-media local-media-in-meeting no-media"
     >
       <div
-        className="md-avatar md-avatar--medium"
+        className="md-avatar md-avatar--medium wxc-avatar"
         title="Barbara German"
       >
         <span
@@ -89,10 +89,10 @@ Array [
       />
     </div>
     <div
-      className="wxc-local-media wxc-local-media-no-media local-media-in-meeting"
+      className="wxc-local-media local-media-in-meeting no-media"
     >
       <div
-        className="md-avatar md-avatar--medium"
+        className="md-avatar md-avatar--medium wxc-avatar"
         title="Barbara German"
       >
         <span
@@ -271,10 +271,10 @@ Array [
       />
     </div>
     <div
-      className="wxc-local-media wxc-local-media-no-media local-media-in-meeting"
+      className="wxc-local-media local-media-in-meeting no-media"
     >
       <div
-        className="md-avatar md-avatar--medium"
+        className="md-avatar md-avatar--medium wxc-avatar"
         title="Barbara German"
       >
         <span

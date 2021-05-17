@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {DestinationType} from '@webex/component-adapter-interfaces';
 import {Icon} from '@momentum-ui/react';
-import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
+import webexComponentClasses from '../helpers';
 
 import WebexMember from '../WebexMember/WebexMember';
 import useMembers from '../hooks/useMembers';
@@ -20,14 +20,23 @@ import {useMe} from '../hooks';
  * Displays the roster of Webex meeting or room members.
  *
  * @param {object} props  Data passed to the component
+ * @param {string} props.className  Custom CSS class to apply
  * @param {string} props.destinationID  ID of the destination for which to get members
  * @param {string} props.destinationType Type of destination of the membership roster
- *
+ * @param {object} props.style  Custom style to apply
  * @returns {object} JSX of the component
+ *
  */
-export default function WebexMemberRoster({destinationID, destinationType}) {
+export default function WebexMemberRoster({
+  className,
+  destinationID,
+  destinationType,
+  style,
+}) {
   const members = useMembers(destinationID, destinationType);
   const {orgID} = useMe();
+
+  const cssClasses = webexComponentClasses('member-roster', className);
 
   const renderMembers = (data) => data.map(
     ({ID}) => (
@@ -55,7 +64,7 @@ export default function WebexMemberRoster({destinationID, destinationType}) {
   );
 
   return (
-    <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-member-roster`}>
+    <div className={cssClasses} style={style}>
       {warningExternalMembers}
       {destinationType !== DestinationType.MEETING
         ? renderMembers(members)
@@ -70,6 +79,13 @@ export default function WebexMemberRoster({destinationID, destinationType}) {
 }
 
 WebexMemberRoster.propTypes = {
-  destinationType: PropTypes.string.isRequired,
+  className: PropTypes.string,
   destinationID: PropTypes.string.isRequired,
+  destinationType: PropTypes.string.isRequired,
+  style: PropTypes.shape(),
+};
+
+WebexMemberRoster.defaultProps = {
+  className: '',
+  style: undefined,
 };

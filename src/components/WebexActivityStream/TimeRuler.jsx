@@ -8,7 +8,7 @@ import {
   isYesterday,
 } from 'date-fns';
 
-import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
+import webexComponentClasses from '../helpers';
 
 /**
  * Returns a formatted timestamp based on the given date's offset from the current time.
@@ -45,15 +45,27 @@ export function formatTimeRulerText(timestamp) {
  * to separate activities from different days.
  *
  * @param {object} props  Data passed to the component
+ * @param {string} props.className  Custom CSS class to apply
  * @param {Date} props.date  Date to display in the time ruler
+ * @param {object} props.style  Custom style to apply
  * @returns {object} JSX of the component
  */
-export default function TimeRuler({date}) {
+export default function TimeRuler({className, date, style}) {
   const text = formatTimeRulerText(new Date(date));
+  const cssClasses = webexComponentClasses('time-ruler', className);
 
-  return <ListSeparator className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-time-ruler`} role="listitem" text={text} />;
+  return (
+    <ListSeparator className={cssClasses} style={style} role="listitem" text={text} />
+  );
 }
 
 TimeRuler.propTypes = {
+  className: PropTypes.string,
   date: PropTypes.string.isRequired,
+  style: PropTypes.shape(),
+};
+
+TimeRuler.defaultProps = {
+  className: '',
+  style: undefined,
 };

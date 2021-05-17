@@ -6,7 +6,7 @@ Array [
     alt="Mute"
     aria-label="Mute"
     aria-pressed={null}
-    className="md-button md-button--circle md-button--56"
+    className="md-button md-button--circle md-button--56 wxc-meeting-control"
     data-md-event-key="md-button-0"
     disabled={false}
     id="md-button-0"
@@ -68,7 +68,7 @@ Array [
     alt="Mute disabled"
     aria-label="Mute disabled"
     aria-pressed={null}
-    className="md-button md-button--circle md-button--56"
+    className="md-button md-button--circle md-button--56 wxc-meeting-control"
     data-md-event-key="md-button-0"
     disabled={true}
     id="md-button-0"
@@ -130,7 +130,7 @@ Array [
     alt="Join meeting"
     aria-label="Join meeting"
     aria-pressed={null}
-    className="md-button md-button--52 md-button--green"
+    className="md-button md-button--52 md-button--green wxc-meeting-control"
     data-md-event-key="md-button-0"
     data-md-keyboard-key="join-meeting"
     disabled={true}
@@ -185,7 +185,7 @@ Array [
     alt="Mute"
     aria-label="Mute"
     aria-pressed={null}
-    className="md-button md-button--circle md-button--56"
+    className="md-button md-button--circle md-button--56 wxc-meeting-control"
     data-md-event-key="md-button-0"
     disabled={false}
     id="md-button-0"
@@ -247,7 +247,7 @@ Array [
     alt="Join meeting"
     aria-label="Join meeting"
     aria-pressed={null}
-    className="md-button md-button--52 md-button--green"
+    className="md-button md-button--52 md-button--green wxc-meeting-control"
     data-md-event-key="md-button-0"
     data-md-keyboard-key="join-meeting"
     disabled={false}

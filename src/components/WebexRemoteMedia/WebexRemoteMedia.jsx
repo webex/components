@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/media-has-caption */
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import {Badge, Spinner, AlertBanner} from '@momentum-ui/react';
 
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
+import webexComponentClasses from '../helpers';
 import {TABLET, DESKTOP, DESKTOP_LARGE} from '../breakpoints';
 import {
   useElementDimensions,
@@ -17,13 +17,14 @@ import {
  * Webex Remote Media component displays the meeting's remote video
  *
  * @param {object} props  Data passed to the component
- * @param {string} props.meetingID  ID of the meeting
  * @param {string} props.className  Custome CSS class to apply
+ * @param {string} props.meetingID  ID of the meeting
+ * @param {object} props.style  Custom style to apply
  * @returns {object} JSX of the component
  *
  * NOTE: waiting for the UX for a design on what to display if there is no remote video
  */
-export default function WebexRemoteMedia({className, meetingID}) {
+export default function WebexRemoteMedia({className, meetingID, style}) {
   const {
     remoteAudio,
     remoteVideo,
@@ -39,15 +40,12 @@ export default function WebexRemoteMedia({className, meetingID}) {
   const hasOtherMembers = members.filter((member) => member.inMeeting).length > 1;
   const hasMedia = !!(remoteAudio || remoteVideo || remoteShare);
 
-  const classBaseName = `${WEBEX_COMPONENTS_CLASS_PREFIX}-remote-media`;
-  const mainClasses = {
-    [`${classBaseName}`]: true,
-    [`${classBaseName}-tablet`]: width >= TABLET && width < DESKTOP,
-    [`${classBaseName}-desktop`]: width >= DESKTOP && width < DESKTOP_LARGE,
-    [`${classBaseName}-desktop-xl`]: width >= DESKTOP_LARGE,
-    [className]: !!className,
+  const cssClasses = webexComponentClasses('remote-media', className, {
+    tablet: width >= TABLET && width < DESKTOP,
+    desktop: width >= DESKTOP && width < DESKTOP_LARGE,
+    'desktop-xl': width >= DESKTOP_LARGE,
     'remote-video-n-share': remoteVideo && remoteShare,
-  };
+  });
 
   let remoteDisplay;
 
@@ -83,7 +81,7 @@ export default function WebexRemoteMedia({className, meetingID}) {
   }
 
   return (
-    <div ref={remoteMediaRef} className={classNames(mainClasses)}>
+    <div ref={remoteMediaRef} className={cssClasses} style={style}>
       {remoteDisplay}
     </div>
   );
@@ -92,8 +90,10 @@ export default function WebexRemoteMedia({className, meetingID}) {
 WebexRemoteMedia.propTypes = {
   className: PropTypes.string,
   meetingID: PropTypes.string.isRequired,
+  style: PropTypes.shape(),
 };
 
 WebexRemoteMedia.defaultProps = {
   className: '',
+  style: undefined,
 };

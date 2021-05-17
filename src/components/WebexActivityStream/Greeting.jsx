@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
+import webexComponentClasses from '../helpers';
 
 /**
  * SVG used for the greeting on a new 1:1 room.
@@ -125,12 +125,16 @@ export function GreetingSpaceSVG() {
  * Greeting displayed on a new/empty room.
  *
  * @param {object} props  Data passed to the component
+ * @param {string} props.className  Custom CSS class to apply
  * @param {string} props.personName  Name of the person to greet
+ * @param {object} props.style  Custom style to apply
  * @returns {object} JSX of the component
  */
-export default function Greeting({personName}) {
+export default function Greeting({className, personName, style}) {
   let svg = <GreetingSpaceSVG />;
   let description = 'This is a shared space between you and other group members. Here\'s where you\'ll see shared messages, files, and a call history with this space.';
+
+  const cssClasses = webexComponentClasses('greeting', className);
 
   if (personName) {
     svg = <GreetingDirectSVG />;
@@ -138,7 +142,7 @@ export default function Greeting({personName}) {
   }
 
   return (
-    <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-greeting`}>
+    <div className={cssClasses} style={style}>
       <div className="greeting-header">
         {svg}
         <div className="greeting-description">{description}</div>
@@ -148,5 +152,12 @@ export default function Greeting({personName}) {
 }
 
 Greeting.propTypes = {
+  className: PropTypes.string,
   personName: PropTypes.string.isRequired,
+  style: PropTypes.shape(),
+};
+
+Greeting.defaultProps = {
+  className: '',
+  style: undefined,
 };
