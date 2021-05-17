@@ -12,7 +12,7 @@ Array [
         className="wxc-activity-header"
       >
         <div
-          className="md-avatar md-avatar--medium"
+          className="md-avatar md-avatar--medium wxc-avatar"
           title="Brenda Song"
         >
           <span
@@ -70,7 +70,7 @@ Array [
         className="wxc-activity-header"
       >
         <div
-          className="md-avatar md-avatar--medium"
+          className="md-avatar md-avatar--medium wxc-avatar"
           title="Giacomo Edwards"
         >
           <span
@@ -121,7 +121,7 @@ Let me know if you need more help! Maybe we can talk about it during standup
         className="wxc-activity-header"
       >
         <div
-          className="md-avatar md-avatar--medium"
+          className="md-avatar md-avatar--medium wxc-avatar"
           title="Brenda Song"
         >
           <span
@@ -170,7 +170,7 @@ Let me know if you need more help! Maybe we can talk about it during standup
         className="wxc-activity-header"
       >
         <div
-          className="md-avatar md-avatar--medium"
+          className="md-avatar md-avatar--medium wxc-avatar"
           title="Simon Damiano"
         >
           <span
@@ -471,7 +471,7 @@ Array [
         className="wxc-activity-header"
       >
         <div
-          className="md-avatar md-avatar--dnd md-avatar--medium"
+          className="md-avatar md-avatar--dnd md-avatar--medium wxc-avatar"
           title="Barbara German"
         >
           <span
@@ -516,7 +516,6 @@ Array [
     <div
       className="md-list-separator wxc-time-ruler"
       role="listitem"
-      style={Object {}}
     >
       <span
         className="md-list-separator__container"
@@ -536,7 +535,7 @@ Array [
         className="wxc-activity-header"
       >
         <div
-          className="md-avatar md-avatar--medium"
+          className="md-avatar md-avatar--medium wxc-avatar"
           title="Brandon Seeger"
         >
           <span
@@ -581,7 +580,6 @@ Array [
     <div
       className="md-list-separator wxc-time-ruler"
       role="listitem"
-      style={Object {}}
     >
       <span
         className="md-list-separator__container"
@@ -601,7 +599,7 @@ Array [
         className="wxc-activity-header"
       >
         <div
-          className="md-avatar md-avatar--dnd md-avatar--medium"
+          className="md-avatar md-avatar--dnd md-avatar--medium wxc-avatar"
           title="Barbara German"
         >
           <span

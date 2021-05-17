@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 
 import WebexLocalMedia from '../WebexLocalMedia/WebexLocalMedia';
 import WebexRemoteMedia from '../WebexRemoteMedia/WebexRemoteMedia';
-import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
+import webexComponentClasses from '../helpers';
 import {useElementDimensions, useMeeting} from '../hooks';
 import {TABLET, DESKTOP, DESKTOP_LARGE} from '../breakpoints';
 
@@ -13,24 +12,24 @@ import {TABLET, DESKTOP, DESKTOP_LARGE} from '../breakpoints';
  * the local stream at the bottom right corner.
  *
  * @param {object} props  Data passed to the component
+ * @param {string} props.className  Custom CSS class to apply
  * @param {string} props.meetingID  ID of the meeting for which to show media
+ * @param {object} props.style  Custom style to apply
  * @returns {object} JSX of the component
  */
-export default function WebexInMeeting({meetingID}) {
+export default function WebexInMeeting({className, meetingID, style}) {
   const {remoteShare, localShare} = useMeeting(meetingID);
   const [meetingRef, {width}] = useElementDimensions();
   const localMediaType = localShare ? 'screen' : 'video';
-  const classBaseName = `${WEBEX_COMPONENTS_CLASS_PREFIX}-in-meeting`;
-  const mainClasses = {
-    [`${classBaseName}`]: true,
-    [`${classBaseName}-tablet`]: width >= TABLET && width < DESKTOP,
-    [`${classBaseName}-desktop`]: width >= DESKTOP && width < DESKTOP_LARGE,
-    [`${classBaseName}-desktop-xl`]: width >= DESKTOP_LARGE,
+  const cssClasses = webexComponentClasses('in-meeting', className, {
+    tablet: width >= TABLET && width < DESKTOP,
+    desktop: width >= DESKTOP && width < DESKTOP_LARGE,
+    'desktop-xl': width >= DESKTOP_LARGE,
     'remote-sharing': remoteShare !== null,
-  };
+  });
 
   return (
-    <div ref={meetingRef} className={classNames(mainClasses)}>
+    <div ref={meetingRef} className={cssClasses} style={style}>
       <WebexRemoteMedia className="remote-media-in-meeting" meetingID={meetingID} />
       <WebexLocalMedia className="local-media-in-meeting" meetingID={meetingID} mediaType={localMediaType} />
       {localShare && <div className="share-notice">You&apos;re sharing your screen</div>}
@@ -39,5 +38,12 @@ export default function WebexInMeeting({meetingID}) {
 }
 
 WebexInMeeting.propTypes = {
+  className: PropTypes.string,
   meetingID: PropTypes.string.isRequired,
+  style: PropTypes.shape(),
+};
+
+WebexInMeeting.defaultProps = {
+  className: '',
+  style: undefined,
 };

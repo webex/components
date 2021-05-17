@@ -10,24 +10,28 @@ import {
   usePerson,
 } from '../hooks';
 import WebexAvatar from '../WebexAvatar/WebexAvatar';
-import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
+import webexComponentClasses from '../helpers';
 
 /**
  * Displays a webex meeting member.
  *
  * @param {object} props  Data passed to the component
- * @param {string} props.destinationType  Type of destination of the membership roster
+ * @param {string} props.className  Custom CSS class to apply
  * @param {string} props.destinationID  ID of the destination for which to get members
- * @param {string} props.personID  ID of the person for which to display avatar
+ * @param {string} props.destinationType  Type of destination of the membership roster
  * @param {boolean} props.displayStatus  Whether or not to display the user's status
- *
+ * @param {string} props.personID  ID of the person for which to display avatar
+ * @param {object} props.style  Custom style to apply
  * @returns {object} JSX of the component
+ *
  */
 export default function WebexMember({
-  destinationType,
+  className,
   destinationID,
-  personID,
+  destinationType,
   displayStatus,
+  personID,
+  style,
 }) {
   const {firstName, lastName, orgID} = usePerson(personID);
   const me = useMe();
@@ -49,8 +53,10 @@ export default function WebexMember({
     isSharing && 'Presenter',
   ].filter((role) => role);
 
+  const cssClasses = webexComponentClasses('member', className);
+
   return (
-    <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-member`}>
+    <div className={cssClasses} style={style}>
       <WebexAvatar personID={personID} displayStatus={displayStatus} />
       <div className="details">
         <div className="name">
@@ -67,12 +73,16 @@ export default function WebexMember({
 }
 
 WebexMember.propTypes = {
-  destinationType: PropTypes.string.isRequired,
+  className: PropTypes.string,
   destinationID: PropTypes.string.isRequired,
-  personID: PropTypes.string.isRequired,
+  destinationType: PropTypes.string.isRequired,
   displayStatus: PropTypes.bool,
+  personID: PropTypes.string.isRequired,
+  style: PropTypes.shape(),
 };
 
 WebexMember.defaultProps = {
+  className: '',
   displayStatus: false,
+  style: undefined,
 };

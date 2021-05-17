@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Icon} from '@momentum-ui/react';
 import WebexMeetingControl from '../WebexMeetingControl/WebexMeetingControl';
-import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
+import webexComponentClasses from '../helpers';
 
 const SCREENS = {
   camera: {
@@ -23,15 +23,24 @@ const SCREENS = {
  * Webex Media Access component displays a prompt explaining necessary access to media.
  *
  * @param {object} props Data passed to the component
- * @param {string} props.meetingID  ID of the meeting
+ * @param {string} props.className  Custom CSS class to apply
  * @param {string} props.media State of media controls
+ * @param {string} props.meetingID  ID of the meeting
+ * @param {object} props.style  Custom style to apply
  * @returns {object} JSX of the component
+ *
  */
-export default function WebexMediaAccess({meetingID, media}) {
+export default function WebexMediaAccess({
+  className,
+  media,
+  meetingID,
+  style,
+}) {
   const screen = SCREENS[media];
+  const cssClasses = webexComponentClasses('media-access', className);
 
   return (
-    <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-media-access`}>
+    <div className={cssClasses} style={style}>
       <Icon name={screen.icon} />
       <h2 className="title">{screen.title}</h2>
       <p className="body">
@@ -47,10 +56,14 @@ export default function WebexMediaAccess({meetingID, media}) {
 }
 
 WebexMediaAccess.propTypes = {
-  meetingID: PropTypes.string.isRequired,
+  className: PropTypes.string,
   media: PropTypes.oneOf(['camera', 'microphone']),
+  meetingID: PropTypes.string.isRequired,
+  style: PropTypes.shape(),
 };
 
 WebexMediaAccess.defaultProps = {
+  className: '',
   media: 'camera',
+  style: undefined,
 };

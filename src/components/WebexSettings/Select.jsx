@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
+import webexComponentClasses from '../helpers';
 
 /**
  * @typedef {object} Option
@@ -11,22 +10,24 @@ import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 
 /**
  * Select component
- *
  * @param {object} props  Data passed to the component
  * @param {string} props.className  Custom CSS class to apply
- * @param {Option[]} props.options  Array of options
- *
+ * @param {object[]} props.options  Array of options
+ * @param {string} props.type  Name of the control as defined in adapter
+ * @param {object} props.style  Custom style to apply
  * @returns {object}  JSX of the element
  */
-export default function Select({className, options, ...props}) {
-  const mainClasses = {
-    [`${WEBEX_COMPONENTS_CLASS_PREFIX}-select`]: true,
-    [className]: !!className,
-  };
+export default function Select({
+  className,
+  options,
+  style,
+  ...props
+}) {
+  const cssClasses = webexComponentClasses('select', className);
 
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
-    <select className={classNames(mainClasses)} {...props}>
+    <select className={cssClasses} {...props} style={style}>
       {options?.map((option) => (
         <option key={option.value} value={option.value}>{option.label}</option>
       ))}
@@ -40,9 +41,11 @@ Select.propTypes = {
     value: PropTypes.string,
     label: PropTypes.string,
   })),
+  style: PropTypes.shape(),
 };
 
 Select.defaultProps = {
   className: '',
   options: [],
+  style: undefined,
 };

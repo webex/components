@@ -9,7 +9,7 @@ Array [
       className="wxc-activity-header"
     >
       <div
-        className="md-avatar md-avatar--dnd md-avatar--medium"
+        className="md-avatar md-avatar--dnd md-avatar--medium wxc-avatar"
         title="Barbara German"
       >
         <span
@@ -83,7 +83,7 @@ Array [
       className="wxc-activity-header"
     >
       <div
-        className="md-avatar md-avatar--dnd md-avatar--medium"
+        className="md-avatar md-avatar--dnd md-avatar--medium wxc-avatar"
         title="Barbara German"
       >
         <span
@@ -157,7 +157,7 @@ Array [
       className="wxc-activity-header"
     >
       <div
-        className="md-avatar md-avatar--medium"
+        className="md-avatar md-avatar--medium wxc-avatar"
         title="Simon Damiano"
       >
         <span
@@ -231,7 +231,7 @@ Array [
       className="wxc-activity-header"
     >
       <div
-        className="md-avatar md-avatar--medium"
+        className="md-avatar md-avatar--medium wxc-avatar"
         title="Brandon Seeger"
       >
         <span
@@ -305,7 +305,7 @@ Array [
       className="wxc-activity-header"
     >
       <div
-        className="md-avatar md-avatar--medium"
+        className="md-avatar md-avatar--medium wxc-avatar"
         title="Giacomo Edwards"
       >
         <span

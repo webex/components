@@ -1,30 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import {Spinner} from '@momentum-ui/react';
 import {MeetingState} from '@webex/component-adapter-interfaces';
 
 import WebexInMeeting from '../WebexInMeeting/WebexInMeeting';
 import WebexInterstitialMeeting from '../WebexInterstitialMeeting/WebexInterstitialMeeting';
-import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
+import webexComponentClasses from '../helpers';
 import {useMeeting} from '../hooks';
 
 /**
  * Webex Meeting component displays the default Webex meeting experience.
  *
  * @param {object} props  Data passed to the component
+ * @param {string} props.className  Custom CSS class to apply
  * @param {string} props.meetingID  ID of the meeting
+ * @param {object} props.style  Custom style to apply
  * @returns {object} JSX of the component
  */
-export default function WebexMeeting({meetingID}) {
+
+export default function WebexMeeting({className, meetingID, style}) {
   const {ID, state} = useMeeting(meetingID);
   const {JOINED, LEFT} = MeetingState;
   const isActive = state === JOINED;
 
-  const classBaseName = `${WEBEX_COMPONENTS_CLASS_PREFIX}-meeting`;
-  const mainClasses = {
-    [classBaseName]: true,
-  };
+  const cssClasses = webexComponentClasses('meeting', className);
 
   let meetingDisplay;
 
@@ -44,12 +43,19 @@ export default function WebexMeeting({meetingID}) {
   }
 
   return (
-    <div className={classNames(mainClasses)}>
+    <div className={cssClasses} style={style}>
       {meetingDisplay}
     </div>
   );
 }
 
 WebexMeeting.propTypes = {
+  className: PropTypes.string,
   meetingID: PropTypes.string.isRequired,
+  style: PropTypes.shape(),
+};
+
+WebexMeeting.defaultProps = {
+  className: '',
+  style: undefined,
 };

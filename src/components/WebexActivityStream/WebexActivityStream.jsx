@@ -3,6 +3,7 @@ import React, {useRef} from 'react';
 import {RoomType} from '@webex/component-adapter-interfaces';
 
 import WebexActivity from '../WebexActivity/WebexActivity';
+import webexComponentClasses from '../helpers';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import {PREPEND_ACTIVITIES} from '../hooks/useActivityStream';
 import {
@@ -22,10 +23,12 @@ import TimeRuler from './TimeRuler';
  * those as they come in.
  *
  * @param {object} props  Data passed to the component
+ * @param {string} props.className  Custom CSS class to apply
  * @param {string} props.roomID  ID of the room for which to display activities
+ * @param {object} props.style  Custom style to apply
  * @returns {object} JSX of the component
  */
-export default function WebexActivityStream({roomID}) {
+export default function WebexActivityStream({className, roomID, style}) {
   const [activitiesData, dispatch] = useActivityStream(roomID);
   const loadPreviousActivities = (previousActivities) => {
     dispatch({type: PREPEND_ACTIVITIES, payload: previousActivities});
@@ -35,6 +38,8 @@ export default function WebexActivityStream({roomID}) {
   const activityStreamRef = useRef(null);
   const showLoader = useActivityScroll(roomID, activityStreamRef, loadPreviousActivities);
   const lastActivityRef = useOverflowActivities(roomID, activityStreamRef, loadPreviousActivities);
+
+  const cssClasses = webexComponentClasses('activity-stream', className);
 
   const personName = roomType === RoomType.DIRECT ? title : '';
   const activities = activitiesData.map((activity) => {
@@ -49,7 +54,7 @@ export default function WebexActivityStream({roomID}) {
   });
 
   return (
-    <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-activity-stream`} ref={activityStreamRef}>
+    <div className={cssClasses} ref={activityStreamRef} style={style}>
       {showLoader && <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-activity-stream-loader`} />}
       {activities.length ? <>{activities}</> : <Greeting personName={personName} />}
       <div className="last-activity" ref={lastActivityRef} />
@@ -58,5 +63,12 @@ export default function WebexActivityStream({roomID}) {
 }
 
 WebexActivityStream.propTypes = {
+  className: PropTypes.string,
   roomID: PropTypes.string.isRequired,
+  style: PropTypes.shape(),
+};
+
+WebexActivityStream.defaultProps = {
+  className: '',
+  style: undefined,
 };

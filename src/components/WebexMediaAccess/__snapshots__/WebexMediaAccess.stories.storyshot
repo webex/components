@@ -36,7 +36,7 @@ Array [
       alt="Join without camera"
       aria-label="Join without camera"
       aria-pressed={null}
-      className="md-button md-button--52 md-button--green"
+      className="md-button md-button--52 md-button--green wxc-meeting-control"
       data-md-event-key="md-button-0"
       data-md-keyboard-key="join-without-camera"
       disabled={false}
@@ -122,7 +122,7 @@ Array [
       alt="Join without audio"
       aria-label="Join without audio"
       aria-pressed={null}
-      className="md-button md-button--52 md-button--green"
+      className="md-button md-button--52 md-button--green wxc-meeting-control"
       data-md-event-key="md-button-0"
       data-md-keyboard-key="join-without-audio"
       disabled={false}
