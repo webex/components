@@ -85,3 +85,89 @@ Array [
   />,
 ]
 `;
+
+exports[`Storyshots Meetings/Webex Media Access Microphone 1`] = `
+Array [
+  <div
+    className="wxc-media-access"
+  >
+    <i
+      aria-label={null}
+      className="md-icon icon icon-microphone_36"
+      style={
+        Object {
+          "fontSize": 36,
+        }
+      }
+    />
+    <h2
+      className="title"
+    >
+      Allow access to microphone
+    </h2>
+    <p
+      className="body"
+    >
+      Select
+       
+      <span
+        className="allow"
+      >
+        Allow
+      </span>
+       
+      when your browser asks to let Webex use your microphone for this video call
+    </p>
+    <button
+      alt="Join without audio"
+      aria-label="Join without audio"
+      aria-pressed={null}
+      className="md-button md-button--52 md-button--green"
+      data-md-event-key="md-button-0"
+      data-md-keyboard-key="join-without-audio"
+      disabled={false}
+      id="md-button-0"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      style={
+        Object {
+          "style": Object {},
+        }
+      }
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="md-button__children"
+        style={
+          Object {
+            "opacity": "1",
+          }
+        }
+      >
+        Join without audio
+      </span>
+    </button>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
