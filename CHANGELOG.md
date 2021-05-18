@@ -1,3 +1,10 @@
+## [1.63.1](https://github.com/webex/components/compare/v1.63.0...v1.63.1) (2021-05-17)
+
+
+### Bug Fixes
+
+* **UseMeetingDestination:** work even if an adapter is not yet present on the context ([adc34b6](https://github.com/webex/components/commit/adc34b691e78e23be3c23c54ce82cf10c828bad8))
+
 # [1.63.0](https://github.com/webex/components/compare/v1.62.0...v1.63.0) (2021-05-11)
 
 

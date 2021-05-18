@@ -1,6 +1,6 @@
 import {useContext, useEffect, useState} from 'react';
 
-import {AdapterContext, MeetingContext} from './contexts';
+import {AdapterContext} from './contexts';
 
 // TODO: Figure out how to import JS Doc definitions and remove duplication.
 /**
@@ -14,12 +14,12 @@ import {AdapterContext, MeetingContext} from './contexts';
  * Custom hook that returns the display state of the requested meeting control.
  *
  * @param {string} type  Type of meeting control for which to get display data
+ * @param {string} meetingID  ID of the meeting
  * @returns {Array.<Function, MeetingControlDisplay>}  Action function and data state of the meeting control
  */
-export default function useMeetingControl(type) {
+export default function useMeetingControl(type, meetingID) {
   const [display, setDisplay] = useState({});
   const {meetingsAdapter} = useContext(AdapterContext);
-  const meetingID = useContext(MeetingContext);
   const controls = meetingsAdapter.meetingControls;
   let control;
 
