@@ -1,3 +1,10 @@
+# [1.64.0](https://github.com/webex/components/compare/v1.63.1...v1.64.0) (2021-05-18)
+
+
+### Features
+
+* **WebexMediaAccess:** add media access component ([309572c](https://github.com/webex/components/commit/309572ccbc105a1e647403aac05c3e6b7d0a80a6))
+
 ## [1.63.1](https://github.com/webex/components/compare/v1.63.0...v1.63.1) (2021-05-17)
 
 
