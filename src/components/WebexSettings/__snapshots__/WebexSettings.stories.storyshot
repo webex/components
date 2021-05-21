@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Meetings/Webex Settings Settings 1`] = `
+Array [
+  <div
+    className="wxc-settings"
+  >
+    <div
+      className="md-tab md-tab--pills"
+      type="pills"
+    >
+       
+      <ul
+        className="md-tab__list"
+        role="tab"
+      >
+        <li
+          className="md-tab__item active md-type--pills"
+          tabIndex="-1"
+        >
+          <a
+            aria-current={true}
+            href="#"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="tab"
+            tabIndex={0}
+          >
+            Audio
+          </a>
+        </li>
+        <li
+          className="md-tab__item md-type--pills"
+          tabIndex="-1"
+        >
+          <a
+            aria-current={false}
+            href="#"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="tab"
+            tabIndex={-1}
+          >
+            Video
+          </a>
+        </li>
+      </ul>
+      <div
+        className="md-tab__content"
+      >
+        <div
+          className="md-tab__pane active"
+        >
+          <div
+            className="md-tab__content"
+          >
+            Audio Settings for meeting
+             
+            meeting1
+             
+            (TBD)
+          </div>
+        </div>
+        <div
+          className="md-tab__pane"
+        >
+          <div
+            className="md-tab__content"
+          >
+            Video Settings for meeting
+             
+            meeting1
+             
+            (TBD)
+          </div>
+        </div>
+      </div>
+       
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;

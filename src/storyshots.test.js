@@ -26,6 +26,7 @@ function createNodeMock(element) {
     ...element,
     getBoundingClientRect: () => ({}),
     scrollIntoView: () => ({}),
+    focus: () => undefined,
   };
 }
 
