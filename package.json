@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "@juggle/resize-observer": "^3.2.0",
-    "@webex/component-adapter-interfaces": "^1.16.1",
+    "@webex/component-adapter-interfaces": "^1.17.0",
     "classnames": "^2.2.6",
     "date-fns": "^2.15.0"
   },
