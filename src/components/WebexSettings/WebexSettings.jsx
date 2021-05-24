@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import webexComponentClasses from '../helpers';
 import Tabs from './Tabs';
 import WebexMicrophoneSettings from '../WebexMicrophoneSettings/WebexMicrophoneSettings';
+import WebexVideoSettings from '../WebexVideoSettings/WebexVideoSettings';
 
 /**
  * Webex Settings component
@@ -27,13 +28,7 @@ export default function WebexSettings({meetingID, className, style}) {
     key: 'video',
     heading: 'Video',
     content: () => (
-      <div>
-        Video Settings for meeting
-        {' '}
-        {meetingID}
-        {' '}
-        (TBD)
-      </div>
+      <WebexVideoSettings type="switch-camera" meetingID={meetingID} />
     ),
   }];
 

@@ -1,3 +1,5 @@
+@import 'generic/_generic.scss';
+
 @import 'WebexActivity/WebexActivity';
 @import 'WebexActivityStream/WebexActivityStream';
 @import 'WebexInMeeting/WebexInMeeting';
@@ -11,5 +13,6 @@
 @import 'WebexMemberRoster/WebexMemberRoster';
 @import 'WebexRemoteMedia/WebexRemoteMedia';
 @import 'WebexSettings/WebexSettings';
-@import 'generic/_generic.scss';
 @import 'WebexMicrophoneSettings/WebexMicrophoneSettings';
+@import 'WebexVideoSettings/WebexVideoSettings';
+
