@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import Tabs from './Tabs';
+import WebexVideoSettings from '../WebexVideoSettings/WebexVideoSettings';
 
 /**
  * Webex Settings component
@@ -10,7 +11,6 @@ import Tabs from './Tabs';
  * @param {object} props  Data passed to the component
  * @param {string} props.className  Custom CSS class to apply
  * @param {string} props.meetingID  ID of the meeting to set the preferred devices for
- *
  * @returns {object} JSX of the component
  */
 export default function WebexSettings({className, meetingID}) {
@@ -36,11 +36,7 @@ export default function WebexSettings({className, meetingID}) {
     heading: 'Video',
     content: () => (
       <div>
-        Video Settings for meeting
-        {' '}
-        {meetingID}
-        {' '}
-        (TBD)
+        <WebexVideoSettings type="switch-camera" meetingID={meetingID} />
       </div>
     ),
   }];

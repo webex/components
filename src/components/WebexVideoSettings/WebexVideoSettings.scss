@@ -1,0 +1,29 @@
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-video-settings {
+
+  .camera-warning {
+    color: $md-red-60;
+    display: flex;
+    align-items: start;
+    padding: 0.25rem 0 0.25rem 0;
+
+    .message {
+      margin-left: 0.625rem;
+      font-size: 1rem;
+    }
+  }
+
+  .media {
+    position: relative;
+    margin-top: 1.5rem;
+  }
+
+  .preview {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba($md-white, .6);
+    color: $md-black-100;
+  }
+
+}
