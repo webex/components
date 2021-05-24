@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Meetings/Webex Video Settings Video Settings 1`] = `
+Array [
+  <div
+    className="wxc-video-settings"
+  >
+    <h2>
+      Camera
+    </h2>
+    <div
+      className="md-input-container md-select"
+    >
+      <button
+        alt=""
+        aria-haspopup="listbox"
+        aria-labelledby="md-select-1__label"
+        aria-pressed={null}
+        className="md-button md-button--36"
+        data-md-event-key="md-select-1"
+        disabled={false}
+        id="md-select-1"
+        name="md-select-1"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        style={
+          Object {
+            "style": Object {},
+          }
+        }
+        tabIndex={0}
+        type="button"
+      >
+        <span
+          className="md-button__children"
+          style={
+            Object {
+              "opacity": "1",
+            }
+          }
+        >
+          <div
+            className="md-select__label"
+            id="md-select-1__label"
+          >
+            Logitech HD Webcam C525 (046d:0826)
+            <i
+              aria-label={null}
+              className="md-icon icon icon-arrow-down_16"
+              style={
+                Object {
+                  "fontSize": 16,
+                }
+              }
+            />
+          </div>
+        </span>
+      </button>
+    </div>
+    <div
+      className="preview"
+    >
+      <h3>
+        Preview
+      </h3>
+    </div>
+    <div
+      className="wxc-local-media"
+    >
+      <video
+        autoPlay={true}
+        playsInline={true}
+      />
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
