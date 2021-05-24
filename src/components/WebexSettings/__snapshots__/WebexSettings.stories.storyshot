@@ -4,6 +4,12 @@ exports[`Storyshots Meetings/Webex Settings Settings 1`] = `
 Array [
   <div
     className="wxc-settings"
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "flex": 1,
+      }
+    }
   >
     <div
       className="wxc-tabs"

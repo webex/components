@@ -6,7 +6,7 @@ export default {
   component: WebexSettings,
 };
 
-const Template = (args) => <WebexSettings {...args} />;
+const Template = (args) => <WebexSettings {...args} style={{flex: 1, alignSelf: 'stretch'}} />;
 
 export const Settings = Template.bind({});
 Settings.args = {
