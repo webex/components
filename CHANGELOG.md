@@ -1,3 +1,10 @@
+# [1.65.0](https://github.com/webex/components/compare/v1.64.1...v1.65.0) (2021-05-27)
+
+
+### Features
+
+* **WebexSettings:** add WebexSettings component ([53b5756](https://github.com/webex/components/commit/53b57563a32c7e054babf05f18efffa01339383e))
+
 ## [1.64.1](https://github.com/webex/components/compare/v1.64.0...v1.64.1) (2021-05-21)
 
 
