@@ -12,6 +12,7 @@ export default {
     remoteShare: null,
     state: MeetingState.JOINED,
     showRoster: false,
+    showSettings: false,
   },
   meeting2: {
     ID: 'meeting2',
@@ -24,6 +25,7 @@ export default {
     remoteShare: new MediaStream(),
     state: MeetingState.NOT_JOINED,
     showRoster: false,
+    showSettings: false,
   },
   meeting3: {
     ID: 'meeting3',
@@ -36,6 +38,7 @@ export default {
     remoteShare: null,
     state: MeetingState.NOT_JOINED,
     showRoster: false,
+    showSettings: false,
   },
   meeting4: {
     ID: 'meeting4',
@@ -48,6 +51,7 @@ export default {
     remoteShare: null,
     state: MeetingState.JOINED,
     showRoster: false,
+    showSettings: false,
   },
   meeting5: {
     ID: 'meeting5',
@@ -60,6 +64,7 @@ export default {
     remoteShare: null,
     state: MeetingState.JOINED,
     showRoster: true,
+    showSettings: false,
   },
   meeting6: {
     ID: 'meeting6',
@@ -72,6 +77,7 @@ export default {
     remoteShare: null,
     state: MeetingState.JOINED,
     showRoster: false,
+    showSettings: false,
   },
   meeting7: {
     ID: 'meeting7',
@@ -84,6 +90,7 @@ export default {
     remoteShare: null,
     state: null,
     showRoster: false,
+    showSettings: false,
   },
   meeting8: {
     ID: null,
@@ -94,8 +101,9 @@ export default {
     remoteAudio: null,
     remoteVideo: null,
     remoteShare: null,
-    showRoster: false,
     state: MeetingState.LEFT,
+    showRoster: false,
+    showSettings: false,
   },
   meeting9: {
     error: true,

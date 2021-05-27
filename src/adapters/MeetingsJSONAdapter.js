@@ -16,6 +16,7 @@ export const LEAVE_CONTROL = 'leave-meeting';
 export const DISABLED_MUTE_AUDIO_CONTROL = 'disabled-mute-audio';
 export const DISABLED_JOIN_CONTROL = 'disabled-join-meeting';
 export const ROSTER_CONTROL = 'member-roster';
+export const SETTINGS_CONTROL = 'settings';
 
 // TODO: Figure out how to import JS Doc definitions and remove duplication.
 /**
@@ -56,7 +57,8 @@ export const ROSTER_CONTROL = 'member-roster';
  *     "remoteAudio": {},
  *     "remoteVideo": {},
  *     "remoteShare": {},
- *     "state": "JOINED"
+ *     "showSettings": false,
+ *     "state": "JOINED",
  *   },
  *   "meeting-2": {
  *     "ID": "meeting-2",
@@ -67,7 +69,8 @@ export const ROSTER_CONTROL = 'member-roster';
  *     "remoteAudio": {},
  *     "remoteVideo": {},
  *     "remoteShare": {},
- *     "state": "NOT_JOINED"
+ *     "showSettings": false,
+ *     "state": "NOT_JOINED",
  *   }
  * }
  */
@@ -138,6 +141,12 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       action: this.toggleRoster.bind(this),
       display: this.rosterControl.bind(this),
     };
+
+    this.meetingControls[SETTINGS_CONTROL] = {
+      ID: SETTINGS_CONTROL,
+      action: this.toggleSettings.bind(this),
+      display: this.settingsControl.bind(this),
+    };
   }
 
   /**
@@ -186,8 +195,9 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
           remoteAudio: null,
           remoteVideo: null,
           remoteShare: null,
-          state: null,
           showRoster: null,
+          showSettings: false,
+          state: null,
         });
       } else if (this.datasource[ID]) {
         const meeting = this.datasource[ID];
@@ -221,6 +231,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       tap(() => end$.next(`Meeting "${ID}" has completed.`)),
     );
     const rosterEvents$ = fromEvent(document, ROSTER_CONTROL);
+    const settingsEvents$ = fromEvent(document, SETTINGS_CONTROL);
 
     const events$ = merge(
       audioEvents$,
@@ -230,6 +241,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       leaveEvents$,
       shareEvents$,
       rosterEvents$,
+      settingsEvents$,
     ).pipe(
       filter((event) => event.detail.ID === ID),
       // Make a copy of the meeting to treat it as if were immutable
@@ -742,5 +754,62 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
 
       observer.complete();
     });
+  }
+
+  /**
+   * Handles the toggle of the settings.
+   *
+   * @param {string} ID  Id of the meeting for which to toggle the settings flag
+   * @private
+   */
+  async toggleSettings(ID) {
+    const meeting = this.datasource[ID];
+
+    meeting.showSettings = !meeting.showSettings;
+    document.dispatchEvent(new CustomEvent(SETTINGS_CONTROL, {detail: meeting}));
+  }
+
+  /**
+   * Returns an observable that emits the display data of a settings control.
+   *
+   * @private
+   * @param {string} ID  ID of the meeting to toggle settings
+   * @returns {Observable.<MeetingControlDisplay>} Observable stream that emits display data of the settings control
+   */
+  settingsControl(ID) {
+    const active = {
+      ID: SETTINGS_CONTROL,
+      icon: 'settings_32',
+      tooltip: 'Hide settings panel',
+      state: MeetingControlState.ACTIVE,
+      text: 'Settings',
+    };
+    const inactive = {
+      ID: SETTINGS_CONTROL,
+      icon: 'settings_32',
+      tooltip: 'Show settings panel',
+      state: MeetingControlState.INACTIVE,
+      text: 'Settings',
+    };
+
+    const initialState$ = new Observable((observer) => {
+      const meeting = this.datasource[ID];
+
+      if (meeting) {
+        const initialState = meeting.showSettings ? active : inactive;
+
+        observer.next(initialState);
+        observer.complete();
+      } else {
+        observer.error(new Error(`Could not find meeting with ID "${ID}" to add settings control`));
+      }
+    });
+
+    const settingsEvent$ = fromEvent(document, SETTINGS_CONTROL).pipe(
+      filter((event) => event.detail.ID === ID),
+      map((event) => (event.detail.showSettings ? active : inactive)),
+    );
+
+    return concat(initialState$, settingsEvent$);
   }
 }
