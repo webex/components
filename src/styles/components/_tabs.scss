@@ -1,0 +1,44 @@
+.md-tab {
+  .md-tab__list {
+    border-bottom: 1px solid $md-gray-30;
+    display: block;
+    padding: 0 1rem;
+
+    .md-tab__item {
+      display: inline-block;
+      min-width: auto;
+
+      & > *:focus {
+        box-shadow: none;
+        outline: none;
+      }
+
+      &.active > a {
+        background: transparent;
+        border-radius: 0;
+        border: solid black;
+        border-width: 0 0 2px 0;
+        font-weight: bold;
+
+        &:hover {
+          background: transparent;
+        }
+      }
+
+      a {
+        border: none;
+        border-radius: 0;
+        margin-right: 0.8rem;
+
+        &:hover {
+          background: transparent;
+        }
+      }
+    }
+  }
+
+  .md-tab__content {
+    border: none;
+    padding: 1rem;
+  }
+}
