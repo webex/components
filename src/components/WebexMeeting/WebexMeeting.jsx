@@ -30,10 +30,6 @@ export default function WebexMeeting({meetingID, controls}) {
     [`${classBaseName}-active`]: ID && isActive,
   };
 
-  const meetingControls = controls(isActive).map(
-    (key) => <WebexMeetingControl key={key} type={key} meetingID={ID} />,
-  );
-
   let meetingDisplay;
 
   // A meeting with a falsy state means that the meeting has not been created
@@ -42,6 +38,10 @@ export default function WebexMeeting({meetingID, controls}) {
   } else if (state === LEFT) {
     meetingDisplay = "You've successfully left the meeting";
   } else {
+    const meetingControls = controls(isActive).map(
+      (key) => <WebexMeetingControl key={key} type={key} meetingID={ID} />,
+    );
+
     meetingDisplay = (
       <>
         {isActive

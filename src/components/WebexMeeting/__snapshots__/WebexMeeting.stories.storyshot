@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Meetings/Webex Meeting Control Active Icon 1`] = `null`;
+
 exports[`Storyshots Meetings/Webex Meeting Custom Controls 1`] = `
 Array [
   <div
@@ -479,7 +481,69 @@ Array [
 ]
 `;
 
+exports[`Storyshots Meetings/Webex Meeting Left Meeting 2`] = `
+Array [
+  <div
+    className="wxc-meeting"
+  >
+    You've successfully left the meeting
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
 exports[`Storyshots Meetings/Webex Meeting Loading 1`] = `
+Array [
+  <div
+    className="wxc-meeting"
+  >
+    <i
+      className="md-spinner md-spinner--36 md-spinner--black"
+    />
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex Meeting Loading 2`] = `
 Array [
   <div
     className="wxc-meeting"
