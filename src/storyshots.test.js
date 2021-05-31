@@ -35,23 +35,12 @@ initStoryshots({
   test: ({story, context, done}) => {
     const converter = new Stories2SnapsConverter();
     const snapshotFilename = converter.getSnapshotFileName(context);
-
-    if (story.id === 'platform-webex-avatar--invalid') {
-      // eslint-disable-next-line no-console
-      console.error = jest.fn();
-    }
     const tree = TestRenderer.create(story.render(), {createNodeMock});
 
     // Because observables are async, execute snapshot tests on next event loop cycle
     setTimeout(() => {
       if (snapshotFilename) {
         expect(tree.toJSON()).toMatchSpecificSnapshot(snapshotFilename);
-      }
-      if (story.id === 'platform-webex-avatar--invalid') {
-        /* eslint-disable no-console */
-        expect(console.error).toHaveBeenCalledTimes(1);
-        expect(console.error).toHaveBeenCalledWith('Could not find person with ID "user-7"');
-        /* eslint-enable no-console */
       }
       done();
     }, 0);

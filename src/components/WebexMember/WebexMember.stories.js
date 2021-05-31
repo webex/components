@@ -11,15 +11,11 @@ const Template = (args) => <WebexMember {...args} />;
 
 export const Space = Template.bind({});
 Space.args = {
-  destinationType: 'room',
-  destinationID: 'room1',
   personID: 'user1',
 };
 
 export const StatusEnabled = Template.bind({});
 StatusEnabled.args = {
-  destinationType: 'room',
-  destinationID: 'room1',
   personID: 'user1',
   displayStatus: true,
 };

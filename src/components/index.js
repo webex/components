@@ -7,7 +7,7 @@ export {default as WebexInterstitialMeeting} from './WebexInterstitialMeeting/We
 export {default as WebexLocalMedia} from './WebexLocalMedia/WebexLocalMedia';
 export {default as WebexMeeting} from './WebexMeeting/WebexMeeting';
 export {default as WebexMeetingControl} from './WebexMeetingControl/WebexMeetingControl';
-export {default as WebexMeetingControls} from './WebexMeetingControl/WebexMeetingControls';
+export {default as WebexMeetingControlBar} from './WebexMeetingControlBar/WebexMeetingControlBar';
 export {default as WebexMeetingInfo} from './WebexMeetingInfo/WebexMeetingInfo';
 export {default as WebexMember} from './WebexMember/WebexMember';
 export {default as WebexMemberRoster} from './WebexMemberRoster/WebexMemberRoster';

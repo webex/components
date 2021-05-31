@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Meetings/Webex Meeting Control Active Icon 1`] = `null`;
-
 exports[`Storyshots Meetings/Webex Meeting Custom Controls 1`] = `
 Array [
   <div
@@ -27,8 +25,82 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-meeting-controls meeting-controls-container"
+      className="wxc-meeting-control-bar meeting-controls-container"
     >
+      <button
+        alt="Mute"
+        aria-label="Mute"
+        aria-pressed={null}
+        className="md-button md-button--circle md-button--56"
+        data-md-event-key="md-button-0"
+        disabled={false}
+        id="md-button-0"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        style={
+          Object {
+            "style": Object {},
+          }
+        }
+        tabIndex={0}
+        type="button"
+      >
+        <span
+          className="md-button__children"
+          style={
+            Object {
+              "opacity": "1",
+            }
+          }
+        >
+          <i
+            aria-label={null}
+            className="md-icon icon icon-microphone-muted_28"
+            style={
+              Object {
+                "fontSize": 28,
+              }
+            }
+          />
+        </span>
+      </button>
+      <button
+        alt="Stop video"
+        aria-label="Stop video"
+        aria-pressed={null}
+        className="md-button md-button--circle md-button--56"
+        data-md-event-key="md-button-0"
+        disabled={false}
+        id="md-button-0"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        style={
+          Object {
+            "style": Object {},
+          }
+        }
+        tabIndex={0}
+        type="button"
+      >
+        <span
+          className="md-button__children"
+          style={
+            Object {
+              "opacity": "1",
+            }
+          }
+        >
+          <i
+            aria-label={null}
+            className="md-icon icon icon-camera-muted_28"
+            style={
+              Object {
+                "fontSize": 28,
+              }
+            }
+          />
+        </span>
+      </button>
       <button
         alt="Join meeting"
         aria-label="Join meeting"
@@ -120,7 +192,7 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-meeting-controls meeting-controls-container"
+      className="wxc-meeting-control-bar meeting-controls-container"
     >
       <button
         alt="Mute"
@@ -320,7 +392,7 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-meeting-controls meeting-controls-container"
+      className="wxc-meeting-control-bar meeting-controls-container"
     >
       <button
         alt="Mute"
@@ -481,69 +553,7 @@ Array [
 ]
 `;
 
-exports[`Storyshots Meetings/Webex Meeting Left Meeting 2`] = `
-Array [
-  <div
-    className="wxc-meeting"
-  >
-    You've successfully left the meeting
-  </div>,
-  <video
-    autoPlay={true}
-    height="0"
-    id="remote-video"
-    loop={true}
-    muted={true}
-    playsInline={true}
-    src="./video/ongoing-meeting.mp4"
-    width="0"
-  />,
-  <video
-    autoPlay={true}
-    height="0"
-    id="remote-share"
-    loop={true}
-    muted={true}
-    playsInline={true}
-    src="./video/ongoing-share.mp4"
-    width="0"
-  />,
-]
-`;
-
 exports[`Storyshots Meetings/Webex Meeting Loading 1`] = `
-Array [
-  <div
-    className="wxc-meeting"
-  >
-    <i
-      className="md-spinner md-spinner--36 md-spinner--black"
-    />
-  </div>,
-  <video
-    autoPlay={true}
-    height="0"
-    id="remote-video"
-    loop={true}
-    muted={true}
-    playsInline={true}
-    src="./video/ongoing-meeting.mp4"
-    width="0"
-  />,
-  <video
-    autoPlay={true}
-    height="0"
-    id="remote-share"
-    loop={true}
-    muted={true}
-    playsInline={true}
-    src="./video/ongoing-share.mp4"
-    width="0"
-  />,
-]
-`;
-
-exports[`Storyshots Meetings/Webex Meeting Loading 2`] = `
 Array [
   <div
     className="wxc-meeting"
@@ -605,7 +615,7 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-meeting-controls meeting-controls-container"
+      className="wxc-meeting-control-bar meeting-controls-container"
     >
       <button
         alt="Mute"

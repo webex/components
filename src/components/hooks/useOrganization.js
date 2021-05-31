@@ -20,27 +20,18 @@ export default function useOrganization(ID) {
   const {organizationsAdapter} = useContext(AdapterContext);
 
   useEffect(() => {
-    let cleanup;
+    const onError = (error) => {
+      // eslint-disable-next-line no-console
+      console.error(error.message);
+    };
+    const onOrganization = (newOrganization) => {
+      setOrganization({...newOrganization});
+    };
+    const subscription = organizationsAdapter.getOrg(ID).subscribe(onOrganization, onError);
 
-    if (!ID) {
-      cleanup = undefined;
-    } else {
-      const onError = (error) => {
-        // eslint-disable-next-line no-console
-        console.error(error.message);
-      };
-      const onOrganization = (newOrganization) => {
-        setOrganization({...newOrganization});
-      };
-      const subscription = organizationsAdapter.getOrg(ID)
-        .subscribe(onOrganization, onError);
-
-      cleanup = () => {
-        subscription.unsubscribe();
-      };
-    }
-
-    return cleanup;
+    return () => {
+      subscription.unsubscribe();
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ID]);
 
