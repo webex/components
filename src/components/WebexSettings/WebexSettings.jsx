@@ -1,14 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import {
-  Tab,
-  TabContent,
-  TabList,
-  TabPane,
-  Tabs,
-} from '@momentum-ui/react';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
+import Tabs from './Tabs';
 
 /**
  * Webex Settings component
@@ -24,31 +18,36 @@ export default function WebexSettings({className, meetingID}) {
     [`${WEBEX_COMPONENTS_CLASS_PREFIX}-settings`]: true,
     [className]: !!className,
   };
+  const [tab, setTab] = useState('audio');
+  const tabs = [{
+    key: 'audio',
+    heading: 'Audio',
+    content: () => (
+      <div>
+        Audio Settings for meeting
+        {' '}
+        {meetingID}
+        {' '}
+        (TBD)
+      </div>
+    ),
+  }, {
+    key: 'video',
+    heading: 'Video',
+    content: () => (
+      <div>
+        Video Settings for meeting
+        {' '}
+        {meetingID}
+        {' '}
+        (TBD)
+      </div>
+    ),
+  }];
 
   return (
     <div className={classNames(mainClasses)}>
-      <Tabs>
-        <TabList>
-          <Tab heading="Audio" />
-          <Tab heading="Video" />
-        </TabList>
-        <TabContent>
-          <TabPane>
-            Audio Settings for meeting
-            {' '}
-            {meetingID}
-            {' '}
-            (TBD)
-          </TabPane>
-          <TabPane>
-            Video Settings for meeting
-            {' '}
-            {meetingID}
-            {' '}
-            (TBD)
-          </TabPane>
-        </TabContent>
-      </Tabs>
+      <Tabs tabs={tabs} selected={tab} onSelect={setTab} />
     </div>
   );
 }

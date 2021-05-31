@@ -6,76 +6,43 @@ Array [
     className="wxc-settings"
   >
     <div
-      className="md-tab md-tab--pills"
-      type="pills"
+      className="wxc-tabs"
     >
-       
       <ul
-        className="md-tab__list"
-        role="tab"
+        className="tabs-list"
       >
         <li
-          className="md-tab__item active md-type--pills"
-          tabIndex="-1"
+          className="tab active"
         >
-          <a
-            aria-current={true}
-            href="#"
+          <button
             onClick={[Function]}
-            onKeyDown={[Function]}
-            role="tab"
-            tabIndex={0}
+            type="button"
           >
             Audio
-          </a>
+          </button>
         </li>
         <li
-          className="md-tab__item md-type--pills"
-          tabIndex="-1"
+          className="tab"
         >
-          <a
-            aria-current={false}
-            href="#"
+          <button
             onClick={[Function]}
-            onKeyDown={[Function]}
-            role="tab"
-            tabIndex={-1}
+            type="button"
           >
             Video
-          </a>
+          </button>
         </li>
       </ul>
       <div
-        className="md-tab__content"
+        className="tabs-content"
       >
-        <div
-          className="md-tab__pane active"
-        >
-          <div
-            className="md-tab__content"
-          >
-            Audio Settings for meeting
-             
-            meeting1
-             
-            (TBD)
-          </div>
-        </div>
-        <div
-          className="md-tab__pane"
-        >
-          <div
-            className="md-tab__content"
-          >
-            Video Settings for meeting
-             
-            meeting1
-             
-            (TBD)
-          </div>
+        <div>
+          Audio Settings for meeting
+           
+          meeting1
+           
+          (TBD)
         </div>
       </div>
-       
     </div>
   </div>,
   <video
