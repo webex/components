@@ -1,0 +1,33 @@
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-tabs {
+  .tabs-list {
+    border-bottom: 1px solid $md-gray-30;
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 1.2rem;
+
+    .tab {
+      &.active > button {
+        border-bottom: 2px solid black;
+        font-weight: bold;
+      }
+
+      &:not(:last-child) {
+        margin-right: 0.8rem;
+      }
+
+      button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-family: "CiscoSansTT Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        padding: 0 0.5rem;
+      }
+    }
+  }
+
+  .tabs-content {
+    padding: 1.3rem;
+  }
+}
