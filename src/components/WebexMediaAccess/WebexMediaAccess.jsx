@@ -11,7 +11,6 @@ import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
  * @param {string} props.meetingID  ID of the meeting
  * @returns {object} JSX of the component
  */
-
 export default function WebexMediaAccess({meetingID}) {
   return (
     <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-media-access`}>

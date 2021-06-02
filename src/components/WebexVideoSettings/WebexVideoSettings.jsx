@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import {Select, SelectOption, Icon} from '@momentum-ui/react';
+import {Icon} from '@momentum-ui/react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import WebexLocalMedia from '../WebexLocalMedia/WebexLocalMedia';
+import WebexMeetingControl from '../WebexMeetingControl/WebexMeetingControl';
+import WebexMeetingControls from '../WebexMeetingControl/WebexMeetingControls';
 
 const noCameraMsg = 'Can\'t detect your camera. Make sure your camera is connected and try again.';
 
@@ -53,17 +55,7 @@ export default function WebexVideoSettings({className, meetingID}) {
         )
         : (
           <>
-            <Select defaultValue={(devices
-               && devices.length > 0
-               && devices[0].label) || 'Detecting cameras ...'}
-            >
-              {devices && devices.map((camera) => (
-                <SelectOption
-                  key={camera.deviceId}
-                  label={camera.label}
-                />
-              ))}
-            </Select>
+            <WebexMeetingControls><WebexMeetingControl type="switch-video-device" meetingID={meetingID} /></WebexMeetingControls>
             <div className="preview"><h3>Preview</h3></div>
             <WebexLocalMedia mediaType="video" meetingID={meetingID} />
           </>

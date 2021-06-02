@@ -9,53 +9,17 @@ Array [
       Camera
     </h2>
     <div
-      className="md-input-container md-select"
+      className="wxc-meeting-controls"
     >
-      <button
-        alt=""
-        aria-haspopup="listbox"
-        aria-labelledby="md-select-1__label"
-        aria-pressed={null}
-        className="md-button md-button--36"
-        data-md-event-key="md-select-1"
-        disabled={false}
-        id="md-select-1"
-        name="md-select-1"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        style={
-          Object {
-            "style": Object {},
-          }
-        }
-        tabIndex={0}
-        type="button"
+      <select
+        onChange={[Function]}
       >
-        <span
-          className="md-button__children"
-          style={
-            Object {
-              "opacity": "1",
-            }
-          }
+        <option
+          value="2a9f83242466302e2130134a57162f3562c59bd9ea34daa7f6fc2ad43a29265b"
         >
-          <div
-            className="md-select__label"
-            id="md-select-1__label"
-          >
-            Logitech HD Webcam C525 (046d:0826)
-            <i
-              aria-label={null}
-              className="md-icon icon icon-arrow-down_16"
-              style={
-                Object {
-                  "fontSize": 16,
-                }
-              }
-            />
-          </div>
-        </span>
-      </button>
+          Logitech HD Webcam C525 (046d:0826)
+        </option>
+      </select>
     </div>
     <div
       className="preview"

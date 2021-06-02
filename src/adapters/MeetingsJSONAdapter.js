@@ -1,8 +1,8 @@
 import {
-  concat, fromEvent, merge, Observable, Subject,
+  concat, fromEvent, merge, Observable, Subject, defer,
 } from 'rxjs';
 import {
-  filter, map, takeUntil, tap,
+  filter, map, takeUntil, tap, switchMap,
 } from 'rxjs/operators';
 import {MeetingsAdapter, MeetingControlState, MeetingState} from '@webex/component-adapter-interfaces';
 
@@ -16,6 +16,7 @@ export const LEAVE_CONTROL = 'leave-meeting';
 export const DISABLED_MUTE_AUDIO_CONTROL = 'disabled-mute-audio';
 export const DISABLED_JOIN_CONTROL = 'disabled-join-meeting';
 export const ROSTER_CONTROL = 'member-roster';
+export const SWITCH_VIDEO_DEVICE = 'switch-video-device';
 
 // TODO: Figure out how to import JS Doc definitions and remove duplication.
 /**
@@ -138,6 +139,12 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       action: this.toggleRoster.bind(this),
       display: this.rosterControl.bind(this),
     };
+
+    this.meetingControls[SWITCH_VIDEO_DEVICE] = {
+      ID: SWITCH_VIDEO_DEVICE,
+      action: this.switchVideo.bind(this),
+      display: this.videoControl.bind(this),
+    };
   }
 
   /**
@@ -188,6 +195,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
           remoteShare: null,
           state: null,
           showRoster: null,
+          videoDeviceID: null,
         });
       } else if (this.datasource[ID]) {
         const meeting = this.datasource[ID];
@@ -221,6 +229,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       tap(() => end$.next(`Meeting "${ID}" has completed.`)),
     );
     const rosterEvents$ = fromEvent(document, ROSTER_CONTROL);
+    const switchVideoEvents$ = fromEvent(document, SWITCH_VIDEO_DEVICE);
 
     const events$ = merge(
       audioEvents$,
@@ -230,6 +239,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       leaveEvents$,
       shareEvents$,
       rosterEvents$,
+      switchVideoEvents$,
     ).pipe(
       filter((event) => event.detail.ID === ID),
       // Make a copy of the meeting to treat it as if were immutable
@@ -742,5 +752,66 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
 
       observer.complete();
     });
+  }
+
+  /**
+   * Returns available media devices.
+   *
+   * @returns {Array} Array containing media devices
+   * @private
+   */
+  // eslint-disable-next-line class-methods-use-this
+  async getDevices(type) {
+    const devicesByType = await navigator.mediaDevices.enumerateDevices()
+      .then((devices) => devices.filter((device) => device.kind === type))
+      // eslint-disable-next-line no-console
+      .catch(() => console.warn('You don\'t have any available devices'));
+
+    return devicesByType;
+  }
+
+  /**
+   * Returns an observable that emits the display data of the video options.
+   *
+   * @param {string} ID ID of the meeting for which to update display
+   * @returns {Observable.<MeetingControlDisplay>} Observable that emits control display data
+   * @private
+   */
+  videoControl(ID) {
+    const meeting = this.datasource[ID];
+    const videoDevices = defer(() => this.getDevices('videoinput'));
+
+    const selectedDevice$ = videoDevices.pipe(
+      map((devices) => ({
+        ID: SWITCH_VIDEO_DEVICE,
+        tooltip: 'Video Devices',
+        state: MeetingControlState.INACTIVE,
+        options: devices,
+        selected: meeting.videoDeviceID,
+      })),
+    );
+
+    const selectedDeviceUpdated$ = fromEvent(document, SWITCH_VIDEO_DEVICE).pipe(
+      filter((event) => event.detail.ID === ID),
+      switchMap((event) => selectedDevice$.pipe(
+        map((control) => ({...control, selected: event.detail.videoDeviceID})),
+      )),
+    );
+
+    return concat(selectedDevice$, selectedDeviceUpdated$);
+  }
+
+  /**
+   * Returns an observable that emits the display data of a video control.
+   *
+   * @returns {Observable.<MeetingControlDisplay>} Observable that emits control display data
+   * @private
+   */
+  async switchVideo(ID, deviceId) {
+    const meeting = this.datasource[ID];
+
+    meeting.videoDeviceID = deviceId;
+    meeting.localVideo = await this.getStream({video: {deviceId: {exact: deviceId}}});
+    document.dispatchEvent(new CustomEvent(SWITCH_VIDEO_DEVICE, {detail: meeting}));
   }
 }

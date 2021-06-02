@@ -19,11 +19,28 @@ export default function WebexMeetingControl({type, meetingID}) {
   const {icon, text, tooltip} = display;
   const isDisabled = display.state === MeetingControlState.DISABLED;
   const iconColor = display.state === MeetingControlState.ACTIVE ? 'red' : '';
+
   let button = (
     <Button color="green" size={52} ariaLabel={tooltip} onClick={action} disabled={isDisabled}>
       {text}
     </Button>
   );
+
+  let select;
+
+  if (display.options) {
+    select = (
+      <select onChange={(event) => action(event.target.value)} value={display.selected}>
+        {
+          display.options.map((option) => (
+            <option key={option.deviceId} value={option.deviceId}>
+              {option.label}
+            </option>
+          ))
+        }
+      </select>
+    );
+  }
 
   if (icon) {
     button = (
@@ -40,7 +57,7 @@ export default function WebexMeetingControl({type, meetingID}) {
     );
   }
 
-  return button;
+  return display.options ? select : button;
 }
 
 WebexMeetingControl.propTypes = {
