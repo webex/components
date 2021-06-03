@@ -1,6 +1,7 @@
 # Webex Meeting Component
 
-Webex Meeting component displays the complete, default Webex meeting experience.
+Webex Meeting component displays the [Webex In Meeting](../WebexInMeeting) component or the
+[Webex Interstitial Meeting](../WebexInterstitialMeeting) component depending on the state of the meeting.
 
 <p align="center">
   <img src="./WebexMeeting.gif" alt="Default Webex Meeting" />
@@ -24,18 +25,13 @@ or run the following **NPM** command:
     const jsonAdapter = new WebexJSONAdapter(jsonData);
     ```
 
-2. Create a component instance by passing the meeting ID as a string and an optional function that returns an array
-of control names for the meeting. The default control names are set to `['mute-audio', 'mute-video', 'join-meeting]`
-if the meeting is inactive and `['mute-audio', 'mute-video', 'leave-meeting']` otherwise.
-Ensure that the control names match with the adapter implementation of the controls. You then need to enclose it
+2. Create a component instance by passing the meeting ID as a string. You then need to enclose it
 within [a data provider](../WebexDataProvider/WebexDataProvider.js) that takes
 the [component data adapter](../../adapters/WebexJSONAdapter.js) that we created previously
 
     ```js
-    const controls = (isActive) => isActive ? ['join-meeting'] : ['leave-meeting'];
-
     <WebexDataProvider adapter={jsonAdapter}>
-      <WebexMeeting meetingID="meetingID" controls?={controls}/>
+      <WebexMeeting meetingID="meetingID"/>
     </WebexDataProvider>
     ```
 
