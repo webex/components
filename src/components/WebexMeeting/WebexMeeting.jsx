@@ -6,7 +6,6 @@ import {MeetingState} from '@webex/component-adapter-interfaces';
 
 import WebexInMeeting from '../WebexInMeeting/WebexInMeeting';
 import WebexInterstitialMeeting from '../WebexInterstitialMeeting/WebexInterstitialMeeting';
-import WebexMeetingControlBar from '../WebexMeetingControlBar/WebexMeetingControlBar';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import {useMeeting} from '../hooks';
 
@@ -25,7 +24,6 @@ export default function WebexMeeting({meetingID}) {
   const classBaseName = `${WEBEX_COMPONENTS_CLASS_PREFIX}-meeting`;
   const mainClasses = {
     [classBaseName]: true,
-    [`${classBaseName}-active`]: ID && isActive,
   };
 
   let meetingDisplay;
@@ -41,7 +39,6 @@ export default function WebexMeeting({meetingID}) {
         {isActive
           ? <WebexInMeeting meetingID={ID} />
           : <WebexInterstitialMeeting meetingID={ID} />}
-        <WebexMeetingControlBar className="meeting-controls-container" meetingID={ID} />
       </>
     );
   }
