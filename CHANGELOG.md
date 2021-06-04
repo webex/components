@@ -1,3 +1,17 @@
+# [1.66.0](https://github.com/webex/components/compare/v1.65.0...v1.66.0) (2021-06-04)
+
+
+### Bug Fixes
+
+* **Components:** fix test warnings ([efbc959](https://github.com/webex/components/commit/efbc959848d8e9693a5f40e752c006f1456c3723))
+
+
+### Features
+
+* **MeetingsJsonAdapter:** add settings control ([04c824c](https://github.com/webex/components/commit/04c824caced524bbd8fc504c509acf92605aea86))
+* **WebexMeeting:** remove WebexMeetingControlBar from WebexMeeting component ([26be7b8](https://github.com/webex/components/commit/26be7b80b2bdcebae1d2278ad5af199f5e196b59))
+* **WebexMeetingControlBar:** convert WebexMeetingControls into a standalone component ([1cc707d](https://github.com/webex/components/commit/1cc707d204f57b9e90c1f96f5906db02ba4a047b))
+
 # [1.65.0](https://github.com/webex/components/compare/v1.64.1...v1.65.0) (2021-05-27)
 
 
