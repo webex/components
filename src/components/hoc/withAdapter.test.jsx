@@ -46,6 +46,7 @@ describe('withAdapter Higher Order Component', () => {
   });
 
   act(() => {
+    global.testRendererAct = act;
     testRenderer = create(
       <MyComponentWithAdapter prop1="value1" prop2="value2" />,
     );

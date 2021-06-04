@@ -16,3 +16,5 @@ export {default as WebexSettings} from './WebexSettings/WebexSettings';
 export {default as useMeetingDestination} from './hooks/useMeetingDestination';
 export {default as withMeeting} from './hoc/withMeeting';
 export {default as withAdapter} from './hoc/withAdapter';
+
+global.testRendererAct = (fn) => fn();
