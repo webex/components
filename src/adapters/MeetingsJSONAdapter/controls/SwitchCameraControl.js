@@ -1,7 +1,5 @@
 import {concat, Observable, defer} from 'rxjs';
-import {
-  map, concatMap, distinctUntilChanged, distinctUntilKeyChanged,
-} from 'rxjs/operators';
+import {map, concatMap, distinctUntilChanged} from 'rxjs/operators';
 import MeetingControl from './MeetingControl';
 
 /**
@@ -29,10 +27,11 @@ export default class SwitchCameraControl extends MeetingControl {
    * @returns {Observable.<MeetingControlDisplay>} Observable that emits control display data
    */
   display(meetingID) {
-    const meeting = this.adapter.fetchMeeting(meetingID);
     const availableCameras$ = defer(() => this.adapter.getAvailableDevices('videoinput'));
 
     const initialControl$ = new Observable((observer) => {
+      const meeting = this.adapter.fetchMeeting(meetingID);
+
       if (meeting) {
         observer.next({
           ID: this.ID,
@@ -61,10 +60,11 @@ export default class SwitchCameraControl extends MeetingControl {
 
     const controlFromMeeting$ = controlWithOptions$.pipe(
       concatMap((control) => this.adapter.getMeeting(meetingID).pipe(
-        distinctUntilKeyChanged('cameraID'),
-        map((updatedMeeting) => ({
+        map((meeting) => meeting.cameraID),
+        distinctUntilChanged('cameraID'),
+        map((cameraID) => ({
           ...control,
-          selected: updatedMeeting.cameraID,
+          selected: cameraID,
         })),
       )),
     );

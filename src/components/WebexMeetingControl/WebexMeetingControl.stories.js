@@ -11,7 +11,7 @@ const Template = (args) => <WebexMeetingControl {...args} />;
 export const ActiveIcon = Template.bind({});
 ActiveIcon.args = {
   type: 'mute-audio',
-  meetingID: 'meeting1',
+  meetingID: 'meeting2',
 };
 
 // BUG: Snapshot test fails
@@ -36,5 +36,11 @@ Text.args = {
 export const DisabledText = Template.bind({});
 DisabledText.args = {
   type: 'disabled-join-meeting',
+  meetingID: 'meeting1',
+};
+
+export const Dropdown = Template.bind({});
+Dropdown.args = {
+  type: 'switch-camera',
   meetingID: 'meeting1',
 };

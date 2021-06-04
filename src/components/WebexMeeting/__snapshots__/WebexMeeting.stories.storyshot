@@ -6,7 +6,7 @@ Array [
     style={
       Object {
         "height": "100%",
-        "min-height": "25rem",
+        "minHeight": "25rem",
         "position": "relative",
         "width": "100%",
       }
@@ -239,7 +239,7 @@ Array [
     style={
       Object {
         "height": "100%",
-        "min-height": "25rem",
+        "minHeight": "25rem",
         "position": "relative",
         "width": "100%",
       }
@@ -417,7 +417,7 @@ Array [
     style={
       Object {
         "height": "100%",
-        "min-height": "25rem",
+        "minHeight": "25rem",
         "position": "relative",
         "width": "100%",
       }
@@ -577,7 +577,7 @@ Array [
     style={
       Object {
         "height": "100%",
-        "min-height": "25rem",
+        "minHeight": "25rem",
         "position": "relative",
         "width": "100%",
       }
@@ -739,7 +739,7 @@ Array [
     style={
       Object {
         "height": "100%",
-        "min-height": "25rem",
+        "minHeight": "25rem",
         "position": "relative",
         "width": "100%",
       }
