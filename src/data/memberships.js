@@ -246,4 +246,22 @@ export default {
       },
     ],
   },
+  membershipMock1: {
+    ID: 'membershipMock1',
+    destinationID: 'meeting3',
+    destinationType: 'meeting',
+    members: [],
+  },
+  membershipMock2: {
+    ID: 'membershipMock2',
+    destinationID: 'meeting7',
+    destinationType: 'meeting',
+    members: [],
+  },
+  membershipMock3: {
+    ID: 'membershipMock3',
+    destinationID: 'meeting9',
+    destinationType: 'meeting',
+    members: [],
+  },
 };

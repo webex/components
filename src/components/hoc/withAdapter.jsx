@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-
 import WebexDataProvider from '../WebexDataProvider/WebexDataProvider';
 
 /**
@@ -78,7 +77,7 @@ export default function withAdapter(WrappedComponent, adapterFactory) {
        */
       async function connect() {
         await adapter.connect();
-        setAdapterConnected(true);
+        global.testRendererAct(() => setAdapterConnected(true));
       }
 
       /**
