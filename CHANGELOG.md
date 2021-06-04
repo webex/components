@@ -1,3 +1,10 @@
+# [1.67.0](https://github.com/webex/components/compare/v1.66.0...v1.67.0) (2021-06-04)
+
+
+### Features
+
+* **WebexMediaAccess:** add microphone access screen ([cf366b4](https://github.com/webex/components/commit/cf366b440ebbe582e5725be298a48b2084b8c4d8))
+
 # [1.66.0](https://github.com/webex/components/compare/v1.65.0...v1.66.0) (2021-06-04)
 
 
