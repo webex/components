@@ -3,10 +3,10 @@
 exports[`Storyshots Meetings/Webex Meeting Control Active Icon 1`] = `
 Array [
   <button
-    alt="Mute"
-    aria-label="Mute"
+    alt="Unmute"
+    aria-label="Unmute"
     aria-pressed={null}
-    className="md-button md-button--circle md-button--56 wxc-meeting-control"
+    className="md-button md-button--circle md-button--56 md-button--red wxc-meeting-control"
     data-md-event-key="md-button-0"
     disabled={false}
     id="md-button-0"
@@ -156,6 +156,47 @@ Array [
       Join meeting
     </span>
   </button>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex Meeting Control Dropdown 1`] = `
+Array [
+  <select
+    className="wxc-select wxc-meeting-control"
+    onChange={[Function]}
+    value="cameraID1"
+  >
+    <option
+      value="2a9f83242466302e2130134a57162f3562c59bd9ea34daa7f6fc2ad43a29265b"
+    >
+      Logitech HD Webcam C525 (046d:0826)
+    </option>
+    <option
+      value="c2fcaf0c6b0bc7adc1192ba0b2dd236f7926e2ae163c56f80fa51613f9b9ec77"
+    >
+      Integrated Camera (04f2:b6d9)
+    </option>
+  </select>,
   <video
     autoPlay={true}
     height="0"

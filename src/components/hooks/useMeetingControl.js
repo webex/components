@@ -39,5 +39,5 @@ export default function useMeetingControl(type, meetingID) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return [() => control.action(meetingID), display];
+  return [(value) => control.action(meetingID, value), display];
 }
