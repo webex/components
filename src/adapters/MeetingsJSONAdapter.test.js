@@ -6,9 +6,15 @@ import {
   last,
 } from 'rxjs/operators';
 import {MeetingState} from '@webex/component-adapter-interfaces';
-
 import JSONData from '../data/meetings';
-import MeetingsJSONAdapter from './MeetingsJSONAdapter';
+import MeetingsJSONAdapter, {
+  JOIN_CONTROL,
+  LEAVE_CONTROL,
+  MUTE_AUDIO_CONTROL,
+  MUTE_VIDEO_CONTROL,
+  ROSTER_CONTROL,
+  SWITCH_CAMERA_CONTROL,
+} from './MeetingsJSONAdapter';
 
 describe('Meetings JSON Adapter', () => {
   const meetingID = 'meeting1';
@@ -17,27 +23,16 @@ describe('Meetings JSON Adapter', () => {
   let testMeeting;
 
   beforeEach(() => {
-    meetingsJSONAdapter = new MeetingsJSONAdapter(JSONData);
+    const mockMeetings = JSON.parse(JSON.stringify(JSONData));
+
+    meetingsJSONAdapter = new MeetingsJSONAdapter(mockMeetings);
     meetingsJSONAdapter.getStream = jest.fn(() => new MediaStream());
-    testMeeting = JSONData[meetingID];
+    testMeeting = mockMeetings[meetingID];
   });
 
   afterEach(() => {
     meetingsJSONAdapter = null;
     testMeeting = null;
-    JSONData[meetingID] = {
-      ID: 'meeting1',
-      title: 'Weekly Backlog Grooming',
-      localAudio: new MediaStream(),
-      localVideo: new MediaStream(),
-      localShare: new MediaStream(),
-      remoteAudio: null,
-      remoteVideo: null,
-      remoteShare: null,
-      status: MeetingState.NOT_JOINED,
-      showRoster: null,
-      cameraID: null,
-    };
   });
 
   describe('createMeeting()', () => {
@@ -104,7 +99,7 @@ describe('Meetings JSON Adapter', () => {
         });
 
       // Dispatch mute audio event after subscription
-      meetingsJSONAdapter.toggleMuteAudio(meetingID);
+      meetingsJSONAdapter.meetingControls[MUTE_AUDIO_CONTROL].action(meetingID);
     });
 
     test('emits Meeting object with null local video on mute video event', (done) => {
@@ -117,7 +112,7 @@ describe('Meetings JSON Adapter', () => {
         });
 
       // Dispatch mute video event after subscription
-      meetingsJSONAdapter.toggleMuteVideo(meetingID);
+      meetingsJSONAdapter.meetingControls[MUTE_VIDEO_CONTROL].action(meetingID);
     });
 
     test('emits Meeting object with remote media on join event', (done) => {
@@ -131,23 +126,22 @@ describe('Meetings JSON Adapter', () => {
         });
 
       // Dispatch join event after subscription
-      meetingsJSONAdapter.joinMeeting(meetingID);
+      meetingsJSONAdapter.meetingControls[JOIN_CONTROL].action(meetingID);
     });
 
-    test('completes when the meeting is left', (done) => {
+    test('when the meeting is left, emits a last meeting object with state=LEFT and then completes', (done) => {
       meetingsJSONAdapter
         .getMeeting(meetingID)
+        .pipe(last())
         .subscribe(
-          () => {},
-          () => {},
-          () => {
-            expect(testMeeting.state).toBe(MeetingState.LEFT);
+          (meeting) => {
+            expect(meeting.state).toBe(MeetingState.LEFT);
             done();
           },
         );
 
       // Dispatch leave event after subscription
-      meetingsJSONAdapter.leaveMeeting(meetingID);
+      meetingsJSONAdapter.meetingControls[LEAVE_CONTROL].action(meetingID);
     });
 
     test('throws error on invalid meeting ID', (done) => {
@@ -166,7 +160,6 @@ describe('Meetings JSON Adapter', () => {
 
     beforeEach(() => {
       dispatchSpy = jest.spyOn(document, 'dispatchEvent');
-      testMeeting.state = MeetingState.NOT_JOINED;
     });
 
     afterEach(() => {
@@ -174,18 +167,18 @@ describe('Meetings JSON Adapter', () => {
     });
 
     test('sets remote media streams', async () => {
-      await meetingsJSONAdapter.joinMeeting(meetingID);
+      await meetingsJSONAdapter.meetingControls[JOIN_CONTROL].action(meetingID);
       expect(testMeeting.remoteAudio).toBeInstanceOf(MediaStream);
       expect(testMeeting.remoteVideo).toBeInstanceOf(MediaStream);
     });
 
     test('sets meeting state to JOINED', async () => {
-      await meetingsJSONAdapter.joinMeeting(meetingID);
+      await meetingsJSONAdapter.meetingControls[JOIN_CONTROL].action(meetingID);
       expect(testMeeting.state).toBe(MeetingState.JOINED);
     });
 
     test('dispatches a "join-meeting" event', async () => {
-      await meetingsJSONAdapter.joinMeeting(meetingID);
+      await meetingsJSONAdapter.meetingControls[JOIN_CONTROL].action(meetingID);
       expect(dispatchSpy).toHaveBeenCalled();
     });
   });
@@ -203,18 +196,18 @@ describe('Meetings JSON Adapter', () => {
     });
 
     test('sets remote media streams to null', async () => {
-      await meetingsJSONAdapter.leaveMeeting(meetingID);
+      await meetingsJSONAdapter.meetingControls[LEAVE_CONTROL].action(meetingID);
       expect(testMeeting.remoteAudio).toBeNull();
       expect(testMeeting.remoteVideo).toBeNull();
     });
 
     test('sets meeting state to LEFT', async () => {
-      await meetingsJSONAdapter.leaveMeeting(meetingID);
+      await meetingsJSONAdapter.meetingControls[LEAVE_CONTROL].action(meetingID);
       expect(testMeeting.state).toBe(MeetingState.LEFT);
     });
 
     test('dispatches a "leave-meeting" event', async () => {
-      await meetingsJSONAdapter.toggleMuteVideo(meetingID);
+      await meetingsJSONAdapter.meetingControls[MUTE_VIDEO_CONTROL].action(meetingID);
       expect(dispatchSpy).toHaveBeenCalled();
     });
   });
@@ -233,19 +226,19 @@ describe('Meetings JSON Adapter', () => {
     test('sets local audio to null if it is a media stream', async () => {
       testMeeting.localAudio = new MediaStream();
 
-      await meetingsJSONAdapter.toggleMuteAudio(meetingID);
+      await meetingsJSONAdapter.meetingControls[MUTE_AUDIO_CONTROL].action(meetingID);
       expect(testMeeting.localAudio).toBeNull();
     });
 
     test('sets local audio to a media stream if it is null', async () => {
       testMeeting.localAudio = null;
 
-      await meetingsJSONAdapter.toggleMuteAudio(meetingID);
+      await meetingsJSONAdapter.meetingControls[MUTE_AUDIO_CONTROL].action(meetingID);
       expect(testMeeting.localAudio).toBeInstanceOf(MediaStream);
     });
 
     test('dispatches a "mute-audio" event', async () => {
-      await meetingsJSONAdapter.toggleMuteAudio(meetingID);
+      await meetingsJSONAdapter.meetingControls[MUTE_AUDIO_CONTROL].action(meetingID);
       expect(dispatchSpy).toHaveBeenCalled();
     });
   });
@@ -264,30 +257,31 @@ describe('Meetings JSON Adapter', () => {
     test('sets local video to null if it is a media stream', async () => {
       testMeeting.localVideo = new MediaStream();
 
-      await meetingsJSONAdapter.toggleMuteVideo(meetingID);
+      await meetingsJSONAdapter.meetingControls[MUTE_VIDEO_CONTROL].action(meetingID);
       expect(testMeeting.localVideo).toBeNull();
     });
 
     test('sets local video to a media stream if it is null', async () => {
       testMeeting.localVideo = null;
 
-      await meetingsJSONAdapter.toggleMuteVideo(meetingID);
+      await meetingsJSONAdapter.meetingControls[MUTE_VIDEO_CONTROL].action(meetingID);
       expect(testMeeting.localVideo).toBeInstanceOf(MediaStream);
     });
 
     test('dispatches a "mute-video" event', async () => {
-      await meetingsJSONAdapter.toggleMuteVideo(meetingID);
+      await meetingsJSONAdapter.meetingControls[MUTE_VIDEO_CONTROL].action(meetingID);
       expect(global.document.dispatchEvent).toHaveBeenCalled();
     });
   });
 
   describe('joinControl()', () => {
     test('returns an observable', () => {
-      expect(isObservable(meetingsJSONAdapter.joinControl())).toBeTruthy();
+      // eslint-disable-next-line
+      expect(isObservable(meetingsJSONAdapter.meetingControls[JOIN_CONTROL].display())).toBeTruthy();
     });
 
     test('emits active text control', (done) => {
-      meetingsJSONAdapter.joinControl().subscribe((display) => {
+      meetingsJSONAdapter.meetingControls[JOIN_CONTROL].display().subscribe((display) => {
         expect(display).toMatchObject({
           ID: 'join-meeting',
           text: 'Join meeting',
@@ -301,11 +295,12 @@ describe('Meetings JSON Adapter', () => {
 
   describe('leaveControl()', () => {
     test('returns an observable', () => {
-      expect(isObservable(meetingsJSONAdapter.leaveControl())).toBeTruthy();
+      // eslint-disable-next-line
+      expect(isObservable(meetingsJSONAdapter.meetingControls[LEAVE_CONTROL].display())).toBeTruthy();
     });
 
     test('emits active cancel icon control', (done) => {
-      meetingsJSONAdapter.leaveControl().subscribe((display) => {
+      meetingsJSONAdapter.meetingControls[LEAVE_CONTROL].display().subscribe((display) => {
         expect(display).toMatchObject({
           ID: 'leave-meeting',
           icon: 'cancel_28',
@@ -319,14 +314,16 @@ describe('Meetings JSON Adapter', () => {
 
   describe('muteAudioControl()', () => {
     test('returns an observable', () => {
-      expect(isObservable(meetingsJSONAdapter.muteAudioControl())).toBeTruthy();
+      // eslint-disable-next-line
+      expect(isObservable(meetingsJSONAdapter.meetingControls[MUTE_AUDIO_CONTROL].display())).toBeTruthy();
     });
 
     test('emits inactive microphone icon control if there is audio', (done) => {
       testMeeting.localAudio = new MediaStream();
 
       meetingsJSONAdapter
-        .muteAudioControl(meetingID)
+        .meetingControls[MUTE_AUDIO_CONTROL]
+        .display(meetingID)
         .subscribe((display) => {
           expect(display).toMatchObject({
             ID: 'mute-audio',
@@ -342,7 +339,8 @@ describe('Meetings JSON Adapter', () => {
       testMeeting.localAudio = null;
 
       meetingsJSONAdapter
-        .muteAudioControl(meetingID)
+        .meetingControls[MUTE_AUDIO_CONTROL]
+        .display(meetingID)
         .subscribe((display) => {
           expect(display).toMatchObject({
             ID: 'mute-audio',
@@ -356,7 +354,8 @@ describe('Meetings JSON Adapter', () => {
 
     test('emits microphone icon control update on mute audio event', (done) => {
       meetingsJSONAdapter
-        .muteAudioControl(meetingID)
+        .meetingControls[MUTE_AUDIO_CONTROL]
+        .display(meetingID)
         .pipe(skip(1)) // Skip the initial emission
         .subscribe((display) => {
           expect(display).toMatchObject({
@@ -369,11 +368,11 @@ describe('Meetings JSON Adapter', () => {
         });
 
       // Dispatch mute audio event after subscription
-      meetingsJSONAdapter.toggleMuteAudio(meetingID);
+      meetingsJSONAdapter.meetingControls[MUTE_AUDIO_CONTROL].action(meetingID);
     });
 
     test('throws error on invalid meeting ID', (done) => {
-      meetingsJSONAdapter.muteAudioControl('invalid').subscribe(
+      meetingsJSONAdapter.meetingControls[MUTE_AUDIO_CONTROL].display('invalid').subscribe(
         () => {},
         (error) => {
           expect(error.message).toEqual('Could not find meeting with ID "invalid"');
@@ -385,14 +384,16 @@ describe('Meetings JSON Adapter', () => {
 
   describe('muteVideoControl()', () => {
     test('returns an observable', () => {
-      expect(isObservable(meetingsJSONAdapter.muteAudioControl())).toBeTruthy();
+      // eslint-disable-next-line
+      expect(isObservable(meetingsJSONAdapter.meetingControls[MUTE_VIDEO_CONTROL].display())).toBeTruthy();
     });
 
     test('emits inactive camera control if there is video', (done) => {
       testMeeting.localVideo = new MediaStream();
 
       meetingsJSONAdapter
-        .muteVideoControl(meetingID)
+        .meetingControls[MUTE_VIDEO_CONTROL]
+        .display(meetingID)
         .subscribe((display) => {
           expect(display).toMatchObject({
             ID: 'mute-video',
@@ -408,7 +409,8 @@ describe('Meetings JSON Adapter', () => {
       testMeeting.localVideo = null;
 
       meetingsJSONAdapter
-        .muteVideoControl(meetingID)
+        .meetingControls[MUTE_VIDEO_CONTROL]
+        .display(meetingID)
         .subscribe((display) => {
           expect(display).toMatchObject({
             ID: 'mute-video',
@@ -422,7 +424,8 @@ describe('Meetings JSON Adapter', () => {
 
     test('emits camera icon control on mute video event', (done) => {
       meetingsJSONAdapter
-        .muteVideoControl(meetingID)
+        .meetingControls[MUTE_VIDEO_CONTROL]
+        .display(meetingID)
         .pipe(skip(1)) // Skip the initial emission
         .subscribe((display) => {
           expect(display).toMatchObject({
@@ -435,11 +438,11 @@ describe('Meetings JSON Adapter', () => {
         });
 
       // Dispatch mute video event after subscription
-      meetingsJSONAdapter.toggleMuteVideo(meetingID);
+      meetingsJSONAdapter.meetingControls[MUTE_VIDEO_CONTROL].action(meetingID);
     });
 
     test('throws error on invalid meeting ID', (done) => {
-      meetingsJSONAdapter.muteVideoControl('invalid').subscribe(
+      meetingsJSONAdapter.meetingControls[MUTE_VIDEO_CONTROL].display('invalid').subscribe(
         () => {},
         (error) => {
           expect(error.message).toEqual('Could not find meeting with ID "invalid"');
@@ -461,19 +464,21 @@ describe('Meetings JSON Adapter', () => {
     });
 
     test('dispatches a "member-roster" event', async () => {
-      await meetingsJSONAdapter.toggleRoster(meetingID);
+      await meetingsJSONAdapter.meetingControls[ROSTER_CONTROL].action(meetingID);
       expect(dispatchSpy).toHaveBeenCalled();
     });
   });
 
   describe('rosterControl()', () => {
     test('returns an observable', () => {
-      expect(isObservable(meetingsJSONAdapter.rosterControl())).toBeTruthy();
+      // eslint-disable-next-line
+      expect(isObservable(meetingsJSONAdapter.meetingControls[ROSTER_CONTROL].display())).toBeTruthy();
     });
 
     test('emits inactive roster icon control if roster is not displayed', (done) => {
       meetingsJSONAdapter
-        .rosterControl(meetingID)
+        .meetingControls[ROSTER_CONTROL]
+        .display(meetingID)
         .subscribe((display) => {
           expect(display).toMatchObject({
             ID: 'member-roster',
@@ -488,9 +493,9 @@ describe('Meetings JSON Adapter', () => {
 
     test('emits active roster icon control if roster is displayed', (done) => {
       testMeeting.showRoster = true;
-
       meetingsJSONAdapter
-        .rosterControl(meetingID)
+        .meetingControls[ROSTER_CONTROL]
+        .display(meetingID)
         .subscribe((display) => {
           expect(display).toMatchObject({
             ID: 'member-roster',
@@ -504,22 +509,23 @@ describe('Meetings JSON Adapter', () => {
     });
 
     test('throws error on invalid meeting ID', (done) => {
-      meetingsJSONAdapter.rosterControl('invalid').subscribe(
+      meetingsJSONAdapter.meetingControls[ROSTER_CONTROL].display('invalid').subscribe(
         () => {},
         (error) => {
-          expect(error.message).toEqual('Could not find meeting with ID "invalid" to add roster control');
+          expect(error.message).toEqual('Could not find meeting with ID "invalid"');
           done();
         },
       );
     });
   });
 
-  describe('cameraSwitcherControl()', () => {
+  describe('switchCameraControl()', () => {
     test('returns an observable', () => {
-      expect(isObservable(meetingsJSONAdapter.cameraSwitcherControl())).toBeTruthy();
+      // eslint-disable-next-line
+      expect(isObservable(meetingsJSONAdapter.meetingControls[SWITCH_CAMERA_CONTROL].display())).toBeTruthy();
     });
 
-    test('emits correct options for camera switcher control', (done) => {
+    test('emits correct options for switch camera control', (done) => {
       const cameraOptions = [{
         value: '2a9f83242466302e2130134a57162f3562c59bd9ea34daa7f6fc2ad43a29265b',
         label: 'Logitech HD Webcam C525 (046d:0826)',
@@ -530,7 +536,8 @@ describe('Meetings JSON Adapter', () => {
       }];
 
       meetingsJSONAdapter
-        .cameraSwitcherControl(meetingID)
+        .meetingControls[SWITCH_CAMERA_CONTROL]
+        .display(meetingID)
         .pipe(take(2), toArray())
         .subscribe((displays) => {
           expect(displays).toMatchObject([{
@@ -549,10 +556,10 @@ describe('Meetings JSON Adapter', () => {
     });
 
     test('throws error on invalid meeting ID', (done) => {
-      meetingsJSONAdapter.cameraSwitcherControl('invalid').subscribe(
+      meetingsJSONAdapter.meetingControls[SWITCH_CAMERA_CONTROL].display('invalid').subscribe(
         () => {},
         (error) => {
-          expect(error.message).toEqual('Could not find meeting with ID "invalid" to add camera switcher control');
+          expect(error.message).toEqual('Could not find meeting with ID "invalid" to add a switch camera control');
           done();
         },
       );
@@ -571,7 +578,7 @@ describe('Meetings JSON Adapter', () => {
     });
 
     test('dispatches a "switch-camera" event', async () => {
-      await meetingsJSONAdapter.switchCamera(meetingID, cameraID);
+      await meetingsJSONAdapter.meetingControls[SWITCH_CAMERA_CONTROL].action(meetingID, cameraID);
       expect(meetingsJSONAdapter.getStream).toHaveBeenCalled();
       expect(dispatchSpy).toHaveBeenCalled();
     });
