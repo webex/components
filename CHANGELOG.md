@@ -1,3 +1,10 @@
+## [1.67.1](https://github.com/webex/components/compare/v1.67.0...v1.67.1) (2021-06-08)
+
+
+### Bug Fixes
+
+* **Components:** fix tests warnings ([11dd7fd](https://github.com/webex/components/commit/11dd7fd3a240727c0ffcf6868bbf0b9c752766b9))
+
 # [1.67.0](https://github.com/webex/components/compare/v1.66.0...v1.67.0) (2021-06-04)
 
 
