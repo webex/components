@@ -1,5 +1,5 @@
 import {isObservable} from 'rxjs';
-import {skip} from 'rxjs/operators';
+import {skip, take, toArray} from 'rxjs/operators';
 import {MeetingState} from '@webex/component-adapter-interfaces';
 
 import JSONData from '../data/meetings';
@@ -7,6 +7,7 @@ import MeetingsJSONAdapter from './MeetingsJSONAdapter';
 
 describe('Meetings JSON Adapter', () => {
   const meetingID = 'meeting1';
+  const cameraID = 'cameraDevice1';
   let meetingsJSONAdapter;
   let testMeeting;
 
@@ -30,6 +31,7 @@ describe('Meetings JSON Adapter', () => {
       remoteShare: null,
       status: MeetingState.NOT_JOINED,
       showRoster: null,
+      cameraID: null,
     };
   });
 
@@ -81,6 +83,7 @@ describe('Meetings JSON Adapter', () => {
           remoteShare: null,
           state: null,
           showRoster: null,
+          cameraID: null,
         });
         done();
       });
@@ -503,6 +506,69 @@ describe('Meetings JSON Adapter', () => {
           done();
         },
       );
+    });
+  });
+
+  describe('cameraSwitcherControl()', () => {
+    test('returns an observable', () => {
+      expect(isObservable(meetingsJSONAdapter.cameraSwitcherControl())).toBeTruthy();
+    });
+
+    test('emits correct options for camera switcher control', (done) => {
+      const cameraOptions = [{
+        value: '2a9f83242466302e2130134a57162f3562c59bd9ea34daa7f6fc2ad43a29265b',
+        label: 'Logitech HD Webcam C525 (046d:0826)',
+      },
+      {
+        value: 'c2fcaf0c6b0bc7adc1192ba0b2dd236f7926e2ae163c56f80fa51613f9b9ec77',
+        label: 'Integrated Camera (04f2:b6d9)',
+      }];
+
+      meetingsJSONAdapter
+        .cameraSwitcherControl(meetingID)
+        .pipe(take(2), toArray())
+        .subscribe((displays) => {
+          expect(displays).toMatchObject([{
+            ID: 'switch-camera',
+            tooltip: 'Video Devices',
+            options: null,
+            selected: null,
+          }, {
+            ID: 'switch-camera',
+            tooltip: 'Video Devices',
+            options: cameraOptions,
+            selected: null,
+          }]);
+          done();
+        });
+    });
+
+    test('throws error on invalid meeting ID', (done) => {
+      meetingsJSONAdapter.cameraSwitcherControl('invalid').subscribe(
+        () => {},
+        (error) => {
+          expect(error.message).toEqual('Could not find meeting with ID "invalid" to add camera switcher control');
+          done();
+        },
+      );
+    });
+  });
+
+  describe('switchVideo()', () => {
+    let dispatchSpy;
+
+    beforeEach(() => {
+      dispatchSpy = jest.spyOn(document, 'dispatchEvent');
+    });
+
+    afterEach(() => {
+      dispatchSpy.mockRestore();
+    });
+
+    test('dispatches a "switch-camera" event', async () => {
+      await meetingsJSONAdapter.switchCamera(meetingID, cameraID);
+      expect(meetingsJSONAdapter.getStream).toHaveBeenCalled();
+      expect(dispatchSpy).toHaveBeenCalled();
     });
   });
 });

@@ -1,8 +1,8 @@
 import {
-  concat, fromEvent, merge, Observable, Subject,
+  concat, fromEvent, merge, Observable, Subject, defer,
 } from 'rxjs';
 import {
-  filter, map, takeUntil, tap,
+  filter, map, takeUntil, tap, concatMap,
 } from 'rxjs/operators';
 import {MeetingsAdapter, MeetingControlState, MeetingState} from '@webex/component-adapter-interfaces';
 
@@ -18,6 +18,7 @@ export const DISABLED_MUTE_AUDIO_CONTROL = 'disabled-mute-audio';
 export const DISABLED_JOIN_CONTROL = 'disabled-join-meeting';
 export const ROSTER_CONTROL = 'member-roster';
 export const SETTINGS_CONTROL = 'settings';
+export const SWITCH_CAMERA_CONTROL = 'switch-camera';
 
 // TODO: Figure out how to import JS Doc definitions and remove duplication.
 /**
@@ -154,6 +155,12 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       action: this.toggleSettings.bind(this),
       display: this.settingsControl.bind(this),
     };
+
+    this.meetingControls[SWITCH_CAMERA_CONTROL] = {
+      ID: SWITCH_CAMERA_CONTROL,
+      action: this.switchCamera.bind(this),
+      display: this.cameraSwitcherControl.bind(this),
+    };
   }
 
   /**
@@ -205,6 +212,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
           showRoster: null,
           showSettings: false,
           state: null,
+          cameraID: null,
         });
       } else if (this.datasource[ID]) {
         const meeting = this.datasource[ID];
@@ -240,6 +248,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
     );
     const rosterEvents$ = fromEvent(document, ROSTER_CONTROL);
     const settingsEvents$ = fromEvent(document, SETTINGS_CONTROL);
+    const cameraSwitcherEvents$ = fromEvent(document, SWITCH_CAMERA_CONTROL);
 
     const events$ = merge(
       audioEvents$,
@@ -251,6 +260,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       shareEvents$,
       rosterEvents$,
       settingsEvents$,
+      cameraSwitcherEvents$,
     ).pipe(
       filter((event) => event.detail.ID === ID),
       // Make a copy of the meeting to treat it as if were immutable
@@ -382,6 +392,30 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
     }
 
     return captureStream;
+  }
+
+  /**
+   * Returns available media devices.
+   *
+   * @param {'videoinput'|'audioinput'|'audiooutput'} type  String specifying the device type.
+   * Could take one of the following values: 'videoinput'|'audioinput'|'audiooutput'.
+   * See {@link https://developer.mozilla.org/en-US/docs/Web/API/MediaDeviceInfo/kind|MDN}
+   * @returns {MediaDeviceInfo[]|null} Array containing media devices or null if devices can't be read.
+   * @private
+   */
+  // eslint-disable-next-line class-methods-use-this
+  async getAvailableDevices(type) {
+    let devices = null;
+
+    try {
+      devices = await navigator.mediaDevices.enumerateDevices();
+      devices = devices.filter((device) => device.kind === type);
+    } catch (reason) {
+      // eslint-disable-next-line no-console
+      console.error('Meetings JSON adapter can not enumerate media devices', reason);
+    }
+
+    return devices;
   }
 
   /**
@@ -853,5 +887,71 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
     );
 
     return concat(initialState$, settingsEvent$);
+  }
+
+  /**
+   * Returns an observable that emits the display data of the camera switcher control.
+   *
+   * @param {string} ID  Meeting ID
+   * @returns {Observable.<MeetingControlDisplay>} Observable that emits control display data
+   * @private
+   */
+  cameraSwitcherControl(ID) {
+    const meeting = this.datasource[ID];
+    const availableCameras$ = defer(() => this.getAvailableDevices('videoinput'));
+
+    const initialControl$ = new Observable((observer) => {
+      if (meeting) {
+        observer.next({
+          ID: SWITCH_CAMERA_CONTROL,
+          tooltip: 'Video Devices',
+          options: null,
+          selected: null,
+        });
+        observer.complete();
+      } else {
+        observer.error(new Error(`Could not find meeting with ID "${ID}" to add camera switcher control`));
+      }
+    });
+
+    const controlWithOptions$ = initialControl$.pipe(
+      concatMap((control) => availableCameras$.pipe(
+        map((availableCameras) => ({
+          ...control,
+          options: availableCameras && availableCameras.map((camera) => ({
+            value: camera.deviceId,
+            label: camera.label,
+            camera,
+          })),
+        })),
+      )),
+    );
+
+    const controlFromEvent$ = fromEvent(document, SWITCH_CAMERA_CONTROL).pipe(
+      filter((event) => event.detail.ID === ID),
+      concatMap((event) => controlWithOptions$.pipe(
+        map((control) => ({
+          ...control,
+          selected: event.detail.cameraID,
+        })),
+      )),
+    );
+
+    return concat(initialControl$, controlWithOptions$, controlFromEvent$);
+  }
+
+  /**
+   * Switches the camera control.
+   *
+   * @param {string} ID  Meeting ID
+   * @param {string} cameraID  ID of the camera device to switch to
+   * @private
+   */
+  async switchCamera(ID, cameraID) {
+    const meeting = this.datasource[ID];
+
+    meeting.localVideo = await this.getStream({video: {deviceId: {exact: cameraID}}});
+    meeting.cameraID = cameraID;
+    document.dispatchEvent(new CustomEvent(SWITCH_CAMERA_CONTROL, {detail: meeting}));
   }
 }
