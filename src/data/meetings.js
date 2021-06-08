@@ -13,6 +13,7 @@ export default {
     state: MeetingState.JOINED,
     showRoster: false,
     showSettings: false,
+    cameraID: 'cameraID1',
   },
   meeting2: {
     ID: 'meeting2',
@@ -26,6 +27,7 @@ export default {
     state: MeetingState.NOT_JOINED,
     showRoster: false,
     showSettings: false,
+    cameraID: 'cameraID2',
   },
   meeting3: {
     ID: 'meeting3',
@@ -39,6 +41,7 @@ export default {
     state: MeetingState.NOT_JOINED,
     showRoster: false,
     showSettings: false,
+    cameraID: 'cameraID1',
   },
   meeting4: {
     ID: 'meeting4',
@@ -52,6 +55,7 @@ export default {
     state: MeetingState.JOINED,
     showRoster: false,
     showSettings: false,
+    cameraID: 'cameraID1',
   },
   meeting5: {
     ID: 'meeting5',
@@ -65,6 +69,7 @@ export default {
     state: MeetingState.JOINED,
     showRoster: true,
     showSettings: false,
+    cameraID: 'cameraID2',
   },
   meeting6: {
     ID: 'meeting6',
@@ -78,6 +83,7 @@ export default {
     state: MeetingState.JOINED,
     showRoster: false,
     showSettings: false,
+    cameraID: 'cameraID1',
   },
   meeting7: {
     ID: 'meeting7',
@@ -91,6 +97,7 @@ export default {
     state: null,
     showRoster: false,
     showSettings: false,
+    cameraID: null,
   },
   meeting8: {
     ID: null,
@@ -104,6 +111,7 @@ export default {
     state: MeetingState.LEFT,
     showRoster: false,
     showSettings: false,
+    cameraID: null,
   },
   meeting9: {
     error: true,
