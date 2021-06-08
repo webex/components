@@ -1,3 +1,10 @@
+# [1.68.0](https://github.com/webex/components/compare/v1.67.1...v1.68.0) (2021-06-08)
+
+
+### Features
+
+* **WebexComponents:** add Tabs component ([cacafe3](https://github.com/webex/components/commit/cacafe324255d6875c841ed4e30af4bcc357ca9c))
+
 ## [1.67.1](https://github.com/webex/components/compare/v1.67.0...v1.67.1) (2021-06-08)
 
 
