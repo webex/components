@@ -1,3 +1,10 @@
+# [1.69.0](https://github.com/webex/components/compare/v1.68.0...v1.69.0) (2021-06-10)
+
+
+### Features
+
+* **Select:** implement Select component ([3f670d8](https://github.com/webex/components/commit/3f670d8312203e17075073d2396c716ed3d6b85e))
+
 # [1.68.0](https://github.com/webex/components/compare/v1.67.1...v1.68.0) (2021-06-08)
 
 
