@@ -1,3 +1,10 @@
+## [1.69.1](https://github.com/webex/components/compare/v1.69.0...v1.69.1) (2021-06-10)
+
+
+### Bug Fixes
+
+* **WebexMeetingControlBar:** remove settings control from defaults ([952bf03](https://github.com/webex/components/commit/952bf03c4777c00bcb690839280fc6a9a4f85415))
+
 # [1.69.0](https://github.com/webex/components/compare/v1.68.0...v1.69.0) (2021-06-10)
 
 
