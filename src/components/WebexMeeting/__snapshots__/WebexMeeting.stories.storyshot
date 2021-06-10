@@ -60,43 +60,6 @@ Array [
         className="wxc-meeting-control-bar"
       >
         <button
-          alt="Show settings panel"
-          aria-label="Show settings panel"
-          aria-pressed={null}
-          className="md-button md-button--circle md-button--56"
-          data-md-event-key="md-button-0"
-          disabled={false}
-          id="md-button-0"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          style={
-            Object {
-              "style": Object {},
-            }
-          }
-          tabIndex={0}
-          type="button"
-        >
-          <span
-            className="md-button__children"
-            style={
-              Object {
-                "opacity": "1",
-              }
-            }
-          >
-            <i
-              aria-label={null}
-              className="md-icon icon icon-settings_32"
-              style={
-                Object {
-                  "fontSize": 28,
-                }
-              }
-            />
-          </span>
-        </button>
-        <button
           alt="Mute"
           aria-label="Mute"
           aria-pressed={null}
@@ -319,43 +282,6 @@ Array [
         className="wxc-meeting-control-bar"
       >
         <button
-          alt="Show settings panel"
-          aria-label="Show settings panel"
-          aria-pressed={null}
-          className="md-button md-button--circle md-button--56"
-          data-md-event-key="md-button-0"
-          disabled={false}
-          id="md-button-0"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          style={
-            Object {
-              "style": Object {},
-            }
-          }
-          tabIndex={0}
-          type="button"
-        >
-          <span
-            className="md-button__children"
-            style={
-              Object {
-                "opacity": "1",
-              }
-            }
-          >
-            <i
-              aria-label={null}
-              className="md-icon icon icon-settings_32"
-              style={
-                Object {
-                  "fontSize": 28,
-                }
-              }
-            />
-          </span>
-        </button>
-        <button
           alt="Mute"
           aria-label="Mute"
           aria-pressed={null}
@@ -515,43 +441,6 @@ Array [
       <div
         className="wxc-meeting-control-bar"
       >
-        <button
-          alt="Show settings panel"
-          aria-label="Show settings panel"
-          aria-pressed={null}
-          className="md-button md-button--circle md-button--56"
-          data-md-event-key="md-button-0"
-          disabled={false}
-          id="md-button-0"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          style={
-            Object {
-              "style": Object {},
-            }
-          }
-          tabIndex={0}
-          type="button"
-        >
-          <span
-            className="md-button__children"
-            style={
-              Object {
-                "opacity": "1",
-              }
-            }
-          >
-            <i
-              aria-label={null}
-              className="md-icon icon icon-settings_32"
-              style={
-                Object {
-                  "fontSize": 28,
-                }
-              }
-            />
-          </span>
-        </button>
         <button
           alt="Unmute"
           aria-label="Unmute"
@@ -714,43 +603,6 @@ Array [
       <div
         className="wxc-meeting-control-bar"
       >
-        <button
-          alt="Show settings panel"
-          aria-label="Show settings panel"
-          aria-pressed={null}
-          className="md-button md-button--circle md-button--56"
-          data-md-event-key="md-button-0"
-          disabled={false}
-          id="md-button-0"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          style={
-            Object {
-              "style": Object {},
-            }
-          }
-          tabIndex={0}
-          type="button"
-        >
-          <span
-            className="md-button__children"
-            style={
-              Object {
-                "opacity": "1",
-              }
-            }
-          >
-            <i
-              aria-label={null}
-              className="md-icon icon icon-settings_32"
-              style={
-                Object {
-                  "fontSize": 28,
-                }
-              }
-            />
-          </span>
-        </button>
         <button
           alt="Unmute"
           aria-label="Unmute"
@@ -934,43 +786,6 @@ Array [
       <div
         className="wxc-meeting-control-bar"
       >
-        <button
-          alt="Show settings panel"
-          aria-label="Show settings panel"
-          aria-pressed={null}
-          className="md-button md-button--circle md-button--56"
-          data-md-event-key="md-button-0"
-          disabled={false}
-          id="md-button-0"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          style={
-            Object {
-              "style": Object {},
-            }
-          }
-          tabIndex={0}
-          type="button"
-        >
-          <span
-            className="md-button__children"
-            style={
-              Object {
-                "opacity": "1",
-              }
-            }
-          >
-            <i
-              aria-label={null}
-              className="md-icon icon icon-settings_32"
-              style={
-                Object {
-                  "fontSize": 28,
-                }
-              }
-            />
-          </span>
-        </button>
         <button
           alt="Mute"
           aria-label="Mute"

@@ -51,7 +51,7 @@ WebexMeetingControlBar.defaultProps = {
   className: '',
   controls: (isActive) => (
     isActive
-      ? ['settings', 'mute-audio', 'mute-video', 'share-screen', 'leave-meeting']
-      : ['settings', 'mute-audio', 'mute-video', 'join-meeting']
+      ? ['mute-audio', 'mute-video', 'share-screen', 'leave-meeting']
+      : ['mute-audio', 'mute-video', 'join-meeting']
   ),
 };
