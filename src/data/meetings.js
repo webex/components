@@ -15,6 +15,7 @@ export default {
     showSettings: false,
     cameraID: 'cameraID1',
     microphoneID: 'microphoneID1',
+    speakerID: 'speakerID1',
   },
   meeting2: {
     ID: 'meeting2',
@@ -30,6 +31,7 @@ export default {
     showSettings: false,
     cameraID: 'cameraID2',
     microphoneID: 'microphoneID2',
+    speakerID: 'speakerID2',
   },
   meeting3: {
     ID: 'meeting3',
@@ -45,6 +47,7 @@ export default {
     showSettings: false,
     cameraID: 'cameraID1',
     microphoneID: 'microphoneID1',
+    speakerID: 'speakerID1',
   },
   meeting4: {
     ID: 'meeting4',
@@ -60,6 +63,7 @@ export default {
     showSettings: false,
     cameraID: 'cameraID1',
     microphoneID: 'microphoneID1',
+    speakerID: 'speakerID1',
   },
   meeting5: {
     ID: 'meeting5',
@@ -75,6 +79,7 @@ export default {
     showSettings: false,
     cameraID: 'cameraID2',
     microphoneID: 'microphoneID2',
+    speakerID: 'speakerID2',
   },
   meeting6: {
     ID: 'meeting6',
@@ -90,6 +95,7 @@ export default {
     showSettings: false,
     cameraID: 'cameraID1',
     microphoneID: 'microphoneID2',
+    speakerID: 'speakerID1',
   },
   meeting7: {
     ID: 'meeting7',
@@ -105,6 +111,7 @@ export default {
     showSettings: false,
     cameraID: null,
     microphoneID: null,
+    speakerID: null,
   },
   meeting8: {
     ID: null,
@@ -120,6 +127,7 @@ export default {
     showSettings: false,
     cameraID: null,
     microphoneID: null,
+    speakerID: null,
   },
   meeting9: {
     error: true,
