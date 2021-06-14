@@ -15,12 +15,14 @@ import MeetingsJSONAdapter, {
   ROSTER_CONTROL,
   SWITCH_CAMERA_CONTROL,
   SWITCH_MICROPHONE_CONTROL,
+  SWITCH_SPEAKER_CONTROL,
 } from './MeetingsJSONAdapter';
 
 describe('Meetings JSON Adapter', () => {
   const meetingID = 'meeting1';
   const cameraID = 'cameraDevice1';
   const microphoneID = 'microphoneDevice1';
+  const speakerID = 'speakerDevice1';
   let meetingsJSONAdapter;
   let testMeeting;
 
@@ -87,6 +89,7 @@ describe('Meetings JSON Adapter', () => {
           showRoster: null,
           cameraID: null,
           microphoneID: null,
+          speakerID: null,
         });
         done();
       });
@@ -667,6 +670,90 @@ describe('Meetings JSON Adapter', () => {
         .meetingControls[SWITCH_MICROPHONE_CONTROL]
         .action(meetingID, microphoneID);
       expect(meetingsJSONAdapter.getStream).toHaveBeenCalled();
+      expect(dispatchSpy).toHaveBeenCalled();
+    });
+  });
+
+  describe('switchSpeakerControl()', () => {
+    test('returns an observable', () => {
+      expect(isObservable(meetingsJSONAdapter
+        .meetingControls[SWITCH_SPEAKER_CONTROL]
+        .display())).toBeTruthy();
+    });
+
+    test('emits correct options for switch speaker control', (done) => {
+      const speakerOptions = [{
+        value: 'default',
+        label: 'Default - Headset Earphone (Jabra EVOLVE 20 SE MS) (0b0e:0300)',
+      },
+      {
+        value: 'communications',
+        label: 'Communications - Headset Earphone (Jabra EVOLVE 20 SE MS) (0b0e:0300)',
+      },
+      {
+        value: '5e2cade11fab305ca3773e507b06e60d0a65ed8d6a19da2927a287c70e713dc7',
+        label: 'Line (Realtek USB2.0 Audio) (0bda:402e)',
+      },
+      {
+        value: '91e9c4b27e0b7bc8f41f3076a66e2968d4e229a5f388c2fe9f251bf8d54d7a34',
+        label: 'Headphones (Realtek USB2.0 Audio) (0bda:402e)',
+      },
+      {
+        value: 'a2f1a439c64a73b712a54c16f77716fb6040d87de312d211ef886944877ecea2',
+        label: 'Speakers (Realtek(R) Audio)',
+      },
+      {
+        value: '85e52fb55424206524719fab873ea7c3419c496ce1f691a009066ada5feaf813',
+        label: 'Headset Earphone (Jabra EVOLVE 20 SE MS) (0b0e:0300)',
+      },
+      ];
+
+      meetingsJSONAdapter
+        .meetingControls[SWITCH_SPEAKER_CONTROL]
+        .display(meetingID)
+        .pipe(take(2), toArray())
+        .subscribe((displays) => {
+          expect(displays).toMatchObject([{
+            ID: 'switch-speaker',
+            tooltip: 'Speaker Devices',
+            options: null,
+            selected: null,
+          }, {
+            ID: 'switch-speaker',
+            tooltip: 'Speaker Devices',
+            options: speakerOptions,
+            selected: null,
+          }]);
+          done();
+        });
+    });
+
+    test('throws error on invalid meeting ID', (done) => {
+      meetingsJSONAdapter.meetingControls[SWITCH_SPEAKER_CONTROL].display('invalid').subscribe(
+        () => {},
+        (error) => {
+          expect(error.message).toEqual('Could not find meeting with ID "invalid" to add switch speaker control');
+          done();
+        },
+      );
+    });
+  });
+
+  describe('switchSpeaker()', () => {
+    let dispatchSpy;
+
+    beforeEach(() => {
+      dispatchSpy = jest.spyOn(document, 'dispatchEvent');
+    });
+
+    afterEach(() => {
+      dispatchSpy.mockRestore();
+    });
+
+    test('dispatches a "switch-speaker" event', async () => {
+      await meetingsJSONAdapter
+        .meetingControls[SWITCH_SPEAKER_CONTROL]
+        .action(meetingID, speakerID);
       expect(dispatchSpy).toHaveBeenCalled();
     });
   });
