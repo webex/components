@@ -1,3 +1,16 @@
+# [1.70.0](https://github.com/webex/components/compare/v1.69.1...v1.70.0) (2021-06-15)
+
+
+### Bug Fixes
+
+* **Modal:** fix generic components scss import error ([5fc0580](https://github.com/webex/components/commit/5fc0580ba718272ea92ebdccb6971f3e3b61b689))
+
+
+### Features
+
+* **MeetingsJsonAdapter:** create camera selection control ([e6a227b](https://github.com/webex/components/commit/e6a227b9e296bf9f4a2a430dbf63f590ca2fb157))
+* **Modal:** add Modal component ([b46e688](https://github.com/webex/components/commit/b46e688e925ad64d62ce48feacf2e432929caf6a))
+
 ## [1.69.1](https://github.com/webex/components/compare/v1.69.0...v1.69.1) (2021-06-10)
 
 
