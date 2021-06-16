@@ -1,3 +1,10 @@
+## [1.70.2](https://github.com/webex/components/compare/v1.70.1...v1.70.2) (2021-06-16)
+
+
+### Bug Fixes
+
+* **WebexSettings:** fix JSDoc warnings for Tabs and Select components ([defa97d](https://github.com/webex/components/commit/defa97d83b3a8644a40c0433b02f4082cd055f39))
+
 ## [1.70.1](https://github.com/webex/components/compare/v1.70.0...v1.70.1) (2021-06-16)
 
 
