@@ -4,13 +4,17 @@ import classNames from 'classnames';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 
 /**
+ * @typedef {object} Option
+ * @property {string} value  The value of the option
+ * @property {string} label  The label of the option
+ */
+
+/**
  * Select component
  *
  * @param {object} props  Data passed to the component
  * @param {string} props.className  Custom CSS class to apply
- * @param {object[]} props.options  Array of options
- * @param {string} props.options[].value  The value of the option
- * @param {string} props.options[].label  The label of the option
+ * @param {Option[]} props.options  Array of options
  *
  * @returns {object}  JSX of the element
  */

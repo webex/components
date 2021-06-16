@@ -4,18 +4,21 @@ import classNames from 'classnames';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 
 /**
+ * @typedef {object} Tab
+ * @property {string} key  Unique key for each tab
+ * @property {string} heading  Tab heading text
+ */
+
+/**
  * Tabs component
  *
  * @param {object} props  Data passed to the component
- * @param {object[]} props.tabs  The tabs to be rendered
- * @param {string} props.tabs[].key  Unique key for each tab
- * @param {string} props.tabs[].heading  Tab heading text
+ * @param {Tab[]} props.tabs  The tabs to be rendered
  * @param {string} props.selected  Specifies which tab is active
  * @param {Function} props.onSelect  A callback to be executed on selecting active tab
  *
  * @returns {object} JSX of the component
  */
-
 export default function Tabs({tabs, selected, onSelect}) {
   const {content} = tabs.find((tab) => tab.key === selected);
 
