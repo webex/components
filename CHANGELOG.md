@@ -1,3 +1,10 @@
+## [1.70.1](https://github.com/webex/components/compare/v1.70.0...v1.70.1) (2021-06-16)
+
+
+### Bug Fixes
+
+* **package:** update component adapter interfaces to v1.18.0 ([d4af109](https://github.com/webex/components/commit/d4af109fd10fc0ea1d869dc09055395bc51cfcb0))
+
 # [1.70.0](https://github.com/webex/components/compare/v1.69.1...v1.70.0) (2021-06-15)
 
 
