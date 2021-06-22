@@ -29,6 +29,7 @@ export default function WebexRemoteMedia({className, meetingID}) {
     remoteVideo,
     remoteShare,
     error,
+    speakerID,
   } = useMeeting(meetingID);
   const members = useMembers(meetingID, 'meeting');
   const audioRef = useStream(remoteAudio);
@@ -51,6 +52,13 @@ export default function WebexRemoteMedia({className, meetingID}) {
 
   let remoteDisplay;
 
+  const setupVideoNode = (node) => {
+    videoRef(node);
+    if (node && node.setSinkId !== 'undefined') {
+      node.setSinkId(speakerID);
+    }
+  };
+
   if (error) {
     remoteDisplay = (
       <AlertBanner show type="warning">
@@ -61,7 +69,7 @@ export default function WebexRemoteMedia({className, meetingID}) {
     remoteDisplay = (
       <>
         {remoteVideo
-          && <video className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-remote-video`} ref={videoRef} muted playsInline autoPlay />}
+          && <video className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-remote-video`} ref={setupVideoNode} playsInline autoPlay />}
         {remoteShare
           && <video className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-remote-share`} ref={shareRef} muted playsInline autoPlay />}
         {remoteAudio && <audio ref={audioRef} autoPlay />}
