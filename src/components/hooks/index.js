@@ -14,3 +14,4 @@ export {default as useOverflowActivities} from './useOverflowActivities';
 export {default as usePerson} from './usePerson';
 export {default as useRoom} from './useRoom';
 export {default as useStream} from './useStream';
+export {default as useSpeakers} from './useSpeakers';
