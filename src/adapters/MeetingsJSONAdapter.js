@@ -20,6 +20,21 @@ export const ROSTER_CONTROL = 'member-roster';
 export const SETTINGS_CONTROL = 'settings';
 export const SWITCH_CAMERA_CONTROL = 'switch-camera';
 
+const EMPTY_MEETING = {
+  ID: null,
+  title: null,
+  localAudio: null,
+  localVideo: null,
+  localShare: null,
+  remoteAudio: null,
+  remoteVideo: null,
+  remoteShare: null,
+  showRoster: null,
+  showSettings: false,
+  status: 'NOT_JOINED',
+  cameraID: null,
+};
+
 // TODO: Figure out how to import JS Doc definitions and remove duplication.
 /**
  * A video conference in Webex over WebRTC.
@@ -174,6 +189,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   createMeeting(destination) {
     return Observable.create((observer) => {
       if (destination) {
+        observer.next({...EMPTY_MEETING, ID: destination});
         observer.next(this.datasource[destination]);
       } else {
         observer.error(new Error(`Could not create meeting at destination "${destination}"`));

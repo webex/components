@@ -21,7 +21,6 @@ import webexComponentClasses from '../helpers';
  * @returns {object} JSX of the component
  *
  */
-
 export default function Tabs({
   className,
   onSelect,
