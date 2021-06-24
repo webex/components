@@ -10,6 +10,7 @@ import webexComponentClasses from '../helpers';
 
 /**
  * Select component
+ *
  * @param {object} props  Data passed to the component
  * @param {string} props.className  Custom CSS class to apply
  * @param {object[]} props.options  Array of options

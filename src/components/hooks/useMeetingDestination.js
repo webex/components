@@ -1,5 +1,6 @@
 import {useEffect, useContext, useState} from 'react';
-import {concatMap} from 'rxjs/operators';
+import {concat} from 'rxjs';
+import {last, concatMap} from 'rxjs/operators';
 
 import {AdapterContext} from './contexts';
 
@@ -52,10 +53,12 @@ export default function useMeetingDestination(meetingDestination) {
         console.log(error);
       };
 
-      const subscription = meetingsAdapter
-        .createMeeting(meetingDestination)
-        .pipe(concatMap(({ID}) => meetingsAdapter.getMeeting(ID)))
-        .subscribe(onMeeting, onError);
+      const createMeeting$ = meetingsAdapter.createMeeting(meetingDestination);
+      const getMeeting$ = createMeeting$.pipe(
+        last(),
+        concatMap(({ID}) => meetingsAdapter.getMeeting(ID)),
+      );
+      const subscription = concat(createMeeting$, getMeeting$).subscribe(onMeeting, onError);
 
       cleanup = () => {
         subscription.unsubscribe();

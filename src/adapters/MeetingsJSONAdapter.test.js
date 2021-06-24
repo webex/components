@@ -1,5 +1,10 @@
 import {isObservable} from 'rxjs';
-import {skip, take, toArray} from 'rxjs/operators';
+import {
+  skip,
+  take,
+  toArray,
+  last,
+} from 'rxjs/operators';
 import {MeetingState} from '@webex/component-adapter-interfaces';
 
 import JSONData from '../data/meetings';
@@ -41,7 +46,7 @@ describe('Meetings JSON Adapter', () => {
     });
 
     test('emits a Meeting object on subscription', (done) => {
-      meetingsJSONAdapter.createMeeting(meetingID).subscribe((meeting) => {
+      meetingsJSONAdapter.createMeeting(meetingID).pipe(last()).subscribe((meeting) => {
         expect(meeting).toMatchObject(testMeeting);
         done();
       });
