@@ -1,3 +1,10 @@
+# [1.71.0](https://github.com/webex/components/compare/v1.70.2...v1.71.0) (2021-06-25)
+
+
+### Features
+
+* **components:** add classname and style prop to all webex components ([809713a](https://github.com/webex/components/commit/809713a612cf8ea9b04c02996cb45a0989e46552))
+
 ## [1.70.2](https://github.com/webex/components/compare/v1.70.1...v1.70.2) (2021-06-16)
 
 
