@@ -13,6 +13,14 @@ Loading.args = {
   meetingID: '',
 };
 
+export const VideoAccessDialog = Template.bind({});
+VideoAccessDialog.args = {
+  meetingID: 'meeting2',
+};
+VideoAccessDialog.parameters = {
+  storyshots: {disable: true},
+};
+
 export const VideoEnabled = Template.bind({});
 VideoEnabled.args = {
   meetingID: 'meeting1',
@@ -20,5 +28,5 @@ VideoEnabled.args = {
 
 export const VideoDisabled = Template.bind({});
 VideoDisabled.args = {
-  meetingID: 'meeting2',
+  meetingID: 'meeting5',
 };

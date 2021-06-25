@@ -14,6 +14,7 @@ export default {
     showRoster: false,
     showSettings: false,
     cameraID: 'cameraID1',
+    videoPermissions: 'ALLOWED',
     microphoneID: 'microphoneID1',
   },
   meeting2: {
@@ -29,6 +30,7 @@ export default {
     showRoster: false,
     showSettings: false,
     cameraID: 'cameraID2',
+    videoPermission: 'ASKING',
     microphoneID: 'microphoneID2',
   },
   meeting3: {
@@ -44,6 +46,7 @@ export default {
     showRoster: false,
     showSettings: false,
     cameraID: 'cameraID1',
+    videoPermission: 'ALLOWED',
     microphoneID: 'microphoneID1',
   },
   meeting4: {
@@ -59,6 +62,7 @@ export default {
     showRoster: false,
     showSettings: false,
     cameraID: 'cameraID1',
+    videoPermission: 'ALLOWED',
     microphoneID: 'microphoneID1',
   },
   meeting5: {
@@ -74,6 +78,7 @@ export default {
     showRoster: true,
     showSettings: false,
     cameraID: 'cameraID2',
+    videoPermission: 'DENIED',
     microphoneID: 'microphoneID2',
   },
   meeting6: {
@@ -89,6 +94,7 @@ export default {
     showRoster: false,
     showSettings: false,
     cameraID: 'cameraID1',
+    videoPermission: 'ALLOWED',
     microphoneID: 'microphoneID2',
   },
   meeting7: {
@@ -104,6 +110,7 @@ export default {
     showRoster: false,
     showSettings: false,
     cameraID: null,
+    videoPermission: null,
     microphoneID: null,
   },
   meeting8: {
@@ -119,6 +126,7 @@ export default {
     showRoster: false,
     showSettings: false,
     cameraID: null,
+    videoPermission: null,
     microphoneID: null,
   },
   meeting9: {

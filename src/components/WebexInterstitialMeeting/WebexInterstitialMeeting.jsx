@@ -4,8 +4,11 @@ import {Spinner} from '@momentum-ui/react';
 
 import webexComponentClasses from '../helpers';
 
+import Modal from '../generic/Modal/Modal';
 import WebexLocalMedia from '../WebexLocalMedia/WebexLocalMedia';
 import WebexMeetingInfo from '../WebexMeetingInfo/WebexMeetingInfo';
+import WebexMediaAccess from '../WebexMediaAccess/WebexMediaAccess';
+import {useMeeting} from '../hooks';
 
 /**
  * Webex Interstitial component displays the user's local video and
@@ -19,6 +22,7 @@ import WebexMeetingInfo from '../WebexMeetingInfo/WebexMeetingInfo';
  */
 export default function WebexInterstitialMeeting({className, meetingID, style}) {
   const cssClasses = webexComponentClasses('interstitial-meeting', className);
+  const {videoPermission} = useMeeting(meetingID);
 
   return (
     <div className={cssClasses} style={style}>
@@ -26,6 +30,11 @@ export default function WebexInterstitialMeeting({className, meetingID, style}) 
         <>
           <WebexMeetingInfo className="interstitial-meeting-info" meetingID={meetingID} />
           <WebexLocalMedia className="interstitial-media" meetingID={meetingID} mediaType="video" />
+          {videoPermission === 'ASKING' && (
+            <Modal>
+              <WebexMediaAccess meetingID={meetingID} />
+            </Modal>
+          )}
         </>
       ) : (
         <Spinner />
