@@ -1,12 +1,15 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import PropTypes from 'prop-types';
 import {Spinner} from '@momentum-ui/react';
 import {MeetingState} from '@webex/component-adapter-interfaces';
 
+import Modal from '../generic/Modal/Modal';
 import WebexInMeeting from '../WebexInMeeting/WebexInMeeting';
 import WebexInterstitialMeeting from '../WebexInterstitialMeeting/WebexInterstitialMeeting';
+import WebexSettings from '../WebexSettings/WebexSettings';
 import webexComponentClasses from '../helpers';
 import {useMeeting} from '../hooks';
+import {AdapterContext} from '../hooks/contexts';
 
 /**
  * Webex Meeting component displays the default Webex meeting experience.
@@ -19,9 +22,10 @@ import {useMeeting} from '../hooks';
  */
 
 export default function WebexMeeting({className, meetingID, style}) {
-  const {ID, state} = useMeeting(meetingID);
+  const {ID, state, showSettings} = useMeeting(meetingID);
   const {JOINED, LEFT} = MeetingState;
   const isActive = state === JOINED;
+  const adapter = useContext(AdapterContext);
 
   const cssClasses = webexComponentClasses('meeting', className);
 
@@ -45,6 +49,14 @@ export default function WebexMeeting({className, meetingID, style}) {
   return (
     <div className={cssClasses} style={style}>
       {meetingDisplay}
+      {showSettings && (
+        <Modal
+          onClose={() => adapter.meetingsAdapter.toggleSettings(ID)}
+          title="Settings"
+        >
+          <WebexSettings meetingID={ID} />
+        </Modal>
+      )}
     </div>
   );
 }
