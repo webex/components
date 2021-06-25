@@ -1,3 +1,10 @@
+# [1.72.0](https://github.com/webex/components/compare/v1.71.0...v1.72.0) (2021-06-25)
+
+
+### Features
+
+* **UseMeetingDestination:** accept multiple emits from createMeeting ([d2857fa](https://github.com/webex/components/commit/d2857faebe3ce50424127c53479ffbcc0b048416))
+
 # [1.71.0](https://github.com/webex/components/compare/v1.70.2...v1.71.0) (2021-06-25)
 
 
