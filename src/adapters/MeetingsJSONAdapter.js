@@ -11,8 +11,8 @@ export const MUTE_AUDIO_CONTROL = 'mute-audio';
 export const MUTE_VIDEO_CONTROL = 'mute-video';
 export const SHARE_CONTROL = 'share-screen';
 export const JOIN_CONTROL = 'join-meeting';
-export const JOIN_WITHOUT_CAMERA_CONTROL = 'join-without-camera';
-export const JOIN_WITHOUT_MICROPHONE_CONTROL = 'join-without-microphone';
+export const PROCEED_WITHOUT_CAMERA_CONTROL = 'proceed-without-camera';
+export const PROCEED_WITHOUT_MICROPHONE_CONTROL = 'proceed-without-microphone';
 export const LEAVE_CONTROL = 'leave-meeting';
 export const DISABLED_MUTE_AUDIO_CONTROL = 'disabled-mute-audio';
 export const DISABLED_JOIN_CONTROL = 'disabled-join-meeting';
@@ -129,16 +129,16 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       display: this.joinControl.bind(this),
     };
 
-    this.meetingControls[JOIN_WITHOUT_CAMERA_CONTROL] = {
-      ID: JOIN_WITHOUT_CAMERA_CONTROL,
-      action: this.joinMeetingWithoutCamera.bind(this),
-      display: this.joinWithoutCameraControl.bind(this),
+    this.meetingControls[PROCEED_WITHOUT_CAMERA_CONTROL] = {
+      ID: PROCEED_WITHOUT_CAMERA_CONTROL,
+      action: this.proceedMeetingWithoutCamera.bind(this),
+      display: this.proceedWithoutCameraControl.bind(this),
     };
 
-    this.meetingControls[JOIN_WITHOUT_MICROPHONE_CONTROL] = {
-      ID: JOIN_WITHOUT_MICROPHONE_CONTROL,
-      action: this.joinMeetingWithoutMicrophone.bind(this),
-      display: this.joinWithoutMicrophoneControl.bind(this),
+    this.meetingControls[PROCEED_WITHOUT_MICROPHONE_CONTROL] = {
+      ID: PROCEED_WITHOUT_MICROPHONE_CONTROL,
+      action: this.proceedMeetingWithoutMicrophone.bind(this),
+      display: this.proceedWithoutMicrophoneControl.bind(this),
     };
 
     this.meetingControls[LEAVE_CONTROL] = {
@@ -228,6 +228,8 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
           showRoster: null,
           showSettings: false,
           state: null,
+          videoPermission: null,
+          microphonePermission: null,
           cameraID: null,
         });
       } else if (this.datasource[ID]) {
@@ -256,8 +258,8 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
     const audioEvents$ = fromEvent(document, MUTE_AUDIO_CONTROL);
     const videoEvents$ = fromEvent(document, MUTE_VIDEO_CONTROL);
     const joinEvents$ = fromEvent(document, JOIN_CONTROL);
-    const joinWithoutCameraEvents$ = fromEvent(document, JOIN_WITHOUT_CAMERA_CONTROL);
-    const joinWithoutMicrophoneEvents$ = fromEvent(document, JOIN_WITHOUT_MICROPHONE_CONTROL);
+    const proceedWithoutCameraEvents$ = fromEvent(document, PROCEED_WITHOUT_CAMERA_CONTROL);
+    const proceedWithoutMicrophoneEvents$ = fromEvent(document, PROCEED_WITHOUT_MICROPHONE_CONTROL);
     const leaveEvents$ = fromEvent(document, LEAVE_CONTROL).pipe(
       filter((event) => event.detail.ID === ID),
       tap(() => end$.next(`Meeting "${ID}" has completed.`)),
@@ -270,8 +272,8 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       audioEvents$,
       videoEvents$,
       joinEvents$,
-      joinWithoutCameraEvents$,
-      joinWithoutMicrophoneEvents$,
+      proceedWithoutCameraEvents$,
+      proceedWithoutMicrophoneEvents$,
       leaveEvents$,
       shareEvents$,
       rosterEvents$,
@@ -312,32 +314,37 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   }
 
   /**
-   * Joins the meeting without camera
+   * Proceeds the meeting without camera
    *
-   * @param {string} ID ID of the meeting for which to join
+   * @param {string} ID ID of the meeting
    * @private
    */
-  async joinMeetingWithoutCamera(ID) {
+  async proceedMeetingWithoutCamera(ID) {
     if (this.datasource[ID]) {
       const meeting = this.datasource[ID];
 
-      meeting.state = MeetingState.JOINED;
+      meeting.videoPermission = 'IGNORED';
 
-      document.dispatchEvent(new CustomEvent(JOIN_WITHOUT_CAMERA_CONTROL, {detail: meeting}));
+      document.dispatchEvent(new CustomEvent(PROCEED_WITHOUT_CAMERA_CONTROL, {detail: meeting}));
     }
   }
 
   /**
-   * Joins the meeting without microphone
+   * Proceeds the meeting without microphone
    *
-   * @param {string} ID ID of the meeting for which to join
+   * @param {string} ID ID of the meeting
    * @private
    */
-  async joinMeetingWithoutMicrophone(ID) {
+  async proceedMeetingWithoutMicrophone(ID) {
     if (this.datasource[ID]) {
       const meeting = this.datasource[ID];
 
-      document.dispatchEvent(new CustomEvent(JOIN_WITHOUT_MICROPHONE_CONTROL, {detail: meeting}));
+      meeting.microphonePermission = 'IGNORED';
+
+      document.dispatchEvent(new CustomEvent(
+        PROCEED_WITHOUT_MICROPHONE_CONTROL,
+        {detail: meeting},
+      ));
     }
   }
 
@@ -622,18 +629,18 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   }
 
   /**
-   * Returns an observable that emits the display data of the join meeting without camera control.
+   * Returns an observable that emits the display data of the meeting without camera control.
    *
    * @returns {Observable.<MeetingControlDisplay>} Observable that emits control display data
    * @private
    */
   // eslint-disable-next-line class-methods-use-this
-  joinWithoutCameraControl() {
+  proceedWithoutCameraControl() {
     return Observable.create((observer) => {
       observer.next({
-        ID: JOIN_WITHOUT_CAMERA_CONTROL,
-        text: 'Join without camera',
-        tooltip: 'Join without camera',
+        ID: PROCEED_WITHOUT_CAMERA_CONTROL,
+        text: 'Proceed without camera',
+        tooltip: 'Proceed without camera',
         state: MeetingControlState.ACTIVE,
       });
 
@@ -642,18 +649,18 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   }
 
   /**
-   * Returns an observable that emits the display data of the join meeting without microphone control.
+   * Returns an observable that emits the display data of the meeting without microphone control.
    *
    * @returns {Observable.<MeetingControlDisplay>} Observable that emits control display data
    * @private
    */
   // eslint-disable-next-line class-methods-use-this
-  joinWithoutMicrophoneControl() {
+  proceedWithoutMicrophoneControl() {
     return Observable.create((observer) => {
       observer.next({
-        ID: JOIN_WITHOUT_MICROPHONE_CONTROL,
-        text: 'Join without audio',
-        tooltip: 'Join without audio',
+        ID: PROCEED_WITHOUT_MICROPHONE_CONTROL,
+        text: 'Proceed without audio',
+        tooltip: 'Proceed without audio',
       });
 
       observer.complete();
