@@ -14,6 +14,7 @@ import RosterControl from './MeetingsJSONAdapter/controls/RosterControl';
 import SettingsControl from './MeetingsJSONAdapter/controls/SettingsControl';
 import ShareControl from './MeetingsJSONAdapter/controls/ShareControl';
 import SwitchCameraControl from './MeetingsJSONAdapter/controls/SwitchCameraControl';
+import SwitchMicrophoneControl from './MeetingsJSONAdapter/controls/SwitchMicrophoneControl';
 
 // Meeting control names
 export const MUTE_AUDIO_CONTROL = 'mute-audio';
@@ -28,6 +29,7 @@ export const DISABLED_JOIN_CONTROL = 'disabled-join-meeting';
 export const ROSTER_CONTROL = 'member-roster';
 export const SETTINGS_CONTROL = 'settings';
 export const SWITCH_CAMERA_CONTROL = 'switch-camera';
+export const SWITCH_MICROPHONE_CONTROL = 'switch-microphone';
 
 const EMPTY_MEETING = {
   ID: null,
@@ -42,6 +44,7 @@ const EMPTY_MEETING = {
   showSettings: false,
   status: 'NOT_JOINED',
   cameraID: null,
+  microphoneID: null,
 };
 
 // Adapter Events
@@ -131,6 +134,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       [ROSTER_CONTROL]: new RosterControl(this, ROSTER_CONTROL),
       [SETTINGS_CONTROL]: new SettingsControl(this, SETTINGS_CONTROL),
       [SWITCH_CAMERA_CONTROL]: new SwitchCameraControl(this, SWITCH_CAMERA_CONTROL),
+      [SWITCH_MICROPHONE_CONTROL]: new SwitchMicrophoneControl(this, SWITCH_MICROPHONE_CONTROL),
     };
   }
 
@@ -184,6 +188,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
           showSettings: false,
           state: null,
           cameraID: null,
+          microphoneID: null,
         });
       } else if (this.fetchMeeting(ID)) {
         const meeting = this.fetchMeeting(ID);
@@ -470,6 +475,21 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       ...meeting,
       localVideo: await this.getStream({video: {deviceId: {exact: cameraID}}}),
       cameraID,
+    }));
+  }
+
+  /**
+   * Switches the microphone control.
+   *
+   * @param {string} ID  Id of the meeting for which to switch microphone
+   * @param {string} microphoneID  Id of the microphone device to switch to
+   * @private
+   */
+  async switchMicrophone(ID, microphoneID) {
+    await this.updateMeeting(ID, async (meeting) => ({
+      ...meeting,
+      localAudio: await this.getStream({audio: {deviceId: {exact: microphoneID}}}),
+      microphoneID,
     }));
   }
 

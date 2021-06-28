@@ -14,11 +14,13 @@ import MeetingsJSONAdapter, {
   MUTE_VIDEO_CONTROL,
   ROSTER_CONTROL,
   SWITCH_CAMERA_CONTROL,
+  SWITCH_MICROPHONE_CONTROL,
 } from './MeetingsJSONAdapter';
 
 describe('Meetings JSON Adapter', () => {
   const meetingID = 'meeting1';
   const cameraID = 'cameraDevice1';
+  const microphoneID = 'microphoneDevice1';
   let meetingsJSONAdapter;
   let testMeeting;
 
@@ -84,6 +86,7 @@ describe('Meetings JSON Adapter', () => {
           state: null,
           showRoster: null,
           cameraID: null,
+          microphoneID: null,
         });
         done();
       });
@@ -579,6 +582,90 @@ describe('Meetings JSON Adapter', () => {
 
     test('dispatches a "switch-camera" event', async () => {
       await meetingsJSONAdapter.meetingControls[SWITCH_CAMERA_CONTROL].action(meetingID, cameraID);
+      expect(meetingsJSONAdapter.getStream).toHaveBeenCalled();
+      expect(dispatchSpy).toHaveBeenCalled();
+    });
+  });
+
+  describe('switchMicrophoneControl()', () => {
+    test('returns an observable', () => {
+      expect(isObservable(meetingsJSONAdapter
+        .meetingControls[SWITCH_MICROPHONE_CONTROL]
+        .display())).toBeTruthy();
+    });
+
+    test('emits correct options for switch microphone control', (done) => {
+      const microphoneOptions = [{
+        value: 'default',
+        label: 'Default - Headset Microphone (Jabra EVOLVE 20 SE MS) (0b0e:0300)',
+      },
+      {
+        value: 'communications',
+        label: 'Communications - Headset Microphone (Jabra EVOLVE 20 SE MS) (0b0e:0300)',
+      },
+      {
+        value: 'fd8f12fdced8098aaac31836c8b98960727060b57d48148e15cc34ad4ba1394a',
+        label: 'Microphone Array (Realtek(R) Audio)',
+      },
+      {
+        value: 'df434123000a75a161b1841b08f7318617b419aae3c93683b0fcb3389470b39a',
+        label: 'Microphone (Realtek USB2.0 Audio) (0bda:402e)',
+      },
+      {
+        value: '79a2df2a81176acde237e064a9b213cd1bd32608106bd4ee5c30242eee01945f',
+        label: 'Headset Microphone (Jabra EVOLVE 20 SE MS) (0b0e:0300)',
+      },
+      {
+        value: 'f4491e7c9ad16139cc485d99e39234313172be31fc00c086acbdecb21236ccf6',
+        label: 'Microphone (HD Webcam C525) (046d:0826)',
+      }];
+
+      meetingsJSONAdapter
+        .meetingControls[SWITCH_MICROPHONE_CONTROL]
+        .display(meetingID)
+        .pipe(take(2), toArray())
+        .subscribe((displays) => {
+          expect(displays).toMatchObject([{
+            ID: 'switch-microphone',
+            tooltip: 'Microphone Devices',
+            options: null,
+            selected: null,
+          }, {
+            ID: 'switch-microphone',
+            tooltip: 'Microphone Devices',
+            options: microphoneOptions,
+            selected: null,
+          }]);
+          done();
+        });
+    });
+
+    test('throws error on invalid meeting ID', (done) => {
+      meetingsJSONAdapter.meetingControls[SWITCH_MICROPHONE_CONTROL].display('invalid').subscribe(
+        () => {},
+        (error) => {
+          expect(error.message).toEqual('Could not find meeting with ID "invalid" to add switch microphone control');
+          done();
+        },
+      );
+    });
+  });
+
+  describe('switchMicrophone()', () => {
+    let dispatchSpy;
+
+    beforeEach(() => {
+      dispatchSpy = jest.spyOn(document, 'dispatchEvent');
+    });
+
+    afterEach(() => {
+      dispatchSpy.mockRestore();
+    });
+
+    test('dispatches a "switch-microphone" event', async () => {
+      await meetingsJSONAdapter
+        .meetingControls[SWITCH_MICROPHONE_CONTROL]
+        .action(meetingID, microphoneID);
       expect(meetingsJSONAdapter.getStream).toHaveBeenCalled();
       expect(dispatchSpy).toHaveBeenCalled();
     });
