@@ -13,25 +13,26 @@ import MeetingControl from './MeetingControl';
  * @see {@link https://github.com/webex/component-adapter-interfaces/blob/master/src/MeetingsAdapter.js#L58}
  */
 
-export default class SwitchCameraControl extends MeetingControl {
+export default class SwitchMicrophoneControl extends MeetingControl {
   /**
-   * Switches the camera control.
+   * Switches the microphone control.
    *
-   * @param {string} meetingID  Id of the meeting for which to switch camera
-   * @param {string} cameraID  Id of the camera device to switch to
+   * @param {string} meetingID  Id of the meeting for which to switch microphone
+   * @param {string} microphoneID  Id of the microphone device to switch to
    */
-  async action(meetingID, cameraID) {
-    await this.adapter.switchCamera(meetingID, cameraID);
+  async action(meetingID, microphoneID) {
+    await this.adapter.switchMicrophone(meetingID, microphoneID);
   }
 
   /**
-   * Returns an observable that emits the display data of the switch camera control.
+   * Returns an observable that emits the display data of the switch microphone control.
    *
-   * @param {string} meetingID  Id of the meeting to switch camera
+   * @param {string} meetingID  Id of the meeting to switch microphone
    * @returns {Observable.<MeetingControlDisplay>} Observable that emits control display data
+   * @private
    */
   display(meetingID) {
-    const availableCameras$ = defer(() => this.adapter.getAvailableDevices('videoinput'));
+    const availableMicrophones$ = defer(() => this.adapter.getAvailableDevices('audioinput'));
 
     const initialControl$ = new Observable((observer) => {
       const meeting = this.adapter.fetchMeeting(meetingID);
@@ -39,24 +40,24 @@ export default class SwitchCameraControl extends MeetingControl {
       if (meeting) {
         observer.next({
           ID: this.ID,
-          tooltip: 'Video Devices',
+          tooltip: 'Microphone Devices',
           options: null,
           selected: null,
         });
         observer.complete();
       } else {
-        observer.error(new Error(`Could not find meeting with ID "${meetingID}" to add a switch camera control`));
+        observer.error(new Error(`Could not find meeting with ID "${meetingID}" to add switch microphone control`));
       }
     });
 
     const controlWithOptions$ = initialControl$.pipe(
-      concatMap((control) => availableCameras$.pipe(
-        map((availableCameras) => ({
+      concatMap((control) => availableMicrophones$.pipe(
+        map((availableMicrophones) => ({
           ...control,
-          options: (availableCameras || []) && availableCameras.map((camera) => ({
-            value: camera.deviceId,
-            label: camera.label,
-            camera,
+          options: (availableMicrophones || []) && availableMicrophones.map((microphone) => ({
+            value: microphone.deviceId,
+            label: microphone.label,
+            microphone,
           })),
         })),
       )),
@@ -64,11 +65,11 @@ export default class SwitchCameraControl extends MeetingControl {
 
     const controlFromMeeting$ = controlWithOptions$.pipe(
       concatMap((control) => this.adapter.getMeeting(meetingID).pipe(
-        map((meeting) => meeting.cameraID),
-        distinctUntilChanged('cameraID'),
-        map((cameraID) => ({
+        map((meeting) => meeting.microphoneID),
+        distinctUntilChanged('microphoneID'),
+        map((microphoneID) => ({
           ...control,
-          selected: cameraID,
+          selected: microphoneID,
         })),
       )),
     );
