@@ -33,7 +33,7 @@ export default function WebexMember({
   personID,
   style,
 }) {
-  const {firstName, lastName, orgID} = usePerson(personID);
+  const {displayName, orgID} = usePerson(personID);
   const me = useMe();
   const members = useMembers(destinationID, destinationType);
   const member = members
@@ -60,7 +60,7 @@ export default function WebexMember({
       <WebexAvatar personID={personID} displayStatus={displayStatus} />
       <div className="details">
         <div className="name">
-          {`${firstName} ${lastName}`}
+          {displayName}
           {isGuest && <span className="guest"> (Guest)</span>}
         </div>
         {roles.length > 0 && <div className="roles">{roles.join(', ')}</div>}
