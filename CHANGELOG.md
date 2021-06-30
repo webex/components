@@ -1,3 +1,10 @@
+# [1.73.0](https://github.com/webex/components/compare/v1.72.0...v1.73.0) (2021-06-30)
+
+
+### Features
+
+* **WebexMeetingControl:** render dropdown controls ([f84192a](https://github.com/webex/components/commit/f84192ae767a61a8d48b24c3a7917c82574d01a5))
+
 # [1.72.0](https://github.com/webex/components/compare/v1.71.0...v1.72.0) (2021-06-25)
 
 
