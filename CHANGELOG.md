@@ -1,3 +1,10 @@
+# [1.75.0](https://github.com/webex/components/compare/v1.74.1...v1.75.0) (2021-06-30)
+
+
+### Features
+
+* **WebexMeeting:** display webex settings in a modal window ([90dd0ed](https://github.com/webex/components/commit/90dd0ed15901d234312efb506d6feff5d66ed5c3))
+
 ## [1.74.1](https://github.com/webex/components/compare/v1.74.0...v1.74.1) (2021-06-30)
 
 
