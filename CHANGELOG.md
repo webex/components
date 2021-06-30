@@ -1,3 +1,10 @@
+# [1.74.0](https://github.com/webex/components/compare/v1.73.0...v1.74.0) (2021-06-30)
+
+
+### Features
+
+* **MeetingsJsonAdapter:** add microphone selection control ([a860ef4](https://github.com/webex/components/commit/a860ef40ec864cde930dee57345420b0d60aa2a1))
+
 # [1.73.0](https://github.com/webex/components/compare/v1.72.0...v1.73.0) (2021-06-30)
 
 
