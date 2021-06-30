@@ -1,3 +1,10 @@
+## [1.74.1](https://github.com/webex/components/compare/v1.74.0...v1.74.1) (2021-06-30)
+
+
+### Bug Fixes
+
+* **WebexMember:** use displayName instead of firstName and lastName ([26e756f](https://github.com/webex/components/commit/26e756ff62bfc68b12c6f5116678a6f2405656ea))
+
 # [1.74.0](https://github.com/webex/components/compare/v1.73.0...v1.74.0) (2021-06-30)
 
 
