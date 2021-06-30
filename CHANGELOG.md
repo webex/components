@@ -1,3 +1,10 @@
+# [1.77.0](https://github.com/webex/components/compare/v1.76.0...v1.77.0) (2021-06-30)
+
+
+### Features
+
+* **WebexVideoSettings:** show all available cameras in a dropdown ([5a472fa](https://github.com/webex/components/commit/5a472fa55c712456c3094d3c0a4678d9966c59dd))
+
 # [1.76.0](https://github.com/webex/components/compare/v1.75.0...v1.76.0) (2021-06-30)
 
 
