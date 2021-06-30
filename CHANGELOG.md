@@ -1,3 +1,10 @@
+# [1.76.0](https://github.com/webex/components/compare/v1.75.0...v1.76.0) (2021-06-30)
+
+
+### Features
+
+* **WebexMicrophoneSettings:** show all available microphones in a dropdown ([f631e95](https://github.com/webex/components/commit/f631e950379341a43a8e07ff015e57f698074820))
+
 # [1.75.0](https://github.com/webex/components/compare/v1.74.1...v1.75.0) (2021-06-30)
 
 
