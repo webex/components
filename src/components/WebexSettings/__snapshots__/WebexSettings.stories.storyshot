@@ -84,6 +84,49 @@ Array [
             </option>
           </select>
         </div>
+        <div
+          className="wxc-audio-settings"
+        >
+          <h2>
+            Microphone
+          </h2>
+          <select
+            className="wxc-select wxc-meeting-control"
+            onChange={[Function]}
+            value="microphoneID1"
+          >
+            <option
+              value="default"
+            >
+              Default - Headset Microphone (Jabra EVOLVE 20 SE MS) (0b0e:0300)
+            </option>
+            <option
+              value="communications"
+            >
+              Communications - Headset Microphone (Jabra EVOLVE 20 SE MS) (0b0e:0300)
+            </option>
+            <option
+              value="fd8f12fdced8098aaac31836c8b98960727060b57d48148e15cc34ad4ba1394a"
+            >
+              Microphone Array (Realtek(R) Audio)
+            </option>
+            <option
+              value="df434123000a75a161b1841b08f7318617b419aae3c93683b0fcb3389470b39a"
+            >
+              Microphone (Realtek USB2.0 Audio) (0bda:402e)
+            </option>
+            <option
+              value="79a2df2a81176acde237e064a9b213cd1bd32608106bd4ee5c30242eee01945f"
+            >
+              Headset Microphone (Jabra EVOLVE 20 SE MS) (0b0e:0300)
+            </option>
+            <option
+              value="f4491e7c9ad16139cc485d99e39234313172be31fc00c086acbdecb21236ccf6"
+            >
+              Microphone (HD Webcam C525) (046d:0826)
+            </option>
+          </select>
+        </div>
       </div>
     </div>
   </div>,

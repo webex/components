@@ -22,7 +22,10 @@ export default function WebexSettings({meetingID, className, style}) {
     key: 'audio',
     heading: 'Audio',
     content: () => (
-      <WebexAudioSettings type="switch-microphone" meetingID={meetingID} />
+      <>
+        <WebexAudioSettings type="switch-microphone" meetingID={meetingID} />
+        <WebexAudioSettings type="switch-speaker" meetingID={meetingID} />
+      </>
     ),
   }, {
     key: 'video',
