@@ -45,6 +45,45 @@ Array [
           className="wxc-audio-settings"
         >
           <h2>
+            Speaker
+          </h2>
+          <select
+            className="wxc-select wxc-meeting-control"
+            onChange={[Function]}
+            value="speakerID1"
+          >
+            <option
+              value="default"
+            >
+              Default - Headset Earphone (Jabra EVOLVE 20 SE MS) (0b0e:0300)
+            </option>
+            <option
+              value="communications"
+            >
+              Communications - Headset Earphone (Jabra EVOLVE 20 SE MS) (0b0e:0300)
+            </option>
+            <option
+              value="5e2cade11fab305ca3773e507b06e60d0a65ed8d6a19da2927a287c70e713dc7"
+            >
+              Line (Realtek USB2.0 Audio) (0bda:402e)
+            </option>
+            <option
+              value="91e9c4b27e0b7bc8f41f3076a66e2968d4e229a5f388c2fe9f251bf8d54d7a34"
+            >
+              Headphones (Realtek USB2.0 Audio) (0bda:402e)
+            </option>
+            <option
+              value="a2f1a439c64a73b712a54c16f77716fb6040d87de312d211ef886944877ecea2"
+            >
+              Speakers (Realtek(R) Audio)
+            </option>
+            <option
+              value="85e52fb55424206524719fab873ea7c3419c496ce1f691a009066ada5feaf813"
+            >
+              Headset Earphone (Jabra EVOLVE 20 SE MS) (0b0e:0300)
+            </option>
+          </select>
+          <h2>
             Microphone
           </h2>
           <select
