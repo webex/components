@@ -42,7 +42,7 @@ Array [
         className="tabs-content"
       >
         <div
-          className="wxc-microphone-settings"
+          className="wxc-audio-settings"
         >
           <h2>
             Microphone

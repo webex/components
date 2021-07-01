@@ -4,7 +4,7 @@ import webexComponentClasses from '../helpers';
 import WebexMeetingControl from '../WebexMeetingControl/WebexMeetingControl';
 
 /**
- * Webex Microphone Settings component
+ * Webex Audio Settings component
  *
  * @param {object} props  Data passed to the component
  * @param {string} props.className  Custom CSS class to apply
@@ -12,8 +12,8 @@ import WebexMeetingControl from '../WebexMeetingControl/WebexMeetingControl';
  * @param {object} props.style  Custom style to apply
  * @returns {object} JSX of the component
  */
-export default function WebexMicrophoneSettings({className, meetingID, style}) {
-  const cssClasses = webexComponentClasses('microphone-settings', className);
+export default function WebexAudioSettings({className, meetingID, style}) {
+  const cssClasses = webexComponentClasses('audio-settings', className);
 
   return (
     <div className={cssClasses} style={style}>
@@ -23,13 +23,13 @@ export default function WebexMicrophoneSettings({className, meetingID, style}) {
   );
 }
 
-WebexMicrophoneSettings.propTypes = {
+WebexAudioSettings.propTypes = {
   className: PropTypes.string,
   meetingID: PropTypes.string.isRequired,
   style: PropTypes.shape(),
 };
 
-WebexMicrophoneSettings.defaultProps = {
+WebexAudioSettings.defaultProps = {
   className: '',
   style: undefined,
 };

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../helpers';
 import Tabs from './Tabs';
-import WebexMicrophoneSettings from '../WebexMicrophoneSettings/WebexMicrophoneSettings';
+import WebexAudioSettings from '../WebexAudioSettings/WebexAudioSettings';
 import WebexVideoSettings from '../WebexVideoSettings/WebexVideoSettings';
 
 /**
@@ -22,7 +22,7 @@ export default function WebexSettings({meetingID, className, style}) {
     key: 'audio',
     heading: 'Audio',
     content: () => (
-      <WebexMicrophoneSettings type="switch-microphone" meetingID={meetingID} />
+      <WebexAudioSettings type="switch-microphone" meetingID={meetingID} />
     ),
   }, {
     key: 'video',
