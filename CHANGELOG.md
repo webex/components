@@ -1,3 +1,10 @@
+## [1.77.1](https://github.com/webex/components/compare/v1.77.0...v1.77.1) (2021-07-01)
+
+
+### Bug Fixes
+
+* **WebexAudioSettings:** rename WebexMicrophoneSettings to WebexAudioSettings ([2b5aa1c](https://github.com/webex/components/commit/2b5aa1ce1a712e34a3ece3501f1619509a852c68))
+
 # [1.77.0](https://github.com/webex/components/compare/v1.76.0...v1.77.0) (2021-06-30)
 
 
