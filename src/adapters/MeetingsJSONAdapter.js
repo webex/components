@@ -335,7 +335,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
 
     try {
       devices = await navigator.mediaDevices.enumerateDevices();
-      devices = devices.filter((device) => device.kind === type);
+      devices = devices.filter((device) => device.kind === type && device.deviceId);
     } catch (reason) {
       // eslint-disable-next-line no-console
       console.error('Meetings JSON adapter can not enumerate media devices', reason);
