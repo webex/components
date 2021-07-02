@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {DestinationType} from '@webex/component-adapter-interfaces';
-import {Icon} from '@momentum-ui/react';
+import {Icon, Spinner} from '@momentum-ui/react';
 
 import {
   useMembers,
@@ -58,16 +58,22 @@ export default function WebexMember({
   return (
     <div className={cssClasses} style={style}>
       <WebexAvatar personID={personID} displayStatus={displayStatus} />
-      <div className="details">
-        <div className="name">
-          {displayName}
-          {isGuest && <span className="guest"> (Guest)</span>}
-        </div>
-        {roles.length > 0 && <div className="roles">{roles.join(', ')}</div>}
-        {isExternal && <div className="organization">{organization.name}</div>}
-      </div>
-      {isSharing && <Icon name="icon-content-share_16" className="sharing" />}
-      {isMuted && <Icon name="icon-microphone-muted_16" className="muted" />}
+      {displayName !== ' ' ? (
+        <>
+          <div className="details">
+            <div className="name">
+              {displayName}
+              {isGuest && <span className="guest"> (Guest)</span>}
+            </div>
+            {roles.length > 0 && <div className="roles">{roles.join(', ')}</div>}
+            {isExternal && <div className="organization">{organization.name}</div>}
+          </div>
+          {isSharing && <Icon name="icon-content-share_16" className="sharing" />}
+          {isMuted && <Icon name="icon-microphone-muted_16" className="muted" />}
+        </>
+      ) : (
+        <Spinner />
+      )}
     </div>
   );
 }
