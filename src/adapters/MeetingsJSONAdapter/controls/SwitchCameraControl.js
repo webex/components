@@ -55,7 +55,7 @@ export default class SwitchCameraControl extends MeetingControl {
           ...control,
           options: (availableCameras || []) && availableCameras.map((camera) => ({
             value: camera.deviceId,
-            label: camera.label,
+            label: camera.label || `Camera-${camera.deviceId}`,
             camera,
           })),
         })),

@@ -56,7 +56,7 @@ export default class SwitchMicrophoneControl extends MeetingControl {
           ...control,
           options: (availableMicrophones || []) && availableMicrophones.map((microphone) => ({
             value: microphone.deviceId,
-            label: microphone.label,
+            label: microphone.label || `Microphone-${microphone.deviceId}`,
             microphone,
           })),
         })),
