@@ -1,3 +1,10 @@
+## [1.77.2](https://github.com/webex/components/compare/v1.77.1...v1.77.2) (2021-07-02)
+
+
+### Bug Fixes
+
+* **MeetingsJsonAdapter:** ignore media devices without an id and use ([1c8ee89](https://github.com/webex/components/commit/1c8ee8937daa9cfe281f7e22e6a8e473c3453417))
+
 ## [1.77.1](https://github.com/webex/components/compare/v1.77.0...v1.77.1) (2021-07-01)
 
 
