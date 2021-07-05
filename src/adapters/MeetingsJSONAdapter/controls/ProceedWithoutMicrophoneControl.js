@@ -8,18 +8,18 @@ import MeetingControl from './MeetingControl';
  * @see {@link https://github.com/webex/component-adapter-interfaces/blob/master/src/MeetingsAdapter.js#L58}
  */
 
-export default class JoinWithoutMicrophoneControl extends MeetingControl {
+export default class ProceedWithoutMicrophoneControl extends MeetingControl {
   /**
    * Joins the meeting without microphone
    *
    * @param {string} meetingID  Id of the meeting for which to join
    */
   async action(meetingID) {
-    await this.adapter.joinMeetingWithoutMicrophone(meetingID);
+    await this.adapter.ignoreAudioAccessPrompt(meetingID);
   }
 
   /**
-   * Returns an observable that emits the display data of the join meeting without microphone control.
+   * Returns an observable that emits the display data of the meeting without microphone control.
    *
    * @returns {Observable.<MeetingControlDisplay>} Observable that emits control display data
    */
@@ -28,8 +28,8 @@ export default class JoinWithoutMicrophoneControl extends MeetingControl {
     return Observable.create((observer) => {
       observer.next({
         ID: this.ID,
-        text: 'Join without audio',
-        tooltip: 'Join without audio',
+        text: 'Proceed without audio',
+        tooltip: 'Proceed without audio',
       });
 
       observer.complete();

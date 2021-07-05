@@ -5,11 +5,11 @@ import {MeetingsAdapter, MeetingState} from '@webex/component-adapter-interfaces
 import DisabledJoinControl from './MeetingsJSONAdapter/controls/DisabledJoinControl';
 import DisabledMuteAudioControl from './MeetingsJSONAdapter/controls/DisabledMuteAudioControl';
 import JoinControl from './MeetingsJSONAdapter/controls/JoinControl';
-import JoinWithoutCameraControl from './MeetingsJSONAdapter/controls/JoinWithoutCameraControl';
-import JoinWithoutMicrophoneControl from './MeetingsJSONAdapter/controls/JoinWithoutMicrophoneControl';
 import LeaveControl from './MeetingsJSONAdapter/controls/LeaveControl';
 import MuteAudioControl from './MeetingsJSONAdapter/controls/MuteAudioControl';
 import MuteVideoControl from './MeetingsJSONAdapter/controls/MuteVideoControl';
+import ProceedWithoutCameraControl from './MeetingsJSONAdapter/controls/ProceedWithoutCameraControl';
+import ProceedWithoutMicrophoneControl from './MeetingsJSONAdapter/controls/ProceedWithoutMicrophoneControl';
 import RosterControl from './MeetingsJSONAdapter/controls/RosterControl';
 import SettingsControl from './MeetingsJSONAdapter/controls/SettingsControl';
 import ShareControl from './MeetingsJSONAdapter/controls/ShareControl';
@@ -17,17 +17,17 @@ import SwitchCameraControl from './MeetingsJSONAdapter/controls/SwitchCameraCont
 import SwitchMicrophoneControl from './MeetingsJSONAdapter/controls/SwitchMicrophoneControl';
 
 // Meeting control names
-export const MUTE_AUDIO_CONTROL = 'mute-audio';
-export const MUTE_VIDEO_CONTROL = 'mute-video';
-export const SHARE_CONTROL = 'share-screen';
-export const JOIN_CONTROL = 'join-meeting';
-export const JOIN_WITHOUT_CAMERA_CONTROL = 'join-without-camera';
-export const JOIN_WITHOUT_MICROPHONE_CONTROL = 'join-without-microphone';
-export const LEAVE_CONTROL = 'leave-meeting';
 export const DISABLED_MUTE_AUDIO_CONTROL = 'disabled-mute-audio';
 export const DISABLED_JOIN_CONTROL = 'disabled-join-meeting';
+export const JOIN_CONTROL = 'join-meeting';
+export const LEAVE_CONTROL = 'leave-meeting';
+export const MUTE_AUDIO_CONTROL = 'mute-audio';
+export const MUTE_VIDEO_CONTROL = 'mute-video';
+export const PROCEED_WITHOUT_CAMERA_CONTROL = 'proceed-without-camera';
+export const PROCEED_WITHOUT_MICROPHONE_CONTROL = 'proceed-without-microphone';
 export const ROSTER_CONTROL = 'member-roster';
 export const SETTINGS_CONTROL = 'settings';
+export const SHARE_CONTROL = 'share-screen';
 export const SWITCH_CAMERA_CONTROL = 'switch-camera';
 export const SWITCH_MICROPHONE_CONTROL = 'switch-microphone';
 
@@ -123,10 +123,10 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       [MUTE_VIDEO_CONTROL]: new MuteVideoControl(this, MUTE_VIDEO_CONTROL),
       [SHARE_CONTROL]: new ShareControl(this, SHARE_CONTROL),
       [JOIN_CONTROL]: new JoinControl(this, JOIN_CONTROL),
-      [JOIN_WITHOUT_CAMERA_CONTROL]:
-        new JoinWithoutCameraControl(this, JOIN_WITHOUT_CAMERA_CONTROL),
-      [JOIN_WITHOUT_MICROPHONE_CONTROL]:
-        new JoinWithoutMicrophoneControl(this, JOIN_WITHOUT_MICROPHONE_CONTROL),
+      [PROCEED_WITHOUT_CAMERA_CONTROL]:
+        new ProceedWithoutCameraControl(this, PROCEED_WITHOUT_CAMERA_CONTROL),
+      [PROCEED_WITHOUT_MICROPHONE_CONTROL]:
+        new ProceedWithoutMicrophoneControl(this, PROCEED_WITHOUT_MICROPHONE_CONTROL),
       [LEAVE_CONTROL]: new LeaveControl(this, LEAVE_CONTROL),
       [DISABLED_MUTE_AUDIO_CONTROL]:
         new DisabledMuteAudioControl(this, DISABLED_MUTE_AUDIO_CONTROL),
@@ -189,6 +189,8 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
           state: null,
           cameraID: null,
           microphoneID: null,
+          videoPermission: null,
+          audioPermission: null,
         });
       } else if (this.fetchMeeting(ID)) {
         const meeting = this.fetchMeeting(ID);
@@ -239,21 +241,27 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   }
 
   /**
-   * Joins the meeting without camera
+   * Allows user to join the meeting without allowing camera access
    *
    * @param {string} ID  Id of the meeting for which to join
    */
-  async joinMeetingWithoutCamera(ID) {
-    await this.updateMeeting(ID, () => {});
+  async ignoreVideoAccessPrompt(ID) {
+    await this.updateMeeting(ID, async (meeting) => ({
+      ...meeting,
+      videoPermission: 'IGNORED',
+    }));
   }
 
   /**
-   * Joins the meeting without microphone
+   * Allows user to join the meeting without allowing microphone access
    *
    * @param {string} ID  Id of the meeting for which to join
    */
-  async joinMeetingWithoutMicrophone(ID) {
-    await this.updateMeeting(ID, () => {});
+  async ignoreAudioAccessPrompt(ID) {
+    await this.updateMeeting(ID, async (meeting) => ({
+      ...meeting,
+      audioPermission: 'IGNORED',
+    }));
   }
 
   /**
