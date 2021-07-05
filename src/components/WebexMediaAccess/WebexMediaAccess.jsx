@@ -9,13 +9,13 @@ const SCREENS = {
     icon: 'icon-camera_36',
     title: 'Allow access to camera',
     message: 'when your browser asks to let Webex use your camera for this video call',
-    control: 'join-without-camera',
+    control: 'proceed-without-camera',
   },
   microphone: {
     icon: 'icon-microphone_36',
     title: 'Allow access to microphone',
     message: 'when your browser asks to let Webex use your microphone for this video call',
-    control: 'join-without-microphone',
+    control: 'proceed-without-microphone',
   },
 };
 
