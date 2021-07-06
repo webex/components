@@ -1,3 +1,10 @@
+## [1.77.3](https://github.com/webex/components/compare/v1.77.2...v1.77.3) (2021-07-06)
+
+
+### Bug Fixes
+
+* **WebexMeetingControl:** render the control when an existent type is entered after a non-existent ([2cb5eb8](https://github.com/webex/components/commit/2cb5eb8c2477e71bd1fde9050ecf99fda3bda5cd))
+
 ## [1.77.2](https://github.com/webex/components/compare/v1.77.1...v1.77.2) (2021-07-02)
 
 
