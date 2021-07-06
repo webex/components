@@ -1,3 +1,10 @@
+# [1.78.0](https://github.com/webex/components/compare/v1.77.3...v1.78.0) (2021-07-06)
+
+
+### Features
+
+* **MeetingsJsonAdapter:** add speaker selection control ([7fcca89](https://github.com/webex/components/commit/7fcca899d2cb7484f6858335d79772202c469846))
+
 ## [1.77.3](https://github.com/webex/components/compare/v1.77.2...v1.77.3) (2021-07-06)
 
 
