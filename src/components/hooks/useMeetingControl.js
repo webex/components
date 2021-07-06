@@ -21,23 +21,30 @@ export default function useMeetingControl(type, meetingID) {
   const [display, setDisplay] = useState({});
   const {meetingsAdapter} = useContext(AdapterContext);
   const controls = meetingsAdapter.meetingControls;
-  let control;
-
-  if (controls[type]) {
-    control = controls[type];
-  } else {
-    // eslint-disable-next-line no-console
-    console.error(`${type} control is not defined. Available controls are "${Object.keys(controls).join(', ')}".`);
-  }
+  const control = controls[type];
 
   useEffect(() => {
-    const subscription = control.display(meetingID).subscribe(setDisplay);
+    if (!control) {
+      // eslint-disable-next-line no-console
+      console.error(`${type} control is not defined. Available controls are "${Object.keys(controls).join(', ')}".`);
+    }
+  }, [type, controls, control]);
 
-    return () => {
-      subscription.unsubscribe();
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  useEffect(() => {
+    let cleanup;
 
-  return [(value) => control.action(meetingID, value), display];
+    if (control) {
+      const subscription = control.display(meetingID).subscribe(setDisplay);
+
+      cleanup = () => {
+        subscription.unsubscribe();
+      };
+    }
+
+    return cleanup;
+  }, [meetingID, control]);
+
+  return control
+    ? [(value) => control.action(meetingID, value), display]
+    : [() => {}, {}];
 }
