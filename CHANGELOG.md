@@ -1,3 +1,10 @@
+# [1.79.0](https://github.com/webex/components/compare/v1.78.0...v1.79.0) (2021-07-07)
+
+
+### Features
+
+* **WebexAudioSettings:** add switch-speaker control in the settings page ([63f518d](https://github.com/webex/components/commit/63f518dfc349a52bd86292238401c5bca838afd4))
+
 # [1.78.0](https://github.com/webex/components/compare/v1.77.3...v1.78.0) (2021-07-06)
 
 
