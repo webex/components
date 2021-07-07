@@ -6,8 +6,12 @@ import {AdapterContext} from './contexts';
 
 const emptyMeeting = {
   title: null,
-  localAudio: null,
-  localVideo: null,
+  localAudio: {
+    stream: null,
+  },
+  localVideo: {
+    stream: null,
+  },
   remoteAudio: null,
   remoteVideo: null,
   state: null,

@@ -42,7 +42,7 @@ export default class MuteAudioControl extends MeetingControl {
     };
 
     return this.adapter.getMeeting(meetingID).pipe(
-      map((meeting) => !!meeting.localAudio),
+      map((meeting) => !!meeting.localAudio?.stream),
       distinctUntilChanged(),
       map((localAudioExists) => (localAudioExists ? unmuted : muted)),
     );

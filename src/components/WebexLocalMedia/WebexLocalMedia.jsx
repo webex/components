@@ -34,7 +34,7 @@ export default function WebexLocalMedia({
 
   switch (mediaType) {
     case 'video':
-      stream = localVideo;
+      stream = localVideo.stream;
       break;
     case 'screen':
       stream = localShare;
