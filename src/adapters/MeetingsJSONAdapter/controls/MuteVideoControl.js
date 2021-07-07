@@ -44,7 +44,7 @@ export default class MuteVideoControl extends MeetingControl {
     };
 
     return this.adapter.getMeeting(meetingID).pipe(
-      map((meeting) => !!meeting.localVideo),
+      map((meeting) => !!meeting.localVideo.stream),
       distinctUntilChanged(),
       map((localVideoExists) => (localVideoExists ? unmuted : muted)),
     );

@@ -4,8 +4,12 @@ export default {
   meeting1: {
     ID: 'meeting1',
     title: 'Weekly Backlog Grooming',
-    localAudio: new MediaStream(),
-    localVideo: new MediaStream(),
+    localAudio: {
+      stream: new MediaStream(),
+    },
+    localVideo: {
+      stream: new MediaStream(),
+    },
     localShare: new MediaStream(),
     remoteAudio: new MediaStream(),
     remoteVideo: new MediaStream(),
@@ -20,8 +24,12 @@ export default {
   meeting2: {
     ID: 'meeting2',
     title: 'Lunch and Learn',
-    localAudio: null,
-    localVideo: null,
+    localAudio: {
+      stream: null,
+    },
+    localVideo: {
+      stream: null,
+    },
     localShare: null,
     remoteAudio: new MediaStream(),
     remoteVideo: new MediaStream(),
@@ -36,8 +44,12 @@ export default {
   meeting3: {
     ID: 'meeting3',
     title: 'Quarterly Financial Report',
-    localAudio: new MediaStream(),
-    localVideo: new MediaStream(),
+    localAudio: {
+      stream: new MediaStream(),
+    },
+    localVideo: {
+      stream: new MediaStream(),
+    },
     localShare: null,
     remoteAudio: null,
     remoteVideo: null,
@@ -52,8 +64,12 @@ export default {
   meeting4: {
     ID: 'meeting4',
     title: '1:1 Barbara/Brandon',
-    localAudio: new MediaStream(),
-    localVideo: new MediaStream(),
+    localAudio: {
+      stream: new MediaStream(),
+    },
+    localVideo: {
+      stream: new MediaStream(),
+    },
     localShare: new MediaStream(),
     remoteAudio: new MediaStream(),
     remoteVideo: new MediaStream(),
@@ -68,8 +84,12 @@ export default {
   meeting5: {
     ID: 'meeting5',
     title: 'Barbara German',
-    localAudio: new MediaStream(),
-    localVideo: null,
+    localAudio: {
+      stream: new MediaStream(),
+    },
+    localVideo: {
+      stream: null,
+    },
     localShare: null,
     remoteAudio: new MediaStream(),
     remoteVideo: null,
@@ -84,8 +104,12 @@ export default {
   meeting6: {
     ID: 'meeting6',
     title: 'Audio Trouble',
-    localAudio: null,
-    localVideo: new MediaStream(),
+    localAudio: {
+      stream: null,
+    },
+    localVideo: {
+      stream: new MediaStream(),
+    },
     localShare: null,
     remoteAudio: null,
     remoteVideo: new MediaStream(),
@@ -100,8 +124,12 @@ export default {
   meeting7: {
     ID: 'meeting7',
     title: null,
-    localAudio: null,
-    localVideo: null,
+    localAudio: {
+      stream: null,
+    },
+    localVideo: {
+      stream: null,
+    },
     localShare: null,
     remoteAudio: null,
     remoteVideo: null,
@@ -116,8 +144,12 @@ export default {
   meeting8: {
     ID: null,
     title: null,
-    localAudio: null,
-    localVideo: null,
+    localAudio: {
+      stream: null,
+    },
+    localVideo: {
+      stream: null,
+    },
     localShare: null,
     remoteAudio: null,
     remoteVideo: null,
@@ -130,6 +162,24 @@ export default {
     speakerID: null,
   },
   meeting9: {
+    ID: null,
+    title: null,
+    localAudio: {
+      stream: null,
+    },
+    localVideo: {
+      stream: null,
+    },
+    localShare: null,
+    remoteAudio: null,
+    remoteVideo: null,
+    remoteShare: null,
+    state: null,
+    showRoster: false,
+    showSettings: false,
+    cameraID: null,
+    microphoneID: null,
+    speakerID: null,
     error: true,
   },
 };

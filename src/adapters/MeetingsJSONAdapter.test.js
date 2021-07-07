@@ -79,8 +79,14 @@ describe('Meetings JSON Adapter', () => {
         expect(meeting).toMatchObject({
           ID: null,
           title: null,
-          localAudio: null,
-          localVideo: null,
+          localAudio: {
+            stream: null,
+            permission: null,
+          },
+          localVideo: {
+            stream: null,
+            permission: null,
+          },
           localShare: null,
           remoteAudio: null,
           remoteVideo: null,
@@ -95,12 +101,12 @@ describe('Meetings JSON Adapter', () => {
       });
     });
 
-    test('emits Meeting object with null local audio on mute audio event', (done) => {
+    test('emits Meeting object with null local audio stream on mute audio event', (done) => {
       meetingsJSONAdapter
         .getMeeting(meetingID)
         .pipe(skip(1)) // Skip initial emission
         .subscribe((meeting) => {
-          expect(meeting.localAudio).toBeNull();
+          expect(meeting.localAudio.stream).toBeNull();
           done();
         });
 
@@ -108,12 +114,12 @@ describe('Meetings JSON Adapter', () => {
       meetingsJSONAdapter.meetingControls[MUTE_AUDIO_CONTROL].action(meetingID);
     });
 
-    test('emits Meeting object with null local video on mute video event', (done) => {
+    test('emits Meeting object with null local video stream on mute video event', (done) => {
       meetingsJSONAdapter
         .getMeeting(meetingID)
         .pipe(skip(1)) // Skip initial emission
         .subscribe((meeting) => {
-          expect(meeting.localVideo).toBeNull();
+          expect(meeting.localVideo.stream).toBeNull();
           done();
         });
 
@@ -229,18 +235,18 @@ describe('Meetings JSON Adapter', () => {
       dispatchSpy.mockRestore();
     });
 
-    test('sets local audio to null if it is a media stream', async () => {
-      testMeeting.localAudio = new MediaStream();
+    test('sets local audio stream to null if it is a media stream', async () => {
+      testMeeting.localAudio.stream = new MediaStream();
 
       await meetingsJSONAdapter.meetingControls[MUTE_AUDIO_CONTROL].action(meetingID);
-      expect(testMeeting.localAudio).toBeNull();
+      expect(testMeeting.localAudio.stream).toBeNull();
     });
 
-    test('sets local audio to a media stream if it is null', async () => {
-      testMeeting.localAudio = null;
+    test('sets local audio stream to a media stream if it is null', async () => {
+      testMeeting.localAudio.stream = null;
 
       await meetingsJSONAdapter.meetingControls[MUTE_AUDIO_CONTROL].action(meetingID);
-      expect(testMeeting.localAudio).toBeInstanceOf(MediaStream);
+      expect(testMeeting.localAudio.stream).toBeInstanceOf(MediaStream);
     });
 
     test('dispatches a "mute-audio" event', async () => {
@@ -260,18 +266,20 @@ describe('Meetings JSON Adapter', () => {
       dispatchSpy.mockRestore();
     });
 
-    test('sets local video to null if it is a media stream', async () => {
-      testMeeting.localVideo = new MediaStream();
+    test('sets local video stream to null if it is a media stream', async () => {
+      testMeeting.localVideo = {
+        stream: new MediaStream(),
+      };
 
       await meetingsJSONAdapter.meetingControls[MUTE_VIDEO_CONTROL].action(meetingID);
-      expect(testMeeting.localVideo).toBeNull();
+      expect(testMeeting.localVideo.stream).toBeNull();
     });
 
-    test('sets local video to a media stream if it is null', async () => {
-      testMeeting.localVideo = null;
+    test('sets local video stream to a media stream if it is null', async () => {
+      testMeeting.localVideo.stream = null;
 
       await meetingsJSONAdapter.meetingControls[MUTE_VIDEO_CONTROL].action(meetingID);
-      expect(testMeeting.localVideo).toBeInstanceOf(MediaStream);
+      expect(testMeeting.localVideo.stream).toBeInstanceOf(MediaStream);
     });
 
     test('dispatches a "mute-video" event', async () => {
@@ -324,8 +332,8 @@ describe('Meetings JSON Adapter', () => {
       expect(isObservable(meetingsJSONAdapter.meetingControls[MUTE_AUDIO_CONTROL].display())).toBeTruthy();
     });
 
-    test('emits inactive microphone icon control if there is audio', (done) => {
-      testMeeting.localAudio = new MediaStream();
+    test('emits inactive microphone icon control if there is audio stream', (done) => {
+      testMeeting.localAudio.stream = new MediaStream();
 
       meetingsJSONAdapter
         .meetingControls[MUTE_AUDIO_CONTROL]
@@ -341,8 +349,8 @@ describe('Meetings JSON Adapter', () => {
         });
     });
 
-    test('emits active microphone icon control if there is no audio', (done) => {
-      testMeeting.localAudio = null;
+    test('emits active microphone icon control if there is no audio stream', (done) => {
+      testMeeting.localAudio.stream = null;
 
       meetingsJSONAdapter
         .meetingControls[MUTE_AUDIO_CONTROL]
@@ -394,8 +402,8 @@ describe('Meetings JSON Adapter', () => {
       expect(isObservable(meetingsJSONAdapter.meetingControls[MUTE_VIDEO_CONTROL].display())).toBeTruthy();
     });
 
-    test('emits inactive camera control if there is video', (done) => {
-      testMeeting.localVideo = new MediaStream();
+    test('emits inactive camera control if there is video stream', (done) => {
+      testMeeting.localVideo.stream = new MediaStream();
 
       meetingsJSONAdapter
         .meetingControls[MUTE_VIDEO_CONTROL]
@@ -411,8 +419,8 @@ describe('Meetings JSON Adapter', () => {
         });
     });
 
-    test('emits active camera control if there is no video', (done) => {
-      testMeeting.localVideo = null;
+    test('emits active camera control if there is no video stream', (done) => {
+      testMeeting.localVideo.stream = null;
 
       meetingsJSONAdapter
         .meetingControls[MUTE_VIDEO_CONTROL]

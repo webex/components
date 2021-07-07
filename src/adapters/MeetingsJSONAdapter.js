@@ -2,6 +2,8 @@ import {concat, fromEvent, Observable} from 'rxjs';
 import {filter, map, takeWhile} from 'rxjs/operators';
 import {MeetingsAdapter, MeetingState} from '@webex/component-adapter-interfaces';
 
+import {deepMerge} from '../util';
+
 import DisabledJoinControl from './MeetingsJSONAdapter/controls/DisabledJoinControl';
 import DisabledMuteAudioControl from './MeetingsJSONAdapter/controls/DisabledMuteAudioControl';
 import JoinControl from './MeetingsJSONAdapter/controls/JoinControl';
@@ -36,8 +38,14 @@ export const SWITCH_SPEAKER_CONTROL = 'switch-speaker';
 const EMPTY_MEETING = {
   ID: null,
   title: null,
-  localAudio: null,
-  localVideo: null,
+  localAudio: {
+    stream: null,
+    permission: null,
+  },
+  localVideo: {
+    stream: null,
+    permission: null,
+  },
   localShare: null,
   remoteAudio: null,
   remoteVideo: null,
@@ -86,8 +94,12 @@ const EVENT_MEETING_UPDATE = 'meeting:update';
  *   "meeting-1": {
  *     "ID": "meeting-1",
  *     "title": "Development Standup",
- *     "localAudio": {},
- *     "localVideo": {},
+ *     "localAudio": {
+ *        stream: {}
+ *     },
+ *     "localVideo": {
+ *        stream: {}
+ *     },
  *     "localShare": null,
  *     "remoteAudio": {},
  *     "remoteVideo": {},
@@ -98,8 +110,12 @@ const EVENT_MEETING_UPDATE = 'meeting:update';
  *   "meeting-2": {
  *     "ID": "meeting-2",
  *     "title": "Sprint Demos",
- *     "localAudio": {},
- *     "localVideo": {},
+ *     "localAudio": {
+ *        stream: {}
+ *     },
+ *     "localVideo": {
+ *        stream: {}
+ *     },
  *     "localShare": {},
  *     "remoteAudio": {},
  *     "remoteVideo": {},
@@ -169,7 +185,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * The observable will emit whenever there is a change in the meeting.
    * Changes observed:
    * - Initial data request
-   * - Screen hare/unshare
+   * - Screen share/unshare
    * - Audio & video mute/unmute
    *
    * @param {string} ID  Id of the meeting to get
@@ -182,8 +198,14 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
         observer.next({
           ID: null,
           title: null,
-          localAudio: null,
-          localVideo: null,
+          localAudio: {
+            stream: null,
+            permission: null,
+          },
+          localVideo: {
+            stream: null,
+            permission: null,
+          },
           localShare: null,
           remoteAudio: null,
           remoteVideo: null,
@@ -193,8 +215,6 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
           state: null,
           cameraID: null,
           microphoneID: null,
-          videoPermission: null,
-          audioPermission: null,
           speakerID: null,
         });
       } else if (this.fetchMeeting(ID)) {
@@ -237,8 +257,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @param {string} ID  Id of the meeting for which to join
    */
   async joinMeeting(ID) {
-    await this.updateMeeting(ID, async (meeting) => ({
-      ...meeting,
+    await this.updateMeeting(ID, async () => ({
       remoteVideo: await this.getStream({video: true, audio: false}),
       remoteAudio: await this.getStream({video: false, audio: true}),
       state: MeetingState.JOINED,
@@ -251,10 +270,12 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @param {string} ID  Id of the meeting for which to join
    */
   async ignoreVideoAccessPrompt(ID) {
-    await this.updateMeeting(ID, async (meeting) => ({
-      ...meeting,
-      videoPermission: 'IGNORED',
-    }));
+    await this.updateMeeting(ID, async () => ({
+      localVideo: {
+        permission: 'IGNORED',
+      },
+    }
+    ));
   }
 
   /**
@@ -263,10 +284,12 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @param {string} ID  Id of the meeting for which to join
    */
   async ignoreAudioAccessPrompt(ID) {
-    await this.updateMeeting(ID, async (meeting) => ({
-      ...meeting,
-      audioPermission: 'IGNORED',
-    }));
+    await this.updateMeeting(ID, async () => ({
+      localAudio: {
+        permission: 'IGNORED',
+      },
+    }
+    ));
   }
 
   /**
@@ -276,8 +299,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @param {string} ID  Id of the meeting for which to leave
    */
   async leaveMeeting(ID) {
-    await this.updateMeeting(ID, async (meeting) => ({
-      ...meeting,
+    await this.updateMeeting(ID, async () => ({
       remoteVideo: null,
       remoteAudio: null,
       state: MeetingState.LEFT,
@@ -407,8 +429,10 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    */
   async toggleMuteAudio(ID) {
     await this.updateMeeting(ID, async (meeting) => ({
-      ...meeting,
-      localAudio: meeting.localAudio ? null : await this.getStream({video: false, audio: true}),
+      localAudio: {
+        stream: meeting.localAudio.stream
+          ? null : await this.getStream({video: false, audio: true}),
+      },
     }));
   }
 
@@ -420,8 +444,10 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    */
   async toggleMuteVideo(ID) {
     await this.updateMeeting(ID, async (meeting) => ({
-      ...meeting,
-      localVideo: meeting.localVideo ? null : await this.getStream({video: true, audio: false}),
+      localVideo: {
+        stream: meeting.localVideo?.stream
+          ? null : await this.getStream({video: true, audio: false}),
+      },
     }));
   }
 
@@ -432,24 +458,20 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    */
   async handleLocalShare(ID) {
     await this.updateMeeting(ID, async (meeting) => {
-      const updatedMeeting = {...meeting};
+      const updates = {};
 
       if (meeting.localShare) {
-        updatedMeeting.localShare.getTracks()[0].stop();
-        updatedMeeting.localShare = null;
+        meeting.localShare.getTracks()[0].stop();
+        updates.localShare = null;
       } else {
-        updatedMeeting.localShare = await this.getDisplayStream();
-        updatedMeeting.remoteShare = null;
-
-        if (meeting.localShare) {
-          // Handle browser's built-in stop Button
-          updatedMeeting.localShare.getVideoTracks()[0].onended = () => {
-            updatedMeeting.localShare = null;
-          };
-        }
+        updates.localShare = await this.getDisplayStream();
+        updates.localShare.getVideoTracks()[0].onended = () => {
+          this.handleLocalShare(ID);
+        };
+        updates.remoteShare = null;
       }
 
-      return updatedMeeting;
+      return updates;
     });
   }
 
@@ -460,7 +482,6 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    */
   async toggleRoster(ID) {
     await this.updateMeeting(ID, async (meeting) => ({
-      ...meeting,
       showRoster: !meeting.showRoster,
     }));
   }
@@ -471,10 +492,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @param {string} ID  Id of the meeting for which to toggle the settings flag
    */
   async toggleSettings(ID) {
-    await this.updateMeeting(ID, async (meeting) => ({
-      ...meeting,
-      showSettings: !meeting.showSettings,
-    }));
+    await this.updateMeeting(ID, async (meeting) => ({showSettings: !meeting.showSettings}));
   }
 
   /**
@@ -484,9 +502,10 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @param {string} cameraID  Id of the camera device to switch to
    */
   async switchCamera(ID, cameraID) {
-    await this.updateMeeting(ID, async (meeting) => ({
-      ...meeting,
-      localVideo: await this.getStream({video: {deviceId: {exact: cameraID}}}),
+    await this.updateMeeting(ID, async () => ({
+      localVideo: {
+        stream: await this.getStream({video: {deviceId: {exact: cameraID}}}),
+      },
       cameraID,
     }));
   }
@@ -499,9 +518,10 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @private
    */
   async switchMicrophone(ID, microphoneID) {
-    await this.updateMeeting(ID, async (meeting) => ({
-      ...meeting,
-      localAudio: await this.getStream({audio: {deviceId: {exact: microphoneID}}}),
+    await this.updateMeeting(ID, async () => ({
+      localAudio: {
+        stream: await this.getStream({audio: {deviceId: {exact: microphoneID}}}),
+      },
       microphoneID,
     }));
   }
@@ -514,10 +534,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @private
    */
   async switchSpeaker(ID, speakerID) {
-    await this.updateMeeting(ID, async (meeting) => ({
-      ...meeting,
-      speakerID,
-    }));
+    await this.updateMeeting(ID, async () => ({speakerID}));
   }
 
   /**
@@ -550,15 +567,9 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    */
   async updateMeeting(ID, updater) {
     const meeting = this.fetchMeeting(ID);
-    const updatedMeeting = await updater(meeting);
+    const meetingUpdates = await updater(meeting);
 
-    // Copy the updated meeting object over the existing meeting object in the adapter
-    for (const key of Object.keys(meeting)) {
-      delete meeting[key];
-    }
-
-    Object.assign(meeting, updatedMeeting);
-
+    deepMerge(meeting, meetingUpdates);
     document.dispatchEvent(new CustomEvent(EVENT_MEETING_UPDATE, {detail: meeting}));
   }
 }
