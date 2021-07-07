@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {DestinationType} from '@webex/component-adapter-interfaces';
-import {Icon} from '@momentum-ui/react';
+import {Icon, Spinner} from '@momentum-ui/react';
 
 import {
   useMembers,
@@ -60,7 +60,7 @@ export default function WebexMember({
       <WebexAvatar personID={personID} displayStatus={displayStatus} />
       <div className="details">
         <div className="name">
-          {displayName}
+          {(displayName ?? <Spinner size={16} />) || <i>Name not available</i>}
           {isGuest && <span className="guest"> (Guest)</span>}
         </div>
         {roles.length > 0 && <div className="roles">{roles.join(', ')}</div>}
