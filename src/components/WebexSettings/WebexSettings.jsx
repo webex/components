@@ -22,13 +22,13 @@ export default function WebexSettings({meetingID, className, style}) {
     key: 'audio',
     heading: 'Audio',
     content: () => (
-      <WebexAudioSettings type="switch-microphone" meetingID={meetingID} />
+      <WebexAudioSettings meetingID={meetingID} />
     ),
   }, {
     key: 'video',
     heading: 'Video',
     content: () => (
-      <WebexVideoSettings type="switch-camera" meetingID={meetingID} />
+      <WebexVideoSettings meetingID={meetingID} />
     ),
   }];
 
