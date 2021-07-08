@@ -1,3 +1,10 @@
+## [1.79.1](https://github.com/webex/components/compare/v1.79.0...v1.79.1) (2021-07-08)
+
+
+### Bug Fixes
+
+* **WebexMember:** add loading state while names are being fetched ([df478a4](https://github.com/webex/components/commit/df478a4f4ef8316f18100b6195d4bca7275b0a5a))
+
 # [1.79.0](https://github.com/webex/components/compare/v1.78.0...v1.79.0) (2021-07-07)
 
 
