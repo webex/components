@@ -36,6 +36,7 @@ export default function useMeetingDestination(meetingDestination) {
 
   useEffect(() => {
     let cleanup;
+    let lastMeeting;
 
     if (!meetingDestination || !meetingsAdapter) {
       setMeeting({...emptyMeeting});
@@ -46,6 +47,7 @@ export default function useMeetingDestination(meetingDestination) {
         // since the state is the meeting object itself
         // We need to create a new meeting object trigger the state change
         setMeeting({...newMeeting});
+        lastMeeting = newMeeting;
       };
       const onError = (error) => {
         setMeeting({...emptyMeeting, error});
@@ -61,6 +63,10 @@ export default function useMeetingDestination(meetingDestination) {
       const subscription = concat(createMeeting$, getMeeting$).subscribe(onMeeting, onError);
 
       cleanup = () => {
+        if (lastMeeting?.ID) {
+          meetingsAdapter.removeMedia(lastMeeting.ID);
+          meetingsAdapter.leaveMeeting(lastMeeting.ID);
+        }
         subscription.unsubscribe();
       };
     }
