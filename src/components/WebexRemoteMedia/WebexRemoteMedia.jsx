@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/media-has-caption */
-import React from 'react';
+import React, {useRef} from 'react';
 import PropTypes from 'prop-types';
 import {Badge, Spinner, AlertBanner} from '@momentum-ui/react';
 
@@ -32,9 +32,14 @@ export default function WebexRemoteMedia({className, meetingID, style}) {
     error,
   } = useMeeting(meetingID);
   const members = useMembers(meetingID, 'meeting');
-  const audioRef = useStream(remoteAudio);
-  const videoRef = useStream(remoteVideo);
-  const shareRef = useStream(remoteShare);
+  const audioRef = useRef();
+  const videoRef = useRef();
+  const shareRef = useRef();
+
+  useStream(audioRef, remoteAudio);
+  useStream(videoRef, remoteVideo);
+  useStream(shareRef, remoteShare);
+
   const [remoteMediaRef, {width}] = useElementDimensions();
 
   const hasOtherMembers = members.filter((member) => member.inMeeting).length > 1;
