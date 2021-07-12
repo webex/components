@@ -1,3 +1,10 @@
+## [1.79.2](https://github.com/webex/components/compare/v1.79.1...v1.79.2) (2021-07-12)
+
+
+### Bug Fixes
+
+* **WebexSettings:** remove the unnecessary type property ([0503eca](https://github.com/webex/components/commit/0503eca83952e148ce05204fd94cc9874fcf52b4))
+
 ## [1.79.1](https://github.com/webex/components/compare/v1.79.0...v1.79.1) (2021-07-08)
 
 
