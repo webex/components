@@ -1,3 +1,10 @@
+# [1.80.0](https://github.com/webex/components/compare/v1.79.2...v1.80.0) (2021-07-12)
+
+
+### Features
+
+* **UseMeetingDestination:** remove media and leave meeting when component unmounts from dom ([7d4038a](https://github.com/webex/components/commit/7d4038ae617d7581b149af33ab3b1cb41178baba))
+
 ## [1.79.2](https://github.com/webex/components/compare/v1.79.1...v1.79.2) (2021-07-12)
 
 
