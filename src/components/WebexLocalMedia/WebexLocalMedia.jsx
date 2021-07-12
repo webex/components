@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import PropTypes from 'prop-types';
 import {Spinner} from '@momentum-ui/react';
 
@@ -30,6 +30,9 @@ export default function WebexLocalMedia({
 }) {
   const [mediaRef, {width}] = useElementDimensions();
   const {localVideo, localShare} = useMeeting(meetingID);
+  const ref = useRef();
+  const {ID} = useMe();
+
   let stream;
 
   switch (mediaType) {
@@ -43,8 +46,7 @@ export default function WebexLocalMedia({
       break;
   }
 
-  const ref = useStream(stream);
-  const {ID} = useMe();
+  useStream(ref, stream);
 
   const cssClasses = webexComponentClasses('local-media', className, {
     desktop: width >= PHONE_LARGE,
