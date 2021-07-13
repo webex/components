@@ -41,7 +41,7 @@ export default class ShareControl extends MeetingControl {
     };
 
     return this.adapter.getMeeting(meetingID).pipe(
-      map((meeting) => !!meeting.localShare),
+      map((meeting) => !!meeting.localShare.stream),
       distinctUntilChanged(),
       map((localShareExists) => (localShareExists ? active : inactive)),
     );

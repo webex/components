@@ -87,7 +87,9 @@ describe('Meetings JSON Adapter', () => {
             stream: null,
             permission: null,
           },
-          localShare: null,
+          localShare: {
+            stream: null,
+          },
           remoteAudio: null,
           remoteVideo: null,
           remoteShare: null,

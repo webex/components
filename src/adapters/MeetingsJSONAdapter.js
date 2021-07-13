@@ -46,7 +46,9 @@ const EMPTY_MEETING = {
     stream: null,
     permission: null,
   },
-  localShare: null,
+  localShare: {
+    stream: null,
+  },
   remoteAudio: null,
   remoteVideo: null,
   remoteShare: null,
@@ -100,7 +102,9 @@ const EVENT_MEETING_UPDATE = 'meeting:update';
  *     "localVideo": {
  *        stream: {}
  *     },
- *     "localShare": null,
+ *     "localShare": {
+ *        stream: {}
+ *     },
  *     "remoteAudio": {},
  *     "remoteVideo": {},
  *     "remoteShare": {},
@@ -116,7 +120,9 @@ const EVENT_MEETING_UPDATE = 'meeting:update';
  *     "localVideo": {
  *        stream: {}
  *     },
- *     "localShare": {},
+ *     "localShare": {
+ *        stream: {}
+ *     },
  *     "remoteAudio": {},
  *     "remoteVideo": {},
  *     "remoteShare": {},
@@ -206,7 +212,9 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
             stream: null,
             permission: null,
           },
-          localShare: null,
+          localShare: {
+            stream: null,
+          },
           remoteAudio: null,
           remoteVideo: null,
           remoteShare: null,
@@ -460,12 +468,12 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
     await this.updateMeeting(ID, async (meeting) => {
       const updates = {};
 
-      if (meeting.localShare) {
-        meeting.localShare.getTracks()[0].stop();
-        updates.localShare = null;
+      if (meeting.localShare.stream) {
+        meeting.localShare.stream.getTracks()[0].stop();
+        updates.localShare.stream = null;
       } else {
-        updates.localShare = await this.getDisplayStream();
-        updates.localShare.getVideoTracks()[0].onended = () => {
+        updates.localShare.stream = await this.getDisplayStream();
+        updates.localShare.stream.getVideoTracks()[0].onended = () => {
           this.handleLocalShare(ID);
         };
         updates.remoteShare = null;
