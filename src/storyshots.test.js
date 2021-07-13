@@ -27,6 +27,7 @@ function createNodeMock(element) {
     getBoundingClientRect: () => ({}),
     scrollIntoView: () => ({}),
     focus: () => undefined,
+    setSinkId: () => Promise.resolve(),
   };
 }
 
