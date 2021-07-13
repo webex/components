@@ -10,7 +10,9 @@ export default {
     localVideo: {
       stream: new MediaStream(),
     },
-    localShare: new MediaStream(),
+    localShare: {
+      stream: new MediaStream(),
+    },
     remoteAudio: new MediaStream(),
     remoteVideo: new MediaStream(),
     remoteShare: null,
@@ -30,7 +32,9 @@ export default {
     localVideo: {
       stream: null,
     },
-    localShare: null,
+    localShare: {
+      stream: null,
+    },
     remoteAudio: new MediaStream(),
     remoteVideo: new MediaStream(),
     remoteShare: new MediaStream(),
@@ -50,7 +54,9 @@ export default {
     localVideo: {
       stream: new MediaStream(),
     },
-    localShare: null,
+    localShare: {
+      stream: null,
+    },
     remoteAudio: null,
     remoteVideo: null,
     remoteShare: null,
@@ -70,7 +76,9 @@ export default {
     localVideo: {
       stream: new MediaStream(),
     },
-    localShare: new MediaStream(),
+    localShare: {
+      stream: new MediaStream(),
+    },
     remoteAudio: new MediaStream(),
     remoteVideo: new MediaStream(),
     remoteShare: null,
@@ -90,7 +98,9 @@ export default {
     localVideo: {
       stream: null,
     },
-    localShare: null,
+    localShare: {
+      stream: null,
+    },
     remoteAudio: new MediaStream(),
     remoteVideo: null,
     remoteShare: null,
@@ -110,7 +120,9 @@ export default {
     localVideo: {
       stream: new MediaStream(),
     },
-    localShare: null,
+    localShare: {
+      stream: null,
+    },
     remoteAudio: null,
     remoteVideo: new MediaStream(),
     remoteShare: null,
@@ -130,7 +142,9 @@ export default {
     localVideo: {
       stream: null,
     },
-    localShare: null,
+    localShare: {
+      stream: null,
+    },
     remoteAudio: null,
     remoteVideo: null,
     remoteShare: null,
@@ -150,7 +164,9 @@ export default {
     localVideo: {
       stream: null,
     },
-    localShare: null,
+    localShare: {
+      stream: null,
+    },
     remoteAudio: null,
     remoteVideo: null,
     remoteShare: null,
@@ -170,7 +186,9 @@ export default {
     localVideo: {
       stream: null,
     },
-    localShare: null,
+    localShare: {
+      stream: null,
+    },
     remoteAudio: null,
     remoteVideo: null,
     remoteShare: null,

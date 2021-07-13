@@ -40,7 +40,7 @@ export default function WebexLocalMedia({
       stream = localVideo.stream;
       break;
     case 'screen':
-      stream = localShare;
+      stream = localShare?.stream;
       break;
     default:
       break;
