@@ -10,6 +10,7 @@ import {
   useElementDimensions,
   useMeeting,
   useMembers,
+  useSpeakers,
   useStream,
 } from '../hooks';
 
@@ -30,6 +31,7 @@ export default function WebexRemoteMedia({className, meetingID, style}) {
     remoteVideo,
     remoteShare,
     error,
+    speakerID,
   } = useMeeting(meetingID);
   const members = useMembers(meetingID, 'meeting');
   const audioRef = useRef();
@@ -39,6 +41,8 @@ export default function WebexRemoteMedia({className, meetingID, style}) {
   useStream(audioRef, remoteAudio);
   useStream(videoRef, remoteVideo);
   useStream(shareRef, remoteShare);
+
+  useSpeakers(audioRef, speakerID);
 
   const [remoteMediaRef, {width}] = useElementDimensions();
 
