@@ -1,3 +1,10 @@
+## [1.80.1](https://github.com/webex/components/compare/v1.80.0...v1.80.1) (2021-07-14)
+
+
+### Bug Fixes
+
+* **WebexMeeting:** transform localAudio and localVideo into objects with a "stream" property ([44f42e6](https://github.com/webex/components/commit/44f42e616e3995e73e1d3ff1420e285c43c2977f))
+
 # [1.80.0](https://github.com/webex/components/compare/v1.79.2...v1.80.0) (2021-07-12)
 
 
