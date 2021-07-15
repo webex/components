@@ -40,6 +40,7 @@ export default class SwitchCameraControl extends MeetingControl {
         observer.next({
           ID: this.ID,
           tooltip: 'Video Devices',
+          noOptionsMessage: 'No available cameras',
           options: null,
           selected: null,
         });

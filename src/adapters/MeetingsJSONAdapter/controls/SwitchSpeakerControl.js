@@ -41,6 +41,7 @@ export default class SwitchSpeakerControl extends MeetingControl {
         observer.next({
           ID: this.ID,
           tooltip: 'Speaker Devices',
+          noOptionsMessage: 'No available speakers',
           options: null,
           selected: null,
         });

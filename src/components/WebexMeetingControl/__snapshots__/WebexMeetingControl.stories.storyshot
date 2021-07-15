@@ -183,6 +183,7 @@ exports[`Storyshots Meetings/Webex Meeting Control Dropdown 1`] = `
 Array [
   <select
     className="wxc-select wxc-meeting-control"
+    disabled={false}
     onChange={[Function]}
     value="cameraID1"
   >
