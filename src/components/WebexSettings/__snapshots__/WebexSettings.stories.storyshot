@@ -49,6 +49,7 @@ Array [
           </h2>
           <select
             className="wxc-select wxc-meeting-control"
+            disabled={false}
             onChange={[Function]}
             value="speakerID1"
           >
@@ -88,6 +89,7 @@ Array [
           </h2>
           <select
             className="wxc-select wxc-meeting-control"
+            disabled={false}
             onChange={[Function]}
             value="microphoneID1"
           >

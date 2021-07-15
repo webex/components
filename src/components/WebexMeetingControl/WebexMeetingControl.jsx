@@ -53,7 +53,7 @@ function renderButton(action, display, cssClasses, style) {
  * @returns {object} JSX of the component
  */
 function renderDropdown(action, display, cssClasses, style) {
-  const {options, selected} = display;
+  const {options, noOptionsMessage, selected} = display;
 
   return (
     <Select
@@ -61,7 +61,8 @@ function renderDropdown(action, display, cssClasses, style) {
       style={style}
       onChange={(event) => action(event.target.value)}
       value={selected || ''}
-      options={options}
+      options={options?.length === 0 ? [{value: '', label: noOptionsMessage}] : options}
+      disabled={!options?.length}
     />
   );
 }

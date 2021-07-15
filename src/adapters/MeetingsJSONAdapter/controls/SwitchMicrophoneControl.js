@@ -41,6 +41,7 @@ export default class SwitchMicrophoneControl extends MeetingControl {
         observer.next({
           ID: this.ID,
           tooltip: 'Microphone Devices',
+          noOptionsMessage: 'No available microphones',
           options: null,
           selected: null,
         });
