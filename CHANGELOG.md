@@ -1,3 +1,16 @@
+# [1.81.0](https://github.com/webex/components/compare/v1.80.1...v1.81.0) (2021-07-16)
+
+
+### Bug Fixes
+
+* **controls:** call distinctUntilChanged without a string parameter ([d6ed7a1](https://github.com/webex/components/commit/d6ed7a11d7c2ac059c1e4a10de19438829d90c33))
+
+
+### Features
+
+* **MeetingsJsonAdapter:** transform localShare into an object ([d8aa596](https://github.com/webex/components/commit/d8aa596b8fafe36cd2360a8d85041874dbd5a9e1))
+* **WebexRemoteMedia:** use selected speakers ([579fae1](https://github.com/webex/components/commit/579fae123d839ed36536f559957a3e8aa43b7e4e))
+
 ## [1.80.1](https://github.com/webex/components/compare/v1.80.0...v1.80.1) (2021-07-14)
 
 
