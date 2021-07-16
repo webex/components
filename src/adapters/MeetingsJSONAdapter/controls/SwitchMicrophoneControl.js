@@ -66,7 +66,7 @@ export default class SwitchMicrophoneControl extends MeetingControl {
     const controlFromMeeting$ = controlWithOptions$.pipe(
       concatMap((control) => this.adapter.getMeeting(meetingID).pipe(
         map((meeting) => meeting.microphoneID),
-        distinctUntilChanged('microphoneID'),
+        distinctUntilChanged(),
         map((microphoneID) => ({
           ...control,
           selected: microphoneID,

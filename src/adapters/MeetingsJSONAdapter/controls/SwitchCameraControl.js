@@ -65,7 +65,7 @@ export default class SwitchCameraControl extends MeetingControl {
     const controlFromMeeting$ = controlWithOptions$.pipe(
       concatMap((control) => this.adapter.getMeeting(meetingID).pipe(
         map((meeting) => meeting.cameraID),
-        distinctUntilChanged('cameraID'),
+        distinctUntilChanged(),
         map((cameraID) => ({
           ...control,
           selected: cameraID,
