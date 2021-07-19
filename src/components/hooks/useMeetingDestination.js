@@ -66,10 +66,23 @@ export default function useMeetingDestination(meetingDestination) {
       );
       const subscription = concat(createMeeting$, getMeeting$).subscribe(onMeeting, onError);
 
+      let beforePageUnload = () => {
+        if (lastMeeting?.ID) {
+          meetingsAdapter.leavemeeting(lastMeeting.ID);
+        }
+      };
+
+      window.addEventListener('beforeunload', beforePageUnload);
+
       cleanup = () => {
         if (lastMeeting?.ID) {
           meetingsAdapter.removeMedia(lastMeeting.ID);
           meetingsAdapter.leaveMeeting(lastMeeting.ID);
+        }
+
+        if (beforePageUnload) {
+          window.removeEventListener('beforeunload', beforePageUnload);
+          beforePageUnload = undefined;
         }
         subscription.unsubscribe();
       };
