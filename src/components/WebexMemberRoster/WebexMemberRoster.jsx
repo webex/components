@@ -56,7 +56,9 @@ export default function WebexMemberRoster({
     </>
   );
 
-  const warningExternalMembers = members.some((member) => member.orgID !== orgID) && (
+  const warningExternalMembers = members.some(
+    (member) => member.orgID !== undefined && orgID !== undefined && member.orgID !== orgID,
+  ) && (
     <div className="external-user-warning">
       <Icon color="yellow-40" name="icon-external-user_20" />
       <h5>People outside your company are included in this space</h5>
