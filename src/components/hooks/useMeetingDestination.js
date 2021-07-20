@@ -1,8 +1,7 @@
 import {useEffect, useContext, useState} from 'react';
-import {concat} from 'rxjs';
-import {last, concatMap} from 'rxjs/operators';
 
 import {AdapterContext} from './contexts';
+import {chainWith} from '../../util';
 
 const emptyMeeting = {
   title: null,
@@ -60,11 +59,9 @@ export default function useMeetingDestination(meetingDestination) {
       };
 
       const createMeeting$ = meetingsAdapter.createMeeting(meetingDestination);
-      const getMeeting$ = createMeeting$.pipe(
-        last(),
-        concatMap(({ID}) => meetingsAdapter.getMeeting(ID)),
-      );
-      const subscription = concat(createMeeting$, getMeeting$).subscribe(onMeeting, onError);
+      const subscription = createMeeting$.pipe(
+        chainWith(({ID}) => meetingsAdapter.getMeeting(ID)),
+      ).subscribe(onMeeting, onError);
 
       let beforePageUnload = () => {
         if (lastMeeting?.ID) {
