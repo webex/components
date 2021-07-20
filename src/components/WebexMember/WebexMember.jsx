@@ -41,7 +41,7 @@ export default function WebexMember({
   const organization = useOrganization(orgID);
 
   const isMuted = member && member.muted;
-  const isExternal = me.orgID !== orgID;
+  const isExternal = orgID !== undefined && me.orgID !== undefined && me.orgID !== orgID;
   const isSharing = member && member.sharing;
   const showMe = me.ID === personID && destinationType === DestinationType.MEETING;
   const isHost = member && member.host;
