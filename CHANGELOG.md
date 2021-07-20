@@ -1,3 +1,10 @@
+# [1.82.0](https://github.com/webex/components/compare/v1.81.0...v1.82.0) (2021-07-20)
+
+
+### Features
+
+* **dropdown-controls:** disable control when there are no media devices available ([157de99](https://github.com/webex/components/commit/157de99d69ba09d168072f80b905494708cb88c2))
+
 # [1.81.0](https://github.com/webex/components/compare/v1.80.1...v1.81.0) (2021-07-16)
 
 
