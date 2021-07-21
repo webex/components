@@ -77,7 +77,7 @@ export default {
     lastName: 'Rossi',
     nickname: 'Maria',
     avatar: './images/maria.png',
-    orgID: 'org1',
+    orgID: 'org3',
     status: null,
   },
 };

@@ -124,6 +124,11 @@ Array [
              (Guest)
           </span>
         </div>
+        <div
+          className="organization"
+        >
+          acme.com
+        </div>
       </div>
       <i
         aria-label={null}

@@ -143,6 +143,11 @@ Array [
           >
             Maria Rossi
           </div>
+          <div
+            className="organization"
+          >
+            acme.com
+          </div>
         </div>
       </div>
     </div>
