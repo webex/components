@@ -1,3 +1,10 @@
+# [1.83.0](https://github.com/webex/components/compare/v1.82.0...v1.83.0) (2021-07-21)
+
+
+### Features
+
+* **UseMeetingDestination:** leave meeting when browser tab is closed ([b769481](https://github.com/webex/components/commit/b769481fdc0b5d4ad046d98d2ddb3d69665c0001))
+
 # [1.82.0](https://github.com/webex/components/compare/v1.81.0...v1.82.0) (2021-07-20)
 
 
