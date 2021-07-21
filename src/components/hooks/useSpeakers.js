@@ -8,13 +8,15 @@ import {useEffect} from 'react';
  * @param {string} speakerID  The ID of the speaker in use
  */
 export default function useSpeakers(elementRef, speakerID) {
-  useEffect(() => {
-    const element = elementRef.current;
+  const element = elementRef.current;
 
-    if (element?.setSinkId) {
-      element.setSinkId(speakerID);
-    } else {
-      console.error('useSpeakers: setSinkId() not supported on this element', element);
+  useEffect(() => {
+    if (element) {
+      if (element.setSinkId) {
+        element.setSinkId(speakerID);
+      } else {
+        console.error('useSpeakers: setSinkId() not supported on this element', element);
+      }
     }
-  }, [elementRef, speakerID]);
+  }, [element, speakerID]);
 }
