@@ -33,7 +33,7 @@ export default function WebexMember({
   personID,
   style,
 }) {
-  const {displayName, orgID} = usePerson(personID);
+  const {displayName, orgID, emails} = usePerson(personID);
   const me = useMe();
   const members = useMembers(destinationID, destinationType);
   const member = members
@@ -52,6 +52,7 @@ export default function WebexMember({
     isHost && 'Host',
     isSharing && 'Presenter',
   ].filter((role) => role);
+  const emailDomain = emails?.[0]?.split('@')[1] || <i>Unknown organization</i>;
 
   const cssClasses = webexComponentClasses('member', className);
 
@@ -64,7 +65,7 @@ export default function WebexMember({
           {isGuest && <span className="guest"> (Guest)</span>}
         </div>
         {roles.length > 0 && <div className="roles">{roles.join(', ')}</div>}
-        {isExternal && <div className="organization">{organization.name}</div>}
+        {isExternal && <div className="organization">{organization.name || emailDomain}</div>}
       </div>
       {isSharing && <Icon name="icon-content-share_16" className="sharing" />}
       {isMuted && <Icon name="icon-microphone-muted_16" className="muted" />}
