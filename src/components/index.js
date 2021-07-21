@@ -5,6 +5,7 @@ export {default as WebexDataProvider} from './WebexDataProvider/WebexDataProvide
 export {default as WebexInMeeting} from './WebexInMeeting/WebexInMeeting';
 export {default as WebexInterstitialMeeting} from './WebexInterstitialMeeting/WebexInterstitialMeeting';
 export {default as WebexLocalMedia} from './WebexLocalMedia/WebexLocalMedia';
+export {default as WebexMediaAccess} from './WebexMediaAccess/WebexMediaAccess';
 export {default as WebexMeeting} from './WebexMeeting/WebexMeeting';
 export {default as WebexMeetingControl} from './WebexMeetingControl/WebexMeetingControl';
 export {default as WebexMeetingControlBar} from './WebexMeetingControlBar/WebexMeetingControlBar';
