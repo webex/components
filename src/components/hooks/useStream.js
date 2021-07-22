@@ -11,10 +11,12 @@ export default function useStream(elementRef, stream) {
   const element = elementRef.current;
 
   useEffect(() => {
-    if (element && stream instanceof MediaStream) {
-      element.srcObject = stream;
-    } else if (stream) {
-      console.error('useStream: invalid media stream received', stream);
+    if (element) {
+      if (stream instanceof MediaStream) {
+        element.srcObject = stream;
+      } else if (stream) {
+        console.error('useStream: invalid media stream received', stream);
+      }
     }
   }, [element, stream]);
 }
