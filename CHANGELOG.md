@@ -1,3 +1,10 @@
+## [1.84.1](https://github.com/webex/components/compare/v1.84.0...v1.84.1) (2021-07-22)
+
+
+### Bug Fixes
+
+* **WebexMember:** check for people outside organization only for defined organization ids ([d06e763](https://github.com/webex/components/commit/d06e7638286af13255e6b99771ff97743645e10f))
+
 # [1.84.0](https://github.com/webex/components/compare/v1.83.1...v1.84.0) (2021-07-22)
 
 
