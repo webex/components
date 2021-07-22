@@ -1,3 +1,13 @@
+## [1.83.1](https://github.com/webex/components/compare/v1.83.0...v1.83.1) (2021-07-22)
+
+
+### Bug Fixes
+
+* **UseMeetingDestination:** chain dependent observables createMeeting and getMeeting ([667d739](https://github.com/webex/components/commit/667d739f7294da65498035dfcdf0b6b4b09851e7))
+* **UseSpeakers:** make hook ignore uninitialized react ref ([2a11d20](https://github.com/webex/components/commit/2a11d209c31bf07681c9933ae44c90317dc5ec7c))
+* **UseStream:** make hook ignore uninitialized react ref ([b56254f](https://github.com/webex/components/commit/b56254f1f57f908a18801970e4cea36676b26bf8))
+* **UseStream:** update the hook to ignore uninitialized react ref ([baa009d](https://github.com/webex/components/commit/baa009df9021add62c31aa80d10b49fa3490f4ad))
+
 # [1.83.0](https://github.com/webex/components/compare/v1.82.0...v1.83.0) (2021-07-21)
 
 
