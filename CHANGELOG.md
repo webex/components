@@ -1,3 +1,10 @@
+# [1.84.0](https://github.com/webex/components/compare/v1.83.1...v1.84.0) (2021-07-22)
+
+
+### Features
+
+* **WebexComponents:** export WebexMediaAccess component ([e8660c7](https://github.com/webex/components/commit/e8660c7eebd25c1ee30b9638c924686199763a60))
+
 ## [1.83.1](https://github.com/webex/components/compare/v1.83.0...v1.83.1) (2021-07-22)
 
 
