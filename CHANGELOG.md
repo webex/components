@@ -1,3 +1,10 @@
+# [1.85.0](https://github.com/webex/components/compare/v1.84.1...v1.85.0) (2021-07-23)
+
+
+### Features
+
+* **WebexMember:** display member's email domain if organization is not accessible ([8e7eeb8](https://github.com/webex/components/commit/8e7eeb88d990f3df127f82bc603036650d224cf4))
+
 ## [1.84.1](https://github.com/webex/components/compare/v1.84.0...v1.84.1) (2021-07-22)
 
 
