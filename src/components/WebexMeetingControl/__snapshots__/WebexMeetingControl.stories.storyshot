@@ -132,7 +132,6 @@ Array [
     aria-pressed={null}
     className="md-button md-button--52 md-button--green wxc-meeting-control"
     data-md-event-key="md-button-0"
-    data-md-keyboard-key="join-meeting"
     disabled={true}
     id="md-button-0"
     onClick={[Function]}
@@ -153,7 +152,11 @@ Array [
         }
       }
     >
-      Join meeting
+      <span
+        className="button-text"
+      >
+        Join meeting
+      </span>
     </span>
   </button>,
   <video
@@ -291,7 +294,6 @@ Array [
     aria-pressed={null}
     className="md-button md-button--52 md-button--green wxc-meeting-control"
     data-md-event-key="md-button-0"
-    data-md-keyboard-key="join-meeting"
     disabled={false}
     id="md-button-0"
     onClick={[Function]}
@@ -312,7 +314,11 @@ Array [
         }
       }
     >
-      Join meeting
+      <span
+        className="button-text"
+      >
+        Join meeting
+      </span>
     </span>
   </button>,
   <video

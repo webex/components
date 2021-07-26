@@ -38,7 +38,6 @@ Array [
       aria-pressed={null}
       className="md-button md-button--52 md-button--green wxc-meeting-control"
       data-md-event-key="md-button-0"
-      data-md-keyboard-key="proceed-without-camera"
       disabled={false}
       id="md-button-0"
       onClick={[Function]}
@@ -59,7 +58,11 @@ Array [
           }
         }
       >
-        Proceed without camera
+        <span
+          className="button-text"
+        >
+          Proceed without camera
+        </span>
       </span>
     </button>
   </div>,
@@ -124,7 +127,6 @@ Array [
       aria-pressed={null}
       className="md-button md-button--52 md-button--green wxc-meeting-control"
       data-md-event-key="md-button-0"
-      data-md-keyboard-key="proceed-without-audio"
       disabled={false}
       id="md-button-0"
       onClick={[Function]}
@@ -145,7 +147,11 @@ Array [
           }
         }
       >
-        Proceed without audio
+        <span
+          className="button-text"
+        >
+          Proceed without audio
+        </span>
       </span>
     </button>
   </div>,

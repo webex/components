@@ -14,33 +14,29 @@ import Select from '../WebexSettings/Select';
  * @param {object} display  Display data of the control
  * @param {string} cssClasses  Custom CSS class to apply
  * @param {object} style  Custom style to apply
+ * @param {boolean} showText  Flag that indicates whether to display text on control buttons
  * @returns {object} JSX of the component
  */
-function renderButton(action, display, cssClasses, style) {
+function renderButton(action, display, cssClasses, style, showText) {
   const {icon, text, tooltip} = display;
   const isDisabled = display.state === MeetingControlState.DISABLED;
   const iconColor = display.state === MeetingControlState.ACTIVE ? 'red' : '';
 
-  return icon
-    ? (
-      <Button
-        circle
-        color={iconColor}
-        size={56}
-        ariaLabel={tooltip}
-        onClick={action}
-        disabled={isDisabled}
-        className={cssClasses}
-        style={style}
-      >
-        <Icon name={icon} size={28} />
-      </Button>
-    )
-    : (
-      <Button color="green" size={52} ariaLabel={tooltip} onClick={action} disabled={isDisabled} className={cssClasses} style={style}>
-        {text}
-      </Button>
-    );
+  return (
+    <Button
+      circle={icon && (!showText || !text)}
+      color={icon ? iconColor : 'green'}
+      size={!icon || (showText && text) ? 52 : 56}
+      ariaLabel={tooltip}
+      onClick={action}
+      disabled={isDisabled}
+      className={cssClasses}
+      style={style}
+    >
+      {icon && <Icon name={icon} size={28} />}
+      {(!icon || (showText && text)) && <span className="button-text">{text}</span>}
+    </Button>
+  );
 }
 
 /**
@@ -74,6 +70,7 @@ function renderDropdown(action, display, cssClasses, style) {
  * @param {object} props  Data passed to the component
  * @param {string} props.className  Custom CSS class to apply
  * @param {string} props.meetingID  ID of the meeting
+ * @param {boolean} props.showText  Flag that indicates whether to display text on control buttons
  * @param {object} props.style  Custom style to apply
  * @param {string} props.type  Name of the control as defined in adapter
  * @returns {object} JSX of the component
@@ -81,6 +78,7 @@ function renderDropdown(action, display, cssClasses, style) {
 export default function WebexMeetingControl({
   className,
   meetingID,
+  showText,
   style,
   type,
 }) {
@@ -94,7 +92,7 @@ export default function WebexMeetingControl({
   } else if ('options' in display) {
     output = renderDropdown(action, display, cssClasses, style);
   } else {
-    output = renderButton(action, display, cssClasses, style);
+    output = renderButton(action, display, cssClasses, style, showText);
   }
 
   return output;
