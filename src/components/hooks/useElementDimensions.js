@@ -8,7 +8,7 @@ import {ResizeObserver as Polyfill} from '@juggle/resize-observer';
  * @returns {Array} Element reference and dimensions in pixels
  */
 export default function useElementDimensions() {
-  const elementRef = useRef({});
+  const elementRef = useRef();
   const [height, setHeight] = useState(0);
   const [width, setWidth] = useState(0);
 

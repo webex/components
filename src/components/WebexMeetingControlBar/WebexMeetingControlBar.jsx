@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {MeetingState} from '@webex/component-adapter-interfaces';
 
-import {useMeeting} from '../hooks';
+import {useElementDimensions, useMeeting} from '../hooks';
 import webexComponentClasses from '../helpers';
 import WebexMeetingControl from '../WebexMeetingControl/WebexMeetingControl';
 
@@ -24,15 +24,17 @@ export default function WebexMeetingControlBar({
   style,
 }) {
   const {state} = useMeeting(meetingID);
+  const [ref, {width}] = useElementDimensions();
+  const showText = width >= 495;
   const {JOINED} = MeetingState;
   const isActive = state === JOINED;
   const cssClasses = webexComponentClasses('meeting-control-bar', className);
   const meetingControls = controls(isActive).map(
-    (key) => <WebexMeetingControl key={key} type={key} meetingID={meetingID} />,
+    (key) => <WebexMeetingControl key={key} type={key} meetingID={meetingID} showText={showText} />,
   );
 
   return (
-    <div className={cssClasses} style={style}>{meetingControls}</div>
+    <div ref={ref} className={cssClasses} style={style}>{meetingControls}</div>
   );
 }
 
