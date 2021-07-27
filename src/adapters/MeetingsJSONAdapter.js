@@ -466,17 +466,21 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    */
   async handleLocalShare(ID) {
     await this.updateMeeting(ID, async (meeting) => {
-      const updates = {};
+      let updates = {};
 
       if (meeting.localShare.stream) {
         meeting.localShare.stream.getTracks()[0].stop();
-        updates.localShare.stream = null;
+        updates = {localShare: {stream: null}};
       } else {
-        updates.localShare.stream = await this.getDisplayStream();
-        updates.localShare.stream.getVideoTracks()[0].onended = () => {
+        const stream = await this.getDisplayStream();
+
+        stream.getVideoTracks()[0].onended = () => {
           this.handleLocalShare(ID);
         };
-        updates.remoteShare = null;
+        updates = {
+          remoteShare: null,
+          localShare: {stream},
+        };
       }
 
       return updates;
