@@ -5,6 +5,9 @@ import {chainWith} from '../../util';
 
 const emptyMeeting = {
   title: null,
+  localShare: {
+    stream: null,
+  },
   localAudio: {
     stream: null,
   },
