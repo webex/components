@@ -1,3 +1,10 @@
+## [1.85.1](https://github.com/webex/components/compare/v1.85.0...v1.85.1) (2021-07-27)
+
+
+### Bug Fixes
+
+* **MeetingsJsonAdapter:** update the handleLocalShare function with the correct object ([ea7156b](https://github.com/webex/components/commit/ea7156b8fce4db6648fda420db0f897a89eb8c0a))
+
 # [1.85.0](https://github.com/webex/components/compare/v1.84.1...v1.85.0) (2021-07-23)
 
 
