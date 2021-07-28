@@ -1,3 +1,10 @@
+# [1.86.0](https://github.com/webex/components/compare/v1.85.1...v1.86.0) (2021-07-28)
+
+
+### Features
+
+* **UseMeetingDestination:** remove removeMedia call from useMeetingDestination ([544024d](https://github.com/webex/components/commit/544024d9d808b7808f48fccb9fda31cd4ce12612))
+
 ## [1.85.1](https://github.com/webex/components/compare/v1.85.0...v1.85.1) (2021-07-27)
 
 
