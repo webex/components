@@ -76,7 +76,6 @@ export default function useMeetingDestination(meetingDestination) {
 
       cleanup = () => {
         if (lastMeeting?.ID) {
-          meetingsAdapter.removeMedia(lastMeeting.ID);
           meetingsAdapter.leaveMeeting(lastMeeting.ID);
         }
 
