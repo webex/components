@@ -1,3 +1,10 @@
+# [1.87.0](https://github.com/webex/components/compare/v1.86.0...v1.87.0) (2021-08-03)
+
+
+### Features
+
+* **WebexMeeting:** theme infrastructure ([f6db2c6](https://github.com/webex/components/commit/f6db2c650ecc17913aa1c7b7911287fe8dad2463))
+
 # [1.86.0](https://github.com/webex/components/compare/v1.85.1...v1.86.0) (2021-07-28)
 
 
