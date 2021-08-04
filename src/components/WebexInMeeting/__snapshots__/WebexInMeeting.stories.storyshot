@@ -25,7 +25,7 @@ Array [
       />
     </div>
     <div
-      className="wxc-local-media local-media-in-meeting no-media"
+      className="wxc-local-media local-media-in-meeting wxc-local-media-no-media"
     >
       <div
         className="md-avatar md-avatar--medium wxc-avatar"
@@ -89,7 +89,7 @@ Array [
       />
     </div>
     <div
-      className="wxc-local-media local-media-in-meeting no-media"
+      className="wxc-local-media local-media-in-meeting wxc-local-media-no-media"
     >
       <div
         className="md-avatar md-avatar--medium wxc-avatar"
@@ -271,7 +271,7 @@ Array [
       />
     </div>
     <div
-      className="wxc-local-media local-media-in-meeting no-media"
+      className="wxc-local-media local-media-in-meeting wxc-local-media-no-media"
     >
       <div
         className="md-avatar md-avatar--medium wxc-avatar"

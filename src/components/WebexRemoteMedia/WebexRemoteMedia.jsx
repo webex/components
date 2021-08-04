@@ -53,6 +53,8 @@ export default function WebexRemoteMedia({className, meetingID, style}) {
     tablet: width >= TABLET && width < DESKTOP,
     desktop: width >= DESKTOP && width < DESKTOP_LARGE,
     'desktop-xl': width >= DESKTOP_LARGE,
+  },
+  {
     'remote-video-n-share': remoteVideo && remoteShare,
   });
 
