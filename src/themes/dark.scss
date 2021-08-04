@@ -3,7 +3,10 @@
   --wxc-text-color: #{$wxc-white-alpha-95};
   --wxc-meeting-border: 1px solid #{$wxc-white-alpha-30};
   --wxc-meeting-box-shadow: none;
-  
+
+  --wxc-banner-background: #{$wxc-gradation-dark-transparent};
+  --wxc-banner-text-color: #{$wxc-white-alpha-95};
+
   --wxc-icon--color: #{$wxc-white-alpha-100};
   --wxc-icon--active-color: #{$wxc-green-50};
   --wxc-icon--muted-color: #{$wxc-red-50};
@@ -17,7 +20,6 @@
 }
 
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-theme-dark {
-  .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-member-roster .title {
-    display: block;
-  }
+  .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-banner.my-preview { display: flex; }
+  .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-member-roster .title { display: block; }
 }

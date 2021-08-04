@@ -1,0 +1,8 @@
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-banner {
+  justify-content: center;
+  background: var(--wxc-banner-background);
+  color: var(--wxc-banner-text-color);
+  font-family: $brand-font-regular;
+  font-size: 1rem;
+  padding: 0.75rem 0 5.25rem 0;
+}

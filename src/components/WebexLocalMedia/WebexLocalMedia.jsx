@@ -2,6 +2,7 @@ import React, {useRef} from 'react';
 import PropTypes from 'prop-types';
 import {Spinner} from '@momentum-ui/react';
 
+import Banner from '../generic/Banner/Banner';
 import WebexAvatar from '../WebexAvatar/WebexAvatar';
 import webexComponentClasses from '../helpers';
 import {PHONE_LARGE} from '../breakpoints';
@@ -52,15 +53,23 @@ export default function WebexLocalMedia({
     desktop: width >= PHONE_LARGE,
     'no-media': !stream,
   });
+  let content;
 
-  const disabledVideo = ID ? <WebexAvatar personID={ID} displayStatus={false} /> : <Spinner />;
+  if (stream) {
+    content = (
+      <>
+        {mediaType === 'video' && <Banner className="my-preview">My preview</Banner>}
+        {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+        <video ref={ref} playsInline autoPlay />
+      </>
+    );
+  } else {
+    content = ID ? <WebexAvatar personID={ID} displayStatus={false} /> : <Spinner />;
+  }
 
   return (
     <div ref={mediaRef} className={cssClasses} style={style}>
-      {
-        /* eslint-disable-next-line jsx-a11y/media-has-caption */
-        stream ? <video ref={ref} playsInline autoPlay /> : disabledVideo
-      }
+      {content}
     </div>
   );
 }

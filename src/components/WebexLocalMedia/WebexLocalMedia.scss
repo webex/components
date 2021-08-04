@@ -1,5 +1,6 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-local-media {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
 
@@ -9,6 +10,13 @@
   min-width: 7.5rem; // Smallest width for local media is the widest an avatar can get through transforms
 
   background: black;
+
+  .my-preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
 
   video {
     height: 100%;

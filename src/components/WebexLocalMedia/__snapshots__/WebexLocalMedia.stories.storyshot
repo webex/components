@@ -91,6 +91,11 @@ Array [
   <div
     className="wxc-local-media"
   >
+    <div
+      className="wxc-banner my-preview"
+    >
+      My preview
+    </div>
     <video
       autoPlay={true}
       playsInline={true}
