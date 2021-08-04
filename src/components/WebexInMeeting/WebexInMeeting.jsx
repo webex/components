@@ -25,6 +25,8 @@ export default function WebexInMeeting({className, meetingID, style}) {
     tablet: width >= TABLET && width < DESKTOP,
     desktop: width >= DESKTOP && width < DESKTOP_LARGE,
     'desktop-xl': width >= DESKTOP_LARGE,
+  },
+  {
     'remote-sharing': remoteShare !== null,
   });
 

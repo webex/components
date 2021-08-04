@@ -45,7 +45,7 @@ Array [
       </h2>
     </div>
     <div
-      className="wxc-local-media interstitial-media no-media"
+      className="wxc-local-media interstitial-media wxc-local-media-no-media"
     >
       <div
         className="md-avatar md-avatar--medium wxc-avatar"
