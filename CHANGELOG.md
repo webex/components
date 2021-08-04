@@ -1,3 +1,10 @@
+## [1.87.1](https://github.com/webex/components/compare/v1.87.0...v1.87.1) (2021-08-04)
+
+
+### Bug Fixes
+
+* **WebexComponentClasses:** add support for prefixed optional css classes ([553f54b](https://github.com/webex/components/commit/553f54b880eb48489ca70571c6c526323f2d1f6d))
+
 # [1.87.0](https://github.com/webex/components/compare/v1.86.0...v1.87.0) (2021-08-03)
 
 
