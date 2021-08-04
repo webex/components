@@ -1,20 +1,16 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-media {
+  min-height: $WEBEX_MEETING_MIN_HEIGHT;
+  min-width: $WEBEX_MEETING_MIN_WIDTH;
+  background: white;
+
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  height: 100%;
-  width: 100%;
-  min-height: $WEBEX_MEETING_MIN_HEIGHT;
-  min-width: $WEBEX_MEETING_MIN_WIDTH;
-
-  background: white;
-
   .md-alert-banner {
     position: absolute;
     top: 0;
-
     width: 100%;
   }
 

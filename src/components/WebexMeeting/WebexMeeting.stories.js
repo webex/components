@@ -1,35 +1,12 @@
 import React from 'react';
 import WebexMeeting from './WebexMeeting';
-import WebexMeetingControlBar from '../WebexMeetingControlBar/WebexMeetingControlBar';
-
-const containerStyle = {
-  position: 'relative',
-  width: '100%',
-  height: '100%',
-  minHeight: '25rem',
-};
-
-const controlBarStyle = {
-  position: 'absolute',
-  bottom: '1rem',
-  left: 0,
-  right: 0,
-};
 
 export default {
   title: 'Meetings/Webex Meeting',
   component: WebexMeeting,
-  decorators: [(Story, context) => (
-    <div style={containerStyle}>
-      <Story />
-      <div style={controlBarStyle}>
-        <WebexMeetingControlBar meetingID={context.args.meetingID} />
-      </div>
-    </div>
-  )],
 };
 
-const Template = (args) => <WebexMeeting {...args} />;
+const Template = (args) => <WebexMeeting {...args} style={{height: '100%', width: '100%'}} />;
 
 export const Interstitial = Template.bind({});
 Interstitial.args = {

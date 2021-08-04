@@ -1,11 +1,13 @@
 import React, {useContext} from 'react';
 import PropTypes from 'prop-types';
 import {Spinner} from '@momentum-ui/react';
-import {MeetingState} from '@webex/component-adapter-interfaces';
+import {DestinationType, MeetingState} from '@webex/component-adapter-interfaces';
 
 import Modal from '../generic/Modal/Modal';
 import WebexInMeeting from '../WebexInMeeting/WebexInMeeting';
 import WebexInterstitialMeeting from '../WebexInterstitialMeeting/WebexInterstitialMeeting';
+import WebexMeetingControlBar from '../WebexMeetingControlBar/WebexMeetingControlBar';
+import WebexMemberRoster from '../WebexMemberRoster/WebexMemberRoster';
 import WebexSettings from '../WebexSettings/WebexSettings';
 import webexComponentClasses from '../helpers';
 import {useMeeting} from '../hooks';
@@ -20,9 +22,13 @@ import {AdapterContext} from '../hooks/contexts';
  * @param {object} props.style  Custom style to apply
  * @returns {object} JSX of the component
  */
-
 export default function WebexMeeting({className, meetingID, style}) {
-  const {ID, state, showSettings} = useMeeting(meetingID);
+  const {
+    ID,
+    state,
+    showRoster,
+    showSettings,
+  } = useMeeting(meetingID);
   const {JOINED, LEFT} = MeetingState;
   const isActive = state === JOINED;
   const adapter = useContext(AdapterContext);
@@ -33,15 +39,29 @@ export default function WebexMeeting({className, meetingID, style}) {
 
   // A meeting with a falsy state means that the meeting has not been created
   if (!state) {
-    meetingDisplay = <Spinner />;
+    meetingDisplay = <div className="centered"><Spinner /></div>;
   } else if (state === LEFT) {
-    meetingDisplay = "You've successfully left the meeting";
+    meetingDisplay = <div className="centered">You&apos;ve successfully left the meeting</div>;
   } else {
     meetingDisplay = (
       <>
-        {isActive
-          ? <WebexInMeeting meetingID={ID} className="inner-meeting" />
-          : <WebexInterstitialMeeting meetingID={ID} className="inner-meeting" />}
+        <div className="body">
+          {isActive
+            ? <WebexInMeeting meetingID={ID} className="inner-meeting" />
+            : <WebexInterstitialMeeting meetingID={ID} className="inner-meeting" />}
+          {showRoster && (
+            <WebexMemberRoster destinationID={ID} destinationType={DestinationType.MEETING} className="member-roster" />
+          )}
+        </div>
+        <WebexMeetingControlBar meetingID={ID} className="control-bar" />
+        {showSettings && (
+          <Modal
+            onClose={() => adapter.meetingsAdapter.toggleSettings(ID)}
+            title="Settings"
+          >
+            <WebexSettings meetingID={ID} />
+          </Modal>
+        )}
       </>
     );
   }
@@ -49,14 +69,6 @@ export default function WebexMeeting({className, meetingID, style}) {
   return (
     <div className={cssClasses} style={style}>
       {meetingDisplay}
-      {showSettings && (
-        <Modal
-          onClose={() => adapter.meetingsAdapter.toggleSettings(ID)}
-          title="Settings"
-        >
-          <WebexSettings meetingID={ID} />
-        </Modal>
-      )}
     </div>
   );
 }

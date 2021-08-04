@@ -4,9 +4,10 @@ $shadow-spread: -0.125rem;
 $shadow-color: rgba(0, 0, 0, 0.2);
 
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-in-meeting {
-  position: relative;
-  width: 100%;
   background: black;
+
+  position: relative;
+  display: flex;
 
   &.remote-sharing {
     .local-media-in-meeting {
@@ -23,6 +24,10 @@ $shadow-color: rgba(0, 0, 0, 0.2);
     color: $md-white;
     padding-top: 0.425rem;
     padding-bottom: 0.425rem;
+  }
+
+  .remote-media-in-meeting {
+    flex: 1;
   }
 
   .local-media-in-meeting {
