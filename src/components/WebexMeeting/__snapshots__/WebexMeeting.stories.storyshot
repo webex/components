@@ -16,7 +16,7 @@ Array [
       className="wxc-meeting"
     >
       <div
-        className="wxc-in-meeting"
+        className="wxc-in-meeting inner-meeting"
       >
         <div
           className="wxc-remote-media remote-media-in-meeting"
@@ -249,7 +249,7 @@ Array [
       className="wxc-meeting"
     >
       <div
-        className="wxc-interstitial-meeting"
+        className="wxc-interstitial-meeting inner-meeting"
       >
         <div
           className="wxc-meeting-info interstitial-meeting-info"
@@ -758,7 +758,7 @@ Array [
       className="wxc-meeting"
     >
       <div
-        className="wxc-in-meeting"
+        className="wxc-in-meeting inner-meeting"
       >
         <div
           className="wxc-remote-media remote-media-in-meeting"

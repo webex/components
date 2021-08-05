@@ -40,8 +40,8 @@ export default function WebexMeeting({className, meetingID, style}) {
     meetingDisplay = (
       <>
         {isActive
-          ? <WebexInMeeting meetingID={ID} />
-          : <WebexInterstitialMeeting meetingID={ID} />}
+          ? <WebexInMeeting meetingID={ID} className="inner-meeting" />
+          : <WebexInterstitialMeeting meetingID={ID} className="inner-meeting" />}
       </>
     );
   }
