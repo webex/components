@@ -1,19 +1,16 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-info {
   display: flex;
-  height: 100%;
-  width: 100%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  text-align: center;
+  color: var(--wxc-meeting-text-color);
+  font-family: $brand-font-regular;
 
   h2 {
-    font-size: 28px;
-    font-family: $brand-font-extra-light;
-    color: $md-gray-100;
+    font-size: 1.5rem;
   }
 
   h3 {
-    font-family: $brand-font-extra-light;
+    font-size: 1rem;
   }
 }
