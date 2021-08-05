@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Banner from '../generic/Banner/Banner';
 import WebexLocalMedia from '../WebexLocalMedia/WebexLocalMedia';
 import WebexRemoteMedia from '../WebexRemoteMedia/WebexRemoteMedia';
 import webexComponentClasses from '../helpers';
@@ -34,7 +35,7 @@ export default function WebexInMeeting({className, meetingID, style}) {
     <div ref={meetingRef} className={cssClasses} style={style}>
       <WebexRemoteMedia className="remote-media-in-meeting" meetingID={meetingID} />
       <WebexLocalMedia className="local-media-in-meeting" meetingID={meetingID} mediaType={localMediaType} />
-      {localShare?.stream && <div className="share-notice">You&apos;re sharing your screen</div>}
+      {localShare?.stream && <Banner className="share-banner">You&apos;re sharing your screen</Banner>}
     </div>
   );
 }

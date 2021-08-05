@@ -15,15 +15,11 @@ $shadow-color: rgba(0, 0, 0, 0.2);
     }
   }
 
-  .share-notice {
+  .share-banner {
     position: absolute;
     top: 0;
-    width: 100%;
-    text-align: center;
-    background-color: rgba($md-gray-70, .5);
-    color: $md-white;
-    padding-top: 0.425rem;
-    padding-bottom: 0.425rem;
+    left: 0;
+    right: 0;
   }
 
   .remote-media-in-meeting {
