@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Button, Icon} from '@momentum-ui/react';
+import {Button} from '@momentum-ui/react';
 import {MeetingControlState} from '@webex/component-adapter-interfaces';
 
 import webexComponentClasses from '../helpers';
 import {useMeetingControl} from '../hooks';
 import Select from '../WebexSettings/Select';
+import Icon from '../generic/Icon/Icon';
 
 /**
  * renderButton renders a control button
