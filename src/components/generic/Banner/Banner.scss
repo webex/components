@@ -1,4 +1,5 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-banner {
+  display: flex;
   justify-content: center;
   background: var(--wxc-banner-background);
   color: var(--wxc-banner-text-color);

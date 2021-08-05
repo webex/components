@@ -81,7 +81,7 @@ Array [
           />
         </div>
         <div
-          className="share-notice"
+          className="wxc-banner share-banner"
         >
           You're sharing your screen
         </div>
@@ -811,7 +811,7 @@ Array [
           />
         </div>
         <div
-          className="share-notice"
+          className="wxc-banner share-banner"
         >
           You're sharing your screen
         </div>
