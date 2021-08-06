@@ -13,6 +13,11 @@
   --wxc-person-status--in-a-meeting-color: #{$wxc-yellow-30};
   --wxc-person-status--away-color: #{$wxc-gray-40};
 
+  --wxc-badge-background: #{$wxc-gray-100};
+  --wxc-badge-border: 0.06rem solid #{$wxc-white-alpha-30};
+  --wxc-badge-text-color: #{$wxc-white-alpha-95};
+  --wxc-badge-box-shadow: 0 .5rem 1rem #{$wxc-black-alpha-16}, 0 0 .06rem #{$wxc-black-alpha-14};
+
   --wxc-banner-background: #{$wxc-gradation-dark-transparent};
   --wxc-banner-text-color: #{$wxc-white-alpha-95};
 

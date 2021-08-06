@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/media-has-caption */
 import React, {useRef} from 'react';
 import PropTypes from 'prop-types';
-import {Badge} from '@momentum-ui/react';
+import Badge from '../generic/Badge/Badge';
 import Icon from '../generic/Icon/Icon';
 import Spinner from '../generic/Spinner/Spinner';
 
@@ -88,9 +88,9 @@ export default function WebexRemoteMedia({className, meetingID, style}) {
     );
   } else {
     remoteDisplay = (
-      <Badge rounded>
-        <Spinner size={16} />
-        <div>Connecting</div>
+      <Badge>
+        <Spinner size={14} className="connecting-spinner" />
+        <span>Connecting</span>
       </Badge>
     );
   }
