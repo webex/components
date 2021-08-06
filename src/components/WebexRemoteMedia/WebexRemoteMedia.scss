@@ -23,19 +23,14 @@
     margin-bottom: 1.234rem;
   }
 
-  .md-badge {
-    margin: auto;
-    padding: 0.4rem;
-
-    div {
-      margin-left: 0.4rem;
-    }
-  }
-
   video {
     height: 100%;
     width: 100%;
     object-fit: cover;
+  }
+
+  .connecting-spinner {
+    margin-right: .6875rem;
   }
 
   &.remote-video-n-share {

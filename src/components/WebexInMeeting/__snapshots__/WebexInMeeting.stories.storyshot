@@ -208,23 +208,24 @@ Array [
       <div
         className="wxc-remote-media remote-media-in-meeting"
       >
-        <span
-          className="md-badge md-badge--round"
+        <div
+          className="wxc-badge"
+          style={Object {}}
         >
           <div
-            className="wxc-spinner"
-            size={16}
+            className="wxc-spinner connecting-spinner"
+            size={14}
             style={
               Object {
-                "height": 16,
-                "width": 16,
+                "height": 14,
+                "width": 14,
               }
             }
           />
-          <div>
+          <span>
             Connecting
-          </div>
-        </span>
+          </span>
+        </div>
       </div>
       <div
         className="wxc-local-media local-media-in-meeting"

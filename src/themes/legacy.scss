@@ -8,6 +8,11 @@
   --wxc-video-background: transparent;
   --wxc-meeting-border: none;
   --wxc-box-shadow: none;
+  
+  --wxc-badge-background: #949494;
+  --wxc-badge-border: 0;
+  --wxc-badge-text-color: #fff;
+  --wxc-badge-box-shadow: none;
 
   --wxc-banner-background: #{rgba($wxc-gray-70, .5)};
   --wxc-banner-text-color: #{$wxc-white-alpha-100};
