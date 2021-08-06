@@ -1,7 +1,10 @@
 :root {
   --wxc-meeting-background: transparent;
-  --wxc-meeting-text-color: #000000;
+  --wxc-text-color: #000000;
 }
 
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-member-roster .title {
+  display: none;
+}
 .wxc-old-icon { display: block; }
 .wxc-icon { display: none; }

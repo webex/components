@@ -16,4 +16,11 @@
       margin-left: 0.625rem;
     }
   }
+
+  .title {
+    font-family: $brand-font-bold;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--wxc-text-color);
+  }
 }
