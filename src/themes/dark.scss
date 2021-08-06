@@ -1,6 +1,6 @@
-.wxc-theme-dark {
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-theme-dark {
   --wxc-meeting-background: linear-gradient(180deg, #1A1A1A 0%, #0F0F0F 100%);
-  --wxc-meeting-text-color: #ffffff;
+  --wxc-text-color: rgba(255, 255, 255, 0.95);
   // Icons
   --wxc-icon--audio-microphone--active-color: #27A17A;
   --wxc-icon--audio-microphone--color: #fff;
@@ -14,4 +14,10 @@
 
   .wxc-old-icon { display: none; }
   .wxc-icon { display: block; }
+}
+
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-theme-dark {
+  .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-member-roster .title {
+    display: block;
+  }
 }

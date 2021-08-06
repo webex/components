@@ -65,8 +65,17 @@ export default function WebexMemberRoster({
     </div>
   );
 
+  const title = (
+    <div className="title">
+      Participants (
+      {members ? members.length : <i>loading...</i>}
+      )
+    </div>
+  );
+
   return (
     <div className={cssClasses} style={style}>
+      {title}
       {warningExternalMembers}
       {destinationType !== DestinationType.MEETING
         ? renderMembers(members)

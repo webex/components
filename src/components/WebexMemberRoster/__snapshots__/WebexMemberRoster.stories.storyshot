@@ -13,6 +13,13 @@ Array [
       className="wxc-member-roster"
     >
       <div
+        className="title"
+      >
+        Participants (
+        3
+        )
+      </div>
+      <div
         className="external-user-warning"
       >
         <i
@@ -187,6 +194,13 @@ Array [
     <div
       className="wxc-member-roster"
     >
+      <div
+        className="title"
+      >
+        Participants (
+        3
+        )
+      </div>
       <h4
         className="section-title"
       >
@@ -387,6 +401,13 @@ Array [
     <div
       className="wxc-member-roster"
     >
+      <div
+        className="title"
+      >
+        Participants (
+        4
+        )
+      </div>
       <div
         className="wxc-member"
       >
