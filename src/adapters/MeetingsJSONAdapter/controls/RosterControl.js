@@ -32,14 +32,12 @@ export default class RosterControl extends MeetingControl {
       icon: 'participant-list_28',
       tooltip: 'Hide participants panel',
       state: MeetingControlState.ACTIVE,
-      text: 'Participants',
     };
     const inactive = {
       ID: this.ID,
       icon: 'participant-list_28',
       tooltip: 'Show participants panel',
       state: MeetingControlState.INACTIVE,
-      text: 'Participants',
     };
 
     return this.adapter.getMeeting(meetingID).pipe(
