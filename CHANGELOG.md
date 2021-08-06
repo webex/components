@@ -1,3 +1,10 @@
+# [1.88.0](https://github.com/webex/components/compare/v1.87.1...v1.88.0) (2021-08-06)
+
+
+### Features
+
+* **WebexMeetingControl:** display text on control buttons ([7058d5b](https://github.com/webex/components/commit/7058d5b8acb26c9c0a2912868291aa360e3d113a))
+
 ## [1.87.1](https://github.com/webex/components/compare/v1.87.0...v1.87.1) (2021-08-04)
 
 
