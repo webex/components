@@ -501,7 +501,6 @@ describe('Meetings JSON Adapter', () => {
             icon: 'participant-list_28',
             tooltip: 'Show participants panel',
             state: 'inactive',
-            text: 'Participants',
           });
           done();
         });
@@ -518,7 +517,6 @@ describe('Meetings JSON Adapter', () => {
             icon: 'participant-list_28',
             tooltip: 'Hide participants panel',
             state: 'active',
-            text: 'Participants',
           });
           done();
         });
