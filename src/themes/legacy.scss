@@ -1,4 +1,16 @@
 :root {
   --wxc-meeting-background: transparent;
   --wxc-meeting-text-color: #000000;
+  
+  --wxc-meeting-control-button-background-disabled: rgba(0, 0, 0, 0.2);
+
+  --wxc-meeting-control-join-button-background: #00ab50;
+  --wxc-meeting-control-join-button-background-hover: #00853c;
+  --wxc-meeting-control-join-button-background-active: #03612c;
+  --wxc-meeting-control-join-button-color: #fff;
+
+  --wxc-meeting-control-leave-button-background: #f7644a;
+  --wxc-meeting-control-leave-button-background-hover: #d4371c;
+  --wxc-meeting-control-leave-button-background-active: #a12512;
+  --wxc-meeting-control-leave-button-color: #fff;
 }

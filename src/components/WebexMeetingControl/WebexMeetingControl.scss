@@ -1,5 +1,49 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-control {
-  .button-text:not(:first-child) {
-    margin-left: 6px;
-  }
+    .button-text:not(:first-child) {
+        margin-left: 6px;
+    }
+
+    &.md-button--green {
+        height: auto;
+        padding: .75rem 1.125rem;
+        border-radius: 1.5rem;
+
+        background: var(--wxc-meeting-control-join-button-background);
+        color: var(--wxc-meeting-control-join-button-color);
+        font-size: 1rem;
+        line-height: 1.5rem;
+
+        &:hover {
+            background: var(--wxc-meeting-control-join-button-background-hover);
+        }
+
+        &:disabled {
+            background: var(--wxc-meeting-control-button-background-disabled);
+        }
+
+        &:active {
+            background: var(--wxc-meeting-control-join-button-background-active);
+        }
+    }
+
+    &.md-button.md-button--red {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 1.8125rem;
+
+        background: var(--wxc-meeting-control-leave-button-background);
+        color: var(--wxc-meeting-control-leave-button-color);
+
+        &:hover {
+            background: var(--wxc-meeting-control-leave-button-background-hover);
+        }
+
+        &:disabled {
+            background: var(--wxc-meeting-control-button-background-disabled);
+        }
+
+        &:active {
+            background: var(--wxc-meeting-control-leave-button-background-active);
+        }
+    }
 }

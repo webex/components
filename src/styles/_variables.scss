@@ -7,6 +7,7 @@ $WEBEX_MEETING_MIN_WIDTH: 17rem; // Standard small phone width is 20rem, leaving
 // Momentum UI Colors
 // See https://momentum.design/tokens/color
 $md-white: #FFFFFF !default;
+$md-white-alpha-95: rgba(255, 255, 255, 0.95) !default;
 
 $md-gray-05: #F7F7F7 !default;
 $md-gray-10: #EDEDED !default;
@@ -22,7 +23,13 @@ $md-gray-95: #1C1C1C !default;
 $md-gray-100: #121212 !default;
 $md-yellow-40: #FC9D03 !default;
 
-$md-red-60: #D4371C !default; 
+$md-red-60: #DB1F2E !default; 
+$md-red-70: #AB0A15 !default; 
+$md-red-80: #780D13 !default; 
+
+$md-green-60: #1d805f !default; 
+$md-green-70: #185e46 !default; 
+$md-green-80: #134231 !default; 
 
 $md-black-100: #000000;
 
