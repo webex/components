@@ -1,3 +1,10 @@
+# [1.89.0](https://github.com/webex/components/compare/v1.88.1...v1.89.0) (2021-08-09)
+
+
+### Features
+
+* **WebexLocalMedia:** move small media window in bottom right corner ([99359ad](https://github.com/webex/components/commit/99359ad54a13dc5dadbc5843bc00c6aabc22808e))
+
 ## [1.88.1](https://github.com/webex/components/compare/v1.88.0...v1.88.1) (2021-08-09)
 
 
