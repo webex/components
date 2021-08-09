@@ -1,3 +1,10 @@
+## [1.88.1](https://github.com/webex/components/compare/v1.88.0...v1.88.1) (2021-08-09)
+
+
+### Bug Fixes
+
+* **MeetingControls:** remove text from roster and settings controls ([3c4cb81](https://github.com/webex/components/commit/3c4cb812aeee41c58a1d944ad84cf9d173f7e589))
+
 # [1.88.0](https://github.com/webex/components/compare/v1.87.1...v1.88.0) (2021-08-06)
 
 
