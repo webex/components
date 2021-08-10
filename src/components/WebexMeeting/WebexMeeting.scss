@@ -2,6 +2,8 @@
   min-height: $WEBEX_MEETING_MIN_HEIGHT;
   min-width: $WEBEX_MEETING_MIN_WIDTH;
   background: var(--wxc-meeting-background);
+  border: var(--wxc-meeting-border);
+  box-shadow: var(--wxc-meeting-box-shadow);
 
   display: flex;
   flex-direction: column;
