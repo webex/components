@@ -174,7 +174,7 @@ Array [
     alt="Join meeting"
     aria-label="Join meeting"
     aria-pressed={null}
-    className="md-button md-button--52 md-button--green wxc-meeting-control"
+    className="md-button md-button--52 wxc-meeting-control"
     data-md-event-key="md-button-0"
     disabled={true}
     id="md-button-0"

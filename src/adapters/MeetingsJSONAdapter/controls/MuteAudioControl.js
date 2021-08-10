@@ -30,6 +30,7 @@ export default class MuteAudioControl extends MeetingControl {
   display(meetingID) {
     const unmuted = {
       ID: this.ID,
+      type: 'TOGGLE',
       icon: 'microphone-muted_28',
       tooltip: 'Mute',
       state: MeetingControlState.INACTIVE,
@@ -37,6 +38,7 @@ export default class MuteAudioControl extends MeetingControl {
     };
     const muted = {
       ID: this.ID,
+      type: 'TOGGLE',
       icon: 'microphone-muted_28',
       tooltip: 'Unmute',
       state: MeetingControlState.ACTIVE,

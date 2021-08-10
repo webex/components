@@ -29,12 +29,14 @@ export default class ShareControl extends MeetingControl {
   display(meetingID) {
     const inactive = {
       ID: this.ID,
+      type: 'TOGGLE',
       icon: 'share-screen-presence-stroke_26',
       tooltip: 'Start Sharing',
       state: MeetingControlState.INACTIVE,
     };
     const active = {
       ID: this.ID,
+      type: 'TOGGLE',
       icon: 'share-screen-presence-stroke_26',
       tooltip: 'Stop Sharing',
       state: MeetingControlState.ACTIVE,

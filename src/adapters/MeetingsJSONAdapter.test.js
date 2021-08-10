@@ -302,7 +302,6 @@ describe('Meetings JSON Adapter', () => {
           ID: 'join-meeting',
           text: 'Join meeting',
           tooltip: 'Join meeting',
-          state: 'active',
         });
         done();
       });
@@ -321,7 +320,6 @@ describe('Meetings JSON Adapter', () => {
           ID: 'leave-meeting',
           icon: 'cancel_28',
           tooltip: 'Leave',
-          state: 'active',
         });
         done();
       });

@@ -19,14 +19,19 @@ import Icon from '../generic/Icon/Icon';
  * @returns {object} JSX of the component
  */
 function renderButton(action, display, cssClasses, style, showText) {
-  const {icon, text, tooltip} = display;
+  const {
+    icon,
+    type,
+    text,
+    tooltip,
+  } = display;
   const isDisabled = display.state === MeetingControlState.DISABLED;
-  const iconColor = display.state === MeetingControlState.ACTIVE ? 'red' : '';
+  const iconColor = type === 'CANCEL' || display.state === MeetingControlState.ACTIVE ? 'red' : '';
 
   return (
     <Button
       circle={icon && (!showText || !text)}
-      color={icon ? iconColor : 'green'}
+      color={type === 'JOIN' ? 'green' : iconColor}
       size={!icon || (showText && text) ? 52 : 56}
       ariaLabel={tooltip}
       onClick={action}
@@ -90,7 +95,7 @@ export default function WebexMeetingControl({
 
   if (!display || Object.keys(display).length === 0) {
     output = '';
-  } else if ('options' in display) {
+  } else if (display.type === 'MULTISELECT') {
     output = renderDropdown(action, display, cssClasses, style);
   } else {
     output = renderButton(action, display, cssClasses, style, showText);

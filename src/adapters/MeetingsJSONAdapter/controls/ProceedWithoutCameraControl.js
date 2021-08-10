@@ -1,5 +1,4 @@
 import {Observable} from 'rxjs';
-import {MeetingControlState} from '@webex/component-adapter-interfaces';
 import MeetingControl from './MeetingControl';
 /**
  * Display options of a meeting control.
@@ -28,9 +27,9 @@ export default class ProceedWithoutCameraControl extends MeetingControl {
     return Observable.create((observer) => {
       observer.next({
         ID: this.ID,
+        type: 'JOIN',
         text: 'Proceed without camera',
         tooltip: 'Proceed without camera',
-        state: MeetingControlState.ACTIVE,
       });
 
       observer.complete();
