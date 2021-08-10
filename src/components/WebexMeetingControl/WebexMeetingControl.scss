@@ -1,5 +1,7 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-control {
   .button-text {
+    position: relative;
+    top: 2px;
     white-space: nowrap;
   }
 

@@ -33,10 +33,24 @@ Array [
       when your browser asks to let Webex use your camera for this video call
     </p>
     <button
+      className="wxc-button wxc-meeting-control wxc-button--join"
+      disabled={false}
+      onClick={[Function]}
+      style={Object {}}
+      title="Proceed without camera"
+      type="button"
+    >
+      <span
+        className="button-text"
+      >
+        Proceed without camera
+      </span>
+    </button>
+    <button
       alt="Proceed without camera"
       aria-label="Proceed without camera"
       aria-pressed={null}
-      className="md-button md-button--52 md-button--green wxc-meeting-control"
+      className="md-button md-button--52 md-button--green wxc-meeting-control wxc-old-button"
       data-md-event-key="md-button-0"
       disabled={false}
       id="md-button-0"
@@ -122,10 +136,24 @@ Array [
       when your browser asks to let Webex use your microphone for this video call
     </p>
     <button
+      className="wxc-button wxc-meeting-control wxc-button--join"
+      disabled={false}
+      onClick={[Function]}
+      style={Object {}}
+      title="Proceed without audio"
+      type="button"
+    >
+      <span
+        className="button-text"
+      >
+        Proceed without audio
+      </span>
+    </button>
+    <button
       alt="Proceed without audio"
       aria-label="Proceed without audio"
       aria-pressed={null}
-      className="md-button md-button--52 md-button--green wxc-meeting-control"
+      className="md-button md-button--52 md-button--green wxc-meeting-control wxc-old-button"
       data-md-event-key="md-button-0"
       disabled={false}
       id="md-button-0"

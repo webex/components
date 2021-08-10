@@ -12,7 +12,12 @@
   --wxc-video-background: transparent;
 }
 
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-member-roster .title { display: none; }
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-banner.my-preview { display: none; }
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-old-icon { display: block; }
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-icon { display: none; }
+.wxc-member-roster .title { display: none; }
+.wxc-banner.my-preview { display: none; }
+.wxc-old-icon { display: block; }
+.wxc-icon { display: none; }
+.wxc-member-roster .title { display: none; }
+.wxc-old-button { display: block; }
+.wxc-button { display: none; }
+.wxc-old-icon { display: block; }
+.wxc-icon { display: none; }
