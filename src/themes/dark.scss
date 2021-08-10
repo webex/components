@@ -18,11 +18,55 @@
   --wxc-modal-border: 1px solid #{$wxc-black-alpha-11};
   --wxc-modal-box-shadow: 0 1.5rem 3rem #{$wxc-black-alpha-20}, 0 0 0.0625rem #{$wxc-black-alpha-12};
 
-  .wxc-old-icon { display: none; }
-  .wxc-icon { display: block; }
+  --wxc-button--cancel--normal--bg: #{$wxc-red-60};
+  --wxc-button--cancel--normal--border: none;
+  --wxc-button--cancel--normal--color: #{$wxc-white-alpha-95};
+
+  --wxc-button--cancel--active--bg: #{$wxc-red-80};
+
+  --wxc-button--cancel--hover--bg: #{$wxc-red-70};
+
+  --wxc-button--cancel--disabled--bg: #{$wxc-white-alpha-20};
+  --wxc-button--cancel--disabled--color: #{$wxc-white-alpha-40};
+
+  --wxc-button--default--normal--bg: transparent;
+  --wxc-button--default--normal--border: 1px solid #{$wxc-white-alpha-30};
+  --wxc-button--default--normal--color: #{$wxc-white-alpha-95};
+
+  --wxc-button--default--active--bg: #{$wxc-white-alpha-20};
+
+  --wxc-button--default--hover--bg: #{$wxc-white-alpha-07};
+
+  --wxc-button--default--disabled--bg: transparent;
+  --wxc-button--default--disabled--border: 1px solid #{$wxc-white-alpha-20};
+  --wxc-button--default--disabled--color: #{$wxc-white-alpha-40};
+
+  --wxc-button--ghost--normal--border: none;
+  --wxc-button--ghost--normal--color: #{$md-white};
+
+  --wxc-button--ghost--hover--background: #{$wxc-white-alpha-07};
+
+  --wxc-button--ghost--active--background: #{$wxc-white-alpha-20};
+
+  --wxc-button--ghost--disabled--background: #{$wxc-white-alpha-20};
+  --wxc-button--ghost--disabled--color: #{$wxc-white-alpha-40};
+
+  --wxc-button--join--normal--bg: #{$wxc-green-60};
+  --wxc-button--join--normal--color: #{$wxc-white-alpha-95};
+
+  --wxc-button--join--active--bg: #{$wxc-green-80};
+
+  --wxc-button--join--hover--bg: #{$wxc-green-70};
+
+  --wxc-button--join--disabled--bg: #{$wxc-white-alpha-20};
+  --wxc-button--join--disabled--color: #{$wxc-white-alpha-40};
 }
 
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-theme-dark {
-  .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-banner.my-preview { display: flex; }
-  .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-member-roster .title { display: block; }
+  .wxc-banner.my-preview { display: flex; }
+  .wxc-member-roster .title { display: block; }
+  .wxc-old-button { display: none; }
+  .wxc-button { display: flex; }
+  .wxc-old-icon { display: none; }
+  .wxc-icon { display: block; }
 }

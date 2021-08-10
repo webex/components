@@ -17,6 +17,7 @@ export {default as WebexSettings} from './WebexSettings/WebexSettings';
 export {default as useMeetingDestination} from './hooks/useMeetingDestination';
 export {default as withMeeting} from './hoc/withMeeting';
 export {default as withAdapter} from './hoc/withAdapter';
+export {default as Button} from './generic/Button/Button';
 export {default as Modal} from './generic/Modal/Modal';
 
 global.testRendererAct = (fn) => fn();

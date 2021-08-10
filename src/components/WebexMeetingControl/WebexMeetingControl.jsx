@@ -1,12 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Button} from '@momentum-ui/react';
+import {Button as MomentumButton} from '@momentum-ui/react';
 import {MeetingControlState} from '@webex/component-adapter-interfaces';
 
 import webexComponentClasses from '../helpers';
 import {useMeetingControl} from '../hooks';
+import Button from '../generic/Button/Button';
 import Select from '../WebexSettings/Select';
 import Icon from '../generic/Icon/Icon';
+
+const controlTypeToButtonType = {
+  JOIN: 'join',
+  CANCEL: 'cancel',
+  CLOSE: 'ghost',
+  TOGGLE: 'default',
+};
 
 /**
  * renderButton renders a control button
@@ -29,19 +37,25 @@ function renderButton(action, display, cssClasses, style, showText) {
   const iconColor = type === 'CANCEL' || display.state === MeetingControlState.ACTIVE ? 'red' : '';
 
   return (
-    <Button
-      circle={icon && (!showText || !text)}
-      color={type === 'JOIN' ? 'green' : iconColor}
-      size={!icon || (showText && text) ? 52 : 56}
-      ariaLabel={tooltip}
-      onClick={action}
-      disabled={isDisabled}
-      className={cssClasses}
-      style={style}
-    >
-      {icon && <Icon name={icon} size={28} />}
-      {(!icon || (showText && text)) && <span className="button-text">{text}</span>}
-    </Button>
+    <>
+      <Button className={cssClasses} type={controlTypeToButtonType[type] || 'default'} isDisabled={isDisabled} onClick={action} title={tooltip}>
+        {icon && <Icon name={icon} size={24} />}
+        <span className="button-text">{text}</span>
+      </Button>
+      <MomentumButton
+        circle={icon && (!showText || !text)}
+        color={type === 'JOIN' ? 'green' : iconColor}
+        size={!icon || (showText && text) ? 52 : 56}
+        ariaLabel={tooltip}
+        onClick={action}
+        disabled={isDisabled}
+        className={`${cssClasses} wxc-old-button`}
+        style={style}
+      >
+        {icon && <Icon name={icon} size={28} />}
+        {(!icon || (showText && text)) && <span className="button-text">{text}</span>}
+      </MomentumButton>
+    </>
   );
 }
 

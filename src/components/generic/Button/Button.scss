@@ -1,0 +1,90 @@
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-button {
+  border-radius: 1000px;
+  font-family: $brand-font-regular;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 0.75rem;
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-button--join {
+  background: var(--wxc-button--join--normal--bg);
+  border: none;
+  color: var(--wxc-button--join--normal--color);
+
+  &:hover {
+    background: var(--wxc-button--join--hover--bg);
+  }
+
+  &:active {
+    background: var(--wxc-button--join--active--bg);
+  }
+
+  &:disabled {
+    background: var(--wxc-button--join--disabled--bg);
+    color: var(--wxc-button--join--disabled--color);
+  }
+}
+
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-button--default {
+  align-items: flex-end;
+  background: var(--wxc-button--default--normal--bg);
+  border: var(--wxc-button--default--normal--border);
+  color: var(--wxc-button--default--normal--color);
+
+  &:hover {
+    background: var(--wxc-button--default--hover--bg);
+  }
+
+  &:active {
+    background: var(--wxc-button--default--active--bg);
+  }
+
+  &:disabled {
+    background: var(--wxc-button--default--disabled--bg);
+    border: var(--wxc-button--default--disabled--border);
+    color: var(--wxc-button--default--disabled--color);
+  }
+}
+
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-button--cancel {
+  background: var(--wxc-button--cancel--normal--bg);
+  border: var(--wxc-button--cancel--normal--border);
+  color: var(--wxc-button--cancel--normal--color);
+
+  &:hover {
+    background: var(--wxc-button--cancel--hover--bg);
+  }
+
+  &:active {
+    background: var(--wxc-button--cancel--active--bg);
+  }
+
+  &:disabled {
+    background: var(--wxc-button--cancel--disabled--bg);
+    color: var(--wxc-button--cancel--disabled--color);
+  }
+}
+
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-button--ghost {
+  background: transparent;
+  border: var(--wxc-button--ghost--normal--border);
+  border-radius: 0.875rem;
+  color: var(--wxc-button--ghost--normal--color);
+
+  &:hover {
+    background: var(--wxc-button--ghost--hover--background);
+  }
+
+  &:active {
+    background: var(--wxc-button--ghost--active--background);
+  }
+
+  &:disabled {
+    background: var(--wxc-button--ghost--disabled--background);
+    color: var(--wxc-button--ghost--disabled--color);
+  }
+}
