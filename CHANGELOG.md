@@ -1,3 +1,10 @@
+# [1.90.0](https://github.com/webex/components/compare/v1.89.0...v1.90.0) (2021-08-10)
+
+
+### Features
+
+* **WebexMeetingInfo:** theme meeting info component ([f819517](https://github.com/webex/components/commit/f8195175f784bc32aad573ea1f01987a14492129))
+
 # [1.89.0](https://github.com/webex/components/compare/v1.88.1...v1.89.0) (2021-08-09)
 
 
