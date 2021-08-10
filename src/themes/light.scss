@@ -1,6 +1,8 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-theme-light {
   --wxc-meeting-background: #{$wxc-gradation-webex-light-primary};
   --wxc-text-color: #{$wxc-black-alpha-100};
+  --wxc-meeting-border: 1px solid #{$wxc-black-alpha-20};
+  --wxc-meeting-box-shadow: 0px 24px 48px #{$wxc-black-alpha-20}, 0px 0px 1px #{$wxc-black-alpha-12};
   
   --wxc-icon--color: #{$wxc-black-alpha-100};
   --wxc-icon--active-color: #{$wxc-green-50};

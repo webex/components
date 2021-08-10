@@ -1,6 +1,8 @@
 :root {
   --wxc-meeting-background: transparent;
   --wxc-text-color: #{$wxc-black-alpha-100};
+  --wxc-meeting-border: none;
+  --wxc-meeting-box-shadow: none;
 }
 
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-member-roster .title {
