@@ -1,5 +1,4 @@
 import {Observable} from 'rxjs';
-import {MeetingControlState} from '@webex/component-adapter-interfaces';
 import MeetingControl from './MeetingControl';
 
 /**
@@ -30,9 +29,9 @@ export default class JoinControl extends MeetingControl {
     return Observable.create((observer) => {
       observer.next({
         ID: this.ID,
+        type: 'JOIN',
         text: 'Join meeting',
         tooltip: 'Join meeting',
-        state: MeetingControlState.ACTIVE,
       });
 
       observer.complete();

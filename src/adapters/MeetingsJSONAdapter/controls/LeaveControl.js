@@ -1,5 +1,4 @@
 import {Observable} from 'rxjs';
-import {MeetingControlState} from '@webex/component-adapter-interfaces';
 import MeetingControl from './MeetingControl';
 
 /**
@@ -30,9 +29,9 @@ export default class LeaveControl extends MeetingControl {
     return Observable.create((observer) => {
       observer.next({
         ID: this.ID,
+        type: 'CANCEL',
         icon: 'cancel_28',
         tooltip: 'Leave',
-        state: MeetingControlState.ACTIVE,
       });
 
       observer.complete();
