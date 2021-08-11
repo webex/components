@@ -1,3 +1,10 @@
+# [1.92.0](https://github.com/webex/components/compare/v1.91.0...v1.92.0) (2021-08-11)
+
+
+### Features
+
+* **WebexMeetingControl:** icons for control buttons ([2178f78](https://github.com/webex/components/commit/2178f78d6ddbaac4f7f6332f7f0fc8c3c4b01dc7))
+
 # [1.91.0](https://github.com/webex/components/compare/v1.90.0...v1.91.0) (2021-08-11)
 
 
