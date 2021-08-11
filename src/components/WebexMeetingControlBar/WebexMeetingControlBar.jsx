@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import {MeetingState} from '@webex/component-adapter-interfaces';
 
@@ -25,16 +25,36 @@ export default function WebexMeetingControlBar({
 }) {
   const {state} = useMeeting(meetingID);
   const [ref, {width}] = useElementDimensions();
-  const showText = width >= 495;
+  const [controlsRef, {width: controlsWidth}] = useElementDimensions();
+  const [showText, setShowText] = useState(true);
+  const [prevWidth, setPrevWidth] = useState();
+
   const {JOINED} = MeetingState;
   const isActive = state === JOINED;
   const cssClasses = webexComponentClasses('meeting-control-bar', className);
+
+  // hide text when controls width is bigger than container width and text is shown
+  if (width < controlsWidth && showText) {
+    setShowText(false);
+  }
+
+  // show text when controls width is smaller than container width and text is shown
+  useEffect(() => {
+    if (prevWidth < width && !showText) {
+      setShowText(true);
+    }
+
+    setPrevWidth(width);
+  }, [width, prevWidth, showText]);
+
   const meetingControls = controls(isActive).map(
     (key) => <WebexMeetingControl key={key} type={key} meetingID={meetingID} showText={showText} />,
   );
 
   return (
-    <div ref={ref} className={cssClasses} style={style}>{meetingControls}</div>
+    <div ref={ref} className={cssClasses} style={style}>
+      <div ref={controlsRef} className="controls">{meetingControls}</div>
+    </div>
   );
 }
 
