@@ -1,4 +1,8 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-control {
+  .button-text {
+    white-space: nowrap;
+  }
+
   .button-text:not(:first-child) {
     margin-left: 6px;
   }
