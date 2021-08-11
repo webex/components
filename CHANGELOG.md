@@ -1,3 +1,10 @@
+# [1.91.0](https://github.com/webex/components/compare/v1.90.0...v1.91.0) (2021-08-11)
+
+
+### Features
+
+* **WebexMeetingControlsBar:** show/hide buttons text depending on controls width ([f97dec8](https://github.com/webex/components/commit/f97dec81abdafda3cd3bcdfc6218f92d36be67db))
+
 # [1.90.0](https://github.com/webex/components/compare/v1.89.0...v1.90.0) (2021-08-10)
 
 
