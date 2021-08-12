@@ -1,3 +1,10 @@
+# [1.93.0](https://github.com/webex/components/compare/v1.92.0...v1.93.0) (2021-08-12)
+
+
+### Features
+
+* **Icon:** add roster icon ([338a2e8](https://github.com/webex/components/commit/338a2e8b822117d32b4109598baecb00259eac3e))
+
 # [1.92.0](https://github.com/webex/components/compare/v1.91.0...v1.92.0) (2021-08-11)
 
 
