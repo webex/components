@@ -9,6 +9,7 @@
 
   --wxc-modal-background: #{$wxc-white-alpha-100};
   --wxc-modal-border: 1px solid #{$wxc-black-alpha-11};
+  --wxc-video-background: transparent;
 }
 
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-member-roster .title { display: none; }

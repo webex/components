@@ -7,3 +7,4 @@ export {default as ShareScreenIcon} from './ShareScreenIcon';
 export {default as CancelIcon} from './CancelIcon';
 export {default as ParticipantListIcon} from './ParticipantListIcon';
 export {default as ExternalUserIcon} from './ExternalUserIcon';
+export {default as RemoteMediaErrorIcon} from './RemoteMediaErrorIcon';
