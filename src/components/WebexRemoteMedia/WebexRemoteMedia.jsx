@@ -1,7 +1,8 @@
 /* eslint-disable jsx-a11y/media-has-caption */
 import React, {useRef} from 'react';
 import PropTypes from 'prop-types';
-import {Badge, Spinner, AlertBanner} from '@momentum-ui/react';
+import {Badge, Spinner} from '@momentum-ui/react';
+import Icon from '../generic/Icon/Icon';
 
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import webexComponentClasses from '../helpers';
@@ -62,9 +63,11 @@ export default function WebexRemoteMedia({className, meetingID, style}) {
 
   if (error) {
     remoteDisplay = (
-      <AlertBanner show type="warning">
-        Having trouble joining the meeting? Please check your connection.
-      </AlertBanner>
+      <div className="media-error">
+        <Icon name="error" className="media-error-icon" />
+        <div>Having trouble joining the meeting?</div>
+        <div>Please check your connection.</div>
+      </div>
     );
   } else if (hasMedia && hasOtherMembers) {
     remoteDisplay = (

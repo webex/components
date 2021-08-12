@@ -6,10 +6,13 @@
 
   --wxc-banner-background: #{$wxc-gradation-light-transparent};
   --wxc-banner-text-color: #{$wxc-black-alpha-95};
+  --wxc-video-background: #{$md-white};
 
   --wxc-icon--color: #{$wxc-black-alpha-100};
   --wxc-icon--active-color: #{$wxc-green-50};
   --wxc-icon--muted-color: #{$wxc-red-60};
+  --wxc-icon--error--gradient-start-color: #{$wxc-pink-50};
+  --wxc-icon--error--gradient-stop-color: #{$wxc-red-60};
 
   --wxc-modal-background: #{$wxc-white-alpha-100};
   --wxc-modal-border: 1px solid #{$wxc-black-alpha-11};

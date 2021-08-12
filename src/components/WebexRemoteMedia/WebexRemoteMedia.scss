@@ -1,17 +1,26 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-media {
   min-height: $WEBEX_MEETING_MIN_HEIGHT;
   min-width: $WEBEX_MEETING_MIN_WIDTH;
-  background: white;
+  background: var(--wxc-video-background);
 
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  .md-alert-banner {
-    position: absolute;
-    top: 0;
-    width: 100%;
+  .media-error {
+    font-family: $brand-font-bold;
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+    color: var(--wxc-text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .media-error-icon {
+    margin-bottom: 1.234rem;
   }
 
   .md-badge {
