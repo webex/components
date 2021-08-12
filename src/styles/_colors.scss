@@ -1,0 +1,248 @@
+$wxc-gray-05: #F7F7F7;
+$wxc-gray-10: #EDEDED;
+$wxc-gray-20: #DEDEDE;
+$wxc-gray-30: #C9C9C9;
+$wxc-gray-40: #ADADAD;
+$wxc-gray-50: #8F8F8F;
+$wxc-gray-60: #707070;
+$wxc-gray-70: #545454;
+$wxc-gray-80: #3B3B3B;
+$wxc-gray-90: #262626;
+$wxc-gray-95: #1A1A1A;
+$wxc-gray-100: #0F0F0F;
+
+$wxc-blue-05: #EDF8FF;
+$wxc-blue-10: #DBF0FF;
+$wxc-blue-20: #BFE3FF;
+$wxc-blue-30: #96D0FF;
+$wxc-blue-40: #64B4FA;
+$wxc-blue-50: #3492EB;
+$wxc-blue-60: #1170CF;
+$wxc-blue-70: #0353A8;
+$wxc-blue-80: #063A75;
+$wxc-blue-90: #0A274A;
+$wxc-blue-95: #091A30;
+$wxc-blue-100: #07101C;
+
+$wxc-green-05: #EDF7F5;
+$wxc-green-10: #CEF5EB;
+$wxc-green-20: #9FEDD8;
+$wxc-green-30: #68DEBD;
+$wxc-green-40: #3CC29A;
+$wxc-green-50: #27A17A;
+$wxc-green-60: #1D805F;
+$wxc-green-70: #185E46;
+$wxc-green-80: #134231;
+$wxc-green-90: #0E2B20;
+$wxc-green-95: #0A1C15;
+$wxc-green-100: #07120D;
+
+$wxc-red-05: #FFF5F6;
+$wxc-red-10: #FFE8EA;
+$wxc-red-20: #FFD4DA;
+$wxc-red-30: #FFB8C1;
+$wxc-red-40: #FC8B98;
+$wxc-red-50: #F55868;
+$wxc-red-60: #DB1F2E;
+$wxc-red-70: #AB0A15;
+$wxc-red-80: #780D13;
+$wxc-red-90: #4F0E10;
+$wxc-red-95: #330D0E;
+$wxc-red-100: #1F0A0A;
+
+$wxc-yellow-05: #FFF6E3;
+$wxc-yellow-10: #FFEBC2;
+$wxc-yellow-20: #FFDA94;
+$wxc-yellow-30: #FFBE4F;
+$wxc-yellow-40: #F2990A;
+$wxc-yellow-50: #CF7900;
+$wxc-yellow-60: #A65E00;
+$wxc-yellow-70: #7D4705;
+$wxc-yellow-80: #57330A;
+$wxc-yellow-90: #36220C;
+$wxc-yellow-95: #24180B;
+$wxc-yellow-100: #140E08;
+
+$wxc-white-alpha-00: rgba(255, 255, 255, 0);
+$wxc-white-alpha-05: rgba(255, 255, 255, 0.05);
+$wxc-white-alpha-07: rgba(255, 255, 255, 0.07);
+$wxc-white-alpha-11: rgba(255, 255, 255, 0.11);
+$wxc-white-alpha-20: rgba(255, 255, 255, 0.2);
+$wxc-white-alpha-30: rgba(255, 255, 255, 0.3);
+$wxc-white-alpha-40: rgba(255, 255, 255, 0.4);
+$wxc-white-alpha-50: rgba(255, 255, 255, 0.5);
+$wxc-white-alpha-60: rgba(255, 255, 255, 0.6);
+$wxc-white-alpha-70: rgba(255, 255, 255, 0.7);
+$wxc-white-alpha-80: rgba(255, 255, 255, 0.8);
+$wxc-white-alpha-90: rgba(255, 255, 255, 0.9);
+$wxc-white-alpha-95: rgba(255, 255, 255, 0.95);
+$wxc-white-alpha-100: rgba(255, 255, 255, 1);
+
+$wxc-black-alpha-00: rgba(0, 0, 0, 0);
+$wxc-black-alpha-04: rgba(0, 0, 0, 0.04);
+$wxc-black-alpha-07: rgba(0, 0, 0, 0.07);
+$wxc-black-alpha-11: rgba(0, 0, 0, 0.11);
+$wxc-black-alpha-20: rgba(0, 0, 0, 0.2);
+$wxc-black-alpha-30: rgba(0, 0, 0, 0.3);
+$wxc-black-alpha-40: rgba(0, 0, 0, 0.4);
+$wxc-black-alpha-50: rgba(0, 0, 0, 0.5);
+$wxc-black-alpha-60: rgba(0, 0, 0, 0.6);
+$wxc-black-alpha-70: rgba(0, 0, 0, 0.7);
+$wxc-black-alpha-80: rgba(0, 0, 0, 0.8);
+$wxc-black-alpha-90: rgba(0, 0, 0, 0.9);
+$wxc-black-alpha-95: rgba(0, 0, 0, 0.95);
+$wxc-black-alpha-100: rgba(0, 0, 0, 1);
+
+$wxc-orange-10: #FAF4EB;
+$wxc-orange-20: #FCE4C7;
+$wxc-orange-30: #FFCA99;
+$wxc-orange-40: #FF9D52;
+$wxc-orange-50: #F26B1D;
+$wxc-orange-60: #C74F0E;
+$wxc-orange-70: #914017;
+$wxc-orange-80: #59311E;
+$wxc-orange-90: #33221B;
+$wxc-orange-100: #211916;
+
+$wxc-gold-10: #F7F6DC;
+$wxc-gold-20: #F5EAA2;
+$wxc-gold-30: #EBD460;
+$wxc-gold-40: #D6B220;
+$wxc-gold-50: #BA8C00;
+$wxc-gold-60: #996E00;
+$wxc-gold-70: #735107;
+$wxc-gold-80: #4D370C;
+$wxc-gold-90: #30240D;
+$wxc-gold-100: #21190B;
+
+$wxc-olive-10: #F3F5E4;
+$wxc-olive-20: #E7EDB7;
+$wxc-olive-30: #D3DB7B;
+$wxc-olive-40: #B4BA43;
+$wxc-olive-50: #999923;
+$wxc-olive-60: #7D7A18;
+$wxc-olive-70: #5C5813;
+$wxc-olive-80: #403D11;
+$wxc-olive-90: #29260D;
+$wxc-olive-100: #1C1A0A;
+
+$wxc-lime-10: #F3F7E9;
+$wxc-lime-20: #DDF2AE;
+$wxc-lime-30: #BCE36F;
+$wxc-lime-40: #93C437;
+$wxc-lime-50: #73A321;
+$wxc-lime-60: #588219;
+$wxc-lime-70: #416116;
+$wxc-lime-80: #2D4214;
+$wxc-lime-90: #1E2B10;
+$wxc-lime-100: #141C0C;
+
+$wxc-mint-10: #E9F7F3;
+$wxc-mint-20: #BAF5E7;
+$wxc-mint-30: #74E8D1;
+$wxc-mint-40: #30C9B0;
+$wxc-mint-50: #16A693;
+$wxc-mint-60: #148579;
+$wxc-mint-70: #12615A;
+$wxc-mint-80: #12423F;
+$wxc-mint-90: #102B2A;
+$wxc-mint-100: #0C1C1B;
+
+$wxc-cyan-10: #E6F9FA;
+$wxc-cyan-20: #B2F4F7;
+$wxc-cyan-30: #67E7F0;
+$wxc-cyan-40: #22C7D6;
+$wxc-cyan-50: #00A3B5;
+$wxc-cyan-60: #008094;
+$wxc-cyan-70: #066070;
+$wxc-cyan-80: #0A414D;
+$wxc-cyan-90: #0B2A30;
+$wxc-cyan-100: #091C21;
+
+$wxc-cobalt-10: #E5F8FF;
+$wxc-cobalt-20: #C7EEFF;
+$wxc-cobalt-30: #99DDFF;
+$wxc-cobalt-40: #5EBFF7;
+$wxc-cobalt-50: #279BE8;
+$wxc-cobalt-60: #0A78CC;
+$wxc-cobalt-70: #08599C;
+$wxc-cobalt-80: #103C63;
+$wxc-cobalt-90: #12283D;
+$wxc-cobalt-100: #0F1A26;
+
+$wxc-slate-10: #F2F4FF;
+$wxc-slate-20: #E3E7FA;
+$wxc-slate-30: #CED2ED;
+$wxc-slate-40: #B0B4D9;
+$wxc-slate-50: #8C91BD;
+$wxc-slate-60: #6F739E;
+$wxc-slate-70: #535573;
+$wxc-slate-80: #393A47;
+$wxc-slate-90: #26262B;
+$wxc-slate-100: #1A1A1C;
+
+$wxc-violet-10: #F8F2FC;
+$wxc-violet-20: #F0E3FC;
+$wxc-violet-30: #E2CAFC;
+$wxc-violet-40: #C7A5FA;
+$wxc-violet-50: #A87FF0;
+$wxc-violet-60: #875AE0;
+$wxc-violet-70: #643ABD;
+$wxc-violet-80: #432C78;
+$wxc-violet-90: #29223D;
+$wxc-violet-100: #1B1824;
+
+$wxc-purple-10: #FCF2FC;
+$wxc-purple-20: #FCE1FC;
+$wxc-purple-30: #FAC3F8;
+$wxc-purple-40: #F294F1;
+$wxc-purple-50: #E060DE;
+$wxc-purple-60: #C233C4;
+$wxc-purple-70: #932099;
+$wxc-purple-80: #601E66;
+$wxc-purple-90: #3B1840;
+$wxc-purple-100: #251329;
+
+$wxc-pink-10: #FFF2F5;
+$wxc-pink-20: #FFE0E7;
+$wxc-pink-30: #FFC7D2;
+$wxc-pink-40: #FC97AA;
+$wxc-pink-50: #F0677E;
+$wxc-pink-60: #D43B52;
+$wxc-pink-70: #A12A3A;
+$wxc-pink-80: #66262D;
+$wxc-pink-90: #3B1E21;
+$wxc-pink-100: #241617;
+
+
+//Gradation color
+
+$wxc-gradation-webex-light-primary: linear-gradient(#F0F0F0, #FFFFFF);
+$wxc-gradation-webex-light-secondary: linear-gradient(#FAFAFA, #FFFFFF);
+$wxc-gradation-webex-dark-primary: linear-gradient(#1A1A1A, #0F0F0F);
+$wxc-gradation-webex-dark-secondary: linear-gradient(#262626, #0F0F0F);
+
+$wxc-gradation-indigo-light-primary: linear-gradient(#EBEFFC, #FFFFFF);
+$wxc-gradation-indigo-light-secondary: linear-gradient(#F7F9FF, #FFFFFF);
+$wxc-gradation-indigo-dark-primary: linear-gradient(#13182B, #0E111A);
+$wxc-gradation-indigo-dark-secondary: linear-gradient(#212536, #0E111A);
+
+$wxc-gradation-jade-light-primary: linear-gradient(#E6F2F1, #FFFFFF);
+$wxc-gradation-jade-light-secondary: linear-gradient(#F7FCFC, #FFFFFF);
+$wxc-gradation-jade-dark-primary: linear-gradient(#001C18, #021412);
+$wxc-gradation-jade-dark-secondary: linear-gradient(#122925, #021412);
+
+$wxc-gradation-bronze-light-primary: linear-gradient(#F5EFE4, #FFFFFF);
+$wxc-gradation-bronze-light-secondary: linear-gradient(#FCFAF4, #FFFFFF);
+$wxc-gradation-bronze-dark-primary: linear-gradient(#1F1302, #171002);
+$wxc-gradation-bronze-dark-secondary: linear-gradient(#2E2515, #171002);
+
+$wxc-gradation-rose-light-primary: linear-gradient(#FCEBF5, #FFFFFF);
+$wxc-gradation-rose-light-secondary: linear-gradient(#FFF9FD, #FFFFFF);
+$wxc-gradation-rose-dark-primary: linear-gradient(#30041E, #1F0615);
+$wxc-gradation-rose-dark-secondary: linear-gradient(#40162E, #1F0615);
+
+$wxc-gradation-lavender-light-primary: linear-gradient(#F4EBFF, #FFFFFF);
+$wxc-gradation-lavender-light-secondary: linear-gradient(#FBF7FF, #FFFFFF);
+$wxc-gradation-lavender-dark-primary: linear-gradient(#231237, #18082B);
+$wxc-gradation-lavender-dark-secondary: linear-gradient(#301A4A, #18082B);
