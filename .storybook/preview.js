@@ -56,4 +56,15 @@ export const parameters = {
       ],
     },
   },
+  themes: {
+    list: [
+      { name: 'light', class: 'wxc-theme-light', color: '#F8F8F8'},
+      { name: 'dark', class: 'wxc-theme-dark', color: '#333333' }
+    ],
+  },
 };
+
+if (process.env.NODE_ENV === 'production') {
+  parameters.themes = { disable: true };
+}
+ 

@@ -89,6 +89,7 @@
     "rollup-plugin-visualizer": "^4.1.0",
     "sass-loader": "^10.0.1",
     "semantic-release": "^17.2.3",
+    "storybook-addon-themes": "^6.1.0",
     "style-loader": "^1.2.1",
     "wait-for-expect": "^3.0.2"
   },
