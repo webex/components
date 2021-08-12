@@ -1,3 +1,10 @@
+# [1.94.0](https://github.com/webex/components/compare/v1.93.0...v1.94.0) (2021-08-12)
+
+
+### Features
+
+* **WebexMeeting:** add control bar and roster to meeting component ([2a9e9a9](https://github.com/webex/components/commit/2a9e9a9f7268915bb9e5c9fac7665b790fa23251))
+
 # [1.93.0](https://github.com/webex/components/compare/v1.92.0...v1.93.0) (2021-08-12)
 
 
