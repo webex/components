@@ -1,17 +1,10 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-theme-dark {
   --wxc-meeting-background: #{$wxc-gradation-webex-dark-primary};
   --wxc-text-color: #{$wxc-white-alpha-100};
-  // Icons
-  --wxc-icon--audio-microphone--active-color: #{$wxc-green-50};
-  --wxc-icon--audio-microphone--color: #{$wxc-white-alpha-100};
-  --wxc-icon--audio-microphone-muted--color: #{$wxc-red-50};
-  --wxc-icon--camera--active-color: #{$wxc-green-50};
-  --wxc-icon--camera-muted--color: #{$wxc-red-50};
-  --wxc-icon--camera--color: #{$wxc-white-alpha-100};
-  --wxc-icon--settings--color: #{$wxc-white-alpha-100};
-  --wxc-icon--share-screen--color: #{$wxc-white-alpha-100};
-  --wxc-icon--cancel--color: #{$wxc-white-alpha-100};
-  --wxc-icon--participant-list--color: #{$wxc-white-alpha-100};
+  
+  --wxc-icon--color: #{$wxc-white-alpha-100};
+  --wxc-icon--active-color: #{$wxc-green-50};
+  --wxc-icon--muted-color: #{$wxc-red-50};
 
   .wxc-old-icon { display: none; }
   .wxc-icon { display: block; }
