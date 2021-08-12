@@ -9,6 +9,7 @@ import {
   ShareScreenIcon,
   CancelIcon,
   CameraMutedIcon,
+  ParticipantListIcon,
 } from '../../icons';
 
 const icons = {
@@ -19,6 +20,7 @@ const icons = {
   'share-screen-presence-stroke': ShareScreenIcon,
   settings: SettingsIcon,
   cancel: CancelIcon,
+  'participant-list': ParticipantListIcon,
 };
 
 /**

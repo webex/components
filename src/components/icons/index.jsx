@@ -5,3 +5,4 @@ export {default as AudioMicrophoneMutedIcon} from './AudioMicrophoneMutedIcon';
 export {default as SettingsIcon} from './SettingsIcon';
 export {default as ShareScreenIcon} from './ShareScreenIcon';
 export {default as CancelIcon} from './CancelIcon';
+export {default as ParticipantListIcon} from './ParticipantListIcon';
