@@ -75,11 +75,12 @@ export default function WebexMeeting({className, meetingID, style}) {
 
 WebexMeeting.propTypes = {
   className: PropTypes.string,
-  meetingID: PropTypes.string.isRequired,
+  meetingID: PropTypes.string,
   style: PropTypes.shape(),
 };
 
 WebexMeeting.defaultProps = {
   className: '',
+  meetingID: undefined,
   style: undefined,
 };

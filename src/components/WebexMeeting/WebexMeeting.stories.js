@@ -8,6 +8,11 @@ export default {
 
 const Template = (args) => <WebexMeeting {...args} style={{height: '100%', width: '100%'}} />;
 
+export const Creating = Template.bind({});
+Creating.args = {
+  meetingID: undefined,
+};
+
 export const Interstitial = Template.bind({});
 Interstitial.args = {
   meetingID: 'meeting3',
