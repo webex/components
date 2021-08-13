@@ -1,3 +1,11 @@
+# [1.96.0](https://github.com/webex/components/compare/v1.95.0...v1.96.0) (2021-08-13)
+
+
+### Features
+
+* **WebexComponents:** configure winston logger ([d312464](https://github.com/webex/components/commit/d312464e4a2f3c7456488fd45ef6c29dcf83949d))
+* **WebexMeeting:** theme the Webex meeting component ([b3635b5](https://github.com/webex/components/commit/b3635b576636ea66de2f8fcc7c0ff095b6e962ac))
+
 # [1.95.0](https://github.com/webex/components/compare/v1.94.0...v1.95.0) (2021-08-13)
 
 
