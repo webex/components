@@ -10,6 +10,7 @@ import {
   CancelIcon,
   CameraMutedIcon,
   ParticipantListIcon,
+  ExternalUserIcon,
 } from '../../icons';
 
 const icons = {
@@ -21,6 +22,8 @@ const icons = {
   settings: SettingsIcon,
   cancel: CancelIcon,
   'participant-list': ParticipantListIcon,
+  'external-user': ExternalUserIcon,
+
 };
 
 /**

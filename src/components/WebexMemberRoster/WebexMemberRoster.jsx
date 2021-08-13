@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {DestinationType} from '@webex/component-adapter-interfaces';
-import {Icon} from '@momentum-ui/react';
+import Icon from '../generic/Icon/Icon';
 import webexComponentClasses from '../helpers';
 
 import WebexMember from '../WebexMember/WebexMember';
@@ -60,7 +60,7 @@ export default function WebexMemberRoster({
     (member) => member.orgID !== undefined && orgID !== undefined && member.orgID !== orgID,
   ) && (
     <div className="external-user-warning">
-      <Icon color="yellow-40" name="icon-external-user_20" />
+      <Icon name="external-user_20" size={20} />
       <h5>People outside your company are included in this space</h5>
     </div>
   );
