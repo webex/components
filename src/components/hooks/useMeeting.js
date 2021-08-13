@@ -36,12 +36,13 @@ const emptyMeeting = {
  */
 export default function useMeeting(meetingID) {
   const [meeting, setMeeting] = useState(emptyMeeting);
-  const {meetingsAdapter} = useContext(AdapterContext);
+  const adapter = useContext(AdapterContext);
+  const meetingsAdapter = adapter && adapter.meetingsAdapter;
 
   useEffect(() => {
     let cleanup;
 
-    if (!meetingID) {
+    if (!meetingID || !meetingsAdapter) {
       setMeeting({...emptyMeeting});
       cleanup = undefined;
     } else {
