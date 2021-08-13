@@ -1,3 +1,12 @@
+# [1.95.0](https://github.com/webex/components/compare/v1.94.0...v1.95.0) (2021-08-13)
+
+
+### Features
+
+* **storybook:** add a theme button in storybook for development testing ([8496157](https://github.com/webex/components/commit/84961578136f9f5d334249fdede8af8b2a53884f))
+* **style:** add color variables ([e195ce8](https://github.com/webex/components/commit/e195ce8c7576e8fa871f13a58e80161fb8391a0e))
+* **WebexMemberRoster:** display title and participants counter ([ab9fee5](https://github.com/webex/components/commit/ab9fee5398129e17e9a7841e6392b35b3acaf463))
+
 # [1.94.0](https://github.com/webex/components/compare/v1.93.0...v1.94.0) (2021-08-12)
 
 
