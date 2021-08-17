@@ -4,6 +4,7 @@ $shadow-spread: -0.125rem;
 $shadow-color: rgba(0, 0, 0, 0.2);
 
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-in-meeting {
+  border-radius: 0.5rem;
   position: relative;
   display: flex;
   justify-content: center;
