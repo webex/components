@@ -15,9 +15,9 @@
   --wxc-icon--error--gradient-start-color: #{$wxc-pink-50};
   --wxc-icon--error--gradient-stop-color: #{$wxc-red-60};
 
-  --wxc-modal-background: #{$wxc-gray-100};
-  --wxc-modal-border: 1px solid #{$wxc-black-alpha-11};
-  --wxc-modal-box-shadow: 0 1.5rem 3rem #{$wxc-black-alpha-20}, 0 0 0.0625rem #{$wxc-black-alpha-12};
+  --wxc-modal--background: #{$wxc-gray-100};
+  --wxc-modal--border: 1px solid #{$wxc-black-alpha-11};
+  --wxc-modal--box-shadow: 0 1.5rem 3rem #{$wxc-black-alpha-20}, 0 0 0.0625rem #{$wxc-black-alpha-12};
 
   --wxc-button--cancel--normal--bg: #{$wxc-red-60};
   --wxc-button--cancel--normal--border: none;

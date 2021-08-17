@@ -6,23 +6,34 @@
   bottom: 0;
   z-index: 9;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 
   .modal-content {
-    border: var(--wxc-modal-border);
-    box-shadow: var(--wxc-modal-box-shadow);
-    background-color: var(--wxc-modal-background);
+    border: var(--wxc-modal--border);
+    box-shadow: var(--wxc-modal--box-shadow);
+    background-color: var(--wxc-modal--background);
+    flex: 1;
+    max-height: 100%;
+    overflow-y: auto;
+  }
+
+  &.centered-modal{
+    align-items: center;
+
+    .modal-content {
+      flex: 0 1 auto;
+    }
   }
 
   .modal-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 0.75rem 1.25rem;
   }
 
   .modal-title {
+    flex: 1;
     color: var(--wxc-text-color);
   }
 

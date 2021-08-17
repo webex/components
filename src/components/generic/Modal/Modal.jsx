@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
+import {TABLET} from '../../breakpoints';
+import {useElementDimensions} from '../../hooks';
 
 /**
  * Modal component
@@ -21,10 +23,13 @@ export default function Modal({
   onClose,
   title,
 }) {
-  const cssClasses = webexComponentClasses('modal', className);
+  const [ref, {width}] = useElementDimensions();
+  const cssClasses = webexComponentClasses('modal', className, undefined, {
+    'centered-modal': width > TABLET,
+  });
 
   return (
-    <div className={cssClasses}>
+    <div ref={ref} className={cssClasses}>
       <div className="modal-content">
         <div className="modal-header">
           {title && <h3 className="modal-title">{title}</h3>}
