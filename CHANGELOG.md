@@ -1,3 +1,10 @@
+# [1.97.0](https://github.com/webex/components/compare/v1.96.1...v1.97.0) (2021-08-17)
+
+
+### Features
+
+* **Modal:** create modal component ([f1ef541](https://github.com/webex/components/commit/f1ef5417fc27ac9a4c50df1e264bd625b6ccf133))
+
 ## [1.96.1](https://github.com/webex/components/compare/v1.96.0...v1.96.1) (2021-08-17)
 
 
