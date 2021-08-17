@@ -1,3 +1,10 @@
+# [1.98.0](https://github.com/webex/components/compare/v1.97.0...v1.98.0) (2021-08-17)
+
+
+### Features
+
+* **WebexMeeting:** accept empty meeting id and add corresponding story in storybook ([0e833a1](https://github.com/webex/components/commit/0e833a1a5af4982127f73c7d9266092617eb450d))
+
 # [1.97.0](https://github.com/webex/components/compare/v1.96.1...v1.97.0) (2021-08-17)
 
 
