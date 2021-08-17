@@ -1,3 +1,10 @@
+## [1.96.1](https://github.com/webex/components/compare/v1.96.0...v1.96.1) (2021-08-17)
+
+
+### Bug Fixes
+
+* **UseMeeting:** use meetingsAdapter only if adapter is defined ([0bdf03c](https://github.com/webex/components/commit/0bdf03c7dea4987fd02ed996f50d06d7ea19c1ae))
+
 # [1.96.0](https://github.com/webex/components/compare/v1.95.0...v1.96.0) (2021-08-13)
 
 
