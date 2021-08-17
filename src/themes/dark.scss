@@ -63,8 +63,14 @@
 
   --wxc-spinner-circle-color: #{$wxc-white-alpha-11};
   --wxc-spinner-moving-color: #{$wxc-white-alpha-95};
+
+  --wxc-tab--normal--color: #{$wxc-white-alpha-70};
+  --wxc-tab--normal--background: transparent;
+  --wxc-tab--active--color: #{$wxc-white-alpha-95};
+  --wxc-tab--active--background: #{$wxc-white-alpha-20};
 }
 
+// temporary logic for legacy
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-theme-dark {
   .wxc-banner.my-preview { display: flex; }
   .wxc-member-roster .title { display: block; }
@@ -74,4 +80,14 @@
   .wxc-icon { display: block; }
   .wxc-in-meeting { background: transparent; }
   .wxc-modal .old-close-button { display: none; }
+  .wxc-tabs {
+    .tabs-list {
+      border-bottom: none;
+      padding: 1.5rem 1.375rem;
+      .tab.active > button {
+        border-bottom: none;
+        border-radius: 0.875rem;
+      }
+    }
+  }
 }
