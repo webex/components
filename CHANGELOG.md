@@ -1,3 +1,10 @@
+# [1.101.0](https://github.com/webex/components/compare/v1.100.0...v1.101.0) (2021-08-18)
+
+
+### Features
+
+* **MeetingControls:** add types for meeting controls ([e7eb0ea](https://github.com/webex/components/commit/e7eb0eab16fdbfdc2443c1344d6006f1343055c5))
+
 # [1.100.0](https://github.com/webex/components/compare/v1.99.0...v1.100.0) (2021-08-18)
 
 
