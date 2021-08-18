@@ -237,7 +237,7 @@ Array [
 exports[`Storyshots Meetings/Webex Meeting Control Disabled Text 1`] = `
 Array [
   <button
-    className="wxc-button wxc-meeting-control wxc-button--default"
+    className="wxc-button wxc-meeting-control wxc-button--join"
     disabled={true}
     onClick={[Function]}
     style={Object {}}
@@ -248,7 +248,7 @@ Array [
     alt="Join meeting"
     aria-label="Join meeting"
     aria-pressed={null}
-    className="md-button md-button--52 wxc-meeting-control wxc-old-button"
+    className="md-button md-button--52 md-button--green wxc-meeting-control wxc-old-button"
     data-md-event-key="md-button-0"
     disabled={true}
     id="md-button-0"
