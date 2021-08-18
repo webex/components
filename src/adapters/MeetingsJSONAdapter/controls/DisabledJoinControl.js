@@ -20,6 +20,7 @@ export default class DisabledJoinControl extends MeetingControl {
     return Observable.create((observer) => {
       observer.next({
         ID: this.ID,
+        type: 'JOIN',
         text: 'Join meeting',
         tooltip: 'Join meeting',
         state: MeetingControlState.DISABLED,
