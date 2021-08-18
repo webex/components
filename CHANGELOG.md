@@ -1,3 +1,10 @@
+# [1.99.0](https://github.com/webex/components/compare/v1.98.0...v1.99.0) (2021-08-18)
+
+
+### Features
+
+* **Icon:** add external user icon ([d68fb58](https://github.com/webex/components/commit/d68fb58a37f55c35eb9f8ddc179676f7f675daab))
+
 # [1.98.0](https://github.com/webex/components/compare/v1.97.0...v1.98.0) (2021-08-17)
 
 
