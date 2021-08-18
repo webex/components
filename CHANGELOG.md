@@ -1,3 +1,10 @@
+# [1.100.0](https://github.com/webex/components/compare/v1.99.0...v1.100.0) (2021-08-18)
+
+
+### Features
+
+* **WebexComponents:** add "My preview" banner to the local media component ([da7b643](https://github.com/webex/components/commit/da7b643f14fecc1d47b1789b0257e83dcb57abf9))
+
 # [1.99.0](https://github.com/webex/components/compare/v1.98.0...v1.99.0) (2021-08-18)
 
 
