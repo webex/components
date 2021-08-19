@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: var(--wxc-text-color);
 
   .logo-container {
     position: absolute;
@@ -10,21 +11,20 @@
     left: 0;
   }
   .title {
-    margin-top: 1.2rem;
-    font-size: .875rem;
-    font-weight: bold;
+    margin-top: 0.688rem;
+    font-size: 1rem;
+    font-family: #{$brand-font-bold};
   }
 
   .body {
-    margin: 1.2rem 0;
+    color: var(--wxc-secondary-text-color);
+    margin-top: 0.5rem;
+    margin-bottom: 2.25rem;
+    max-width: 21.875rem;
     text-align: center;
 
     .allow {
-      text-decoration: underline;
+      font-family: #{$brand-font-bold};
     }
-  }
-
-  .join {
-    margin-top: 1.2rem;
   }
 }
