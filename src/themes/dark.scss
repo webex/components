@@ -4,10 +4,15 @@
   --wxc-video-background: #{$wxc-white-alpha-05};
   --wxc-meeting-border: 1px solid #{$wxc-white-alpha-30};
   --wxc-meeting-box-shadow: none;
+  --wxc-person-status--active-color: #{$wxc-green-40};
+  --wxc-person-status--dnd-color: #{$wxc-red-50};
+  --wxc-person-status--in-a-meeting-color: #{$wxc-yellow-30};
+  --wxc-person-status--away-color: #{$wxc-gray-40};
 
   --wxc-banner-background: #{$wxc-gradation-dark-transparent};
   --wxc-banner-text-color: #{$wxc-white-alpha-95};
 
+  --wxc-icon--background-color: #{$wxc-black-alpha-100};
   --wxc-icon--color: #{$wxc-white-alpha-100};
   --wxc-icon--active-color: #{$wxc-green-50};
   --wxc-icon--muted-color: #{$wxc-red-50};
@@ -90,4 +95,6 @@
       }
     }
   }
+  .wxc-avatar { display: block; }
+  .md-avatar { display: none; }
 }

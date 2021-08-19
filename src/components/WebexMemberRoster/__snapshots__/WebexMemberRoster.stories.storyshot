@@ -62,7 +62,15 @@ Array [
         className="wxc-member"
       >
         <div
-          className="md-avatar md-avatar--medium wxc-avatar"
+          className="wxc-avatar"
+        >
+          <img
+            alt="avatar"
+            src="./images/barbara.png"
+          />
+        </div>
+        <div
+          className="md-avatar md-avatar--medium wxc-old-avatar"
           title="Barbara German"
         >
           <span
@@ -99,7 +107,15 @@ Array [
         className="wxc-member"
       >
         <div
-          className="md-avatar md-avatar--medium wxc-avatar"
+          className="wxc-avatar"
+        >
+          <img
+            alt="avatar"
+            src="./images/brandon.png"
+          />
+        </div>
+        <div
+          className="md-avatar md-avatar--medium wxc-old-avatar"
           title="Brandon Seeger"
         >
           <span
@@ -141,7 +157,15 @@ Array [
         className="wxc-member"
       >
         <div
-          className="md-avatar md-avatar--medium wxc-avatar"
+          className="wxc-avatar"
+        >
+          <img
+            alt="avatar"
+            src="./images/maria.png"
+          />
+        </div>
+        <div
+          className="md-avatar md-avatar--medium wxc-old-avatar"
           title="Maria Rossi"
         >
           <span
@@ -271,7 +295,15 @@ Array [
         className="wxc-member"
       >
         <div
-          className="md-avatar md-avatar--medium wxc-avatar"
+          className="wxc-avatar"
+        >
+          <img
+            alt="avatar"
+            src="./images/barbara.png"
+          />
+        </div>
+        <div
+          className="md-avatar md-avatar--medium wxc-old-avatar"
           title="Barbara German"
         >
           <span
@@ -313,7 +345,15 @@ Array [
         className="wxc-member"
       >
         <div
-          className="md-avatar md-avatar--medium wxc-avatar"
+          className="wxc-avatar"
+        >
+          <img
+            alt="avatar"
+            src="./images/giacomo.png"
+          />
+        </div>
+        <div
+          className="md-avatar md-avatar--medium wxc-old-avatar"
           title="Giacomo Edwards"
         >
           <span
@@ -359,7 +399,15 @@ Array [
         className="wxc-member"
       >
         <div
-          className="md-avatar md-avatar--medium wxc-avatar"
+          className="wxc-avatar"
+        >
+          <img
+            alt="avatar"
+            src="./images/brenda.png"
+          />
+        </div>
+        <div
+          className="md-avatar md-avatar--medium wxc-old-avatar"
           title="Brenda Song"
         >
           <span
@@ -410,7 +458,15 @@ Array [
         className="wxc-member"
       >
         <div
-          className="md-avatar md-avatar--medium wxc-avatar"
+          className="wxc-avatar"
+        >
+          <img
+            alt="avatar"
+            src="./images/simon.png"
+          />
+        </div>
+        <div
+          className="md-avatar md-avatar--medium wxc-old-avatar"
           title="Simon Damiano"
         >
           <span
@@ -461,7 +517,15 @@ Array [
         className="wxc-member"
       >
         <div
-          className="md-avatar md-avatar--medium wxc-avatar"
+          className="wxc-avatar"
+        >
+          <img
+            alt="avatar"
+            src="./images/brandon.png"
+          />
+        </div>
+        <div
+          className="md-avatar md-avatar--medium wxc-old-avatar"
           title="Brandon Seeger"
         >
           <span
@@ -513,7 +577,15 @@ Array [
         className="wxc-member"
       >
         <div
-          className="md-avatar md-avatar--medium wxc-avatar"
+          className="wxc-avatar"
+        >
+          <img
+            alt="avatar"
+            src="./images/maria.png"
+          />
+        </div>
+        <div
+          className="md-avatar md-avatar--medium wxc-old-avatar"
           title="Maria Rossi"
         >
           <span
@@ -615,7 +687,15 @@ Array [
         className="wxc-member"
       >
         <div
-          className="md-avatar md-avatar--medium wxc-avatar"
+          className="wxc-avatar"
+        >
+          <img
+            alt="avatar"
+            src="./images/barbara.png"
+          />
+        </div>
+        <div
+          className="md-avatar md-avatar--medium wxc-old-avatar"
           title="Barbara German"
         >
           <span
@@ -652,7 +732,15 @@ Array [
         className="wxc-member"
       >
         <div
-          className="md-avatar md-avatar--medium wxc-avatar"
+          className="wxc-avatar"
+        >
+          <img
+            alt="avatar"
+            src="./images/giacomo.png"
+          />
+        </div>
+        <div
+          className="md-avatar md-avatar--medium wxc-old-avatar"
           title="Giacomo Edwards"
         >
           <span
@@ -689,7 +777,15 @@ Array [
         className="wxc-member"
       >
         <div
-          className="md-avatar md-avatar--medium wxc-avatar"
+          className="wxc-avatar"
+        >
+          <img
+            alt="avatar"
+            src="./images/brenda.png"
+          />
+        </div>
+        <div
+          className="md-avatar md-avatar--medium wxc-old-avatar"
           title="Brenda Song"
         >
           <span
@@ -726,7 +822,15 @@ Array [
         className="wxc-member"
       >
         <div
-          className="md-avatar md-avatar--medium wxc-avatar"
+          className="wxc-avatar"
+        >
+          <img
+            alt="avatar"
+            src="./images/simon.png"
+          />
+        </div>
+        <div
+          className="md-avatar md-avatar--medium wxc-old-avatar"
           title="Simon Damiano"
         >
           <span

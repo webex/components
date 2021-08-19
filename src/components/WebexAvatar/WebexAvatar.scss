@@ -1,0 +1,47 @@
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-avatar {
+  display: flex;
+  align-items: center;
+
+  width: 2.5rem;
+  height: 2.5rem;
+
+  position: relative;
+
+  img {
+    border-radius: 50%;
+  }
+
+  .status-icon-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    left: 62.5%;
+    right: -12.5%;
+    top: 56.25%;
+    bottom: -6.25%;
+
+    border-radius: 50%;
+
+    background: var(--wxc-icon--background-color);
+
+    .status-icon {
+      width: 80%;
+      height: 80%;
+    }
+  }
+
+  .avatar-icon-active {
+    color: var(--wxc-person-status--active-color);
+  }
+  .avatar-icon-in-a-meeting {
+    color: var(--wxc-person-status--in-a-meeting-color);
+  }
+  .avatar-icon-dnd {
+    color: var(--wxc-person-status--dnd-color);
+  }
+  .avatar-icon-away {
+    color: var(--wxc-person-status--away-color);
+  }
+}
