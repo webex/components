@@ -69,8 +69,15 @@ Array [
   <div
     className="wxc-meeting-info"
   >
-    <i
-      className="md-spinner md-spinner--36 md-spinner--black"
+    <div
+      className="wxc-spinner"
+      size={36}
+      style={
+        Object {
+          "height": 36,
+          "width": 36,
+        }
+      }
     />
   </div>,
   <video

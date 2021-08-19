@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import PropTypes from 'prop-types';
-import {Spinner} from '@momentum-ui/react';
 import {DestinationType, MeetingState} from '@webex/component-adapter-interfaces';
+import Spinner from '../generic/Spinner/Spinner';
 
 import Modal from '../generic/Modal/Modal';
 import WebexInMeeting from '../WebexInMeeting/WebexInMeeting';

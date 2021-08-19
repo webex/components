@@ -149,8 +149,15 @@ Array [
     <span
       className="md-badge md-badge--round"
     >
-      <i
-        className="md-spinner md-spinner--16 md-spinner--black"
+      <div
+        className="wxc-spinner"
+        size={16}
+        style={
+          Object {
+            "height": 16,
+            "width": 16,
+          }
+        }
       />
       <div>
         Connecting

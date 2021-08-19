@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {format} from 'date-fns';
-import {Spinner} from '@momentum-ui/react';
+import Spinner from '../generic/Spinner/Spinner';
 
 import webexComponentClasses from '../helpers';
 import {useMeeting} from '../hooks';
@@ -39,7 +39,7 @@ export default function WebexMeetingInfo({className, meetingID, style}) {
     title,
   } = useMeeting(meetingID);
   const cssClasses = webexComponentClasses('meeting-info', className);
-  let infoComponent = <Spinner />;
+  let infoComponent = <Spinner size={36} />;
 
   if (ID) {
     const displayTitle = title || 'No Meeting Information';

@@ -1,6 +1,6 @@
 import React, {useRef} from 'react';
 import PropTypes from 'prop-types';
-import {Spinner} from '@momentum-ui/react';
+import Spinner from '../generic/Spinner/Spinner';
 
 import Banner from '../generic/Banner/Banner';
 import WebexAvatar from '../WebexAvatar/WebexAvatar';
