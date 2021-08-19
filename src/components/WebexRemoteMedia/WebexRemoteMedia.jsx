@@ -1,8 +1,9 @@
 /* eslint-disable jsx-a11y/media-has-caption */
 import React, {useRef} from 'react';
 import PropTypes from 'prop-types';
-import {Badge, Spinner} from '@momentum-ui/react';
+import {Badge} from '@momentum-ui/react';
 import Icon from '../generic/Icon/Icon';
+import Spinner from '../generic/Spinner/Spinner';
 
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import webexComponentClasses from '../helpers';

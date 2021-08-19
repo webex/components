@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Spinner} from '@momentum-ui/react';
+import Spinner from '../generic/Spinner/Spinner';
 
 import webexComponentClasses from '../helpers';
 

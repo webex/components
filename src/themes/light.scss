@@ -60,6 +60,9 @@
 
   --wxc-button--join--disabled--bg: #{$wxc-black-alpha-20};
   --wxc-button--join--disabled--color: #{$wxc-black-alpha-40};
+
+  --wxc-spinner-circle-color: #{$wxc-gray-30};
+  --wxc-spinner-moving-color: #{$wxc-gray-100};
 }
 
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-theme-light {

@@ -5,8 +5,15 @@ Array [
   <div
     className="wxc-interstitial-meeting"
   >
-    <i
-      className="md-spinner md-spinner--36 md-spinner--black"
+    <div
+      className="wxc-spinner"
+      size={28}
+      style={
+        Object {
+          "height": 28,
+          "width": 28,
+        }
+      }
     />
   </div>,
   <video
