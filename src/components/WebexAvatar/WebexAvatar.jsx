@@ -1,9 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Avatar} from '@momentum-ui/react';
-
+import Icon from '../generic/Icon/Icon';
 import webexComponentClasses from '../helpers';
 import {usePerson} from '../hooks';
+
+const statusClassNames = {
+  active: 'avatar-icon-active',
+  call: 'avatar-icon-in-a-meeting',
+  dnd: 'avatar-icon-dnd',
+  inactive: 'avatar-icon-away',
+  meeting: 'avatar-icon-in-a-meeting',
+  ooo: 'avatar-icon-away',
+  presenting: 'avatar-icon-dnd',
+};
+
+const statusIcons = {
+  active: 'unread',
+  call: 'camera-presence',
+  dnd: 'dnd-presence',
+  inactive: 'recents-presence',
+  meeting: 'meetings-presence',
+  ooo: 'pto-presence',
+  presenting: 'share-screen-filled',
+};
 
 /**
  * Displays the avatar of a Webex user.
@@ -24,18 +44,48 @@ export default function WebexAvatar({
 }) {
   const {avatar, displayName, status} = usePerson(personID);
   const type = displayStatus ? status : null;
-
   const cssClasses = webexComponentClasses('avatar', className);
 
+  let content;
+
+  if (!avatar && !displayName && !status) {
+    content = <> </>; // loading
+  } else if (!avatar && displayName === ' ') {
+    content = <> </>; // error
+  } else {
+    const iconName = statusIcons[status];
+    const iconClassName = statusClassNames[status];
+
+    if (!iconClassName) {
+      console.error(`${iconClassName} avatar status is not defined. Available avatar stauses are "${Object.keys(statusClassNames).join(', ')}".`);
+    }
+
+    content = (
+      <>
+        <img src={avatar} alt="avatar" />
+        {displayStatus && iconName && iconClassName && (
+        <div className="status-icon-container">
+          <Icon name={iconName} className={`status-icon ${iconClassName}`} />
+        </div>
+        )}
+      </>
+    );
+  }
+
   return (
-    <Avatar
-      src={avatar}
-      title={displayName}
-      type={type}
-      alt={displayName}
-      className={cssClasses}
-      style={style}
-    />
+    <>
+      <div className={cssClasses} style={style}>
+        {content}
+      </div>
+      <Avatar
+        src={avatar}
+        title={displayName}
+        type={type}
+        alt={displayName}
+        className="wxc-old-avatar"
+        style={style}
+      />
+    </>
   );
 }
 

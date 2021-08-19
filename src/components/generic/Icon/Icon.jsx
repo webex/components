@@ -12,6 +12,14 @@ import {
   ParticipantListIcon,
   ExternalUserIcon,
   RemoteMediaErrorIcon,
+  UnreadIcon,
+  CameraPresenceIcon,
+  MeetingsPresenceIcon,
+  DndPresenceIcon,
+  QuietHoursPresenceIcon,
+  RecentsPresenceIcon,
+  PtoPresenceIcon,
+  ShareScreenFilledIcon,
 } from '../../icons';
 
 const icons = {
@@ -25,6 +33,14 @@ const icons = {
   'participant-list': ParticipantListIcon,
   'external-user': ExternalUserIcon,
   error: RemoteMediaErrorIcon,
+  unread: UnreadIcon,
+  'camera-presence': CameraPresenceIcon,
+  'meetings-presence': MeetingsPresenceIcon,
+  'dnd-presence': DndPresenceIcon,
+  'quiet-hours-presence': QuietHoursPresenceIcon,
+  'recents-presence': RecentsPresenceIcon,
+  'pto-presence': PtoPresenceIcon,
+  'share-screen-filled': ShareScreenFilledIcon,
 };
 
 const oldIcons = {
@@ -50,7 +66,12 @@ export default function Icon({
 }) {
   const [baseName, baseSize] = name.split('_');
 
-  const IconComponent = icons[baseName];
+  let IconComponent = icons[baseName];
+
+  if (!IconComponent) {
+    console.error(`${baseName} icon is not defined. Available icons are "${Object.keys(icons).join(', ')}".`);
+    IconComponent = 'span';
+  }
 
   return (
     <>

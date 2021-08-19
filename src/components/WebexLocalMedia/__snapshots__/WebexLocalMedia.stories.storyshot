@@ -6,7 +6,15 @@ Array [
     className="wxc-local-media wxc-local-media-no-media"
   >
     <div
-      className="md-avatar md-avatar--medium wxc-avatar"
+      className="wxc-avatar"
+    >
+      <img
+        alt="avatar"
+        src="./images/barbara.png"
+      />
+    </div>
+    <div
+      className="md-avatar md-avatar--medium wxc-old-avatar"
       title="Barbara German"
     >
       <span
