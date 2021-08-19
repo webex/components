@@ -17,12 +17,18 @@ import {AdapterContext} from '../hooks/contexts';
  * Webex Meeting component displays the default Webex meeting experience.
  *
  * @param {object} props  Data passed to the component
- * @param {string} props.className  Custom CSS class to apply
- * @param {string} props.meetingID  ID of the meeting
- * @param {object} props.style  Custom style to apply
+ * @param {string} [props.className]  Custom CSS class to apply
+ * @param {JSX.Element} [props.logo]  Logo
+ * @param {string} [props.meetingID]  ID of the meeting
+ * @param {object} [props.style]  Custom style to apply
  * @returns {object} JSX of the component
  */
-export default function WebexMeeting({className, meetingID, style}) {
+export default function WebexMeeting({
+  className,
+  logo,
+  meetingID,
+  style,
+}) {
   const {
     ID,
     state,
@@ -45,6 +51,7 @@ export default function WebexMeeting({className, meetingID, style}) {
   } else {
     meetingDisplay = (
       <>
+        {logo && <div>{logo}</div>}
         <div className="body">
           {isActive
             ? <WebexInMeeting meetingID={ID} className="inner-meeting" />
@@ -75,12 +82,14 @@ export default function WebexMeeting({className, meetingID, style}) {
 
 WebexMeeting.propTypes = {
   className: PropTypes.string,
+  logo: PropTypes.node,
   meetingID: PropTypes.string,
   style: PropTypes.shape(),
 };
 
 WebexMeeting.defaultProps = {
   className: '',
+  logo: undefined,
   meetingID: undefined,
   style: undefined,
 };
