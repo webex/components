@@ -1,18 +1,18 @@
-import React from 'react';
+import React, {JSX} from 'react';
 import PropTypes from 'prop-types';
-import {Icon} from '@momentum-ui/react';
+import Icon from '../generic/Icon/Icon';
 import WebexMeetingControl from '../WebexMeetingControl/WebexMeetingControl';
 import webexComponentClasses from '../helpers';
 
 const SCREENS = {
   camera: {
-    icon: 'icon-camera_36',
+    icon: 'camera_48',
     title: 'Allow access to camera',
     message: 'when your browser asks to let Webex use your camera for this video call',
     control: 'proceed-without-camera',
   },
   microphone: {
-    icon: 'icon-microphone_36',
+    icon: 'microphone_48',
     title: 'Allow access to microphone',
     message: 'when your browser asks to let Webex use your microphone for this video call',
     control: 'proceed-without-microphone',

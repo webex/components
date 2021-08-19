@@ -34,12 +34,17 @@ Array [
         }
       }
     />
+    <span
+      className="button-text"
+    >
+      Unmute
+    </span>
   </button>,
   <button
     alt="Unmute"
     aria-label="Unmute"
     aria-pressed={null}
-    className="md-button md-button--circle md-button--56 md-button--red wxc-meeting-control wxc-old-button"
+    className="md-button md-button--52 md-button--red wxc-meeting-control wxc-old-button"
     data-md-event-key="md-button-0"
     disabled={false}
     id="md-button-0"
@@ -85,6 +90,11 @@ Array [
           }
         }
       />
+      <span
+        className="button-text"
+      >
+        Unmute
+      </span>
     </span>
   </button>,
   <video
@@ -243,7 +253,13 @@ Array [
     style={Object {}}
     title="Join meeting"
     type="button"
-  />,
+  >
+    <span
+      className="button-text"
+    >
+      Join meeting
+    </span>
+  </button>,
   <button
     alt="Join meeting"
     aria-label="Join meeting"
@@ -383,12 +399,17 @@ Array [
         }
       }
     />
+    <span
+      className="button-text"
+    >
+      Mute
+    </span>
   </button>,
   <button
     alt="Mute"
     aria-label="Mute"
     aria-pressed={null}
-    className="md-button md-button--circle md-button--56 wxc-meeting-control wxc-old-button"
+    className="md-button md-button--52 wxc-meeting-control wxc-old-button"
     data-md-event-key="md-button-0"
     disabled={false}
     id="md-button-0"
@@ -441,6 +462,11 @@ Array [
           }
         }
       />
+      <span
+        className="button-text"
+      >
+        Mute
+      </span>
     </span>
   </button>,
   <video
@@ -475,7 +501,13 @@ Array [
     style={Object {}}
     title="Join meeting"
     type="button"
-  />,
+  >
+    <span
+      className="button-text"
+    >
+      Join meeting
+    </span>
+  </button>,
   <button
     alt="Join meeting"
     aria-label="Join meeting"

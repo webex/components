@@ -121,11 +121,13 @@ export default function WebexMeetingControl({
 WebexMeetingControl.propTypes = {
   className: PropTypes.string,
   meetingID: PropTypes.string.isRequired,
+  showText: PropTypes.bool,
   style: PropTypes.shape(),
   type: PropTypes.string.isRequired,
 };
 
 WebexMeetingControl.defaultProps = {
   className: '',
+  showText: true,
   style: undefined,
 };

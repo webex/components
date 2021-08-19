@@ -29,6 +29,8 @@ const icons = {
 
 const oldIcons = {
   microphone_28: 'microphone-muted_28',
+  camera_48: 'camera_36',
+  microphone_48: 'microphone_36',
 };
 
 /**
