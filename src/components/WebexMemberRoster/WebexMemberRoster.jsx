@@ -77,14 +77,16 @@ export default function WebexMemberRoster({
     <div className={cssClasses} style={style}>
       {title}
       {warningExternalMembers}
-      {destinationType !== DestinationType.MEETING
-        ? renderMembers(members)
-        : (
-          <>
-            {renderSection(members.filter((member) => member.inMeeting), 'In meeting')}
-            {renderSection(members.filter((member) => !member.inMeeting), 'Not in meeting')}
-          </>
-        )}
+      <div className="members">
+        {destinationType !== DestinationType.MEETING
+          ? renderMembers(members)
+          : (
+            <>
+              {renderSection(members.filter((member) => member.inMeeting), 'In meeting')}
+              {renderSection(members.filter((member) => !member.inMeeting), 'Not in meeting')}
+            </>
+          )}
+      </div>
     </div>
   );
 }

@@ -165,7 +165,7 @@ export default {
         orgID: 'org1',
         muted: true,
         sharing: false,
-        inMeeting: true,
+        inMeeting: false,
         host: false,
         guest: true,
       },

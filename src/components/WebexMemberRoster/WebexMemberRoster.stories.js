@@ -4,10 +4,18 @@ import WebexMemberRoster from './WebexMemberRoster';
 export default {
   title: 'Platform/Webex Member Roster',
   component: WebexMemberRoster,
-  decorators: [(Story) => <div style={{width: '20rem'}}><Story /></div>],
 };
 
-const Template = (args) => <WebexMemberRoster {...args} />;
+const Template = (args) => {
+  const style = {
+    width: '20rem',
+    maxHeight: '100%',
+    ...args.style,
+  };
+  const props = {...args, style};
+
+  return <WebexMemberRoster {...props} />;
+};
 
 export const Space = Template.bind({});
 Space.args = {
@@ -17,7 +25,7 @@ Space.args = {
 
 export const Meeting = Template.bind({});
 Meeting.args = {
-  destinationID: 'meeting1',
+  destinationID: 'meeting2',
   destinationType: 'meeting',
 };
 
