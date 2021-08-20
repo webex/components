@@ -1,3 +1,10 @@
+# [1.102.0](https://github.com/webex/components/compare/v1.101.0...v1.102.0) (2021-08-20)
+
+
+### Features
+
+* **WebexInMeeting:** add background with gradient to share banner ([7901403](https://github.com/webex/components/commit/7901403836ec94db599bfe82578294c4fde0d3d2))
+
 # [1.101.0](https://github.com/webex/components/compare/v1.100.0...v1.101.0) (2021-08-18)
 
 
