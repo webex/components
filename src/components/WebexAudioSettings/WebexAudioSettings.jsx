@@ -17,9 +17,9 @@ export default function WebexAudioSettings({className, meetingID, style}) {
 
   return (
     <div className={cssClasses} style={style}>
-      <h2>Speaker</h2>
+      <h5>Speaker</h5>
       <WebexMeetingControl type="switch-speaker" meetingID={meetingID} />
-      <h2>Microphone</h2>
+      <h5>Microphone</h5>
       <WebexMeetingControl type="switch-microphone" meetingID={meetingID} />
     </div>
   );

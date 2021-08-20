@@ -18,7 +18,7 @@ export default function WebexVideoSettings({meetingID, className, style}) {
 
   return (
     <div className={cssClasses} style={style}>
-      <h2>Camera</h2>
+      <h5>Camera</h5>
       <WebexMeetingControl type="switch-camera" meetingID={meetingID} />
       <div className="media">
         <WebexLocalMedia mediaType="video" meetingID={meetingID} />

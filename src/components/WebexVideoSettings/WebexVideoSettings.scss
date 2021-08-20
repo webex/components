@@ -1,4 +1,12 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-video-settings {
+  h5 {
+    color: var(--wxc-text-color);
+    font-size: 1rem;
+    line-height: 150%;
+    font-family: $brand-font-bold;
+    margin: 20px 0 4px;
+  }
+
   .media {
     position: relative;
     margin-top: 1.5rem;
