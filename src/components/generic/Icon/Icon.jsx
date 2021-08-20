@@ -45,6 +45,7 @@ const icons = {
   'recents-presence': RecentsPresenceIcon,
   'pto-presence': PtoPresenceIcon,
   'share-screen-filled': ShareScreenFilledIcon,
+  'content-share': ShareScreenIcon,
 };
 
 const oldIcons = {

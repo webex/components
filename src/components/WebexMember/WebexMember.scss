@@ -1,12 +1,12 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-member {
   display: flex;
   align-items: center;
-  padding: 0.625rem 0 0.625rem 0;
+  color: var(--wxc-text-color);
 
   .details {
     flex: 1;
     min-width: 0;
-    margin-left: 0.25rem;
+    margin-left: 0.75rem;
   }
 
   .name {
@@ -20,14 +20,14 @@
     }
   }
 
-  .subtext, .roles {
+  .roles {
     font-size: 0.875rem;
-    color: $md-gray-70;
+    color: var(--wxc-secondary-text-color);
   }
 
   .organization {
     font-size: 0.875rem;
-    color: $md-yellow-40;
+    color: var(--wxc-warning-color);
   }
 
   .sharing {
