@@ -1,3 +1,10 @@
+# [1.103.0](https://github.com/webex/components/compare/v1.102.0...v1.103.0) (2021-08-20)
+
+
+### Features
+
+* **WebexRemoteMedia:** theme the remote media error ([8927b39](https://github.com/webex/components/commit/8927b39b065850fa1b105a536c9353b138828cb7))
+
 # [1.102.0](https://github.com/webex/components/compare/v1.101.0...v1.102.0) (2021-08-20)
 
 
