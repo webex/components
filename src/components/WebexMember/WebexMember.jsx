@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {DestinationType} from '@webex/component-adapter-interfaces';
-import {Icon} from '@momentum-ui/react';
-import Spinner from '../generic/Spinner/Spinner';
+import {Spinner} from '@momentum-ui/react';
 
+import Icon from '../generic/Icon/Icon';
 import {
   useMembers,
   useMe,
@@ -68,8 +68,8 @@ export default function WebexMember({
         {roles.length > 0 && <div className="roles">{roles.join(', ')}</div>}
         {isExternal && <div className="organization">{organization.name || emailDomain}</div>}
       </div>
-      {isSharing && <Icon name="icon-content-share_16" className="sharing" />}
-      {isMuted && <Icon name="icon-microphone-muted_16" className="muted" />}
+      {isSharing && <Icon name="content-share_16" className="sharing" />}
+      {isMuted && <Icon name="microphone-muted_16" className="muted" />}
     </div>
   );
 }
