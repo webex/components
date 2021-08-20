@@ -1,4 +1,7 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-member-roster {
+  display: flex;
+  flex-direction: column;
+
   .section-title {
     @include body-fonts;
     color: $md-gray-40;
@@ -22,5 +25,10 @@
     font-size: 1rem;
     line-height: 1.5rem;
     color: var(--wxc-text-color);
+  }
+
+  .members {
+    overflow-y: auto;
+    flex: 1;
   }
 }
