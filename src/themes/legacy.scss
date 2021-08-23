@@ -1,6 +1,7 @@
 :root {
   --wxc-meeting-background: transparent;
   --wxc-text-color: #{$wxc-black-alpha-100};
+  --wxc-video-background: transparent;
   --wxc-meeting-border: none;
   --wxc-meeting-box-shadow: none;
 
@@ -9,7 +10,6 @@
 
   --wxc-modal-background: #{$wxc-white-alpha-100};
   --wxc-modal-border: 1px solid #{$wxc-black-alpha-11};
-  --wxc-video-background: transparent;
 }
 
 .wxc-member-roster .title { display: none; }
@@ -21,3 +21,4 @@
 .wxc-button { display: none; }
 .wxc-old-icon { display: block; }
 .wxc-icon { display: none; }
+.wxc-in-meeting { background: black; }
