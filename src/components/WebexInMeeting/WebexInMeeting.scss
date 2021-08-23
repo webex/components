@@ -6,11 +6,20 @@ $shadow-color: rgba(0, 0, 0, 0.2);
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-in-meeting {
   position: relative;
   display: flex;
+  justify-content: center;
 
   &.remote-sharing {
     .local-media-in-meeting {
       display: none;
     }
+  }
+
+  .media-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-self: stretch;
   }
 
   .share-banner {

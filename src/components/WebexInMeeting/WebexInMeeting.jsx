@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 
 import Banner from '../generic/Banner/Banner';
@@ -20,7 +20,8 @@ import {TABLET, DESKTOP, DESKTOP_LARGE} from '../breakpoints';
  */
 export default function WebexInMeeting({className, meetingID, style}) {
   const {remoteShare, localShare} = useMeeting(meetingID);
-  const [meetingRef, {width}] = useElementDimensions();
+  const [meetingRef, {width, height}] = useElementDimensions();
+  const [maxWidth, setMaxWidth] = useState('none');
   const localMediaType = localShare?.stream ? 'screen' : 'video';
   const cssClasses = webexComponentClasses('in-meeting', className, {
     tablet: width >= TABLET && width < DESKTOP,
@@ -31,11 +32,17 @@ export default function WebexInMeeting({className, meetingID, style}) {
     'remote-sharing': remoteShare !== null,
   });
 
+  useEffect(() => {
+    setMaxWidth(height ? (height * 16) / 9 - 1 : 'none');
+  }, [height]);
+
   return (
     <div ref={meetingRef} className={cssClasses} style={style}>
-      <WebexRemoteMedia className="remote-media-in-meeting" meetingID={meetingID} />
-      <WebexLocalMedia className="local-media-in-meeting" meetingID={meetingID} mediaType={localMediaType} />
-      {localShare?.stream && <Banner className="share-banner">You&apos;re sharing your screen</Banner>}
+      <div style={{maxWidth}} className="media-container">
+        <WebexRemoteMedia className="remote-media-in-meeting" meetingID={meetingID} />
+        <WebexLocalMedia className="local-media-in-meeting" meetingID={meetingID} mediaType={localMediaType} />
+        {localShare?.stream && <Banner className="share-banner">You&apos;re sharing your screen</Banner>}
+      </div>
     </div>
   );
 }
