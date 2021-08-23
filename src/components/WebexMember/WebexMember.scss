@@ -34,7 +34,11 @@
     margin-right: 2.5rem;
   }
 
+  .unmuted {
+    color: var(--wxc-unmuted-color);
+  }
+
   .muted {
-    color: $md-red-60;
+    color: var(--wxc-muted-color);
   }
 }

@@ -3,6 +3,8 @@
   --wxc-text-color: #{$wxc-black-alpha-100};
   --wxc-secondary-text-color: #{$md-gray-90};
   --wxc-warning-color: #{$md-yellow-40};
+  --wxc-muted-color: transparent;
+  --wxc-unmuted-color: transparent;
   --wxc-video-background: transparent;
   --wxc-meeting-border: none;
   --wxc-box-shadow: none;
@@ -46,7 +48,6 @@
 // temporary logic for legacy
 .wxc-member-roster .title { display: none; }
 .wxc-banner.my-preview { display: none; }
-.wxc-old-icon { display: block; }
 .wxc-icon { display: none; }
 .wxc-member-roster .title { display: none; }
 .wxc-old-button { display: block; }
@@ -66,3 +67,4 @@
 }
 
 .wxc-avatar { display: none; }
+.wxc-member .icon-microphone_16 { display: none; }

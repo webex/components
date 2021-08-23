@@ -69,6 +69,7 @@ export default function WebexMember({
         {isExternal && <div className="organization">{organization.name || emailDomain}</div>}
       </div>
       {isSharing && <Icon name="content-share_16" className="sharing" />}
+      {!isMuted && <Icon name="microphone_16" className="unmuted" />}
       {isMuted && <Icon name="microphone-muted_16" className="muted" />}
     </div>
   );
