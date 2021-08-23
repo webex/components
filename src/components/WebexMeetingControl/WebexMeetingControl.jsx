@@ -40,7 +40,7 @@ function renderButton(action, display, cssClasses, style, showText) {
     <>
       <Button className={cssClasses} type={controlTypeToButtonType[type] || 'default'} isDisabled={isDisabled} onClick={action} title={tooltip}>
         {icon && <Icon name={icon} size={24} />}
-        <span className="button-text">{text}</span>
+        {showText && text && <span className="button-text">{text}</span>}
       </Button>
       <MomentumButton
         circle={icon && (!showText || !text)}

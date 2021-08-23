@@ -39,13 +39,7 @@ Array [
       style={Object {}}
       title="Proceed without camera"
       type="button"
-    >
-      <span
-        className="button-text"
-      >
-        Proceed without camera
-      </span>
-    </button>
+    />
     <button
       alt="Proceed without camera"
       aria-label="Proceed without camera"
@@ -142,13 +136,7 @@ Array [
       style={Object {}}
       title="Proceed without audio"
       type="button"
-    >
-      <span
-        className="button-text"
-      >
-        Proceed without audio
-      </span>
-    </button>
+    />
     <button
       alt="Proceed without audio"
       aria-label="Proceed without audio"

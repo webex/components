@@ -34,11 +34,6 @@ Array [
         }
       }
     />
-    <span
-      className="button-text"
-    >
-      Unmute
-    </span>
   </button>,
   <button
     alt="Unmute"
@@ -156,9 +151,6 @@ Array [
         }
       }
     />
-    <span
-      className="button-text"
-    />
   </button>,
   <button
     alt="Mute disabled"
@@ -251,13 +243,7 @@ Array [
     style={Object {}}
     title="Join meeting"
     type="button"
-  >
-    <span
-      className="button-text"
-    >
-      Join meeting
-    </span>
-  </button>,
+  />,
   <button
     alt="Join meeting"
     aria-label="Join meeting"
@@ -390,11 +376,6 @@ Array [
         }
       }
     />
-    <span
-      className="button-text"
-    >
-      Mute
-    </span>
   </button>,
   <button
     alt="Mute"
@@ -480,13 +461,7 @@ Array [
     style={Object {}}
     title="Join meeting"
     type="button"
-  >
-    <span
-      className="button-text"
-    >
-      Join meeting
-    </span>
-  </button>,
+  />,
   <button
     alt="Join meeting"
     aria-label="Join meeting"
