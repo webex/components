@@ -317,9 +317,6 @@ Array [
               }
             }
           />
-          <span
-            className="button-text"
-          />
         </button>
         <button
           alt="Stop Sharing"
@@ -416,9 +413,6 @@ Array [
                 "fontSize": 28,
               }
             }
-          />
-          <span
-            className="button-text"
           />
         </button>
         <button
@@ -517,9 +511,6 @@ Array [
               }
             }
           />
-          <span
-            className="button-text"
-          />
         </button>
         <button
           alt="Show settings panel"
@@ -604,9 +595,6 @@ Array [
                 "fontSize": 28,
               }
             }
-          />
-          <span
-            className="button-text"
           />
         </button>
         <button
@@ -1344,9 +1332,6 @@ Array [
               }
             }
           />
-          <span
-            className="button-text"
-          />
         </button>
         <button
           alt="Stop Sharing"
@@ -1443,9 +1428,6 @@ Array [
                 "fontSize": 28,
               }
             }
-          />
-          <span
-            className="button-text"
           />
         </button>
         <button
@@ -1544,9 +1526,6 @@ Array [
               }
             }
           />
-          <span
-            className="button-text"
-          />
         </button>
         <button
           alt="Show settings panel"
@@ -1631,9 +1610,6 @@ Array [
                 "fontSize": 28,
               }
             }
-          />
-          <span
-            className="button-text"
           />
         </button>
         <button
