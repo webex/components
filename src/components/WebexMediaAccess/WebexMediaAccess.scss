@@ -1,9 +1,14 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-media-access {
   display: flex;
-  align-items:center;
-  justify-content: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
+  .logo-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
   .title {
     margin-top: 1.2rem;
     font-size: .875rem;

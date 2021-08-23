@@ -24,6 +24,7 @@ const SCREENS = {
  *
  * @param {object} props Data passed to the component
  * @param {string} props.className  Custom CSS class to apply
+ * @param {JSX.Element} [props.logo]  Logo
  * @param {string} props.media State of media controls
  * @param {string} props.meetingID  ID of the meeting
  * @param {object} props.style  Custom style to apply
@@ -32,6 +33,7 @@ const SCREENS = {
  */
 export default function WebexMediaAccess({
   className,
+  logo,
   media,
   meetingID,
   style,
@@ -41,6 +43,7 @@ export default function WebexMediaAccess({
 
   return (
     <div className={cssClasses} style={style}>
+      {logo && <div className="logo-container">{logo}</div>}
       <Icon name={screen.icon} />
       <h2 className="title">{screen.title}</h2>
       <p className="body">
@@ -57,6 +60,7 @@ export default function WebexMediaAccess({
 
 WebexMediaAccess.propTypes = {
   className: PropTypes.string,
+  logo: PropTypes.node,
   media: PropTypes.oneOf(['camera', 'microphone']),
   meetingID: PropTypes.string.isRequired,
   style: PropTypes.shape(),
@@ -64,6 +68,7 @@ WebexMediaAccess.propTypes = {
 
 WebexMediaAccess.defaultProps = {
   className: '',
+  logo: undefined,
   media: 'camera',
   style: undefined,
 };
