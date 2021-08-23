@@ -32,7 +32,7 @@ const icons = {
  *
  * @param {object} props  Data passed to the component
  * @param {string} props.name  Icon name
- * @param {number} [props.size=24]  Icon width and height
+ * @param {number} [props.size]  Icon width and height
  * @param {string} props.className  Additional className for the component
  * @param {string} props.indicator  Additional otherBaseClass for the component
  * @param {object} props.style  Inline style object for the component
@@ -42,13 +42,18 @@ const icons = {
 export default function Icon({
   name, size, className, indicator, style,
 }) {
-  const baseName = name.split('_')[0];
+  const [baseName, baseSize] = name.split('_');
 
   const IconComponent = icons[baseName];
 
   return (
     <>
-      <IconComponent size={size} className={className} indicator={indicator} style={style} />
+      <IconComponent
+        size={size || baseSize}
+        className={className}
+        indicator={indicator}
+        style={style}
+      />
       <MomentumIcon name={`icon-${name}`} className="wxc-old-icon" />
     </>
   );
@@ -63,7 +68,7 @@ Icon.propTypes = {
 };
 
 Icon.defaultProps = {
-  size: 24,
+  size: undefined,
   className: '',
   indicator: '',
   style: {},
