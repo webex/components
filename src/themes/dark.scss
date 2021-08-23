@@ -1,12 +1,12 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-theme-dark {
   --wxc-meeting-background: #{$wxc-gradation-webex-dark-primary};
   --wxc-text-color: #{$wxc-white-alpha-95};
+  --wxc-video-background: #{$wxc-white-alpha-05};
   --wxc-meeting-border: 1px solid #{$wxc-white-alpha-30};
   --wxc-meeting-box-shadow: none;
 
   --wxc-banner-background: #{$wxc-gradation-dark-transparent};
   --wxc-banner-text-color: #{$wxc-white-alpha-95};
-  --wxc-video-background: #{$wxc-white-alpha-05};
 
   --wxc-icon--color: #{$wxc-white-alpha-100};
   --wxc-icon--active-color: #{$wxc-green-50};
@@ -69,4 +69,5 @@
   .wxc-button { display: flex; }
   .wxc-old-icon { display: none; }
   .wxc-icon { display: block; }
+  .wxc-in-meeting { background: transparent; }
 }
