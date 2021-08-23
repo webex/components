@@ -1,5 +1,4 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-media {
-  min-height: $WEBEX_MEETING_MIN_HEIGHT;
   min-width: $WEBEX_MEETING_MIN_WIDTH;
   background: var(--wxc-video-background);
   border-radius: 0.5rem;
@@ -36,6 +35,7 @@
   video {
     height: 100%;
     width: 100%;
+    object-fit: cover;
   }
 
   &.remote-video-n-share {

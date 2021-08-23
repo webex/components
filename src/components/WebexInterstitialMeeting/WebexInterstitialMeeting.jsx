@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import Spinner from '../generic/Spinner/Spinner';
 
@@ -6,6 +6,7 @@ import webexComponentClasses from '../helpers';
 
 import WebexLocalMedia from '../WebexLocalMedia/WebexLocalMedia';
 import WebexMeetingInfo from '../WebexMeetingInfo/WebexMeetingInfo';
+import {useElementDimensions} from '../hooks';
 
 /**
  * Webex Interstitial component displays the user's local video and
@@ -19,14 +20,20 @@ import WebexMeetingInfo from '../WebexMeetingInfo/WebexMeetingInfo';
  */
 export default function WebexInterstitialMeeting({className, meetingID, style}) {
   const cssClasses = webexComponentClasses('interstitial-meeting', className);
+  const [meetingRef, {height}] = useElementDimensions();
+  const [maxWidth, setMaxWidth] = useState('none');
+
+  useEffect(() => {
+    setMaxWidth(height ? (height * 16) / 9 - 1 : 'none');
+  }, [height]);
 
   return (
-    <div className={cssClasses} style={style}>
+    <div ref={meetingRef} className={cssClasses} style={style}>
       {meetingID ? (
-        <>
+        <div style={{maxWidth}} className="media-container">
           <WebexMeetingInfo className="interstitial-meeting-info" meetingID={meetingID} />
           <WebexLocalMedia className="interstitial-media" banner="My preview" meetingID={meetingID} mediaType="video" />
-        </>
+        </div>
       ) : (
         <Spinner />
       )}

@@ -6,58 +6,67 @@ Array [
     className="wxc-in-meeting remote-sharing"
   >
     <div
-      className="wxc-remote-media remote-media-in-meeting remote-video-n-share"
-    >
-      <video
-        autoPlay={true}
-        className="wxc-remote-video"
-        muted={true}
-        playsInline={true}
-      />
-      <video
-        autoPlay={true}
-        className="wxc-remote-share"
-        muted={true}
-        playsInline={true}
-      />
-      <audio
-        autoPlay={true}
-      />
-    </div>
-    <div
-      className="wxc-local-media local-media-in-meeting wxc-local-media-no-media"
+      className="media-container"
+      style={
+        Object {
+          "maxWidth": 176.77777777777777,
+        }
+      }
     >
       <div
-        className="wxc-avatar"
+        className="wxc-remote-media remote-media-in-meeting remote-video-n-share"
       >
-        <img
-          alt="avatar"
-          src="./images/barbara.png"
+        <video
+          autoPlay={true}
+          className="wxc-remote-video"
+          muted={true}
+          playsInline={true}
+        />
+        <video
+          autoPlay={true}
+          className="wxc-remote-share"
+          muted={true}
+          playsInline={true}
+        />
+        <audio
+          autoPlay={true}
         />
       </div>
       <div
-        className="md-avatar md-avatar--medium wxc-old-avatar"
-        title="Barbara German"
+        className="wxc-local-media local-media-in-meeting wxc-local-media-no-media"
       >
-        <span
-          className="md-avatar__letter"
-          style={
-            Object {
-              "backgroundColor": "",
-              "color": "",
-            }
-          }
+        <div
+          className="wxc-avatar"
         >
-          BG
-        </span>
-        <img
-          alt="Barbara German"
-          className="md-avatar__img md-avatar__img--hidden"
-          draggable={false}
-          onError={[Function]}
-          onLoad={[Function]}
-          src="./images/barbara.png"
-        />
+          <img
+            alt="avatar"
+            src="./images/barbara.png"
+          />
+        </div>
+        <div
+          className="md-avatar md-avatar--medium wxc-old-avatar"
+          title="Barbara German"
+        >
+          <span
+            className="md-avatar__letter"
+            style={
+              Object {
+                "backgroundColor": "",
+                "color": "",
+              }
+            }
+          >
+            BG
+          </span>
+          <img
+            alt="Barbara German"
+            className="md-avatar__img md-avatar__img--hidden"
+            draggable={false}
+            onError={[Function]}
+            onLoad={[Function]}
+            src="./images/barbara.png"
+          />
+        </div>
       </div>
     </div>
   </div>,
@@ -90,46 +99,55 @@ Array [
     className="wxc-in-meeting"
   >
     <div
-      className="wxc-remote-media remote-media-in-meeting"
-    >
-      <audio
-        autoPlay={true}
-      />
-    </div>
-    <div
-      className="wxc-local-media local-media-in-meeting wxc-local-media-no-media"
+      className="media-container"
+      style={
+        Object {
+          "maxWidth": 176.77777777777777,
+        }
+      }
     >
       <div
-        className="wxc-avatar"
+        className="wxc-remote-media remote-media-in-meeting"
       >
-        <img
-          alt="avatar"
-          src="./images/barbara.png"
+        <audio
+          autoPlay={true}
         />
       </div>
       <div
-        className="md-avatar md-avatar--medium wxc-old-avatar"
-        title="Barbara German"
+        className="wxc-local-media local-media-in-meeting wxc-local-media-no-media"
       >
-        <span
-          className="md-avatar__letter"
-          style={
-            Object {
-              "backgroundColor": "",
-              "color": "",
-            }
-          }
+        <div
+          className="wxc-avatar"
         >
-          BG
-        </span>
-        <img
-          alt="Barbara German"
-          className="md-avatar__img md-avatar__img--hidden"
-          draggable={false}
-          onError={[Function]}
-          onLoad={[Function]}
-          src="./images/barbara.png"
-        />
+          <img
+            alt="avatar"
+            src="./images/barbara.png"
+          />
+        </div>
+        <div
+          className="md-avatar md-avatar--medium wxc-old-avatar"
+          title="Barbara German"
+        >
+          <span
+            className="md-avatar__letter"
+            style={
+              Object {
+                "backgroundColor": "",
+                "color": "",
+              }
+            }
+          >
+            BG
+          </span>
+          <img
+            alt="Barbara German"
+            className="md-avatar__img md-avatar__img--hidden"
+            draggable={false}
+            onError={[Function]}
+            onLoad={[Function]}
+            src="./images/barbara.png"
+          />
+        </div>
       </div>
     </div>
   </div>,
@@ -162,34 +180,43 @@ Array [
     className="wxc-in-meeting"
   >
     <div
-      className="wxc-remote-media remote-media-in-meeting"
+      className="media-container"
+      style={
+        Object {
+          "maxWidth": 176.77777777777777,
+        }
+      }
     >
-      <span
-        className="md-badge md-badge--round"
+      <div
+        className="wxc-remote-media remote-media-in-meeting"
       >
-        <div
-          className="wxc-spinner"
-          size={16}
-          style={
-            Object {
-              "height": 16,
-              "width": 16,
+        <span
+          className="md-badge md-badge--round"
+        >
+          <div
+            className="wxc-spinner"
+            size={16}
+            style={
+              Object {
+                "height": 16,
+                "width": 16,
+              }
             }
-          }
+          />
+          <div>
+            Connecting
+          </div>
+        </span>
+      </div>
+      <div
+        className="wxc-local-media local-media-in-meeting"
+      >
+        
+        <video
+          autoPlay={true}
+          playsInline={true}
         />
-        <div>
-          Connecting
-        </div>
-      </span>
-    </div>
-    <div
-      className="wxc-local-media local-media-in-meeting"
-    >
-      
-      <video
-        autoPlay={true}
-        playsInline={true}
-      />
+      </div>
     </div>
   </div>,
   <video
@@ -221,31 +248,40 @@ Array [
     className="wxc-in-meeting"
   >
     <div
-      className="wxc-remote-media remote-media-in-meeting"
+      className="media-container"
+      style={
+        Object {
+          "maxWidth": 176.77777777777777,
+        }
+      }
     >
-      <video
-        autoPlay={true}
-        className="wxc-remote-video"
-        muted={true}
-        playsInline={true}
-      />
-      <audio
-        autoPlay={true}
-      />
-    </div>
-    <div
-      className="wxc-local-media local-media-in-meeting"
-    >
-      
-      <video
-        autoPlay={true}
-        playsInline={true}
-      />
-    </div>
-    <div
-      className="wxc-banner share-banner"
-    >
-      You're sharing your screen
+      <div
+        className="wxc-remote-media remote-media-in-meeting"
+      >
+        <video
+          autoPlay={true}
+          className="wxc-remote-video"
+          muted={true}
+          playsInline={true}
+        />
+        <audio
+          autoPlay={true}
+        />
+      </div>
+      <div
+        className="wxc-local-media local-media-in-meeting"
+      >
+        
+        <video
+          autoPlay={true}
+          playsInline={true}
+        />
+      </div>
+      <div
+        className="wxc-banner share-banner"
+      >
+        You're sharing your screen
+      </div>
     </div>
   </div>,
   <video
@@ -277,58 +313,67 @@ Array [
     className="wxc-in-meeting remote-sharing"
   >
     <div
-      className="wxc-remote-media remote-media-in-meeting remote-video-n-share"
-    >
-      <video
-        autoPlay={true}
-        className="wxc-remote-video"
-        muted={true}
-        playsInline={true}
-      />
-      <video
-        autoPlay={true}
-        className="wxc-remote-share"
-        muted={true}
-        playsInline={true}
-      />
-      <audio
-        autoPlay={true}
-      />
-    </div>
-    <div
-      className="wxc-local-media local-media-in-meeting wxc-local-media-no-media"
+      className="media-container"
+      style={
+        Object {
+          "maxWidth": 176.77777777777777,
+        }
+      }
     >
       <div
-        className="wxc-avatar"
+        className="wxc-remote-media remote-media-in-meeting remote-video-n-share"
       >
-        <img
-          alt="avatar"
-          src="./images/barbara.png"
+        <video
+          autoPlay={true}
+          className="wxc-remote-video"
+          muted={true}
+          playsInline={true}
+        />
+        <video
+          autoPlay={true}
+          className="wxc-remote-share"
+          muted={true}
+          playsInline={true}
+        />
+        <audio
+          autoPlay={true}
         />
       </div>
       <div
-        className="md-avatar md-avatar--medium wxc-old-avatar"
-        title="Barbara German"
+        className="wxc-local-media local-media-in-meeting wxc-local-media-no-media"
       >
-        <span
-          className="md-avatar__letter"
-          style={
-            Object {
-              "backgroundColor": "",
-              "color": "",
-            }
-          }
+        <div
+          className="wxc-avatar"
         >
-          BG
-        </span>
-        <img
-          alt="Barbara German"
-          className="md-avatar__img md-avatar__img--hidden"
-          draggable={false}
-          onError={[Function]}
-          onLoad={[Function]}
-          src="./images/barbara.png"
-        />
+          <img
+            alt="avatar"
+            src="./images/barbara.png"
+          />
+        </div>
+        <div
+          className="md-avatar md-avatar--medium wxc-old-avatar"
+          title="Barbara German"
+        >
+          <span
+            className="md-avatar__letter"
+            style={
+              Object {
+                "backgroundColor": "",
+                "color": "",
+              }
+            }
+          >
+            BG
+          </span>
+          <img
+            alt="Barbara German"
+            className="md-avatar__img md-avatar__img--hidden"
+            draggable={false}
+            onError={[Function]}
+            onLoad={[Function]}
+            src="./images/barbara.png"
+          />
+        </div>
       </div>
     </div>
   </div>,
@@ -361,23 +406,32 @@ Array [
     className="wxc-in-meeting"
   >
     <div
-      className="wxc-remote-media remote-media-in-meeting"
+      className="media-container"
+      style={
+        Object {
+          "maxWidth": 176.77777777777777,
+        }
+      }
     >
-      <video
-        autoPlay={true}
-        className="wxc-remote-video"
-        muted={true}
-        playsInline={true}
-      />
-    </div>
-    <div
-      className="wxc-local-media local-media-in-meeting"
-    >
-      
-      <video
-        autoPlay={true}
-        playsInline={true}
-      />
+      <div
+        className="wxc-remote-media remote-media-in-meeting"
+      >
+        <video
+          autoPlay={true}
+          className="wxc-remote-video"
+          muted={true}
+          playsInline={true}
+        />
+      </div>
+      <div
+        className="wxc-local-media local-media-in-meeting"
+      >
+        
+        <video
+          autoPlay={true}
+          playsInline={true}
+        />
+      </div>
     </div>
   </div>,
   <video

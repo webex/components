@@ -67,31 +67,40 @@ Array [
         className="wxc-in-meeting inner-meeting"
       >
         <div
-          className="wxc-remote-media remote-media-in-meeting"
+          className="media-container"
+          style={
+            Object {
+              "maxWidth": 176.77777777777777,
+            }
+          }
         >
-          <video
-            autoPlay={true}
-            className="wxc-remote-video"
-            muted={true}
-            playsInline={true}
-          />
-          <audio
-            autoPlay={true}
-          />
-        </div>
-        <div
-          className="wxc-local-media local-media-in-meeting"
-        >
-          
-          <video
-            autoPlay={true}
-            playsInline={true}
-          />
-        </div>
-        <div
-          className="wxc-banner share-banner"
-        >
-          You're sharing your screen
+          <div
+            className="wxc-remote-media remote-media-in-meeting"
+          >
+            <video
+              autoPlay={true}
+              className="wxc-remote-video"
+              muted={true}
+              playsInline={true}
+            />
+            <audio
+              autoPlay={true}
+            />
+          </div>
+          <div
+            className="wxc-local-media local-media-in-meeting"
+          >
+            
+            <video
+              autoPlay={true}
+              playsInline={true}
+            />
+          </div>
+          <div
+            className="wxc-banner share-banner"
+          >
+            You're sharing your screen
+          </div>
         </div>
       </div>
     </div>
@@ -727,24 +736,33 @@ Array [
         className="wxc-interstitial-meeting inner-meeting"
       >
         <div
-          className="wxc-meeting-info interstitial-meeting-info"
-        >
-          <h2>
-            Quarterly Financial Report
-          </h2>
-        </div>
-        <div
-          className="wxc-local-media interstitial-media"
+          className="media-container"
+          style={
+            Object {
+              "maxWidth": 176.77777777777777,
+            }
+          }
         >
           <div
-            className="wxc-banner my-preview"
+            className="wxc-meeting-info interstitial-meeting-info"
           >
-            My preview
+            <h2>
+              Quarterly Financial Report
+            </h2>
           </div>
-          <video
-            autoPlay={true}
-            playsInline={true}
-          />
+          <div
+            className="wxc-local-media interstitial-media"
+          >
+            <div
+              className="wxc-banner my-preview"
+            >
+              My preview
+            </div>
+            <video
+              autoPlay={true}
+              playsInline={true}
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -1153,25 +1171,34 @@ Array [
         className="wxc-in-meeting inner-meeting"
       >
         <div
-          className="wxc-remote-media remote-media-in-meeting"
+          className="media-container"
+          style={
+            Object {
+              "maxWidth": 176.77777777777777,
+            }
+          }
         >
-          <h4>
-            Waiting for others to join...
-          </h4>
-        </div>
-        <div
-          className="wxc-local-media local-media-in-meeting"
-        >
-          
-          <video
-            autoPlay={true}
-            playsInline={true}
-          />
-        </div>
-        <div
-          className="wxc-banner share-banner"
-        >
-          You're sharing your screen
+          <div
+            className="wxc-remote-media remote-media-in-meeting"
+          >
+            <h4>
+              Waiting for others to join...
+            </h4>
+          </div>
+          <div
+            className="wxc-local-media local-media-in-meeting"
+          >
+            
+            <video
+              autoPlay={true}
+              playsInline={true}
+            />
+          </div>
+          <div
+            className="wxc-banner share-banner"
+          >
+            You're sharing your screen
+          </div>
         </div>
       </div>
     </div>
