@@ -1,3 +1,11 @@
+# [1.104.0](https://github.com/webex/components/compare/v1.103.0...v1.104.0) (2021-08-23)
+
+
+### Features
+
+* **WebexComponents:** create themed Button component ([3b49b81](https://github.com/webex/components/commit/3b49b813082a98ab7258f8cae4345a2c4ad5456f))
+* **WebexMeeting:** display logo ([c15cf2d](https://github.com/webex/components/commit/c15cf2d28578ac9b408dd1209ad4962428338c2b))
+
 # [1.103.0](https://github.com/webex/components/compare/v1.102.0...v1.103.0) (2021-08-20)
 
 
