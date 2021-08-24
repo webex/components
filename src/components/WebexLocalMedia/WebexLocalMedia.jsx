@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef, JSX} from 'react';
 import PropTypes from 'prop-types';
 import Spinner from '../generic/Spinner/Spinner';
 
@@ -17,6 +17,7 @@ import {
  * Webex Local Media component displays the user's local video or local share.
  *
  * @param {object} props  Data passed to the component
+ * @param {JSX.Element} props.banner  Content of the banner
  * @param {string} props.className  Custom CSS class to apply
  * @param {string} props.mediaType  Type of local media to display
  * @param {string} props.meetingID  ID of the meeting from which to obtain local media
@@ -24,6 +25,7 @@ import {
  * @returns {object} JSX of the component
  */
 export default function WebexLocalMedia({
+  banner,
   className,
   mediaType,
   meetingID,
@@ -58,7 +60,7 @@ export default function WebexLocalMedia({
   if (stream) {
     content = (
       <>
-        {mediaType === 'video' && <Banner className="my-preview">My preview</Banner>}
+        {banner && <Banner className="my-preview">{banner}</Banner>}
         {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
         <video ref={ref} playsInline autoPlay />
       </>
@@ -75,6 +77,7 @@ export default function WebexLocalMedia({
 }
 
 WebexLocalMedia.propTypes = {
+  banner: PropTypes.node,
   className: PropTypes.string,
   mediaType: PropTypes.oneOf(['video', 'screen']),
   meetingID: PropTypes.string.isRequired,
@@ -82,6 +85,7 @@ WebexLocalMedia.propTypes = {
 };
 
 WebexLocalMedia.defaultProps = {
+  banner: '',
   className: '',
   mediaType: 'video',
   style: undefined,

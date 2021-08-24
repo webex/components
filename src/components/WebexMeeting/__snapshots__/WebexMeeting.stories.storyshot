@@ -82,6 +82,7 @@ Array [
         <div
           className="wxc-local-media local-media-in-meeting"
         >
+          
           <video
             autoPlay={true}
             playsInline={true}
@@ -1132,6 +1133,7 @@ Array [
         <div
           className="wxc-local-media local-media-in-meeting"
         >
+          
           <video
             autoPlay={true}
             playsInline={true}

@@ -169,11 +169,7 @@ Array [
     <div
       className="wxc-local-media local-media-in-meeting"
     >
-      <div
-        className="wxc-banner my-preview"
-      >
-        My preview
-      </div>
+      
       <video
         autoPlay={true}
         playsInline={true}
@@ -224,6 +220,7 @@ Array [
     <div
       className="wxc-local-media local-media-in-meeting"
     >
+      
       <video
         autoPlay={true}
         playsInline={true}
@@ -352,11 +349,7 @@ Array [
     <div
       className="wxc-local-media local-media-in-meeting"
     >
-      <div
-        className="wxc-banner my-preview"
-      >
-        My preview
-      </div>
+      
       <video
         autoPlay={true}
         playsInline={true}
