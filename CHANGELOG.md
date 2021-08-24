@@ -1,3 +1,10 @@
+# [1.107.0](https://github.com/webex/components/compare/v1.106.0...v1.107.0) (2021-08-24)
+
+
+### Features
+
+* **Icons:** remove fill attribute from each icon and add styling files for them ([88f6414](https://github.com/webex/components/commit/88f6414a2709e91a59ac24ca7f223acb8514be71))
+
 # [1.106.0](https://github.com/webex/components/compare/v1.105.0...v1.106.0) (2021-08-24)
 
 
