@@ -24,7 +24,6 @@ Array [
       >
         <svg
           className="wxc-icon "
-          fill="currentColor"
           height={20}
           style={Object {}}
           viewBox="0 0 20 20"
