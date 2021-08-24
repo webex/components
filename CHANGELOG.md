@@ -1,3 +1,10 @@
+# [1.108.0](https://github.com/webex/components/compare/v1.107.0...v1.108.0) (2021-08-24)
+
+
+### Features
+
+* **Modal:** add ghost button to the modal ([86875ef](https://github.com/webex/components/commit/86875ef9803972a9a81071656fd0280c6b03dc39))
+
 # [1.107.0](https://github.com/webex/components/compare/v1.106.0...v1.107.0) (2021-08-24)
 
 
