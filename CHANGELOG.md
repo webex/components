@@ -1,3 +1,10 @@
+# [1.106.0](https://github.com/webex/components/compare/v1.105.0...v1.106.0) (2021-08-24)
+
+
+### Features
+
+* **WebexMediaAccess:** display logo ([e5f2d66](https://github.com/webex/components/commit/e5f2d660f62393375204ca438263f1dd9e22c6c5))
+
 # [1.105.0](https://github.com/webex/components/compare/v1.104.0...v1.105.0) (2021-08-24)
 
 
