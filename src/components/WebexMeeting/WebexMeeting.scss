@@ -5,10 +5,18 @@
   border: var(--wxc-meeting-border);
   box-shadow: var(--wxc-meeting-box-shadow);
   padding: 0 1rem;
-  
   display: flex;
   flex-direction: column;
   align-items: stretch;
+
+  &.roster-only {
+    .inner-meeting {
+      display: none;
+    }
+    .member-roster {
+      flex: 1;
+    }
+  }
 
   .centered {
     margin: auto;

@@ -1,17 +1,18 @@
-import React, {useContext} from 'react';
+import React, {useContext, JSX} from 'react';
 import PropTypes from 'prop-types';
 import {DestinationType, MeetingState} from '@webex/component-adapter-interfaces';
+import Modal from '../generic/Modal/Modal';
 import Spinner from '../generic/Spinner/Spinner';
 import Title from '../generic/Title/Title';
+import {PHONE_LARGE} from '../breakpoints';
 
-import Modal from '../generic/Modal/Modal';
 import WebexInMeeting from '../WebexInMeeting/WebexInMeeting';
 import WebexInterstitialMeeting from '../WebexInterstitialMeeting/WebexInterstitialMeeting';
 import WebexMeetingControlBar from '../WebexMeetingControlBar/WebexMeetingControlBar';
 import WebexMemberRoster from '../WebexMemberRoster/WebexMemberRoster';
 import WebexSettings from '../WebexSettings/WebexSettings';
 import webexComponentClasses from '../helpers';
-import {useMeeting} from '../hooks';
+import {useElementDimensions, useMeeting} from '../hooks';
 import {AdapterContext} from '../hooks/contexts';
 
 /**
@@ -39,9 +40,8 @@ export default function WebexMeeting({
   const {JOINED, LEFT} = MeetingState;
   const isActive = state === JOINED;
   const adapter = useContext(AdapterContext);
-
-  const cssClasses = webexComponentClasses('meeting', className);
-
+  const [mediaRef, {width}] = useElementDimensions();
+  const cssClasses = webexComponentClasses('meeting', className, null, {'roster-only': showRoster && width <= PHONE_LARGE});
   let meetingDisplay;
 
   // A meeting with a falsy state means that the meeting has not been created
@@ -80,7 +80,7 @@ export default function WebexMeeting({
   }
 
   return (
-    <div className={cssClasses} style={style}>
+    <div className={cssClasses} style={style} ref={mediaRef}>
       {meetingDisplay}
     </div>
   );
