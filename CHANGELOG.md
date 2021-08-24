@@ -1,3 +1,11 @@
+# [1.105.0](https://github.com/webex/components/compare/v1.104.0...v1.105.0) (2021-08-24)
+
+
+### Features
+
+* **MeetingSdkAdapter:** implement switch speaker in its own file and create the tests accordingly ([563a475](https://github.com/webex/components/commit/563a4757973e779666def9f6a0c1031b789b364b))
+* **storybook:** set background for components on theme change ([b175736](https://github.com/webex/components/commit/b175736917ec266b099d72aba891988bef33bfee))
+
 # [1.104.0](https://github.com/webex/components/compare/v1.103.0...v1.104.0) (2021-08-23)
 
 
