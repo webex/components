@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {DestinationType} from '@webex/component-adapter-interfaces';
-import Icon from '../generic/Icon/Icon';
 import webexComponentClasses from '../helpers';
 
-import WebexMember from '../WebexMember/WebexMember';
+import Button from '../generic/Button/Button';
+import Icon from '../generic/Icon/Icon';
 import useMembers from '../hooks/useMembers';
 import {useMe} from '../hooks';
+import WebexMember from '../WebexMember/WebexMember';
 
 // TODO: Figure out how to import JS Doc definitions and remove duplication.
 /**
@@ -24,6 +25,7 @@ import {useMe} from '../hooks';
  * @param {string} props.destinationID  ID of the destination for which to get members
  * @param {string} props.destinationType Type of destination of the membership roster
  * @param {object} props.style  Custom style to apply
+ * @param {Function} props.onClose  Action to close the roster
  * @returns {object} JSX of the component
  *
  */
@@ -32,6 +34,7 @@ export default function WebexMemberRoster({
   destinationID,
   destinationType,
   style,
+  onClose,
 }) {
   const members = useMembers(destinationID, destinationType);
   const {orgID} = useMe();
@@ -75,7 +78,15 @@ export default function WebexMemberRoster({
 
   return (
     <div className={cssClasses} style={style}>
-      {title}
+      <div className="roster-header">
+        {title}
+        <Button
+          type="ghost"
+          onClick={onClose}
+        >
+          <Icon name="cancel" size={12} />
+        </Button>
+      </div>
       {warningExternalMembers}
       <div className="members">
         {destinationType !== DestinationType.MEETING
@@ -96,9 +107,11 @@ WebexMemberRoster.propTypes = {
   destinationID: PropTypes.string.isRequired,
   destinationType: PropTypes.string.isRequired,
   style: PropTypes.shape(),
+  onClose: PropTypes.func,
 };
 
 WebexMemberRoster.defaultProps = {
   className: '',
   style: undefined,
+  onClose: undefined,
 };
