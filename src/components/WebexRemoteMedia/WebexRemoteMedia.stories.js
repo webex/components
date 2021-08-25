@@ -6,7 +6,15 @@ export default {
   component: WebexRemoteMedia,
 };
 
-const Template = (args) => <WebexRemoteMedia {...args} />;
+const Template = (args) => {
+  const style = {
+    width: '100%',
+    ...args.style,
+  };
+  const props = {...args, style};
+
+  return <WebexRemoteMedia {...props} />;
+};
 
 export const Loading = Template.bind({});
 Loading.args = {
