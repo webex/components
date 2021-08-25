@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../helpers';
+import Title from '../generic/Title/Title';
 import WebexLocalMedia from '../WebexLocalMedia/WebexLocalMedia';
 import WebexMeetingControl from '../WebexMeetingControl/WebexMeetingControl';
 
@@ -18,7 +19,7 @@ export default function WebexVideoSettings({meetingID, className, style}) {
 
   return (
     <div className={cssClasses} style={style}>
-      <h2>Camera</h2>
+      <Title>Camera</Title>
       <WebexMeetingControl type="switch-camera" meetingID={meetingID} />
       <div className="media">
         <WebexLocalMedia banner="Preview" mediaType="video" meetingID={meetingID} />

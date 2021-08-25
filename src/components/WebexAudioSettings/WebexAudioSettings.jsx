@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../helpers';
+import Title from '../generic/Title/Title';
 import WebexMeetingControl from '../WebexMeetingControl/WebexMeetingControl';
 
 /**
@@ -17,9 +18,9 @@ export default function WebexAudioSettings({className, meetingID, style}) {
 
   return (
     <div className={cssClasses} style={style}>
-      <h2>Speaker</h2>
+      <Title>Speaker</Title>
       <WebexMeetingControl type="switch-speaker" meetingID={meetingID} />
-      <h2>Microphone</h2>
+      <Title>Microphone</Title>
       <WebexMeetingControl type="switch-microphone" meetingID={meetingID} />
     </div>
   );

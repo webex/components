@@ -44,9 +44,12 @@ Array [
         <div
           className="wxc-audio-settings"
         >
-          <h2>
+          <h5
+            className="wxc-title"
+            style={Object {}}
+          >
             Speaker
-          </h2>
+          </h5>
           <select
             className="wxc-select wxc-meeting-control"
             disabled={false}
@@ -84,9 +87,12 @@ Array [
               Headset Earphone (Jabra EVOLVE 20 SE MS) (0b0e:0300)
             </option>
           </select>
-          <h2>
+          <h5
+            className="wxc-title"
+            style={Object {}}
+          >
             Microphone
-          </h2>
+          </h5>
           <select
             className="wxc-select wxc-meeting-control"
             disabled={false}
