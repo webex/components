@@ -27,6 +27,10 @@ const icons = {
   error: RemoteMediaErrorIcon,
 };
 
+const oldIcons = {
+  microphone_28: 'microphone-muted_28',
+};
+
 /**
  * Displays an Icon based on its name.
  *
@@ -54,7 +58,7 @@ export default function Icon({
         indicator={indicator}
         style={style}
       />
-      <MomentumIcon name={`icon-${name}`} className="wxc-old-icon" />
+      <MomentumIcon name={`icon-${oldIcons[name] || name}`} className="wxc-old-icon" />
     </>
   );
 }

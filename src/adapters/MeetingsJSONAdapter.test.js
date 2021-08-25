@@ -341,7 +341,7 @@ describe('Meetings JSON Adapter', () => {
         .subscribe((display) => {
           expect(display).toMatchObject({
             ID: 'mute-audio',
-            icon: 'microphone-muted_28',
+            icon: 'microphone_28',
             tooltip: 'Mute',
             state: 'inactive',
           });
