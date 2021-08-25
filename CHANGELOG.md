@@ -1,3 +1,15 @@
+# [1.111.0](https://github.com/webex/components/compare/v1.110.0...v1.111.0) (2021-08-25)
+
+
+### Bug Fixes
+
+* **MeetingControls:** add types for join and mute audio controls when disabled ([7cc80ce](https://github.com/webex/components/commit/7cc80ce98ffb47452979fffd81f9f86178033944))
+
+
+### Features
+
+* **WebexComponents:** make WebexLocalMedia accept a banner prop ([9fad076](https://github.com/webex/components/commit/9fad076734de849722d09975952351bf240a6489))
+
 # [1.110.0](https://github.com/webex/components/compare/v1.109.0...v1.110.0) (2021-08-25)
 
 
