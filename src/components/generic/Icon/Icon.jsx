@@ -10,6 +10,8 @@ import {
   CancelIcon,
   CameraMutedIcon,
   ParticipantListIcon,
+  MoreIcon,
+  MoreAdrIcon,
   ExternalUserIcon,
   RemoteMediaErrorIcon,
 } from '../../icons';
@@ -23,6 +25,8 @@ const icons = {
   settings: SettingsIcon,
   cancel: CancelIcon,
   'participant-list': ParticipantListIcon,
+  more: MoreIcon,
+  'more-adr': MoreAdrIcon,
   'external-user': ExternalUserIcon,
   error: RemoteMediaErrorIcon,
 };
