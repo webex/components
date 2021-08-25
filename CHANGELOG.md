@@ -1,3 +1,12 @@
+# [1.114.0](https://github.com/webex/components/compare/v1.113.0...v1.114.0) (2021-08-25)
+
+
+### Features
+
+* **Modal:** style modal component in mobile view ([0fbeed2](https://github.com/webex/components/commit/0fbeed25ed3b005be8d861c91eb9da34eb91d7cc))
+* **WebexAvatar:** Add themed avatar component ([4ea64ba](https://github.com/webex/components/commit/4ea64ba6e854ca7ba82627409e0c7637d4b905ab))
+* **WebexMemberRoster:** add close button on top right ([ab2f42e](https://github.com/webex/components/commit/ab2f42ec3cbfb199bb584158969aa2fa33ef1c40))
+
 # [1.113.0](https://github.com/webex/components/compare/v1.112.0...v1.113.0) (2021-08-25)
 
 
