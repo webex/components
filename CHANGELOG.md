@@ -1,3 +1,10 @@
+# [1.113.0](https://github.com/webex/components/compare/v1.112.0...v1.113.0) (2021-08-25)
+
+
+### Features
+
+* **WebexComponents:** theme MediaAccess component ([7280d8d](https://github.com/webex/components/commit/7280d8d3d579c59ed9cea4f3dc4cef6848ea96a0))
+
 # [1.112.0](https://github.com/webex/components/compare/v1.111.0...v1.112.0) (2021-08-25)
 
 
