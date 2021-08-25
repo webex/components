@@ -57,7 +57,12 @@ export default function WebexMeeting({
             ? <WebexInMeeting meetingID={ID} className="inner-meeting" />
             : <WebexInterstitialMeeting meetingID={ID} className="inner-meeting" />}
           {showRoster && (
-            <WebexMemberRoster destinationID={ID} destinationType={DestinationType.MEETING} className="member-roster" />
+            <WebexMemberRoster
+              destinationID={ID}
+              destinationType={DestinationType.MEETING}
+              className="member-roster"
+              onClose={() => adapter.meetingsAdapter.toggleRoster(ID)}
+            />
           )}
         </div>
         <WebexMeetingControlBar meetingID={ID} className="control-bar" />

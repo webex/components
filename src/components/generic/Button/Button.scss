@@ -72,8 +72,9 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-button--ghost {
   background: transparent;
   border: var(--wxc-button--ghost--normal--border);
-  border-radius: 0.875rem;
+  border-radius: 50%;
   color: var(--wxc-button--ghost--normal--color);
+  padding: 0.5625rem;
 
   &:hover {
     background: var(--wxc-button--ghost--hover--background);

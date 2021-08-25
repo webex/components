@@ -1,6 +1,7 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-member-roster {
   display: flex;
   flex-direction: column;
+  padding: 0.625rem 0 0.625rem 0.625rem;
 
   .section-title {
     @include body-fonts;
@@ -20,15 +21,23 @@
     }
   }
 
-  .title {
-    font-family: $brand-font-bold;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    color: var(--wxc-text-color);
+  .roster-header {
+    display: flex;
+    align-items: center;
+    padding-right: 0.375rem;
+
+    .title {
+      font-family: $brand-font-bold;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: var(--wxc-text-color);
+      flex: 1;
+    }
   }
 
   .members {
     overflow-y: auto;
     flex: 1;
+    padding-right: 1.25rem;
   }
 }
