@@ -1,3 +1,10 @@
+# [1.112.0](https://github.com/webex/components/compare/v1.111.0...v1.112.0) (2021-08-25)
+
+
+### Features
+
+* **WebexSettings:** tabs as pills ([5679dab](https://github.com/webex/components/commit/5679dabdc0e964deca4c1d2e3688c3e774026f16))
+
 # [1.111.0](https://github.com/webex/components/compare/v1.110.0...v1.111.0) (2021-08-25)
 
 
