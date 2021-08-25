@@ -1,3 +1,16 @@
+# [1.109.0](https://github.com/webex/components/compare/v1.108.0...v1.109.0) (2021-08-25)
+
+
+### Bug Fixes
+
+* **WebexMeetingControl:** display button text only when needed ([2d0aed1](https://github.com/webex/components/commit/2d0aed1a6cddefd4f843cbcf3e8fa13805a4aa07))
+
+
+### Features
+
+* **WebexComponents:** get the icon size based on the name of the icon ([bf11d27](https://github.com/webex/components/commit/bf11d278322d6b96192889539175ce9c6e23dd05))
+* **WebexMeetingControl:** add unmuted theme icon ([b088a81](https://github.com/webex/components/commit/b088a81bb8c81912a215acab048410c27c9e2c91))
+
 # [1.108.0](https://github.com/webex/components/compare/v1.107.0...v1.108.0) (2021-08-24)
 
 
