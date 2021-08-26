@@ -1,9 +1,10 @@
 :root {
-  --wxc-meeting-background: transparent;
   --wxc-loading-logo: url(../../src/themes/dark/loading.gif);
   --wxc-text-color: #{$wxc-black-alpha-100};
-  --wxc-secondary-text-color: #{$md-gray-90};
+  --wxc-secondary-text-color: #{$md-gray-40};
   --wxc-warning-color: #{$md-yellow-40};
+  --wxc-primary-background: transparent;
+  --wxc-secondary-background: transparent;
   --wxc-muted-color: transparent;
   --wxc-unmuted-color: transparent;
   --wxc-video-background: transparent;
@@ -51,10 +52,8 @@
 }
 
 // temporary logic for legacy
-.wxc-member-roster .title { display: none; }
 .wxc-interstitial-meeting .wxc-banner { display: none; }
-.wxc-icon { display: none; }
-.wxc-member-roster .title { display: none; }
+.wxc-member-roster .roster-title { display: none; }
 .wxc-old-button { display: block; }
 .wxc-button { display: none; }
 .wxc-old-icon { display: block; }
