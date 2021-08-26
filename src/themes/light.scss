@@ -1,10 +1,11 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-theme-light {
-  --wxc-meeting-background: #{$wxc-gradation-webex-light-primary};
   --wxc-loading-logo: url(../../src/themes/light/loading.gif);
   --wxc-text-color: #{$wxc-black-alpha-95};
   --wxc-secondary-text-color: #{$wxc-black-alpha-60};
   --wxc-warning-color: #{$wxc-yellow-70};
   --wxc-error-color: #{$wxc-red-70};
+  --wxc-primary-background: #{$wxc-gradation-webex-light-primary};
+  --wxc-secondary-background: #{$wxc-gradation-webex-light-secondary};
   --wxc-muted-color: #{$wxc-red-60};
   --wxc-unmuted-color: #{$wxc-green-60};
   --wxc-video-background: #{$wxc-white-alpha-100};
@@ -128,7 +129,7 @@
 // temporary logic for legacy
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-theme-light {
   .wxc-interstitial-meeting .wxc-banner { display: flex; }
-  .wxc-member-roster .title { display: block; }
+  .wxc-member-roster .roster-title { display: block; }
   .wxc-old-button { display: none; }
   .wxc-button { display: flex; }
   .wxc-old-icon { display: none; }

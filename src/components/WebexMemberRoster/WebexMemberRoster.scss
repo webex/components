@@ -1,23 +1,34 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-member-roster {
   display: flex;
   flex-direction: column;
-  padding: 0.625rem 0 0.625rem 0.625rem;
+
+  color: var(--wxc-text-color);
+  background: var(--wxc-secondary-background);
+  border-radius: 0.5rem 0 0 0;
+  padding: 0.625rem 0 0.625rem 0.75rem;
+
 
   .section-title {
     @include body-fonts;
-    color: $md-gray-40;
-    border-bottom: 0.1rem solid $md-gray-30;
+    color: var(--wxc-secondary-text-color);
+    font-family: $brand-font-regular;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    margin: 0;
+    letter-spacing: normal;
+    padding: 0.438rem 0 0.188rem 0;
   }
 
   .external-user-warning {
-    color: $md-yellow-40;
+    color: var(--wxc-warning-color);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.25rem 0 0.25rem 0;
+    align-items: flex-start;
+    font-family: $brand-font-regular;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
 
-    h5 {
-      margin-left: 0.625rem;
+    .external-user-icon {
+      margin-right: 0.578rem;
     }
   }
 
@@ -26,11 +37,11 @@
     align-items: center;
     padding-right: 0.375rem;
 
-    .title {
+    .roster-title {
       font-family: $brand-font-bold;
       font-size: 1rem;
       line-height: 1.5rem;
-      color: var(--wxc-text-color);
+      margin: 0;
       flex: 1;
     }
   }

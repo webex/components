@@ -1,7 +1,8 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting {
   min-height: $WEBEX_MEETING_MIN_HEIGHT;
   min-width: $WEBEX_MEETING_MIN_WIDTH;
-  background: var(--wxc-meeting-background);
+  color: var(--wxc-text-color);
+  background: var(--wxc-primary-background);
   border: var(--wxc-meeting-border);
   box-shadow: var(--wxc-meeting-box-shadow);
   padding: 0 1rem;

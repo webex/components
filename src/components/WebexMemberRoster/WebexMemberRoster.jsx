@@ -5,6 +5,7 @@ import webexComponentClasses from '../helpers';
 
 import Button from '../generic/Button/Button';
 import Icon from '../generic/Icon/Icon';
+import Title from '../generic/Title/Title';
 import useMembers from '../hooks/useMembers';
 import {useMe} from '../hooks';
 import WebexMember from '../WebexMember/WebexMember';
@@ -54,7 +55,7 @@ export default function WebexMemberRoster({
 
   const renderSection = (data, title) => data.length > 0 && (
     <>
-      <h4 className="section-title">{title}</h4>
+      <h5 className="section-title">{title}</h5>
       {renderMembers(data)}
     </>
   );
@@ -63,23 +64,19 @@ export default function WebexMemberRoster({
     (member) => member.orgID !== undefined && orgID !== undefined && member.orgID !== orgID,
   ) && (
     <div className="external-user-warning">
-      <Icon name="external-user_20" size={20} />
-      <h5>People outside your company are included in this space</h5>
-    </div>
-  );
-
-  const title = (
-    <div className="title">
-      Participants (
-      {members ? members.length : <i>loading...</i>}
-      )
+      <Icon name="external-user_20" size={20} className="external-user-icon" />
+      <div>People outside your company are included in this space</div>
     </div>
   );
 
   return (
     <div className={cssClasses} style={style}>
       <div className="roster-header">
-        {title}
+        <Title className="roster-title">
+          Participants (
+          {members ? members.length : <i>loading...</i>}
+          )
+        </Title>
         <Button
           type="ghost"
           onClick={onClose}

@@ -14,13 +14,14 @@ Array [
     <div
       className="roster-header"
     >
-      <div
-        className="title"
+      <h5
+        className="wxc-title roster-title"
+        style={Object {}}
       >
         Participants (
         3
         )
-      </div>
+      </h5>
       <button
         className="wxc-button wxc-button--ghost"
         disabled={false}
@@ -56,7 +57,7 @@ Array [
       className="external-user-warning"
     >
       <svg
-        className="wxc-icon "
+        className="wxc-icon external-user-icon"
         height={20}
         style={Object {}}
         viewBox="0 0 20 20"
@@ -85,9 +86,9 @@ Array [
           }
         }
       />
-      <h5>
+      <div>
         People outside your company are included in this space
-      </h5>
+      </div>
     </div>
     <div
       className="members"
@@ -327,13 +328,14 @@ Array [
     <div
       className="roster-header"
     >
-      <div
-        className="title"
+      <h5
+        className="wxc-title roster-title"
+        style={Object {}}
       >
         Participants (
         6
         )
-      </div>
+      </h5>
       <button
         className="wxc-button wxc-button--ghost"
         disabled={false}
@@ -369,7 +371,7 @@ Array [
       className="external-user-warning"
     >
       <svg
-        className="wxc-icon "
+        className="wxc-icon external-user-icon"
         height={20}
         style={Object {}}
         viewBox="0 0 20 20"
@@ -398,18 +400,18 @@ Array [
           }
         }
       />
-      <h5>
+      <div>
         People outside your company are included in this space
-      </h5>
+      </div>
     </div>
     <div
       className="members"
     >
-      <h4
+      <h5
         className="section-title"
       >
         In meeting
-      </h4>
+      </h5>
       <div
         className="wxc-member"
       >
@@ -918,11 +920,11 @@ Array [
           }
         />
       </div>
-      <h4
+      <h5
         className="section-title"
       >
         Not in meeting
-      </h4>
+      </h5>
       <div
         className="wxc-member"
       >
@@ -1034,13 +1036,14 @@ Array [
     <div
       className="roster-header"
     >
-      <div
-        className="title"
+      <h5
+        className="wxc-title roster-title"
+        style={Object {}}
       >
         Participants (
         4
         )
-      </div>
+      </h5>
       <button
         className="wxc-button wxc-button--ghost"
         disabled={false}
