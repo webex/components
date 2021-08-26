@@ -14,10 +14,27 @@ Array [
         <div
           className="wxc-avatar"
         >
-          <img
-            alt="avatar"
-            src="./images/brenda.png"
-          />
+          <div
+            className="avatar-content"
+          >
+            <svg
+              className="placeholder placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                BS
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className=""
+              onError={[Function]}
+              src="./images/brenda.png"
+            />
+          </div>
         </div>
         <div
           className="md-avatar md-avatar--medium wxc-old-avatar"
@@ -80,10 +97,27 @@ Array [
         <div
           className="wxc-avatar"
         >
-          <img
-            alt="avatar"
-            src="./images/giacomo.png"
-          />
+          <div
+            className="avatar-content"
+          >
+            <svg
+              className="placeholder placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                GE
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className=""
+              onError={[Function]}
+              src="./images/giacomo.png"
+            />
+          </div>
         </div>
         <div
           className="md-avatar md-avatar--medium wxc-old-avatar"
@@ -139,10 +173,27 @@ Let me know if you need more help! Maybe we can talk about it during standup
         <div
           className="wxc-avatar"
         >
-          <img
-            alt="avatar"
-            src="./images/brenda.png"
-          />
+          <div
+            className="avatar-content"
+          >
+            <svg
+              className="placeholder placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                BS
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className=""
+              onError={[Function]}
+              src="./images/brenda.png"
+            />
+          </div>
         </div>
         <div
           className="md-avatar md-avatar--medium wxc-old-avatar"
@@ -196,10 +247,27 @@ Let me know if you need more help! Maybe we can talk about it during standup
         <div
           className="wxc-avatar"
         >
-          <img
-            alt="avatar"
-            src="./images/simon.png"
-          />
+          <div
+            className="avatar-content"
+          >
+            <svg
+              className="placeholder placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                SD
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className=""
+              onError={[Function]}
+              src="./images/simon.png"
+            />
+          </div>
         </div>
         <div
           className="md-avatar md-avatar--medium wxc-old-avatar"
@@ -505,37 +573,54 @@ Array [
         <div
           className="wxc-avatar"
         >
-          <img
-            alt="avatar"
-            src="./images/barbara.png"
-          />
           <div
-            className="status-icon-container"
+            className="avatar-content"
           >
             <svg
-              className="wxc-icon status-icon avatar-icon-dnd"
-              fill="none"
-              height={24}
-              style={Object {}}
-              viewBox="0 0 32 32"
-              width={24}
-              xmlns="http://www.w3.org/2000/svg"
+              className="placeholder placeholder-6"
+              viewBox="0 0 40 40"
             >
-              <path
-                clipRule="evenodd"
-                d="M16 29.5C23.4558 29.5 29.5 23.4558 29.5 16C29.5 8.54416 23.4558 2.5 16 2.5C8.54416 2.5 2.5 8.54416 2.5 16C2.5 23.4558 8.54416 29.5 16 29.5ZM10 15C9.44772 15 9 15.4477 9 16C9 16.5523 9.44772 17 10 17H22C22.5523 17 23 16.5523 23 16C23 15.4477 22.5523 15 22 15H10Z"
-                fillRule="evenodd"
-              />
+              <text
+                x="50%"
+                y="50%"
+              >
+                BG
+              </text>
             </svg>
-            <i
-              aria-label={null}
-              className="md-icon icon undefined wxc-old-icon"
-              style={
-                Object {
-                  "fontSize": 16,
-                }
-              }
+            <img
+              alt="avatar"
+              className=""
+              onError={[Function]}
+              src="./images/barbara.png"
             />
+            <div
+              className="status-icon-container"
+            >
+              <svg
+                className="wxc-icon status-icon status-dnd"
+                fill="none"
+                height={24}
+                style={Object {}}
+                viewBox="0 0 32 32"
+                width={24}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clipRule="evenodd"
+                  d="M16 29.5C23.4558 29.5 29.5 23.4558 29.5 16C29.5 8.54416 23.4558 2.5 16 2.5C8.54416 2.5 2.5 8.54416 2.5 16C2.5 23.4558 8.54416 29.5 16 29.5ZM10 15C9.44772 15 9 15.4477 9 16C9 16.5523 9.44772 17 10 17H22C22.5523 17 23 16.5523 23 16C23 15.4477 22.5523 15 22 15H10Z"
+                  fillRule="evenodd"
+                />
+              </svg>
+              <i
+                aria-label={null}
+                className="md-icon icon undefined wxc-old-icon"
+                style={
+                  Object {
+                    "fontSize": 16,
+                  }
+                }
+              />
+            </div>
           </div>
         </div>
         <div
@@ -605,10 +690,27 @@ Array [
         <div
           className="wxc-avatar"
         >
-          <img
-            alt="avatar"
-            src="./images/brandon.png"
-          />
+          <div
+            className="avatar-content"
+          >
+            <svg
+              className="placeholder placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                BS
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className=""
+              onError={[Function]}
+              src="./images/brandon.png"
+            />
+          </div>
         </div>
         <div
           className="md-avatar md-avatar--medium wxc-old-avatar"
@@ -677,37 +779,54 @@ Array [
         <div
           className="wxc-avatar"
         >
-          <img
-            alt="avatar"
-            src="./images/barbara.png"
-          />
           <div
-            className="status-icon-container"
+            className="avatar-content"
           >
             <svg
-              className="wxc-icon status-icon avatar-icon-dnd"
-              fill="none"
-              height={24}
-              style={Object {}}
-              viewBox="0 0 32 32"
-              width={24}
-              xmlns="http://www.w3.org/2000/svg"
+              className="placeholder placeholder-6"
+              viewBox="0 0 40 40"
             >
-              <path
-                clipRule="evenodd"
-                d="M16 29.5C23.4558 29.5 29.5 23.4558 29.5 16C29.5 8.54416 23.4558 2.5 16 2.5C8.54416 2.5 2.5 8.54416 2.5 16C2.5 23.4558 8.54416 29.5 16 29.5ZM10 15C9.44772 15 9 15.4477 9 16C9 16.5523 9.44772 17 10 17H22C22.5523 17 23 16.5523 23 16C23 15.4477 22.5523 15 22 15H10Z"
-                fillRule="evenodd"
-              />
+              <text
+                x="50%"
+                y="50%"
+              >
+                BG
+              </text>
             </svg>
-            <i
-              aria-label={null}
-              className="md-icon icon undefined wxc-old-icon"
-              style={
-                Object {
-                  "fontSize": 16,
-                }
-              }
+            <img
+              alt="avatar"
+              className=""
+              onError={[Function]}
+              src="./images/barbara.png"
             />
+            <div
+              className="status-icon-container"
+            >
+              <svg
+                className="wxc-icon status-icon status-dnd"
+                fill="none"
+                height={24}
+                style={Object {}}
+                viewBox="0 0 32 32"
+                width={24}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clipRule="evenodd"
+                  d="M16 29.5C23.4558 29.5 29.5 23.4558 29.5 16C29.5 8.54416 23.4558 2.5 16 2.5C8.54416 2.5 2.5 8.54416 2.5 16C2.5 23.4558 8.54416 29.5 16 29.5ZM10 15C9.44772 15 9 15.4477 9 16C9 16.5523 9.44772 17 10 17H22C22.5523 17 23 16.5523 23 16C23 15.4477 22.5523 15 22 15H10Z"
+                  fillRule="evenodd"
+                />
+              </svg>
+              <i
+                aria-label={null}
+                className="md-icon icon undefined wxc-old-icon"
+                style={
+                  Object {
+                    "fontSize": 16,
+                  }
+                }
+              />
+            </div>
           </div>
         </div>
         <div

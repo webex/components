@@ -10,3 +10,5 @@ global.MediaStream = jest.fn();
 global.navigator.mediaDevices = {
   enumerateDevices: jest.fn(() => Promise.resolve(mockDevices)),
 };
+
+global.Math.random = () => 0.5;
