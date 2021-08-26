@@ -25,6 +25,7 @@
   .inner-meeting {
     flex: 1;
     min-width: 0;
+    margin-bottom: 1rem;
   }
 
   .member-roster {
@@ -34,5 +35,6 @@
 
   .control-bar {
     overflow: hidden;
+    margin-bottom: 1.5rem;
   }
 }
