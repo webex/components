@@ -1,3 +1,13 @@
+# [1.115.0](https://github.com/webex/components/compare/v1.114.0...v1.115.0) (2021-08-26)
+
+
+### Features
+
+* **Icons:** add "more" and "more-adr" icons ([41f9e31](https://github.com/webex/components/commit/41f9e31927a7d984d42e80978b50e00da3d9c4ff))
+* **WebexComponents:** theme WebexMember component ([61fb921](https://github.com/webex/components/commit/61fb9211af33eb038495f20297201632ff07d404))
+* **WebexLocalMedia:** add background for light and dark theme for WebexLocalMedia ([d0775e1](https://github.com/webex/components/commit/d0775e17af43c6264faf54bf45b3ecbb2b572c7d))
+* **WebexSettings:** style titles in settings ([1fbd9fc](https://github.com/webex/components/commit/1fbd9fc40a5d3f99c48643950239fe1ca6bc0a5a))
+
 # [1.114.0](https://github.com/webex/components/compare/v1.113.0...v1.114.0) (2021-08-25)
 
 
