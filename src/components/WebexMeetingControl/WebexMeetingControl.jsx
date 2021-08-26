@@ -6,8 +6,8 @@ import {MeetingControlState} from '@webex/component-adapter-interfaces';
 import webexComponentClasses from '../helpers';
 import {useMeetingControl} from '../hooks';
 import Button from '../generic/Button/Button';
-import Select from '../WebexSettings/Select';
 import Icon from '../generic/Icon/Icon';
+import Select from '../generic/Select/Select';
 
 const controlTypeToButtonType = {
   JOIN: 'join',
@@ -75,8 +75,8 @@ function renderDropdown(action, display, cssClasses, style) {
     <Select
       className={cssClasses}
       style={style}
-      onChange={(event) => action(event.target.value)}
       value={selected || ''}
+      onChange={(id) => action(id)}
       options={options?.length === 0 ? [{value: '', label: noOptionsMessage}] : options}
       disabled={!options?.length}
     />

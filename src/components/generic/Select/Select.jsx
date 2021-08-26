@@ -1,0 +1,82 @@
+import React, {useState} from 'react';
+import PropTypes from 'prop-types';
+
+import Icon from '../Icon/Icon';
+import OptionsList from '../OptionsList/OptionsList';
+import webexComponentClasses from '../../helpers';
+
+/**
+ * Select Component
+ *
+ * @param {object} props  Data passed to the component
+ * @param {string} props.className  Custom CSS class to apply
+ * @param {string} props.value  Selected option
+ * @param {object[]} props.options  Array of options
+ * @param {Function} props.onChange  Action to perform on option selection
+ * @param {boolean} props.disabled  True when the control is disabled
+ * @returns {object}  JSX of the element
+ */
+export default function Select({
+  className,
+  value,
+  options,
+  onChange,
+  disabled,
+}) {
+  const [expanded, setExpanded] = useState(false);
+  const cssClasses = webexComponentClasses('select', className, undefined, {disabled});
+  const label = options?.find((option) => option.value === value)?.label;
+
+  const toggleExpanded = () => {
+    if (!disabled) {
+      setExpanded(!expanded);
+    }
+  };
+
+  const handleOptionSelect = (option) => {
+    setExpanded(false);
+    onChange(option.value);
+  };
+
+  return (
+    <div className={cssClasses}>
+      <div
+        className={`selected-option ${expanded ? 'expanded' : ''}`}
+        onClick={() => toggleExpanded()}
+        aria-hidden="true"
+        role="button"
+        tabIndex="0"
+        onBlur={() => setExpanded(false)}
+      >
+        <span className="label">{label || value}</span>
+        <Icon name={expanded ? 'arrow-up' : 'arrow-down'} size={13} />
+      </div>
+      {expanded && (
+        <OptionsList
+          className="options-list"
+          options={options}
+          onSelect={(option) => handleOptionSelect(option)}
+          selected={value}
+        />
+      )}
+    </div>
+  );
+}
+
+Select.propTypes = {
+  className: PropTypes.string,
+  value: PropTypes.string,
+  options: PropTypes.arrayOf(PropTypes.shape({
+    value: PropTypes.string,
+    label: PropTypes.string,
+  })),
+  onChange: PropTypes.func.isRequired,
+  disabled: PropTypes.bool,
+};
+
+Select.defaultProps = {
+  className: '',
+  value: '',
+  options: [],
+  disabled: false,
+};
