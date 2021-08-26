@@ -1,19 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {Avatar} from '@momentum-ui/react';
 import Icon from '../generic/Icon/Icon';
 import webexComponentClasses from '../helpers';
 import {usePerson} from '../hooks';
-
-const statusClassNames = {
-  active: 'avatar-icon-active',
-  call: 'avatar-icon-in-a-meeting',
-  dnd: 'avatar-icon-dnd',
-  inactive: 'avatar-icon-away',
-  meeting: 'avatar-icon-in-a-meeting',
-  ooo: 'avatar-icon-away',
-  presenting: 'avatar-icon-dnd',
-};
 
 const statusIcons = {
   active: 'unread',
@@ -24,6 +14,8 @@ const statusIcons = {
   ooo: 'pto-presence',
   presenting: 'share-screen-filled',
 };
+
+const numberOfPlaceholders = 11;
 
 /**
  * Displays the avatar of a Webex user.
@@ -43,39 +35,34 @@ export default function WebexAvatar({
   style,
 }) {
   const {avatar, displayName, status} = usePerson(personID);
+  const [randomPlaceholder] = useState(
+    () => Math.floor(Math.random() * numberOfPlaceholders) + 1,
+  );
+  const [imageError, setImageError] = useState(false);
   const type = displayStatus ? status : null;
+  const initials = displayName?.split(' ').map((name) => name.charAt(0)).slice(0, 2).join('');
+  const placeholderClassName = `placeholder placeholder-${randomPlaceholder}`;
   const cssClasses = webexComponentClasses('avatar', className);
-
-  let content;
-
-  if (!avatar && !displayName && !status) {
-    content = <> </>; // loading
-  } else if (!avatar && displayName === ' ') {
-    content = <> </>; // error
-  } else {
-    const iconName = statusIcons[status];
-    const iconClassName = statusClassNames[status];
-
-    if (!iconClassName) {
-      console.error(`${iconClassName} avatar status is not defined. Available avatar stauses are "${Object.keys(statusClassNames).join(', ')}".`);
-    }
-
-    content = (
-      <>
-        <img src={avatar} alt="avatar" />
-        {displayStatus && iconName && iconClassName && (
-        <div className="status-icon-container">
-          <Icon name={iconName} className={`status-icon ${iconClassName}`} />
-        </div>
-        )}
-      </>
-    );
-  }
+  const iconName = statusIcons[status];
+  const statusClassName = `status-${status}`;
 
   return (
     <>
       <div className={cssClasses} style={style}>
-        {content}
+        <div className="avatar-content">
+          <svg viewBox="0 0 40 40" className={placeholderClassName}>
+            <text x="50%" y="50%">
+              {displayName === ' ' ? '??' : initials}
+            </text>
+          </svg>
+          {avatar
+            && <img className={imageError ? 'image-error' : ''} src={avatar} alt="avatar" onError={() => setImageError(true)} />}
+          {displayStatus && iconName && (
+            <div className="status-icon-container">
+              <Icon name={iconName} className={`status-icon ${statusClassName}`} />
+            </div>
+          )}
+        </div>
       </div>
       <Avatar
         src={avatar}

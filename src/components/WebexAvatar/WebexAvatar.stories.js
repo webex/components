@@ -166,6 +166,22 @@ Typing.parameters = {
   },
 };
 
+export const WithoutImage = Template.bind({});
+WithoutImage.args = {
+  personID: 'user1',
+};
+WithoutImage.parameters = {
+  mockData: {
+    people: {
+      user1: {
+        ...people.user1,
+        status: PersonStatus.ACTIVE,
+        avatar: undefined,
+      },
+    },
+  },
+};
+
 export const Invalid = Template.bind({});
 Invalid.args = {
   personID: 'user-7',

@@ -98,10 +98,27 @@ Array [
         <div
           className="wxc-avatar"
         >
-          <img
-            alt="avatar"
-            src="./images/barbara.png"
-          />
+          <div
+            className="avatar-content"
+          >
+            <svg
+              className="placeholder placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                BG
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className=""
+              onError={[Function]}
+              src="./images/barbara.png"
+            />
+          </div>
         </div>
         <div
           className="md-avatar md-avatar--medium wxc-old-avatar"
@@ -143,10 +160,27 @@ Array [
         <div
           className="wxc-avatar"
         >
-          <img
-            alt="avatar"
-            src="./images/brandon.png"
-          />
+          <div
+            className="avatar-content"
+          >
+            <svg
+              className="placeholder placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                BS
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className=""
+              onError={[Function]}
+              src="./images/brandon.png"
+            />
+          </div>
         </div>
         <div
           className="md-avatar md-avatar--medium wxc-old-avatar"
@@ -193,10 +227,27 @@ Array [
         <div
           className="wxc-avatar"
         >
-          <img
-            alt="avatar"
-            src="./images/maria.png"
-          />
+          <div
+            className="avatar-content"
+          >
+            <svg
+              className="placeholder placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                MR
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className=""
+              onError={[Function]}
+              src="./images/maria.png"
+            />
+          </div>
         </div>
         <div
           className="md-avatar md-avatar--medium wxc-old-avatar"
@@ -365,10 +416,27 @@ Array [
         <div
           className="wxc-avatar"
         >
-          <img
-            alt="avatar"
-            src="./images/barbara.png"
-          />
+          <div
+            className="avatar-content"
+          >
+            <svg
+              className="placeholder placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                BG
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className=""
+              onError={[Function]}
+              src="./images/barbara.png"
+            />
+          </div>
         </div>
         <div
           className="md-avatar md-avatar--medium wxc-old-avatar"
@@ -448,10 +516,27 @@ Array [
         <div
           className="wxc-avatar"
         >
-          <img
-            alt="avatar"
-            src="./images/giacomo.png"
-          />
+          <div
+            className="avatar-content"
+          >
+            <svg
+              className="placeholder placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                GE
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className=""
+              onError={[Function]}
+              src="./images/giacomo.png"
+            />
+          </div>
         </div>
         <div
           className="md-avatar md-avatar--medium wxc-old-avatar"
@@ -517,10 +602,27 @@ Array [
         <div
           className="wxc-avatar"
         >
-          <img
-            alt="avatar"
-            src="./images/brenda.png"
-          />
+          <div
+            className="avatar-content"
+          >
+            <svg
+              className="placeholder placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                BS
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className=""
+              onError={[Function]}
+              src="./images/brenda.png"
+            />
+          </div>
         </div>
         <div
           className="md-avatar md-avatar--medium wxc-old-avatar"
@@ -626,10 +728,27 @@ Array [
         <div
           className="wxc-avatar"
         >
-          <img
-            alt="avatar"
-            src="./images/simon.png"
-          />
+          <div
+            className="avatar-content"
+          >
+            <svg
+              className="placeholder placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                SD
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className=""
+              onError={[Function]}
+              src="./images/simon.png"
+            />
+          </div>
         </div>
         <div
           className="md-avatar md-avatar--medium wxc-old-avatar"
@@ -700,10 +819,27 @@ Array [
         <div
           className="wxc-avatar"
         >
-          <img
-            alt="avatar"
-            src="./images/brandon.png"
-          />
+          <div
+            className="avatar-content"
+          >
+            <svg
+              className="placeholder placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                BS
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className=""
+              onError={[Function]}
+              src="./images/brandon.png"
+            />
+          </div>
         </div>
         <div
           className="md-avatar md-avatar--medium wxc-old-avatar"
@@ -793,10 +929,27 @@ Array [
         <div
           className="wxc-avatar"
         >
-          <img
-            alt="avatar"
-            src="./images/maria.png"
-          />
+          <div
+            className="avatar-content"
+          >
+            <svg
+              className="placeholder placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                MR
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className=""
+              onError={[Function]}
+              src="./images/maria.png"
+            />
+          </div>
         </div>
         <div
           className="md-avatar md-avatar--medium wxc-old-avatar"
@@ -928,10 +1081,27 @@ Array [
         <div
           className="wxc-avatar"
         >
-          <img
-            alt="avatar"
-            src="./images/barbara.png"
-          />
+          <div
+            className="avatar-content"
+          >
+            <svg
+              className="placeholder placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                BG
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className=""
+              onError={[Function]}
+              src="./images/barbara.png"
+            />
+          </div>
         </div>
         <div
           className="md-avatar md-avatar--medium wxc-old-avatar"
@@ -973,10 +1143,27 @@ Array [
         <div
           className="wxc-avatar"
         >
-          <img
-            alt="avatar"
-            src="./images/giacomo.png"
-          />
+          <div
+            className="avatar-content"
+          >
+            <svg
+              className="placeholder placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                GE
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className=""
+              onError={[Function]}
+              src="./images/giacomo.png"
+            />
+          </div>
         </div>
         <div
           className="md-avatar md-avatar--medium wxc-old-avatar"
@@ -1018,10 +1205,27 @@ Array [
         <div
           className="wxc-avatar"
         >
-          <img
-            alt="avatar"
-            src="./images/brenda.png"
-          />
+          <div
+            className="avatar-content"
+          >
+            <svg
+              className="placeholder placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                BS
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className=""
+              onError={[Function]}
+              src="./images/brenda.png"
+            />
+          </div>
         </div>
         <div
           className="md-avatar md-avatar--medium wxc-old-avatar"
@@ -1063,10 +1267,27 @@ Array [
         <div
           className="wxc-avatar"
         >
-          <img
-            alt="avatar"
-            src="./images/simon.png"
-          />
+          <div
+            className="avatar-content"
+          >
+            <svg
+              className="placeholder placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                SD
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className=""
+              onError={[Function]}
+              src="./images/simon.png"
+            />
+          </div>
         </div>
         <div
           className="md-avatar md-avatar--medium wxc-old-avatar"

@@ -44,10 +44,27 @@ Array [
         <div
           className="wxc-avatar"
         >
-          <img
-            alt="avatar"
-            src="./images/barbara.png"
-          />
+          <div
+            className="avatar-content"
+          >
+            <svg
+              className="placeholder placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                BG
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className=""
+              onError={[Function]}
+              src="./images/barbara.png"
+            />
+          </div>
         </div>
         <div
           className="md-avatar md-avatar--medium wxc-old-avatar"
@@ -131,10 +148,27 @@ Array [
         <div
           className="wxc-avatar"
         >
-          <img
-            alt="avatar"
-            src="./images/barbara.png"
-          />
+          <div
+            className="avatar-content"
+          >
+            <svg
+              className="placeholder placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                BG
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className=""
+              onError={[Function]}
+              src="./images/barbara.png"
+            />
+          </div>
         </div>
         <div
           className="md-avatar md-avatar--medium wxc-old-avatar"
@@ -374,10 +408,27 @@ Array [
         <div
           className="wxc-avatar"
         >
-          <img
-            alt="avatar"
-            src="./images/barbara.png"
-          />
+          <div
+            className="avatar-content"
+          >
+            <svg
+              className="placeholder placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                BG
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className=""
+              onError={[Function]}
+              src="./images/barbara.png"
+            />
+          </div>
         </div>
         <div
           className="md-avatar md-avatar--medium wxc-old-avatar"

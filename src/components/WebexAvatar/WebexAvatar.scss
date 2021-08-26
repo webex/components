@@ -1,14 +1,48 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-avatar {
-  display: flex;
-  align-items: center;
-
   width: 2.5rem;
   height: 2.5rem;
 
-  position: relative;
+  display: block;
+
+  .avatar-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .image-error {
+    display: none;
+  }
+
+  .placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+
+    font-size: 0.875rem;
+    color: var(--wxc-avatar--text-color);
+
+    text-anchor: middle;
+    dominant-baseline: middle;
+    fill: currentColor;
+
+    position: absolute;
+  }
 
   img {
     border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
   }
 
   .status-icon-container {
@@ -32,16 +66,23 @@
     }
   }
 
-  .avatar-icon-active {
-    color: var(--wxc-person-status--active-color);
-  }
-  .avatar-icon-in-a-meeting {
-    color: var(--wxc-person-status--in-a-meeting-color);
-  }
-  .avatar-icon-dnd {
-    color: var(--wxc-person-status--dnd-color);
-  }
-  .avatar-icon-away {
-    color: var(--wxc-person-status--away-color);
-  }
+  .status-active { color: var(--wxc-person-status--active-color); }
+  .status-call { color: var(--wxc-person-status--in-a-meeting-color); }
+  .status-meeting { color: var(--wxc-person-status--in-a-meeting-color); }
+  .status-dnd { color: var(--wxc-person-status--dnd-color); }
+  .status-presenting { color: var(--wxc-person-status--dnd-color); }
+  .status-inactive { color: var(--wxc-person-status--away-color); }
+  .status-ooo { color: var(--wxc-person-status--away-color); }
+
+  .placeholder-1 { background: var(--wxc-avatar--placeholder-1--background); }
+  .placeholder-2 { background: var(--wxc-avatar--placeholder-2--background); }
+  .placeholder-3 { background: var(--wxc-avatar--placeholder-3--background); }
+  .placeholder-4 { background: var(--wxc-avatar--placeholder-4--background); }
+  .placeholder-5 { background: var(--wxc-avatar--placeholder-5--background); }
+  .placeholder-6 { background: var(--wxc-avatar--placeholder-6--background); }
+  .placeholder-7 { background: var(--wxc-avatar--placeholder-7--background); }
+  .placeholder-8 { background: var(--wxc-avatar--placeholder-8--background); }
+  .placeholder-9 { background: var(--wxc-avatar--placeholder-9--background); }
+  .placeholder-10 { background: var(--wxc-avatar--placeholder-10--background); }
+  .placeholder-11 { background: var(--wxc-avatar--placeholder-11--background); }
 }
