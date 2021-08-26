@@ -18,3 +18,6 @@ export {default as QuietHoursPresenceIcon} from './QuietHoursPresenceIcon';
 export {default as RecentsPresenceIcon} from './RecentsPresenceIcon';
 export {default as UnreadIcon} from './UnreadIcon';
 export {default as ShareScreenFilledIcon} from './ShareScreenFilledIcon';
+export {default as ArrowDown} from './ArrowDown';
+export {default as ArrowUp} from './ArrowUp';
+export {default as CheckIcon} from './CheckIcon';

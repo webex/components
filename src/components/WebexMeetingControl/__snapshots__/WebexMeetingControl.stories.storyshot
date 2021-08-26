@@ -318,23 +318,45 @@ Array [
 
 exports[`Storyshots Meetings/Webex Meeting Control Dropdown 1`] = `
 Array [
-  <select
+  <div
     className="wxc-select wxc-meeting-control"
-    disabled={false}
-    onChange={[Function]}
-    value="cameraID1"
   >
-    <option
-      value="2a9f83242466302e2130134a57162f3562c59bd9ea34daa7f6fc2ad43a29265b"
+    <div
+      aria-hidden="true"
+      className="selected-option "
+      onBlur={[Function]}
+      onClick={[Function]}
+      role="button"
+      tabIndex="0"
     >
-      Logitech HD Webcam C525 (046d:0826)
-    </option>
-    <option
-      value="c2fcaf0c6b0bc7adc1192ba0b2dd236f7926e2ae163c56f80fa51613f9b9ec77"
-    >
-      Integrated Camera (04f2:b6d9)
-    </option>
-  </select>,
+      <span
+        className="label"
+      >
+        cameraID1
+      </span>
+      <svg
+        className="wxc-icon "
+        height={13}
+        style={Object {}}
+        viewBox="0 0 26 14"
+        width={13}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M25.7075 0.293202C25.52 0.105701 25.2656 0.000366211 25.0004 0.000366211C24.7353 0.000366211 24.4809 0.105701 24.2934 0.293202L13 11.5862L1.70699 0.293202C1.51851 0.110381 1.26568 0.00902984 1.0031 0.0110359C0.740528 0.013042 0.489278 0.118244 0.303611 0.303925C0.117943 0.489605 0.0127584 0.740862 0.0107709 1.00344C0.00878336 1.26601 0.110153 1.51883 0.292988 1.7073L12.293 13.7073C12.4805 13.8948 12.7348 14.0001 13 14.0001C13.2652 14.0001 13.5195 13.8948 13.707 13.7073L25.707 1.7073C25.8946 1.51984 26 1.26555 26.0001 1.00036C26.0002 0.735168 25.8949 0.4808 25.7075 0.293202Z"
+        />
+      </svg>
+      <i
+        aria-label={null}
+        className="md-icon icon undefined wxc-old-icon"
+        style={
+          Object {
+            "fontSize": 16,
+          }
+        }
+      />
+    </div>
+  </div>,
   <video
     autoPlay={true}
     height="0"
