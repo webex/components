@@ -18,8 +18,8 @@
   --wxc-badge-text-color: #{$wxc-black-alpha-95};
   --wxc-badge-box-shadow: 0 .5rem 1rem #{$wxc-black-alpha-16}, 0 0 .06rem #{$wxc-black-alpha-14};
 
-  --wxc-banner-background: #{$wxc-gradation-light-transparent};
-  --wxc-banner-text-color: #{$wxc-black-alpha-95};
+  --wxc-banner--top--background: #{$wxc-gradation-light-transparent};
+  --wxc-banner--bottom--background: #{$wxc-white-alpha-70};
 
   --wxc-icon--background-color: #{$wxc-white-alpha-100};
   --wxc-icon--color: #{$wxc-black-alpha-100};
@@ -82,7 +82,7 @@
   --wxc-tab--normal--background: transparent;
   --wxc-tab--active--color: #{$wxc-black-alpha-95};
   --wxc-tab--active--background: #{$wxc-black-alpha-20};
-  
+
   --wxc-select--normal--background: #{$wxc-white-alpha-100};
   --wxc-select--normal--color: #{$wxc-black-alpha-60};
   --wcx-select--normal--border: 1px solid #{$wxc-black-alpha-50};
@@ -112,7 +112,7 @@
 
 // temporary logic for legacy
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-theme-light {
-  .wxc-banner.my-preview { display: flex; }
+  .wxc-interstitial-meeting .wxc-banner { display: flex; }
   .wxc-member-roster .title { display: block; }
   .wxc-old-button { display: none; }
   .wxc-button { display: flex; }

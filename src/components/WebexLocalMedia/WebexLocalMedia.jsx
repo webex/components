@@ -1,8 +1,7 @@
-import React, {useRef, JSX} from 'react';
+import React, {useRef} from 'react';
 import PropTypes from 'prop-types';
 import Spinner from '../generic/Spinner/Spinner';
 
-import Banner from '../generic/Banner/Banner';
 import WebexAvatar from '../WebexAvatar/WebexAvatar';
 import webexComponentClasses from '../helpers';
 import {PHONE_LARGE} from '../breakpoints';
@@ -17,7 +16,6 @@ import {
  * Webex Local Media component displays the user's local video or local share.
  *
  * @param {object} props  Data passed to the component
- * @param {JSX.Element} props.banner  Content of the banner
  * @param {string} props.className  Custom CSS class to apply
  * @param {string} props.mediaType  Type of local media to display
  * @param {string} props.meetingID  ID of the meeting from which to obtain local media
@@ -25,7 +23,6 @@ import {
  * @returns {object} JSX of the component
  */
 export default function WebexLocalMedia({
-  banner,
   className,
   mediaType,
   meetingID,
@@ -55,29 +52,19 @@ export default function WebexLocalMedia({
     desktop: width >= PHONE_LARGE,
     'no-media': !stream,
   });
-  let content;
-
-  if (stream) {
-    content = (
-      <>
-        {banner && <Banner className="my-preview">{banner}</Banner>}
-        {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-        <video ref={ref} playsInline autoPlay />
-      </>
-    );
-  } else {
-    content = ID ? <WebexAvatar personID={ID} displayStatus={false} /> : <Spinner />;
-  }
+  const disabledVideo = ID ? <WebexAvatar personID={ID} displayStatus={false} /> : <Spinner />;
 
   return (
     <div ref={mediaRef} className={cssClasses} style={style}>
-      {content}
+      {
+        /* eslint-disable-next-line jsx-a11y/media-has-caption */
+        stream ? <video ref={ref} playsInline autoPlay /> : disabledVideo
+      }
     </div>
   );
 }
 
 WebexLocalMedia.propTypes = {
-  banner: PropTypes.node,
   className: PropTypes.string,
   mediaType: PropTypes.oneOf(['video', 'screen']),
   meetingID: PropTypes.string.isRequired,
@@ -85,7 +72,6 @@ WebexLocalMedia.propTypes = {
 };
 
 WebexLocalMedia.defaultProps = {
-  banner: '',
   className: '',
   mediaType: 'video',
   style: undefined,
