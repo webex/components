@@ -41,12 +41,13 @@ export default function WebexMember({
     .find((itemMember) => itemMember.ID === personID);
   const organization = useOrganization(orgID);
 
-  const isMuted = member && member.muted;
+  const isMuted = member?.muted;
   const isExternal = orgID !== undefined && me.orgID !== undefined && me.orgID !== orgID;
-  const isSharing = member && member.sharing;
+  const isSharing = member?.sharing;
+  const isInMeeting = member?.inMeeting;
   const showMe = me.ID === personID && destinationType === DestinationType.MEETING;
-  const isHost = member && member.host;
-  const isGuest = member && member.guest;
+  const isHost = member?.host;
+  const isGuest = member?.guest;
 
   const roles = [
     showMe && 'You',
@@ -68,9 +69,9 @@ export default function WebexMember({
         {roles.length > 0 && <div className="roles">{roles.join(', ')}</div>}
         {isExternal && <div className="organization">{organization.name || emailDomain}</div>}
       </div>
-      {isSharing && <Icon name="content-share_16" className="sharing" />}
-      {!isMuted && <Icon name="microphone_16" className="unmuted" />}
-      {isMuted && <Icon name="microphone-muted_16" className="muted" />}
+      {isInMeeting && isSharing && <Icon name="content-share_16" className="sharing" />}
+      {isInMeeting && !isMuted && <Icon name="microphone_16" className="unmuted" />}
+      {isInMeeting && isMuted && <Icon name="microphone-muted_16" className="muted" />}
     </div>
   );
 }
