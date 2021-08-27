@@ -230,7 +230,6 @@ Array [
       <div
         className="wxc-local-media local-media-in-meeting"
       >
-        
         <video
           autoPlay={true}
           playsInline={true}
@@ -296,14 +295,13 @@ Array [
       <div
         className="wxc-local-media local-media-in-meeting"
       >
-        
         <video
           autoPlay={true}
           playsInline={true}
         />
       </div>
       <div
-        className="wxc-banner share-banner"
+        className="wxc-banner share-banner wxc-banner--top"
       >
         You're sharing your screen
       </div>
@@ -463,7 +461,6 @@ Array [
       <div
         className="wxc-local-media local-media-in-meeting"
       >
-        
         <video
           autoPlay={true}
           playsInline={true}

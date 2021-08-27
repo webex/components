@@ -90,14 +90,13 @@ Array [
           <div
             className="wxc-local-media local-media-in-meeting"
           >
-            
             <video
               autoPlay={true}
               playsInline={true}
             />
           </div>
           <div
-            className="wxc-banner share-banner"
+            className="wxc-banner share-banner wxc-banner--top"
           >
             You're sharing your screen
           </div>
@@ -751,17 +750,21 @@ Array [
             </h2>
           </div>
           <div
-            className="wxc-local-media interstitial-media"
+            className="interstitial-media-container"
           >
             <div
-              className="wxc-banner my-preview"
+              className="wxc-local-media interstitial-media"
+            >
+              <video
+                autoPlay={true}
+                playsInline={true}
+              />
+            </div>
+            <div
+              className="wxc-banner wxc-banner--top"
             >
               My preview
             </div>
-            <video
-              autoPlay={true}
-              playsInline={true}
-            />
           </div>
         </div>
       </div>
@@ -1188,14 +1191,13 @@ Array [
           <div
             className="wxc-local-media local-media-in-meeting"
           >
-            
             <video
               autoPlay={true}
               playsInline={true}
             />
           </div>
           <div
-            className="wxc-banner share-banner"
+            className="wxc-banner share-banner wxc-banner--top"
           >
             You're sharing your screen
           </div>

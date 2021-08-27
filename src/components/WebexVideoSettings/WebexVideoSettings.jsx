@@ -4,6 +4,7 @@ import webexComponentClasses from '../helpers';
 import Title from '../generic/Title/Title';
 import WebexLocalMedia from '../WebexLocalMedia/WebexLocalMedia';
 import WebexMeetingControl from '../WebexMeetingControl/WebexMeetingControl';
+import Banner from '../generic/Banner/Banner';
 
 /**
  * Webex Video Settings component
@@ -22,8 +23,8 @@ export default function WebexVideoSettings({meetingID, className, style}) {
       <Title>Camera</Title>
       <WebexMeetingControl type="switch-camera" meetingID={meetingID} />
       <div className="media">
-        <WebexLocalMedia banner="Preview" mediaType="video" meetingID={meetingID} />
-        <div className="preview"><h3>Preview</h3></div>
+        <WebexLocalMedia mediaType="video" meetingID={meetingID} />
+        <Banner type="bottom">Preview</Banner>
       </div>
     </div>
   );

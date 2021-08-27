@@ -6,7 +6,15 @@ export default {
   component: WebexInterstitialMeeting,
 };
 
-const Template = (args) => <WebexInterstitialMeeting {...args} />;
+const Template = (args) => {
+  const style = {
+    height: '100%',
+    width: '100%',
+  };
+  const props = {...args, style};
+
+  return <WebexInterstitialMeeting {...props} />;
+};
 
 export const Loading = Template.bind({});
 Loading.args = {

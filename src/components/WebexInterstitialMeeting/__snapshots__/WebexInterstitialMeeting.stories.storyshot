@@ -4,6 +4,12 @@ exports[`Storyshots Meetings/Webex Interstitial Meeting Loading 1`] = `
 Array [
   <div
     className="wxc-interstitial-meeting"
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
   >
     <div
       className="wxc-spinner"
@@ -43,6 +49,12 @@ exports[`Storyshots Meetings/Webex Interstitial Meeting Video Disabled 1`] = `
 Array [
   <div
     className="wxc-interstitial-meeting"
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
   >
     <div
       className="media-container"
@@ -60,39 +72,43 @@ Array [
         </h2>
       </div>
       <div
-        className="wxc-local-media interstitial-media wxc-local-media-no-media"
+        className="interstitial-media-container"
       >
         <div
-          className="wxc-avatar"
+          className="wxc-local-media interstitial-media wxc-local-media-no-media"
         >
-          <img
-            alt="avatar"
-            src="./images/barbara.png"
-          />
-        </div>
-        <div
-          className="md-avatar md-avatar--medium wxc-old-avatar"
-          title="Barbara German"
-        >
-          <span
-            className="md-avatar__letter"
-            style={
-              Object {
-                "backgroundColor": "",
-                "color": "",
-              }
-            }
+          <div
+            className="wxc-avatar"
           >
-            BG
-          </span>
-          <img
-            alt="Barbara German"
-            className="md-avatar__img md-avatar__img--hidden"
-            draggable={false}
-            onError={[Function]}
-            onLoad={[Function]}
-            src="./images/barbara.png"
-          />
+            <img
+              alt="avatar"
+              src="./images/barbara.png"
+            />
+          </div>
+          <div
+            className="md-avatar md-avatar--medium wxc-old-avatar"
+            title="Barbara German"
+          >
+            <span
+              className="md-avatar__letter"
+              style={
+                Object {
+                  "backgroundColor": "",
+                  "color": "",
+                }
+              }
+            >
+              BG
+            </span>
+            <img
+              alt="Barbara German"
+              className="md-avatar__img md-avatar__img--hidden"
+              draggable={false}
+              onError={[Function]}
+              onLoad={[Function]}
+              src="./images/barbara.png"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -124,6 +140,12 @@ exports[`Storyshots Meetings/Webex Interstitial Meeting Video Enabled 1`] = `
 Array [
   <div
     className="wxc-interstitial-meeting"
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
   >
     <div
       className="media-container"
@@ -141,17 +163,21 @@ Array [
         </h2>
       </div>
       <div
-        className="wxc-local-media interstitial-media"
+        className="interstitial-media-container"
       >
         <div
-          className="wxc-banner my-preview"
+          className="wxc-local-media interstitial-media"
+        >
+          <video
+            autoPlay={true}
+            playsInline={true}
+          />
+        </div>
+        <div
+          className="wxc-banner wxc-banner--top"
         >
           My preview
         </div>
-        <video
-          autoPlay={true}
-          playsInline={true}
-        />
       </div>
     </div>
   </div>,

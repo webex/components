@@ -8,10 +8,16 @@
   .media-container {
     flex: 1;
     align-self: stretch;
-
-    position: relative;
     display: flex;
     flex-direction: column;
+  }
+
+  .interstitial-media-container {
+    flex: 1;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    position: relative;
   }
 
   .interstitial-media {

@@ -9,10 +9,16 @@ import webexComponentClasses from '../../helpers';
  * @param {JSX.Element} props.children  List of children
  * @param {string} props.className  Custom CSS class to apply
  * @param {object} props.style  Custom style to apply
+ * @param {'top' | 'bottom'} [props.type='top']  Type of the banner, indicating the position
  * @returns {object} JSX of the component
  */
-export default function Banner({children, className, style}) {
-  const cssClasses = webexComponentClasses('banner', className);
+export default function Banner({
+  children,
+  className,
+  style,
+  type,
+}) {
+  const cssClasses = webexComponentClasses('banner', className, {[`-${type}`]: true});
 
   return (
     <div className={cssClasses} style={style}>
@@ -25,9 +31,11 @@ Banner.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   style: PropTypes.shape(),
+  type: PropTypes.oneOf(['top', 'bottom']),
 };
 
 Banner.defaultProps = {
   className: '',
   style: undefined,
+  type: 'top',
 };
