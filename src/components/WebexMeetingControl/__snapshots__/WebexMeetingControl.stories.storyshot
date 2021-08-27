@@ -143,9 +143,11 @@ Array [
         fillOpacity="0.95"
       />
       <path
+        className="accent"
         d="M9 11.25H15V13.5C15 15.1569 13.6569 16.5 12 16.5C10.3431 16.5 9 15.1569 9 13.5V11.25Z"
       />
       <rect
+        className="accent"
         height="1.5"
         width="6"
         x="9"
@@ -201,9 +203,11 @@ Array [
           fillOpacity="0.95"
         />
         <path
+          className="accent"
           d="M9 11.25H15V13.5C15 15.1569 13.6569 16.5 12 16.5C10.3431 16.5 9 15.1569 9 13.5V11.25Z"
         />
         <rect
+          className="accent"
           height="1.5"
           width="6"
           x="9"
@@ -402,9 +406,11 @@ Array [
         fillOpacity="0.95"
       />
       <path
+        className="accent"
         d="M9 11.25H15V13.5C15 15.1569 13.6569 16.5 12 16.5C10.3431 16.5 9 15.1569 9 13.5V11.25Z"
       />
       <rect
+        className="accent"
         height="1.5"
         width="6"
         x="9"
@@ -465,9 +471,11 @@ Array [
           fillOpacity="0.95"
         />
         <path
+          className="accent"
           d="M9 11.25H15V13.5C15 15.1569 13.6569 16.5 12 16.5C10.3431 16.5 9 15.1569 9 13.5V11.25Z"
         />
         <rect
+          className="accent"
           height="1.5"
           width="6"
           x="9"
