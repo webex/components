@@ -61,6 +61,7 @@ const oldIcons = {
   'arrow-up': 'arrow-up_12',
   check: 'check_16',
   camera_48: 'camera_36',
+  camera_28: 'camera-muted_28',
   microphone_28: 'microphone-muted_28',
   microphone_48: 'microphone_36',
 };
