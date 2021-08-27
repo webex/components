@@ -1,3 +1,10 @@
+# [1.116.0](https://github.com/webex/components/compare/v1.115.0...v1.116.0) (2021-08-27)
+
+
+### Features
+
+* **Select:** style custom select ([497bfac](https://github.com/webex/components/commit/497bfac88ed13191e685581b57de3e56e7177811))
+
 # [1.115.0](https://github.com/webex/components/compare/v1.114.0...v1.115.0) (2021-08-26)
 
 
