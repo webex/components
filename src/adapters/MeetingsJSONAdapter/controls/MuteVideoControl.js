@@ -39,7 +39,7 @@ export default class MuteVideoControl extends MeetingControl {
     const unmuted = {
       ID: this.ID,
       type: 'TOGGLE',
-      icon: 'camera-muted_28',
+      icon: 'camera_28',
       tooltip: 'Stop video',
       state: MeetingControlState.INACTIVE,
       text: 'Stop video',

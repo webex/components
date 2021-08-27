@@ -411,7 +411,7 @@ describe('Meetings JSON Adapter', () => {
         .subscribe((display) => {
           expect(display).toMatchObject({
             ID: 'mute-video',
-            icon: 'camera-muted_28',
+            icon: 'camera_28',
             tooltip: 'Stop video',
             state: 'inactive',
           });
