@@ -258,7 +258,7 @@ Array [
           </svg>
           <i
             aria-label={null}
-            className="md-icon icon icon-camera_28 wxc-old-icon"
+            className="md-icon icon icon-camera-muted_28 wxc-old-icon"
             style={
               Object {
                 "fontSize": 28,
@@ -319,7 +319,7 @@ Array [
             </svg>
             <i
               aria-label={null}
-              className="md-icon icon icon-camera_28 wxc-old-icon"
+              className="md-icon icon icon-camera-muted_28 wxc-old-icon"
               style={
                 Object {
                   "fontSize": 28,
@@ -930,7 +930,7 @@ Array [
           </svg>
           <i
             aria-label={null}
-            className="md-icon icon icon-camera_28 wxc-old-icon"
+            className="md-icon icon icon-camera-muted_28 wxc-old-icon"
             style={
               Object {
                 "fontSize": 28,
@@ -991,7 +991,7 @@ Array [
             </svg>
             <i
               aria-label={null}
-              className="md-icon icon icon-camera_28 wxc-old-icon"
+              className="md-icon icon icon-camera-muted_28 wxc-old-icon"
               style={
                 Object {
                   "fontSize": 28,
@@ -1374,7 +1374,7 @@ Array [
           </svg>
           <i
             aria-label={null}
-            className="md-icon icon icon-camera_28 wxc-old-icon"
+            className="md-icon icon icon-camera-muted_28 wxc-old-icon"
             style={
               Object {
                 "fontSize": 28,
@@ -1435,7 +1435,7 @@ Array [
             </svg>
             <i
               aria-label={null}
-              className="md-icon icon icon-camera_28 wxc-old-icon"
+              className="md-icon icon icon-camera-muted_28 wxc-old-icon"
               style={
                 Object {
                   "fontSize": 28,
