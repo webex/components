@@ -1,3 +1,10 @@
+## [1.116.1](https://github.com/webex/components/compare/v1.116.0...v1.116.1) (2021-08-30)
+
+
+### Bug Fixes
+
+* **Select:** select value is not updated on change ([96ececa](https://github.com/webex/components/commit/96ececa7f9c78e9fd4f624f9096c5edeb3468f8e))
+
 # [1.116.0](https://github.com/webex/components/compare/v1.115.0...v1.116.0) (2021-08-27)
 
 
