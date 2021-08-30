@@ -8,4 +8,22 @@
   .button-text:not(:first-child) {
     margin-left: 6px;
   }
+
+  .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-audio-microphone-icon {
+    color: var(--wxc-icon--unmuted-color);
+    path:nth-child(1) { fill: var(--wxc-text-color); }
+  }
+
+  .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-audio-microphone-muted-icon {
+    color: var(--wxc-icon--muted-color);
+  }
+
+  .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-camera-icon {
+    color: var(--wxc-icon--unmuted-color);
+    path:nth-child(1) { fill: var(--wxc-text-color); }
+  }
+
+  .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-camera-muted-icon {
+    color: var(--wxc-icon--muted-color);
+  }
 }
