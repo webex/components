@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 
 import Icon from '../Icon/Icon';
@@ -38,6 +38,19 @@ export default function Select({
     onChange(option.value);
   };
 
+  const onOutsideClick = () => setExpanded(false);
+
+  useEffect(() => {
+    let cleanup;
+
+    if (expanded) {
+      document.addEventListener('click', onOutsideClick);
+      cleanup = () => document.removeEventListener('click', onOutsideClick);
+    }
+
+    return cleanup;
+  }, [expanded]);
+
   return (
     <div className={cssClasses}>
       <div
@@ -46,7 +59,6 @@ export default function Select({
         aria-hidden="true"
         role="button"
         tabIndex="0"
-        onBlur={() => setExpanded(false)}
       >
         <span className="label">{label || value}</span>
         <Icon name={expanded ? 'arrow-up' : 'arrow-down'} size={13} />
