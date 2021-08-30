@@ -1056,11 +1056,12 @@ Array [
       }
     }
   >
-    <div
-      className="centered"
+    <h5
+      className="wxc-title centered"
+      style={Object {}}
     >
       You've successfully left the meeting
-    </div>
+    </h5>
   </div>,
   <video
     autoPlay={true}

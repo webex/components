@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import PropTypes from 'prop-types';
 import {DestinationType, MeetingState} from '@webex/component-adapter-interfaces';
 import Spinner from '../generic/Spinner/Spinner';
+import Title from '../generic/Title/Title';
 
 import Modal from '../generic/Modal/Modal';
 import WebexInMeeting from '../WebexInMeeting/WebexInMeeting';
@@ -47,7 +48,7 @@ export default function WebexMeeting({
   if (!state) {
     meetingDisplay = <div className="centered"><Spinner /></div>;
   } else if (state === LEFT) {
-    meetingDisplay = <div className="centered">You&apos;ve successfully left the meeting</div>;
+    meetingDisplay = <Title className="centered">You&apos;ve successfully left the meeting</Title>;
   } else {
     meetingDisplay = (
       <>
