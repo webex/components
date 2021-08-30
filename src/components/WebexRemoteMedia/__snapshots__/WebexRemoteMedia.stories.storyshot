@@ -274,9 +274,12 @@ Array [
       }
     }
   >
-    <h4>
+    <h5
+      className="wxc-title"
+      style={Object {}}
+    >
       Waiting for others to join...
-    </h4>
+    </h5>
   </div>,
   <video
     autoPlay={true}

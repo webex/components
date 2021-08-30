@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import {Badge} from '@momentum-ui/react';
 import Icon from '../generic/Icon/Icon';
 import Spinner from '../generic/Spinner/Spinner';
+import Title from '../generic/Title/Title';
 
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import webexComponentClasses from '../helpers';
@@ -81,11 +82,7 @@ export default function WebexRemoteMedia({className, meetingID, style}) {
       </>
     );
   } else if (hasMedia && !hasOtherMembers) {
-    remoteDisplay = (
-      <h4>
-        Waiting for others to join...
-      </h4>
-    );
+    remoteDisplay = <Title>Waiting for others to join...</Title>;
   } else {
     remoteDisplay = (
       <Badge rounded>
