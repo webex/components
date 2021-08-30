@@ -1181,9 +1181,12 @@ Array [
           <div
             className="wxc-remote-media remote-media-in-meeting"
           >
-            <h4>
+            <h5
+              className="wxc-title"
+              style={Object {}}
+            >
               Waiting for others to join...
-            </h4>
+            </h5>
           </div>
           <div
             className="wxc-local-media local-media-in-meeting"
