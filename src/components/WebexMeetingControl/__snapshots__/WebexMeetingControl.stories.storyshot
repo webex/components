@@ -324,7 +324,6 @@ Array [
     <div
       aria-hidden="true"
       className="selected-option "
-      onBlur={[Function]}
       onClick={[Function]}
       role="button"
       tabIndex="0"
@@ -348,10 +347,10 @@ Array [
       </svg>
       <i
         aria-label={null}
-        className="md-icon icon undefined wxc-old-icon"
+        className="md-icon icon icon-arrow-down_12 wxc-old-icon"
         style={
           Object {
-            "fontSize": 16,
+            "fontSize": 12,
           }
         }
       />
