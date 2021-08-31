@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {DestinationType} from '@webex/component-adapter-interfaces';
-import {Spinner} from '@momentum-ui/react';
+import Spinner from '../generic/Spinner/Spinner';
 
 import Icon from '../generic/Icon/Icon';
 import {
