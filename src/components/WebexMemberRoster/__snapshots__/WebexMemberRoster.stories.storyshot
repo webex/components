@@ -96,7 +96,7 @@ Array [
         className="wxc-member"
       >
         <div
-          className="wxc-avatar"
+          className="wxc-avatar avatar"
         >
           <img
             alt="avatar"
@@ -141,7 +141,7 @@ Array [
         className="wxc-member"
       >
         <div
-          className="wxc-avatar"
+          className="wxc-avatar avatar"
         >
           <img
             alt="avatar"
@@ -191,7 +191,7 @@ Array [
         className="wxc-member"
       >
         <div
-          className="wxc-avatar"
+          className="wxc-avatar avatar"
         >
           <img
             alt="avatar"
@@ -363,7 +363,7 @@ Array [
         className="wxc-member"
       >
         <div
-          className="wxc-avatar"
+          className="wxc-avatar avatar"
         >
           <img
             alt="avatar"
@@ -413,7 +413,7 @@ Array [
         className="wxc-member"
       >
         <div
-          className="wxc-avatar"
+          className="wxc-avatar avatar"
         >
           <img
             alt="avatar"
@@ -482,7 +482,7 @@ Array [
         className="wxc-member"
       >
         <div
-          className="wxc-avatar"
+          className="wxc-avatar avatar"
         >
           <img
             alt="avatar"
@@ -558,7 +558,7 @@ Array [
         className="wxc-member"
       >
         <div
-          className="wxc-avatar"
+          className="wxc-avatar avatar"
         >
           <img
             alt="avatar"
@@ -632,7 +632,7 @@ Array [
         className="wxc-member"
       >
         <div
-          className="wxc-avatar"
+          className="wxc-avatar avatar"
         >
           <img
             alt="avatar"
@@ -692,7 +692,7 @@ Array [
         className="wxc-member"
       >
         <div
-          className="wxc-avatar"
+          className="wxc-avatar avatar"
         >
           <img
             alt="avatar"
@@ -851,7 +851,7 @@ Array [
         className="wxc-member"
       >
         <div
-          className="wxc-avatar"
+          className="wxc-avatar avatar"
         >
           <img
             alt="avatar"
@@ -896,7 +896,7 @@ Array [
         className="wxc-member"
       >
         <div
-          className="wxc-avatar"
+          className="wxc-avatar avatar"
         >
           <img
             alt="avatar"
@@ -941,7 +941,7 @@ Array [
         className="wxc-member"
       >
         <div
-          className="wxc-avatar"
+          className="wxc-avatar avatar"
         >
           <img
             alt="avatar"
@@ -986,7 +986,7 @@ Array [
         className="wxc-member"
       >
         <div
-          className="wxc-avatar"
+          className="wxc-avatar avatar"
         >
           <img
             alt="avatar"

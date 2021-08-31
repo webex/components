@@ -59,7 +59,7 @@ export default function WebexMember({
 
   return (
     <div className={cssClasses} style={style}>
-      <WebexAvatar personID={personID} displayStatus={displayStatus} />
+      <WebexAvatar personID={personID} displayStatus={displayStatus} className="avatar" />
       <div className="details">
         <div className="name">
           {(displayName ?? <Spinner size={16} />) || <i>Name not available</i>}
