@@ -1,3 +1,10 @@
+# [1.117.0](https://github.com/webex/components/compare/v1.116.1...v1.117.0) (2021-08-31)
+
+
+### Features
+
+* **icons:** disabled state for icons ([07a38fc](https://github.com/webex/components/commit/07a38fc2b5c2f8b4b245f0e4af5a6b48d0fefd67))
+
 ## [1.116.1](https://github.com/webex/components/compare/v1.116.0...v1.116.1) (2021-08-30)
 
 
