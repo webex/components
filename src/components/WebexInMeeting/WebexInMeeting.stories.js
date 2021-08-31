@@ -7,7 +7,16 @@ export default {
   component: WebexInMeeting,
 };
 
-const Template = (args) => <WebexInMeeting {...args} />;
+const Template = (args) => {
+  const style = {
+    width: '100%',
+    height: '100%',
+    ...args.style,
+  };
+  const props = {...args, style};
+
+  return <WebexInMeeting {...props} />;
+};
 
 export const VideoOnly = Template.bind({});
 VideoOnly.args = {

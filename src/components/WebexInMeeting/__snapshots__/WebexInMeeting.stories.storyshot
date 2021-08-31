@@ -4,6 +4,12 @@ exports[`Storyshots Meetings/Webex In-Meeting All Media 1`] = `
 Array [
   <div
     className="wxc-in-meeting remote-sharing"
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
   >
     <div
       className="media-container"
@@ -97,6 +103,12 @@ exports[`Storyshots Meetings/Webex In-Meeting Audio Only 1`] = `
 Array [
   <div
     className="wxc-in-meeting"
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
   >
     <div
       className="media-container"
@@ -178,6 +190,12 @@ exports[`Storyshots Meetings/Webex In-Meeting Connecting 1`] = `
 Array [
   <div
     className="wxc-in-meeting"
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
   >
     <div
       className="media-container"
@@ -246,6 +264,12 @@ exports[`Storyshots Meetings/Webex In-Meeting Local Share 1`] = `
 Array [
   <div
     className="wxc-in-meeting"
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
   >
     <div
       className="media-container"
@@ -311,6 +335,12 @@ exports[`Storyshots Meetings/Webex In-Meeting Remote Share 1`] = `
 Array [
   <div
     className="wxc-in-meeting remote-sharing"
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
   >
     <div
       className="media-container"
@@ -404,6 +434,12 @@ exports[`Storyshots Meetings/Webex In-Meeting Video Only 1`] = `
 Array [
   <div
     className="wxc-in-meeting"
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
   >
     <div
       className="media-container"
