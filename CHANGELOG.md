@@ -1,3 +1,10 @@
+# [1.119.0](https://github.com/webex/components/compare/v1.118.0...v1.119.0) (2021-08-31)
+
+
+### Features
+
+* **Badge:** create badge component ([0268394](https://github.com/webex/components/commit/02683944ca383ca5712ab28e7b482637be324470))
+
 # [1.118.0](https://github.com/webex/components/compare/v1.117.0...v1.118.0) (2021-08-31)
 
 
