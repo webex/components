@@ -2,7 +2,6 @@ import React, {useContext, JSX} from 'react';
 import PropTypes from 'prop-types';
 import {DestinationType, MeetingState} from '@webex/component-adapter-interfaces';
 import Modal from '../generic/Modal/Modal';
-import Spinner from '../generic/Spinner/Spinner';
 import Title from '../generic/Title/Title';
 import {PHONE_LARGE} from '../breakpoints';
 
@@ -46,7 +45,7 @@ export default function WebexMeeting({
 
   // A meeting with a falsy state means that the meeting has not been created
   if (!state) {
-    meetingDisplay = <div className="centered"><Spinner /></div>;
+    meetingDisplay = <div className="loading-logo" />;
   } else if (state === LEFT) {
     meetingDisplay = <Title className="centered">You&apos;ve successfully left the meeting</Title>;
   } else {

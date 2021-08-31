@@ -1,5 +1,6 @@
 :root {
   --wxc-meeting-background: transparent;
+  --wxc-loading-logo: url(../../src/themes/dark/loading.gif);
   --wxc-text-color: #{$wxc-black-alpha-100};
   --wxc-secondary-text-color: #{$md-gray-90};
   --wxc-warning-color: #{$md-yellow-40};
@@ -8,7 +9,7 @@
   --wxc-video-background: transparent;
   --wxc-meeting-border: none;
   --wxc-box-shadow: none;
-  
+
   --wxc-badge-background: #949494;
   --wxc-badge-border: 0;
   --wxc-badge-text-color: #fff;

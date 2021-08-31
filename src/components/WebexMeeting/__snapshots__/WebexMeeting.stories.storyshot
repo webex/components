@@ -12,19 +12,8 @@ Array [
     }
   >
     <div
-      className="centered"
-    >
-      <div
-        className="wxc-spinner"
-        size={28}
-        style={
-          Object {
-            "height": 28,
-            "width": 28,
-          }
-        }
-      />
-    </div>
+      className="loading-logo"
+    />
   </div>,
   <video
     autoPlay={true}
@@ -1116,19 +1105,8 @@ Array [
     }
   >
     <div
-      className="centered"
-    >
-      <div
-        className="wxc-spinner"
-        size={28}
-        style={
-          Object {
-            "height": 28,
-            "width": 28,
-          }
-        }
-      />
-    </div>
+      className="loading-logo"
+    />
   </div>,
   <video
     autoPlay={true}

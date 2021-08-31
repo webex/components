@@ -22,6 +22,11 @@
     margin: auto;
   }
 
+  .loading-logo {
+    background: var(--wxc-loading-logo) no-repeat center;
+    flex: 1;
+  }
+
   .body {
     flex: 1;
     min-height: 0;
