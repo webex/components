@@ -1,5 +1,6 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-theme-light {
   --wxc-meeting-background: #{$wxc-gradation-webex-light-primary};
+  --wxc-loading-logo: url(../../src/themes/light/loading.gif);
   --wxc-text-color: #{$wxc-black-alpha-95};
   --wxc-secondary-text-color: #{$wxc-black-alpha-60};
   --wxc-warning-color: #{$wxc-yellow-70};
