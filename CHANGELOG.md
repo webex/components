@@ -1,3 +1,20 @@
+# [1.118.0](https://github.com/webex/components/compare/v1.117.0...v1.118.0) (2021-08-31)
+
+
+### Bug Fixes
+
+* **people:** add an existing organization id for user6 ([d7b98c1](https://github.com/webex/components/commit/d7b98c111a133899b00bcf3999faab3ef2165f10))
+
+
+### Features
+
+* **WebexComponent:** theme the display of roster component on mobile ([0f9a962](https://github.com/webex/components/commit/0f9a962802307c5d2298c1f8a74d847379fd719c))
+* **WebexInMeeting:** add style for WebexInMeeting in the storybook ([56832ff](https://github.com/webex/components/commit/56832ffd5f5d7eacaa58bf6038d0750da8f0894d))
+* **WebexMeeting:** add style for left the meeting message ([ccf97d3](https://github.com/webex/components/commit/ccf97d3889999f1f321928405807dab54a6d08a4))
+* **WebexMeeting:** theme the WebexMeetingControlBar in WebexMeeting ([a40428d](https://github.com/webex/components/commit/a40428dc125bb667e6aefda44ba73d055383d9d0))
+* **WebexMember:** add icon when participant is unmuted ([55f253d](https://github.com/webex/components/commit/55f253d90b62d70cf00f61f61a03fbd523f8f667))
+* **WebexRemoteMedia:** crop media inside the meeting ([2341796](https://github.com/webex/components/commit/23417967327f96f1427ca01e052ed883f221a7be))
+
 # [1.117.0](https://github.com/webex/components/compare/v1.116.1...v1.117.0) (2021-08-31)
 
 
