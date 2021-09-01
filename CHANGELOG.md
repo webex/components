@@ -1,3 +1,10 @@
+# [1.120.0](https://github.com/webex/components/compare/v1.119.0...v1.120.0) (2021-09-01)
+
+
+### Features
+
+* **WebexRemoteMedia:** theme the "Waiting for others" message ([2626be4](https://github.com/webex/components/commit/2626be4ab532c1f978ace8663a8e8415630ab97d))
+
 # [1.119.0](https://github.com/webex/components/compare/v1.118.0...v1.119.0) (2021-08-31)
 
 
