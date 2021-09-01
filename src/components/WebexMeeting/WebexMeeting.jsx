@@ -95,6 +95,7 @@ export default function WebexMeeting({
           <Modal
             onClose={() => adapter.meetingsAdapter.toggleSettings(ID)}
             title="Settings"
+            className="settings"
           >
             <WebexSettings meetingID={ID} />
           </Modal>

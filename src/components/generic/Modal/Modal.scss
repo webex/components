@@ -16,6 +16,8 @@
     flex: 1;
     max-height: 100%;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
   }
 
   &.centered-modal{
@@ -35,9 +37,16 @@
   .modal-title {
     flex: 1;
     color: var(--wxc-text-color);
+    font-family: $brand-font-bold;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .modal-body {
     padding: 0 1.25rem 1.25rem;
+    overflow-y: auto;
+    flex: 1;
+    min-height: 5rem;
+    margin-bottom: 1rem;
   }
 }

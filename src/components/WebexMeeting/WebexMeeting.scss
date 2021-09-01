@@ -57,4 +57,13 @@
     left: 50%;
     transform: translateX(-50%);
   }
+
+  .settings .modal-content {
+    width: 75%;
+    max-width: 60rem;
+    min-width: 25rem;
+    height: 75%;
+    max-height: 60rem;
+    min-height: 25rem;
+  }
 }
