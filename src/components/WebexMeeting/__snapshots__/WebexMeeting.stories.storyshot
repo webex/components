@@ -103,6 +103,12 @@ Array [
           </div>
         </div>
       </div>
+      <div
+        className="wxc-badge media-state-toast"
+        style={Object {}}
+      >
+        Unmuted, Camera on
+      </div>
     </div>
     <div
       className="wxc-meeting-control-bar control-bar"
@@ -765,6 +771,12 @@ Array [
           </div>
         </div>
       </div>
+      <div
+        className="wxc-badge media-state-toast"
+        style={Object {}}
+      >
+        Unmuted, Camera on
+      </div>
     </div>
     <div
       className="wxc-meeting-control-bar control-bar"
@@ -1203,6 +1215,12 @@ Array [
             You're sharing your screen
           </div>
         </div>
+      </div>
+      <div
+        className="wxc-badge media-state-toast"
+        style={Object {}}
+      >
+        Unmuted, Camera on
       </div>
     </div>
     <div

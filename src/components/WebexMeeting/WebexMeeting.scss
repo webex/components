@@ -26,6 +26,7 @@
     flex: 1;
     min-height: 0;
 
+    position: relative;
     display: flex;
   }
 
@@ -43,5 +44,12 @@
   .control-bar {
     overflow: hidden;
     margin-bottom: 1.5rem;
+  }
+
+  .media-state-toast {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

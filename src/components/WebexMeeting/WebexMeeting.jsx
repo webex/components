@@ -1,6 +1,13 @@
-import React, {useContext, JSX} from 'react';
+import React, {
+  JSX,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import PropTypes from 'prop-types';
 import {DestinationType, MeetingState} from '@webex/component-adapter-interfaces';
+import Badge from '../generic/Badge/Badge';
 import Modal from '../generic/Modal/Modal';
 import Spinner from '../generic/Spinner/Spinner';
 import Title from '../generic/Title/Title';
@@ -33,6 +40,8 @@ export default function WebexMeeting({
 }) {
   const {
     ID,
+    localAudio,
+    localVideo,
     state,
     showRoster,
     showSettings,
@@ -42,6 +51,21 @@ export default function WebexMeeting({
   const adapter = useContext(AdapterContext);
   const [mediaRef, {width}] = useElementDimensions();
   const cssClasses = webexComponentClasses('meeting', className, null, {'roster-only': showRoster && width <= PHONE_LARGE});
+  const [showToast, setShowToast] = useState(false);
+  const toastTimeoutRef = useRef();
+
+  useEffect(() => {
+    if (state && state !== LEFT) {
+      setShowToast(true);
+      toastTimeoutRef.current = setTimeout(() => {
+        setShowToast(false);
+      }, 3000);
+    }
+
+    return () => clearTimeout(toastTimeoutRef.current);
+  }, [localAudio.stream, localVideo.stream, state, LEFT]);
+
+  const toastText = `${localAudio.stream ? 'Unmuted' : 'Muted'}, ${localVideo.stream ? 'Camera on' : 'Camera off'}`;
   let meetingDisplay;
 
   // A meeting with a falsy state means that the meeting has not been created
@@ -65,6 +89,7 @@ export default function WebexMeeting({
               onClose={() => adapter.meetingsAdapter.toggleRoster(ID)}
             />
           )}
+          {showToast && <Badge className="media-state-toast">{toastText}</Badge>}
         </div>
         <WebexMeetingControlBar meetingID={ID} className="control-bar" />
         {showSettings && (
