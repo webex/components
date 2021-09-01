@@ -1,3 +1,10 @@
+# [1.121.0](https://github.com/webex/components/compare/v1.120.0...v1.121.0) (2021-09-01)
+
+
+### Features
+
+* **WebexMeeting:** show a toast when video or audio mute controls change state ([f0ef4f7](https://github.com/webex/components/commit/f0ef4f7281559e56da6cf4a0ee882d80e0f48f3e))
+
 # [1.120.0](https://github.com/webex/components/compare/v1.119.0...v1.120.0) (2021-09-01)
 
 
