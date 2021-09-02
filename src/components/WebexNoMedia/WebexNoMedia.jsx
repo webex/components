@@ -10,31 +10,58 @@ import Title from '../generic/Title/Title';
  * @param {object} props  Data passed to the component
  * @param {string} [props.className]  Custom CSS class to apply
  * @param {object} [props.style]  Custom style to apply
+ * @param {string} props.media Media device type
  * @returns {object} JSX of the component
  */
-export default function WebexNoMedia({className, style}) {
-  const cssClasses = webexComponentClasses('no-media', className);
 
-  /* eslint-disable react/jsx-one-expression-per-line */
-  const message = (
-    <>
-      <p>Reload this page and select <span>Allow</span> when your browser asks.</p>
-      <p>
-        <div><b>Still not working?</b></div>
-        You may need to update your webpage permissions.
-        Go to your <b>browser settings</b>, look for website settings,
-        select <b>Allow for Camera</b>, then reload this page.
-      </p>
-    </>
-  );
-  /* eslint-enable react/jsx-one-expression-per-line */
+const SCREENS = {
+  microphone: {
+    icon: 'microphone-issue',
+    title: 'Can\'t access microphone',
+    /* eslint-disable react/jsx-one-expression-per-line */
+    message: (
+      <>
+        <p>Reload this page and select <span>Allow</span> when your browser asks.</p>
+        <p>
+          <div><b>Still not working?</b></div>
+          You may need to update your webpage permissions.
+          Go to your <b>browser settings</b>, look for website settings,
+          select <b>Allow for Microphone</b>, then reload this page.
+        </p>
+      </>
+    ),
+    /* eslint-enable react/jsx-one-expression-per-line */
+  },
+  camera: {
+    icon: 'camera-issue',
+    title: 'Can\'t access camera',
+    /* eslint-disable react/jsx-one-expression-per-line */
+    message:
+    (
+      <>
+        <p>Reload this page and select <span>Allow</span> when your browser asks.</p>
+        <p>
+          <div><b>Still not working?</b></div>
+          You may need to update your webpage permissions.
+          Go to your <b>browser settings</b>, look for website settings,
+          select <b>Allow for Camera</b>, then reload this page.
+        </p>
+      </>
+    ),
+    /* eslint-enable react/jsx-one-expression-per-line */
+  },
+};
+
+export default function WebexNoMedia({className, style, media}) {
+  const cssClasses = webexComponentClasses('no-media', className);
+  const screen = SCREENS[media];
 
   return (
     <div className={cssClasses} style={style}>
-      <Icon className="icon-media-issue" name="camera-issue" />
-      <Title>Can’t access camera</Title>
+      <Icon className="icon-media-issue" name={screen.icon} />
+      <Title>{screen.title}</Title>
       <div className="body">
-        {message}
+        {screen.message}
       </div>
     </div>
   );
@@ -43,6 +70,7 @@ export default function WebexNoMedia({className, style}) {
 WebexNoMedia.propTypes = {
   className: PropTypes.string,
   style: PropTypes.shape(),
+  media: PropTypes.oneOf(['camera', 'microphone']).isRequired,
 };
 
 WebexNoMedia.defaultProps = {
