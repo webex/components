@@ -9,3 +9,11 @@ export default {
 const Template = (args) => <WebexNoMedia {...args} />;
 
 export const Camera = Template.bind({});
+Camera.args = {
+  media: 'camera',
+};
+
+export const Microphone = Template.bind({});
+Microphone.args = {
+  media: 'microphone',
+};

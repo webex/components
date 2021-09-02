@@ -6,6 +6,7 @@ export {default as SettingsIcon} from './SettingsIcon';
 export {default as ShareScreenIcon} from './ShareScreenIcon';
 export {default as CancelIcon} from './CancelIcon';
 export {default as ParticipantListIcon} from './ParticipantListIcon';
+export {default as MicrophoneIssueIcon} from './MicrophoneIssueIcon';
 export {default as MoreIcon} from './MoreIcon';
 export {default as MoreAdrIcon} from './MoreAdrIcon';
 export {default as ExternalUserIcon} from './ExternalUserIcon';

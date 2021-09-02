@@ -53,7 +53,7 @@ Array [
       className="wxc-title"
       style={Object {}}
     >
-      Can’t access camera
+      Can't access camera
     </h5>
     <div
       className="body"
@@ -78,6 +78,112 @@ Array [
         , look for website settings, select 
         <b>
           Allow for Camera
+        </b>
+        , then reload this page.
+      </p>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex No Media Microphone 1`] = `
+Array [
+  <div
+    className="wxc-no-media"
+  >
+    <svg
+      className="wxc-icon wxc-microphone-issue-icon icon-media-issue"
+      height="91"
+      style={Object {}}
+      viewBox="0 0 62 91"
+      width="62"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M25.8672 65.2V69.2001C25.8672 80.2001 34.8672 89.2001 45.8672 89.2001M25.8672 65.2C32.4336 65.2 38.1092 61.1912 40.5672 55.5M25.8672 65.2C13.0672 65.2 9.86719 55.5 9.86719 49.3V17.3C9.86719 8.50005 17.0672 1.30005 25.8672 1.30005C34.2297 1.30005 41.1473 7.80188 41.8145 16M49.8672 89.2001H1.86719M40.9514 28.55V38.45M56.3514 39.35L46.1514 20.15C43.8514 15.95 37.8514 15.95 35.6514 20.15L21.7514 45.6501C19.5514 49.65 22.4514 54.5501 27.0514 54.5501H40.7456M40.7456 54.5501H55.9514C58.1514 54.5501 59.9514 52.7501 59.9514 50.5501C59.9514 48.3501 58.1514 46.5501 55.9514 46.5501C46.1033 46.5501 41.7664 52.8008 40.7456 54.5501ZM40.7456 54.5501C40.5795 54.8346 40.5012 55 40.5012 55"
+        stroke="url(#paint0_linear)"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeMiterlimit="10"
+        strokeWidth="2.5"
+      />
+      <defs>
+        <linearGradient
+          gradientUnits="userSpaceOnUse"
+          id="paint0_linear"
+          x1="30.9093"
+          x2="30.9093"
+          y1="1.30005"
+          y2="89.2001"
+        >
+          <stop
+            stopColor="var(--wxc-icon--error--gradient-start-color)"
+          />
+          <stop
+            offset="1"
+            stopColor="var(--wxc-icon--error--gradient-stop-color)"
+          />
+        </linearGradient>
+      </defs>
+    </svg>
+    <i
+      aria-label={null}
+      className="md-icon icon undefined wxc-old-icon"
+      style={
+        Object {
+          "fontSize": 16,
+        }
+      }
+    />
+    <h5
+      className="wxc-title"
+      style={Object {}}
+    >
+      Can't access microphone
+    </h5>
+    <div
+      className="body"
+    >
+      <p>
+        Reload this page and select 
+        <span>
+          Allow
+        </span>
+         when your browser asks.
+      </p>
+      <p>
+        <div>
+          <b>
+            Still not working?
+          </b>
+        </div>
+        You may need to update your webpage permissions. Go to your 
+        <b>
+          browser settings
+        </b>
+        , look for website settings, select 
+        <b>
+          Allow for Microphone
         </b>
         , then reload this page.
       </p>
