@@ -307,11 +307,16 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @param {string} ID  Id of the meeting for which to leave
    */
   async leaveMeeting(ID) {
-    await this.updateMeeting(ID, async () => ({
-      remoteVideo: null,
-      remoteAudio: null,
-      state: MeetingState.LEFT,
-    }));
+    await this.updateMeeting(ID, async (meeting) => {
+      this.stopStream(meeting.localVideo.stream);
+      this.stopStream(meeting.localAudio.stream);
+
+      return {
+        remoteVideo: null,
+        remoteAudio: null,
+        state: MeetingState.LEFT,
+      };
+    });
   }
 
   /**
@@ -430,18 +435,40 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   }
 
   /**
+   * Stops the tracks of the given media stream.
+   *
+   * @see {@link MediaStream|https://developer.mozilla.org/en-US/docs/Web/API/MediaStream}.
+   *
+   * @private
+   * @static
+   * @param {MediaStream} stream Media stream for which to stop tracks
+   */
+  // eslint-disable-next-line class-methods-use-this
+  stopStream(stream) {
+    if (stream?.getTracks) {
+      const tracks = stream.getTracks();
+
+      tracks.forEach((track) => track.stop());
+    }
+  }
+
+  /**
    * Toggles muting the local audio media stream track.
    * Used by "mute-audio" meeting control.
    *
    * @param {string} ID  Id of the meeting for which to mute local audio
    */
   async toggleMuteAudio(ID) {
-    await this.updateMeeting(ID, async (meeting) => ({
-      localAudio: {
-        stream: meeting.localAudio.stream
-          ? null : await this.getStream({video: false, audio: true}),
-      },
-    }));
+    await this.updateMeeting(ID, async (meeting) => {
+      this.stopStream(meeting.localAudio.stream);
+
+      return {
+        localAudio: {
+          stream: meeting.localAudio.stream
+            ? null : await this.getStream({video: false, audio: true}),
+        },
+      };
+    });
   }
 
   /**
@@ -451,12 +478,16 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @param {string} ID  Id of the meeting for which to mute local video
    */
   async toggleMuteVideo(ID) {
-    await this.updateMeeting(ID, async (meeting) => ({
-      localVideo: {
-        stream: meeting.localVideo?.stream
-          ? null : await this.getStream({video: true, audio: false}),
-      },
-    }));
+    await this.updateMeeting(ID, async (meeting) => {
+      this.stopStream(meeting.localVideo.stream);
+
+      return {
+        localVideo: {
+          stream: meeting.localVideo?.stream
+            ? null : await this.getStream({video: true, audio: false}),
+        },
+      };
+    });
   }
 
   /**
