@@ -9,12 +9,6 @@ jest.mock('./components/hooks/useActivityScroll');
 // useElementDimensions uses Resize Observer API which expects a real Element
 jest.mock('./components/hooks/useElementDimensions');
 
-// Mock react-uid to maintain a fixed ID for Momentum UI buttons
-jest.mock('react-uid', () => ({
-  __esModule: true,
-  UIDConsumer: ({children}) => children('md-button-0', 'md-button-0'),
-}));
-
 /**
  * Returns a mock DOM ref object for use of snapshot tests.
  *

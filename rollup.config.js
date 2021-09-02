@@ -40,11 +40,6 @@ const plugins = [
   }),
   copy({
     targets: [
-      // Copying Momentum's core CSS since there is no hosted version
-      {
-        src: 'node_modules/@momentum-ui/core/css/momentum-ui.min.css',
-        dest: 'dist/css',
-      },
       {
         src: ['src/themes/dark', 'src/themes/light'],
         dest: 'dist/themes',
@@ -59,7 +54,6 @@ const plugins = [
 
 // Peer dependencies to exclude from bundle
 const external = [
-  /^@momentum-ui/,
   /^prop-types/,
   /^react/,
   /^rxjs/,
@@ -67,7 +61,6 @@ const external = [
 
 // UMD global/window names for peer dependencies
 const globals = {
-  '@momentum-ui/react': 'momentum-ui-react',
   'prop-types': 'PropTypes',
   react: 'React',
   'react-dom': 'ReactDOM',

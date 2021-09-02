@@ -39,7 +39,7 @@ function renderButton(action, display, style, showText, asItem) {
   if (asItem) {
     output = (
       /* eslint-disable-next-line jsx-a11y/click-events-have-key-events */
-      <div onClick={action} title={tooltip} role="button" tabIndex="0">
+      <div onClick={action} title={tooltip} role="button" tabIndex="0" style={style}>
         {icon && <Icon name={icon} size={14} className="item-button-icon" />}
         <span className="item-button-text">{text}</span>
       </div>

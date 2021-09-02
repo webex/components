@@ -2,7 +2,6 @@ import React from 'react';
 import mockData from '../src/data';
 import {WebexJSONAdapter} from '../src/adapters';
 import {WebexDataProvider} from '../src/components';
-import '@momentum-ui/core/css/momentum-ui.min.css';
 import '../src/styles/index.scss';
 
 export const decorators = [

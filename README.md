@@ -70,51 +70,6 @@ To learn more on the Webex Widgets head to its Github repository at
 https://github.com/webex/widgets.
 
 ## Usage
-
-### Styles
-
-In order to properly style Webex Components, we need to import all the fonts, icons, images and core _CSS_ manually.
-You will need to add [Momentum UI](https://momentum.design) styles in addition to the components' styles.
-[Momentum UI](https://momentum.design) is Webex design system.
-
-#### Momentum UI Styles
-
-Momentum UI should be installed in your application as a peer dependency of the Webex Components. If you followed the command in the [install section](#install) it should already be your dependencies. There are two ways to include Momentum UI in your application:
-
-##### CSS
-
-1. Copy `@momentum-ui/core/fonts` directory to the fonts or assets directory of your app.
-If you don't have a directory, create a public directory from which the fonts to be served
-2. Copy `@momentum-ui/core/css/momentum-ui.min.css` to the styles or assets directory of your app
-3. In the `<head>` of your HTML, reference the location of your `momentum-ui.min.css`
-
-    ```HTML
-    <link rel="stylesheet" type="text/css" href="<path to>/momentum-ui.min.css">
-    ```
-
-##### Sass
-
-1. Copy `@momentum-ui/icons/fonts` directory to the fonts or assets directory of your app
-2. Add `$brand-font-folder`, `$icon-font-path`, and `$images-path` variables to your app's "variables.scss" file
-
-    ```JS
-    $brand-font-folder: '<path to fonts directory>';
-    $icon-font-path: '<path to fonts directory>';
-    $images-path: '<path to images directory>';
-    ```
-
-3. Import `@momentum-ui/core/scss/momentum-ui-components.scss` into your main entry Sass file _after_ the variables
-
-    ```CSS
-    ...
-
-    @import '@momentum-ui/core/scss/momentum-ui-components';
-    ```
-
-4. Compile your Sass using your static compiler or bundler
-
-For more on Momentum UI, you can visit [Momentum UI's repository](https://github.com/momentum-design/momentum-ui/tree/master/core)
-
 #### Webex Components Styles
 
 There are two ways to do this:
@@ -129,9 +84,6 @@ import '@webex/components/dist/css/webex-components.css';
 ...
 ```
 
-> *Important:* Import Momentum UI styles before importing the Webex Component ones.
-> Webex Components may override certain Momentum UI styles
-
 ##### HTML
 
 In the `<head>` of your `index.html`, add the following imports:
@@ -139,16 +91,9 @@ In the `<head>` of your `index.html`, add the following imports:
 ```html
 <head>
   ...
-
-  <!-- If you added Momentum UI via standard CSS -->
-  <link rel="stylesheet" type="text/css" href="<path to>/@momentum-ui/core/css/momentum-ui.min.css" />
-
   <link rel="stylesheet" type="text/css" href="node_modules/@webex/components/dist/css/webex-components.css" />
 </head>
 ```
-
-> *Important:* Import Momentum UI styles before importing the Webex Component ones.
-> Webex Components may override certain Momentum UI styles
 
 ### Adapters
 

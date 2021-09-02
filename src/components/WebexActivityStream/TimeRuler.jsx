@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {ListSeparator} from '@momentum-ui/react';
 import {
   format,
   isSameWeek,
@@ -55,7 +54,9 @@ export default function TimeRuler({className, date, style}) {
   const cssClasses = webexComponentClasses('time-ruler', className);
 
   return (
-    <ListSeparator className={cssClasses} style={style} role="listitem" text={text} />
+    <div className={cssClasses} style={style}>
+      <span className="md-list-separator__text">{text}</span>
+    </div>
   );
 }
 
