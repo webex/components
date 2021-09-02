@@ -1,3 +1,10 @@
+# [1.122.0](https://github.com/webex/components/compare/v1.121.0...v1.122.0) (2021-09-02)
+
+
+### Features
+
+* **WebexComponents:** move preview banner on the parent ([7f66e32](https://github.com/webex/components/commit/7f66e329f4144b07cf9e36da644d52f818dcb705))
+
 # [1.121.0](https://github.com/webex/components/compare/v1.120.0...v1.121.0) (2021-09-01)
 
 
