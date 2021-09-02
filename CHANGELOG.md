@@ -1,3 +1,15 @@
+# [1.123.0](https://github.com/webex/components/compare/v1.122.0...v1.123.0) (2021-09-02)
+
+
+### Bug Fixes
+
+* **WebexMember:** remove mute/unmute icon for not in meeting member ([39c1c63](https://github.com/webex/components/commit/39c1c63b8995d237a29d2187a4932b7ddbf726b6))
+
+
+### Features
+
+* **WebexNoMedia:** add component for displaying error when no camera is available ([dc951b7](https://github.com/webex/components/commit/dc951b767a9b8557bdfa33aa142574900cd9079f))
+
 # [1.122.0](https://github.com/webex/components/compare/v1.121.0...v1.122.0) (2021-09-02)
 
 
