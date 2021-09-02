@@ -1,3 +1,10 @@
+## [1.125.1](https://github.com/webex/components/compare/v1.125.0...v1.125.1) (2021-09-02)
+
+
+### Bug Fixes
+
+* **themes:** add the correct path for loading logo ([59075b8](https://github.com/webex/components/commit/59075b8f167238953c5220216b62c779a9cb03b6))
+
 # [1.125.0](https://github.com/webex/components/compare/v1.124.0...v1.125.0) (2021-09-02)
 
 
