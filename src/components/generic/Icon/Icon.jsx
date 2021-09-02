@@ -64,6 +64,8 @@ const oldIcons = {
   camera_28: 'camera-muted_28',
   microphone_28: 'microphone-muted_28',
   microphone_48: 'microphone_36',
+  more: 'more_28',
+  'more-adr': 'more-adr_28',
 };
 
 /**

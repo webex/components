@@ -50,7 +50,7 @@ OptionsList.propTypes = {
   className: PropTypes.string,
   options: PropTypes.arrayOf(PropTypes.shape({
     value: PropTypes.string,
-    label: PropTypes.string,
+    label: PropTypes.node,
     icon: PropTypes.string,
   })),
   onSelect: PropTypes.func.isRequired,

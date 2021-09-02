@@ -6,7 +6,15 @@ export default {
   component: WebexMeetingControlBar,
 };
 
-const Template = (args) => <WebexMeetingControlBar {...args} />;
+const Template = (args) => {
+  const style = {
+    width: '100%',
+    ...args.style,
+  };
+  const props = {...args, style};
+
+  return <WebexMeetingControlBar {...props} />;
+};
 
 export const Interstitial = Template.bind({});
 Interstitial.args = {

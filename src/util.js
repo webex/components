@@ -26,6 +26,7 @@ export function deepMerge(dest, src) {
     chainWith((lastMessage) => createDependentObservable(lastMessage),
   );
   ```
+ *
  * @param {function(lastMessage): Observable} createDependentObservable  Function that is passed the last message emitted by the source observable and returns a new observable
  * @returns {Observable} observable
  */
