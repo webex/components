@@ -13,31 +13,37 @@ export default function useElementDimensions() {
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
-    // Use native implementation when available, otherwise use polyfill
-    const ResizeObserver = window.ResizeObserver || Polyfill;
-    const observer = new ResizeObserver((entries) => {
-      // Get the first DOM element (our ref) and look at the border box dimensions
-      const [entry] = entries;
-      const {contentRect} = entry;
+    let cleanup;
 
-      // Update height only if there has been height change
-      if (height !== contentRect.height) {
-        setHeight(contentRect.height);
-      }
+    if (elementRef.current) {
+      // Use native implementation when available, otherwise use polyfill
+      const ResizeObserver = window.ResizeObserver || Polyfill;
+      const observer = new ResizeObserver((entries) => {
+        // Get the first DOM element (our ref) and look at the border box dimensions
+        const [entry] = entries;
+        const {contentRect} = entry;
 
-      // Update width only if there has been width change
-      if (width !== contentRect.width) {
-        setWidth(contentRect.width);
-      }
-    });
+        // Update height only if there has been height change
+        if (height !== contentRect.height) {
+          setHeight(contentRect.height);
+        }
 
-    observer.observe(elementRef.current);
+        // Update width only if there has been width change
+        if (width !== contentRect.width) {
+          setWidth(contentRect.width);
+        }
+      });
 
-    return () => {
-      observer.disconnect();
-    };
+      observer.observe(elementRef.current);
+
+      cleanup = () => {
+        observer.disconnect();
+      };
+    }
+
+    return cleanup;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [elementRef.current]);
 
   return [elementRef, {height, width}];
 }

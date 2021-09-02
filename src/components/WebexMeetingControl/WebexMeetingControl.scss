@@ -1,11 +1,32 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-control {
+  display: inline-block;
+  color: var(--wxc-text-color);
+  font: $brand-font-regular;
+
+  &.as-item {
+    display: flex;
+    align-items: baseline;
+
+    .item-button-icon {
+      position: relative;
+      top: 0.0625rem;
+    }
+
+    .item-button-text {
+      flex: 1;
+      margin-left: 0.75rem;
+      font-size: 1rem;
+      line-height: 150%;
+    }
+  }
+
   .button-text {
     position: relative;
-    top: 2px;
+    top: 0.125rem;
     white-space: nowrap;
   }
 
   .button-text:not(:first-child) {
-    margin-left: 6px;
+    margin-left: 0.375rem;
   }
 }

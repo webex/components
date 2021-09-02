@@ -1,7 +1,8 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-control-bar {
-  overflow: hidden;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 
   .controls {
     white-space: nowrap;
@@ -11,5 +12,19 @@
     > * {
       margin: 0.3125rem;
     }
+
+    &.control-refs {
+      height: 0;
+      overflow: hidden;
+    }
   }
+
+  .collapsed-controls {
+    position: absolute;
+    bottom: calc(100% + 0.2rem);
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+
 }
