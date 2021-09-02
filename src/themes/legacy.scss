@@ -1,5 +1,4 @@
 :root {
-  --wxc-loading-logo: url(../../src/themes/dark/loading.gif);
   --wxc-text-color: #{$wxc-black-alpha-100};
   --wxc-secondary-text-color: #{$md-gray-40};
   --wxc-warning-color: #{$md-yellow-40};
@@ -72,3 +71,4 @@
 
 .wxc-avatar { display: none; }
 .wxc-member .icon-microphone_16 { display: none; }
+.wxc-meeting .loading-logo { display: none; }
