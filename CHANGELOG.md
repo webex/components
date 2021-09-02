@@ -1,3 +1,10 @@
+# [1.125.0](https://github.com/webex/components/compare/v1.124.0...v1.125.0) (2021-09-02)
+
+
+### Features
+
+* **WebexMemberRoster:** theme Webex member roster component ([2fc21d7](https://github.com/webex/components/commit/2fc21d706a6f2da5a1a4b3dddd87cb689bcfa610))
+
 # [1.124.0](https://github.com/webex/components/compare/v1.123.0...v1.124.0) (2021-09-02)
 
 
