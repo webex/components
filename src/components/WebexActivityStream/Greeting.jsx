@@ -19,7 +19,7 @@ export function GreetingDirectSVG() {
       xlinkHref="http://www.w3.org/1999/xlink"
     >
       <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-        <g id="one-on-one" stroke="#343537" strokeWidth="1.12800004">
+        <g id="one-on-one" stroke="currentColor" strokeWidth="1.12800004">
           <g id="Group-39" transform="translate(9.056604, 6.895610)">
             <path
               d="M42.2831173,43.3165345 L42.1768007,41.8220793 C41.3164233,36.6788756 36.8550615,32.9083712 31.6258573,32.9083712 L10.9787695,32.9083712 C5.75153404,32.9083712 1.28820345,36.6788756 0.429794914,41.8220793 L0.323478261,43.3126069"
@@ -68,7 +68,7 @@ export function GreetingSpaceSVG() {
       <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="space" transform="translate(-14.000000, -3.000000)">
           <rect id="Rectangle-2" x="0" y="0" width="90" height="68" />
-          <g id="Group" transform="translate(15.000000, 4.000000)" stroke="#343537">
+          <g id="Group" transform="translate(15.000000, 4.000000)" stroke="currentColor">
             <path
               d="M1.77076923,19.42 C0.624615385,22.5692308 0,25.9676923 0,29.5123077 C0,45.8107692 13.2123077,59.0246154 29.5123077,59.0246154 C45.8107692,59.0246154 59.0246154,45.8107692 59.0246154,29.5123077 C59.0246154,13.2138462 45.8107692,0 29.5123077,0 C20.6169231,0 12.6415385,3.93538462 7.23076923,10.16"
               id="Stroke-9"

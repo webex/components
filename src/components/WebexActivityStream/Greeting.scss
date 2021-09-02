@@ -5,7 +5,7 @@
   align-items: center;
   max-width: 37.5rem;
   text-align: center;
-  color: $md-gray-90;
+  color: var(--wxc-text-color);
 
   .greeting-header {
     @include header-fonts;

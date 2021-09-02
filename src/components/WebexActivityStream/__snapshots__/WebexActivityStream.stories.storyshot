@@ -367,7 +367,7 @@ Array [
           >
             <g
               id="one-on-one"
-              stroke="#343537"
+              stroke="currentColor"
               strokeWidth="1.12800004"
             >
               <g
@@ -473,7 +473,7 @@ Array [
               />
               <g
                 id="Group"
-                stroke="#343537"
+                stroke="currentColor"
                 transform="translate(15.000000, 4.000000)"
               >
                 <path
