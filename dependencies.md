@@ -10,7 +10,6 @@ This guide describes the dependencies of this repository and their purpose.
   - [date-fns](#date-fns)
   - [Resize Observer](#resize-observer)
 - [Peer Dependencies](#peer-dependencies)
-  - [Momentum UI](#momentum-ui)
   - [React](#react)
   - [RxJS](#rxjs)
 - [Development Dependencies](#development-dependencies)
@@ -69,15 +68,6 @@ but are not included as part of the library's final production bundle.
 Usually peer dependencies are packages that would-be users would already have or need
 as part of their own applications, and hence, no need to include them as part of
 the library code.
-
-### Momentum UI
-
-[Momentum UI](https://momentum.design) is Webex design system.
-
-#### Momentum UI Packages
-
-- [@momentum-ui/react](https://www.npmjs.com/package/@momentum-ui/react):
-  Momentum UI's [React](https://reactjs.org)'s component library
 
 ### React
 

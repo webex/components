@@ -538,18 +538,12 @@ Array [
       </div>
     </div>
     <div
-      className="md-list-separator wxc-time-ruler"
-      role="listitem"
+      className="wxc-time-ruler"
     >
       <span
-        className="md-list-separator__container"
+        className="md-list-separator__text"
       >
-        <span
-          className="md-list-separator__text"
-          style={Object {}}
-        >
-          Yesterday
-        </span>
+        Yesterday
       </span>
     </div>
     <div
@@ -603,18 +597,12 @@ Array [
       </div>
     </div>
     <div
-      className="md-list-separator wxc-time-ruler"
-      role="listitem"
+      className="wxc-time-ruler"
     >
       <span
-        className="md-list-separator__container"
+        className="md-list-separator__text"
       >
-        <span
-          className="md-list-separator__text"
-          style={Object {}}
-        >
-          Today
-        </span>
+        Today
       </span>
     </div>
     <div

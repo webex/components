@@ -6,3 +6,19 @@
 @import 'Title/Title';
 @import 'OptionsList/OptionsList';
 @import 'Select/Select';
+
+html, body {
+  height: 100%;
+}
+
+body {
+  @include body-fonts;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  cursor: auto;
+}
+
+img {
+  width: 100%;
+}
