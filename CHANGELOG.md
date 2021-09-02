@@ -1,3 +1,20 @@
+# [1.124.0](https://github.com/webex/components/compare/v1.123.0...v1.124.0) (2021-09-02)
+
+
+### Bug Fixes
+
+* **WebexMeeting:** set proper settings modal dimensions ([37ce710](https://github.com/webex/components/commit/37ce710c17337731a2739ed819595a5d33f68e12))
+
+
+### Features
+
+* **Icon:** map theme "camera on" icon to muted momentum icon ([d1190ac](https://github.com/webex/components/commit/d1190ac7e9724f52d7e15c156a542a23aa19f0ae))
+* **WebexActivity:** theme the WebexActivity component ([53a963e](https://github.com/webex/components/commit/53a963e031c1634f5c2b3b3a3a54fa086b94d238))
+* **WebexActivityStream:** theme the WebexActivityStream component ([e0bf546](https://github.com/webex/components/commit/e0bf5465bc15ebf65c24931c668174e8bddc0571))
+* **WebexAvatar:** add placeholder with random background color and capital letter initials ([3b8a5e9](https://github.com/webex/components/commit/3b8a5e9edbf803b763732b373fc24759802acee0))
+* **WebexMeeting:** add loading logo on the WebexMeeting ([a451399](https://github.com/webex/components/commit/a45139995666e51e4596de2a9f70634b3a3732ef))
+* **WebexMember:** position avatar, name and role ([f20be20](https://github.com/webex/components/commit/f20be205dfae6034aa18294509d7e43fafd22b57))
+
 # [1.123.0](https://github.com/webex/components/compare/v1.122.0...v1.123.0) (2021-09-02)
 
 
