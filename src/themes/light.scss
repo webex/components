@@ -1,5 +1,5 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-theme-light {
-  --wxc-loading-logo: url(../../src/themes/light/loading.gif);
+  --wxc-loading-logo: url(../themes/light/loading.gif);
   --wxc-text-color: #{$wxc-black-alpha-95};
   --wxc-secondary-text-color: #{$wxc-black-alpha-60};
   --wxc-warning-color: #{$wxc-yellow-70};
@@ -148,4 +148,5 @@
   }
   .wxc-avatar { display: block; }
   .md-avatar { display: none; }
+  .wxc-meeting .loading-logo { display: block; }
 }
