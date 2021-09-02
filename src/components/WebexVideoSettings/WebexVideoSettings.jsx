@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {useMeetingControl} from '../hooks';
 import webexComponentClasses from '../helpers';
+import Banner from '../generic/Banner/Banner';
 import Title from '../generic/Title/Title';
 import WebexLocalMedia from '../WebexLocalMedia/WebexLocalMedia';
 import WebexMeetingControl from '../WebexMeetingControl/WebexMeetingControl';
-import Banner from '../generic/Banner/Banner';
+import WebexNoMedia from '../WebexNoMedia/WebexNoMedia';
 
 /**
  * Webex Video Settings component
@@ -17,15 +19,23 @@ import Banner from '../generic/Banner/Banner';
  */
 export default function WebexVideoSettings({meetingID, className, style}) {
   const cssClasses = webexComponentClasses('video-settings', className);
+  const [, display] = useMeetingControl('switch-camera', meetingID);
 
   return (
     <div className={cssClasses} style={style}>
-      <Title>Camera</Title>
-      <WebexMeetingControl type="switch-camera" meetingID={meetingID} />
-      <div className="media">
-        <WebexLocalMedia mediaType="video" meetingID={meetingID} />
-        <Banner type="bottom">Preview</Banner>
-      </div>
+      {display.options?.length !== 0
+        ? (
+          <>
+            <Title>Camera</Title>
+            <WebexMeetingControl type="switch-camera" meetingID={meetingID} />
+            <div className="media">
+              <WebexLocalMedia mediaType="video" meetingID={meetingID} />
+              <Banner type="bottom">Preview</Banner>
+            </div>
+          </>
+        ) : (
+          <WebexNoMedia media="camera" className="no-media" />
+        )}
     </div>
   );
 }
