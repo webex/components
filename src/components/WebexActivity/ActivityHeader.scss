@@ -5,6 +5,11 @@ $content-left-margin: 3.5rem; //avatar width + margin
   flex-direction: column;
   position: relative;
 
+  .activity-avatar {
+    position: absolute;
+    margin: 0 0.5rem;
+  }
+
   .activity-author {
     @include noselect();
     display: flex;
@@ -13,7 +18,7 @@ $content-left-margin: 3.5rem; //avatar width + margin
     font-size: 0.875rem;
     line-height: 1.375rem;
     text-align: left;
-    color: $md-gray-70;
+    color: var(--wxc-secondary-text-color);
     word-wrap: break-word;
   }
 

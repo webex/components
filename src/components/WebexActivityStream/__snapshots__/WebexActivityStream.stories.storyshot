@@ -12,7 +12,7 @@ Array [
         className="wxc-activity-header"
       >
         <div
-          className="wxc-avatar"
+          className="wxc-avatar activity-avatar"
         >
           <img
             alt="avatar"
@@ -78,7 +78,7 @@ Array [
         className="wxc-activity-header"
       >
         <div
-          className="wxc-avatar"
+          className="wxc-avatar activity-avatar"
         >
           <img
             alt="avatar"
@@ -137,7 +137,7 @@ Let me know if you need more help! Maybe we can talk about it during standup
         className="wxc-activity-header"
       >
         <div
-          className="wxc-avatar"
+          className="wxc-avatar activity-avatar"
         >
           <img
             alt="avatar"
@@ -194,7 +194,7 @@ Let me know if you need more help! Maybe we can talk about it during standup
         className="wxc-activity-header"
       >
         <div
-          className="wxc-avatar"
+          className="wxc-avatar activity-avatar"
         >
           <img
             alt="avatar"
@@ -503,7 +503,7 @@ Array [
         className="wxc-activity-header"
       >
         <div
-          className="wxc-avatar"
+          className="wxc-avatar activity-avatar"
         >
           <img
             alt="avatar"
@@ -603,7 +603,7 @@ Array [
         className="wxc-activity-header"
       >
         <div
-          className="wxc-avatar"
+          className="wxc-avatar activity-avatar"
         >
           <img
             alt="avatar"
@@ -675,7 +675,7 @@ Array [
         className="wxc-activity-header"
       >
         <div
-          className="wxc-avatar"
+          className="wxc-avatar activity-avatar"
         >
           <img
             alt="avatar"
