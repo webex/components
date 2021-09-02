@@ -16,7 +16,7 @@ $content-left-margin: 3.5rem; //avatar width + margin
     min-width: 15.625rem !important;
     margin-left: $content-left-margin;
     font-size: 1rem;
-    color: $md-black-100;
+    color: var(--wxc-text-color);
     word-wrap: break-word;
     white-space: pre-wrap;
   }

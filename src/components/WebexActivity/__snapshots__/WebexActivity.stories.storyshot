@@ -9,7 +9,7 @@ Array [
       className="wxc-activity-header"
     >
       <div
-        className="wxc-avatar"
+        className="wxc-avatar activity-avatar"
       >
         <div
           className="avatar-content"
@@ -136,7 +136,7 @@ Array [
       className="wxc-activity-header"
     >
       <div
-        className="wxc-avatar"
+        className="wxc-avatar activity-avatar"
       >
         <div
           className="avatar-content"
@@ -263,7 +263,7 @@ Array [
       className="wxc-activity-header"
     >
       <div
-        className="wxc-avatar"
+        className="wxc-avatar activity-avatar"
       >
         <div
           className="avatar-content"
@@ -362,7 +362,7 @@ Array [
       className="wxc-activity-header"
     >
       <div
-        className="wxc-avatar"
+        className="wxc-avatar activity-avatar"
       >
         <div
           className="avatar-content"
@@ -461,7 +461,7 @@ Array [
       className="wxc-activity-header"
     >
       <div
-        className="wxc-avatar"
+        className="wxc-avatar activity-avatar"
       >
         <div
           className="avatar-content"
