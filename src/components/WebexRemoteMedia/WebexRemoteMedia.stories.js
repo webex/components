@@ -9,6 +9,7 @@ export default {
 const Template = (args) => {
   const style = {
     width: '100%',
+    height: '100%',
     ...args.style,
   };
   const props = {...args, style};
