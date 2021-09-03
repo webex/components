@@ -45,6 +45,10 @@ const plugins = [
         src: 'node_modules/@momentum-ui/core/css/momentum-ui.min.css',
         dest: 'dist/css',
       },
+      {
+        src: ['src/themes/dark', 'src/themes/light'],
+        dest: 'dist/themes',
+      },
     ],
   }),
 ];

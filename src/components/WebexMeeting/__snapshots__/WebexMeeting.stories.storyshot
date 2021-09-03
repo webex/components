@@ -12,6 +12,16 @@ Array [
     }
   >
     <div
+      className="wxc-spinner centered"
+      size={28}
+      style={
+        Object {
+          "height": 28,
+          "width": 28,
+        }
+      }
+    />
+    <div
       className="loading-logo"
     />
   </div>,
@@ -2520,6 +2530,16 @@ Array [
       }
     }
   >
+    <div
+      className="wxc-spinner centered"
+      size={28}
+      style={
+        Object {
+          "height": 28,
+          "width": 28,
+        }
+      }
+    />
     <div
       className="loading-logo"
     />
