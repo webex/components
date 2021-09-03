@@ -1,3 +1,10 @@
+# [1.129.0](https://github.com/webex/components/compare/v1.128.1...v1.129.0) (2021-09-03)
+
+
+### Features
+
+* **OptionsList:** add border on options list container when is active ([8089f85](https://github.com/webex/components/commit/8089f854e005a430a026905ea5ad388ceab3d735))
+
 ## [1.128.1](https://github.com/webex/components/compare/v1.128.0...v1.128.1) (2021-09-03)
 
 
