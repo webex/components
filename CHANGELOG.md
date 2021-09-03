@@ -1,3 +1,10 @@
+## [1.127.1](https://github.com/webex/components/compare/v1.127.0...v1.127.1) (2021-09-03)
+
+
+### Bug Fixes
+
+* **MeetingsJsonAdapter:** stop stream tracks when muting audio/video or leaving the meeting ([4a1119c](https://github.com/webex/components/commit/4a1119ca63839136a21b59fbbebcdcb0521cca46))
+
 # [1.127.0](https://github.com/webex/components/compare/v1.126.0...v1.127.0) (2021-09-03)
 
 
