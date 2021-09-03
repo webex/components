@@ -1,3 +1,10 @@
+## [1.128.1](https://github.com/webex/components/compare/v1.128.0...v1.128.1) (2021-09-03)
+
+
+### Bug Fixes
+
+* **WebexRemoteMedia:** remove min-width to remote media and add height to storybook ([5574544](https://github.com/webex/components/commit/5574544ecfbaf6e4b3ce5593570228a0c5e94c94))
+
 # [1.128.0](https://github.com/webex/components/compare/v1.127.1...v1.128.0) (2021-09-03)
 
 
