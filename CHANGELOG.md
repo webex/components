@@ -1,3 +1,10 @@
+# [1.126.0](https://github.com/webex/components/compare/v1.125.1...v1.126.0) (2021-09-03)
+
+
+### Features
+
+* **WebexMeetingControlBar:** collapse controls and hide labels to fit horizontal space ([40a554b](https://github.com/webex/components/commit/40a554bd3d89339d82288db42fd8c47669f4da27))
+
 ## [1.125.1](https://github.com/webex/components/compare/v1.125.0...v1.125.1) (2021-09-02)
 
 
