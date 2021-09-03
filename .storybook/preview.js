@@ -28,6 +28,7 @@ export const decorators = [
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
+  backgrounds: { disable: true },
   layout: 'centered',
   options: {
     storySort: {
@@ -59,12 +60,7 @@ export const parameters = {
   themes: {
     list: [
       { name: 'light', class: 'wxc-theme-light', color: '#F8F8F8'},
-      { name: 'dark', class: 'wxc-theme-dark', color: '#333333' }
+      { name: 'dark', class: 'wxc-theme-dark', color: '#333333', default: true }
     ],
   },
 };
-
-if (process.env.NODE_ENV === 'production') {
-  parameters.themes = { disable: true };
-}
- 

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Button as MomentumButton} from '@momentum-ui/react';
 import {MeetingControlState} from '@webex/component-adapter-interfaces';
 
 import webexComponentClasses from '../helpers';
@@ -34,7 +33,6 @@ function renderButton(action, display, style, showText, asItem) {
     tooltip,
   } = display;
   const isDisabled = display.state === MeetingControlState.DISABLED;
-  const iconColor = type === 'CANCEL' || display.state === MeetingControlState.ACTIVE ? 'red' : '';
 
   let output;
 
@@ -48,31 +46,16 @@ function renderButton(action, display, style, showText, asItem) {
     );
   } else {
     output = (
-      <>
-        <Button
-          className="control-button"
-          type={controlTypeToButtonType[type] || 'default'}
-          isDisabled={isDisabled}
-          onClick={action}
-          title={tooltip}
-        >
-          {icon && <Icon name={icon} size={24} />}
-          {(showText || !icon) && text && <span className="button-text">{text}</span>}
-        </Button>
-        <MomentumButton
-          circle={icon && (!showText || !text)}
-          color={type === 'JOIN' ? 'green' : iconColor}
-          size={!icon || (showText && text) ? 52 : 56}
-          ariaLabel={tooltip}
-          onClick={action}
-          disabled={isDisabled}
-          className="wxc-old-button"
-          style={style}
-        >
-          {icon && <Icon name={icon} size={28} />}
-          {(!icon || (showText && text)) && <span className="button-text">{text}</span>}
-        </MomentumButton>
-      </>
+      <Button
+        className="control-button"
+        type={controlTypeToButtonType[type] || 'default'}
+        isDisabled={isDisabled}
+        onClick={action}
+        title={tooltip}
+      >
+        {icon && <Icon name={icon} size={24} />}
+        {(showText || !icon) && text && <span className="button-text">{text}</span>}
+      </Button>
     );
   }
 

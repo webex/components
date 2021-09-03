@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
-import {Button as MomentumButton} from '@momentum-ui/react';
 import {MeetingState} from '@webex/component-adapter-interfaces';
 
 import {useElementDimensions, useMeeting} from '../hooks';
@@ -152,9 +151,6 @@ export default function WebexMeetingControlBar({
       <Button onClick={onClick}>
         <Icon name={shown ? 'more-adr' : 'more'} />
       </Button>
-      <MomentumButton circle size={56} onClick={onClick} className="wxc-old-button">
-        <Icon name={shown ? 'more-adr' : 'more'} />
-      </MomentumButton>
     </div>
   );
 

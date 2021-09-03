@@ -25,15 +25,6 @@ Array [
         d="M6.75 10.5001C7.57843 10.5001 8.25 9.82849 8.25 9.00006C8.25 8.17163 7.57843 7.50006 6.75 7.50006C5.92157 7.50006 5.25 8.17163 5.25 9.00006C5.25 9.82849 5.92157 10.5001 6.75 10.5001Z"
       />
     </svg>
-    <i
-      aria-label={null}
-      className="md-icon icon icon-camera_36 wxc-old-icon"
-      style={
-        Object {
-          "fontSize": 36,
-        }
-      }
-    />
     <h2
       className="title"
     >
@@ -67,39 +58,6 @@ Array [
           className="button-text"
         >
           Proceed without camera
-        </span>
-      </button>
-      <button
-        alt="Proceed without camera"
-        aria-label="Proceed without camera"
-        aria-pressed={null}
-        className="md-button md-button--52 md-button--green wxc-old-button"
-        data-md-event-key="md-button-0"
-        disabled={false}
-        id="md-button-0"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        style={
-          Object {
-            "style": Object {},
-          }
-        }
-        tabIndex={0}
-        type="button"
-      >
-        <span
-          className="md-button__children"
-          style={
-            Object {
-              "opacity": "1",
-            }
-          }
-        >
-          <span
-            className="button-text"
-          >
-            Proceed without camera
-          </span>
         </span>
       </button>
     </div>
@@ -156,15 +114,6 @@ Array [
         y="8.25"
       />
     </svg>
-    <i
-      aria-label={null}
-      className="md-icon icon icon-microphone_36 wxc-old-icon"
-      style={
-        Object {
-          "fontSize": 36,
-        }
-      }
-    />
     <h2
       className="title"
     >
@@ -198,39 +147,6 @@ Array [
           className="button-text"
         >
           Proceed without audio
-        </span>
-      </button>
-      <button
-        alt="Proceed without audio"
-        aria-label="Proceed without audio"
-        aria-pressed={null}
-        className="md-button md-button--52 md-button--green wxc-old-button"
-        data-md-event-key="md-button-0"
-        disabled={false}
-        id="md-button-0"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        style={
-          Object {
-            "style": Object {},
-          }
-        }
-        tabIndex={0}
-        type="button"
-      >
-        <span
-          className="md-button__children"
-          style={
-            Object {
-              "opacity": "1",
-            }
-          }
-        >
-          <span
-            className="button-text"
-          >
-            Proceed without audio
-          </span>
         </span>
       </button>
     </div>

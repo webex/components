@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Icon as MomentumIcon} from '@momentum-ui/react';
 import {
   ArrowDown,
   ArrowUp,
@@ -58,18 +57,6 @@ const icons = {
   unread: UnreadIcon,
 };
 
-const oldIcons = {
-  'arrow-down': 'arrow-down_12',
-  'arrow-up': 'arrow-up_12',
-  check: 'check_16',
-  camera_48: 'camera_36',
-  camera_28: 'camera-muted_28',
-  microphone_28: 'microphone-muted_28',
-  microphone_48: 'microphone_36',
-  more: 'more_28',
-  'more-adr': 'more-adr_28',
-};
-
 /**
  * Displays an Icon based on its name.
  *
@@ -95,15 +82,12 @@ export default function Icon({
   }
 
   return (
-    <>
-      <IconComponent
-        size={size || (baseSize && Number(baseSize))}
-        className={className}
-        indicator={indicator}
-        style={style}
-      />
-      <MomentumIcon name={`icon-${oldIcons[name] || name}`} className="wxc-old-icon" />
-    </>
+    <IconComponent
+      size={size || (baseSize && Number(baseSize))}
+      className={className}
+      indicator={indicator}
+      style={style}
+    />
   );
 }
 

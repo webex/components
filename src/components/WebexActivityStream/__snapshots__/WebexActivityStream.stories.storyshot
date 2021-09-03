@@ -37,30 +37,6 @@ Array [
           </div>
         </div>
         <div
-          className="md-avatar md-avatar--medium wxc-old-avatar"
-          title="Brenda Song"
-        >
-          <span
-            className="md-avatar__letter"
-            style={
-              Object {
-                "backgroundColor": "",
-                "color": "",
-              }
-            }
-          >
-            BS
-          </span>
-          <img
-            alt="Brenda Song"
-            className="md-avatar__img md-avatar__img--hidden"
-            draggable={false}
-            onError={[Function]}
-            onLoad={[Function]}
-            src="./images/brenda.png"
-          />
-        </div>
-        <div
           className="activity-author"
         >
           <span>
@@ -120,30 +96,6 @@ Array [
           </div>
         </div>
         <div
-          className="md-avatar md-avatar--medium wxc-old-avatar"
-          title="Giacomo Edwards"
-        >
-          <span
-            className="md-avatar__letter"
-            style={
-              Object {
-                "backgroundColor": "",
-                "color": "",
-              }
-            }
-          >
-            GE
-          </span>
-          <img
-            alt="Giacomo Edwards"
-            className="md-avatar__img md-avatar__img--hidden"
-            draggable={false}
-            onError={[Function]}
-            onLoad={[Function]}
-            src="./images/giacomo.png"
-          />
-        </div>
-        <div
           className="activity-author"
         >
           <span>
@@ -196,30 +148,6 @@ Let me know if you need more help! Maybe we can talk about it during standup
           </div>
         </div>
         <div
-          className="md-avatar md-avatar--medium wxc-old-avatar"
-          title="Brenda Song"
-        >
-          <span
-            className="md-avatar__letter"
-            style={
-              Object {
-                "backgroundColor": "",
-                "color": "",
-              }
-            }
-          >
-            BS
-          </span>
-          <img
-            alt="Brenda Song"
-            className="md-avatar__img md-avatar__img--hidden"
-            draggable={false}
-            onError={[Function]}
-            onLoad={[Function]}
-            src="./images/brenda.png"
-          />
-        </div>
-        <div
           className="activity-author"
         >
           <span>
@@ -268,30 +196,6 @@ Let me know if you need more help! Maybe we can talk about it during standup
               src="./images/simon.png"
             />
           </div>
-        </div>
-        <div
-          className="md-avatar md-avatar--medium wxc-old-avatar"
-          title="Simon Damiano"
-        >
-          <span
-            className="md-avatar__letter"
-            style={
-              Object {
-                "backgroundColor": "",
-                "color": "",
-              }
-            }
-          >
-            SD
-          </span>
-          <img
-            alt="Simon Damiano"
-            className="md-avatar__img md-avatar__img--hidden"
-            draggable={false}
-            onError={[Function]}
-            onLoad={[Function]}
-            src="./images/simon.png"
-          />
         </div>
         <div
           className="activity-author"
@@ -611,41 +515,8 @@ Array [
                   fillRule="evenodd"
                 />
               </svg>
-              <i
-                aria-label={null}
-                className="md-icon icon undefined wxc-old-icon"
-                style={
-                  Object {
-                    "fontSize": 16,
-                  }
-                }
-              />
             </div>
           </div>
-        </div>
-        <div
-          className="md-avatar md-avatar--dnd md-avatar--medium wxc-old-avatar"
-          title="Barbara German"
-        >
-          <span
-            className="md-avatar__letter"
-            style={
-              Object {
-                "backgroundColor": "",
-                "color": "",
-              }
-            }
-          >
-            BG
-          </span>
-          <img
-            alt="Barbara German"
-            className="md-avatar__img md-avatar__img--hidden"
-            draggable={false}
-            onError={[Function]}
-            onLoad={[Function]}
-            src="./images/barbara.png"
-          />
         </div>
         <div
           className="activity-author"
@@ -711,30 +582,6 @@ Array [
               src="./images/brandon.png"
             />
           </div>
-        </div>
-        <div
-          className="md-avatar md-avatar--medium wxc-old-avatar"
-          title="Brandon Seeger"
-        >
-          <span
-            className="md-avatar__letter"
-            style={
-              Object {
-                "backgroundColor": "",
-                "color": "",
-              }
-            }
-          >
-            BS
-          </span>
-          <img
-            alt="Brandon Seeger"
-            className="md-avatar__img md-avatar__img--hidden"
-            draggable={false}
-            onError={[Function]}
-            onLoad={[Function]}
-            src="./images/brandon.png"
-          />
         </div>
         <div
           className="activity-author"
@@ -817,41 +664,8 @@ Array [
                   fillRule="evenodd"
                 />
               </svg>
-              <i
-                aria-label={null}
-                className="md-icon icon undefined wxc-old-icon"
-                style={
-                  Object {
-                    "fontSize": 16,
-                  }
-                }
-              />
             </div>
           </div>
-        </div>
-        <div
-          className="md-avatar md-avatar--dnd md-avatar--medium wxc-old-avatar"
-          title="Barbara German"
-        >
-          <span
-            className="md-avatar__letter"
-            style={
-              Object {
-                "backgroundColor": "",
-                "color": "",
-              }
-            }
-          >
-            BG
-          </span>
-          <img
-            alt="Barbara German"
-            className="md-avatar__img md-avatar__img--hidden"
-            draggable={false}
-            onError={[Function]}
-            onLoad={[Function]}
-            src="./images/barbara.png"
-          />
         </div>
         <div
           className="activity-author"
