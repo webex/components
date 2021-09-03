@@ -37,6 +37,7 @@
   
       &:active {
         background: var(--wxc-options-list-item--active--background);
+        border: var(--wxc-options-list--normal--border);
       }
   
       &:focus {
