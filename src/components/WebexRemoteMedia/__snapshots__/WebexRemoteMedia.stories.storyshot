@@ -6,6 +6,7 @@ Array [
     className="wxc-remote-media remote-video-n-share"
     style={
       Object {
+        "height": "100%",
         "width": "100%",
       }
     }
@@ -55,6 +56,7 @@ Array [
     className="wxc-remote-media"
     style={
       Object {
+        "height": "100%",
         "width": "100%",
       }
     }
@@ -142,6 +144,7 @@ Array [
     className="wxc-remote-media"
     style={
       Object {
+        "height": "100%",
         "width": "100%",
       }
     }
@@ -194,6 +197,7 @@ Array [
     className="wxc-remote-media"
     style={
       Object {
+        "height": "100%",
         "width": "100%",
       }
     }
@@ -231,6 +235,7 @@ Array [
     className="wxc-remote-media"
     style={
       Object {
+        "height": "100%",
         "width": "100%",
       }
     }
@@ -271,6 +276,7 @@ Array [
     className="wxc-remote-media"
     style={
       Object {
+        "height": "100%",
         "width": "100%",
       }
     }
