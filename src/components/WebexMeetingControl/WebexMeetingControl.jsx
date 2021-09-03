@@ -21,13 +21,12 @@ const controlTypeToButtonType = {
  *
  * @param {Function} action  Adapter control callback
  * @param {object} display  Display data of the control
- * @param {string} cssClasses  Custom CSS class to apply
  * @param {object} style  Custom style to apply
  * @param {boolean} showText  Flag that indicates whether to display text on control buttons
  * @param {boolean} asItem  Render control as an item in a list
  * @returns {object} JSX of the component
  */
-function renderButton(action, display, cssClasses, style, showText, asItem) {
+function renderButton(action, display, style, showText, asItem) {
   const {
     icon,
     type,
@@ -42,7 +41,7 @@ function renderButton(action, display, cssClasses, style, showText, asItem) {
   if (asItem) {
     output = (
       /* eslint-disable-next-line jsx-a11y/click-events-have-key-events */
-      <div className={cssClasses} onClick={action} title={tooltip} role="button" tabIndex="0">
+      <div onClick={action} title={tooltip} role="button" tabIndex="0">
         {icon && <Icon name={icon} size={14} className="item-button-icon" />}
         <span className="item-button-text">{text}</span>
       </div>
@@ -51,7 +50,7 @@ function renderButton(action, display, cssClasses, style, showText, asItem) {
     output = (
       <>
         <Button
-          className={cssClasses}
+          className="control-button"
           type={controlTypeToButtonType[type] || 'default'}
           isDisabled={isDisabled}
           onClick={action}
@@ -67,7 +66,7 @@ function renderButton(action, display, cssClasses, style, showText, asItem) {
           ariaLabel={tooltip}
           onClick={action}
           disabled={isDisabled}
-          className={`${cssClasses} wxc-old-button`}
+          className="wxc-old-button"
           style={style}
         >
           {icon && <Icon name={icon} size={28} />}
@@ -85,16 +84,15 @@ function renderButton(action, display, cssClasses, style, showText, asItem) {
  *
  * @param {Function} action  Adapter control callback
  * @param {object} display  Display data of the control
- * @param {string} cssClasses  Custom CSS class to apply
  * @param {object} style  Custom style to apply
  * @returns {object} JSX of the component
  */
-function renderDropdown(action, display, cssClasses, style) {
+function renderDropdown(action, display, style) {
   const {options, noOptionsMessage, selected} = display;
 
   return (
     <Select
-      className={cssClasses}
+      className="control-select"
       style={style}
       value={selected || ''}
       onChange={(id) => action(id)}
@@ -138,15 +136,16 @@ export default function WebexMeetingControl({
   if (!display || Object.keys(display).length === 0) {
     output = '';
   } else if (display.type === 'MULTISELECT') {
-    output = renderDropdown(action, display, cssClasses, style);
+    output = renderDropdown(action, display, style);
   } else {
-    output = renderButton(action, display, cssClasses, style, showText, asItem);
+    output = renderButton(action, display, style, showText, asItem);
   }
 
-  return output;
+  return <div className={cssClasses}>{output}</div>;
 }
 
 WebexMeetingControl.propTypes = {
+  asItem: PropTypes.bool,
   className: PropTypes.string,
   meetingID: PropTypes.string.isRequired,
   showText: PropTypes.bool,
@@ -155,6 +154,7 @@ WebexMeetingControl.propTypes = {
 };
 
 WebexMeetingControl.defaultProps = {
+  asItem: false,
   className: '',
   showText: true,
   style: undefined,
