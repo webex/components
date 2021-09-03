@@ -1,3 +1,10 @@
+# [1.127.0](https://github.com/webex/components/compare/v1.126.0...v1.127.0) (2021-09-03)
+
+
+### Features
+
+* **WebexMeeting:** export loading gif ([c1a1698](https://github.com/webex/components/commit/c1a169877ffc03d12f876defdef3f3b16d5cc5ca))
+
 # [1.126.0](https://github.com/webex/components/compare/v1.125.1...v1.126.0) (2021-09-03)
 
 
