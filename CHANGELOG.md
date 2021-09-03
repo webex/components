@@ -1,3 +1,10 @@
+# [1.128.0](https://github.com/webex/components/compare/v1.127.1...v1.128.0) (2021-09-03)
+
+
+### Features
+
+* **WebexNoMedia:** add component for displaying error when no microphone is available ([f224059](https://github.com/webex/components/commit/f224059a5aec065a645d4d07d6812c1760245059))
+
 ## [1.127.1](https://github.com/webex/components/compare/v1.127.0...v1.127.1) (2021-09-03)
 
 
