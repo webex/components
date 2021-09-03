@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import {Avatar} from '@momentum-ui/react';
 import {PersonStatus} from '@webex/component-adapter-interfaces';
 import Icon from '../generic/Icon/Icon';
 import webexComponentClasses from '../helpers';
@@ -40,7 +39,6 @@ export default function WebexAvatar({
     () => Math.floor(Math.random() * numberOfPlaceholders) + 1,
   );
   const [imageError, setImageError] = useState(false);
-  const type = displayStatus ? status : null;
   const initials = displayName?.split(' ').map((name) => name.charAt(0)).slice(0, 2).join('');
   const placeholderClassName = `placeholder placeholder-${randomPlaceholder}`;
   const cssClasses = webexComponentClasses('avatar', className);
@@ -48,37 +46,27 @@ export default function WebexAvatar({
   const statusClassName = `status-${status}`;
 
   return (
-    <>
-      <div className={cssClasses} style={style}>
-        <div className="avatar-content">
-          <svg viewBox="0 0 40 40" className={placeholderClassName}>
-            <text x="50%" y="50%">
-              {displayName === ' ' ? '??' : initials}
-            </text>
+    <div className={cssClasses} style={style}>
+      <div className="avatar-content">
+        <svg viewBox="0 0 40 40" className={placeholderClassName}>
+          <text x="50%" y="50%">
+            {displayName === ' ' ? '??' : initials}
+          </text>
+        </svg>
+        {avatar
+          && <img className={imageError ? 'image-error' : ''} src={avatar} alt="avatar" onError={() => setImageError(true)} />}
+        {displayStatus && status !== PersonStatus.BOT && iconName && (
+          <div className="status-icon-container">
+            <Icon name={iconName} className={`status-icon ${statusClassName}`} />
+          </div>
+        )}
+        {displayStatus && status === PersonStatus.BOT && (
+          <svg viewBox="0 0 25 25" className="avatar-bot-badge">
+            <text x="50%" y="52%">Bot</text>
           </svg>
-          {avatar
-            && <img className={imageError ? 'image-error' : ''} src={avatar} alt="avatar" onError={() => setImageError(true)} />}
-          {displayStatus && status !== PersonStatus.BOT && iconName && (
-            <div className="status-icon-container">
-              <Icon name={iconName} className={`status-icon ${statusClassName}`} />
-            </div>
-          )}
-          {displayStatus && status === PersonStatus.BOT && (
-            <svg viewBox="0 0 25 25" className="avatar-bot-badge">
-              <text x="50%" y="52%">Bot</text>
-            </svg>
-          )}
-        </div>
+        )}
       </div>
-      <Avatar
-        src={avatar}
-        title={displayName}
-        type={type}
-        alt={displayName}
-        className="wxc-old-avatar"
-        style={style}
-      />
-    </>
+    </div>
   );
 }
 

@@ -40,15 +40,6 @@ Array [
         </linearGradient>
       </defs>
     </svg>
-    <i
-      aria-label={null}
-      className="md-icon icon undefined wxc-old-icon"
-      style={
-        Object {
-          "fontSize": 16,
-        }
-      }
-    />
     <h5
       className="wxc-title"
       style={Object {}}
@@ -146,15 +137,6 @@ Array [
         </linearGradient>
       </defs>
     </svg>
-    <i
-      aria-label={null}
-      className="md-icon icon undefined wxc-old-icon"
-      style={
-        Object {
-          "fontSize": 16,
-        }
-      }
-    />
     <h5
       className="wxc-title"
       style={Object {}}

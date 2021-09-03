@@ -98,15 +98,6 @@ Array [
           </linearGradient>
         </defs>
       </svg>
-      <i
-        aria-label={null}
-        className="md-icon icon undefined wxc-old-icon"
-        style={
-          Object {
-            "fontSize": 16,
-          }
-        }
-      />
       <div>
         Having trouble joining the meeting?
       </div>

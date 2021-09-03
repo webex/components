@@ -126,29 +126,3 @@
 
   --wxc-options-list-item--selected--color:  #{$wxc-blue-40};
 }
-
-// temporary logic for legacy
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-theme-light {
-  .wxc-interstitial-meeting .wxc-banner { display: flex; }
-  .wxc-member-roster .roster-title { display: block; }
-  .wxc-old-button { display: none; }
-  .wxc-button { display: flex; }
-  .wxc-old-icon { display: none; }
-  .wxc-icon { display: block; }
-  .wxc-in-meeting { background: transparent; }
-  .wxc-modal .old-close-button { display: none; }
-  .wxc-tabs {
-    .tabs-list {
-      border-bottom: none;
-      padding: 1.5rem 1.375rem;
-      .tab.active > button {
-        border-bottom: none;
-        border-radius: 0.875rem;
-      }
-    }
-  }
-  .wxc-avatar { display: block; }
-  .md-avatar { display: none; }
-  .wxc-meeting .loading-logo { display: block; }
-  .wxc-in-meeting { background: transparent; }
-}
