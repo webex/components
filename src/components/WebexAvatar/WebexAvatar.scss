@@ -66,6 +66,24 @@
     }
   }
 
+  .avatar-bot-badge {
+    position: absolute;
+
+    background-color: var(--wxc-avatar--bot-status-color);
+
+    left: -1.5%;
+    top: 66%;
+
+    border-radius: 999rem;
+
+    width: 68%;
+    height: 34%;
+
+    text-anchor: middle;
+    dominant-baseline: middle;
+    fill: var(--wxc-avatar--text-color);;
+  }
+
   .status-active { color: var(--wxc-person-status--active-color); }
   .status-call { color: var(--wxc-person-status--in-a-meeting-color); }
   .status-meeting { color: var(--wxc-person-status--in-a-meeting-color); }

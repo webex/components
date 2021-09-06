@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {Avatar} from '@momentum-ui/react';
+import {PersonStatus} from '@webex/component-adapter-interfaces';
 import Icon from '../generic/Icon/Icon';
 import webexComponentClasses from '../helpers';
 import {usePerson} from '../hooks';
@@ -57,10 +58,15 @@ export default function WebexAvatar({
           </svg>
           {avatar
             && <img className={imageError ? 'image-error' : ''} src={avatar} alt="avatar" onError={() => setImageError(true)} />}
-          {displayStatus && iconName && (
+          {displayStatus && status !== PersonStatus.BOT && iconName && (
             <div className="status-icon-container">
               <Icon name={iconName} className={`status-icon ${statusClassName}`} />
             </div>
+          )}
+          {displayStatus && status === PersonStatus.BOT && (
+            <svg viewBox="0 0 25 25" className="avatar-bot-badge">
+              <text x="50%" y="52%">Bot</text>
+            </svg>
           )}
         </div>
       </div>
