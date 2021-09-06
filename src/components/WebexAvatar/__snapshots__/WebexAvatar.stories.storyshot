@@ -125,6 +125,17 @@ Array [
         onError={[Function]}
         src="./images/barbara.png"
       />
+      <svg
+        className="avatar-bot-badge"
+        viewBox="0 0 25 25"
+      >
+        <text
+          x="50%"
+          y="52%"
+        >
+          Bot
+        </text>
+      </svg>
     </div>
   </div>,
   <div
