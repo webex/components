@@ -57,7 +57,7 @@ function renderButton(action, display, style, showText, asItem) {
           title={tooltip}
         >
           {icon && <Icon name={icon} size={24} />}
-          {showText && text && <span className="button-text">{text}</span>}
+          {(showText || !icon) && text && <span className="button-text">{text}</span>}
         </Button>
         <MomentumButton
           circle={icon && (!showText || !text)}

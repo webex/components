@@ -1852,7 +1852,13 @@ Array [
             style={Object {}}
             title="Join meeting"
             type="button"
-          />
+          >
+            <span
+              className="button-text"
+            >
+              Join meeting
+            </span>
+          </button>
           <button
             alt="Join meeting"
             aria-label="Join meeting"
@@ -2342,7 +2348,13 @@ Array [
               style={Object {}}
               title="Join meeting"
               type="button"
-            />
+            >
+              <span
+                className="button-text"
+              >
+                Join meeting
+              </span>
+            </button>
             <button
               alt="Join meeting"
               aria-label="Join meeting"
