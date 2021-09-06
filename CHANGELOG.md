@@ -1,3 +1,10 @@
+# [1.130.0](https://github.com/webex/components/compare/v1.129.0...v1.130.0) (2021-09-06)
+
+
+### Features
+
+* **WebexInMeeting:** theme the Webex in meeting component ([5d84424](https://github.com/webex/components/commit/5d84424772a68a94142123e5a24a1b6e3c5eb1da))
+
 # [1.129.0](https://github.com/webex/components/compare/v1.128.1...v1.129.0) (2021-09-03)
 
 
