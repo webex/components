@@ -1,3 +1,10 @@
+## [1.131.1](https://github.com/webex/components/compare/v1.131.0...v1.131.1) (2021-09-06)
+
+
+### Bug Fixes
+
+* **WebexMeetingControl:** always display text on iconless buttons ([940a011](https://github.com/webex/components/commit/940a011559148f3c9096281a1d4fc786134d6ee5))
+
 # [1.131.0](https://github.com/webex/components/compare/v1.130.0...v1.131.0) (2021-09-06)
 
 
