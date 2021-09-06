@@ -1,3 +1,15 @@
+# [1.131.0](https://github.com/webex/components/compare/v1.130.0...v1.131.0) (2021-09-06)
+
+
+### Bug Fixes
+
+* **WebexMeetingControl:** add container element to prevent css rule conflicts ([296d344](https://github.com/webex/components/commit/296d344e35f9463ac3aa7c48a314aff5c7315987))
+
+
+### Features
+
+* **WebexAvatar:** add avatar bot status ([c9e4884](https://github.com/webex/components/commit/c9e4884daf54a93e225f7ddbdaf4c1ebcb8b2263))
+
 # [1.130.0](https://github.com/webex/components/compare/v1.129.0...v1.130.0) (2021-09-06)
 
 
