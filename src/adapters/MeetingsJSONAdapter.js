@@ -565,12 +565,16 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @private
    */
   async switchMicrophone(ID, microphoneID) {
-    await this.updateMeeting(ID, async () => ({
-      localAudio: {
-        stream: await this.getStream({audio: {deviceId: {exact: microphoneID}}}),
-      },
-      microphoneID,
-    }));
+    await this.updateMeeting(ID, async (meeting) => {
+      this.stopStream(meeting.localAudio.stream);
+
+      return {
+        localAudio: {
+          stream: await this.getStream({audio: {deviceId: {exact: microphoneID}}}),
+        },
+        microphoneID,
+      };
+    });
   }
 
   /**
