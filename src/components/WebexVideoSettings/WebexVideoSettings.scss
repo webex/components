@@ -1,4 +1,7 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-video-settings {
+  display: flex;
+  flex-direction: column;
+
   .media {
     position: relative;
     margin-top: 1.5rem;
