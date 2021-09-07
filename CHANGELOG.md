@@ -1,3 +1,10 @@
+# [1.132.0](https://github.com/webex/components/compare/v1.131.1...v1.132.0) (2021-09-07)
+
+
+### Features
+
+* **fonts:** add cisco fonts from momentum to components assets ([7409edf](https://github.com/webex/components/commit/7409edf37d298da6685890ac48f2d2ba22437957))
+
 ## [1.131.1](https://github.com/webex/components/compare/v1.131.0...v1.131.1) (2021-09-06)
 
 
