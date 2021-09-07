@@ -1,3 +1,10 @@
+## [1.132.1](https://github.com/webex/components/compare/v1.132.0...v1.132.1) (2021-09-07)
+
+
+### Bug Fixes
+
+* **WebexMeeting:** set the correct position for the meeting logo ([9ba1baa](https://github.com/webex/components/commit/9ba1baac6ee8a2712444e9c654436a4421e7a639))
+
 # [1.132.0](https://github.com/webex/components/compare/v1.131.1...v1.132.0) (2021-09-07)
 
 
