@@ -150,7 +150,7 @@ Array [
     }
   >
     <div
-      className="wxc-badge"
+      className="wxc-badge connecting-badge"
       style={Object {}}
     >
       <div

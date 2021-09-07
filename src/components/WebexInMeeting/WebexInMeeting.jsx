@@ -33,7 +33,7 @@ export default function WebexInMeeting({className, meetingID, style}) {
   });
 
   useEffect(() => {
-    setMaxWidth(height ? (height * 16) / 9 - 1 : 'none');
+    setMaxWidth(height ? (height * 16) / 9 : 'none');
   }, [height]);
 
   return (
