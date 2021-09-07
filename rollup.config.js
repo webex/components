@@ -49,6 +49,10 @@ const plugins = [
         src: ['src/themes/dark', 'src/themes/light'],
         dest: 'dist/themes',
       },
+      {
+        src: 'src/assets/fonts',
+        dest: 'dist/assets',
+      },
     ],
   }),
 ];
