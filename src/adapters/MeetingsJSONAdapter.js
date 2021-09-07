@@ -545,12 +545,16 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @param {string} cameraID  Id of the camera device to switch to
    */
   async switchCamera(ID, cameraID) {
-    await this.updateMeeting(ID, async () => ({
-      localVideo: {
-        stream: await this.getStream({video: {deviceId: {exact: cameraID}}}),
-      },
-      cameraID,
-    }));
+    await this.updateMeeting(ID, async (meeting) => {
+      this.stopStream(meeting.localVideo.stream);
+
+      return {
+        localVideo: {
+          stream: await this.getStream({video: {deviceId: {exact: cameraID}}}),
+        },
+        cameraID,
+      };
+    });
   }
 
   /**
