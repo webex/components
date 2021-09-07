@@ -3,6 +3,7 @@ $WEBEX_COMPONENTS_CLASS_PREFIX: 'wxc';
 
 $WEBEX_MEETING_MIN_HEIGHT: 25rem;
 $WEBEX_MEETING_MIN_WIDTH: 17rem; // Standard small phone width is 20rem, leaving some padding
+$brand-font-folder: '../assets/fonts';
 
 // Momentum UI Colors
 // See https://momentum.design/tokens/color
@@ -22,7 +23,7 @@ $md-gray-95: #1C1C1C !default;
 $md-gray-100: #121212 !default;
 $md-yellow-40: #FC9D03 !default;
 
-$md-red-60: #D4371C !default; 
+$md-red-60: #D4371C !default;
 
 $md-black-100: #000000;
 
