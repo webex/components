@@ -500,7 +500,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       let updates = {};
 
       if (meeting.localShare.stream) {
-        meeting.localShare.stream.getTracks()[0].stop();
+        this.stopStream(meeting.localShare.stream);
         updates = {localShare: {stream: null}};
       } else {
         const stream = await this.getDisplayStream();
