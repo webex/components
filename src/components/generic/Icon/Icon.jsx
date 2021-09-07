@@ -97,7 +97,7 @@ export default function Icon({
   return (
     <>
       <IconComponent
-        size={size || baseSize}
+        size={size || (baseSize && Number(baseSize))}
         className={className}
         indicator={indicator}
         style={style}
