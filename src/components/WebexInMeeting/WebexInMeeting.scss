@@ -32,6 +32,7 @@ $shadow-color: rgba(0, 0, 0, 0.2);
 
   .remote-media-in-meeting {
     flex: 1;
+    min-height: 0;
   }
 
   .local-media-in-meeting {

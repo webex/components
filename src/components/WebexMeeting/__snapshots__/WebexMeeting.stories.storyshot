@@ -69,7 +69,7 @@ Array [
           className="media-container"
           style={
             Object {
-              "maxWidth": 176.77777777777777,
+              "maxWidth": 177.77777777777777,
             }
           }
         >
@@ -1163,7 +1163,7 @@ Array [
           className="media-container"
           style={
             Object {
-              "maxWidth": 176.77777777777777,
+              "maxWidth": 177.77777777777777,
             }
           }
         >

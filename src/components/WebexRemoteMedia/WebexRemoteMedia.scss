@@ -28,6 +28,11 @@
     object-fit: cover;
   }
 
+  .connecting-badge {
+    z-index: 5;
+    white-space: nowrap;
+  }
+
   .connecting-spinner {
     margin-right: .6875rem;
   }

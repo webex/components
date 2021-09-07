@@ -15,7 +15,7 @@ Array [
       className="media-container"
       style={
         Object {
-          "maxWidth": 176.77777777777777,
+          "maxWidth": 177.77777777777777,
         }
       }
     >
@@ -107,7 +107,7 @@ Array [
       className="media-container"
       style={
         Object {
-          "maxWidth": 176.77777777777777,
+          "maxWidth": 177.77777777777777,
         }
       }
     >
@@ -187,7 +187,7 @@ Array [
       className="media-container"
       style={
         Object {
-          "maxWidth": 176.77777777777777,
+          "maxWidth": 177.77777777777777,
         }
       }
     >
@@ -195,7 +195,7 @@ Array [
         className="wxc-remote-media remote-media-in-meeting"
       >
         <div
-          className="wxc-badge"
+          className="wxc-badge connecting-badge"
           style={Object {}}
         >
           <div
@@ -261,7 +261,7 @@ Array [
       className="media-container"
       style={
         Object {
-          "maxWidth": 176.77777777777777,
+          "maxWidth": 177.77777777777777,
         }
       }
     >
@@ -331,7 +331,7 @@ Array [
       className="media-container"
       style={
         Object {
-          "maxWidth": 176.77777777777777,
+          "maxWidth": 177.77777777777777,
         }
       }
     >
@@ -423,7 +423,7 @@ Array [
       className="media-container"
       style={
         Object {
-          "maxWidth": 176.77777777777777,
+          "maxWidth": 177.77777777777777,
         }
       }
     >

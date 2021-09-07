@@ -85,7 +85,7 @@ export default function WebexRemoteMedia({className, meetingID, style}) {
     remoteDisplay = <Title>Waiting for others to join...</Title>;
   } else {
     remoteDisplay = (
-      <Badge>
+      <Badge className="connecting-badge">
         <Spinner size={14} className="connecting-spinner" />
         <span>Connecting</span>
       </Badge>
