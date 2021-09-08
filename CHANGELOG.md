@@ -1,3 +1,11 @@
+## [1.134.1](https://github.com/webex/components/compare/v1.134.0...v1.134.1) (2021-09-08)
+
+
+### Bug Fixes
+
+* **fonts:** add cisco fonts to build folder ([a113ab3](https://github.com/webex/components/commit/a113ab31ff852756b9a809bafa7740b027756117))
+* **MeetingsJsonAdapter:** stop stream when switching microphones ([f02b892](https://github.com/webex/components/commit/f02b8921c9d9133bcfb29d0946696e127545d9fb))
+
 # [1.134.0](https://github.com/webex/components/compare/v1.133.0...v1.134.0) (2021-09-08)
 
 
