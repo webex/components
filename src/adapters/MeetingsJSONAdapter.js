@@ -505,13 +505,15 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       } else {
         const stream = await this.getDisplayStream();
 
-        stream.getVideoTracks()[0].onended = () => {
-          this.handleLocalShare(ID);
-        };
-        updates = {
-          remoteShare: null,
-          localShare: {stream},
-        };
+        if (stream?.getVideoTracks) {
+          stream.getVideoTracks()[0].onended = () => {
+            this.handleLocalShare(ID);
+          };
+          updates = {
+            remoteShare: null,
+            localShare: {stream},
+          };
+        }
       }
 
       return updates;
