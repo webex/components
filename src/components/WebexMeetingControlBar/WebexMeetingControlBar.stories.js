@@ -19,11 +19,11 @@ const Template = (args) => {
 export const Interstitial = Template.bind({});
 Interstitial.args = {
   meetingID: 'meeting3',
-  controls: () => ['mute-audio', 'mute-video', 'join-meeting'],
+  controls: () => ['mute-audio', 'mute-video', 'settings', 'join-meeting'],
 };
 
 export const InMeeting = Template.bind({});
 InMeeting.args = {
   meetingID: 'meeting1',
-  controls: () => ['mute-audio', 'mute-video', 'share-screen', 'leave-meeting'],
+  controls: () => ['mute-audio', 'mute-video', 'share-screen', 'member-roster', 'settings', 'leave-meeting'],
 };
