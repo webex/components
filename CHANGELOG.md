@@ -1,3 +1,15 @@
+# [1.135.0](https://github.com/webex/components/compare/v1.134.2...v1.135.0) (2021-09-08)
+
+
+### Bug Fixes
+
+* **MeetingsJsonAdapter:** check stream.getVideoTracks to be valid ([ae5975e](https://github.com/webex/components/commit/ae5975eb958ae508e1eb0684a1c95874207f3254))
+
+
+### Features
+
+* **themes:** remove loading logo file for light theme ([a2896d9](https://github.com/webex/components/commit/a2896d9160223b47f1866e138348b2c04e3101c7))
+
 ## [1.134.2](https://github.com/webex/components/compare/v1.134.1...v1.134.2) (2021-09-08)
 
 
