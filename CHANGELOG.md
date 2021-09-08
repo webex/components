@@ -1,3 +1,10 @@
+# [1.134.0](https://github.com/webex/components/compare/v1.133.0...v1.134.0) (2021-09-08)
+
+
+### Features
+
+* **WebexMeeting:** make video occupy only available vertical space ([a50ea7d](https://github.com/webex/components/commit/a50ea7d52cd2a6561b1de065a17eb590136616c3))
+
 # [1.133.0](https://github.com/webex/components/compare/v1.132.1...v1.133.0) (2021-09-08)
 
 
