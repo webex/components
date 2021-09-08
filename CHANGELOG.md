@@ -1,3 +1,10 @@
+## [1.135.1](https://github.com/webex/components/compare/v1.135.0...v1.135.1) (2021-09-08)
+
+
+### Bug Fixes
+
+* **Momentum:** remove Momentum ui and create ListSeparator ([b30f32b](https://github.com/webex/components/commit/b30f32b6c385210e7ae7f718878f52aa77085ed1))
+
 # [1.135.0](https://github.com/webex/components/compare/v1.134.2...v1.135.0) (2021-09-08)
 
 
