@@ -1,3 +1,19 @@
+# [1.133.0](https://github.com/webex/components/compare/v1.132.1...v1.133.0) (2021-09-08)
+
+
+### Bug Fixes
+
+* **Icon:** transform Icon size from string to number ([8a36a70](https://github.com/webex/components/commit/8a36a70a1a2d751d0c696700f9f9fcb3f08824b5))
+* **MeetingsJsonAdapter:** stop stream on localShare ([8369546](https://github.com/webex/components/commit/83695463ba8367d95314353cbdc647009ce06e8e))
+* **MeetingsJsonAdapter:** stop stream when switching cameras ([31766ae](https://github.com/webex/components/commit/31766ae8a01aecb0ddb084e86d1a709a5b825018))
+
+
+### Features
+
+* **WebexAudioSettings:** make controls occupy the full width of the container ([25381b7](https://github.com/webex/components/commit/25381b7e030dab9a2263c7e5efb106f5a8522233))
+* **WebexComponents:** remove legacy theme and default to dark ([eef40e5](https://github.com/webex/components/commit/eef40e5f0e10c4071dee30eefc25a4b760dba232))
+* **WebexVideoSettings:** make control occupy the full width of the container ([f4b14c3](https://github.com/webex/components/commit/f4b14c30554a6b00c7d99cb1677abbf2271f1e37))
+
 ## [1.132.1](https://github.com/webex/components/compare/v1.132.0...v1.132.1) (2021-09-07)
 
 
