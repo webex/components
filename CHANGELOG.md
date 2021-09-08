@@ -1,3 +1,10 @@
+## [1.134.2](https://github.com/webex/components/compare/v1.134.1...v1.134.2) (2021-09-08)
+
+
+### Bug Fixes
+
+* **WebexMeetingControlBar:** add settings control to interstitial control bar ([b3a1a93](https://github.com/webex/components/commit/b3a1a9345ac50ea8f65ceceb74153bb0d1ce54ac))
+
 ## [1.134.1](https://github.com/webex/components/compare/v1.134.0...v1.134.1) (2021-09-08)
 
 
