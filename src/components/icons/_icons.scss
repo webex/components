@@ -5,7 +5,7 @@
   fill: currentColor;
 
   .accent {
-    fill: var(--wxc-icon--active-color);
+    fill: var(--wxc-icon--accent-color);
 
     :disabled & {
       display: none;
