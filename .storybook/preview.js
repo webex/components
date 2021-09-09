@@ -2,6 +2,7 @@ import React from 'react';
 import mockData from '../src/data';
 import {WebexJSONAdapter} from '../src/adapters';
 import {WebexDataProvider} from '../src/components';
+import '../src/styles/reset.css';
 import '../src/styles/index.scss';
 
 export const decorators = [
