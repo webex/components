@@ -12,6 +12,7 @@ export default {
         inMeeting: null,
         host: null,
         guest: null,
+        speaking: null,
       },
       {
         ID: 'user2',
@@ -21,6 +22,7 @@ export default {
         inMeeting: null,
         host: null,
         guest: null,
+        speaking: null,
       },
       {
         ID: 'user3',
@@ -30,6 +32,7 @@ export default {
         inMeeting: null,
         host: null,
         guest: null,
+        speaking: null,
       },
       {
         ID: 'user4',
@@ -39,6 +42,7 @@ export default {
         inMeeting: null,
         host: null,
         guest: null,
+        speaking: null,
       },
     ],
   },
@@ -55,6 +59,7 @@ export default {
         inMeeting: null,
         host: null,
         guest: null,
+        speaking: null,
       },
       {
         ID: 'user5',
@@ -64,6 +69,7 @@ export default {
         inMeeting: null,
         host: null,
         guest: null,
+        speaking: null,
       },
       {
         ID: 'user6',
@@ -73,6 +79,7 @@ export default {
         inMeeting: null,
         host: null,
         guest: null,
+        speaking: null,
       },
     ],
   },
@@ -89,6 +96,7 @@ export default {
         inMeeting: true,
         host: false,
         guest: false,
+        speaking: true,
       },
       {
         ID: 'user2',
@@ -98,6 +106,7 @@ export default {
         inMeeting: false,
         host: false,
         guest: true,
+        speaking: false,
       },
       {
         ID: 'user3',
@@ -107,6 +116,7 @@ export default {
         inMeeting: true,
         host: true,
         guest: false,
+        speaking: false,
       },
     ],
   },
@@ -118,20 +128,22 @@ export default {
       {
         ID: 'user1',
         orgID: 'org1',
-        muted: false,
-        sharing: false,
-        inMeeting: true,
-        host: false,
-        guest: false,
-      },
-      {
-        ID: 'user2',
-        orgID: 'org1',
         muted: true,
         sharing: false,
         inMeeting: true,
         host: false,
         guest: false,
+        speaking: false,
+      },
+      {
+        ID: 'user2',
+        orgID: 'org1',
+        muted: false,
+        sharing: false,
+        inMeeting: true,
+        host: false,
+        guest: false,
+        speaking: true,
       },
       {
         ID: 'user3',
@@ -141,6 +153,7 @@ export default {
         inMeeting: true,
         host: false,
         guest: false,
+        speaking: true,
       },
       {
         ID: 'user4',
@@ -150,6 +163,7 @@ export default {
         inMeeting: true,
         host: true,
         guest: false,
+        speaking: false,
       },
       {
         ID: 'user5',
@@ -159,6 +173,7 @@ export default {
         inMeeting: true,
         host: false,
         guest: true,
+        speaking: false,
       },
       {
         ID: 'user6',
@@ -168,6 +183,7 @@ export default {
         inMeeting: false,
         host: false,
         guest: true,
+        speaking: false,
       },
     ],
   },
@@ -184,6 +200,7 @@ export default {
         inMeeting: true,
         host: false,
         guest: false,
+        speaking: true,
       },
     ],
   },
@@ -200,6 +217,7 @@ export default {
         inMeeting: true,
         host: false,
         guest: false,
+        speaking: true,
       },
       {
         ID: 'user2',
@@ -209,6 +227,7 @@ export default {
         inMeeting: true,
         host: false,
         guest: false,
+        speaking: false,
       },
       {
         ID: 'user3',
@@ -218,6 +237,7 @@ export default {
         inMeeting: false,
         host: false,
         guest: false,
+        speaking: true,
       },
     ],
   },
@@ -234,6 +254,7 @@ export default {
         inMeeting: true,
         host: false,
         guest: false,
+        speaking: false,
       },
       {
         ID: 'user2',
@@ -243,6 +264,7 @@ export default {
         inMeeting: true,
         host: false,
         guest: false,
+        speaking: false,
       },
     ],
   },
