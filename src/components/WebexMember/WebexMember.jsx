@@ -42,6 +42,7 @@ export default function WebexMember({
   const organization = useOrganization(orgID);
 
   const isMuted = member?.muted;
+  const isSpeaking = member?.speaking;
   const isExternal = orgID !== undefined && me.orgID !== undefined && me.orgID !== orgID;
   const isSharing = member?.sharing;
   const isInMeeting = member?.inMeeting;
@@ -70,7 +71,7 @@ export default function WebexMember({
         {isExternal && <div className="organization">{organization.name || emailDomain}</div>}
       </div>
       {isInMeeting && isSharing && <Icon name="content-share_16" className="sharing" />}
-      {isInMeeting && !isMuted && <Icon name="microphone_16" className="unmuted" />}
+      {isInMeeting && isSpeaking && <Icon name="microphone_16" className="speaking" />}
       {isInMeeting && isMuted && <Icon name="microphone-muted_16" className="muted" />}
     </div>
   );
