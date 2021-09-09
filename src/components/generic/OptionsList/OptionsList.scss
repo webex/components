@@ -17,6 +17,7 @@
       align-items: center;
       cursor: pointer;
       color: var(--wxc-text-color);
+      border: 1px solid transparent;
 
       .label {
         flex: 1;
