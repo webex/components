@@ -1,3 +1,10 @@
+# [1.137.0](https://github.com/webex/components/compare/v1.136.0...v1.137.0) (2021-09-10)
+
+
+### Features
+
+* **WebexMember:** show green microphone icon only when member is speaking ([37caadb](https://github.com/webex/components/commit/37caadbaf00c5b67e1932042e1eabb90912eb166))
+
 # [1.136.0](https://github.com/webex/components/compare/v1.135.1...v1.136.0) (2021-09-10)
 
 
