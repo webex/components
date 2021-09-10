@@ -64,10 +64,11 @@
   }
 
   .options-list {
-    width: 100%;
     position: absolute;
     z-index: 1;
     top: calc(100% + 0.125rem);
+    left: 0;
+    right: 0;
   }
 }
 
