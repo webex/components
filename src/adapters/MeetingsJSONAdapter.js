@@ -233,9 +233,19 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
           meeting.remoteVideo = this.getVideoStream();
         }
 
+        // Add a video stream as if it were a local video
+        if (meeting.localVideo.stream instanceof MediaStream) {
+          meeting.localVideo.stream = this.getVideoStream();
+        }
+
         // Add a share stream as if it were a remote sharing
         if (meeting.remoteShare instanceof MediaStream) {
           meeting.remoteShare = this.getShareStream();
+        }
+
+        // Add a share stream as if it were a local sharing
+        if (meeting.localShare.stream instanceof MediaStream) {
+          meeting.localShare.stream = this.getShareStream();
         }
 
         observer.next(meeting);
