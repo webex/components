@@ -1,3 +1,10 @@
+# [1.138.0](https://github.com/webex/components/compare/v1.137.0...v1.138.0) (2021-09-10)
+
+
+### Features
+
+* **themes:** add loading logo for light theme ([37ed719](https://github.com/webex/components/commit/37ed7199e8a989884c8855c0eb059a5b458872ea))
+
 # [1.137.0](https://github.com/webex/components/compare/v1.136.0...v1.137.0) (2021-09-10)
 
 
