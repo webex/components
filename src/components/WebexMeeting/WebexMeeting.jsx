@@ -76,7 +76,7 @@ export default function WebexMeeting({
     meetingDisplay = (
       <>
         {logo && <div>{logo}</div>}
-        <div className="body">
+        <div className="meeting-body">
           {isActive
             ? <WebexInMeeting meetingID={ID} className="inner-meeting" />
             : <WebexInterstitialMeeting meetingID={ID} className="inner-meeting" />}
