@@ -60,7 +60,7 @@ export default function WebexNoMedia({className, style, media}) {
     <div className={cssClasses} style={style}>
       <Icon className="icon-media-issue" name={screen.icon} />
       <Title>{screen.title}</Title>
-      <div className="body">
+      <div className="no-media-body">
         {screen.message}
       </div>
     </div>

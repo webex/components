@@ -47,7 +47,7 @@ Array [
       Can't access camera
     </h5>
     <div
-      className="body"
+      className="no-media-body"
     >
       <p>
         Reload this page and select 
@@ -144,7 +144,7 @@ Array [
       Can't access microphone
     </h5>
     <div
-      className="body"
+      className="no-media-body"
     >
       <p>
         Reload this page and select 

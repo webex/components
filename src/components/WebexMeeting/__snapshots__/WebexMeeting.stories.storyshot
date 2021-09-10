@@ -60,7 +60,7 @@ Array [
     }
   >
     <div
-      className="body"
+      className="meeting-body"
     >
       <div
         className="wxc-in-meeting inner-meeting"
@@ -687,7 +687,7 @@ Array [
     }
   >
     <div
-      className="body"
+      className="meeting-body"
     >
       <div
         className="wxc-interstitial-meeting inner-meeting"
@@ -1223,7 +1223,7 @@ Array [
     }
   >
     <div
-      className="body"
+      className="meeting-body"
     >
       <div
         className="wxc-in-meeting inner-meeting"
