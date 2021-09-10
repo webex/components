@@ -1,3 +1,10 @@
+# [1.136.0](https://github.com/webex/components/compare/v1.135.1...v1.136.0) (2021-09-10)
+
+
+### Features
+
+* **WebexMeeting:** display modals relative to the meeting component instead of whole screen ([d07d26d](https://github.com/webex/components/commit/d07d26d18b956ad66509b7128c147e2e48e50dba))
+
 ## [1.135.1](https://github.com/webex/components/compare/v1.135.0...v1.135.1) (2021-09-08)
 
 
