@@ -1,3 +1,10 @@
+## [1.138.3](https://github.com/webex/components/compare/v1.138.2...v1.138.3) (2021-09-13)
+
+
+### Bug Fixes
+
+* **OptionsList:** reset option list padding ([504596d](https://github.com/webex/components/commit/504596d5f4f59303a50cb4db14294610e0448f48))
+
 ## [1.138.2](https://github.com/webex/components/compare/v1.138.1...v1.138.2) (2021-09-13)
 
 
