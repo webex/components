@@ -53,7 +53,13 @@ const EMPTY_MEETING = {
   remoteVideo: null,
   remoteShare: null,
   showRoster: null,
-  showSettings: false,
+  settings: {
+    visible: false,
+    preview: {
+      audio: null,
+      video: null,
+    },
+  },
   status: 'NOT_JOINED',
   cameraID: null,
   microphoneID: null,
@@ -108,7 +114,13 @@ const EVENT_MEETING_UPDATE = 'meeting:update';
  *     "remoteAudio": {},
  *     "remoteVideo": {},
  *     "remoteShare": {},
- *     "showSettings": false,
+ *     "settings": {
+ *        visible: false,
+ *        preview: {
+ *          audio: {},
+ *          video: {},
+ *        },
+ *      },
  *     "state": "JOINED",
  *   },
  *   "meeting-2": {
@@ -126,7 +138,13 @@ const EVENT_MEETING_UPDATE = 'meeting:update';
  *     "remoteAudio": {},
  *     "remoteVideo": {},
  *     "remoteShare": {},
- *     "showSettings": false,
+ *     "settings": {
+ *        visible: false,
+ *        preview: {
+ *          audio: {},
+ *          video: {},
+ *        },
+ *      },
  *     "state": "NOT_JOINED",
  *   }
  * }
@@ -219,7 +237,13 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
           remoteVideo: null,
           remoteShare: null,
           showRoster: null,
-          showSettings: false,
+          settings: {
+            visible: false,
+            preview: {
+              audio: {},
+              video: {},
+            },
+          },
           state: null,
           cameraID: null,
           microphoneID: null,
@@ -475,7 +499,9 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       return {
         localAudio: {
           stream: meeting.localAudio.stream
-            ? null : await this.getStream({video: false, audio: true}),
+            ? null : await this.getStream({
+              audio: !meeting.microphoneID.includes('microphoneID') ? {deviceId: {exact: meeting.microphoneID}} : null,
+            }),
         },
       };
     });
@@ -494,7 +520,9 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       return {
         localVideo: {
           stream: meeting.localVideo?.stream
-            ? null : await this.getStream({video: true, audio: false}),
+            ? null : await this.getStream({
+              video: !meeting.cameraID.includes('cameraID') ? {deviceId: {exact: meeting.cameraID}} : null,
+            }),
         },
       };
     });
@@ -547,7 +575,24 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @param {string} ID  Id of the meeting for which to toggle the settings flag
    */
   async toggleSettings(ID) {
-    await this.updateMeeting(ID, async (meeting) => ({showSettings: !meeting.showSettings}));
+    await this.updateMeeting(ID, async (meeting) => {
+      this.stopStream(meeting.settings.preview.video);
+      this.stopStream(meeting.settings.preview.microphone);
+
+      return {
+        settings: {
+          visible: !meeting.settings.visible,
+          preview: {
+            video: !meeting.settings.visible ? await this.getStream({
+              video: !meeting.cameraID.includes('cameraID') ? {deviceId: {exact: meeting.cameraID}} : null,
+            }) : null,
+            audio: !meeting.settings.visible ? await this.getStream({
+              audio: !meeting.microphoneID.includes('microphoneID') ? {deviceId: {exact: meeting.microphoneID}} : null,
+            }) : null,
+          },
+        },
+      };
+    });
   }
 
   /**
@@ -558,11 +603,13 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    */
   async switchCamera(ID, cameraID) {
     await this.updateMeeting(ID, async (meeting) => {
-      this.stopStream(meeting.localVideo.stream);
+      this.stopStream(meeting.settings.preview.video);
 
       return {
-        localVideo: {
-          stream: await this.getStream({video: {deviceId: {exact: cameraID}}}),
+        settings: {
+          preview: {
+            video: await this.getStream({video: {deviceId: {exact: cameraID}}}),
+          },
         },
         cameraID,
       };
@@ -578,11 +625,13 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    */
   async switchMicrophone(ID, microphoneID) {
     await this.updateMeeting(ID, async (meeting) => {
-      this.stopStream(meeting.localAudio.stream);
+      this.stopStream(meeting.settings.preview.audio);
 
       return {
-        localAudio: {
-          stream: await this.getStream({audio: {deviceId: {exact: microphoneID}}}),
+        settings: {
+          preview: {
+            audio: await this.getStream({audio: {deviceId: {exact: microphoneID}}}),
+          },
         },
         microphoneID,
       };

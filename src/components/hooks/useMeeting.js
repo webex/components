@@ -16,6 +16,13 @@ const emptyMeeting = {
   remoteShare: null,
   state: null,
   showRoster: null,
+  settings: {
+    visible: false,
+    preview: {
+      microphone: {},
+      video: {},
+    },
+  },
   error: null,
 };
 
