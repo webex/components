@@ -1,3 +1,10 @@
+## [1.138.1](https://github.com/webex/components/compare/v1.138.0...v1.138.1) (2021-09-13)
+
+
+### Bug Fixes
+
+* **WebexMeeting:** make dark and light loading logos smaller ([51291a5](https://github.com/webex/components/commit/51291a5898684e7105a44194e64316d957492763))
+
 # [1.138.0](https://github.com/webex/components/compare/v1.137.0...v1.138.0) (2021-09-10)
 
 
