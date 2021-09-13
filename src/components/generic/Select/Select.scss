@@ -8,7 +8,7 @@
       color: var(--wxc-select--disabled--color);
 
       &:hover,
-      &:active, 
+      &:active,
       &.expended {
         background: var(--wxc-select--disabled--background);
         color: var(--wxc-select--disabled--color);
@@ -17,7 +17,7 @@
       &:focus {
         border: none;
         color: var(--wxc-select--disabled--color);
-      }  
+      }
 
       svg path {
         fill: var(--wxc-select--disabled--color)
@@ -38,6 +38,7 @@
     .label {
       flex: 1;
       display: block;
+      margin-right: 0.25rem;
       font-size: 1rem;
       white-space: nowrap;
       text-overflow: ellipsis;

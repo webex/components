@@ -30,6 +30,11 @@
 
       .check {
         color: var(--wxc-options-list-item--selected--color);
+        margin-left: 0.25rem;
+
+        &.invisible {
+          visibility: hidden;
+        }
       }
 
       &:hover {
