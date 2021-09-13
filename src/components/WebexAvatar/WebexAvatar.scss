@@ -1,6 +1,6 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-avatar {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 4rem;
+  height: 4rem;
 
   display: block;
 
@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: center;
   }
-  
+
   .image-error {
     display: none;
   }
