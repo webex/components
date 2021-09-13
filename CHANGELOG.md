@@ -1,3 +1,11 @@
+## [1.138.2](https://github.com/webex/components/compare/v1.138.1...v1.138.2) (2021-09-13)
+
+
+### Bug Fixes
+
+* **MeetingsJsonAdapter:** show local media before the first interaction with corresponding controls ([7f6a4cd](https://github.com/webex/components/commit/7f6a4cdf8c6f8e30844ee0db333b6366fe00c0ba))
+* **WebexMeeting:** rename classname "body" because of conflicts ([ffda7f6](https://github.com/webex/components/commit/ffda7f6cf444c9c8af3174b78a17888c22e85273))
+
 ## [1.138.1](https://github.com/webex/components/compare/v1.138.0...v1.138.1) (2021-09-13)
 
 
