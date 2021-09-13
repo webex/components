@@ -1,3 +1,10 @@
+## [1.138.4](https://github.com/webex/components/compare/v1.138.3...v1.138.4) (2021-09-13)
+
+
+### Bug Fixes
+
+* **WebexMeetingInfo:** add margin bottom to meeting title ([8a30ffd](https://github.com/webex/components/commit/8a30ffd5339486e57a611a19203a02dd70a9a9ea))
+
 ## [1.138.3](https://github.com/webex/components/compare/v1.138.2...v1.138.3) (2021-09-13)
 
 
