@@ -29,17 +29,22 @@
 
       .check {
         color: var(--wxc-options-list-item--selected--color);
+        margin-left: 0.25rem;
+
+        &.invisible {
+          visibility: hidden;
+        }
       }
 
       &:hover {
         background: var(--wxc-options-list-item--hover--background);
       }
-  
+
       &:active {
         background: var(--wxc-options-list-item--active--background);
         border: var(--wxc-options-list--normal--border);
       }
-  
+
       &:focus {
         border: var(--wxc-options-list-item--focus--border);
       }

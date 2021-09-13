@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 import Icon from '../Icon/Icon';
 import webexComponentClasses from '../../helpers';
@@ -38,7 +39,7 @@ export default function OptionsList({
           >
             {option.icon && <Icon name={option.icon} />}
             <span className="label">{option.label}</span>
-            {selected && selected === option.value && <Icon className="check" size={16} name="check" />}
+            {selected && <Icon className={classNames('check', {invisible: (selected !== option.value)})} size={16} name="check" />}
           </li>
         ))}
       </ul>
