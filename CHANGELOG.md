@@ -1,3 +1,10 @@
+# [1.139.0](https://github.com/webex/components/compare/v1.138.4...v1.139.0) (2021-09-14)
+
+
+### Features
+
+* **WebexAvatar:** make avatar bigger ([c6180fe](https://github.com/webex/components/commit/c6180feff28cb3973653d0aa9f0aa0c9de603f84))
+
 ## [1.138.4](https://github.com/webex/components/compare/v1.138.3...v1.138.4) (2021-09-13)
 
 
