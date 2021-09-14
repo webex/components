@@ -4,7 +4,11 @@ import {format} from 'date-fns';
 import Spinner from '../generic/Spinner/Spinner';
 
 import webexComponentClasses from '../helpers';
-import {useMeeting} from '../hooks';
+import {TABLET, DESKTOP} from '../breakpoints';
+import {
+  useElementDimensions,
+  useMeeting,
+} from '../hooks';
 
 /**
  * Formats a start and end date to a readable string.
@@ -38,7 +42,12 @@ export default function WebexMeetingInfo({className, meetingID, style}) {
     endTime,
     title,
   } = useMeeting(meetingID);
-  const cssClasses = webexComponentClasses('meeting-info', className);
+  const [meetingInfoRef, {width}] = useElementDimensions();
+  const cssClasses = webexComponentClasses('meeting-info', className, {
+    tablet: width >= TABLET && width < DESKTOP,
+    desktop: width >= DESKTOP,
+  });
+
   let infoComponent = <Spinner size={36} />;
 
   if (ID) {
@@ -56,7 +65,7 @@ export default function WebexMeetingInfo({className, meetingID, style}) {
     );
   }
 
-  return <div className={cssClasses} style={style}>{infoComponent}</div>;
+  return <div ref={meetingInfoRef} className={cssClasses} style={style}>{infoComponent}</div>;
 }
 
 WebexMeetingInfo.propTypes = {
