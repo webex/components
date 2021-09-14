@@ -40,6 +40,7 @@ $shadow-color: rgba(0, 0, 0, 0.2);
 
     min-width: auto;
     min-height: auto;
+    background: var(--wxc-secondary-video-background);
 
     .md-avatar {
       transform: none; // Avatar is 40x40px, resets any transforms
