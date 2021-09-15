@@ -1,3 +1,11 @@
+## [1.141.1](https://github.com/webex/components/compare/v1.141.0...v1.141.1) (2021-09-15)
+
+
+### Bug Fixes
+
+* **OptionsList:** change border to box-shadow so as not take up space in container ([579a15f](https://github.com/webex/components/commit/579a15ffbef6bf5ae717955127eaa76d93b5e672))
+* **WebexMeetingInfo:** add font size values for meeting info depending on the device type ([fb076fd](https://github.com/webex/components/commit/fb076fdcf645aceeb257573780fbcbe4a30f8aa7))
+
 # [1.141.0](https://github.com/webex/components/compare/v1.140.2...v1.141.0) (2021-09-15)
 
 
