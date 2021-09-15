@@ -1,3 +1,11 @@
+# [1.141.0](https://github.com/webex/components/compare/v1.140.2...v1.141.0) (2021-09-15)
+
+
+### Features
+
+* **storybook:** make storybook refresh data before each story ([de338af](https://github.com/webex/components/commit/de338af10dec798a34b0fd9e0c77b4137cc77cc1))
+* **WebexMediaAccess:** add background to the mediaAccess component ([e119fc7](https://github.com/webex/components/commit/e119fc70a626efe43f6dbe47cd1d448201894856))
+
 ## [1.140.2](https://github.com/webex/components/compare/v1.140.1...v1.140.2) (2021-09-15)
 
 
