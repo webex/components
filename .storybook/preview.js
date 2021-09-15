@@ -6,8 +6,14 @@ import '../src/styles/index.scss';
 
 export const decorators = [
   (Story, {parameters}) => {
+    const mockDataString = JSON.stringify(mockData, (key, value) => (
+      value instanceof MediaStream ? '***mediastream***' : value
+    ));
+    const mockDataCopy = JSON.parse(mockDataString, (key, value) => (
+      value === '***mediastream***' ? new MediaStream() : value
+    ));
     const data = {
-      ...mockData,
+      ...mockDataCopy,
        // Allows to dynamically send data from a story
       ...parameters.mockData,
     };
