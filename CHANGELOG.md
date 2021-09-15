@@ -1,3 +1,10 @@
+## [1.140.2](https://github.com/webex/components/compare/v1.140.1...v1.140.2) (2021-09-15)
+
+
+### Bug Fixes
+
+* **WebexInMeeting:** add background to in meeting local media ([cc640a9](https://github.com/webex/components/commit/cc640a9d4151345eab6bedb8eae9dc21da7d4b25))
+
 ## [1.140.1](https://github.com/webex/components/compare/v1.140.0...v1.140.1) (2021-09-15)
 
 
