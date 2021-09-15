@@ -21,7 +21,7 @@ const SCREENS = {
     /* eslint-disable react/jsx-one-expression-per-line */
     message: (
       <>
-        <p>Reload this page and select <span>Allow</span> when your browser asks.</p>
+        <p>Reload this page and select <b>Allow</b> when your browser asks.</p>
         <p>
           <div><b>Still not working?</b></div>
           You may need to update your webpage permissions.
@@ -39,7 +39,7 @@ const SCREENS = {
     message:
     (
       <>
-        <p>Reload this page and select <span>Allow</span> when your browser asks.</p>
+        <p>Reload this page and select <b>Allow</b> when your browser asks.</p>
         <p>
           <div><b>Still not working?</b></div>
           You may need to update your webpage permissions.
@@ -59,7 +59,7 @@ export default function WebexNoMedia({className, style, media}) {
   return (
     <div className={cssClasses} style={style}>
       <Icon className="icon-media-issue" name={screen.icon} />
-      <Title>{screen.title}</Title>
+      <Title className="no-media-title">{screen.title}</Title>
       <div className="no-media-body">
         {screen.message}
       </div>
