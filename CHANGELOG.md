@@ -1,3 +1,10 @@
+## [1.141.2](https://github.com/webex/components/compare/v1.141.1...v1.141.2) (2021-09-15)
+
+
+### Bug Fixes
+
+* **WebexNoMedia:** fix theming for webexNoMedia ([0f1873a](https://github.com/webex/components/commit/0f1873abfa150f2a31694ffe2ceefe41979ad6f5))
+
 ## [1.141.1](https://github.com/webex/components/compare/v1.141.0...v1.141.1) (2021-09-15)
 
 
