@@ -38,11 +38,11 @@
 
       &:active {
         background: var(--wxc-options-list-item--active--background);
-        border: var(--wxc-options-list--normal--border);
+        box-shadow: var(--wxc-options-list--normal--box-shadow);
       }
 
       &:focus {
-        border: var(--wxc-options-list-item--focus--border);
+        box-shadow: var(--wxc-options-list-item--focus--box-shadow);
       }
     }
   }
