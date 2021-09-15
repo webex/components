@@ -1,3 +1,10 @@
+## [1.141.3](https://github.com/webex/components/compare/v1.141.2...v1.141.3) (2021-09-15)
+
+
+### Bug Fixes
+
+* **OptionsList:** show "selected" icon in its own column ([7a4b00d](https://github.com/webex/components/commit/7a4b00de1df58fb1354187ba9e7da4c38793ab10))
+
 ## [1.141.2](https://github.com/webex/components/compare/v1.141.1...v1.141.2) (2021-09-15)
 
 
