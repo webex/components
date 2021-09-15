@@ -1,3 +1,15 @@
+# [1.140.0](https://github.com/webex/components/compare/v1.139.0...v1.140.0) (2021-09-15)
+
+
+### Bug Fixes
+
+* **Select:** make options list the same width as select box ([87c5165](https://github.com/webex/components/commit/87c51658026db345bd0e86d5ce57a8a45eacbdfd))
+
+
+### Features
+
+* **WebexMeeting:** add margins to the meeting logo ([ed9a0f9](https://github.com/webex/components/commit/ed9a0f9ae46b2384fdb406dd50c0d6dd909d140f))
+
 # [1.139.0](https://github.com/webex/components/compare/v1.138.4...v1.139.0) (2021-09-14)
 
 
