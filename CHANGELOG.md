@@ -1,3 +1,10 @@
+## [1.140.1](https://github.com/webex/components/compare/v1.140.0...v1.140.1) (2021-09-15)
+
+
+### Bug Fixes
+
+* **Icons:** use correct color for accents ([24543d0](https://github.com/webex/components/commit/24543d060d687fb84aaaeb2996dc837b46292502))
+
 # [1.140.0](https://github.com/webex/components/compare/v1.139.0...v1.140.0) (2021-09-15)
 
 
