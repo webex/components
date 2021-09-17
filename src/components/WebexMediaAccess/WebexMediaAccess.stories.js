@@ -6,7 +6,16 @@ export default {
   component: WebexMediaAccess,
 };
 
-const Template = (args) => <WebexMediaAccess {...args} />;
+const Template = (args) => {
+  const style = {
+    width: '100%',
+    height: '100%',
+    ...args.style,
+  };
+  const props = {...args, style};
+
+  return <WebexMediaAccess {...props} />;
+};
 
 export const Camera = Template.bind({});
 Camera.args = {
