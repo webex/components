@@ -1,3 +1,10 @@
+# [1.142.0](https://github.com/webex/components/compare/v1.141.3...v1.142.0) (2021-09-17)
+
+
+### Features
+
+* **WebexMediaAccess:** add style for media access in the storybook ([521fd09](https://github.com/webex/components/commit/521fd09a1a7d8bbec0a7ffd34d244d32c1364483))
+
 ## [1.141.3](https://github.com/webex/components/compare/v1.141.2...v1.141.3) (2021-09-15)
 
 
