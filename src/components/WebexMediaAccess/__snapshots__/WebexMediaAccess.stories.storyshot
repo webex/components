@@ -4,6 +4,12 @@ exports[`Storyshots Meetings/Webex Media Access Camera 1`] = `
 Array [
   <div
     className="wxc-media-access"
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
   >
     <svg
       className="wxc-icon wxc-camera-icon"
@@ -89,6 +95,12 @@ exports[`Storyshots Meetings/Webex Media Access Microphone 1`] = `
 Array [
   <div
     className="wxc-media-access"
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
   >
     <svg
       className="wxc-icon wxc-audio-microphone-icon"
