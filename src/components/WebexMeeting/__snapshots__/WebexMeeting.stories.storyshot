@@ -1216,7 +1216,7 @@ Array [
             className="wxc-remote-media remote-media-in-meeting"
           >
             <h5
-              className="wxc-title"
+              className="wxc-title title"
               style={Object {}}
             >
               Waiting for others to join...

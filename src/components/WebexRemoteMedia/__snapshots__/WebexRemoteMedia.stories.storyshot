@@ -273,7 +273,7 @@ Array [
     }
   >
     <h5
-      className="wxc-title"
+      className="wxc-title title"
       style={Object {}}
     >
       Waiting for others to join...
