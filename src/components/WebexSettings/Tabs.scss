@@ -9,7 +9,6 @@
       &.active > button {
         color: var(--wxc-tab--active--color);
         background: var(--wxc-tab--active--background);
-        border-radius: 0.875rem;
       }
 
       &:not(:last-child) {
@@ -25,6 +24,17 @@
         line-height: 1.375rem;
         padding: 0.1875rem 1rem;
         color: var(--wxc-tab--normal--color);
+        border-radius: 0.875rem;
+
+        &:hover {
+          color: var(--wxc-tab--hover--color);
+          background: var(--wxc-tab--hover--background);
+        }
+
+        &:active {
+          color: var(--wxc-tab--active--color);
+          background: var(--wxc-tab--active--background);
+        }
       }
     }
   }
