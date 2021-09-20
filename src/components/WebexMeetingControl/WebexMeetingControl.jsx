@@ -68,10 +68,22 @@ function renderButton(action, display, style, showText, asItem) {
  * @param {Function} action  Adapter control callback
  * @param {object} display  Display data of the control
  * @param {object} style  Custom style to apply
+ * @param {string} type  Name of the control as defined in adapter
  * @returns {object} JSX of the component
  */
-function renderDropdown(action, display, style) {
-  const {options, noOptionsMessage, selected} = display;
+function renderDropdown(action, display, style, type) {
+  const {noOptionsMessage} = display;
+  let {options, selected} = display;
+  // The browser api setSinkId() does not work properly on Firefox and Safari browsers so we need to treat them separately by resetting the options we receive with a default no media label.
+  // https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/setSinkId
+  const isFirefox = navigator.userAgent.indexOf('Firefox') !== -1; // detect Firefox browser
+  const isSafari = navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1; // detect Safari browser
+  const noSpeaker = (isFirefox || isSafari) && type === 'switch-speaker';
+
+  if (noSpeaker) {
+    options = [{value: '', label: noOptionsMessage}];
+    selected = noOptionsMessage;
+  }
 
   return (
     <Select
@@ -79,8 +91,8 @@ function renderDropdown(action, display, style) {
       style={style}
       value={selected || ''}
       onChange={(id) => action(id)}
-      options={options?.length === 0 ? [{value: '', label: noOptionsMessage}] : options}
-      disabled={!options?.length}
+      options={options}
+      disabled={noSpeaker || !options?.length}
     />
   );
 }
@@ -119,7 +131,7 @@ export default function WebexMeetingControl({
   if (!display || Object.keys(display).length === 0) {
     output = '';
   } else if (display.type === 'MULTISELECT') {
-    output = renderDropdown(action, display, style);
+    output = renderDropdown(action, display, style, type);
   } else {
     output = renderButton(action, display, style, showText, asItem);
   }
