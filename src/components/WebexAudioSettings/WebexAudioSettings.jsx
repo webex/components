@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {useMeetingControl} from '../hooks';
 import webexComponentClasses from '../helpers';
 import Title from '../generic/Title/Title';
 import WebexMeetingControl from '../WebexMeetingControl/WebexMeetingControl';
+import WebexNoMedia from '../WebexNoMedia/WebexNoMedia';
 
 /**
  * Webex Audio Settings component
@@ -15,13 +17,21 @@ import WebexMeetingControl from '../WebexMeetingControl/WebexMeetingControl';
  */
 export default function WebexAudioSettings({className, meetingID, style}) {
   const cssClasses = webexComponentClasses('audio-settings', className);
+  const [, display] = useMeetingControl('switch-microphone', meetingID);
 
   return (
     <div className={cssClasses} style={style}>
-      <Title>Speaker</Title>
-      <WebexMeetingControl type="switch-speaker" meetingID={meetingID} />
-      <Title>Microphone</Title>
-      <WebexMeetingControl type="switch-microphone" meetingID={meetingID} />
+      {display.options?.length !== 0
+        ? (
+          <>
+            <Title>Speaker</Title>
+            <WebexMeetingControl type="switch-speaker" meetingID={meetingID} />
+            <Title>Microphone</Title>
+            <WebexMeetingControl type="switch-microphone" meetingID={meetingID} />
+          </>
+        ) : (
+          <WebexNoMedia media="microphone" className="no-media" />
+        )}
     </div>
   );
 }
