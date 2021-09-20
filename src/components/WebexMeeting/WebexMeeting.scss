@@ -27,7 +27,7 @@
   }
 
   .loading-logo {
-    background: var(--wxc-loading-logo) no-repeat center / 6.5rem 4.627rem;
+    background: var(--wxc-loading-logo) no-repeat center / var(--wxc-loading-logo-size);
     position: absolute;
     top: 0;
     left: 0;
