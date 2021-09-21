@@ -65,7 +65,7 @@ export default function WebexMemberRoster({
   ) && (
     <div className="external-user-warning">
       <Icon name="external-user_20" size={20} className="external-user-icon" />
-      <div>People outside your company are included in this space</div>
+      <div className="external-user-message">People outside your company are included in this space</div>
     </div>
   );
 
@@ -90,8 +90,8 @@ export default function WebexMemberRoster({
           ? renderMembers(members)
           : (
             <>
-              {renderSection(members.filter((member) => member.inMeeting), 'In meeting')}
-              {renderSection(members.filter((member) => !member.inMeeting), 'Not in meeting')}
+              {renderSection(members.filter((member) => member.inMeeting), 'In the meeting')}
+              {renderSection(members.filter((member) => !member.inMeeting), 'Not in the meeting')}
             </>
           )}
       </div>

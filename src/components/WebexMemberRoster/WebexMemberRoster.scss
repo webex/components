@@ -26,9 +26,14 @@
     font-family: $brand-font-regular;
     font-size: 0.875rem;
     line-height: 1.375rem;
+    margin-top: 0.75rem;
 
     .external-user-icon {
       margin-right: 0.578rem;
+    }
+
+    .external-user-message {
+      flex: 1;
     }
   }
 
@@ -50,5 +55,15 @@
     overflow-y: auto;
     flex: 1;
     padding-right: 1.25rem;
+    scrollbar-width: thin;  //works only for Firefox
+  }
+
+  ::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--wxc-scrollbar-thumb);
+    border-radius: 1rem;
   }
 }
