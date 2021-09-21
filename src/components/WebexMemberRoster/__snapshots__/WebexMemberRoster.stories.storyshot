@@ -31,10 +31,10 @@ Array [
       >
         <svg
           className="wxc-icon "
-          height={12}
+          height={16}
           style={Object {}}
           viewBox="0 0 24 24"
-          width={12}
+          width={16}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -255,10 +255,10 @@ Array [
       >
         <svg
           className="wxc-icon "
-          height={12}
+          height={16}
           style={Object {}}
           viewBox="0 0 24 24"
-          width={12}
+          width={16}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -721,10 +721,10 @@ Array [
       >
         <svg
           className="wxc-icon "
-          height={12}
+          height={16}
           style={Object {}}
           viewBox="0 0 24 24"
-          width={12}
+          width={16}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
