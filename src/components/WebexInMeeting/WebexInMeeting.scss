@@ -37,7 +37,9 @@ $shadow-color: rgba(0, 0, 0, 0.2);
 
   .local-media-in-meeting {
     @include media-preview-mobile();
-
+    
+    height: 5.625rem;
+    width: 10rem;
     min-width: auto;
     min-height: auto;
     background: var(--wxc-secondary-video-background);
