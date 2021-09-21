@@ -7,7 +7,7 @@ Array [
   >
     <button
       autoFocus={false}
-      className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+      className="wxc-button wxc-meeting-control__control-button wxc-button--default wxc-button--pressed"
       disabled={false}
       onClick={[Function]}
       style={Object {}}
@@ -231,7 +231,7 @@ Array [
   >
     <button
       autoFocus={false}
-      className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+      className="wxc-button wxc-meeting-control__control-button wxc-button--default wxc-button--pressed"
       disabled={false}
       onClick={[Function]}
       style={Object {}}

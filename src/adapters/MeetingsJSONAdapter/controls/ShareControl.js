@@ -31,7 +31,7 @@ export default class ShareControl extends MeetingControl {
       ID: this.ID,
       type: 'TOGGLE',
       state: MeetingControlState.INACTIVE,
-      icon: 'share-screen-presence-stroke_26',
+      icon: 'share-screen-presence-stroke',
       text: 'Start sharing',
       tooltip: 'Start sharing content',
     };
@@ -39,7 +39,7 @@ export default class ShareControl extends MeetingControl {
       ID: this.ID,
       type: 'TOGGLE',
       state: MeetingControlState.ACTIVE,
-      icon: 'share-screen-presence-stroke_26',
+      icon: 'share-screen-filled',
       text: 'Stop sharing',
       tooltip: 'Stop sharing content',
     };
