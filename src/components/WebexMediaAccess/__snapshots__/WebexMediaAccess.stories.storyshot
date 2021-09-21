@@ -58,7 +58,6 @@ Array [
         disabled={false}
         onClick={[Function]}
         style={Object {}}
-        title="Proceed without camera"
         type="button"
       >
         <span
@@ -153,7 +152,6 @@ Array [
         disabled={false}
         onClick={[Function]}
         style={Object {}}
-        title="Proceed without audio"
         type="button"
       >
         <span

@@ -18,7 +18,7 @@ const controlTypeToButtonType = {
 /**
  * renderButton renders a control button
  *
- * @param {function} sc  CSS subclass function
+ * @param {Function} sc  CSS subclass function
  * @param {Function} action  Adapter control callback
  * @param {object} display  Display data of the control
  * @param {object} style  Custom style to apply
@@ -53,8 +53,8 @@ function renderButton(sc, action, display, style, showText, asItem) {
         type={controlTypeToButtonType[type] || 'default'}
         isDisabled={isDisabled}
         onClick={action}
-        title={tooltip}
         ariaLabel={hint}
+        tooltip={tooltip}
       >
         {icon && <Icon name={icon} size={24} />}
         {(showText || !icon) && text && <span className={sc('button-text')}>{text}</span>}
@@ -68,8 +68,8 @@ function renderButton(sc, action, display, style, showText, asItem) {
 /**
  * renderDropdown renders controls dropdown
  *
- * @param {function} sc  CSS subclass function
- * @param {function} action  Adapter control callback
+ * @param {Function} sc  CSS subclass function
+ * @param {Function} action  Adapter control callback
  * @param {object} display  Display data of the control
  * @param {object} style  Custom style to apply
  * @returns {object} JSX of the component

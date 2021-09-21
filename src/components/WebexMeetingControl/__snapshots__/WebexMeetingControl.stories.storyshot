@@ -10,7 +10,6 @@ Array [
       disabled={false}
       onClick={[Function]}
       style={Object {}}
-      title="Unmute"
       type="button"
     >
       <svg
@@ -68,7 +67,6 @@ Array [
       disabled={true}
       onClick={[Function]}
       style={Object {}}
-      title="Mute disabled"
       type="button"
     >
       <svg
@@ -129,7 +127,6 @@ Array [
       disabled={true}
       onClick={[Function]}
       style={Object {}}
-      title="Join meeting"
       type="button"
     >
       <span
@@ -231,7 +228,6 @@ Array [
       disabled={false}
       onClick={[Function]}
       style={Object {}}
-      title="Unmute"
       type="button"
     >
       <svg
@@ -290,7 +286,6 @@ Array [
       disabled={false}
       onClick={[Function]}
       style={Object {}}
-      title="Join meeting"
       type="button"
     >
       <span

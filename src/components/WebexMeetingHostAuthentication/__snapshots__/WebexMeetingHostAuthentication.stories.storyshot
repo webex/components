@@ -77,11 +77,11 @@ Array [
         disabled={false}
         onClick={[Function]}
         style={Object {}}
-        title=""
         type="button"
       >
         Start Meeting
       </button>
+      
     </form>
   </div>,
   <video

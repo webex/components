@@ -1,6 +1,7 @@
-import React, {JSX} from 'react';
+import React, {JSX, useRef} from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
+import Tooltip from '../Tooltip/Tooltip';
 
 /**
  * Button component
@@ -12,7 +13,7 @@ import webexComponentClasses from '../../helpers';
  * @param {boolean} props.isDisabled  Flag indicating button disabled
  * @param {Function} props.onClick  OnClick callback
  * @param {object} props.style  Inline style object for the component
- * @param {string} props.title  Tooltip to be displayed
+ * @param {string} props.tooltip  Tooltip to be displayed
  * @param {'default'|'join'|'cancel'|'ghost'} [props.type='default']  Button type
  * @returns {object}  JSX of the element
  */
@@ -22,16 +23,32 @@ export default function Button({
   className,
   isDisabled,
   onClick,
-  title,
+  tooltip,
   style,
   type,
 }) {
   const [cssClasses] = webexComponentClasses('button', className, {[`${type}`]: true});
+  const buttonRef = useRef(null);
 
   return (
-    <button className={cssClasses} disabled={isDisabled} title={title} type="button" onClick={onClick} style={style} aria-label={ariaLabel}>
-      {children}
-    </button>
+    <>
+      <button
+        className={cssClasses}
+        disabled={isDisabled}
+        type="button"
+        onClick={onClick}
+        aria-label={ariaLabel}
+        ref={buttonRef}
+        style={style}
+      >
+        {children}
+      </button>
+      {tooltip && (
+        <Tooltip target={buttonRef.current}>
+          {tooltip}
+        </Tooltip>
+      )}
+    </>
   );
 }
 
@@ -41,7 +58,7 @@ Button.propTypes = {
   className: PropTypes.string,
   isDisabled: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
-  title: PropTypes.string,
+  tooltip: PropTypes.string,
   style: PropTypes.shape(),
   type: PropTypes.string,
 };
@@ -50,7 +67,7 @@ Button.defaultProps = {
   ariaLabel: undefined,
   className: '',
   isDisabled: false,
-  title: '',
+  tooltip: '',
   style: {},
   type: 'default',
 };
