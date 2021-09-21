@@ -153,7 +153,7 @@ export default function WebexMeetingControlBar({
 
   const renderCollapseButton = (shown, onClick, ref) => (
     <div ref={ref} key="collapse-button" className={sc('collapse-button')}>
-      <Button onClick={onClick}>
+      <Button onClick={onClick} type="toggle" pressed={shown}>
         <Icon name={shown ? 'more-adr' : 'more'} />
       </Button>
     </div>

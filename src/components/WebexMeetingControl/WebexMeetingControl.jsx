@@ -13,7 +13,7 @@ const controlTypeToButtonType = {
   CANCEL: 'cancel',
   CLOSE: 'ghost',
   BUTTON: 'default',
-  TOGGLE: 'default',
+  TOGGLE: 'toggle',
 };
 
 /**
@@ -38,6 +38,7 @@ function renderButton(sc, action, display, style, showText, asItem, autoFocus, t
     hint,
   } = display;
   const isDisabled = display.state === MeetingControlState.DISABLED;
+  const isActive = display.state === MeetingControlState.ACTIVE;
 
   let output;
 
@@ -57,6 +58,7 @@ function renderButton(sc, action, display, style, showText, asItem, autoFocus, t
         isDisabled={isDisabled}
         onClick={action}
         ariaLabel={hint}
+        pressed={isActive}
         tooltip={tooltip}
         autoFocus={autoFocus}
         tabIndex={tabIndex}

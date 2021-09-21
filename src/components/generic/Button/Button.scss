@@ -33,7 +33,8 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-button;
   }
 }
 
-.#{$C}--default {
+.#{$C}--default,
+.#{$C}--toggle {
   align-items: flex-end;
   background: var(--wxc-button--default--normal--bg);
   border: var(--wxc-button--default--normal--border);
@@ -52,6 +53,10 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-button;
     border: var(--wxc-button--default--disabled--border);
     color: var(--wxc-button--default--disabled--color);
   }
+}
+
+.#{$C}--toggle.#{$C}--pressed {
+  background: var(--wxc-button--default--active--bg);
 }
 
 .#{$C}--cancel {

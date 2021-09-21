@@ -20,7 +20,7 @@ export default class DisabledMuteAudioControl extends MeetingControl {
     return Observable.create((observer) => {
       observer.next({
         ID: this.ID,
-        type: 'TOGGLE',
+        type: 'BUTTON',
         icon: 'microphone_28',
         state: MeetingControlState.DISABLED,
       });

@@ -14,10 +14,11 @@ import Tooltip from '../Tooltip/Tooltip';
  * @param {string} [props.className]  Custom CSS class to apply
  * @param {boolean} props.isDisabled  Flag indicating button disabled
  * @param {Function} props.onClick  OnClick callback
+ * @param {boolean} [props.pressed=false]  Flag indicating if the button is pressed
  * @param {object} props.style  Inline style object for the component
  * @param {number} props.tabIndex  Value of the tabIndex
  * @param {string} props.tooltip  Tooltip to be displayed
- * @param {'default'|'join'|'cancel'|'ghost'} [props.type='default']  Button type
+ * @param {'default'|'join'|'cancel'|'ghost'|'toggle'} [props.type='default']  Button type
  * @returns {object}  JSX of the element
  */
 export default function Button({
@@ -27,12 +28,13 @@ export default function Button({
   className,
   isDisabled,
   onClick,
+  pressed,
   style,
   tabIndex,
   tooltip,
   type,
 }) {
-  const [cssClasses] = webexComponentClasses('button', className, {[`${type}`]: true});
+  const [cssClasses] = webexComponentClasses('button', className, {[`${type}`]: true, pressed});
   const buttonRef = useRef();
 
   return (
@@ -67,10 +69,11 @@ Button.propTypes = {
   className: PropTypes.string,
   isDisabled: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
-  tooltip: PropTypes.string,
+  pressed: PropTypes.bool,
   style: PropTypes.shape(),
   tabIndex: PropTypes.number,
-  type: PropTypes.string,
+  tooltip: PropTypes.string,
+  type: PropTypes.oneOf(['default', 'join', 'cancel', 'ghost', 'toggle']),
 };
 
 Button.defaultProps = {
@@ -78,8 +81,9 @@ Button.defaultProps = {
   autoFocus: false,
   className: '',
   isDisabled: false,
-  tooltip: '',
+  pressed: false,
   style: {},
   tabIndex: undefined,
+  tooltip: '',
   type: 'default',
 };

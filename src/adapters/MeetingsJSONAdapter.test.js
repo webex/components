@@ -402,7 +402,7 @@ describe('Meetings JSON Adapter', () => {
 
             expect(display).toMatchObject({
               ID: 'mute-audio',
-              type: 'TOGGLE',
+              type: 'BUTTON',
               icon: 'microphone_28',
               tooltip: 'Mute audio',
               state: 'inactive',
@@ -414,7 +414,7 @@ describe('Meetings JSON Adapter', () => {
           } else {
             expect(display).toMatchObject({
               ID: 'mute-audio',
-              type: 'TOGGLE',
+              type: 'BUTTON',
               icon: 'microphone-muted_28',
               tooltip: 'Unmute audio',
               state: 'active',
@@ -487,7 +487,7 @@ describe('Meetings JSON Adapter', () => {
             firstMessage = false;
             expect(display).toMatchObject({
               ID: 'mute-video',
-              type: 'TOGGLE',
+              type: 'BUTTON',
               icon: 'camera_28',
               tooltip: 'Stop video',
               state: 'inactive',
@@ -499,7 +499,7 @@ describe('Meetings JSON Adapter', () => {
           } else {
             expect(display).toMatchObject({
               ID: 'mute-video',
-              type: 'TOGGLE',
+              type: 'BUTTON',
               icon: 'camera-muted_28',
               tooltip: 'Start video',
               state: 'active',
@@ -551,7 +551,7 @@ describe('Meetings JSON Adapter', () => {
         .subscribe((display) => {
           expect(display).toMatchObject({
             ID: 'member-roster',
-            icon: 'participant-list_28',
+            icon: 'participant-list',
             tooltip: 'Show participants panel',
             state: 'inactive',
           });
@@ -567,7 +567,7 @@ describe('Meetings JSON Adapter', () => {
         .subscribe((display) => {
           expect(display).toMatchObject({
             ID: 'member-roster',
-            icon: 'participant-list_28',
+            icon: 'participant-list-filled',
             tooltip: 'Hide participants panel',
             state: 'active',
           });
