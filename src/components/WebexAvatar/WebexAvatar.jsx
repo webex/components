@@ -61,8 +61,8 @@ export default function WebexAvatar({
           </div>
         )}
         {displayStatus && status === PersonStatus.BOT && (
-          <svg viewBox="0 0 25 25" className="avatar-bot-badge">
-            <text x="50%" y="52%">Bot</text>
+          <svg viewBox="0 0 26 26" className="avatar-bot-badge">
+            <text x="50%" y="57%">Bot</text>
           </svg>
         )}
       </div>

@@ -94,11 +94,11 @@ Array [
       />
       <svg
         className="avatar-bot-badge"
-        viewBox="0 0 25 25"
+        viewBox="0 0 26 26"
       >
         <text
           x="50%"
-          y="52%"
+          y="57%"
         >
           Bot
         </text>
