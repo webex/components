@@ -85,11 +85,11 @@ Array [
         disabled={true}
         onClick={[Function]}
         style={Object {}}
-        title=""
         type="button"
       >
         Start meeting
       </button>
+      
     </form>
     <div
       className="wxc-meeting-guest-authentication__host-text"

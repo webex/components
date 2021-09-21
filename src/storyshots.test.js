@@ -8,6 +8,14 @@ jest.mock('./components/hooks/useActivityScroll');
 
 // useElementDimensions uses Resize Observer API which expects a real Element
 jest.mock('./components/hooks/useElementDimensions');
+jest.mock('react-dom', () => {
+  const original = jest.requireActual('react-dom');
+
+  return {
+    ...original,
+    createPortal: (node) => node,
+  };
+});
 
 /**
  * Returns a mock DOM ref object for use of snapshot tests.
@@ -23,6 +31,7 @@ function createNodeMock(element) {
     focus: () => undefined,
     setSinkId: () => Promise.resolve(),
     addEventListener: () => undefined,
+    removeEventListener: () => undefined,
   };
 }
 

@@ -21,7 +21,6 @@ Array [
           disabled={false}
           onClick={[Function]}
           style={Object {}}
-          title=""
           type="button"
         >
           <svg
@@ -46,6 +45,7 @@ Array [
             />
           </svg>
         </button>
+        
       </div>
       <div
         className="wxc-meeting-control"
@@ -55,7 +55,6 @@ Array [
           disabled={false}
           onClick={[Function]}
           style={Object {}}
-          title="Leave"
           type="button"
         >
           <svg
@@ -86,7 +85,6 @@ Array [
             disabled={false}
             onClick={[Function]}
             style={Object {}}
-            title="Unmute"
             type="button"
           >
             <svg
@@ -116,7 +114,6 @@ Array [
             disabled={false}
             onClick={[Function]}
             style={Object {}}
-            title="Unmute"
             type="button"
           >
             <svg
@@ -151,7 +148,6 @@ Array [
             disabled={false}
             onClick={[Function]}
             style={Object {}}
-            title="Start video"
             type="button"
           >
             <svg
@@ -181,7 +177,6 @@ Array [
             disabled={false}
             onClick={[Function]}
             style={Object {}}
-            title="Start video"
             type="button"
           >
             <svg
@@ -216,7 +211,6 @@ Array [
             disabled={false}
             onClick={[Function]}
             style={Object {}}
-            title="Stop Sharing"
             type="button"
           >
             <svg
@@ -248,7 +242,6 @@ Array [
             disabled={false}
             onClick={[Function]}
             style={Object {}}
-            title="Stop Sharing"
             type="button"
           >
             <svg
@@ -285,7 +278,6 @@ Array [
             disabled={false}
             onClick={[Function]}
             style={Object {}}
-            title="Show participants panel"
             type="button"
           >
             <svg
@@ -325,7 +317,6 @@ Array [
             disabled={false}
             onClick={[Function]}
             style={Object {}}
-            title="Show participants panel"
             type="button"
           >
             <svg
@@ -370,7 +361,6 @@ Array [
             disabled={false}
             onClick={[Function]}
             style={Object {}}
-            title="Show settings panel"
             type="button"
           >
             <svg
@@ -402,7 +392,6 @@ Array [
             disabled={false}
             onClick={[Function]}
             style={Object {}}
-            title="Show settings panel"
             type="button"
           >
             <svg
@@ -439,7 +428,6 @@ Array [
             disabled={false}
             onClick={[Function]}
             style={Object {}}
-            title="Leave"
             type="button"
           >
             <svg
@@ -467,7 +455,6 @@ Array [
             disabled={false}
             onClick={[Function]}
             style={Object {}}
-            title="Leave"
             type="button"
           >
             <svg
@@ -494,7 +481,6 @@ Array [
           disabled={false}
           onClick={[Function]}
           style={Object {}}
-          title=""
           type="button"
         >
           <svg
@@ -519,6 +505,7 @@ Array [
             />
           </svg>
         </button>
+        
       </div>
     </div>
   </div>,
@@ -566,7 +553,6 @@ Array [
           disabled={false}
           onClick={[Function]}
           style={Object {}}
-          title=""
           type="button"
         >
           <svg
@@ -591,6 +577,7 @@ Array [
             />
           </svg>
         </button>
+        
       </div>
       <div
         className="wxc-meeting-control"
@@ -601,7 +588,6 @@ Array [
           disabled={false}
           onClick={[Function]}
           style={Object {}}
-          title="Join meeting"
           type="button"
         >
           <span
@@ -624,7 +610,6 @@ Array [
             disabled={false}
             onClick={[Function]}
             style={Object {}}
-            title="Unmute"
             type="button"
           >
             <svg
@@ -654,7 +639,6 @@ Array [
             disabled={false}
             onClick={[Function]}
             style={Object {}}
-            title="Unmute"
             type="button"
           >
             <svg
@@ -689,7 +673,6 @@ Array [
             disabled={false}
             onClick={[Function]}
             style={Object {}}
-            title="Start video"
             type="button"
           >
             <svg
@@ -719,7 +702,6 @@ Array [
             disabled={false}
             onClick={[Function]}
             style={Object {}}
-            title="Start video"
             type="button"
           >
             <svg
@@ -754,7 +736,6 @@ Array [
             disabled={false}
             onClick={[Function]}
             style={Object {}}
-            title="Show settings panel"
             type="button"
           >
             <svg
@@ -786,7 +767,6 @@ Array [
             disabled={false}
             onClick={[Function]}
             style={Object {}}
-            title="Show settings panel"
             type="button"
           >
             <svg
@@ -824,7 +804,6 @@ Array [
             disabled={false}
             onClick={[Function]}
             style={Object {}}
-            title="Join meeting"
             type="button"
           >
             <span
@@ -845,7 +824,6 @@ Array [
             disabled={false}
             onClick={[Function]}
             style={Object {}}
-            title="Join meeting"
             type="button"
           >
             <span
@@ -864,7 +842,6 @@ Array [
           disabled={false}
           onClick={[Function]}
           style={Object {}}
-          title=""
           type="button"
         >
           <svg
@@ -889,6 +866,7 @@ Array [
             />
           </svg>
         </button>
+        
       </div>
     </div>
   </div>,

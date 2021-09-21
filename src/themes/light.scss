@@ -179,4 +179,8 @@
   --wxc-hyperlink--normal--color: #{$wxc-blue-70};
   --wxc-hyperlink--hover--color: #{$wxc-blue-90};
   --wxc-hyperlink--active--color:#{$wxc-blue-90};
+
+  --wxc-tooltip-background: #{$wxc-white-alpha-100};
+  --wxc-tooltip-border: 1px solid #{$wxc-black-alpha-20};
+  --wxc-tooltip-border-color: #{$wxc-black-alpha-20};
 }

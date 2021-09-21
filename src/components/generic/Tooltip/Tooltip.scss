@@ -1,0 +1,40 @@
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-tooltip-container {
+  position: absolute;
+  min-width: 4rem;
+  max-width: 12.5rem;
+  display: block;
+  transform: translateX(-50%);
+  z-index: 1;
+  bottom: 0;
+
+  .tooltip-wrapper {
+    position: relative;
+  }
+
+  .tooltip-box {
+    background: var(--wxc-tooltip-background);
+    border-radius: 0.4375rem;
+    border: var(--wxc-tooltip-border);
+    box-shadow: 0 0.5rem 1rem $wxc-black-alpha-16, 0 0 0.0625rem $wxc-black-alpha-14;
+    color: var(--wxc-text-color);
+    font-family: $brand-font-regular;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    padding: 0.5rem 0.75rem 0.585625rem 0.75rem;
+    text-align: center;
+    position: relative;
+
+    .tooltip-arrow {
+      position: absolute;
+      border: var(--wxc-tooltip-border);
+      left: 50%;
+      transform: translateX(-50%) rotate(45deg) skew(5deg, 5deg);
+      bottom: -0.75rem;
+      width: 1.25rem;
+      height: 1.25rem;
+      background: var(--wxc-tooltip-background);
+      border-radius: 0.25rem;
+      border-color: transparent var(--wxc-tooltip-border-color) var(--wxc-tooltip-border-color) transparent;
+    }
+  }
+}
