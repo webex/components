@@ -29,7 +29,7 @@ $shadow-color: rgba(0, 0, 0, 0.2);
 
 @mixin media-shadow {
   box-shadow: $shadow-offset $shadow-offset $shadow-blur $shadow-spread $shadow-color;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 @mixin media-preview-mobile {
@@ -38,10 +38,6 @@ $shadow-color: rgba(0, 0, 0, 0.2);
   position: absolute;
   bottom: 0.5rem;
   right: 0.5rem;
-
-  height: 6rem;
-  width: 10rem;
-
   z-index: 1;
 }
 
@@ -51,10 +47,6 @@ $shadow-color: rgba(0, 0, 0, 0.2);
   position: absolute;
   bottom: 1rem;
   right: 1rem;
-
-  height: 7.5rem;
-  width: 13.5rem;
-
   z-index: 1;
 }
 
@@ -64,9 +56,5 @@ $shadow-color: rgba(0, 0, 0, 0.2);
   position: absolute;
   bottom: 2rem;
   right: 2rem;
-
-  height: 9.5rem;
-  width: 17rem;
-
   z-index: 1;
 }
