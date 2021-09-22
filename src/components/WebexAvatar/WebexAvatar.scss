@@ -84,6 +84,20 @@
     fill: var(--wxc-avatar--text-color);
   }
 
+  .avatar-self-icon {
+    z-index: 1;
+
+    width: 70%;
+    height: 80%;
+
+    color: var(--wxc-avatar--self-status-color);
+  }
+
+  &.avatar-self {
+    border: 1px solid var(--wxc-avatar--self-status-border);
+    border-radius: 50%;
+  }
+
   .status-active { color: var(--wxc-person-status--active-color); }
   .status-call { color: var(--wxc-person-status--in-a-meeting-color); }
   .status-meeting { color: var(--wxc-person-status--in-a-meeting-color); }
