@@ -1,3 +1,10 @@
+## [1.142.2](https://github.com/webex/components/compare/v1.142.1...v1.142.2) (2021-09-22)
+
+
+### Bug Fixes
+
+* **WebexMember:** set higher font color contrast for "guest" role ([c14f8bd](https://github.com/webex/components/commit/c14f8bd82374db9423684df7585dccd8219e8c7d))
+
 ## [1.142.1](https://github.com/webex/components/compare/v1.142.0...v1.142.1) (2021-09-22)
 
 
