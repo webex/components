@@ -1,3 +1,10 @@
+## [1.142.1](https://github.com/webex/components/compare/v1.142.0...v1.142.1) (2021-09-22)
+
+
+### Bug Fixes
+
+* **Modal:** set size for the "close" icon in the settings window ([cd63056](https://github.com/webex/components/commit/cd63056d9ab950af8a6f52a8e7deacaaa7e866c7))
+
 # [1.142.0](https://github.com/webex/components/compare/v1.141.3...v1.142.0) (2021-09-17)
 
 
