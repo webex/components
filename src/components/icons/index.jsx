@@ -27,3 +27,4 @@ export {default as ShareScreenIcon} from './ShareScreenIcon';
 export {default as ShowPwdIcon} from './ShowPwdIcon';
 export {default as UnreadIcon} from './UnreadIcon';
 export {default as WarningIcon} from './WarningIcon';
+export {default as ChatFilledIcon} from './ChatFilledIcon';

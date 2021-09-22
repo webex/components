@@ -42,30 +42,45 @@ export default function WebexAvatar({
   const [imageError, setImageError] = useState(false);
   const initials = displayName?.split(' ').map((name) => name.charAt(0)).slice(0, 2).join('');
   const placeholderClassName = `placeholder placeholder-${randomPlaceholder}`;
-  const cssClasses = webexComponentClasses('avatar', className);
   const iconName = statusIcons[status];
   const statusClassName = `status-${status}`;
+  const isSelf = status === PersonStatus.SELF;
+  const isBot = status === PersonStatus.BOT;
+  const isTyping = status === PersonStatus.TYPING;
+  const hasPlaceholder = !isSelf;
+  const hasImage = avatar && !isSelf;
+  const hasStatus = displayStatus && (!isBot && !isSelf) && iconName;
+  const cssClasses = webexComponentClasses('avatar', className, null, {
+    'avatar-self': isSelf,
+  });
 
   return (
     <div className={cssClasses} style={style}>
       <div className="avatar-content">
-        <svg viewBox="0 0 40 40" className={placeholderClassName}>
-          <text x="50%" y="50%">
-            {displayName === ' ' ? '??' : initials}
-          </text>
-        </svg>
-        {displayStatus && status === PersonStatus.TYPING && <Loader />}
-        {avatar
+        {isTyping && displayStatus && <Loader />}
+        {hasPlaceholder
+          && (
+            <svg viewBox="0 0 40 40" className={placeholderClassName}>
+              <text x="50%" y="50%">
+                {displayName === ' ' ? '??' : initials}
+              </text>
+            </svg>
+          )}
+        {hasImage
           && <img className={imageError ? 'image-error' : ''} src={avatar} alt="avatar" onError={() => setImageError(true)} />}
-        {displayStatus && status !== PersonStatus.BOT && iconName && (
-          <div className="status-icon-container">
-            <Icon name={iconName} className={`status-icon ${statusClassName}`} />
-          </div>
-        )}
-        {displayStatus && status === PersonStatus.BOT && (
+        {hasStatus
+          && (
+            <div className="status-icon-container">
+              <Icon name={iconName} className={`status-icon ${statusClassName}`} />
+            </div>
+          )}
+        {isBot && displayStatus && (
           <svg viewBox="0 0 26 26" className="avatar-bot-badge">
             <text x="50%" y="57%">Bot</text>
           </svg>
+        )}
+        {isSelf && displayStatus && (
+          <Icon name="chat-filled" className="avatar-self-icon" />
         )}
       </div>
     </div>
