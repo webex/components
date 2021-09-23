@@ -1,3 +1,10 @@
+## [1.142.3](https://github.com/webex/components/compare/v1.142.2...v1.142.3) (2021-09-23)
+
+
+### Bug Fixes
+
+* **WebexAvatar:** update avatar badge background color ([8d59254](https://github.com/webex/components/commit/8d592541dc4bf7180d4c84eed29c9286c8023270))
+
 ## [1.142.2](https://github.com/webex/components/compare/v1.142.1...v1.142.2) (2021-09-22)
 
 
