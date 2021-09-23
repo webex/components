@@ -8,7 +8,6 @@ import webexComponentClasses from '../helpers';
  * @param {object} props  Data passed to the component
  * @param {number} props.size  Width and height of the icon
  * @param {string} props.className  Additional className for the component
- * @param {string} props.indicator  Additional otherBaseClass for the component
  * @param {object} props.style  Inline style object for the component
  * @returns {object} JSX of the icon
  *
@@ -16,10 +15,9 @@ import webexComponentClasses from '../helpers';
 export default function AudioMicrophoneIcon({
   size,
   className,
-  indicator,
   style,
 }) {
-  const cssClasses = webexComponentClasses('audio-microphone-icon', className, {indicator: !!indicator});
+  const cssClasses = webexComponentClasses('audio-microphone-icon', className);
 
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className={`wxc-icon ${cssClasses}`} style={style}>
@@ -33,13 +31,11 @@ export default function AudioMicrophoneIcon({
 AudioMicrophoneIcon.propTypes = {
   size: PropTypes.number,
   className: PropTypes.string,
-  indicator: PropTypes.string,
   style: PropTypes.shape(),
 };
 
 AudioMicrophoneIcon.defaultProps = {
   size: 24,
   className: '',
-  indicator: '',
   style: {},
 };

@@ -64,13 +64,12 @@ const icons = {
  * @param {string} props.name  Icon name
  * @param {number} [props.size]  Icon width and height
  * @param {string} props.className  Additional className for the component
- * @param {string} props.indicator  Additional otherBaseClass for the component
  * @param {object} props.style  Inline style object for the component
  * @returns {object} JSX of the Icon
  *
  */
 export default function Icon({
-  name, size, className, indicator, style,
+  name, size, className, style,
 }) {
   const [baseName, baseSize] = name.split('_');
 
@@ -85,7 +84,6 @@ export default function Icon({
     <IconComponent
       size={size || (baseSize && Number(baseSize))}
       className={className}
-      indicator={indicator}
       style={style}
     />
   );
@@ -95,13 +93,11 @@ Icon.propTypes = {
   name: PropTypes.string.isRequired,
   size: PropTypes.number,
   className: PropTypes.string,
-  indicator: PropTypes.string,
   style: PropTypes.shape(),
 };
 
 Icon.defaultProps = {
   size: undefined,
   className: '',
-  indicator: '',
   style: {},
 };
