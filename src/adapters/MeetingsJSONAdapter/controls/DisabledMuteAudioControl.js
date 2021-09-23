@@ -22,7 +22,6 @@ export default class DisabledMuteAudioControl extends MeetingControl {
         ID: this.ID,
         type: 'TOGGLE',
         icon: 'microphone_28',
-        tooltip: 'Mute disabled',
         state: MeetingControlState.DISABLED,
       });
 

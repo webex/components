@@ -29,7 +29,7 @@ export default class ProceedWithoutCameraControl extends MeetingControl {
         ID: this.ID,
         type: 'JOIN',
         text: 'Proceed without camera',
-        tooltip: 'Proceed without camera',
+        tooltip: 'This setting cannot be changed once the meeting starts.',
         hint: 'This setting cannot be changed once the meeting starts.',
       });
 
