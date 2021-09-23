@@ -93,6 +93,7 @@ Array [
         />
       </svg>
     </button>
+    
   </div>,
   <video
     autoPlay={true}
@@ -135,6 +136,7 @@ Array [
         Join meeting
       </span>
     </button>
+    
   </div>,
   <video
     autoPlay={true}

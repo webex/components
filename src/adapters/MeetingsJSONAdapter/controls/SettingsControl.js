@@ -33,7 +33,7 @@ export default class SettingsControl extends MeetingControl {
       state: MeetingControlState.ACTIVE,
       icon: 'settings_32',
       text: 'Settings',
-      tooltip: 'Hide settings panel',
+      tooltip: 'Meeting settings',
     };
     const inactive = {
       ID: this.ID,
@@ -41,7 +41,7 @@ export default class SettingsControl extends MeetingControl {
       state: MeetingControlState.INACTIVE,
       icon: 'settings_32',
       text: 'Settings',
-      tooltip: 'Show settings panel',
+      tooltip: 'Meeting settings',
     };
 
     return this.adapter.getMeeting(meetingID).pipe(

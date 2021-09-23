@@ -22,7 +22,6 @@ export default class DisabledJoinControl extends MeetingControl {
         ID: this.ID,
         type: 'JOIN',
         text: 'Join meeting',
-        tooltip: 'Join meeting',
         state: MeetingControlState.DISABLED,
       });
 

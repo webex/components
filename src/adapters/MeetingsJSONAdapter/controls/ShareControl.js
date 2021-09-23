@@ -32,16 +32,16 @@ export default class ShareControl extends MeetingControl {
       type: 'TOGGLE',
       state: MeetingControlState.INACTIVE,
       icon: 'share-screen-presence-stroke_26',
-      text: 'Start sharing',
-      tooltip: 'Start Sharing',
+      text: 'Share',
+      tooltip: 'Start sharing content',
     };
     const active = {
       ID: this.ID,
       type: 'TOGGLE',
       state: MeetingControlState.ACTIVE,
       icon: 'share-screen-presence-stroke_26',
-      text: 'Stop sharing',
-      tooltip: 'Stop Sharing',
+      text: 'Share',
+      tooltip: 'Stop sharing content',
     };
 
     return this.adapter.getMeeting(meetingID).pipe(

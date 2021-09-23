@@ -30,7 +30,7 @@ export default class ProceedWithoutMicrophoneControl extends MeetingControl {
         ID: this.ID,
         type: 'JOIN',
         text: 'Proceed without audio',
-        tooltip: 'Proceed without audio',
+        tooltip: 'This setting cannot be changed once the meeting starts.',
         hint: 'This setting cannot be changed once the meeting starts.',
       });
 
