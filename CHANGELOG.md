@@ -1,3 +1,10 @@
+# [1.143.0](https://github.com/webex/components/compare/v1.142.4...v1.143.0) (2021-09-24)
+
+
+### Features
+
+* **WebexAudioSettings:** displays the error when no microphone is available ([4a4652b](https://github.com/webex/components/commit/4a4652b3bdfb0756bd1caa9a13209687d44e1231))
+
 ## [1.142.4](https://github.com/webex/components/compare/v1.142.3...v1.142.4) (2021-09-24)
 
 
