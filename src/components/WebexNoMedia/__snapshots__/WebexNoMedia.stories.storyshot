@@ -193,3 +193,48 @@ Array [
   />,
 ]
 `;
+
+exports[`Storyshots Meetings/Webex No Media Speaker 1`] = `
+Array [
+  <div
+    className="wxc-no-media"
+  >
+    <span
+      className="icon-media-issue"
+      indicator=""
+      style={Object {}}
+    />
+    <h5
+      className="wxc-title no-media-title"
+      style={Object {}}
+    >
+      Speaker can't be changed on your browser
+    </h5>
+    <div
+      className="no-media-body"
+    >
+      
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;

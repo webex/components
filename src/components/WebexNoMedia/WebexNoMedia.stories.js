@@ -17,3 +17,8 @@ export const Microphone = Template.bind({});
 Microphone.args = {
   media: 'microphone',
 };
+
+export const Speaker = Template.bind({});
+Speaker.args = {
+  media: 'speaker',
+};

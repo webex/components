@@ -18,6 +18,11 @@ import WebexNoMedia from '../WebexNoMedia/WebexNoMedia';
 export default function WebexAudioSettings({className, meetingID, style}) {
   const cssClasses = webexComponentClasses('audio-settings', className);
   const [, display] = useMeetingControl('switch-microphone', meetingID);
+  // The browser api setSinkId() does not work properly on Firefox and Safari browsers.
+  // https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/setSinkId
+  const isFirefox = navigator.userAgent.indexOf('Firefox') !== -1; // detect Firefox browser
+  const isSafari = navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1; // detect Safari browser
+  const checkBrowser = isFirefox || isSafari;
 
   return (
     <div className={cssClasses} style={style}>
@@ -25,7 +30,9 @@ export default function WebexAudioSettings({className, meetingID, style}) {
         ? (
           <>
             <Title>Speaker</Title>
-            <WebexMeetingControl type="switch-speaker" meetingID={meetingID} />
+            {!checkBrowser
+              ? <WebexMeetingControl type="switch-speaker" meetingID={meetingID} />
+              : <WebexNoMedia media="speaker" className="no-media" />}
             <Title>Microphone</Title>
             <WebexMeetingControl type="switch-microphone" meetingID={meetingID} />
           </>

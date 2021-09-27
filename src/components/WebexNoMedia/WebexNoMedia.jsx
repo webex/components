@@ -32,6 +32,11 @@ const SCREENS = {
     ),
     /* eslint-enable react/jsx-one-expression-per-line */
   },
+  speaker: {
+    icon: '',
+    title: 'Speaker can\'t be changed on your browser',
+    message: '',
+  },
   camera: {
     icon: 'camera-issue',
     title: 'Can\'t access camera',
@@ -70,7 +75,7 @@ export default function WebexNoMedia({className, style, media}) {
 WebexNoMedia.propTypes = {
   className: PropTypes.string,
   style: PropTypes.shape(),
-  media: PropTypes.oneOf(['camera', 'microphone']).isRequired,
+  media: PropTypes.oneOf(['camera', 'microphone', 'speaker']).isRequired,
 };
 
 WebexNoMedia.defaultProps = {
