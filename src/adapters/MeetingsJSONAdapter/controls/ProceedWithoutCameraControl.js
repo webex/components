@@ -30,6 +30,7 @@ export default class ProceedWithoutCameraControl extends MeetingControl {
         type: 'JOIN',
         text: 'Proceed without camera',
         tooltip: 'Proceed without camera',
+        hint: 'This setting cannot be changed once the meeting starts.',
       });
 
       observer.complete();
