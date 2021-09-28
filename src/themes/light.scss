@@ -93,6 +93,16 @@
   --wxc-button--join--disabled--bg: #{$wxc-black-alpha-20};
   --wxc-button--join--disabled--color: #{$wxc-black-alpha-40};
 
+  --wxc-button--primary--normal--bg: #{$wxc-black-alpha-95};
+  --wxc-button--primary--normal--color: #{$wxc-white-alpha-95};
+
+  --wxc-button--primary--active--bg: #{$wxc-black-alpha-70};
+
+  --wxc-button--primary--hover--bg: #{$wxc-black-alpha-80};
+
+  --wxc-button--primary--disabled--bg: #{$wxc-black-alpha-20};
+  --wxc-button--primary--disabled--color: #{$wxc-black-alpha-40};
+
   --wxc-loading-logo-size: 11.6875rem;
 
   --wxc-spinner-circle-color: #{$wxc-gray-30};
