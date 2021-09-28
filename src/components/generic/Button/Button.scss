@@ -1,5 +1,6 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-button {
   display: flex;
+  justify-content: center;
   border-radius: 1000px;
   font-family: $brand-font-regular;
   font-size: 1rem;
@@ -88,5 +89,28 @@
   &:disabled {
     background: var(--wxc-button--ghost--disabled--background);
     color: var(--wxc-button--ghost--disabled--color);
+  }
+}
+
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-button--primary {
+  font-size: 0.938rem;
+  line-height: 1.25rem;
+  padding: 0.25rem 0.875rem;
+  letter-spacing: 0.015rem;
+  background: var(--wxc-button--primary--normal--bg);
+  border: none;
+  color: var(--wxc-button--primary--normal--color);
+
+  &:hover {
+    background: var(--wxc-button--primary--hover--bg);
+  }
+
+  &:active {
+    background: var(--wxc-button--primary--active--bg);
+  }
+
+  &:disabled {
+    background: var(--wxc-button--primary--disabled--bg);
+    color: var(--wxc-button--primary--disabled--color);
   }
 }

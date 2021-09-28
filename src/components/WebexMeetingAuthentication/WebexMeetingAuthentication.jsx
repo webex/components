@@ -35,7 +35,7 @@ export default function WebexMeetingAuthentication({className, style}) {
           Meeting password (required)
           <input type="password" name="password" value={password} onChange={(event) => setPassword(event.target.value)} />
         </label>
-        <Button type="default">Start Meeting</Button>
+        <Button type="primary">Start Meeting</Button>
       </form>
     </div>
   );
