@@ -1,0 +1,59 @@
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-loader {
+  background-color: $wxc-black-alpha-50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+  .bullet {
+    position: relative;
+    width: 0.625rem;
+    height: 0.625rem;
+    margin: 1rem auto;
+    border-radius: 0.3125rem;
+    animation: dotFlashing 1s infinite linear alternate;
+    animation-delay: 0.5s;
+
+    &::before,
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+    }
+
+    &::before {
+      left: -0.9375rem;
+      width: 0.625rem;
+      height: 0.625rem;
+      border-radius: 0.3125rem;
+      animation: dotFlashing 1s infinite alternate;
+      animation-delay: 0s;
+    }
+
+    &::after {
+      left: 0.9375rem;
+      width: 0.625rem;
+      height: 0.625rem;
+      border-radius: 0.3125rem;
+      animation: dotFlashing 1s infinite alternate;
+      animation-delay: 1s;
+    }
+  }
+
+  @keyframes dotFlashing {
+    0% {
+      background-color: $wxc-black-alpha-20;
+    }
+    50%,
+    100% {
+      background-color: $wxc-gray-10;
+    }
+  }
+}
