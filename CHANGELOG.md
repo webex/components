@@ -1,3 +1,10 @@
+## [1.143.1](https://github.com/webex/components/compare/v1.143.0...v1.143.1) (2021-09-29)
+
+
+### Bug Fixes
+
+* **WebexSettings:** add missing states on tabs ([800baee](https://github.com/webex/components/commit/800baee332e82c1cb8e4583d7a70751f20e43ba9))
+
 # [1.143.0](https://github.com/webex/components/compare/v1.142.4...v1.143.0) (2021-09-24)
 
 
