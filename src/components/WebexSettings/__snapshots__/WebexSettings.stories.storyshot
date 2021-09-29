@@ -16,12 +16,15 @@ Array [
     >
       <ul
         className="tabs-list"
+        onKeyUp={[Function]}
+        tabIndex={0}
       >
         <li
           className="tab active"
         >
           <button
             onClick={[Function]}
+            tabIndex={-1}
             type="button"
           >
             Audio
@@ -32,6 +35,7 @@ Array [
         >
           <button
             onClick={[Function]}
+            tabIndex={-1}
             type="button"
           >
             Video

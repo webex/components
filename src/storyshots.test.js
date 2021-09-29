@@ -22,6 +22,7 @@ function createNodeMock(element) {
     scrollIntoView: () => ({}),
     focus: () => undefined,
     setSinkId: () => Promise.resolve(),
+    addEventListener: () => undefined,
   };
 }
 
