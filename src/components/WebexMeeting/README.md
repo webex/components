@@ -25,13 +25,19 @@ or run the following **NPM** command:
     const jsonAdapter = new WebexJSONAdapter(jsonData);
     ```
 
-2. Create a component instance by passing the meeting ID as a string. You then need to enclose it
+2. Create a component instance by passing the meeting ID as a string and an optional function to define custom controls for a meeting. This function should take a boolean parameter, which signifies whether the meeting is active and returns an array of control names for the meeting. The default control names are set to `['mute-audio', 'mute-video', 'settings', 'join-meeting']` if the meeting is inactive and `['mute-audio', 'mute-video', 'share-screen', 'member-roster', 'settings', 'leave-meeting']`otherwise.
+Ensure that the control names match with the adapter implementation of the controls.
+You then need to enclose it
 within [a data provider](../WebexDataProvider/WebexDataProvider.js) that takes
 the [component data adapter](../../adapters/WebexJSONAdapter.js) that we created previously
 
     ```js
+    const controls = (isActive) => isActive
+      ? ['mute-audio', 'mute-video', 'share-screen', 'member-roster', 'settings', 'leave-meeting']
+      : ['mute-audio', 'mute-video', 'settings', 'join-meeting'];
+
     <WebexDataProvider adapter={jsonAdapter}>
-      <WebexMeeting meetingID="meetingID"/>
+      <WebexMeeting meetingID="meetingID" controls={controls} />
     </WebexDataProvider>
     ```
 

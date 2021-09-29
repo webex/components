@@ -26,6 +26,7 @@ import {AdapterContext} from '../hooks/contexts';
  *
  * @param {object} props  Data passed to the component
  * @param {string} [props.className]  Custom CSS class to apply
+ * @param {Function} [props.controls]   Controls to display
  * @param {JSX.Element} [props.logo]  Logo
  * @param {string} [props.meetingID]  ID of the meeting
  * @param {object} [props.style]  Custom style to apply
@@ -33,6 +34,7 @@ import {AdapterContext} from '../hooks/contexts';
  */
 export default function WebexMeeting({
   className,
+  controls,
   logo,
   meetingID,
   style,
@@ -90,7 +92,7 @@ export default function WebexMeeting({
           )}
           {showToast && <Badge className="media-state-toast">{toastText}</Badge>}
         </div>
-        <WebexMeetingControlBar meetingID={ID} className="control-bar" />
+        <WebexMeetingControlBar meetingID={ID} className="control-bar" controls={controls} />
         {showSettings && (
           <Modal
             onClose={() => adapter.meetingsAdapter.toggleSettings(ID)}
@@ -113,6 +115,7 @@ export default function WebexMeeting({
 
 WebexMeeting.propTypes = {
   className: PropTypes.string,
+  controls: PropTypes.func,
   logo: PropTypes.node,
   meetingID: PropTypes.string,
   style: PropTypes.shape(),
@@ -120,6 +123,11 @@ WebexMeeting.propTypes = {
 
 WebexMeeting.defaultProps = {
   className: '',
+  controls: (isActive) => (
+    isActive
+      ? ['mute-audio', 'mute-video', 'share-screen', 'member-roster', 'settings', 'leave-meeting']
+      : ['mute-audio', 'mute-video', 'settings', 'join-meeting']
+  ),
   logo: undefined,
   meetingID: undefined,
   style: undefined,
