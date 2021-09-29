@@ -18,8 +18,8 @@ import webexComponentClasses from '../helpers';
  * @param {string} props.selected  Specifies which tab is active
  * @param {object} props.style  Custom style to apply
  * @param {Tab[]} props.tabs  The tabs to be rendered
+ * @param {number} props.tabIndex  Tab index html attribute
  * @returns {object} JSX of the component
- *
  */
 export default function Tabs({
   className,
@@ -27,13 +27,32 @@ export default function Tabs({
   selected,
   style,
   tabs,
+  tabIndex,
 }) {
   const {content} = tabs.find((tab) => tab.key === selected);
   const cssClasses = webexComponentClasses('tabs', className);
+  const selectedTabIndex = (tabs || []).findIndex((tab) => tab.key === selected);
+
+  const handleKeyUp = (event) => {
+    if (event.key === 'ArrowLeft') {
+      const prevTabIndex = (selectedTabIndex + tabs.length - 1) % tabs.length;
+
+      onSelect(tabs[prevTabIndex].key);
+    } else if (event.key === 'ArrowRight') {
+      const nextTabIndex = (selectedTabIndex + 1) % tabs.length;
+
+      onSelect(tabs[nextTabIndex].key);
+    }
+  };
 
   return (
     <div className={cssClasses} style={style}>
-      <ul className="tabs-list">
+      {/* eslint-disable-next-line */}
+      <ul 
+        className="tabs-list"
+        tabIndex={tabIndex}
+        onKeyUp={handleKeyUp}
+      >
         {
           tabs.map((tab) => (
             <li
@@ -43,6 +62,7 @@ export default function Tabs({
               <button
                 onClick={() => onSelect(tab.key)}
                 type="button"
+                tabIndex={-1}
               >
                 {tab.heading}
               </button>
@@ -63,9 +83,11 @@ Tabs.propTypes = {
   selected: PropTypes.string.isRequired,
   style: PropTypes.shape(),
   tabs: PropTypes.arrayOf(PropTypes.object).isRequired,
+  tabIndex: PropTypes.number,
 };
 
 Tabs.defaultProps = {
   className: '',
   style: undefined,
+  tabIndex: -1,
 };

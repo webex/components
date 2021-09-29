@@ -34,7 +34,7 @@ export default function WebexSettings({meetingID, className, style}) {
 
   return (
     <div className={cssClasses} style={style}>
-      <Tabs tabs={tabs} selected={tab} onSelect={setTab} />
+      <Tabs tabs={tabs} selected={tab} onSelect={setTab} tabIndex={0} />
     </div>
   );
 }
