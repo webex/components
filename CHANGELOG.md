@@ -1,3 +1,10 @@
+## [1.143.4](https://github.com/webex/components/compare/v1.143.3...v1.143.4) (2021-09-29)
+
+
+### Bug Fixes
+
+* **WebexMemberRoster:** style scroll bar and external user message ([138c6af](https://github.com/webex/components/commit/138c6af0db0dfb27354d854c2c5fdced5e07f3c5))
+
 ## [1.143.3](https://github.com/webex/components/compare/v1.143.2...v1.143.3) (2021-09-29)
 
 
