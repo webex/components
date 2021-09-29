@@ -1,3 +1,10 @@
+## [1.143.3](https://github.com/webex/components/compare/v1.143.2...v1.143.3) (2021-09-29)
+
+
+### Bug Fixes
+
+* **icons:** remove indicator prop from icons because it is not used anywhere ([ba98ba7](https://github.com/webex/components/commit/ba98ba7bb254e1694d727394960a4d1b13c3ca07))
+
 ## [1.143.2](https://github.com/webex/components/compare/v1.143.1...v1.143.2) (2021-09-29)
 
 
