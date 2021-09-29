@@ -71,7 +71,9 @@ function renderButton(action, display, style, showText, asItem) {
  * @returns {object} JSX of the component
  */
 function renderDropdown(action, display, style) {
-  const {options, noOptionsMessage, selected} = display;
+  const {
+    options, noOptionsMessage, selected, tooltip,
+  } = display;
 
   return (
     <Select
@@ -81,6 +83,7 @@ function renderDropdown(action, display, style) {
       onChange={(id) => action(id)}
       options={options?.length === 0 ? [{value: '', label: noOptionsMessage}] : options}
       disabled={!options?.length}
+      tooltip={tooltip}
     />
   );
 }

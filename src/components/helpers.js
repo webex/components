@@ -28,3 +28,6 @@ export default function webexComponentClasses(
     ...otherClasses,
   });
 }
+
+//  checks for support for setSinkId https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/setSinkId
+export const isSpeakerSupported = !!document.createElement('audio').setSinkId;

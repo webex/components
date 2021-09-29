@@ -62,6 +62,7 @@ Array [
                 onClick={[Function]}
                 role="button"
                 tabIndex="0"
+                title="The current browser does not support changing speakers"
               >
                 <span
                   className="label"
@@ -101,6 +102,7 @@ Array [
                 onClick={[Function]}
                 role="button"
                 tabIndex="0"
+                title="Microphone Devices"
               >
                 <span
                   className="label"
