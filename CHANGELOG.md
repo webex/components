@@ -1,3 +1,10 @@
+## [1.143.2](https://github.com/webex/components/compare/v1.143.1...v1.143.2) (2021-09-29)
+
+
+### Bug Fixes
+
+* **WebexMeetingControl:** add a correct property name for font family to webex control styling file ([8f19b8e](https://github.com/webex/components/commit/8f19b8e47edf19d7934a0bef93f5b9aa75942c5e))
+
 ## [1.143.1](https://github.com/webex/components/compare/v1.143.0...v1.143.1) (2021-09-29)
 
 
