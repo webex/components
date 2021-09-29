@@ -5,6 +5,7 @@ import {
   distinctUntilChanged,
 } from 'rxjs/operators';
 import MeetingControl from './MeetingControl';
+import {isSpeakerSupported} from '../../../components/helpers';
 
 /**
  * Display options of a meeting control.
@@ -41,7 +42,9 @@ export default class SwitchSpeakerControl extends MeetingControl {
         observer.next({
           ID: this.ID,
           type: 'MULTISELECT',
-          tooltip: 'Speaker Devices',
+          // The browser api setSinkId() does not work properly on Firefox and Safari browsers so we need to treat them separately by displaying a message inside a tooltip in both cases.
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/setSinkId
+          tooltip: isSpeakerSupported ? 'Speaker Devices' : 'The current browser does not support changing speakers',
           noOptionsMessage: 'No available speakers',
           options: null,
           selected: null,

@@ -721,12 +721,12 @@ describe('Meetings JSON Adapter', () => {
         .subscribe((displays) => {
           expect(displays).toMatchObject([{
             ID: 'switch-speaker',
-            tooltip: 'Speaker Devices',
+            tooltip: 'The current browser does not support changing speakers',
             options: null,
             selected: null,
           }, {
             ID: 'switch-speaker',
-            tooltip: 'Speaker Devices',
+            tooltip: 'The current browser does not support changing speakers',
             options: speakerOptions,
             selected: null,
           }]);

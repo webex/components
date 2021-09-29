@@ -14,6 +14,7 @@ import webexComponentClasses from '../../helpers';
  * @param {object[]} props.options  Array of options
  * @param {Function} props.onChange  Action to perform on option selection
  * @param {boolean} props.disabled  True when the control is disabled
+ * @param {string} props.tooltip  Tooltip to be displayed
  * @returns {object}  JSX of the element
  */
 export default function Select({
@@ -22,6 +23,7 @@ export default function Select({
   options,
   onChange,
   disabled,
+  tooltip,
 }) {
   const [expanded, setExpanded] = useState(false);
   const cssClasses = webexComponentClasses('select', className, undefined, {disabled});
@@ -59,6 +61,7 @@ export default function Select({
         aria-hidden="true"
         role="button"
         tabIndex="0"
+        title={tooltip}
       >
         <span className="label">{label || value}</span>
         <Icon name={expanded ? 'arrow-up' : 'arrow-down'} size={13} />
@@ -84,6 +87,7 @@ Select.propTypes = {
   })),
   onChange: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
+  tooltip: PropTypes.string,
 };
 
 Select.defaultProps = {
@@ -91,4 +95,5 @@ Select.defaultProps = {
   value: '',
   options: [],
   disabled: false,
+  tooltip: undefined,
 };
