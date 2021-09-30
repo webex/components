@@ -46,6 +46,7 @@ Array [
     >
       <button
         aria-label="This setting cannot be changed once the meeting starts."
+        autoFocus={false}
         className="wxc-button wxc-meeting-control__control-button wxc-button--default"
         disabled={false}
         onClick={[Function]}
@@ -129,6 +130,7 @@ Array [
     >
       <button
         aria-label="This setting cannot be changed once the meeting starts."
+        autoFocus={false}
         className="wxc-button wxc-meeting-control__control-button wxc-button--default"
         disabled={false}
         onClick={[Function]}

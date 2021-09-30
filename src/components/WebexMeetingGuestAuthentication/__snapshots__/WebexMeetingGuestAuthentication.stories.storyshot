@@ -84,6 +84,7 @@ Array [
         </div>
       </label>
       <button
+        autoFocus={false}
         className="wxc-button wxc-meeting-guest-authentication__start-button wxc-button--primary"
         disabled={true}
         onClick={[Function]}

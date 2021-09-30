@@ -17,6 +17,7 @@ Array [
         className="wxc-meeting-control-bar__collapse-button"
       >
         <button
+          autoFocus={false}
           className="wxc-button wxc-button--default"
           disabled={false}
           onClick={[Function]}
@@ -51,10 +52,12 @@ Array [
         className="wxc-meeting-control"
       >
         <button
+          autoFocus={true}
           className="wxc-button wxc-meeting-control__control-button wxc-button--cancel"
           disabled={false}
           onClick={[Function]}
           style={Object {}}
+          tabIndex={1}
           type="button"
         >
           <svg
@@ -81,6 +84,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
+            autoFocus={false}
             className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
@@ -110,6 +114,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
+            autoFocus={false}
             className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
@@ -144,6 +149,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
+            autoFocus={false}
             className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
@@ -173,6 +179,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
+            autoFocus={false}
             className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
@@ -207,6 +214,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
+            autoFocus={false}
             className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
@@ -238,6 +246,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
+            autoFocus={false}
             className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
@@ -274,6 +283,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
+            autoFocus={false}
             className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
@@ -313,6 +323,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
+            autoFocus={false}
             className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
@@ -357,6 +368,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
+            autoFocus={false}
             className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
@@ -388,6 +400,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
+            autoFocus={false}
             className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
@@ -424,6 +437,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
+            autoFocus={false}
             className="wxc-button wxc-meeting-control__control-button wxc-button--cancel"
             disabled={false}
             onClick={[Function]}
@@ -451,6 +465,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
+            autoFocus={false}
             className="wxc-button wxc-meeting-control__control-button wxc-button--cancel"
             disabled={false}
             onClick={[Function]}
@@ -477,6 +492,7 @@ Array [
         className="wxc-meeting-control-bar__collapse-button"
       >
         <button
+          autoFocus={false}
           className="wxc-button wxc-button--default"
           disabled={false}
           onClick={[Function]}
@@ -549,6 +565,7 @@ Array [
         className="wxc-meeting-control-bar__collapse-button"
       >
         <button
+          autoFocus={false}
           className="wxc-button wxc-button--default"
           disabled={false}
           onClick={[Function]}
@@ -584,10 +601,12 @@ Array [
       >
         <button
           aria-label="Muted, video off"
+          autoFocus={false}
           className="wxc-button wxc-meeting-control__control-button wxc-button--join"
           disabled={false}
           onClick={[Function]}
           style={Object {}}
+          tabIndex={2}
           type="button"
         >
           <span
@@ -606,6 +625,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
+            autoFocus={false}
             className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
@@ -635,6 +655,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
+            autoFocus={false}
             className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
@@ -669,6 +690,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
+            autoFocus={false}
             className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
@@ -698,6 +720,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
+            autoFocus={false}
             className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
@@ -732,6 +755,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
+            autoFocus={false}
             className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
@@ -763,6 +787,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
+            autoFocus={false}
             className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
@@ -800,6 +825,7 @@ Array [
         >
           <button
             aria-label="Muted, video off"
+            autoFocus={false}
             className="wxc-button wxc-meeting-control__control-button wxc-button--join"
             disabled={false}
             onClick={[Function]}
@@ -820,6 +846,7 @@ Array [
         >
           <button
             aria-label="Muted, video off"
+            autoFocus={false}
             className="wxc-button wxc-meeting-control__control-button wxc-button--join"
             disabled={false}
             onClick={[Function]}
@@ -838,6 +865,7 @@ Array [
         className="wxc-meeting-control-bar__collapse-button"
       >
         <button
+          autoFocus={false}
           className="wxc-button wxc-button--default"
           disabled={false}
           onClick={[Function]}

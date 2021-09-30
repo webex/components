@@ -21,6 +21,7 @@ const nonZero = (x) => !!x;
  * @param {Function} props.controls  Controls to display
  * @param {string} props.meetingID  ID of the meeting to control
  * @param {object} props.style  Custom style to apply
+ * @param {Function} props.tabIndexes  TabIndexes for controls
  * @returns {object} JSX of the component
  *
  */
@@ -31,6 +32,7 @@ export default function WebexMeetingControlBar({
   controls,
   meetingID,
   style,
+  tabIndexes,
 }) {
   const {state} = useMeeting(meetingID);
   const [containerRef, {width: containerWidth}] = useElementDimensions();
@@ -39,6 +41,7 @@ export default function WebexMeetingControlBar({
   const isActive = state === JOINED;
   const [cssClasses, sc] = webexComponentClasses('meeting-control-bar', className);
   const controlNames = controls(isActive);
+  const controlsTabIndexes = tabIndexes(isActive);
   const controlCount = controlNames.length;
   const [controlTexts, setControlTexts] = useState();
   const [[collapseStart, collapseEnd], setCollapseRange] = useState([0, 0]);
@@ -125,6 +128,8 @@ export default function WebexMeetingControlBar({
         type={key}
         meetingID={meetingID}
         showText={controlTexts[i]}
+        autoFocus={controlsTabIndexes[i] === Math.min(...controlsTabIndexes) || false}
+        tabIndex={controlsTabIndexes[i]}
       />
     ),
   );
@@ -201,6 +206,7 @@ WebexMeetingControlBar.propTypes = {
   controls: PropTypes.func,
   meetingID: PropTypes.string.isRequired,
   style: PropTypes.shape(),
+  tabIndexes: PropTypes.func,
 };
 
 WebexMeetingControlBar.defaultProps = {
@@ -219,6 +225,11 @@ WebexMeetingControlBar.defaultProps = {
     isActive
       ? ['mute-audio', 'mute-video', 'leave-meeting']
       : ['mute-audio', 'mute-video', 'join-meeting']
+  ),
+  tabIndexes: (isActive) => (
+    isActive
+      ? [1, 2, 3]
+      : [2, 3, 1]
   ),
   style: undefined,
 };
