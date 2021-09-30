@@ -23,6 +23,7 @@ Array [
         )
       </h5>
       <button
+        autoFocus={false}
         className="wxc-button wxc-button--ghost"
         disabled={false}
         style={Object {}}
@@ -249,6 +250,7 @@ Array [
         )
       </h5>
       <button
+        autoFocus={false}
         className="wxc-button wxc-button--ghost"
         disabled={false}
         style={Object {}}
@@ -717,6 +719,7 @@ Array [
         )
       </h5>
       <button
+        autoFocus={false}
         className="wxc-button wxc-button--ghost"
         disabled={false}
         style={Object {}}

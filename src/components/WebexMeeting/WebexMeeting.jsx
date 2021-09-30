@@ -30,6 +30,7 @@ import {AdapterContext} from '../hooks/contexts';
  * @param {Function} [props.controls]   Controls to display
  * @param {number} [props.controlsCollapseRangeStart=0]  Zero-based index of the first collapsible control (can be negative)
  * @param {number} [props.controlsCollapseRangeEnd=-1]  Zero-based index before the last collapsible control (can be negative)
+ * @param {Function} [props.controlsTabIndexes]  TabIndex for each control
  * @param {JSX.Element} [props.logo]  Logo
  * @param {string} [props.meetingID]  ID of the meeting
  * @param {object} [props.style]  Custom style to apply
@@ -40,6 +41,7 @@ export default function WebexMeeting({
   controls,
   controlsCollapseRangeStart,
   controlsCollapseRangeEnd,
+  controlsTabIndexes,
   logo,
   meetingID,
   style,
@@ -105,6 +107,7 @@ export default function WebexMeeting({
           controls={controls}
           collapseRangeStart={controlsCollapseRangeStart}
           collapseRangeEnd={controlsCollapseRangeEnd}
+          tabIndexes={controlsTabIndexes}
         />
         {settings.visible && (
           <Modal
@@ -153,6 +156,7 @@ WebexMeeting.propTypes = {
   controls: PropTypes.func,
   controlsCollapseRangeStart: PropTypes.number,
   controlsCollapseRangeEnd: PropTypes.number,
+  controlsTabIndexes: PropTypes.func,
   logo: PropTypes.node,
   meetingID: PropTypes.string,
   style: PropTypes.shape(),
@@ -167,6 +171,11 @@ WebexMeeting.defaultProps = {
   ),
   controlsCollapseRangeStart: 0,
   controlsCollapseRangeEnd: -1,
+  controlsTabIndexes: (isActive) => (
+    isActive
+      ? [1, 2, 3, 4, 5, 6]
+      : [2, 3, 4, 1]
+  ),
   logo: undefined,
   meetingID: undefined,
   style: undefined,
