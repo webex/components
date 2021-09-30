@@ -122,6 +122,28 @@
   --wxc-select--focus--box-shadow: 0 0 0 2px #{$wxc-blue-60}, 0px 0px 0px 4px #{$wxc-blue-40};
   --wxc-select--focus--border: 1px solid #{$wxc-black-alpha-90};
 
+  --wxc-input--normal--background: #{$wxc-white-alpha-100};
+  --wxc-input--normal--color: #{$wxc-black-alpha-60};
+  --wcx-input--normal--border: 1px solid #{$wxc-black-alpha-50};
+
+  --wxc-input--hover--background: #{$wxc-black-alpha-04};
+
+  --wxc-input--active--background: #{$wxc-black-alpha-11};
+  --wxc-input--active--color: #{$wxc-black-alpha-95};
+  --wxc-input--active--border: 1px solid #{$wxc-white-alpha-50};
+  --wxc-input--active--box-shadow: 0 0 0 0.25rem #{$wxc-blue-60-alpha-30}, 0 0 0 0.125rem #{$wxc-blue-60};
+
+  --wxc-input--focus--color: #{$wxc-black-alpha-95};
+  --wxc-input--focus--border: 1px solid #{$wxc-blue-60};
+  --wxc-input--focus--border: 1px solid #{$wxc-white-alpha-50};
+  --wxc-input--focus--box-shadow: 0 0 0 0.25rem #{$wxc-blue-60-alpha-30}, 0 0 0 0.125rem #{$wxc-blue-60};
+
+  --wxc-input--disabled--background: #{$wxc-black-alpha-11};
+  --wxc-input--disabled--color: #{$wxc-black-alpha-40};
+  --wxc-input--disabled--border: 1px solid transparent;
+
+  --wxc-input--label--color: #{$wxc-black-alpha-95};
+
   --wxc-options-list--normal--box-shadow: 0 0 0 1px #{$wxc-black-alpha-20} inset;
   --wxc-options-list--normal--background: #{$wxc-white-alpha-100};
 
