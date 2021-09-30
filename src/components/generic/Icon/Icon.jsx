@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   ArrowDown,
+  ArrowLeft,
   ArrowUp,
   AudioMicrophoneIcon,
   AudioMicrophoneMutedIcon,
@@ -30,6 +31,7 @@ import {
 
 const icons = {
   'arrow-down': ArrowDown,
+  'arrow-left': ArrowLeft,
   'arrow-up': ArrowUp,
   check: CheckIcon,
   camera: CameraIcon,
