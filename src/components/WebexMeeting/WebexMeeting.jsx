@@ -28,6 +28,8 @@ import {AdapterContext} from '../hooks/contexts';
  * @param {object} props  Data passed to the component
  * @param {string} [props.className]  Custom CSS class to apply
  * @param {Function} [props.controls]   Controls to display
+ * @param {number} [props.controlsCollapseRangeStart=0]  Zero-based index of the first collapsible control (can be negative)
+ * @param {number} [props.controlsCollapseRangeEnd=-1]  Zero-based index before the last collapsible control (can be negative)
  * @param {JSX.Element} [props.logo]  Logo
  * @param {string} [props.meetingID]  ID of the meeting
  * @param {object} [props.style]  Custom style to apply
@@ -36,6 +38,8 @@ import {AdapterContext} from '../hooks/contexts';
 export default function WebexMeeting({
   className,
   controls,
+  controlsCollapseRangeStart,
+  controlsCollapseRangeEnd,
   logo,
   meetingID,
   style,
@@ -96,7 +100,13 @@ export default function WebexMeeting({
           )}
           {showToast && <Badge className={sc('media-state-toast')}>{toastText}</Badge>}
         </div>
-        <WebexMeetingControlBar meetingID={ID} className={sc('control-bar')} controls={controls} />
+        <WebexMeetingControlBar
+          meetingID={ID}
+          className={sc('control-bar')}
+          controls={controls}
+          collapseRangeStart={controlsCollapseRangeStart}
+          collapseRangeEnd={controlsCollapseRangeEnd}
+        />
         {settings.visible && (
           <Modal
             onClose={() => adapter.meetingsAdapter.toggleSettings(ID)}
@@ -141,6 +151,8 @@ export default function WebexMeeting({
 WebexMeeting.propTypes = {
   className: PropTypes.string,
   controls: PropTypes.func,
+  controlsCollapseRangeStart: PropTypes.number,
+  controlsCollapseRangeEnd: PropTypes.number,
   logo: PropTypes.node,
   meetingID: PropTypes.string,
   style: PropTypes.shape(),
@@ -153,6 +165,8 @@ WebexMeeting.defaultProps = {
       ? ['mute-audio', 'mute-video', 'share-screen', 'member-roster', 'settings', 'leave-meeting']
       : ['mute-audio', 'mute-video', 'settings', 'join-meeting']
   ),
+  controlsCollapseRangeStart: 0,
+  controlsCollapseRangeEnd: -1,
   logo: undefined,
   meetingID: undefined,
   style: undefined,

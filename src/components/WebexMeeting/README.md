@@ -25,11 +25,11 @@ or run the following **NPM** command:
     const jsonAdapter = new WebexJSONAdapter(jsonData);
     ```
 
-2. Create a component instance by passing the meeting ID as a string and an optional function to define custom controls for a meeting. This function should take a boolean parameter, which signifies whether the meeting is active and returns an array of control names for the meeting. The default control names are set to `['mute-audio', 'mute-video', 'settings', 'join-meeting']` if the meeting is inactive and `['mute-audio', 'mute-video', 'share-screen', 'member-roster', 'settings', 'leave-meeting']`otherwise.
+2. Create a component instance by passing the meeting ID as a string, an optional function to specify a custom list of controls for a meeting and an optional range to specify which controls can be collapsed if not enough space is available.
+The controls function receives a boolean parameter which is true when the meeting is active. It should return an array of control names (strings) corresponding to the current state of the meeting (inactive or active). The default control names `['mute-audio', 'mute-video', 'settings', 'join-meeting']` if the meeting is inactive and `['mute-audio', 'mute-video', 'share-screen', 'member-roster', 'settings', 'leave-meeting']`otherwise.
 Ensure that the control names match with the adapter implementation of the controls.
-You then need to enclose it
-within [a data provider](../WebexDataProvider/WebexDataProvider.js) that takes
-the [component data adapter](../../adapters/WebexJSONAdapter.js) that we created previously
+The `controlsCollapseRangeStart` is a zero-based index of the first collapsible control (can be negative).
+The `controlsCollapseRangeEnd` is a zero-based index before the last collapsible control (can be negative). Negative numbers are counted from the end of the controls array. For example, if the `controlsCollapseRangeEnd` is -2, the last 2 controls won't collapse. You then need to enclose it within [a data provider](../WebexDataProvider/WebexDataProvider.js) that takes the [component data adapter](../../adapters/WebexJSONAdapter.js) that we created previously
 
     ```js
     const controls = (isActive) => isActive
@@ -37,8 +37,31 @@ the [component data adapter](../../adapters/WebexJSONAdapter.js) that we created
       : ['mute-audio', 'mute-video', 'settings', 'join-meeting'];
 
     <WebexDataProvider adapter={jsonAdapter}>
-      <WebexMeeting meetingID="meetingID" controls={controls} />
+      <WebexMeeting 
+        meetingID="meetingID"
+        controls={controls}
+        controlsCollapseRangeStart={0}
+        controlsCollapseRangeEnd={-1}
+      />
     </WebexDataProvider>
+    ```
+or, alternatively it can be used withAdapter HOC
+
+    ```js
+    const controls = (isActive) => isActive
+      ? ['mute-audio', 'mute-video', 'share-screen', 'member-roster', 'settings', 'leave-meeting']
+      : ['mute-audio', 'mute-video', 'settings', 'join-meeting'];
+
+    const MeetingWithAdapter = withAdapter(WebexMeeting, (props) => {
+      return new WebexJSONAdapter(data); // or other adapter
+    });
+
+    <MeetingWithAdapter 
+      meetingID="meetingID"
+      controls={controls}
+      controlsCollapseRangeStart={0}
+      controlsCollapseRangeEnd={-1}
+    />
     ```
 
 The component knows how to manage its data. If anything changes in the data source that the adapter manages,
