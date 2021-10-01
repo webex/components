@@ -1,0 +1,17 @@
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-authentication {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .form-content {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+    }
+  }
+}
