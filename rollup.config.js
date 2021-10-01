@@ -23,6 +23,7 @@ const plugins = [
   commonjs(),
   babel({
     babelHelpers: 'runtime',
+    babelrc: true,
     exclude: 'node_modules/**',
   }),
   scss({
