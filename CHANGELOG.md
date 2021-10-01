@@ -1,3 +1,10 @@
+## [1.143.5](https://github.com/webex/components/compare/v1.143.4...v1.143.5) (2021-10-01)
+
+
+### Bug Fixes
+
+* **rollup:** use babelrc ([3cca827](https://github.com/webex/components/commit/3cca827c9eaff34a28feb45257051261cc626568))
+
 ## [1.143.4](https://github.com/webex/components/compare/v1.143.3...v1.143.4) (2021-09-29)
 
 
