@@ -1,3 +1,10 @@
+# [1.146.0](https://github.com/webex/components/compare/v1.145.0...v1.146.0) (2021-10-04)
+
+
+### Features
+
+* **WebexMeeting:** add controls prop to meeting component ([49e1957](https://github.com/webex/components/commit/49e195714120e67daa21467057969657d99e4a4b))
+
 # [1.145.0](https://github.com/webex/components/compare/v1.144.0...v1.145.0) (2021-10-04)
 
 
