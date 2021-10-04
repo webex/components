@@ -1,3 +1,16 @@
+# [1.144.0](https://github.com/webex/components/compare/v1.143.5...v1.144.0) (2021-10-04)
+
+
+### Bug Fixes
+
+* **Select:** change dropdown fields style in the Settings window ([f4b99a5](https://github.com/webex/components/commit/f4b99a5baf8a2b77ff40c4dac40969963032e706))
+
+
+### Features
+
+* **Icons:** add "arrow-left" icon ([d264990](https://github.com/webex/components/commit/d2649900f69514adc772ea45cff7911f305aa1f7))
+* **WebexMeetingAuthentication:** create WebexMeetingAuthentication component ([3df56b1](https://github.com/webex/components/commit/3df56b1cdf0c5f8a1f5ca592a1b01a1d1349fef4))
+
 ## [1.143.5](https://github.com/webex/components/compare/v1.143.4...v1.143.5) (2021-10-01)
 
 
