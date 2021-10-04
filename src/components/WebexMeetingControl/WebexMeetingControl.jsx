@@ -77,7 +77,7 @@ function renderDropdown(action, display, style) {
     <Select
       className="control-select"
       style={style}
-      value={selected || ''}
+      value={selected || options?.[0].value || ''}
       onChange={(id) => action(id)}
       options={options?.length === 0 ? [{value: '', label: noOptionsMessage}] : options}
       disabled={!options?.length}
