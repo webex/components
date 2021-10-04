@@ -1,3 +1,10 @@
+# [1.145.0](https://github.com/webex/components/compare/v1.144.0...v1.145.0) (2021-10-04)
+
+
+### Features
+
+* **MeetingsJsonAdapter:** create 'supportedControls()' method ([157cc4c](https://github.com/webex/components/commit/157cc4c352b004b9061593369b549677deb2faf1))
+
 # [1.144.0](https://github.com/webex/components/compare/v1.143.5...v1.144.0) (2021-10-04)
 
 
