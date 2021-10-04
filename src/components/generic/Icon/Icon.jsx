@@ -14,6 +14,7 @@ import {
   CheckIcon,
   DndPresenceIcon,
   ExternalUserIcon,
+  HidePwdIcon,
   MeetingsPresenceIcon,
   MicrophoneIssueIcon,
   MoreIcon,
@@ -26,6 +27,7 @@ import {
   SettingsIcon,
   ShareScreenIcon,
   ShareScreenFilledIcon,
+  ShowPwdIcon,
   UnreadIcon,
   WarningIcon,
 } from '../../icons';
@@ -44,6 +46,7 @@ const icons = {
   'dnd-presence': DndPresenceIcon,
   error: RemoteMediaErrorIcon,
   'external-user': ExternalUserIcon,
+  'hide-password': HidePwdIcon,
   'meetings-presence': MeetingsPresenceIcon,
   'microphone-issue': MicrophoneIssueIcon,
   'microphone-muted': AudioMicrophoneMutedIcon,
@@ -57,6 +60,7 @@ const icons = {
   settings: SettingsIcon,
   'share-screen-presence-stroke': ShareScreenIcon,
   'share-screen-filled': ShareScreenFilledIcon,
+  'show-password': ShowPwdIcon,
   unread: UnreadIcon,
   warning: WarningIcon,
 };
