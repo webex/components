@@ -24,3 +24,4 @@ export {default as ArrowLeft} from './ArrowLeft';
 export {default as ArrowUp} from './ArrowUp';
 export {default as CheckIcon} from './CheckIcon';
 export {default as CameraIssue} from './CameraIssue';
+export {default as WarningIcon} from './WarningIcon';

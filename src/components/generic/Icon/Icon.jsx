@@ -27,6 +27,7 @@ import {
   ShareScreenIcon,
   ShareScreenFilledIcon,
   UnreadIcon,
+  WarningIcon,
 } from '../../icons';
 
 const icons = {
@@ -57,6 +58,7 @@ const icons = {
   'share-screen-presence-stroke': ShareScreenIcon,
   'share-screen-filled': ShareScreenFilledIcon,
   unread: UnreadIcon,
+  warning: WarningIcon,
 };
 
 /**
