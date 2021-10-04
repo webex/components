@@ -635,4 +635,13 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
     deepMerge(meeting, meetingUpdates);
     document.dispatchEvent(new CustomEvent(EVENT_MEETING_UPDATE, {detail: meeting}));
   }
+
+  /**
+   * Displays the names of the available controls.
+   *
+   * @returns {string[]} Array containing the control names supported.
+   */
+  supportedControls() {
+    return Object.keys(this.meetingControls);
+  }
 }
