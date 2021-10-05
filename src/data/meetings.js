@@ -18,7 +18,13 @@ export default {
     remoteShare: null,
     state: MeetingState.JOINED,
     showRoster: false,
-    showSettings: false,
+    settings: {
+      visible: false,
+      preview: {
+        microphone: {},
+        video: {},
+      },
+    },
     cameraID: 'cameraID1',
     microphoneID: 'microphoneID1',
     speakerID: 'speakerID1',
@@ -40,7 +46,13 @@ export default {
     remoteShare: new MediaStream(),
     state: MeetingState.NOT_JOINED,
     showRoster: false,
-    showSettings: false,
+    settings: {
+      visible: false,
+      preview: {
+        microphone: {},
+        video: {},
+      },
+    },
     cameraID: 'cameraID2',
     microphoneID: 'microphoneID2',
     speakerID: 'speakerID2',
@@ -62,7 +74,13 @@ export default {
     remoteShare: null,
     state: MeetingState.NOT_JOINED,
     showRoster: false,
-    showSettings: false,
+    settings: {
+      visible: false,
+      preview: {
+        microphone: {},
+        video: {},
+      },
+    },
     cameraID: 'cameraID1',
     microphoneID: 'microphoneID1',
     speakerID: 'speakerID1',
@@ -84,7 +102,13 @@ export default {
     remoteShare: null,
     state: MeetingState.JOINED,
     showRoster: false,
-    showSettings: false,
+    settings: {
+      visible: false,
+      preview: {
+        microphone: {},
+        video: {},
+      },
+    },
     cameraID: 'cameraID1',
     microphoneID: 'microphoneID1',
     speakerID: 'speakerID1',
@@ -106,7 +130,13 @@ export default {
     remoteShare: null,
     state: MeetingState.JOINED,
     showRoster: true,
-    showSettings: false,
+    settings: {
+      visible: false,
+      preview: {
+        microphone: {},
+        video: {},
+      },
+    },
     cameraID: 'cameraID2',
     microphoneID: 'microphoneID2',
     speakerID: 'speakerID2',
@@ -128,7 +158,13 @@ export default {
     remoteShare: null,
     state: MeetingState.JOINED,
     showRoster: false,
-    showSettings: false,
+    settings: {
+      visible: false,
+      preview: {
+        microphone: {},
+        video: {},
+      },
+    },
     cameraID: 'cameraID1',
     microphoneID: 'microphoneID2',
     speakerID: 'speakerID1',
@@ -150,7 +186,13 @@ export default {
     remoteShare: null,
     state: null,
     showRoster: false,
-    showSettings: false,
+    settings: {
+      visible: false,
+      preview: {
+        microphone: {},
+        video: {},
+      },
+    },
     cameraID: null,
     microphoneID: null,
     speakerID: null,
@@ -172,7 +214,13 @@ export default {
     remoteShare: null,
     state: MeetingState.LEFT,
     showRoster: false,
-    showSettings: false,
+    settings: {
+      visible: false,
+      preview: {
+        microphone: {},
+        video: {},
+      },
+    },
     cameraID: null,
     microphoneID: null,
     speakerID: null,
@@ -194,7 +242,13 @@ export default {
     remoteShare: null,
     state: null,
     showRoster: false,
-    showSettings: false,
+    settings: {
+      visible: false,
+      preview: {
+        microphone: {},
+        video: {},
+      },
+    },
     cameraID: null,
     microphoneID: null,
     speakerID: null,

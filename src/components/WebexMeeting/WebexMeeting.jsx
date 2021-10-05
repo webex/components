@@ -45,7 +45,7 @@ export default function WebexMeeting({
     localVideo,
     state,
     showRoster,
-    showSettings,
+    settings,
   } = useMeeting(meetingID);
   const {JOINED, LEFT} = MeetingState;
   const isActive = state === JOINED;
@@ -93,7 +93,7 @@ export default function WebexMeeting({
           {showToast && <Badge className="media-state-toast">{toastText}</Badge>}
         </div>
         <WebexMeetingControlBar meetingID={ID} className="control-bar" controls={controls} />
-        {showSettings && (
+        {settings.visible && (
           <Modal
             onClose={() => adapter.meetingsAdapter.toggleSettings(ID)}
             title="Settings"
