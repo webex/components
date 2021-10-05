@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Meetings/WebexMeetingAuthentification Meeting Authentification 1`] = `
+Array [
+  <div
+    className="wxc-meeting-authentication"
+  >
+    <form
+      className="form-content"
+    >
+      <label>
+        Your name
+        <input
+          name="name"
+          onChange={[Function]}
+          type="text"
+        />
+      </label>
+      <label>
+        Meeting password (required)
+        <input
+          name="password"
+          onChange={[Function]}
+          type="password"
+        />
+      </label>
+      <button
+        className="wxc-button wxc-button--default"
+        disabled={false}
+        style={Object {}}
+        title=""
+        type="button"
+      >
+        Start Meeting
+      </button>
+    </form>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
