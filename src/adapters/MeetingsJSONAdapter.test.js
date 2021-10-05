@@ -764,4 +764,27 @@ describe('Meetings JSON Adapter', () => {
       expect(dispatchSpy).toHaveBeenCalled();
     });
   });
+
+  describe('supportedControls()', () => {
+    test('returns an array containing the available control names', () => {
+      const availableControls = meetingsJSONAdapter.supportedControls();
+
+      expect(availableControls.sort()).toEqual([
+        'disabled-join-meeting',
+        'disabled-mute-audio',
+        'join-meeting',
+        'leave-meeting',
+        'member-roster',
+        'mute-audio',
+        'mute-video',
+        'proceed-without-camera',
+        'proceed-without-microphone',
+        'settings',
+        'share-screen',
+        'switch-camera',
+        'switch-microphone',
+        'switch-speaker',
+      ]);
+    });
+  });
 });
