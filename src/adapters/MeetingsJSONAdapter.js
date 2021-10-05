@@ -53,7 +53,13 @@ const EMPTY_MEETING = {
   remoteVideo: null,
   remoteShare: null,
   showRoster: null,
-  showSettings: false,
+  settings: {
+    visible: false,
+    preview: {
+      audio: {},
+      video: {},
+    },
+  },
   status: 'NOT_JOINED',
   cameraID: null,
   microphoneID: null,
@@ -108,7 +114,13 @@ const EVENT_MEETING_UPDATE = 'meeting:update';
  *     "remoteAudio": {},
  *     "remoteVideo": {},
  *     "remoteShare": {},
- *     "showSettings": false,
+ *     "settings": {
+ *        visible: false,
+ *        preview: {
+ *          audio: {},
+ *          video: {},
+ *        },
+ *      },
  *     "state": "JOINED",
  *   },
  *   "meeting-2": {
@@ -126,7 +138,13 @@ const EVENT_MEETING_UPDATE = 'meeting:update';
  *     "remoteAudio": {},
  *     "remoteVideo": {},
  *     "remoteShare": {},
- *     "showSettings": false,
+ *     "settings": {
+ *        visible: false,
+ *        preview: {
+ *          audio: {},
+ *          video: {},
+ *        },
+ *      },
  *     "state": "NOT_JOINED",
  *   }
  * }
@@ -219,7 +237,13 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
           remoteVideo: null,
           remoteShare: null,
           showRoster: null,
-          showSettings: false,
+          settings: {
+            visible: false,
+            preview: {
+              audio: {},
+              video: {},
+            },
+          },
           state: null,
           cameraID: null,
           microphoneID: null,
@@ -547,7 +571,11 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @param {string} ID  Id of the meeting for which to toggle the settings flag
    */
   async toggleSettings(ID) {
-    await this.updateMeeting(ID, async (meeting) => ({showSettings: !meeting.showSettings}));
+    await this.updateMeeting(ID, async (meeting) => ({
+      settings: {
+        visible: !meeting.settings.visible,
+      },
+    }));
   }
 
   /**
