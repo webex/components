@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Meetings/Webex Meeting Authentication Authentication 1`] = `
+exports[`Storyshots Meetings/Webex Host Authentication Authentication 1`] = `
 Array [
   <div
-    className="wxc-meeting-authentication"
+    className="wxc-meeting-host-authentication"
     style={
       Object {
         "height": "25rem",
@@ -20,7 +20,7 @@ Array [
       <div
         className="auth-title"
       >
-        Enter meeting information to join
+        Enter host information to join
       </div>
     </div>
     <form
@@ -43,7 +43,7 @@ Array [
         </div>
       </label>
       <label>
-        Meeting password (required)
+        Host key (required)
         <div
           className="wxc-input-field"
         >

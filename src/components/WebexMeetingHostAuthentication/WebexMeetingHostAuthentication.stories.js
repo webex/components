@@ -1,9 +1,9 @@
 import React from 'react';
-import WebexMeetingAuthentication from './WebexMeetingAuthentication';
+import WebexMeetingHostAuthentication from './WebexMeetingHostAuthentication';
 
 export default {
-  title: 'Meetings/Webex Meeting Authentication',
-  component: WebexMeetingAuthentication,
+  title: 'Meetings/Webex Host Authentication',
+  component: WebexMeetingHostAuthentication,
 };
 
 const Template = (args) => {
@@ -15,7 +15,7 @@ const Template = (args) => {
 
   const props = {...args, style};
 
-  return <WebexMeetingAuthentication {...props} />;
+  return <WebexMeetingHostAuthentication {...props} />;
 };
 
 export const Authentication = Template.bind({});

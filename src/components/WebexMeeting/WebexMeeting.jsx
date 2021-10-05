@@ -14,8 +14,9 @@ import {PHONE_LARGE} from '../breakpoints';
 
 import WebexInMeeting from '../WebexInMeeting/WebexInMeeting';
 import WebexInterstitialMeeting from '../WebexInterstitialMeeting/WebexInterstitialMeeting';
-import WebexMeetingAuthentication from '../WebexMeetingAuthentication/WebexMeetingAuthentication';
 import WebexMeetingControlBar from '../WebexMeetingControlBar/WebexMeetingControlBar';
+import WebexMeetingGuestAuthentication from '../WebexMeetingGuestAuthentication/WebexMeetingGuestAuthentication';
+import WebexMeetingHostAuthentication from '../WebexMeetingHostAuthentication/WebexMeetingHostAuthentication';
 import WebexMemberRoster from '../WebexMemberRoster/WebexMemberRoster';
 import WebexSettings from '../WebexSettings/WebexSettings';
 import webexComponentClasses from '../helpers';
@@ -57,6 +58,7 @@ export default function WebexMeeting({
   const cssClasses = webexComponentClasses('meeting', className, null, {'roster-only': showRoster && width <= PHONE_LARGE});
   const [showToast, setShowToast] = useState(false);
   const toastTimeoutRef = useRef();
+  const [authModal, setAuthModal] = useState('guest');
 
   useEffect(() => {
     if (state && state !== LEFT) {
@@ -108,9 +110,14 @@ export default function WebexMeeting({
         {passwordRequired && state === NOT_JOINED && (
           <Modal
             onClose={() => adapter.meetingsAdapter.setPasswordRequired(ID, false)}
+            onBack={authModal === 'host' && (() => setAuthModal('guest'))}
             className="authentication"
           >
-            <WebexMeetingAuthentication meetingID={ID} />
+            {
+              authModal === 'guest'
+                ? <WebexMeetingGuestAuthentication meetingID={ID} switchToHostModal={() => setAuthModal('host')} />
+                : <WebexMeetingHostAuthentication meetingID={ID} />
+            }
           </Modal>
         )}
       </>

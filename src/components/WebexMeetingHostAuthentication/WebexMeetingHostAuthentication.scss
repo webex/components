@@ -1,8 +1,10 @@
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-authentication {
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-host-authentication {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 0.875rem;
+  color: var(--wxc-text-color);
 
   .auth-header {
     display: flex;
@@ -32,6 +34,26 @@
       display: flex;
       flex-direction: column;
       margin-bottom: 1rem;
+    }
+  }
+
+  .host-text {
+    margin-top: 1.25rem;
+    color: var(--wxc-secondary-text-color);
+
+    .host-hyperlink {
+      color: var(--wxc-hyperlink--normal--color);
+      text-decoration: underline;
+
+      &:hover {
+        cursor: pointer;
+        color: var(--wxc-hyperlink--hover--color);
+      }
+
+      &:active {
+        cursor: pointer;
+        color: var(--wxc-hyperlink--active--color);
+      }
     }
   }
 }

@@ -169,4 +169,8 @@
   --wxc-options-list-item--selected--color:  #{$wxc-blue-40};
 
   --wxc-scrollbar-thumb: #{$wxc-white-alpha-11};
+
+  --wxc-hyperlink--normal--color: #{$wxc-blue-40};
+  --wxc-hyperlink--hover--color: #{$wxc-blue-20};
+  --wxc-hyperlink--active--color:#{$wxc-blue-20};
 }
