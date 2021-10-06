@@ -254,4 +254,34 @@ export default {
     speakerID: null,
     error: true,
   },
+
+  meeting10: {
+    ID: 'meeting10',
+    title: 'Feature Planning Meeting',
+    localAudio: {
+      stream: new MediaStream(),
+    },
+    localVideo: {
+      stream: new MediaStream(),
+    },
+    localShare: {
+      stream: new MediaStream(),
+    },
+    remoteAudio: null,
+    remoteVideo: null,
+    remoteShare: null,
+    state: MeetingState.NOT_JOINED,
+    showRoster: false,
+    settings: {
+      visible: false,
+      preview: {
+        microphone: {},
+        video: {},
+      },
+    },
+    cameraID: 'cameraID1',
+    microphoneID: 'microphoneID1',
+    speakerID: 'speakerID1',
+    password: 'secret',
+  },
 };

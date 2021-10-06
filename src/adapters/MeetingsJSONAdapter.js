@@ -297,13 +297,26 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * Used by "join-meeting" meeting control.
    *
    * @param {string} ID  Id of the meeting for which to join
+   * @param {object} options  An optional parameter that can contain authentication data
    */
-  async joinMeeting(ID) {
-    await this.updateMeeting(ID, async () => ({
-      remoteVideo: await this.getStream({video: true, audio: false}),
-      remoteAudio: await this.getStream({video: false, audio: true}),
-      state: MeetingState.JOINED,
-    }));
+  async joinMeeting(ID, options = {}) {
+    await this.updateMeeting(ID, async (meeting) => {
+      let updates;
+
+      if (meeting.password && !options.password) {
+        updates = {passwordRequired: true};
+      } else if (meeting.password && options.password !== meeting.password) {
+        updates = {invalidPassword: true};
+      } else {
+        updates = {
+          remoteVideo: await this.getStream({video: true, audio: false}),
+          remoteAudio: await this.getStream({video: false, audio: true}),
+          state: MeetingState.JOINED,
+        };
+      }
+
+      return updates;
+    });
   }
 
   /**
@@ -626,6 +639,16 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    */
   async switchSpeaker(ID, speakerID) {
     await this.updateMeeting(ID, async () => ({speakerID}));
+  }
+
+  /**
+   * Sets the password required flag.
+   *
+   * @param {string} ID  Id of the meeting
+   * @param {boolean} passwordRequired  Flag indicating if this meeting requires password authentication
+   */
+  async setPasswordRequired(ID, passwordRequired) {
+    await this.updateMeeting(ID, async () => ({passwordRequired}));
   }
 
   /**
