@@ -1,3 +1,10 @@
+# [1.147.0](https://github.com/webex/components/compare/v1.146.0...v1.147.0) (2021-10-06)
+
+
+### Features
+
+* **InputField:** create and style input field component ([f06b71a](https://github.com/webex/components/commit/f06b71a8eebdc3b335719557ad6a8739aeed1e7c))
+
 # [1.146.0](https://github.com/webex/components/compare/v1.145.0...v1.146.0) (2021-10-04)
 
 
