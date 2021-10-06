@@ -37,3 +37,8 @@ export const LeftMeeting = Template.bind({});
 LeftMeeting.args = {
   meetingID: 'meeting8',
 };
+
+export const PasswordRequired = Template.bind({});
+PasswordRequired.args = {
+  meetingID: 'meeting10',
+};

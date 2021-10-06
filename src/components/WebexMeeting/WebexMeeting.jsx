@@ -14,6 +14,7 @@ import {PHONE_LARGE} from '../breakpoints';
 
 import WebexInMeeting from '../WebexInMeeting/WebexInMeeting';
 import WebexInterstitialMeeting from '../WebexInterstitialMeeting/WebexInterstitialMeeting';
+import WebexMeetingAuthentication from '../WebexMeetingAuthentication/WebexMeetingAuthentication';
 import WebexMeetingControlBar from '../WebexMeetingControlBar/WebexMeetingControlBar';
 import WebexMemberRoster from '../WebexMemberRoster/WebexMemberRoster';
 import WebexSettings from '../WebexSettings/WebexSettings';
@@ -46,8 +47,10 @@ export default function WebexMeeting({
     state,
     showRoster,
     settings,
+    passwordRequired,
   } = useMeeting(meetingID);
-  const {JOINED, LEFT} = MeetingState;
+
+  const {JOINED, NOT_JOINED, LEFT} = MeetingState;
   const isActive = state === JOINED;
   const adapter = useContext(AdapterContext);
   const [mediaRef, {width}] = useElementDimensions();
@@ -100,6 +103,14 @@ export default function WebexMeeting({
             className="settings"
           >
             <WebexSettings meetingID={ID} />
+          </Modal>
+        )}
+        {passwordRequired && state === NOT_JOINED && (
+          <Modal
+            onClose={() => adapter.meetingsAdapter.setPasswordRequired(ID, false)}
+            className="authentication"
+          >
+            <WebexMeetingAuthentication meetingID={ID} />
           </Modal>
         )}
       </>
