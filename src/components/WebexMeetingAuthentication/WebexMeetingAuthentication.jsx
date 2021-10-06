@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../helpers';
-import {Button} from '../generic';
+import {Button, InputField} from '../generic';
 
 /**
  * Webex Meeting Authentication component
@@ -24,12 +24,12 @@ export default function WebexMeetingAuthentication({className, style}) {
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
         <label>
           Your name
-          <input type="text" name="name" value={name} onChange={(event) => setName(event.target.value)} />
+          <InputField type="text" name="name" value={name} onChange={(event) => setName(event.target.value)} />
         </label>
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
         <label>
           Meeting password (required)
-          <input type="password" name="password" value={password} onChange={(event) => setPassword(event.target.value)} />
+          <InputField type="password" name="password" value={password} onChange={(event) => setPassword(event.target.value)} />
         </label>
         <Button type="default">Start Meeting</Button>
       </form>
