@@ -1,6 +1,7 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field {
   display: flex;
   flex-direction: column;
+  position: relative;
 
   label {
     margin-bottom: 0.25rem;
@@ -15,7 +16,7 @@
     border: var(--wcx-input--normal--border);
     color: var(--wxc-input--normal--color);
     border-radius: 0.5rem;
-    padding: 0.25rem 0.75rem;
+    padding: 0.25rem 2.18rem 0.25rem 0.75rem;
     cursor: pointer;
 
     &:hover {
@@ -39,6 +40,18 @@
       background: var(--wxc-input--disabled--background);
       border: var(--wxc-input--disabled--border);
       color: var(--wxc-input--disabled--color);
+    }
+  }
+
+  .input-field-right-icon {
+    position: absolute;
+    color: var(--wxc-input-icon-color);
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    &:hover, &:active, &:disabled {
+      background: none;
     }
   }
 }

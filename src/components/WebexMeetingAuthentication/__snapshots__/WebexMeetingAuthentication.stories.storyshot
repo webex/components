@@ -11,78 +11,18 @@ Array [
       }
     }
   >
-    <form
-      className="form-content"
+    <div
+      className="auth-header"
     >
-      <label>
-        Your name
-        <div
-          className="wxc-input-field"
-        >
-          <input
-            disabled={false}
-            name="name"
-            onChange={[Function]}
-            placeholder=""
-            type="text"
-            value=""
-          />
-        </div>
-      </label>
-      <label>
-        Meeting password (required)
-        <div
-          className="wxc-input-field"
-        >
-          <input
-            disabled={false}
-            name="password"
-            onChange={[Function]}
-            placeholder=""
-            type="password"
-            value=""
-          />
-        </div>
-      </label>
-      <button
-        className="wxc-button wxc-button--default"
-        disabled={false}
-        style={Object {}}
-        title=""
-        type="button"
+      <div
+        className="auth-logo"
+      />
+      <div
+        className="auth-title"
       >
-        Start Meeting
-      </button>
-    </form>
-  </div>,
-  <video
-    autoPlay={true}
-    height="0"
-    id="remote-video"
-    loop={true}
-    muted={true}
-    playsInline={true}
-    src="./video/ongoing-meeting.mp4"
-    width="0"
-  />,
-  <video
-    autoPlay={true}
-    height="0"
-    id="remote-share"
-    loop={true}
-    muted={true}
-    playsInline={true}
-    src="./video/ongoing-share.mp4"
-    width="0"
-  />,
-]
-`;
-
-exports[`Storyshots Meetings/Webex Meeting Authentication Authentication Form 1`] = `
-Array [
-  <div
-    className="wxc-meeting-authentication"
-  >
+        Enter meeting information to join
+      </div>
+    </div>
     <form
       className="form-content"
     >
@@ -114,10 +54,11 @@ Array [
             type="password"
             value=""
           />
+          
         </div>
       </label>
       <button
-        className="wxc-button wxc-button--default"
+        className="wxc-button wxc-button--primary"
         disabled={false}
         style={Object {}}
         title=""

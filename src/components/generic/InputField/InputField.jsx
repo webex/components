@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
+import Button from '../Button/Button';
+import Icon from '../Icon/Icon';
 
 /**
  * Input Field component.
@@ -27,17 +29,27 @@ export default function InputField({
   disabled,
 }) {
   const cssClasses = webexComponentClasses('input-field', className);
+  const [isPwdRevealed, setIsPwdRevealed] = useState(false);
+
+  const toggleIsPwdRevealed = () => {
+    setIsPwdRevealed((revealed) => !revealed);
+  };
 
   return (
     <div className={cssClasses} style={style}>
       <input
-        type={type}
+        type={isPwdRevealed ? 'text' : type}
         value={value}
         name={name}
         placeholder={placeholder}
         onChange={onChange}
         disabled={disabled}
       />
+      {type === 'password' && value && (
+        <Button type="ghost" className="input-field-right-icon" onClick={toggleIsPwdRevealed}>
+          <Icon name={isPwdRevealed ? 'hide-password' : 'show-password'} />
+        </Button>
+      )}
     </div>
   );
 }
