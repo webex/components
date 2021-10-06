@@ -1,3 +1,10 @@
+# [1.148.0](https://github.com/webex/components/compare/v1.147.0...v1.148.0) (2021-10-06)
+
+
+### Features
+
+* **Icons:** add 'Warning' icon ([19ec11f](https://github.com/webex/components/commit/19ec11f27f8c1fd2eab988bcbd8708af81423412))
+
 # [1.147.0](https://github.com/webex/components/compare/v1.146.0...v1.147.0) (2021-10-06)
 
 
