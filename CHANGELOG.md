@@ -1,3 +1,10 @@
+# [1.149.0](https://github.com/webex/components/compare/v1.148.0...v1.149.0) (2021-10-06)
+
+
+### Features
+
+* **WebexMeetingAuthentication:** add logo and title in MeetingAuthentication component ([c1cfeff](https://github.com/webex/components/commit/c1cfeff725d913ee72b9d945d0a3349ff6fe3e24))
+
 # [1.148.0](https://github.com/webex/components/compare/v1.147.0...v1.148.0) (2021-10-06)
 
 
