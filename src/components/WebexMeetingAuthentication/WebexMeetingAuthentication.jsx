@@ -14,7 +14,7 @@ import {Button, InputField} from '../generic';
  */
 export default function WebexMeetingAuthentication({className, style}) {
   const [name, setName] = useState();
-  const [password, setPassword] = useState();
+  const [password, setPassword] = useState('');
 
   const cssClasses = webexComponentClasses('meeting-authentication', className);
 
@@ -33,7 +33,12 @@ export default function WebexMeetingAuthentication({className, style}) {
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
         <label>
           Meeting password (required)
-          <InputField type="password" name="password" value={password} onChange={(event) => setPassword(event.target.value)} />
+          <InputField
+            type="password"
+            name="password"
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+          />
         </label>
         <Button type="primary">Start Meeting</Button>
       </form>
