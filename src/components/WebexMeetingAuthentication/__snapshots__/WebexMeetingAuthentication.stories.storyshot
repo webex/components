@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Meetings/Webex Meeting Authentication Authentication 1`] = `
+Array [
+  <div
+    className="wxc-meeting-authentication"
+    style={
+      Object {
+        "height": "25rem",
+        "width": "31.25rem",
+      }
+    }
+  >
+    <form
+      className="form-content"
+    >
+      <label>
+        Your name
+        <div
+          className="wxc-input-field"
+        >
+          <input
+            disabled={false}
+            name="name"
+            onChange={[Function]}
+            placeholder=""
+            type="text"
+            value=""
+          />
+        </div>
+      </label>
+      <label>
+        Meeting password (required)
+        <div
+          className="wxc-input-field"
+        >
+          <input
+            disabled={false}
+            name="password"
+            onChange={[Function]}
+            placeholder=""
+            type="password"
+            value=""
+          />
+        </div>
+      </label>
+      <button
+        className="wxc-button wxc-button--default"
+        disabled={false}
+        style={Object {}}
+        title=""
+        type="button"
+      >
+        Start Meeting
+      </button>
+    </form>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex Meeting Authentication Authentication Form 1`] = `
+Array [
+  <div
+    className="wxc-meeting-authentication"
+  >
+    <form
+      className="form-content"
+    >
+      <label>
+        Your name
+        <div
+          className="wxc-input-field"
+        >
+          <input
+            disabled={false}
+            name="name"
+            onChange={[Function]}
+            placeholder=""
+            type="text"
+            value=""
+          />
+        </div>
+      </label>
+      <label>
+        Meeting password (required)
+        <div
+          className="wxc-input-field"
+        >
+          <input
+            disabled={false}
+            name="password"
+            onChange={[Function]}
+            placeholder=""
+            type="password"
+            value=""
+          />
+        </div>
+      </label>
+      <button
+        className="wxc-button wxc-button--default"
+        disabled={false}
+        style={Object {}}
+        title=""
+        type="button"
+      >
+        Start Meeting
+      </button>
+    </form>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
