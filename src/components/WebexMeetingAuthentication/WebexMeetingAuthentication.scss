@@ -4,6 +4,26 @@
   justify-content: center;
   align-items: center;
 
+  .auth-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    .auth-logo {
+      background: var(--wxc-auth-logo) no-repeat center;
+      width: 3.689rem;
+      height: 2.625rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .auth-title {
+      font-size: 1.25rem;
+      line-height: 1.875rem;
+    }
+  }
+
   .form-content {
     display: flex;
     flex-direction: column;

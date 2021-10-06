@@ -20,6 +20,10 @@ export default function WebexMeetingAuthentication({className, style}) {
 
   return (
     <div className={cssClasses} style={style}>
+      <div className="auth-header">
+        <div className="auth-logo" />
+        <div className="auth-title">Enter meeting information to join</div>
+      </div>
       <form className="form-content">
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
         <label>

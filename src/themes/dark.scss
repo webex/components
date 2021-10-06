@@ -1,5 +1,6 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-theme-dark, :root {
   --wxc-loading-logo: url(../themes/dark/loading.gif);
+  --wxc-auth-logo: url(../themes/dark/webex-logo.svg);
   --wxc-text-color: #{$wxc-white-alpha-95};
   --wxc-secondary-text-color: #{$wxc-white-alpha-70};
   --wxc-warning-color: #{$wxc-yellow-40};
