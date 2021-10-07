@@ -16,6 +16,7 @@ import Icon from '../Icon/Icon';
  * @param {string} props.placeholder  Input placeholder
  * @param {Function} props.onChange  Action to perform on input change
  * @param {boolean} props.disabled  Flag indicating input disabled
+ * @param {string} props.error  Error text
  * @returns {object} JSX of the component
  */
 export default function InputField({
@@ -27,8 +28,9 @@ export default function InputField({
   placeholder,
   onChange,
   disabled,
+  error,
 }) {
-  const cssClasses = webexComponentClasses('input-field', className);
+  const cssClasses = webexComponentClasses('input-field', className, null, {error});
   const [isPwdRevealed, setIsPwdRevealed] = useState(false);
 
   const handleChange = (event) => onChange(event.target.value);
@@ -58,6 +60,15 @@ export default function InputField({
           <Icon name="cancel" size={16} />
         </Button>
       )}
+      {
+        error
+        && (
+          <div className="input-error-container">
+            <Icon name="warning" size={16} className="input-error-icon" />
+            <span className="input-error-text">{error}</span>
+          </div>
+        )
+      }
     </div>
   );
 }
@@ -71,6 +82,7 @@ InputField.propTypes = {
   placeholder: PropTypes.string,
   onChange: PropTypes.func,
   disabled: PropTypes.bool,
+  error: PropTypes.string,
 };
 
 InputField.defaultProps = {
@@ -82,4 +94,5 @@ InputField.defaultProps = {
   placeholder: '',
   onChange: undefined,
   disabled: false,
+  error: undefined,
 };
