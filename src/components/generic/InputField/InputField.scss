@@ -10,6 +10,22 @@
     color: var(--wxc-input--label--color);
   }
 
+  .input-error-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--wxc-error-color);
+    margin: 0.25rem 0;
+
+    .input-error-text {
+      font-size: 0.875rem;
+    }
+
+    .input-error-icon {
+      margin: 0 0.5625rem 0 0.8125rem;
+    }
+  }
+
   input {
     all: unset;
     background: var(--wxc-input--normal--background);
@@ -40,6 +56,31 @@
       background: var(--wxc-input--disabled--background);
       border: var(--wxc-input--disabled--border);
       color: var(--wxc-input--disabled--color);
+    }
+  }
+
+  &.error input {
+    background: var(--wxc-error-input--normal--background);
+    border: var(--wxc-error-input--normal--border);
+    box-shadow: none;
+    color: var(--wxc-text-color);
+
+    &:hover {
+      background: var(--wxc-input--hover--background);
+      border: var(--wxc-error-input--normal--border);
+      box-shadow: none;
+    }
+
+    &:active {
+      background: var(--wxc-input--active--background);
+      border: var(--wxc-error-input--normal--border);
+      box-shadow: none;
+    }
+
+    &:focus {
+      background: var(--wxc-input--focus--background);
+      border: var(--wxc-error-input--normal--border);
+      box-shadow: none;
     }
   }
 

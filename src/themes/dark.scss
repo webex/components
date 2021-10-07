@@ -7,6 +7,7 @@
   --wxc-error-color: #{$wxc-red-40};
   --wxc-primary-background: #{$wxc-gradation-webex-dark-primary};
   --wxc-secondary-background: #{$wxc-gradation-webex-dark-secondary};
+  --wxc-error-color: #{$wxc-red-40};
   --wxc-muted-color: #{$wxc-red-50};
   --wxc-speaking-color: #{$wxc-green-40};
   --wxc-video-background: #{$wxc-white-alpha-05};
@@ -136,6 +137,9 @@
   --wxc-input--normal--background: #{$wxc-black-alpha-00};
   --wxc-input--normal--color: #{$wxc-white-alpha-70};
   --wcx-input--normal--border: 1px solid #{$wxc-white-alpha-50};
+
+  --wxc-error-input--normal--background: #{$wxc-red-90};
+  --wxc-error-input--normal--border: 1px solid #{$wxc-red-40};
 
   --wxc-input--hover--background: #{$wxc-white-alpha-07};
 

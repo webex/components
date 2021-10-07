@@ -48,7 +48,7 @@ export default function Tabs({
   return (
     <div className={cssClasses} style={style}>
       {/* eslint-disable-next-line */}
-      <ul 
+      <ul
         className="tabs-list"
         tabIndex={tabIndex}
         onKeyUp={handleKeyUp}
