@@ -38,6 +38,7 @@ Array [
             name="name"
             onChange={[Function]}
             placeholder=""
+            required={false}
             type="text"
             value=""
           />
@@ -56,6 +57,7 @@ Array [
             name="password"
             onChange={[Function]}
             placeholder=""
+            required={false}
             type="password"
             value=""
           />

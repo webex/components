@@ -17,6 +17,7 @@ import Icon from '../Icon/Icon';
  * @param {Function} props.onChange  Action to perform on input change
  * @param {boolean} props.disabled  Flag indicating input disabled
  * @param {string} props.error  Error text
+ * @param {boolean} props.required  Flag indicating input required
  * @returns {object} JSX of the component
  */
 export default function InputField({
@@ -29,6 +30,7 @@ export default function InputField({
   onChange,
   disabled,
   error,
+  required,
 }) {
   const cssClasses = webexComponentClasses('input-field', className, null, {error});
   const [isPwdRevealed, setIsPwdRevealed] = useState(false);
@@ -49,6 +51,7 @@ export default function InputField({
         placeholder={placeholder}
         onChange={handleChange}
         disabled={disabled}
+        required={required}
       />
       {type === 'password' && value && (
         <Button type="ghost" className="input-field-right-icon" onClick={toggleIsPwdRevealed}>
@@ -83,6 +86,7 @@ InputField.propTypes = {
   onChange: PropTypes.func,
   disabled: PropTypes.bool,
   error: PropTypes.string,
+  required: PropTypes.bool,
 };
 
 InputField.defaultProps = {
@@ -95,4 +99,5 @@ InputField.defaultProps = {
   onChange: undefined,
   disabled: false,
   error: undefined,
+  required: false,
 };

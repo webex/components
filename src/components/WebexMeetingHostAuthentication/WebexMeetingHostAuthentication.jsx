@@ -37,7 +37,7 @@ export default function WebexMeetingHostAuthentication({className, style}) {
             type="password"
             name="password"
             value={hostKey}
-            onChange={(event) => setHostKey(event.target.value)}
+            onChange={(value) => setHostKey(value)}
           />
         </label>
         <Button type="primary">Start Meeting</Button>
