@@ -1,3 +1,11 @@
+# [1.151.0](https://github.com/webex/components/compare/v1.150.0...v1.151.0) (2021-10-08)
+
+
+### Features
+
+* **Icons:** add show/hide password icons ([096b0f0](https://github.com/webex/components/commit/096b0f03a348e61ccb81de04b14ff295a9942d63))
+* **Loader:** add loader component ([45c3a9c](https://github.com/webex/components/commit/45c3a9c1e70947aa026aebcc7e720fd235afc84b))
+
 # [1.150.0](https://github.com/webex/components/compare/v1.149.0...v1.150.0) (2021-10-08)
 
 
