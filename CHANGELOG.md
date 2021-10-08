@@ -1,3 +1,12 @@
+# [1.150.0](https://github.com/webex/components/compare/v1.149.0...v1.150.0) (2021-10-08)
+
+
+### Features
+
+* **Button:** create start meeting button for WebexMeetingAuthentication component ([cdba3b9](https://github.com/webex/components/commit/cdba3b9e7bbae975408ce0b289eb9a3e7e2d2fa6))
+* **WebexMeetingAuthentication:** add show/hide for password input ([bdd64b7](https://github.com/webex/components/commit/bdd64b7c4716dce35345d4f4ee1c741857343540))
+* **WebexMeetingAuthentication:** use input field component inside authentication form ([0bee5e2](https://github.com/webex/components/commit/0bee5e2e96ae7bd0669cab8f1c1763235b957685))
+
 # [1.149.0](https://github.com/webex/components/compare/v1.148.0...v1.149.0) (2021-10-06)
 
 
