@@ -576,7 +576,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
-            aria-label="Unmuted, video on"
+            aria-label="Muted, video off"
             className="wxc-button control-button wxc-button--join"
             disabled={false}
             onClick={[Function]}
@@ -799,7 +799,7 @@ Array [
             className="wxc-meeting-control"
           >
             <button
-              aria-label="Unmuted, video on"
+              aria-label="Muted, video off"
               className="wxc-button control-button wxc-button--join"
               disabled={false}
               onClick={[Function]}
@@ -820,7 +820,7 @@ Array [
             className="wxc-meeting-control"
           >
             <button
-              aria-label="Unmuted, video on"
+              aria-label="Muted, video off"
               className="wxc-button control-button wxc-button--join"
               disabled={false}
               onClick={[Function]}
@@ -1093,6 +1093,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
+            aria-label="Muted, video off"
             className="wxc-button control-button wxc-button--join"
             disabled={false}
             onClick={[Function]}
@@ -1315,6 +1316,7 @@ Array [
             className="wxc-meeting-control"
           >
             <button
+              aria-label="Muted, video off"
               className="wxc-button control-button wxc-button--join"
               disabled={false}
               onClick={[Function]}
@@ -1335,6 +1337,7 @@ Array [
             className="wxc-meeting-control"
           >
             <button
+              aria-label="Muted, video off"
               className="wxc-button control-button wxc-button--join"
               disabled={false}
               onClick={[Function]}
