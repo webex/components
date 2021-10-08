@@ -4,7 +4,7 @@ import {RoomType} from '@webex/component-adapter-interfaces';
 
 import WebexActivity from '../WebexActivity/WebexActivity';
 import webexComponentClasses from '../helpers';
-import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
+import Loader from '../generic/Loader/Loader';
 import {PREPEND_ACTIVITIES} from '../hooks/useActivityStream';
 import {
   useActivityStream,
@@ -55,7 +55,7 @@ export default function WebexActivityStream({className, roomID, style}) {
 
   return (
     <div className={cssClasses} ref={activityStreamRef} style={style}>
-      {showLoader && <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-activity-stream-loader`} />}
+      {showLoader && <Loader />}
       {activities.length ? <>{activities}</> : <Greeting personName={personName} />}
       <div className="last-activity" ref={lastActivityRef} />
     </div>
