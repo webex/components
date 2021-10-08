@@ -698,6 +698,13 @@ Array [
           BG
         </text>
       </svg>
+      <div
+        className="wxc-loader"
+      >
+        <div
+          className="bullet"
+        />
+      </div>
       <img
         alt="avatar"
         className=""

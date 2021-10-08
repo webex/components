@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {PersonStatus} from '@webex/component-adapter-interfaces';
 import Icon from '../generic/Icon/Icon';
+import Loader from '../generic/Loader/Loader';
 import webexComponentClasses from '../helpers';
 import {usePerson} from '../hooks';
 
@@ -53,6 +54,7 @@ export default function WebexAvatar({
             {displayName === ' ' ? '??' : initials}
           </text>
         </svg>
+        {displayStatus && status === PersonStatus.TYPING && <Loader />}
         {avatar
           && <img className={imageError ? 'image-error' : ''} src={avatar} alt="avatar" onError={() => setImageError(true)} />}
         {displayStatus && status !== PersonStatus.BOT && iconName && (
