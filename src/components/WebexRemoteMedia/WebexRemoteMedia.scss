@@ -38,8 +38,11 @@
   }
 
   &.remote-video-n-share {
+    
     .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-video {
       @include media-preview-mobile();
+      height: 5.625rem;
+      width: 10rem;
     }
 
     .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-share {
