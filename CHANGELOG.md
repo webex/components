@@ -1,3 +1,10 @@
+# [1.154.0](https://github.com/webex/components/compare/v1.153.1...v1.154.0) (2021-10-11)
+
+
+### Features
+
+* **WebexMeeting:** display authentication modal for meeting that requires a password in storybook ([a4abbfb](https://github.com/webex/components/commit/a4abbfb68337b53b0c284143ca5cf1fa61a8712d))
+
 ## [1.153.1](https://github.com/webex/components/compare/v1.153.0...v1.153.1) (2021-10-11)
 
 
