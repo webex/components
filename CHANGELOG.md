@@ -1,3 +1,10 @@
+# [1.152.0](https://github.com/webex/components/compare/v1.151.0...v1.152.0) (2021-10-11)
+
+
+### Features
+
+* **WebexAvatar:** add typing status ([4781bd5](https://github.com/webex/components/commit/4781bd5e4f6e34c44e6f36f9a3401cb7e45db8b3))
+
 # [1.151.0](https://github.com/webex/components/compare/v1.150.0...v1.151.0) (2021-10-08)
 
 
