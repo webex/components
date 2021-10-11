@@ -8,6 +8,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  background-color: #{$wxc-black-alpha-40};
 
   .modal-content {
     border: var(--wxc-modal--border);
