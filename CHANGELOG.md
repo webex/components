@@ -1,3 +1,11 @@
+## [1.153.1](https://github.com/webex/components/compare/v1.153.0...v1.153.1) (2021-10-11)
+
+
+### Bug Fixes
+
+* **WebexInMeeting:** resize local media video as per design ([665f3e0](https://github.com/webex/components/commit/665f3e0ba329e7dc5435dca9e22138a33bf3b787))
+* **WebexMemberRoster:** style close button to 28x28 ([c3788d9](https://github.com/webex/components/commit/c3788d9351f2219c670113cdd3246aa80d18c20a))
+
 # [1.153.0](https://github.com/webex/components/compare/v1.152.0...v1.153.0) (2021-10-11)
 
 
