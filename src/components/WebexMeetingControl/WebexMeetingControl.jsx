@@ -31,6 +31,7 @@ function renderButton(action, display, style, showText, asItem) {
     type,
     text,
     tooltip,
+    hint,
   } = display;
   const isDisabled = display.state === MeetingControlState.DISABLED;
 
@@ -52,6 +53,7 @@ function renderButton(action, display, style, showText, asItem) {
         isDisabled={isDisabled}
         onClick={action}
         title={tooltip}
+        ariaLabel={hint}
       >
         {icon && <Icon name={icon} size={24} />}
         {(showText || !icon) && text && <span className="button-text">{text}</span>}

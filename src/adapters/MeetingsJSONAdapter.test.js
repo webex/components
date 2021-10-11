@@ -297,11 +297,12 @@ describe('Meetings JSON Adapter', () => {
     });
 
     test('emits active text control', (done) => {
-      meetingsJSONAdapter.meetingControls[JOIN_CONTROL].display().subscribe((display) => {
+      meetingsJSONAdapter.meetingControls[JOIN_CONTROL].display(meetingID).subscribe((display) => {
         expect(display).toMatchObject({
           ID: 'join-meeting',
           text: 'Join meeting',
           tooltip: 'Join meeting',
+          hint: 'Unmuted, video on',
         });
         done();
       });
