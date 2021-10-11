@@ -1,3 +1,11 @@
+# [1.153.0](https://github.com/webex/components/compare/v1.152.0...v1.153.0) (2021-10-11)
+
+
+### Features
+
+* **SwitchSpeakerControl:** displays a tooltip message for no speakers in Firefox and Safari ([abe6741](https://github.com/webex/components/commit/abe67418d21318f8b5c1ef12deb188fa32344aaa))
+* **WebexSettings:** select tabs with arrow keys ([42b55b7](https://github.com/webex/components/commit/42b55b7103f160c1c4f24c781176d66cb59bb698))
+
 # [1.152.0](https://github.com/webex/components/compare/v1.151.0...v1.152.0) (2021-10-11)
 
 
