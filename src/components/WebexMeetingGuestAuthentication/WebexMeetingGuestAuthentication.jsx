@@ -1,23 +1,34 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../helpers';
 import {Button, InputField} from '../generic';
+import {useMeeting} from '../hooks';
+import {AdapterContext} from '../hooks/contexts';
 
 /**
  * Webex Meeting Guest Authentication component
  *
  * @param {object} props  Data passed to the component
  * @param {string} props.className  Custom CSS class to apply
+ * @param {string} props.meetingID  ID of the meeting
  * @param {object} props.style  Custom style to apply
- * @param {function} props.switchToHostModal A callback function to switch from guest form to host form
+ * @param {Function} props.switchToHostModal  A callback function to switch from guest form to host form
  * @returns {object} JSX of the component
  *
  */
-export default function WebexMeetingGuestAuthentication({className, style, switchToHostModal}) {
+export default function WebexMeetingGuestAuthentication({
+  className, meetingID, style, switchToHostModal,
+}) {
   const [name, setName] = useState();
   const [password, setPassword] = useState('');
+  const {ID} = useMeeting(meetingID);
+  const adapter = useContext(AdapterContext);
 
   const cssClasses = webexComponentClasses('meeting-guest-authentication', className);
+
+  const joinMeeting = () => {
+    adapter.meetingsAdapter.joinMeeting(ID, {name, password});
+  };
 
   return (
     <div className={cssClasses} style={style}>
@@ -38,16 +49,16 @@ export default function WebexMeetingGuestAuthentication({className, style, switc
             type="password"
             name="password"
             value={password}
-            onChange={(event) => setPassword(event.target.value)}
+            onChange={(value) => setPassword(value)}
           />
         </label>
-        <Button type="primary">Start Meeting</Button>
+        <Button type="primary" onClick={joinMeeting}>Start Meeting</Button>
       </form>
       <div className="host-text">
         Hosting the meeting?
         {' '}
-        {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
-        <span className="host-hyperlink" onClick={switchToHostModal}>Enter host key.</span>
+        {/* eslint-disable-next-line */}
+        <a className="host-hyperlink" onClick={switchToHostModal}>Enter host key.</a>
       </div>
     </div>
   );
@@ -55,6 +66,7 @@ export default function WebexMeetingGuestAuthentication({className, style, switc
 
 WebexMeetingGuestAuthentication.propTypes = {
   className: PropTypes.string,
+  meetingID: PropTypes.string.isRequired,
   style: PropTypes.shape(),
   switchToHostModal: PropTypes.func,
 };

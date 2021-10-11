@@ -115,7 +115,15 @@ export default function WebexMeeting({
           >
             {
               authModal === 'guest'
-                ? <WebexMeetingGuestAuthentication meetingID={ID} switchToHostModal={() => setAuthModal('host')} />
+                ? (
+                  <WebexMeetingGuestAuthentication
+                    meetingID={ID}
+                    switchToHostModal={(event) => {
+                      event.preventDefault();
+                      setAuthModal('host');
+                    }}
+                  />
+                )
                 : <WebexMeetingHostAuthentication meetingID={ID} />
             }
           </Modal>

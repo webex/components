@@ -1,22 +1,31 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../helpers';
 import {Button, InputField} from '../generic';
+import {useMeeting} from '../hooks';
+import {AdapterContext} from '../hooks/contexts';
 
 /**
  * Webex Meeting Host Authentication component
  *
  * @param {object} props  Data passed to the component
  * @param {string} props.className  Custom CSS class to apply
+ * @param {string} props.meetingID  ID of the meeting
  * @param {object} props.style  Custom style to apply
  * @returns {object} JSX of the component
  *
  */
-export default function WebexMeetingHostAuthentication({className, style}) {
+export default function WebexMeetingHostAuthentication({className, meetingID, style}) {
   const [name, setName] = useState();
   const [hostKey, setHostKey] = useState('');
+  const {ID} = useMeeting(meetingID);
+  const adapter = useContext(AdapterContext);
 
   const cssClasses = webexComponentClasses('meeting-host-authentication', className);
+
+  const joinMeeting = () => {
+    adapter.meetingsAdapter.joinMeeting(ID, {name, hostKey});
+  };
 
   return (
     <div className={cssClasses} style={style}>
@@ -37,10 +46,10 @@ export default function WebexMeetingHostAuthentication({className, style}) {
             type="password"
             name="password"
             value={hostKey}
-            onChange={(event) => setHostKey(event.target.value)}
+            onChange={(value) => setHostKey(value)}
           />
         </label>
-        <Button type="primary">Start Meeting</Button>
+        <Button type="primary" onClick={joinMeeting}>Start Meeting</Button>
       </form>
     </div>
   );
@@ -48,6 +57,7 @@ export default function WebexMeetingHostAuthentication({className, style}) {
 
 WebexMeetingHostAuthentication.propTypes = {
   className: PropTypes.string,
+  meetingID: PropTypes.string.isRequired,
   style: PropTypes.shape(),
 };
 

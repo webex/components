@@ -61,6 +61,7 @@ Array [
       <button
         className="wxc-button wxc-button--primary"
         disabled={false}
+        onClick={[Function]}
         style={Object {}}
         title=""
         type="button"
