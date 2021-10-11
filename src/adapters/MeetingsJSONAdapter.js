@@ -216,7 +216,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @returns {Observable.<Meeting>} Observable that emits data of the given ID
    */
   getMeeting(ID) {
-    const getMeeting$ = Observable.create((observer) => {
+    const getMeeting$ = Observable.create(async (observer) => {
       // A falsy ID signifies that the meeting was not yet created, or is invalid
       if (!ID) {
         observer.next({
@@ -257,19 +257,24 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
           meeting.remoteVideo = this.getVideoStream();
         }
 
-        // Add a video stream as if it were a local video
-        if (meeting.localVideo.stream instanceof MediaStream) {
-          meeting.localVideo.stream = this.getVideoStream();
-        }
-
         // Add a share stream as if it were a remote sharing
         if (meeting.remoteShare instanceof MediaStream) {
           meeting.remoteShare = this.getShareStream();
         }
 
+        // Add a video stream as if it were a local video
+        if (this.emptyStream(meeting.localVideo.stream)) {
+          meeting.localVideo.stream = await this.getStream({video: true, audio: false});
+        }
+
+        // Add an audio stream as if it were a local audio
+        if (this.emptyStream(meeting.localAudio.stream)) {
+          meeting.localAudio.stream = await this.getStream({video: false, audio: true});
+        }
+
         // Add a share stream as if it were a local sharing
-        if (meeting.localShare.stream instanceof MediaStream) {
-          meeting.localShare.stream = this.getShareStream();
+        if (this.emptyStream(meeting.localShare.stream)) {
+          meeting.localShare.stream = await this.getDisplayStream();
         }
 
         observer.next(meeting);
@@ -497,6 +502,17 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
 
       tracks.forEach((track) => track.stop());
     }
+  }
+
+  /**
+   * A function that checks whether or not a Mediastream object is empty (no tracks).
+   *
+   * @param {MediaStream|null} [stream]  Media stream object
+   * @returns {boolean} True if the received param is a MediaStream object with no tracks
+   */
+  // eslint-disable-next-line class-methods-use-this
+  emptyStream(stream) {
+    return stream instanceof MediaStream && stream.getTracks().length === 0;
   }
 
   /**

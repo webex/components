@@ -6,9 +6,15 @@ const MockDate = require('mockdate');
 MockDate.set('August 1, 2020 10:00:00');
 
 // Mock Web Media APIs
-global.MediaStream = jest.fn();
+global.MediaStream = jest.fn(function() {
+  this.getTracks = () => [];
+  return this;
+});
+
 global.navigator.mediaDevices = {
   enumerateDevices: jest.fn(() => Promise.resolve(mockDevices)),
+  getDisplayMedia: jest.fn(() => Promise.resolve(new MediaStream())),
+  getUserMedia: jest.fn(() => Promise.resolve(new MediaStream())),
 };
 
 global.Math.random = () => 0.5;

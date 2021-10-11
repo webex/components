@@ -90,12 +90,33 @@ Array [
 exports[`Storyshots Meetings/Webex Local Media Video 1`] = `
 Array [
   <div
-    className="wxc-local-media"
+    className="wxc-local-media wxc-local-media-no-media"
   >
-    <video
-      autoPlay={true}
-      playsInline={true}
-    />
+    <div
+      className="wxc-avatar"
+    >
+      <div
+        className="avatar-content"
+      >
+        <svg
+          className="placeholder placeholder-6"
+          viewBox="0 0 40 40"
+        >
+          <text
+            x="50%"
+            y="50%"
+          >
+            BG
+          </text>
+        </svg>
+        <img
+          alt="avatar"
+          className=""
+          onError={[Function]}
+          src="./images/barbara.png"
+        />
+      </div>
+    </div>
   </div>,
   <video
     autoPlay={true}

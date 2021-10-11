@@ -10,7 +10,7 @@ const Template = (args) => <WebexLocalMedia {...args} />;
 
 export const Video = Template.bind({});
 Video.args = {
-  meetingID: 'meeting1',
+  meetingID: 'meeting3',
   mediaType: 'video',
 };
 
