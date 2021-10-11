@@ -1,6 +1,5 @@
 import {isObservable} from 'rxjs';
 import {
-  skip,
   take,
   toArray,
   last,
@@ -27,11 +26,16 @@ describe('Meetings JSON Adapter', () => {
   let testMeeting;
 
   beforeEach(() => {
-    const mockMeetings = JSON.parse(JSON.stringify(JSONData));
+    const mockMeetingsString = JSON.stringify(JSONData, (key, value) => (
+      value instanceof MediaStream ? '***mediastream***' : value
+    ));
+    const mockMeetingsCopy = JSON.parse(mockMeetingsString, (key, value) => (
+      value === '***mediastream***' ? new MediaStream() : value
+    ));
 
-    meetingsJSONAdapter = new MeetingsJSONAdapter(mockMeetings);
+    meetingsJSONAdapter = new MeetingsJSONAdapter(mockMeetingsCopy);
     meetingsJSONAdapter.getStream = jest.fn(() => new MediaStream());
-    testMeeting = mockMeetings[meetingID];
+    testMeeting = mockMeetingsCopy[meetingID];
   });
 
   afterEach(() => {
@@ -104,43 +108,62 @@ describe('Meetings JSON Adapter', () => {
     });
 
     test('emits Meeting object with null local audio stream on mute audio event', (done) => {
+      let firstMessage = true;
+
       meetingsJSONAdapter
         .getMeeting(meetingID)
-        .pipe(skip(1)) // Skip initial emission
         .subscribe((meeting) => {
-          expect(meeting.localAudio.stream).toBeNull();
-          done();
-        });
+          if (firstMessage) {
+            firstMessage = false;
+            expect(meeting.localAudio.stream).not.toBeNull();
 
-      // Dispatch mute audio event after subscription
-      meetingsJSONAdapter.meetingControls[MUTE_AUDIO_CONTROL].action(meetingID);
+            // Dispatch mute audio event after subscription
+            meetingsJSONAdapter.meetingControls[MUTE_AUDIO_CONTROL].action(meetingID);
+          } else {
+            expect(meeting.localAudio.stream).toBeNull();
+            done();
+          }
+        });
     });
 
     test('emits Meeting object with null local video stream on mute video event', (done) => {
+      let firstMessage = true;
+
       meetingsJSONAdapter
         .getMeeting(meetingID)
-        .pipe(skip(1)) // Skip initial emission
         .subscribe((meeting) => {
-          expect(meeting.localVideo.stream).toBeNull();
-          done();
-        });
+          if (firstMessage) {
+            firstMessage = false;
+            expect(meeting.localVideo.stream).not.toBeNull();
 
-      // Dispatch mute video event after subscription
-      meetingsJSONAdapter.meetingControls[MUTE_VIDEO_CONTROL].action(meetingID);
+            // Dispatch mute video event after subscription
+            meetingsJSONAdapter.meetingControls[MUTE_VIDEO_CONTROL].action(meetingID);
+          } else {
+            expect(meeting.localVideo.stream).toBeNull();
+            done();
+          }
+        });
     });
 
     test('emits Meeting object with remote media on join event', (done) => {
+      let firstMessage = true;
+
       meetingsJSONAdapter
         .getMeeting(meetingID)
-        .pipe(skip(1)) // Skip initial emission
         .subscribe((meeting) => {
-          expect(meeting.remoteAudio).toBeInstanceOf(MediaStream);
-          expect(meeting.remoteVideo).toBeInstanceOf(MediaStream);
-          done();
-        });
+          if (firstMessage) {
+            firstMessage = false;
+            expect(meeting.remoteAudio).not.toBeNull();
+            expect(meeting.remoteVideo).not.toBeNull();
 
-      // Dispatch join event after subscription
-      meetingsJSONAdapter.meetingControls[JOIN_CONTROL].action(meetingID);
+            // Dispatch join event after subscription
+            meetingsJSONAdapter.meetingControls[JOIN_CONTROL].action(meetingID);
+          } else {
+            expect(meeting.remoteAudio).toBeInstanceOf(MediaStream);
+            expect(meeting.remoteVideo).toBeInstanceOf(MediaStream);
+            done();
+          }
+        });
     });
 
     test('when the meeting is left, emits a last meeting object with state=LEFT and then completes', (done) => {
@@ -367,22 +390,38 @@ describe('Meetings JSON Adapter', () => {
     });
 
     test('emits microphone icon control update on mute audio event', (done) => {
+      let firstMessage = true;
+
       meetingsJSONAdapter
         .meetingControls[MUTE_AUDIO_CONTROL]
         .display(meetingID)
-        .pipe(skip(1)) // Skip the initial emission
         .subscribe((display) => {
-          expect(display).toMatchObject({
-            ID: 'mute-audio',
-            icon: 'microphone-muted_28',
-            tooltip: 'Unmute',
-            state: 'active',
-          });
-          done();
-        });
+          if (firstMessage) {
+            firstMessage = false;
 
-      // Dispatch mute audio event after subscription
-      meetingsJSONAdapter.meetingControls[MUTE_AUDIO_CONTROL].action(meetingID);
+            expect(display).toMatchObject({
+              ID: 'mute-audio',
+              type: 'TOGGLE',
+              icon: 'microphone_28',
+              tooltip: 'Mute',
+              state: 'inactive',
+              text: 'Mute',
+            });
+
+            // Dispatch mute audio event after subscription
+            meetingsJSONAdapter.meetingControls[MUTE_AUDIO_CONTROL].action(meetingID);
+          } else {
+            expect(display).toMatchObject({
+              ID: 'mute-audio',
+              type: 'TOGGLE',
+              icon: 'microphone-muted_28',
+              tooltip: 'Unmute',
+              state: 'active',
+              text: 'Unmute',
+            });
+            done();
+          }
+        });
     });
 
     test('throws error on invalid meeting ID', (done) => {
@@ -437,22 +476,37 @@ describe('Meetings JSON Adapter', () => {
     });
 
     test('emits camera icon control on mute video event', (done) => {
+      let firstMessage = true;
+
       meetingsJSONAdapter
         .meetingControls[MUTE_VIDEO_CONTROL]
         .display(meetingID)
-        .pipe(skip(1)) // Skip the initial emission
         .subscribe((display) => {
-          expect(display).toMatchObject({
-            ID: 'mute-video',
-            icon: 'camera-muted_28',
-            tooltip: 'Start video',
-            state: 'active',
-          });
-          done();
-        });
+          if (firstMessage) {
+            firstMessage = false;
+            expect(display).toMatchObject({
+              ID: 'mute-video',
+              type: 'TOGGLE',
+              icon: 'camera_28',
+              tooltip: 'Stop video',
+              state: 'inactive',
+              text: 'Stop video',
+            });
 
-      // Dispatch mute video event after subscription
-      meetingsJSONAdapter.meetingControls[MUTE_VIDEO_CONTROL].action(meetingID);
+            // Dispatch mute video event after subscription
+            meetingsJSONAdapter.meetingControls[MUTE_VIDEO_CONTROL].action(meetingID);
+          } else {
+            expect(display).toMatchObject({
+              ID: 'mute-video',
+              type: 'TOGGLE',
+              icon: 'camera-muted_28',
+              tooltip: 'Start video',
+              state: 'active',
+              text: 'Start video',
+            });
+            done();
+          }
+        });
     });
 
     test('throws error on invalid meeting ID', (done) => {

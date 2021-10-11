@@ -159,17 +159,33 @@ Array [
         className="interstitial-media-container"
       >
         <div
-          className="wxc-local-media interstitial-media"
+          className="wxc-local-media interstitial-media wxc-local-media-no-media"
         >
-          <video
-            autoPlay={true}
-            playsInline={true}
-          />
-        </div>
-        <div
-          className="wxc-banner wxc-banner--top"
-        >
-          My preview
+          <div
+            className="wxc-avatar"
+          >
+            <div
+              className="avatar-content"
+            >
+              <svg
+                className="placeholder placeholder-6"
+                viewBox="0 0 40 40"
+              >
+                <text
+                  x="50%"
+                  y="50%"
+                >
+                  BG
+                </text>
+              </svg>
+              <img
+                alt="avatar"
+                className=""
+                onError={[Function]}
+                src="./images/barbara.png"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
