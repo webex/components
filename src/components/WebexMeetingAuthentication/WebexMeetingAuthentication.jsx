@@ -28,7 +28,7 @@ export default function WebexMeetingAuthentication({className, style}) {
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
         <label>
           Your name
-          <InputField type="text" name="name" value={name} onChange={(event) => setName(event.target.value)} />
+          <InputField type="text" name="name" value={name} onChange={(value) => setName(value)} />
         </label>
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
         <label>
