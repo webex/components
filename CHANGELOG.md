@@ -1,3 +1,10 @@
+# [1.155.0](https://github.com/webex/components/compare/v1.154.0...v1.155.0) (2021-10-12)
+
+
+### Features
+
+* **WebexComponents:** implement 'clear' input field ([ed5c6de](https://github.com/webex/components/commit/ed5c6de0b02b578692e6764b64c59095ab931ad8))
+
 # [1.154.0](https://github.com/webex/components/compare/v1.153.1...v1.154.0) (2021-10-11)
 
 
