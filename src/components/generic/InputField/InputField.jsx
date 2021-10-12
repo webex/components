@@ -31,6 +31,9 @@ export default function InputField({
   const cssClasses = webexComponentClasses('input-field', className);
   const [isPwdRevealed, setIsPwdRevealed] = useState(false);
 
+  const handleChange = (event) => onChange(event.target.value);
+  const clearInput = () => onChange('');
+
   const toggleIsPwdRevealed = () => {
     setIsPwdRevealed((revealed) => !revealed);
   };
@@ -42,12 +45,17 @@ export default function InputField({
         value={value}
         name={name}
         placeholder={placeholder}
-        onChange={onChange}
+        onChange={handleChange}
         disabled={disabled}
       />
       {type === 'password' && value && (
         <Button type="ghost" className="input-field-right-icon" onClick={toggleIsPwdRevealed}>
           <Icon name={isPwdRevealed ? 'hide-password' : 'show-password'} />
+        </Button>
+      )}
+      {type !== 'password' && value && (
+        <Button type="ghost" className="input-field-right-icon" onClick={clearInput}>
+          <Icon name="cancel" size={16} />
         </Button>
       )}
     </div>
