@@ -1,3 +1,10 @@
+# [1.156.0](https://github.com/webex/components/compare/v1.155.0...v1.156.0) (2021-10-12)
+
+
+### Features
+
+* **WebexMeeting:** switch between guest and host authentication screens ([baa9b22](https://github.com/webex/components/commit/baa9b22503412830725313b77dd02ab561d3b0a1))
+
 # [1.155.0](https://github.com/webex/components/compare/v1.154.0...v1.155.0) (2021-10-12)
 
 
