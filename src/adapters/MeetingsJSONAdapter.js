@@ -708,6 +708,15 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   }
 
   /**
+   * Sets the invalidPassword flag to false.
+   *
+   * @param {string} ID  Id of the meeting
+   */
+  async clearInvalidPasswordFlag(ID) {
+    await this.updateMeeting(ID, async () => ({invalidPassword: false}));
+  }
+
+  /**
    * Returns a adapter meeting object retrieved from the collection.
    *
    * @private

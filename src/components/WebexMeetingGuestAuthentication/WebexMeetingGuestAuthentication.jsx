@@ -29,7 +29,7 @@ function getNameError(name) {
  * @param {string} props.className  Custom CSS class to apply
  * @param {string} props.meetingID  ID of the meeting
  * @param {object} props.style  Custom style to apply
- * @param {function} props.switchToHostModal  A callback function to switch from guest form to host form
+ * @param {Function} props.switchToHostModal  A callback function to switch from guest form to host form
  * @returns {object} JSX of the component
  *
  */
@@ -56,6 +56,10 @@ export default function WebexMeetingGuestAuthentication({
     setName(value);
     setNameError(getNameError(value));
   };
+  const handlePasswordChange = (value) => {
+    setPassword(value);
+    adapter.meetingsAdapter.clearInvalidPasswordFlag(ID);
+  };
 
   return (
     <div className={cssClasses} style={style}>
@@ -76,8 +80,9 @@ export default function WebexMeetingGuestAuthentication({
             type="password"
             name="password"
             value={password}
-            onChange={(value) => setPassword(value)}
             disabled={isJoining}
+            onChange={handlePasswordChange}
+            error={invalidPassword ? 'Incorrect password. Try again.' : ''}
           />
         </label>
         <Button type="primary" className={sc('start-button')} onClick={joinMeeting} isDisabled={isStartButtonDisabled}>

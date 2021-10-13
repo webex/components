@@ -259,13 +259,13 @@ export default {
     ID: 'meeting10',
     title: 'Feature Planning Meeting',
     localAudio: {
-      stream: new MediaStream(),
+      stream: null,
     },
     localVideo: {
-      stream: new MediaStream(),
+      stream: null,
     },
     localShare: {
-      stream: new MediaStream(),
+      stream: null,
     },
     remoteAudio: null,
     remoteVideo: null,
