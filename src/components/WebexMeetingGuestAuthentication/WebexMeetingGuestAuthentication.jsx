@@ -28,12 +28,12 @@ export default function WebexMeetingGuestAuthentication({className, style, switc
       <form className="form-content">
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
         <label>
-          Your name
+          <span>Your name</span>
           <InputField type="text" name="name" value={name} onChange={(value) => setName(value)} />
         </label>
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
         <label>
-          Meeting password (required)
+          <span>Meeting password (required)</span>
           <InputField
             type="password"
             name="password"

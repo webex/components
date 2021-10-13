@@ -27,7 +27,9 @@ Array [
       className="form-content"
     >
       <label>
-        Your name
+        <span>
+          Your name
+        </span>
         <div
           className="wxc-input-field"
         >
@@ -43,7 +45,9 @@ Array [
         </div>
       </label>
       <label>
-        Meeting password (required)
+        <span>
+          Meeting password (required)
+        </span>
         <div
           className="wxc-input-field"
         >
