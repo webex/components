@@ -1,3 +1,10 @@
+## [1.156.1](https://github.com/webex/components/compare/v1.156.0...v1.156.1) (2021-10-13)
+
+
+### Bug Fixes
+
+* **styles:** update remote media styles ([ab5f036](https://github.com/webex/components/commit/ab5f0361bb2fa3908324cf2c5d68908057bb81ad))
+
 # [1.156.0](https://github.com/webex/components/compare/v1.155.0...v1.156.0) (2021-10-12)
 
 
