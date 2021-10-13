@@ -19,3 +19,6 @@ const Template = (args) => {
 };
 
 export const Authentication = Template.bind({});
+Authentication.args = {
+  meetingID: 'meeting10',
+};
