@@ -5,6 +5,7 @@
   align-items: center;
   font-size: 0.875rem;
   color: var(--wxc-text-color);
+  line-height: 1.375rem;
 
   .auth-header {
     display: flex;
@@ -29,11 +30,17 @@
   .form-content {
     display: flex;
     flex-direction: column;
+    width: 17.625rem;
 
     label {
       display: flex;
       flex-direction: column;
       margin-bottom: 1rem;
+
+      span {
+        padding-left: 0.75rem;
+        margin-bottom: 0.25rem;
+      }
     }
   }
 
