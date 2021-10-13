@@ -1,3 +1,22 @@
+# [1.157.0](https://github.com/webex/components/compare/v1.156.1...v1.157.0) (2021-10-13)
+
+
+### Bug Fixes
+
+* **MeetingsJsonAdapter:** use real streams for local media on storybook from the first interaction ([b9c0a42](https://github.com/webex/components/commit/b9c0a42855bb5053e2eba2c3a1948bbee9ab4e29))
+* **Modal:** add a value with a correct type for prop 'size' of 'cancel' icon used in the modal ([14e7ed7](https://github.com/webex/components/commit/14e7ed7619e58fd7383472559886763329697e31))
+
+
+### Features
+
+* **InputField:** add error prop and display styled error ([d042643](https://github.com/webex/components/commit/d042643b0037edc3341cd03ac4ce00afc33412d8))
+* **InputField:** add required prop to the input field ([6c4cb51](https://github.com/webex/components/commit/6c4cb5162e43c61458a47a615ead87c129270fe3))
+* **MeetingsJsonAdapter:** add tests for 'supportedControls()' method ([9786572](https://github.com/webex/components/commit/978657288e46c08f749d3827d9c6f50a0ee6c73c))
+* **Modal:** add an overlay behind the modal ([ff664d2](https://github.com/webex/components/commit/ff664d26ea561e952999374dba028691f8827b5c))
+* **WebexComponents:** add 'hint' for joinControl ([cb941f0](https://github.com/webex/components/commit/cb941f0662987364689f8a23747071fed591db05))
+* **WebexMeetingAuthentication:** add width and distances to the authentication form ([a945210](https://github.com/webex/components/commit/a9452107d816be47a76a5805ffd504f9f7ab0ec3))
+* **WebexMeetingAuthentication:** send name and password when joining ([b3310d4](https://github.com/webex/components/commit/b3310d44d4c30861208c033f99c7e764a2227edb))
+
 ## [1.156.1](https://github.com/webex/components/compare/v1.156.0...v1.156.1) (2021-10-13)
 
 
