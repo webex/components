@@ -6,6 +6,22 @@ import {useMeeting} from '../hooks';
 import {AdapterContext} from '../hooks/contexts';
 
 /**
+ * Helper function for checking name format
+ *
+ * @param {string} name  Input value
+ * @returns {string} returns the error if exists
+ */
+function getNameError(name) {
+  let error;
+
+  if (!name.match(/^[a-zA-Z ]*$/)) {
+    error = 'Name can only contain letters.';
+  }
+
+  return error;
+}
+
+/**
  * Webex Meeting Host Authentication component
  *
  * @param {object} props  Data passed to the component
@@ -17,6 +33,7 @@ import {AdapterContext} from '../hooks/contexts';
  */
 export default function WebexMeetingHostAuthentication({className, meetingID, style}) {
   const [name, setName] = useState();
+  const [nameError, setNameError] = useState();
   const [hostKey, setHostKey] = useState('');
   const {ID} = useMeeting(meetingID);
   const adapter = useContext(AdapterContext);
@@ -25,6 +42,11 @@ export default function WebexMeetingHostAuthentication({className, meetingID, st
 
   const joinMeeting = () => {
     adapter.meetingsAdapter.joinMeeting(ID, {name, hostKey});
+  };
+
+  const handleNameChange = (value) => {
+    setName(value);
+    setNameError(getNameError(value));
   };
 
   return (
@@ -37,7 +59,7 @@ export default function WebexMeetingHostAuthentication({className, meetingID, st
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
         <label>
           <span>Your name</span>
-          <InputField type="text" name="name" value={name} onChange={(value) => setName(value)} />
+          <InputField type="text" name="name" value={name} onChange={handleNameChange} error={nameError} />
         </label>
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
         <label>
