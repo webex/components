@@ -36,11 +36,18 @@
   }
 
   .modal-title {
-    flex: 1;
     color: var(--wxc-text-color);
     font-family: $brand-font-bold;
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .modal-close {
+    margin-left: auto;
+  }
+
+  .modal-back {
+    padding: 0.6875rem;
   }
 
   .modal-body {
