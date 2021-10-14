@@ -1,3 +1,10 @@
+## [1.157.1](https://github.com/webex/components/compare/v1.157.0...v1.157.1) (2021-10-14)
+
+
+### Bug Fixes
+
+* **InputField:** fix input icons misalignment ([55f9192](https://github.com/webex/components/commit/55f9192e07906749f6356617a9540e57b7c87cda))
+
 # [1.157.0](https://github.com/webex/components/compare/v1.156.1...v1.157.0) (2021-10-13)
 
 
