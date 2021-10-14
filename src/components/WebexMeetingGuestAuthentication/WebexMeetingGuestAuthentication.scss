@@ -32,12 +32,12 @@
     flex-direction: column;
     width: 17.625rem;
 
-    label {
+    .auth-label {
       display: flex;
       flex-direction: column;
       margin-bottom: 1rem;
 
-      span {
+      .auth-label-text {
         padding-left: 0.75rem;
         margin-bottom: 0.25rem;
       }
