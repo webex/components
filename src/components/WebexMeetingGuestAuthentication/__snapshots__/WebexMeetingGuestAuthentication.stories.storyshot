@@ -26,42 +26,58 @@ Array [
     <form
       className="form-content"
     >
-      <label>
-        <span>
+      <label
+        className="auth-label"
+      >
+        <span
+          className="auth-label-text"
+        >
           Your name
         </span>
         <div
           className="wxc-input-field"
         >
-          <input
-            disabled={false}
-            name="name"
-            onChange={[Function]}
-            placeholder=""
-            required={false}
-            type="text"
-            value=""
-          />
-          
+          <div
+            className="form-control"
+          >
+            <input
+              disabled={false}
+              name="name"
+              onChange={[Function]}
+              placeholder=""
+              required={false}
+              type="text"
+              value=""
+            />
+            
+          </div>
         </div>
       </label>
-      <label>
-        <span>
+      <label
+        className="auth-label"
+      >
+        <span
+          className="auth-label-text"
+        >
           Meeting password (required)
         </span>
         <div
           className="wxc-input-field"
         >
-          <input
-            disabled={false}
-            name="password"
-            onChange={[Function]}
-            placeholder=""
-            required={false}
-            type="password"
-            value=""
-          />
-          
+          <div
+            className="form-control"
+          >
+            <input
+              disabled={false}
+              name="password"
+              onChange={[Function]}
+              placeholder=""
+              required={false}
+              type="password"
+              value=""
+            />
+            
+          </div>
         </div>
       </label>
       <button

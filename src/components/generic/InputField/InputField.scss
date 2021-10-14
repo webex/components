@@ -10,6 +10,10 @@
     color: var(--wxc-input--label--color);
   }
 
+  .form-control {
+    position: relative;
+  }
+
   .input-error-container {
     display: flex;
     flex-direction: row;
@@ -34,6 +38,8 @@
     border-radius: 0.5rem;
     padding: 0.25rem 2.18rem 0.25rem 0.75rem;
     cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
 
     &:hover {
       background: var(--wxc-input--hover--background);

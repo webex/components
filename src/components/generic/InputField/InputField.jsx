@@ -44,25 +44,27 @@ export default function InputField({
 
   return (
     <div className={cssClasses} style={style}>
-      <input
-        type={isPwdRevealed ? 'text' : type}
-        value={value}
-        name={name}
-        placeholder={placeholder}
-        onChange={handleChange}
-        disabled={disabled}
-        required={required}
-      />
-      {type === 'password' && value && (
-        <Button type="ghost" className="input-field-right-icon" onClick={toggleIsPwdRevealed}>
-          <Icon name={isPwdRevealed ? 'hide-password' : 'show-password'} />
-        </Button>
-      )}
-      {type !== 'password' && value && (
-        <Button type="ghost" className="input-field-right-icon" onClick={clearInput}>
-          <Icon name="cancel" size={16} />
-        </Button>
-      )}
+      <div className="form-control">
+        <input
+          type={isPwdRevealed ? 'text' : type}
+          value={value}
+          name={name}
+          placeholder={placeholder}
+          onChange={handleChange}
+          disabled={disabled}
+          required={required}
+        />
+        {type === 'password' && value && (
+          <Button type="ghost" className="input-field-right-icon" onClick={toggleIsPwdRevealed}>
+            <Icon name={isPwdRevealed ? 'hide-password' : 'show-password'} />
+          </Button>
+        )}
+        {type !== 'password' && value && (
+          <Button type="ghost" className="input-field-right-icon" onClick={clearInput}>
+            <Icon name="cancel" size={16} />
+          </Button>
+        )}
+      </div>
       {
         error
         && (
