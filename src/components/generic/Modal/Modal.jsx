@@ -36,7 +36,7 @@ export default function Modal({
         <div className="modal-header">
           {onBack && <Button type="ghost" className="modal-back" onClick={onBack}><Icon name="arrow-left" size="13" /></Button>}
           {title && <h3 className="modal-title">{title}</h3>}
-          {onClose && <Button type="ghost" onClick={onClose}><Icon name="cancel" size={16} /></Button>}
+          {onClose && <Button className="modal-close" type="ghost" onClick={onClose}><Icon name="cancel" size={16} /></Button>}
         </div>
         <div className="modal-body">{children}</div>
       </div>
