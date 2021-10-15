@@ -38,10 +38,12 @@ export default function WebexMeetingGuestAuthentication({
   const [name, setName] = useState();
   const [password, setPassword] = useState('');
   const [nameError, setNameError] = useState();
-  const {ID} = useMeeting(meetingID);
+  const {ID, invalidPassword} = useMeeting(meetingID);
   const adapter = useContext(AdapterContext);
 
   const [cssClasses, sc] = webexComponentClasses('meeting-guest-authentication', className);
+
+  const isStartButtonDisabled = nameError || !password || invalidPassword;
 
   const joinMeeting = () => {
     adapter.meetingsAdapter.joinMeeting(ID, {name, password});
@@ -74,7 +76,7 @@ export default function WebexMeetingGuestAuthentication({
             onChange={(value) => setPassword(value)}
           />
         </label>
-        <Button type="primary" onClick={joinMeeting}>Start Meeting</Button>
+        <Button type="primary" onClick={joinMeeting} isDisabled={isStartButtonDisabled}>Start meeting</Button>
       </form>
       <div className={sc('host-text')}>
         Hosting the meeting?
