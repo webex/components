@@ -28,29 +28,6 @@ Array [
     >
       <label>
         <span>
-          Your name
-        </span>
-        <div
-          className="wxc-input-field"
-        >
-          <div
-            className="wxc-input-field__form-control"
-          >
-            <input
-              disabled={false}
-              name="name"
-              onChange={[Function]}
-              placeholder=""
-              required={false}
-              type="text"
-              value=""
-            />
-            
-          </div>
-        </div>
-      </label>
-      <label>
-        <span>
           Host key (required)
         </span>
         <div
@@ -72,16 +49,6 @@ Array [
           </div>
         </div>
       </label>
-      <button
-        className="wxc-button wxc-button--primary"
-        disabled={false}
-        onClick={[Function]}
-        style={Object {}}
-        type="button"
-      >
-        Start Meeting
-      </button>
-      
     </form>
   </div>,
   <video
