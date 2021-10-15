@@ -82,13 +82,13 @@ Array [
       </label>
       <button
         className="wxc-button wxc-button--primary"
-        disabled={false}
+        disabled={true}
         onClick={[Function]}
         style={Object {}}
         title=""
         type="button"
       >
-        Start Meeting
+        Start meeting
       </button>
     </form>
     <div
