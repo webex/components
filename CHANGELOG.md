@@ -1,3 +1,16 @@
+# [1.158.0](https://github.com/webex/components/compare/v1.157.1...v1.158.0) (2021-10-15)
+
+
+### Bug Fixes
+
+* **Modal:** close button misalignment ([be8f782](https://github.com/webex/components/commit/be8f78256d48a856d3d41813b33213739199667c))
+
+
+### Features
+
+* **Modal:** add back button ([caa6046](https://github.com/webex/components/commit/caa604649621e334f214725faaefcc3ae22bdea8))
+* **WebexMeetingAuthentication:** add validation for name field ([e062c35](https://github.com/webex/components/commit/e062c351d92824255d15950670803201f7808c0f))
+
 ## [1.157.1](https://github.com/webex/components/compare/v1.157.0...v1.157.1) (2021-10-14)
 
 
