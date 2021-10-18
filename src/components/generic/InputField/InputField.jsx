@@ -32,7 +32,7 @@ export default function InputField({
   error,
   required,
 }) {
-  const cssClasses = webexComponentClasses('input-field', className, null, {error});
+  const [cssClasses, sc] = webexComponentClasses('input-field', className, {error});
   const [isPwdRevealed, setIsPwdRevealed] = useState(false);
 
   const handleChange = (event) => onChange(event.target.value);
@@ -44,7 +44,7 @@ export default function InputField({
 
   return (
     <div className={cssClasses} style={style}>
-      <div className="form-control">
+      <div className={sc('form-control')}>
         <input
           type={isPwdRevealed ? 'text' : type}
           value={value}
@@ -55,12 +55,12 @@ export default function InputField({
           required={required}
         />
         {type === 'password' && value && (
-          <Button type="ghost" className="input-field-right-icon" onClick={toggleIsPwdRevealed}>
+          <Button type="ghost" className={sc('input-field-right-icon')} onClick={toggleIsPwdRevealed}>
             <Icon name={isPwdRevealed ? 'hide-password' : 'show-password'} />
           </Button>
         )}
         {type !== 'password' && value && (
-          <Button type="ghost" className="input-field-right-icon" onClick={clearInput}>
+          <Button type="ghost" className={sc('input-field-right-icon')} onClick={clearInput}>
             <Icon name="cancel" size={16} />
           </Button>
         )}
@@ -68,9 +68,9 @@ export default function InputField({
       {
         error
         && (
-          <div className="input-error-container">
-            <Icon name="warning" size={16} className="input-error-icon" />
-            <span className="input-error-text">{error}</span>
+          <div className={sc('input-error-container')}>
+            <Icon name="warning" size={16} className={sc('input-error-icon')} />
+            <span className={sc('input-error-text')}>{error}</span>
           </div>
         )
       }

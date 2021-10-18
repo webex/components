@@ -7,26 +7,27 @@ import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../constants';
  * @param {object} props  Data passed to the component
  * @param {string} props.classBaseName  Component class base name
  * @param {string} props.userClassName  Custom CSS class to apply
- * @param {object} props.otherBaseClasses  Other optional classes with prefix
- * @param {object} props.otherClasses  Other optional classes
+ * @param {object} props.otherClasses  Other optional classes with prefix
  * @returns {string} Classes
  */
 
 export default function webexComponentClasses(
   classBaseName,
   userClassName,
-  otherBaseClasses,
   otherClasses,
 ) {
-  return classNames({
+  const cssClasses = classNames({
     [`${WEBEX_COMPONENTS_CLASS_PREFIX}-${classBaseName}`]: true,
     [userClassName]: !!userClassName,
     ...Object.fromEntries(
-      Object.entries(otherBaseClasses || {})
-        .map(([key, val]) => [`${WEBEX_COMPONENTS_CLASS_PREFIX}-${classBaseName}-${key}`, val]),
+      Object.entries(otherClasses || {})
+        .map(([key, val]) => [`${WEBEX_COMPONENTS_CLASS_PREFIX}-${classBaseName}--${key}`, val]),
     ),
-    ...otherClasses,
   });
+
+  const sc = (subclass) => `${WEBEX_COMPONENTS_CLASS_PREFIX}-${classBaseName}__${subclass}`;
+
+  return [cssClasses, sc];
 }
 
 //  checks for support for setSinkId https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/setSinkId

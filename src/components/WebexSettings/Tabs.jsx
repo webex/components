@@ -30,7 +30,7 @@ export default function Tabs({
   tabIndex,
 }) {
   const {content} = tabs.find((tab) => tab.key === selected);
-  const cssClasses = webexComponentClasses('tabs', className);
+  const [cssClasses, sc] = webexComponentClasses('tabs', className);
   const selectedTabIndex = (tabs || []).findIndex((tab) => tab.key === selected);
 
   const handleKeyUp = (event) => {
@@ -49,14 +49,14 @@ export default function Tabs({
     <div className={cssClasses} style={style}>
       {/* eslint-disable-next-line */}
       <ul
-        className="tabs-list"
+        className={sc('list')}
         tabIndex={tabIndex}
         onKeyUp={handleKeyUp}
       >
         {
           tabs.map((tab) => (
             <li
-              className={classNames('tab', selected === tab.key && 'active')}
+              className={classNames(sc('tab'), selected === tab.key && sc('tab--active'))}
               key={tab.key}
             >
               <button
@@ -70,7 +70,7 @@ export default function Tabs({
           ))
         }
       </ul>
-      <div className="tabs-content">
+      <div className={sc('content')}>
         {content()}
       </div>
     </div>

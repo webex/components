@@ -1,4 +1,6 @@
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting {
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting;
+
+.#{$C} {
   min-height: $WEBEX_MEETING_MIN_HEIGHT;
   min-width: $WEBEX_MEETING_MIN_WIDTH;
   color: var(--wxc-text-color);
@@ -12,21 +14,21 @@
   position: relative;
   transform: translate(0, 0); // offset parent for modals
 
-  &.roster-only {
-    .inner-meeting {
+  &--roster-only {
+    .#{$C}__inner-meeting {
       display: none;
     }
-    .member-roster {
+    .#{$C}__member-roster {
       flex: 1;
     }
   }
 
-  .centered {
+  .#{$C}__centered {
     margin: auto;
     text-align: center;
   }
 
-  .loading-logo {
+  .#{$C}__loading-logo {
     background: var(--wxc-loading-logo) no-repeat center / var(--wxc-loading-logo-size);
     position: absolute;
     top: 0;
@@ -35,7 +37,7 @@
     height: 100%;
   }
 
-  .meeting-body {
+  .#{$C}__body {
     flex: 1;
     min-height: 0;
 
@@ -44,22 +46,22 @@
     align-items: stretch;
   }
 
-  .inner-meeting {
+  .#{$C}__inner-meeting {
     flex: 1;
     min-width: 0;
     margin-bottom: 1rem;
   }
 
-  .member-roster {
+  .#{$C}__member-roster {
     width: 22.5rem;
     margin: 0 -1rem 0 0.5rem;
   }
 
-  .control-bar {
+  .#{$C}__control-bar {
     margin-bottom: 1.5rem;
   }
 
-  .media-state-toast {
+  .#{$C}__media-state-toast {
     position: absolute;
     top: 75%;
     left: 50%;
@@ -68,7 +70,7 @@
     white-space: nowrap;
   }
 
-  .settings .modal-content {
+  .#{$C}__settings {
     width: 75%;
     max-width: 60rem;
     min-width: 25rem;
@@ -77,14 +79,14 @@
     min-height: 25rem;
   }
 
-  .authentication .modal-content {
+  .#{$C}__authentication {
     width: 40%;
     max-width: 31.25rem;
     min-width: 20rem;
     height: 28.5rem;
   }
 
-  .meeting-logo {
+  .#{$C}__logo {
     margin: 1rem 0 0.3125rem 0;
   }
 }

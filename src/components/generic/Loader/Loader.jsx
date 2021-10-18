@@ -12,11 +12,11 @@ import webexComponentClasses from '../../helpers';
  * @returns {object} JSX of the element
  */
 export default function Loader({className, style}) {
-  const cssClasses = webexComponentClasses('loader', className);
+  const [cssClasses, sc] = webexComponentClasses('loader', className);
 
   return (
     <div className={cssClasses} style={style}>
-      <div className="bullet" />
+      <div className={sc('bullet')} />
     </div>
   );
 }

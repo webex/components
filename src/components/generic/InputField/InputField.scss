@@ -1,4 +1,6 @@
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field {
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field;
+
+.#{$C} {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -10,22 +12,22 @@
     color: var(--wxc-input--label--color);
   }
 
-  .form-control {
+  .#{$C}__form-control {
     position: relative;
   }
 
-  .input-error-container {
+  .#{$C}__input-error-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     color: var(--wxc-error-color);
     margin: 0.25rem 0;
 
-    .input-error-text {
+    .#{$C}__input-error-text {
       font-size: 0.875rem;
     }
 
-    .input-error-icon {
+    .#{$C}__input-error-icon {
       margin: 0 0.5625rem 0 0.8125rem;
     }
   }
@@ -65,7 +67,7 @@
     }
   }
 
-  &.error input {
+  &--error input {
     background: var(--wxc-error-input--normal--background);
     border: var(--wxc-error-input--normal--border);
     box-shadow: none;
@@ -90,7 +92,7 @@
     }
   }
 
-  .input-field-right-icon {
+  .#{$C}__input-field-right-icon {
     position: absolute;
     color: var(--wxc-input-icon-color);
     top: 50%;

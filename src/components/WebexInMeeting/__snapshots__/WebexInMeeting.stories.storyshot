@@ -3,7 +3,7 @@
 exports[`Storyshots Meetings/Webex In-Meeting All Media 1`] = `
 Array [
   <div
-    className="wxc-in-meeting remote-sharing"
+    className="wxc-in-meeting wxc-in-meeting--remote-sharing"
     style={
       Object {
         "height": "100%",
@@ -12,7 +12,7 @@ Array [
     }
   >
     <div
-      className="media-container"
+      className="wxc-in-meeting__media-container"
       style={
         Object {
           "maxWidth": 177.77777777777777,
@@ -20,17 +20,17 @@ Array [
       }
     >
       <div
-        className="wxc-remote-media remote-media-in-meeting remote-video-n-share"
+        className="wxc-remote-media wxc-in-meeting__remote-media-in-meeting wxc-remote-media--remote-video-n-share"
       >
         <video
           autoPlay={true}
-          className="wxc-remote-video"
+          className="wxc-remote-media__remote-video"
           muted={true}
           playsInline={true}
         />
         <video
           autoPlay={true}
-          className="wxc-remote-share"
+          className="wxc-remote-media__remote-share"
           muted={true}
           playsInline={true}
         />
@@ -39,16 +39,16 @@ Array [
         />
       </div>
       <div
-        className="wxc-local-media local-media-in-meeting wxc-local-media-no-media"
+        className="wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
       >
         <div
           className="wxc-avatar"
         >
           <div
-            className="avatar-content"
+            className="wxc-avatar__content"
           >
             <svg
-              className="placeholder placeholder-6"
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
               viewBox="0 0 40 40"
             >
               <text
@@ -104,7 +104,7 @@ Array [
     }
   >
     <div
-      className="media-container"
+      className="wxc-in-meeting__media-container"
       style={
         Object {
           "maxWidth": 177.77777777777777,
@@ -112,23 +112,23 @@ Array [
       }
     >
       <div
-        className="wxc-remote-media remote-media-in-meeting"
+        className="wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
       >
         <audio
           autoPlay={true}
         />
       </div>
       <div
-        className="wxc-local-media local-media-in-meeting wxc-local-media-no-media"
+        className="wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
       >
         <div
           className="wxc-avatar"
         >
           <div
-            className="avatar-content"
+            className="wxc-avatar__content"
           >
             <svg
-              className="placeholder placeholder-6"
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
               viewBox="0 0 40 40"
             >
               <text
@@ -184,7 +184,7 @@ Array [
     }
   >
     <div
-      className="media-container"
+      className="wxc-in-meeting__media-container"
       style={
         Object {
           "maxWidth": 177.77777777777777,
@@ -192,14 +192,14 @@ Array [
       }
     >
       <div
-        className="wxc-remote-media remote-media-in-meeting"
+        className="wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
       >
         <div
-          className="wxc-badge connecting-badge"
+          className="wxc-badge wxc-remote-media__connecting-badge"
           style={Object {}}
         >
           <div
-            className="wxc-spinner connecting-spinner"
+            className="wxc-spinner wxc-remote-media__connecting-spinner"
             size={14}
             style={
               Object {
@@ -214,16 +214,16 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-local-media local-media-in-meeting wxc-local-media-no-media"
+        className="wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
       >
         <div
           className="wxc-avatar"
         >
           <div
-            className="avatar-content"
+            className="wxc-avatar__content"
           >
             <svg
-              className="placeholder placeholder-6"
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
               viewBox="0 0 40 40"
             >
               <text
@@ -279,7 +279,7 @@ Array [
     }
   >
     <div
-      className="media-container"
+      className="wxc-in-meeting__media-container"
       style={
         Object {
           "maxWidth": 177.77777777777777,
@@ -287,11 +287,11 @@ Array [
       }
     >
       <div
-        className="wxc-remote-media remote-media-in-meeting"
+        className="wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
       >
         <video
           autoPlay={true}
-          className="wxc-remote-video"
+          className="wxc-remote-media__remote-video"
           muted={true}
           playsInline={true}
         />
@@ -300,7 +300,7 @@ Array [
         />
       </div>
       <div
-        className="wxc-local-media local-media-in-meeting"
+        className="wxc-local-media wxc-in-meeting__local-media-in-meeting"
       >
         <video
           autoPlay={true}
@@ -308,7 +308,7 @@ Array [
         />
       </div>
       <div
-        className="wxc-banner share-banner wxc-banner--top"
+        className="wxc-banner wxc-in-meeting__share-banner wxc-banner--top"
       >
         You're sharing your screen
       </div>
@@ -340,7 +340,7 @@ Array [
 exports[`Storyshots Meetings/Webex In-Meeting Remote Share 1`] = `
 Array [
   <div
-    className="wxc-in-meeting remote-sharing"
+    className="wxc-in-meeting wxc-in-meeting--remote-sharing"
     style={
       Object {
         "height": "100%",
@@ -349,7 +349,7 @@ Array [
     }
   >
     <div
-      className="media-container"
+      className="wxc-in-meeting__media-container"
       style={
         Object {
           "maxWidth": 177.77777777777777,
@@ -357,17 +357,17 @@ Array [
       }
     >
       <div
-        className="wxc-remote-media remote-media-in-meeting remote-video-n-share"
+        className="wxc-remote-media wxc-in-meeting__remote-media-in-meeting wxc-remote-media--remote-video-n-share"
       >
         <video
           autoPlay={true}
-          className="wxc-remote-video"
+          className="wxc-remote-media__remote-video"
           muted={true}
           playsInline={true}
         />
         <video
           autoPlay={true}
-          className="wxc-remote-share"
+          className="wxc-remote-media__remote-share"
           muted={true}
           playsInline={true}
         />
@@ -376,16 +376,16 @@ Array [
         />
       </div>
       <div
-        className="wxc-local-media local-media-in-meeting wxc-local-media-no-media"
+        className="wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
       >
         <div
           className="wxc-avatar"
         >
           <div
-            className="avatar-content"
+            className="wxc-avatar__content"
           >
             <svg
-              className="placeholder placeholder-6"
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
               viewBox="0 0 40 40"
             >
               <text
@@ -441,7 +441,7 @@ Array [
     }
   >
     <div
-      className="media-container"
+      className="wxc-in-meeting__media-container"
       style={
         Object {
           "maxWidth": 177.77777777777777,
@@ -449,26 +449,26 @@ Array [
       }
     >
       <div
-        className="wxc-remote-media remote-media-in-meeting"
+        className="wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
       >
         <video
           autoPlay={true}
-          className="wxc-remote-video"
+          className="wxc-remote-media__remote-video"
           muted={true}
           playsInline={true}
         />
       </div>
       <div
-        className="wxc-local-media local-media-in-meeting wxc-local-media-no-media"
+        className="wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
       >
         <div
           className="wxc-avatar"
         >
           <div
-            className="avatar-content"
+            className="wxc-avatar__content"
           >
             <svg
-              className="placeholder placeholder-6"
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
               viewBox="0 0 40 40"
             >
               <text

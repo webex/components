@@ -51,11 +51,11 @@ export function formatTimeRulerText(timestamp) {
  */
 export default function TimeRuler({className, date, style}) {
   const text = formatTimeRulerText(new Date(date));
-  const cssClasses = webexComponentClasses('time-ruler', className);
+  const [cssClasses] = webexComponentClasses('time-ruler', className);
 
   return (
     <div className={cssClasses} style={style}>
-      <span className="md-list-separator__text">{text}</span>
+      <span>{text}</span>
     </div>
   );
 }

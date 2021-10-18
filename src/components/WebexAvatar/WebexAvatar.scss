@@ -1,10 +1,12 @@
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-avatar {
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-avatar;
+
+.#{$C} {
   width: 4rem;
   height: 4rem;
 
   display: block;
 
-  .avatar-content {
+  .#{$C}__content {
     position: relative;
     width: 100%;
     height: 100%;
@@ -14,11 +16,11 @@
     justify-content: center;
   }
 
-  .image-error {
+  .#{$C}__image-error {
     display: none;
   }
 
-  .placeholder {
+  .#{$C}__placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +47,7 @@
     position: absolute;
   }
 
-  .status-icon-container {
+  .#{$C}__status-icon-container {
     position: absolute;
     display: flex;
     align-items: center;
@@ -60,13 +62,13 @@
 
     background: var(--wxc-icon--background-color);
 
-    .status-icon {
+    .#{$C}__status-icon {
       width: 80%;
       height: 80%;
     }
   }
 
-  .avatar-bot-badge {
+  .#{$C}__bot-badge {
     position: absolute;
 
     background-color: var(--wxc-avatar--bot-status-color);
@@ -84,7 +86,7 @@
     fill: var(--wxc-avatar--text-color);
   }
 
-  .avatar-self-icon {
+  .#{$C}__self-icon {
     z-index: 1;
 
     width: 70%;
@@ -93,28 +95,28 @@
     color: var(--wxc-avatar--self-status-color);
   }
 
-  &.avatar-self {
+  &--avatar-self {
     border: 1px solid var(--wxc-avatar--self-status-border);
     border-radius: 50%;
   }
 
-  .status-active { color: var(--wxc-person-status--active-color); }
-  .status-call { color: var(--wxc-person-status--in-a-meeting-color); }
-  .status-meeting { color: var(--wxc-person-status--in-a-meeting-color); }
-  .status-dnd { color: var(--wxc-person-status--dnd-color); }
-  .status-presenting { color: var(--wxc-person-status--dnd-color); }
-  .status-inactive { color: var(--wxc-person-status--away-color); }
-  .status-ooo { color: var(--wxc-person-status--away-color); }
+  .#{$C}__status-active { color: var(--wxc-person-status--active-color); }
+  .#{$C}__status-call { color: var(--wxc-person-status--in-a-meeting-color); }
+  .#{$C}__status-meeting { color: var(--wxc-person-status--in-a-meeting-color); }
+  .#{$C}__status-dnd { color: var(--wxc-person-status--dnd-color); }
+  .#{$C}__status-presenting { color: var(--wxc-person-status--dnd-color); }
+  .#{$C}__status-inactive { color: var(--wxc-person-status--away-color); }
+  .#{$C}__status-ooo { color: var(--wxc-person-status--away-color); }
 
-  .placeholder-1 { background: var(--wxc-avatar--placeholder-1--background); }
-  .placeholder-2 { background: var(--wxc-avatar--placeholder-2--background); }
-  .placeholder-3 { background: var(--wxc-avatar--placeholder-3--background); }
-  .placeholder-4 { background: var(--wxc-avatar--placeholder-4--background); }
-  .placeholder-5 { background: var(--wxc-avatar--placeholder-5--background); }
-  .placeholder-6 { background: var(--wxc-avatar--placeholder-6--background); }
-  .placeholder-7 { background: var(--wxc-avatar--placeholder-7--background); }
-  .placeholder-8 { background: var(--wxc-avatar--placeholder-8--background); }
-  .placeholder-9 { background: var(--wxc-avatar--placeholder-9--background); }
-  .placeholder-10 { background: var(--wxc-avatar--placeholder-10--background); }
-  .placeholder-11 { background: var(--wxc-avatar--placeholder-11--background); }
+  .#{$C}__placeholder-1 { background: var(--wxc-avatar--placeholder-1--background); }
+  .#{$C}__placeholder-2 { background: var(--wxc-avatar--placeholder-2--background); }
+  .#{$C}__placeholder-3 { background: var(--wxc-avatar--placeholder-3--background); }
+  .#{$C}__placeholder-4 { background: var(--wxc-avatar--placeholder-4--background); }
+  .#{$C}__placeholder-5 { background: var(--wxc-avatar--placeholder-5--background); }
+  .#{$C}__placeholder-6 { background: var(--wxc-avatar--placeholder-6--background); }
+  .#{$C}__placeholder-7 { background: var(--wxc-avatar--placeholder-7--background); }
+  .#{$C}__placeholder-8 { background: var(--wxc-avatar--placeholder-8--background); }
+  .#{$C}__placeholder-9 { background: var(--wxc-avatar--placeholder-9--background); }
+  .#{$C}__placeholder-10 { background: var(--wxc-avatar--placeholder-10--background); }
+  .#{$C}__placeholder-11 { background: var(--wxc-avatar--placeholder-11--background); }
 }

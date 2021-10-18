@@ -6,10 +6,10 @@ Array [
     className="wxc-avatar"
   >
     <div
-      className="avatar-content"
+      className="wxc-avatar__content"
     >
       <svg
-        className="placeholder placeholder-6"
+        className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
         viewBox="0 0 40 40"
       >
         <text
@@ -26,10 +26,10 @@ Array [
         src="./images/barbara.png"
       />
       <div
-        className="status-icon-container"
+        className="wxc-avatar__status-icon-container"
       >
         <svg
-          className="wxc-icon status-icon status-active"
+          className="wxc-icon wxc-avatar__status-icon wxc-avatar__status-active"
           fill="none"
           height={24}
           style={Object {}}
@@ -73,10 +73,10 @@ Array [
     className="wxc-avatar"
   >
     <div
-      className="avatar-content"
+      className="wxc-avatar__content"
     >
       <svg
-        className="placeholder placeholder-6"
+        className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
         viewBox="0 0 40 40"
       >
         <text
@@ -93,7 +93,7 @@ Array [
         src="./images/barbara.png"
       />
       <svg
-        className="avatar-bot-badge"
+        className="wxc-avatar__bot-badge"
         viewBox="0 0 26 26"
       >
         <text
@@ -134,10 +134,10 @@ Array [
     className="wxc-avatar"
   >
     <div
-      className="avatar-content"
+      className="wxc-avatar__content"
     >
       <svg
-        className="placeholder placeholder-6"
+        className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
         viewBox="0 0 40 40"
       >
         <text
@@ -154,10 +154,10 @@ Array [
         src="./images/barbara.png"
       />
       <div
-        className="status-icon-container"
+        className="wxc-avatar__status-icon-container"
       >
         <svg
-          className="wxc-icon status-icon status-call"
+          className="wxc-icon wxc-avatar__status-icon wxc-avatar__status-call"
           fill="none"
           height={24}
           style={Object {}}
@@ -201,10 +201,10 @@ Array [
     className="wxc-avatar"
   >
     <div
-      className="avatar-content"
+      className="wxc-avatar__content"
     >
       <svg
-        className="placeholder placeholder-6"
+        className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
         viewBox="0 0 40 40"
       >
         <text
@@ -221,10 +221,10 @@ Array [
         src="./images/barbara.png"
       />
       <div
-        className="status-icon-container"
+        className="wxc-avatar__status-icon-container"
       >
         <svg
-          className="wxc-icon status-icon status-dnd"
+          className="wxc-icon wxc-avatar__status-icon wxc-avatar__status-dnd"
           fill="none"
           height={24}
           style={Object {}}
@@ -270,10 +270,10 @@ Array [
     className="wxc-avatar"
   >
     <div
-      className="avatar-content"
+      className="wxc-avatar__content"
     >
       <svg
-        className="placeholder placeholder-6"
+        className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
         viewBox="0 0 40 40"
       >
         <text
@@ -290,10 +290,10 @@ Array [
         src="./images/barbara.png"
       />
       <div
-        className="status-icon-container"
+        className="wxc-avatar__status-icon-container"
       >
         <svg
-          className="wxc-icon status-icon status-inactive"
+          className="wxc-icon wxc-avatar__status-icon wxc-avatar__status-inactive"
           fill="none"
           height={24}
           style={Object {}}
@@ -337,10 +337,10 @@ Array [
     className="wxc-avatar"
   >
     <div
-      className="avatar-content"
+      className="wxc-avatar__content"
     >
       <svg
-        className="placeholder placeholder-6"
+        className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
         viewBox="0 0 40 40"
       >
         <text
@@ -381,10 +381,10 @@ Array [
     className="wxc-avatar"
   >
     <div
-      className="avatar-content"
+      className="wxc-avatar__content"
     >
       <svg
-        className="placeholder placeholder-6"
+        className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
         viewBox="0 0 40 40"
       >
         <text
@@ -401,10 +401,10 @@ Array [
         src="./images/barbara.png"
       />
       <div
-        className="status-icon-container"
+        className="wxc-avatar__status-icon-container"
       >
         <svg
-          className="wxc-icon status-icon status-meeting"
+          className="wxc-icon wxc-avatar__status-icon wxc-avatar__status-meeting"
           fill="none"
           height={24}
           style={Object {}}
@@ -451,10 +451,10 @@ Array [
     className="wxc-avatar"
   >
     <div
-      className="avatar-content"
+      className="wxc-avatar__content"
     >
       <svg
-        className="placeholder placeholder-6"
+        className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
         viewBox="0 0 40 40"
       >
         <text
@@ -501,10 +501,10 @@ Array [
     className="wxc-avatar"
   >
     <div
-      className="avatar-content"
+      className="wxc-avatar__content"
     >
       <svg
-        className="placeholder placeholder-6"
+        className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
         viewBox="0 0 40 40"
       >
         <text
@@ -521,10 +521,10 @@ Array [
         src="./images/barbara.png"
       />
       <div
-        className="status-icon-container"
+        className="wxc-avatar__status-icon-container"
       >
         <svg
-          className="wxc-icon status-icon status-ooo"
+          className="wxc-icon wxc-avatar__status-icon wxc-avatar__status-ooo"
           fill="none"
           height={24}
           style={Object {}}
@@ -568,10 +568,10 @@ Array [
     className="wxc-avatar"
   >
     <div
-      className="avatar-content"
+      className="wxc-avatar__content"
     >
       <svg
-        className="placeholder placeholder-6"
+        className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
         viewBox="0 0 40 40"
       >
         <text
@@ -588,10 +588,10 @@ Array [
         src="./images/barbara.png"
       />
       <div
-        className="status-icon-container"
+        className="wxc-avatar__status-icon-container"
       >
         <svg
-          className="wxc-icon status-icon status-presenting"
+          className="wxc-icon wxc-avatar__status-icon wxc-avatar__status-presenting"
           fill="none"
           height={24}
           style={Object {}}
@@ -632,13 +632,13 @@ Array [
 exports[`Storyshots Platform/Webex Avatar Self 1`] = `
 Array [
   <div
-    className="wxc-avatar avatar-self"
+    className="wxc-avatar wxc-avatar--avatar-self"
   >
     <div
-      className="avatar-content"
+      className="wxc-avatar__content"
     >
       <svg
-        className="wxc-icon avatar-self-icon"
+        className="wxc-icon wxc-avatar__self-icon"
         height={24}
         style={Object {}}
         viewBox="0 0 32 32"
@@ -680,17 +680,17 @@ Array [
     className="wxc-avatar"
   >
     <div
-      className="avatar-content"
+      className="wxc-avatar__content"
     >
       <div
         className="wxc-loader"
       >
         <div
-          className="bullet"
+          className="wxc-loader__bullet"
         />
       </div>
       <svg
-        className="placeholder placeholder-6"
+        className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
         viewBox="0 0 40 40"
       >
         <text
@@ -737,10 +737,10 @@ Array [
     className="wxc-avatar"
   >
     <div
-      className="avatar-content"
+      className="wxc-avatar__content"
     >
       <svg
-        className="placeholder placeholder-6"
+        className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
         viewBox="0 0 40 40"
       >
         <text
@@ -751,10 +751,10 @@ Array [
         </text>
       </svg>
       <div
-        className="status-icon-container"
+        className="wxc-avatar__status-icon-container"
       >
         <svg
-          className="wxc-icon status-icon status-active"
+          className="wxc-icon wxc-avatar__status-icon wxc-avatar__status-active"
           fill="none"
           height={24}
           style={Object {}}

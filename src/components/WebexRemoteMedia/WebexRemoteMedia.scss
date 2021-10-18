@@ -1,4 +1,6 @@
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-media {
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-media;
+
+.#{$C} {
   background: var(--wxc-video-background);
   border-radius: 0.5rem;
 
@@ -7,7 +9,7 @@
   justify-content: center;
   align-items: center;
 
-  .media-error {
+  .#{$C}__media-error {
     font-family: $brand-font-bold;
     font-size: 0.875rem;
     line-height: 1.3125rem;
@@ -18,7 +20,7 @@
     align-items: center;
   }
 
-  .media-error-icon {
+  .#{$C}__error-icon {
     margin-bottom: 1.234rem;
   }
 
@@ -28,47 +30,46 @@
     object-fit: cover;
   }
 
-  .connecting-badge {
+  .#{$C}__connecting-badge {
     z-index: 5;
     white-space: nowrap;
   }
 
-  .connecting-spinner {
+  .#{$C}__connecting-spinner {
     margin-right: .6875rem;
   }
 
-  &.remote-video-n-share {
-    
-    .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-video {
+  &--remote-video-n-share {
+    .#{$C}__remote-video {
       @include media-preview-mobile();
       height: 5.625rem;
       width: 10rem;
     }
 
-    .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-share {
+    .#{$C}__remote-share {
       flex-grow: 1;
     }
   }
 
 
-  &-tablet {
-      &.remote-video-n-share {
+  &--tablet {
+    &.#{$C}--remote-video-n-share {
       .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-video {
         @include media-preview-tablet();
       }
     }
   }
 
-  &-desktop {
-    &.remote-video-n-share {
+  &--desktop {
+    &.#{$C}--remote-video-n-share {
      .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-video {
         @include media-preview-tablet();
       }
     }
   }
 
-  &-desktop-xl {
-    &.remote-video-n-share {
+  &--desktop-xl {
+    &.#{$C}--remote-video-n-share {
      .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-video {
         @include media-preview-desktop-xl();
       }

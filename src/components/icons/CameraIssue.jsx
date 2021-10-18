@@ -15,7 +15,7 @@ export default function CameraIssueIcon({
   className,
   style,
 }) {
-  const cssClasses = webexComponentClasses('camera-issue-icon', className);
+  const [cssClasses] = webexComponentClasses('camera-issue-icon', className);
 
   return (
     <svg width="96" height="88" viewBox="0 0 96 88" xmlns="http://www.w3.org/2000/svg" className={`wxc-icon ${cssClasses}`} style={style}>

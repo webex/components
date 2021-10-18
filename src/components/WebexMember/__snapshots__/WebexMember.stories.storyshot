@@ -13,13 +13,13 @@ Array [
       className="wxc-member"
     >
       <div
-        className="wxc-avatar avatar"
+        className="wxc-avatar wxc-member__avatar"
       >
         <div
-          className="avatar-content"
+          className="wxc-avatar__content"
         >
           <svg
-            className="placeholder placeholder-6"
+            className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
             viewBox="0 0 40 40"
           >
             <text
@@ -38,15 +38,15 @@ Array [
         </div>
       </div>
       <div
-        className="details"
+        className="wxc-member__details"
       >
         <div
-          className="name"
+          className="wxc-member__name"
         >
           Brandon Seeger
         </div>
         <div
-          className="organization"
+          className="wxc-member__organization"
         >
           Gmail.com
         </div>
@@ -89,13 +89,13 @@ Array [
       className="wxc-member"
     >
       <div
-        className="wxc-avatar avatar"
+        className="wxc-avatar wxc-member__avatar"
       >
         <div
-          className="avatar-content"
+          className="wxc-avatar__content"
         >
           <svg
-            className="placeholder placeholder-6"
+            className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
             viewBox="0 0 40 40"
           >
             <text
@@ -114,20 +114,20 @@ Array [
         </div>
       </div>
       <div
-        className="details"
+        className="wxc-member__details"
       >
         <div
-          className="name"
+          className="wxc-member__name"
         >
           Maria Rossi
           <span
-            className="guest"
+            className="wxc-member__guest"
           >
              (Guest)
           </span>
         </div>
         <div
-          className="organization"
+          className="wxc-member__organization"
         >
           Gmail.com
         </div>
@@ -170,13 +170,13 @@ Array [
       className="wxc-member"
     >
       <div
-        className="wxc-avatar avatar"
+        className="wxc-avatar wxc-member__avatar"
       >
         <div
-          className="avatar-content"
+          className="wxc-avatar__content"
         >
           <svg
-            className="placeholder placeholder-6"
+            className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
             viewBox="0 0 40 40"
           >
             <text
@@ -195,21 +195,21 @@ Array [
         </div>
       </div>
       <div
-        className="details"
+        className="wxc-member__details"
       >
         <div
-          className="name"
+          className="wxc-member__name"
         >
           Simon Damiano
         </div>
         <div
-          className="roles"
+          className="wxc-member__roles"
         >
           Host
         </div>
       </div>
       <svg
-        className="wxc-icon wxc-audio-microphone-muted-icon muted"
+        className="wxc-icon wxc-audio-microphone-muted-icon wxc-member__muted"
         height={16}
         style={Object {}}
         viewBox="0 0 24 24"
@@ -261,13 +261,13 @@ Array [
       className="wxc-member"
     >
       <div
-        className="wxc-avatar avatar"
+        className="wxc-avatar wxc-member__avatar"
       >
         <div
-          className="avatar-content"
+          className="wxc-avatar__content"
         >
           <svg
-            className="placeholder placeholder-6"
+            className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
             viewBox="0 0 40 40"
           >
             <text
@@ -286,16 +286,16 @@ Array [
         </div>
       </div>
       <div
-        className="details"
+        className="wxc-member__details"
       >
         <div
-          className="name"
+          className="wxc-member__name"
         >
           Giacomo Edwards
         </div>
       </div>
       <svg
-        className="wxc-icon wxc-audio-microphone-icon speaking"
+        className="wxc-icon wxc-audio-microphone-icon wxc-member__speaking"
         height={16}
         style={Object {}}
         viewBox="0 0 24 24"
@@ -355,13 +355,13 @@ Array [
       className="wxc-member"
     >
       <div
-        className="wxc-avatar avatar"
+        className="wxc-avatar wxc-member__avatar"
       >
         <div
-          className="avatar-content"
+          className="wxc-avatar__content"
         >
           <svg
-            className="placeholder placeholder-6"
+            className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
             viewBox="0 0 40 40"
           >
             <text
@@ -380,21 +380,21 @@ Array [
         </div>
       </div>
       <div
-        className="details"
+        className="wxc-member__details"
       >
         <div
-          className="name"
+          className="wxc-member__name"
         >
           Brenda Song
         </div>
         <div
-          className="roles"
+          className="wxc-member__roles"
         >
           Presenter
         </div>
       </div>
       <svg
-        className="wxc-icon sharing"
+        className="wxc-icon wxc-member__sharing"
         height={16}
         style={Object {}}
         viewBox="0 0 24 24"
@@ -411,7 +411,7 @@ Array [
         />
       </svg>
       <svg
-        className="wxc-icon wxc-audio-microphone-icon speaking"
+        className="wxc-icon wxc-audio-microphone-icon wxc-member__speaking"
         height={16}
         style={Object {}}
         viewBox="0 0 24 24"
@@ -471,13 +471,13 @@ Array [
       className="wxc-member"
     >
       <div
-        className="wxc-avatar avatar"
+        className="wxc-avatar wxc-member__avatar"
       >
         <div
-          className="avatar-content"
+          className="wxc-avatar__content"
         >
           <svg
-            className="placeholder placeholder-6"
+            className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
             viewBox="0 0 40 40"
           >
             <text
@@ -496,10 +496,10 @@ Array [
         </div>
       </div>
       <div
-        className="details"
+        className="wxc-member__details"
       >
         <div
-          className="name"
+          className="wxc-member__name"
         >
           Barbara German
         </div>
@@ -542,13 +542,13 @@ Array [
       className="wxc-member"
     >
       <div
-        className="wxc-avatar avatar"
+        className="wxc-avatar wxc-member__avatar"
       >
         <div
-          className="avatar-content"
+          className="wxc-avatar__content"
         >
           <svg
-            className="placeholder placeholder-6"
+            className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
             viewBox="0 0 40 40"
           >
             <text
@@ -565,10 +565,10 @@ Array [
             src="./images/barbara.png"
           />
           <div
-            className="status-icon-container"
+            className="wxc-avatar__status-icon-container"
           >
             <svg
-              className="wxc-icon status-icon status-dnd"
+              className="wxc-icon wxc-avatar__status-icon wxc-avatar__status-dnd"
               fill="none"
               height={24}
               style={Object {}}
@@ -586,10 +586,10 @@ Array [
         </div>
       </div>
       <div
-        className="details"
+        className="wxc-member__details"
       >
         <div
-          className="name"
+          className="wxc-member__name"
         >
           Barbara German
         </div>

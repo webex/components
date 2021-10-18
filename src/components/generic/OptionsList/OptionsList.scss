@@ -1,4 +1,6 @@
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-options-list {
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-options-list;
+
+.#{$C} {
   border: var(--wxc-options-list--normal--border);
   border-radius: 0.75rem;
   box-shadow: var(--wxc-box-shadow);
@@ -19,7 +21,7 @@
       cursor: pointer;
       color: var(--wxc-text-color);
 
-      .label {
+      .#{$C}__label {
         flex: 1;
         display: block;
         font-size: 1rem;
@@ -28,11 +30,11 @@
         overflow: hidden;
       }
 
-      .check {
+      .#{$C}__check {
         color: var(--wxc-options-list-item--selected--color);
         margin-left: 0.25rem;
 
-        &.invisible {
+        &--invisible {
           visibility: hidden;
         }
       }

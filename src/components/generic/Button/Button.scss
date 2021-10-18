@@ -1,4 +1,6 @@
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-button {
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-button;
+
+.#{$C} {
   display: flex;
   justify-content: center;
   border-radius: 1000px;
@@ -12,7 +14,7 @@
   }
 }
 
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-button--join {
+.#{$C}--join {
   background: var(--wxc-button--join--normal--bg);
   border: none;
   color: var(--wxc-button--join--normal--color);
@@ -31,7 +33,7 @@
   }
 }
 
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-button--default {
+.#{$C}--default {
   align-items: flex-end;
   background: var(--wxc-button--default--normal--bg);
   border: var(--wxc-button--default--normal--border);
@@ -52,7 +54,7 @@
   }
 }
 
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-button--cancel {
+.#{$C}--cancel {
   background: var(--wxc-button--cancel--normal--bg);
   border: var(--wxc-button--cancel--normal--border);
   color: var(--wxc-button--cancel--normal--color);
@@ -71,7 +73,7 @@
   }
 }
 
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-button--ghost {
+.#{$C}--ghost {
   background: transparent;
   border: var(--wxc-button--ghost--normal--border);
   border-radius: 50%;
@@ -92,7 +94,7 @@
   }
 }
 
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-button--primary {
+.#{$C}--primary {
   font-size: 0.938rem;
   line-height: 1.25rem;
   padding: 0.25rem 0.875rem;

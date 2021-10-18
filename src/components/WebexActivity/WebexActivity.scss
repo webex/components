@@ -1,15 +1,16 @@
 @import 'ActivityHeader';
 
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-activity;
 $content-left-margin: 3.5rem; //avatar width + margin
 
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-activity {
+.#{$C} {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
   margin: 0.5rem 0;
 
-  .activity-content {
+  .#{$C}__content {
     display: flex;
     align-items: flex-start;
     box-sizing: border-box;

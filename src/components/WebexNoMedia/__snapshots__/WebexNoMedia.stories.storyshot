@@ -6,7 +6,7 @@ Array [
     className="wxc-no-media"
   >
     <svg
-      className="wxc-icon wxc-camera-issue-icon icon-media-issue"
+      className="wxc-icon wxc-camera-issue-icon wxc-no-media__icon-media-issue"
       height="88"
       style={Object {}}
       viewBox="0 0 96 88"
@@ -41,13 +41,13 @@ Array [
       </defs>
     </svg>
     <h5
-      className="wxc-title no-media-title"
+      className="wxc-title wxc-no-media__title"
       style={Object {}}
     >
       Can't access camera
     </h5>
     <div
-      className="no-media-body"
+      className="wxc-no-media__body"
     >
       <p>
         Reload this page and select 
@@ -103,7 +103,7 @@ Array [
     className="wxc-no-media"
   >
     <svg
-      className="wxc-icon wxc-microphone-issue-icon icon-media-issue"
+      className="wxc-icon wxc-microphone-issue-icon wxc-no-media__icon-media-issue"
       height="91"
       style={Object {}}
       viewBox="0 0 62 91"
@@ -138,13 +138,13 @@ Array [
       </defs>
     </svg>
     <h5
-      className="wxc-title no-media-title"
+      className="wxc-title wxc-no-media__title"
       style={Object {}}
     >
       Can't access microphone
     </h5>
     <div
-      className="no-media-body"
+      className="wxc-no-media__body"
     >
       <p>
         Reload this page and select 

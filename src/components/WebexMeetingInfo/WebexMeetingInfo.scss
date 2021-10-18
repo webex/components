@@ -17,7 +17,7 @@
     text-align: center;
   }
 
-  &-tablet {
+  &--tablet {
     h2 {
       font-size: 1.255rem;
     }
@@ -27,11 +27,11 @@
     }
   }
 
-  &-desktop {
+  &--desktop {
     h2 {
       font-size: 1.5rem;
     }
-    
+
     h3 {
       font-size: 1rem;
     }

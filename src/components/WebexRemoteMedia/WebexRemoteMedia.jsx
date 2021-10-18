@@ -6,7 +6,6 @@ import Icon from '../generic/Icon/Icon';
 import Spinner from '../generic/Spinner/Spinner';
 import Title from '../generic/Title/Title';
 
-import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 import webexComponentClasses from '../helpers';
 import {TABLET, DESKTOP, DESKTOP_LARGE} from '../breakpoints';
 import {
@@ -52,12 +51,10 @@ export default function WebexRemoteMedia({className, meetingID, style}) {
   const hasOtherMembers = members.filter((member) => member.inMeeting).length > 1;
   const hasMedia = !!(remoteAudio || remoteVideo || remoteShare);
 
-  const cssClasses = webexComponentClasses('remote-media', className, {
+  const [cssClasses, sc] = webexComponentClasses('remote-media', className, {
     tablet: width >= TABLET && width < DESKTOP,
     desktop: width >= DESKTOP && width < DESKTOP_LARGE,
     'desktop-xl': width >= DESKTOP_LARGE,
-  },
-  {
     'remote-video-n-share': remoteVideo && remoteShare,
   });
 
@@ -65,8 +62,8 @@ export default function WebexRemoteMedia({className, meetingID, style}) {
 
   if (error) {
     remoteDisplay = (
-      <div className="media-error">
-        <Icon name="error" className="media-error-icon" />
+      <div className={sc('media-error')}>
+        <Icon name="error" className={sc('error-icon')} />
         <div>Having trouble joining the meeting?</div>
         <div>Please check your connection.</div>
       </div>
@@ -75,9 +72,9 @@ export default function WebexRemoteMedia({className, meetingID, style}) {
     remoteDisplay = (
       <>
         {remoteVideo
-          && <video className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-remote-video`} ref={videoRef} muted playsInline autoPlay />}
+          && <video className={sc('remote-video')} ref={videoRef} muted playsInline autoPlay />}
         {remoteShare
-          && <video className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-remote-share`} ref={shareRef} muted playsInline autoPlay />}
+          && <video className={sc('remote-share')} ref={shareRef} muted playsInline autoPlay />}
         {remoteAudio && <audio ref={audioRef} autoPlay />}
       </>
     );
@@ -85,8 +82,8 @@ export default function WebexRemoteMedia({className, meetingID, style}) {
     remoteDisplay = <Title>Waiting for others to join...</Title>;
   } else {
     remoteDisplay = (
-      <Badge className="connecting-badge">
-        <Spinner size={14} className="connecting-spinner" />
+      <Badge className={sc('connecting-badge')}>
+        <Spinner size={14} className={sc('connecting-spinner')} />
         <span>Connecting</span>
       </Badge>
     );

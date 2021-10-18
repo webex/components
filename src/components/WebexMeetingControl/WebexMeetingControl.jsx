@@ -18,6 +18,7 @@ const controlTypeToButtonType = {
 /**
  * renderButton renders a control button
  *
+ * @param {function} sc  CSS subclass function
  * @param {Function} action  Adapter control callback
  * @param {object} display  Display data of the control
  * @param {object} style  Custom style to apply
@@ -25,7 +26,7 @@ const controlTypeToButtonType = {
  * @param {boolean} asItem  Render control as an item in a list
  * @returns {object} JSX of the component
  */
-function renderButton(action, display, style, showText, asItem) {
+function renderButton(sc, action, display, style, showText, asItem) {
   const {
     icon,
     type,
@@ -41,14 +42,14 @@ function renderButton(action, display, style, showText, asItem) {
     output = (
       /* eslint-disable-next-line jsx-a11y/click-events-have-key-events */
       <div onClick={action} title={tooltip} role="button" tabIndex="0" style={style}>
-        {icon && <Icon name={icon} size={14} className="item-button-icon" />}
-        <span className="item-button-text">{text}</span>
+        {icon && <Icon name={icon} size={14} className={sc('item-button-icon')} />}
+        <span className={sc('item-button-text')}>{text}</span>
       </div>
     );
   } else {
     output = (
       <Button
-        className="control-button"
+        className={sc('control-button')}
         type={controlTypeToButtonType[type] || 'default'}
         isDisabled={isDisabled}
         onClick={action}
@@ -56,7 +57,7 @@ function renderButton(action, display, style, showText, asItem) {
         ariaLabel={hint}
       >
         {icon && <Icon name={icon} size={24} />}
-        {(showText || !icon) && text && <span className="button-text">{text}</span>}
+        {(showText || !icon) && text && <span className={sc('button-text')}>{text}</span>}
       </Button>
     );
   }
@@ -67,19 +68,20 @@ function renderButton(action, display, style, showText, asItem) {
 /**
  * renderDropdown renders controls dropdown
  *
- * @param {Function} action  Adapter control callback
+ * @param {function} sc  CSS subclass function
+ * @param {function} action  Adapter control callback
  * @param {object} display  Display data of the control
  * @param {object} style  Custom style to apply
  * @returns {object} JSX of the component
  */
-function renderDropdown(action, display, style) {
+function renderDropdown(sc, action, display, style) {
   const {
     options, noOptionsMessage, selected, tooltip,
   } = display;
 
   return (
     <Select
-      className="control-select"
+      className={sc('control-select')}
       style={style}
       value={selected || ''}
       onChange={(id) => action(id)}
@@ -112,10 +114,10 @@ export default function WebexMeetingControl({
   type,
 }) {
   const [action, display] = useMeetingControl(type, meetingID);
-  const cssClasses = webexComponentClasses(
+
+  const [cssClasses, sc] = webexComponentClasses(
     'meeting-control',
     className,
-    null,
     {'as-item': asItem},
   );
 
@@ -124,9 +126,9 @@ export default function WebexMeetingControl({
   if (!display || Object.keys(display).length === 0) {
     output = '';
   } else if (display.type === 'MULTISELECT') {
-    output = renderDropdown(action, display, style);
+    output = renderDropdown(sc, action, display, style);
   } else {
-    output = renderButton(action, display, style, showText, asItem);
+    output = renderButton(sc, action, display, style, showText, asItem);
   }
 
   return <div className={cssClasses}>{output}</div>;

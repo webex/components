@@ -1,4 +1,6 @@
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-no-media {
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-no-media;
+
+.#{$C} {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,12 +8,12 @@
   color: var(--wxc-text-color);
   font-family: $brand-font-regular;
 
-  .icon-media-issue {
+  .#{$C}__icon-media-issue {
     fill: transparent;
     margin-bottom: 1.25rem;
   }
 
-  .no-media-title {
+  .#{$C}__title {
     color: var(--wxc-error-color);
   }
 

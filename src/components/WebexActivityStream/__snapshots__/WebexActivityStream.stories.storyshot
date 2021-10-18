@@ -12,13 +12,13 @@ Array [
         className="wxc-activity-header"
       >
         <div
-          className="wxc-avatar activity-avatar"
+          className="wxc-avatar wxc-activity-header__avatar"
         >
           <div
-            className="avatar-content"
+            className="wxc-avatar__content"
           >
             <svg
-              className="placeholder placeholder-6"
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
               viewBox="0 0 40 40"
             >
               <text
@@ -37,20 +37,20 @@ Array [
           </div>
         </div>
         <div
-          className="activity-author"
+          className="wxc-activity-header__author"
         >
           <span>
             Brenda Song
           </span>
           <span
-            className="activity-timestamp"
+            className="wxc-activity-header__timestamp"
           >
             10:00 AM
           </span>
         </div>
       </div>
       <div
-        className="activity-content"
+        className="wxc-activity__content"
       >
         I'm having some issues setting up my environment 💻
       </div>
@@ -59,7 +59,7 @@ Array [
       className="wxc-activity"
     >
       <div
-        className="activity-content"
+        className="wxc-activity__content"
       >
         Can someone help me troubleshoot?
       </div>
@@ -71,13 +71,13 @@ Array [
         className="wxc-activity-header"
       >
         <div
-          className="wxc-avatar activity-avatar"
+          className="wxc-avatar wxc-activity-header__avatar"
         >
           <div
-            className="avatar-content"
+            className="wxc-avatar__content"
           >
             <svg
-              className="placeholder placeholder-6"
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
               viewBox="0 0 40 40"
             >
               <text
@@ -96,20 +96,20 @@ Array [
           </div>
         </div>
         <div
-          className="activity-author"
+          className="wxc-activity-header__author"
         >
           <span>
             Giacomo Edwards
           </span>
           <span
-            className="activity-timestamp"
+            className="wxc-activity-header__timestamp"
           >
             10:05 AM
           </span>
         </div>
       </div>
       <div
-        className="activity-content"
+        className="wxc-activity__content"
       >
         I ran into the same issue before! Have you checked your OS permissions?
 Sometimes that is disabled for the browser and causes the app to not load properly.
@@ -123,13 +123,13 @@ Let me know if you need more help! Maybe we can talk about it during standup
         className="wxc-activity-header"
       >
         <div
-          className="wxc-avatar activity-avatar"
+          className="wxc-avatar wxc-activity-header__avatar"
         >
           <div
-            className="avatar-content"
+            className="wxc-avatar__content"
           >
             <svg
-              className="placeholder placeholder-6"
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
               viewBox="0 0 40 40"
             >
               <text
@@ -148,20 +148,20 @@ Let me know if you need more help! Maybe we can talk about it during standup
           </div>
         </div>
         <div
-          className="activity-author"
+          className="wxc-activity-header__author"
         >
           <span>
             Brenda Song
           </span>
           <span
-            className="activity-timestamp"
+            className="wxc-activity-header__timestamp"
           >
             10:05 AM
           </span>
         </div>
       </div>
       <div
-        className="activity-content"
+        className="wxc-activity__content"
       >
         Thanks, Gio! Let's talk about it then 👍🏼
       </div>
@@ -173,13 +173,13 @@ Let me know if you need more help! Maybe we can talk about it during standup
         className="wxc-activity-header"
       >
         <div
-          className="wxc-avatar activity-avatar"
+          className="wxc-avatar wxc-activity-header__avatar"
         >
           <div
-            className="avatar-content"
+            className="wxc-avatar__content"
           >
             <svg
-              className="placeholder placeholder-6"
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
               viewBox="0 0 40 40"
             >
               <text
@@ -198,26 +198,26 @@ Let me know if you need more help! Maybe we can talk about it during standup
           </div>
         </div>
         <div
-          className="activity-author"
+          className="wxc-activity-header__author"
         >
           <span>
             Simon Damiano
           </span>
           <span
-            className="activity-timestamp"
+            className="wxc-activity-header__timestamp"
           >
             10:08 AM
           </span>
         </div>
       </div>
       <div
-        className="activity-content"
+        className="wxc-activity__content"
       >
         Hey guys! I'm going to skip standup today, not feeling great 🤢
       </div>
     </div>
     <div
-      className="last-activity"
+      className="wxc-activity-stream__last-activity"
     />
   </div>,
   <video
@@ -252,7 +252,7 @@ Array [
       className="wxc-greeting"
     >
       <div
-        className="greeting-header"
+        className="wxc-greeting__header"
       >
         <svg
           height="60px"
@@ -305,14 +305,14 @@ Array [
           </g>
         </svg>
         <div
-          className="greeting-description"
+          className="wxc-greeting__description"
         >
           This is your private conversation with Brandon Seege. Here's where you'll see shared messages, files, and a call history with this person.
         </div>
       </div>
     </div>
     <div
-      className="last-activity"
+      className="wxc-activity-stream__last-activity"
     />
   </div>,
   <video
@@ -347,7 +347,7 @@ Array [
       className="wxc-greeting"
     >
       <div
-        className="greeting-header"
+        className="wxc-greeting__header"
       >
         <svg
           height="61px"
@@ -430,14 +430,14 @@ Array [
           </g>
         </svg>
         <div
-          className="greeting-description"
+          className="wxc-greeting__description"
         >
           This is a shared space between you and other group members. Here's where you'll see shared messages, files, and a call history with this space.
         </div>
       </div>
     </div>
     <div
-      className="last-activity"
+      className="wxc-activity-stream__last-activity"
     />
   </div>,
   <video
@@ -475,13 +475,13 @@ Array [
         className="wxc-activity-header"
       >
         <div
-          className="wxc-avatar activity-avatar"
+          className="wxc-avatar wxc-activity-header__avatar"
         >
           <div
-            className="avatar-content"
+            className="wxc-avatar__content"
           >
             <svg
-              className="placeholder placeholder-6"
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
               viewBox="0 0 40 40"
             >
               <text
@@ -498,10 +498,10 @@ Array [
               src="./images/barbara.png"
             />
             <div
-              className="status-icon-container"
+              className="wxc-avatar__status-icon-container"
             >
               <svg
-                className="wxc-icon status-icon status-dnd"
+                className="wxc-icon wxc-avatar__status-icon wxc-avatar__status-dnd"
                 fill="none"
                 height={24}
                 style={Object {}}
@@ -519,20 +519,20 @@ Array [
           </div>
         </div>
         <div
-          className="activity-author"
+          className="wxc-activity-header__author"
         >
           <span>
             Barbara German
           </span>
           <span
-            className="activity-timestamp"
+            className="wxc-activity-header__timestamp"
           >
             08/03/2020, 1:24 PM
           </span>
         </div>
       </div>
       <div
-        className="activity-content"
+        className="wxc-activity__content"
       >
         The login page seems to be confusing a lot of people! Let's brainstorm some new designs
       </div>
@@ -540,9 +540,7 @@ Array [
     <div
       className="wxc-time-ruler"
     >
-      <span
-        className="md-list-separator__text"
-      >
+      <span>
         Yesterday
       </span>
     </div>
@@ -553,13 +551,13 @@ Array [
         className="wxc-activity-header"
       >
         <div
-          className="wxc-avatar activity-avatar"
+          className="wxc-avatar wxc-activity-header__avatar"
         >
           <div
-            className="avatar-content"
+            className="wxc-avatar__content"
           >
             <svg
-              className="placeholder placeholder-6"
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
               viewBox="0 0 40 40"
             >
               <text
@@ -578,20 +576,20 @@ Array [
           </div>
         </div>
         <div
-          className="activity-author"
+          className="wxc-activity-header__author"
         >
           <span>
             Brandon Seeger
           </span>
           <span
-            className="activity-timestamp"
+            className="wxc-activity-header__timestamp"
           >
             Yesterday, 10:00 AM
           </span>
         </div>
       </div>
       <div
-        className="activity-content"
+        className="wxc-activity__content"
       >
         Got some of the new designs for the login page, will send the Figma links tomorrow
       </div>
@@ -599,9 +597,7 @@ Array [
     <div
       className="wxc-time-ruler"
     >
-      <span
-        className="md-list-separator__text"
-      >
+      <span>
         Today
       </span>
     </div>
@@ -612,13 +608,13 @@ Array [
         className="wxc-activity-header"
       >
         <div
-          className="wxc-avatar activity-avatar"
+          className="wxc-avatar wxc-activity-header__avatar"
         >
           <div
-            className="avatar-content"
+            className="wxc-avatar__content"
           >
             <svg
-              className="placeholder placeholder-6"
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
               viewBox="0 0 40 40"
             >
               <text
@@ -635,10 +631,10 @@ Array [
               src="./images/barbara.png"
             />
             <div
-              className="status-icon-container"
+              className="wxc-avatar__status-icon-container"
             >
               <svg
-                className="wxc-icon status-icon status-dnd"
+                className="wxc-icon wxc-avatar__status-icon wxc-avatar__status-dnd"
                 fill="none"
                 height={24}
                 style={Object {}}
@@ -656,26 +652,26 @@ Array [
           </div>
         </div>
         <div
-          className="activity-author"
+          className="wxc-activity-header__author"
         >
           <span>
             Barbara German
           </span>
           <span
-            className="activity-timestamp"
+            className="wxc-activity-header__timestamp"
           >
             10:00 AM
           </span>
         </div>
       </div>
       <div
-        className="activity-content"
+        className="wxc-activity__content"
       >
         Following up on our last task. Seems like we need more time?
       </div>
     </div>
     <div
-      className="last-activity"
+      className="wxc-activity-stream__last-activity"
     />
   </div>,
   <video

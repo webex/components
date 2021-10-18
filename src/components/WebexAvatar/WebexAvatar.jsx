@@ -41,22 +41,22 @@ export default function WebexAvatar({
   );
   const [imageError, setImageError] = useState(false);
   const initials = displayName?.split(' ').map((name) => name.charAt(0)).slice(0, 2).join('');
-  const placeholderClassName = `placeholder placeholder-${randomPlaceholder}`;
   const iconName = statusIcons[status];
-  const statusClassName = `status-${status}`;
   const isSelf = status === PersonStatus.SELF;
   const isBot = status === PersonStatus.BOT;
   const isTyping = status === PersonStatus.TYPING;
   const hasPlaceholder = !isSelf;
   const hasImage = avatar && !isSelf;
   const hasStatus = displayStatus && (!isBot && !isSelf) && iconName;
-  const cssClasses = webexComponentClasses('avatar', className, null, {
+  const [cssClasses, sc] = webexComponentClasses('avatar', className, {
     'avatar-self': isSelf,
   });
+  const placeholderClassName = `${sc('placeholder')} ${sc('placeholder')}-${randomPlaceholder}`;
+  const statusClassName = sc(`status-${status}`);
 
   return (
     <div className={cssClasses} style={style}>
-      <div className="avatar-content">
+      <div className={sc('content')}>
         {isTyping && displayStatus && <Loader />}
         {hasPlaceholder
           && (
@@ -67,20 +67,20 @@ export default function WebexAvatar({
             </svg>
           )}
         {hasImage
-          && <img className={imageError ? 'image-error' : ''} src={avatar} alt="avatar" onError={() => setImageError(true)} />}
+          && <img className={imageError ? sc('image-error') : ''} src={avatar} alt="avatar" onError={() => setImageError(true)} />}
         {hasStatus
           && (
-            <div className="status-icon-container">
-              <Icon name={iconName} className={`status-icon ${statusClassName}`} />
+            <div className={sc('status-icon-container')}>
+              <Icon name={iconName} className={`${sc('status-icon')} ${statusClassName}`} />
             </div>
           )}
         {isBot && displayStatus && (
-          <svg viewBox="0 0 26 26" className="avatar-bot-badge">
+          <svg viewBox="0 0 26 26" className={sc('bot-badge')}>
             <text x="50%" y="57%">Bot</text>
           </svg>
         )}
         {isSelf && displayStatus && (
-          <Icon name="chat-filled" className="avatar-self-icon" />
+          <Icon name="chat-filled" className={sc('self-icon')} />
         )}
       </div>
     </div>

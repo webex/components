@@ -17,7 +17,7 @@ export default function AudioMicrophoneIcon({
   className,
   style,
 }) {
-  const cssClasses = webexComponentClasses('audio-microphone-icon', className);
+  const [cssClasses] = webexComponentClasses('audio-microphone-icon', className);
 
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className={`wxc-icon ${cssClasses}`} style={style}>

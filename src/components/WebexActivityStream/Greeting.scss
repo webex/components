@@ -1,4 +1,6 @@
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-greeting {
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-greeting;
+
+.#{$C} {
   display: block;
   flex-direction: column;
   justify-content: center;
@@ -7,11 +9,11 @@
   text-align: center;
   color: var(--wxc-text-color);
 
-  .greeting-header {
+  .#{$C}__header {
     @include header-fonts;
   }
 
-  .greeting-description {
+  .#{$C}__description {
     @include body-fonts;
     padding: 0 3.125rem;
   }

@@ -40,7 +40,7 @@ export default function WebexMemberRoster({
   const members = useMembers(destinationID, destinationType);
   const {orgID} = useMe();
 
-  const cssClasses = webexComponentClasses('member-roster', className);
+  const [cssClasses, sc] = webexComponentClasses('member-roster', className);
 
   const renderMembers = (data) => data.map(
     ({ID}) => (
@@ -55,7 +55,7 @@ export default function WebexMemberRoster({
 
   const renderSection = (data, title) => data.length > 0 && (
     <>
-      <h5 className="section-title">{title}</h5>
+      <h5 className={sc('section-title')}>{title}</h5>
       {renderMembers(data)}
     </>
   );
@@ -63,16 +63,16 @@ export default function WebexMemberRoster({
   const warningExternalMembers = members.some(
     (member) => member.orgID !== undefined && orgID !== undefined && member.orgID !== orgID,
   ) && (
-    <div className="external-user-warning">
-      <Icon name="external-user_20" size={20} className="external-user-icon" />
-      <div className="external-user-message">People outside your company are included in this space</div>
+    <div className={sc('external-user-warning')}>
+      <Icon name="external-user_20" size={20} className={sc('external-user-icon')} />
+      <div className={sc('external-user-message')}>People outside your company are included in this space</div>
     </div>
   );
 
   return (
     <div className={cssClasses} style={style}>
-      <div className="roster-header">
-        <Title className="roster-title">
+      <div className={sc('header')}>
+        <Title className={sc('title')}>
           Participants (
           {members ? members.length : <i>loading...</i>}
           )
@@ -85,7 +85,7 @@ export default function WebexMemberRoster({
         </Button>
       </div>
       {warningExternalMembers}
-      <div className="members">
+      <div className={sc('members')}>
         {destinationType !== DestinationType.MEETING
           ? renderMembers(members)
           : (

@@ -39,17 +39,17 @@ export default function WebexMediaAccess({
   style,
 }) {
   const screen = SCREENS[media];
-  const cssClasses = webexComponentClasses('media-access', className);
+  const [cssClasses, sc] = webexComponentClasses('media-access', className);
 
   return (
     <div className={cssClasses} style={style}>
-      {logo && <div className="logo-container">{logo}</div>}
+      {logo && <div className={sc('logo-container')}>{logo}</div>}
       <Icon name={screen.icon} />
-      <h2 className="title">{screen.title}</h2>
-      <p className="body">
+      <h2 className={sc('title')}>{screen.title}</h2>
+      <p className={sc('body')}>
         Select
         {' '}
-        <span className="allow">Allow</span>
+        <span className={sc('allow')}>Allow</span>
         {' '}
         {screen.message}
       </p>

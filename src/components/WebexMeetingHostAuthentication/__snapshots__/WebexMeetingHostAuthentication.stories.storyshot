@@ -12,19 +12,19 @@ Array [
     }
   >
     <div
-      className="auth-header"
+      className="wxc-meeting-host-authentication__header"
     >
       <div
-        className="auth-logo"
+        className="wxc-meeting-host-authentication__logo"
       />
       <div
-        className="auth-title"
+        className="wxc-meeting-host-authentication__title"
       >
         Enter host information to join
       </div>
     </div>
     <form
-      className="form-content"
+      className="wxc-meeting-host-authentication__form-content"
     >
       <label>
         <span>
@@ -34,7 +34,7 @@ Array [
           className="wxc-input-field"
         >
           <div
-            className="form-control"
+            className="wxc-input-field__form-control"
           >
             <input
               disabled={false}
@@ -57,7 +57,7 @@ Array [
           className="wxc-input-field"
         >
           <div
-            className="form-control"
+            className="wxc-input-field__form-control"
           >
             <input
               disabled={false}

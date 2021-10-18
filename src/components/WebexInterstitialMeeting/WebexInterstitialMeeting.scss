@@ -1,18 +1,20 @@
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-interstitial-meeting {
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-interstitial-meeting;
+
+.#{$C} {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   min-width: $WEBEX_MEETING_MIN_WIDTH;
 
-  .media-container {
+  .#{$C}__media-container {
     flex: 1;
     align-self: stretch;
     display: flex;
     flex-direction: column;
   }
 
-  .interstitial-media-container {
+  .#{$C}__interstitial-media-container {
     flex: 1;
     min-height: 0;
     align-self: stretch;
@@ -21,13 +23,13 @@
     position: relative;
   }
 
-  .interstitial-media {
+  .#{$C}__media {
     flex: 1;
     min-height: 0;
     align-self: stretch;
   }
 
-  .interstitial-meeting-info {
+  .#{$C}__info {
     margin-bottom: 1rem;
   }
 }

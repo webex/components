@@ -1,13 +1,15 @@
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-video-settings {
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-video-settings;
+
+.#{$C} {
   display: flex;
   flex-direction: column;
 
-  .media {
+  .#{$C}__media {
     position: relative;
     margin-top: 1.5rem;
   }
 
-  .no-media {
+  .#{$C}__no-media {
     margin: 2.5rem 1.875rem 1.125rem;
   }
 }

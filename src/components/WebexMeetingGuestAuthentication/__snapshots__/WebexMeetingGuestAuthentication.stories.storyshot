@@ -12,25 +12,25 @@ Array [
     }
   >
     <div
-      className="auth-header"
+      className="wxc-meeting-guest-authentication__header"
     >
       <div
-        className="auth-logo"
+        className="wxc-meeting-guest-authentication__logo"
       />
       <div
-        className="auth-title"
+        className="wxc-meeting-guest-authentication__title"
       >
         Enter meeting information to join
       </div>
     </div>
     <form
-      className="form-content"
+      className="wxc-meeting-guest-authentication__form-content"
     >
       <label
-        className="auth-label"
+        className="wxc-meeting-guest-authentication__label"
       >
         <span
-          className="auth-label-text"
+          className="wxc-meeting-guest-authentication__label-text"
         >
           Your name
         </span>
@@ -38,7 +38,7 @@ Array [
           className="wxc-input-field"
         >
           <div
-            className="form-control"
+            className="wxc-input-field__form-control"
           >
             <input
               disabled={false}
@@ -54,10 +54,10 @@ Array [
         </div>
       </label>
       <label
-        className="auth-label"
+        className="wxc-meeting-guest-authentication__label"
       >
         <span
-          className="auth-label-text"
+          className="wxc-meeting-guest-authentication__label-text"
         >
           Meeting password (required)
         </span>
@@ -65,7 +65,7 @@ Array [
           className="wxc-input-field"
         >
           <div
-            className="form-control"
+            className="wxc-input-field__form-control"
           >
             <input
               disabled={false}
@@ -92,12 +92,12 @@ Array [
       </button>
     </form>
     <div
-      className="host-text"
+      className="wxc-meeting-guest-authentication__host-text"
     >
       Hosting the meeting?
        
       <a
-        className="host-hyperlink"
+        className="wxc-meeting-guest-authentication__host-hyperlink"
       >
         Enter host key.
       </a>

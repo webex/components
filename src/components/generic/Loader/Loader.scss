@@ -1,4 +1,6 @@
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-loader {
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-loader;
+
+.#{$C} {
   background-color: $wxc-black-alpha-50;
   display: flex;
   align-items: center;
@@ -11,7 +13,7 @@
   left: 0;
   z-index: 1;
 
-  .bullet {
+  .#{$C}__bullet {
     position: relative;
     width: 0.625rem;
     height: 0.625rem;

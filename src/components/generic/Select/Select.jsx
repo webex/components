@@ -26,7 +26,7 @@ export default function Select({
   tooltip,
 }) {
   const [expanded, setExpanded] = useState(false);
-  const cssClasses = webexComponentClasses('select', className, undefined, {disabled});
+  const [cssClasses, sc] = webexComponentClasses('select', className, {disabled});
   const label = options?.find((option) => option.value === value)?.label;
 
   const toggleExpanded = () => {
@@ -56,19 +56,19 @@ export default function Select({
   return (
     <div className={cssClasses}>
       <div
-        className={`selected-option ${expanded ? 'expanded' : ''}`}
+        className={`${sc('selected-option')} ${expanded ? sc('expanded') : ''}`}
         onClick={() => toggleExpanded()}
         aria-hidden="true"
         role="button"
         tabIndex="0"
         title={tooltip}
       >
-        <span className="label">{label || value}</span>
+        <span className={sc('label')}>{label || value}</span>
         <Icon name={expanded ? 'arrow-up' : 'arrow-down'} size={13} />
       </div>
       {expanded && (
         <OptionsList
-          className="options-list"
+          className={sc('options-list')}
           options={options}
           onSelect={(option) => handleOptionSelect(option)}
           selected={value}

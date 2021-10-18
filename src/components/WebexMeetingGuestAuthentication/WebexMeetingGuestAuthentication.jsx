@@ -28,7 +28,7 @@ function getNameError(name) {
  * @param {string} props.className  Custom CSS class to apply
  * @param {string} props.meetingID  ID of the meeting
  * @param {object} props.style  Custom style to apply
- * @param {Function} props.switchToHostModal  A callback function to switch from guest form to host form
+ * @param {function} props.switchToHostModal  A callback function to switch from guest form to host form
  * @returns {object} JSX of the component
  *
  */
@@ -41,7 +41,7 @@ export default function WebexMeetingGuestAuthentication({
   const {ID} = useMeeting(meetingID);
   const adapter = useContext(AdapterContext);
 
-  const cssClasses = webexComponentClasses('meeting-guest-authentication', className);
+  const [cssClasses, sc] = webexComponentClasses('meeting-guest-authentication', className);
 
   const joinMeeting = () => {
     adapter.meetingsAdapter.joinMeeting(ID, {name, password});
@@ -54,19 +54,19 @@ export default function WebexMeetingGuestAuthentication({
 
   return (
     <div className={cssClasses} style={style}>
-      <div className="auth-header">
-        <div className="auth-logo" />
-        <div className="auth-title">Enter meeting information to join</div>
+      <div className={sc('header')}>
+        <div className={sc('logo')} />
+        <div className={sc('title')}>Enter meeting information to join</div>
       </div>
-      <form className="form-content">
+      <form className={sc('form-content')}>
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-        <label className="auth-label">
-          <span className="auth-label-text">Your name</span>
+        <label className={sc('label')}>
+          <span className={sc('label-text')}>Your name</span>
           <InputField type="text" name="name" value={name} onChange={handleNameChange} error={nameError} />
         </label>
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-        <label className="auth-label">
-          <span className="auth-label-text">Meeting password (required)</span>
+        <label className={sc('label')}>
+          <span className={sc('label-text')}>Meeting password (required)</span>
           <InputField
             type="password"
             name="password"
@@ -76,11 +76,11 @@ export default function WebexMeetingGuestAuthentication({
         </label>
         <Button type="primary" onClick={joinMeeting}>Start Meeting</Button>
       </form>
-      <div className="host-text">
+      <div className={sc('host-text')}>
         Hosting the meeting?
         {' '}
         {/* eslint-disable-next-line */}
-        <a className="host-hyperlink" onClick={switchToHostModal}>Enter host key.</a>
+        <a className={sc('host-hyperlink')} onClick={switchToHostModal}>Enter host key.</a>
       </div>
     </div>
   );

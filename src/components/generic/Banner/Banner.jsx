@@ -18,7 +18,7 @@ export default function Banner({
   style,
   type,
 }) {
-  const cssClasses = webexComponentClasses('banner', className, {[`-${type}`]: true});
+  const [cssClasses] = webexComponentClasses('banner', className, {[`${type}`]: true});
 
   return (
     <div className={cssClasses} style={style}>

@@ -1,20 +1,13 @@
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-tabs {
-  .tabs-list {
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-tabs;
+
+.#{$C} {
+  .#{$C}__list {
     display: flex;
     list-style-type: none;
     margin: 0;
     padding: 1.5rem 1.375rem;
 
-    .tab {
-      &.active > button {
-        color: var(--wxc-tab--active--color);
-        background: var(--wxc-tab--active--background);
-      }
-
-      &:not(:last-child) {
-        margin-right: 0.5rem;
-      }
-
+    .#{$C}__tab {
       button {
         background: var(--wxc-tab--normal--background);
         border: none;
@@ -36,10 +29,19 @@
           background: var(--wxc-tab--active--background);
         }
       }
+
+      &--active > button {
+        color: var(--wxc-tab--active--color);
+        background: var(--wxc-tab--active--background);
+      }
+
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
     }
   }
 
-  .tabs-content {
+  .#{$C}__content {
     padding: 0 1.375rem;
   }
 }

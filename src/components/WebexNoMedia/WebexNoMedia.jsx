@@ -53,14 +53,14 @@ const SCREENS = {
 };
 
 export default function WebexNoMedia({className, style, media}) {
-  const cssClasses = webexComponentClasses('no-media', className);
+  const [cssClasses, sc] = webexComponentClasses('no-media', className);
   const screen = SCREENS[media];
 
   return (
     <div className={cssClasses} style={style}>
-      <Icon className="icon-media-issue" name={screen.icon} />
-      <Title className="no-media-title">{screen.title}</Title>
-      <div className="no-media-body">
+      <Icon className={sc('icon-media-issue')} name={screen.icon} />
+      <Title className={sc('title')}>{screen.title}</Title>
+      <div className={sc('body')}>
         {screen.message}
       </div>
     </div>

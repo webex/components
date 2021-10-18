@@ -13,7 +13,7 @@ import webexComponentClasses from '../helpers';
  *
  */
 export default function CameraMutedIcon({size, className, style}) {
-  const cssClasses = webexComponentClasses('camera-muted-icon', className);
+  const [cssClasses] = webexComponentClasses('camera-muted-icon', className);
 
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className={`wxc-icon ${cssClasses}`} style={style}>

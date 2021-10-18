@@ -1,4 +1,6 @@
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-banner {
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-banner;
+
+.#{$C} {
   display: flex;
   justify-content: center;
   color: var(--wxc-text-color);
@@ -8,13 +10,13 @@
   right: 0;
   left: 0;
 
-  &.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-banner--top {
+  &--top {
     top: 0;
     background: var(--wxc-banner--top--background);
     padding: 0.75rem 0 5.25rem 0;
   }
 
-  &.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-banner--bottom {
+  &--bottom {
     bottom: 0;
     background: var(--wxc-banner--bottom--background);
     padding: 0.75rem 0;

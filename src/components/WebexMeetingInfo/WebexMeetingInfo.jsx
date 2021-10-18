@@ -43,7 +43,7 @@ export default function WebexMeetingInfo({className, meetingID, style}) {
     title,
   } = useMeeting(meetingID);
   const [meetingInfoRef, {width}] = useElementDimensions();
-  const cssClasses = webexComponentClasses('meeting-info', className, {
+  const [cssClasses] = webexComponentClasses('meeting-info', className, {
     tablet: width >= TABLET && width < DESKTOP,
     desktop: width >= DESKTOP,
   });

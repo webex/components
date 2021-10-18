@@ -1,54 +1,56 @@
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-member {
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-member;
+
+.#{$C} {
   display: flex;
   align-items: center;
   color: var(--wxc-text-color);
 
-  .avatar {
+  .#{$C}__avatar {
     height: 2rem;
     width: 2rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
 
-  .details {
+  .#{$C}__details {
     flex: 1;
     min-width: 0;
     margin-left: 0.75rem;
   }
 
-  .name {
+  .#{$C}__name {
     @include body-fonts;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     margin-top: 0.063rem;
 
-    .guest {
+    .#{$C}__guest {
       color: var(--wxc-secondary-text-color);
     }
   }
 
-  .roles {
+  .#{$C}__roles {
     font-size: 0.875rem;
     line-height: 1rem;
     color: var(--wxc-secondary-text-color);
   }
 
-  .organization {
+  .#{$C}__organization {
     font-size: 0.875rem;
     line-height: 1rem;
     color: var(--wxc-warning-color);
   }
 
-  .sharing {
+  .#{$C}__sharing {
     margin-right: 2.5rem;
   }
 
-  .speaking {
+  .#{$C}__speaking {
     color: var(--wxc-speaking-color);
   }
 
-  .muted {
+  .#{$C}__muted {
     color: var(--wxc-muted-color);
   }
 }
