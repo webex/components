@@ -18,7 +18,7 @@ import WebexNoMedia from '../WebexNoMedia/WebexNoMedia';
  * @returns {object} JSX of the component
  */
 export default function WebexVideoSettings({meetingID, className, style}) {
-  const cssClasses = webexComponentClasses('video-settings', className);
+  const [cssClasses, sc] = webexComponentClasses('video-settings', className);
   const [, display] = useMeetingControl('switch-camera', meetingID);
 
   return (
@@ -28,13 +28,13 @@ export default function WebexVideoSettings({meetingID, className, style}) {
           <>
             <Title>Camera</Title>
             <WebexMeetingControl type="switch-camera" meetingID={meetingID} />
-            <div className="media">
+            <div className={sc('media')}>
               <WebexLocalMedia mediaType="video" meetingID={meetingID} />
               <Banner type="bottom">Preview</Banner>
             </div>
           </>
         ) : (
-          <WebexNoMedia media="camera" className="no-media" />
+          <WebexNoMedia media="camera" className={sc('no-media')} />
         )}
     </div>
   );

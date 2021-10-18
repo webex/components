@@ -3,7 +3,7 @@
 exports[`Storyshots Meetings/Webex Remote Media All Remote Media 1`] = `
 Array [
   <div
-    className="wxc-remote-media remote-video-n-share"
+    className="wxc-remote-media wxc-remote-media--remote-video-n-share"
     style={
       Object {
         "height": "100%",
@@ -13,13 +13,13 @@ Array [
   >
     <video
       autoPlay={true}
-      className="wxc-remote-video"
+      className="wxc-remote-media__remote-video"
       muted={true}
       playsInline={true}
     />
     <video
       autoPlay={true}
-      className="wxc-remote-share"
+      className="wxc-remote-media__remote-share"
       muted={true}
       playsInline={true}
     />
@@ -62,10 +62,10 @@ Array [
     }
   >
     <div
-      className="media-error"
+      className="wxc-remote-media__media-error"
     >
       <svg
-        className="wxc-icon media-error-icon"
+        className="wxc-icon wxc-remote-media__error-icon"
         fill="none"
         height="73"
         style={Object {}}
@@ -141,11 +141,11 @@ Array [
     }
   >
     <div
-      className="wxc-badge connecting-badge"
+      className="wxc-badge wxc-remote-media__connecting-badge"
       style={Object {}}
     >
       <div
-        className="wxc-spinner connecting-spinner"
+        className="wxc-spinner wxc-remote-media__connecting-spinner"
         size={14}
         style={
           Object {
@@ -233,7 +233,7 @@ Array [
   >
     <video
       autoPlay={true}
-      className="wxc-remote-video"
+      className="wxc-remote-media__remote-video"
       muted={true}
       playsInline={true}
     />

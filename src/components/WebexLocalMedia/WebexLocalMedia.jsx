@@ -48,7 +48,7 @@ export default function WebexLocalMedia({
 
   useStream({current: videoNode}, stream);
 
-  const cssClasses = webexComponentClasses('local-media', className, {
+  const [cssClasses] = webexComponentClasses('local-media', className, {
     desktop: width >= PHONE_LARGE,
     'no-media': !stream,
   });

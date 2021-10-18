@@ -21,14 +21,14 @@ export default function OptionsList({
   onSelect,
   selected,
 }) {
-  const cssClasses = webexComponentClasses('options-list', className);
+  const [cssClasses, sc] = webexComponentClasses('options-list', className);
 
   return (
     <div className={cssClasses}>
       <ul role="menu">
         {options.map((option) => (
           <li
-            className="option"
+            className={sc('option')}
             key={option.value}
             onClick={() => onSelect(option)}
             aria-hidden="true"
@@ -38,8 +38,8 @@ export default function OptionsList({
             title={option.label}
           >
             {option.icon && <Icon name={option.icon} />}
-            <span className="label">{option.label}</span>
-            {selected && <Icon className={classNames('check', {invisible: (selected !== option.value)})} size={16} name="check" />}
+            <span className={sc('label')}>{option.label}</span>
+            {selected && <Icon className={classNames(sc('check'), {[sc('check--invisible')]: (selected !== option.value)})} size={16} name="check" />}
           </li>
         ))}
       </ul>

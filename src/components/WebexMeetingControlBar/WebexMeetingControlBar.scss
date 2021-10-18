@@ -1,10 +1,12 @@
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-control-bar {
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-control-bar;
+
+.#{$C} {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
 
-  .controls {
+  .#{$C}__controls {
     white-space: nowrap;
     display: flex;
     align-items: center;
@@ -13,18 +15,17 @@
       margin: 0.3125rem;
     }
 
-    &.control-refs {
+    &--control-refs {
       height: 0;
       overflow: hidden;
     }
   }
 
-  .collapsed-controls {
+  .#{$C}__collapsed-controls {
     position: absolute;
     bottom: calc(100% + 0.2rem);
     left: 0;
     right: 0;
     z-index: 100;
   }
-
 }

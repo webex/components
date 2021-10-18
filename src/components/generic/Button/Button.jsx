@@ -26,7 +26,7 @@ export default function Button({
   style,
   type,
 }) {
-  const cssClasses = webexComponentClasses('button', className, {[`-${type}`]: true});
+  const [cssClasses] = webexComponentClasses('button', className, {[`${type}`]: true});
 
   return (
     <button className={cssClasses} disabled={isDisabled} title={title} type="button" onClick={onClick} style={style} aria-label={ariaLabel}>

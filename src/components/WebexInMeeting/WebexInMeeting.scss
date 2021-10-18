@@ -1,21 +1,23 @@
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-in-meeting;
+
 $shadow-offset: 0.25rem;
 $shadow-blur: 1rem;
 $shadow-spread: -0.125rem;
 $shadow-color: rgba(0, 0, 0, 0.2);
 
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-in-meeting {
+.#{$C} {
   border-radius: 0.5rem;
   position: relative;
   display: flex;
   justify-content: center;
 
-  &.remote-sharing {
-    .local-media-in-meeting {
+  &--remote-sharing {
+    .#{$C}__local-media-in-meeting {
       display: none;
     }
   }
 
-  .media-container {
+  .#{$C}__media-container {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -23,59 +25,43 @@ $shadow-color: rgba(0, 0, 0, 0.2);
     align-self: stretch;
   }
 
-  .share-banner {
+  .#{$C}__share-banner {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
   }
 
-  .remote-media-in-meeting {
+  .#{$C}__remote-media-in-meeting {
     flex: 1;
     min-height: 0;
   }
 
-  .local-media-in-meeting {
+  .#{$C}__local-media-in-meeting {
     @include media-preview-mobile();
-    
+
     height: 5.625rem;
     width: 10rem;
     min-width: auto;
     min-height: auto;
     background: var(--wxc-secondary-video-background);
-
-    .md-avatar {
-      transform: none; // Avatar is 40x40px, resets any transforms
-    }
   }
 
-  &-tablet {
-    .local-media-in-meeting {
+  &--tablet {
+    .#{$C}__local-media-in-meeting {
       @include media-preview-tablet();
-
-      .md-avatar {
-        transform: scale(2); // Avatar is 40x40px, this makes it 80x80px
-      }
     }
   }
 
-    &-desktop {
-    .local-media-in-meeting {
+  &--desktop {
+    .#{$C}__local-media-in-meeting {
       @include media-preview-tablet();
-
-      .md-avatar {
-        transform: scale(2); // Avatar is 40x40px, this makes it 120x120px
-      }
     }
   }
 
-  &-desktop-xl {
-    .local-media-in-meeting {
+  &--desktop-xl {
+    .#{$C}__local-media-in-meeting {
       @include media-preview-desktop-xl();
-
-      .md-avatar {
-        transform: scale(3); // Avatar is 40x40px, this makes it 120x120px
-      }
     }
   }
 }

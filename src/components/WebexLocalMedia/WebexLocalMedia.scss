@@ -1,3 +1,5 @@
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-local-media;
+
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-local-media {
   display: flex;
   position: relative;
@@ -16,16 +18,5 @@
     width: 100%;
     object-fit: cover;
     border-radius: 0.5rem;
-  }
-
-  .md-avatar {
-    transform: scale(2); // Avatar is 40x40px, this makes it 80x80px
-    transform-origin: center center;
-  }
-
-  &-desktop {
-    .md-avatar {
-      transform: scale(3); // Avatar is 40x40px, this makes it 120x120px
-    }
   }
 }

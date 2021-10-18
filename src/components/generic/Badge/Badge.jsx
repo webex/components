@@ -13,7 +13,7 @@ import webexComponentClasses from '../../helpers';
  * @returns {object}  JSX of the element
  */
 export default function Badge({children, className, style}) {
-  const cssClasses = webexComponentClasses('badge', className);
+  const [cssClasses] = webexComponentClasses('badge', className);
 
   return (
     <div className={cssClasses} style={style}>

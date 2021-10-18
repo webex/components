@@ -57,14 +57,14 @@ export default function ActivityHeader({
 }) {
   const {displayName} = usePerson(personID);
 
-  const cssClasses = webexComponentClasses('activity-header', className);
+  const [cssClasses, sc] = webexComponentClasses('activity-header', className);
 
   return (
     <div className={cssClasses} style={style}>
-      <WebexAvatar personID={personID} className="activity-avatar" />
-      <div className="activity-author">
+      <WebexAvatar personID={personID} className={sc('avatar')} />
+      <div className={sc('author')}>
         <span>{displayName}</span>
-        <span className="activity-timestamp">{formatMessageDate(new Date(timestamp))}</span>
+        <span className={sc('timestamp')}>{formatMessageDate(new Date(timestamp))}</span>
       </div>
     </div>
   );

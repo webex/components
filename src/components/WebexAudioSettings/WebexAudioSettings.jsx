@@ -16,7 +16,7 @@ import WebexNoMedia from '../WebexNoMedia/WebexNoMedia';
  * @returns {object} JSX of the component
  */
 export default function WebexAudioSettings({className, meetingID, style}) {
-  const cssClasses = webexComponentClasses('audio-settings', className);
+  const [cssClasses, sc] = webexComponentClasses('audio-settings', className);
   const [, display] = useMeetingControl('switch-microphone', meetingID);
 
   return (
@@ -30,7 +30,7 @@ export default function WebexAudioSettings({className, meetingID, style}) {
             <WebexMeetingControl type="switch-microphone" meetingID={meetingID} />
           </>
         ) : (
-          <WebexNoMedia media="microphone" className="no-media" />
+          <WebexNoMedia media="microphone" className={sc('no-media')} />
         )}
     </div>
   );

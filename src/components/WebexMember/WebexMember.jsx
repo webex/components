@@ -57,22 +57,22 @@ export default function WebexMember({
   ].filter((role) => role);
   const emailDomain = emails?.[0]?.split('@')[1] || <i>Unknown organization</i>;
 
-  const cssClasses = webexComponentClasses('member', className);
+  const [cssClasses, sc] = webexComponentClasses('member', className);
 
   return (
     <div className={cssClasses} style={style}>
-      <WebexAvatar personID={personID} displayStatus={displayStatus} className="avatar" />
-      <div className="details">
-        <div className="name">
+      <WebexAvatar personID={personID} displayStatus={displayStatus} className={sc('avatar')} />
+      <div className={sc('details')}>
+        <div className={sc('name')}>
           {(displayName ?? <Spinner size={16} />) || <i>Name not available</i>}
-          {isGuest && <span className="guest"> (Guest)</span>}
+          {isGuest && <span className={sc('guest')}> (Guest)</span>}
         </div>
-        {roles.length > 0 && <div className="roles">{roles.join(', ')}</div>}
-        {isExternal && <div className="organization">{organization.name || emailDomain}</div>}
+        {roles.length > 0 && <div className={sc('roles')}>{roles.join(', ')}</div>}
+        {isExternal && <div className={sc('organization')}>{organization.name || emailDomain}</div>}
       </div>
-      {isInMeeting && isSharing && <Icon name="content-share_16" className="sharing" />}
-      {isInMeeting && isSpeaking && <Icon name="microphone_16" className="speaking" />}
-      {isInMeeting && isMuted && <Icon name="microphone-muted_16" className="muted" />}
+      {isInMeeting && isSharing && <Icon name="content-share_16" className={sc('sharing')} />}
+      {isInMeeting && isSpeaking && <Icon name="microphone_16" className={sc('speaking')} />}
+      {isInMeeting && isMuted && <Icon name="microphone-muted_16" className={sc('muted')} />}
     </div>
   );
 }

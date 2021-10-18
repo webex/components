@@ -12,7 +12,7 @@ import webexComponentClasses from '../../helpers';
  * @returns {object} JSX of the element
  */
 export default function Spinner({className, size, style}) {
-  const cssClasses = webexComponentClasses('spinner', className);
+  const [cssClasses] = webexComponentClasses('spinner', className);
   const cssStyle = {...style};
 
   if (size) {

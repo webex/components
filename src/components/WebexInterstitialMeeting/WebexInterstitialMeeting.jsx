@@ -20,7 +20,7 @@ import WebexMeetingInfo from '../WebexMeetingInfo/WebexMeetingInfo';
  * @returns {object} JSX of the component
  */
 export default function WebexInterstitialMeeting({className, meetingID, style}) {
-  const cssClasses = webexComponentClasses('interstitial-meeting', className);
+  const [cssClasses, sc] = webexComponentClasses('interstitial-meeting', className);
   const [meetingRef, {height}] = useElementDimensions();
   const [maxWidth, setMaxWidth] = useState('none');
   const {localVideo} = useMeeting(meetingID);
@@ -32,10 +32,10 @@ export default function WebexInterstitialMeeting({className, meetingID, style}) 
   return (
     <div ref={meetingRef} className={cssClasses} style={style}>
       {meetingID ? (
-        <div style={{maxWidth}} className="media-container">
-          <WebexMeetingInfo className="interstitial-meeting-info" meetingID={meetingID} />
-          <div className="interstitial-media-container">
-            <WebexLocalMedia className="interstitial-media" meetingID={meetingID} mediaType="video" />
+        <div style={{maxWidth}} className={sc('media-container')}>
+          <WebexMeetingInfo className={sc('info')} meetingID={meetingID} />
+          <div className={sc('interstitial-media-container')}>
+            <WebexLocalMedia className={sc('media')} meetingID={meetingID} mediaType="video" />
             {localVideo.stream && <Banner>My preview</Banner>}
           </div>
         </div>

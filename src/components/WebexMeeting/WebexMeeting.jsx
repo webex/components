@@ -55,7 +55,7 @@ export default function WebexMeeting({
   const isActive = state === JOINED;
   const adapter = useContext(AdapterContext);
   const [mediaRef, {width}] = useElementDimensions();
-  const cssClasses = webexComponentClasses('meeting', className, null, {'roster-only': showRoster && width <= PHONE_LARGE});
+  const [cssClasses, sc] = webexComponentClasses('meeting', className, {'roster-only': showRoster && width <= PHONE_LARGE});
   const [showToast, setShowToast] = useState(false);
   const toastTimeoutRef = useRef();
   const [authModal, setAuthModal] = useState('guest');
@@ -76,33 +76,33 @@ export default function WebexMeeting({
 
   // A meeting with a falsy state means that the meeting has not been created
   if (!state) {
-    meetingDisplay = <div className="loading-logo" />;
+    meetingDisplay = <div className={sc('loading-logo')} />;
   } else if (state === LEFT) {
-    meetingDisplay = <Title className="centered">You&apos;ve successfully left the meeting</Title>;
+    meetingDisplay = <Title className={sc('centered')}>You&apos;ve successfully left the meeting</Title>;
   } else {
     meetingDisplay = (
       <>
-        {logo && <div className="meeting-logo">{logo}</div>}
-        <div className="meeting-body">
+        {logo && <div className={sc('logo')}>{logo}</div>}
+        <div className={sc('body')}>
           {isActive
-            ? <WebexInMeeting meetingID={ID} className="inner-meeting" />
-            : <WebexInterstitialMeeting meetingID={ID} className="inner-meeting" />}
+            ? <WebexInMeeting meetingID={ID} className={sc('inner-meeting')} />
+            : <WebexInterstitialMeeting meetingID={ID} className={sc('inner-meeting')} />}
           {showRoster && (
             <WebexMemberRoster
               destinationID={ID}
               destinationType={DestinationType.MEETING}
-              className="member-roster"
+              className={sc('member-roster')}
               onClose={() => adapter.meetingsAdapter.toggleRoster(ID)}
             />
           )}
-          {showToast && <Badge className="media-state-toast">{toastText}</Badge>}
+          {showToast && <Badge className={sc('media-state-toast')}>{toastText}</Badge>}
         </div>
-        <WebexMeetingControlBar meetingID={ID} className="control-bar" controls={controls} />
+        <WebexMeetingControlBar meetingID={ID} className={sc('control-bar')} controls={controls} />
         {settings.visible && (
           <Modal
             onClose={() => adapter.meetingsAdapter.toggleSettings(ID)}
+            otherClassName={sc('settings')}
             title="Settings"
-            className="settings"
           >
             <WebexSettings meetingID={ID} />
           </Modal>
@@ -110,8 +110,8 @@ export default function WebexMeeting({
         {passwordRequired && state === NOT_JOINED && (
           <Modal
             onClose={() => adapter.meetingsAdapter.setPasswordRequired(ID, false)}
+            otherClassName={[sc('authentication')]}
             onBack={authModal === 'host' && (() => setAuthModal('guest'))}
-            className="authentication"
           >
             {
               authModal === 'guest'

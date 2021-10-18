@@ -23,12 +23,12 @@ export default function WebexActivity({activityID, className, style}) {
     personID,
     text,
   } = useActivity(activityID);
-  const cssClasses = webexComponentClasses('activity', className);
+  const [cssClasses, sc] = webexComponentClasses('activity', className);
 
   return (
     <div className={cssClasses} key={ID} style={style}>
       {displayHeader && <ActivityHeader personID={personID} timestamp={created} />}
-      <div className="activity-content">{text}</div>
+      <div className={sc('content')}>{text}</div>
     </div>
   );
 }

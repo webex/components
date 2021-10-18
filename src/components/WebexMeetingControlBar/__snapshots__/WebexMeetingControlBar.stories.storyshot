@@ -11,10 +11,10 @@ Array [
     }
   >
     <div
-      className="controls"
+      className="wxc-meeting-control-bar__controls"
     >
       <div
-        className="collapse-button"
+        className="wxc-meeting-control-bar__collapse-button"
       >
         <button
           className="wxc-button wxc-button--default"
@@ -51,7 +51,7 @@ Array [
         className="wxc-meeting-control"
       >
         <button
-          className="wxc-button control-button wxc-button--cancel"
+          className="wxc-button wxc-meeting-control__control-button wxc-button--cancel"
           disabled={false}
           onClick={[Function]}
           style={Object {}}
@@ -75,14 +75,14 @@ Array [
       </div>
     </div>
     <div
-      className="controls control-refs"
+      className="wxc-meeting-control-bar__controls wxc-meeting-control-bar__controls--control-refs"
     >
       <div>
         <div
           className="wxc-meeting-control"
         >
           <button
-            className="wxc-button control-button wxc-button--default"
+            className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -112,7 +112,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
-            className="wxc-button control-button wxc-button--default"
+            className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -135,7 +135,7 @@ Array [
               />
             </svg>
             <span
-              className="button-text"
+              className="wxc-meeting-control__button-text"
             >
               Unmute
             </span>
@@ -147,7 +147,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
-            className="wxc-button control-button wxc-button--default"
+            className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -177,7 +177,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
-            className="wxc-button control-button wxc-button--default"
+            className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -200,7 +200,7 @@ Array [
               />
             </svg>
             <span
-              className="button-text"
+              className="wxc-meeting-control__button-text"
             >
               Start video
             </span>
@@ -212,7 +212,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
-            className="wxc-button control-button wxc-button--default"
+            className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -244,7 +244,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
-            className="wxc-button control-button wxc-button--default"
+            className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -269,7 +269,7 @@ Array [
               />
             </svg>
             <span
-              className="button-text"
+              className="wxc-meeting-control__button-text"
             >
               Stop sharing
             </span>
@@ -281,7 +281,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
-            className="wxc-button control-button wxc-button--default"
+            className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -321,7 +321,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
-            className="wxc-button control-button wxc-button--default"
+            className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -354,7 +354,7 @@ Array [
               />
             </svg>
             <span
-              className="button-text"
+              className="wxc-meeting-control__button-text"
             >
               Participants
             </span>
@@ -366,7 +366,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
-            className="wxc-button control-button wxc-button--default"
+            className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -398,7 +398,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
-            className="wxc-button control-button wxc-button--default"
+            className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -423,7 +423,7 @@ Array [
               />
             </svg>
             <span
-              className="button-text"
+              className="wxc-meeting-control__button-text"
             >
               Settings
             </span>
@@ -435,7 +435,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
-            className="wxc-button control-button wxc-button--cancel"
+            className="wxc-button wxc-meeting-control__control-button wxc-button--cancel"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -463,7 +463,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
-            className="wxc-button control-button wxc-button--cancel"
+            className="wxc-button wxc-meeting-control__control-button wxc-button--cancel"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -487,7 +487,7 @@ Array [
         </div>
       </div>
       <div
-        className="collapse-button"
+        className="wxc-meeting-control-bar__collapse-button"
       >
         <button
           className="wxc-button wxc-button--default"
@@ -556,10 +556,10 @@ Array [
     }
   >
     <div
-      className="controls"
+      className="wxc-meeting-control-bar__controls"
     >
       <div
-        className="collapse-button"
+        className="wxc-meeting-control-bar__collapse-button"
       >
         <button
           className="wxc-button wxc-button--default"
@@ -597,7 +597,7 @@ Array [
       >
         <button
           aria-label="Muted, video off"
-          className="wxc-button control-button wxc-button--join"
+          className="wxc-button wxc-meeting-control__control-button wxc-button--join"
           disabled={false}
           onClick={[Function]}
           style={Object {}}
@@ -605,7 +605,7 @@ Array [
           type="button"
         >
           <span
-            className="button-text"
+            className="wxc-meeting-control__button-text"
           >
             Join meeting
           </span>
@@ -613,14 +613,14 @@ Array [
       </div>
     </div>
     <div
-      className="controls control-refs"
+      className="wxc-meeting-control-bar__controls wxc-meeting-control-bar__controls--control-refs"
     >
       <div>
         <div
           className="wxc-meeting-control"
         >
           <button
-            className="wxc-button control-button wxc-button--default"
+            className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -650,7 +650,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
-            className="wxc-button control-button wxc-button--default"
+            className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -673,7 +673,7 @@ Array [
               />
             </svg>
             <span
-              className="button-text"
+              className="wxc-meeting-control__button-text"
             >
               Unmute
             </span>
@@ -685,7 +685,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
-            className="wxc-button control-button wxc-button--default"
+            className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -715,7 +715,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
-            className="wxc-button control-button wxc-button--default"
+            className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -738,7 +738,7 @@ Array [
               />
             </svg>
             <span
-              className="button-text"
+              className="wxc-meeting-control__button-text"
             >
               Start video
             </span>
@@ -750,7 +750,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
-            className="wxc-button control-button wxc-button--default"
+            className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -782,7 +782,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
-            className="wxc-button control-button wxc-button--default"
+            className="wxc-button wxc-meeting-control__control-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -807,7 +807,7 @@ Array [
               />
             </svg>
             <span
-              className="button-text"
+              className="wxc-meeting-control__button-text"
             >
               Settings
             </span>
@@ -820,7 +820,7 @@ Array [
         >
           <button
             aria-label="Muted, video off"
-            className="wxc-button control-button wxc-button--join"
+            className="wxc-button wxc-meeting-control__control-button wxc-button--join"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -828,7 +828,7 @@ Array [
             type="button"
           >
             <span
-              className="button-text"
+              className="wxc-meeting-control__button-text"
             >
               Join meeting
             </span>
@@ -841,7 +841,7 @@ Array [
         >
           <button
             aria-label="Muted, video off"
-            className="wxc-button control-button wxc-button--join"
+            className="wxc-button wxc-meeting-control__control-button wxc-button--join"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -849,7 +849,7 @@ Array [
             type="button"
           >
             <span
-              className="button-text"
+              className="wxc-meeting-control__button-text"
             >
               Join meeting
             </span>
@@ -857,7 +857,7 @@ Array [
         </div>
       </div>
       <div
-        className="collapse-button"
+        className="wxc-meeting-control-bar__collapse-button"
       >
         <button
           className="wxc-button wxc-button--default"

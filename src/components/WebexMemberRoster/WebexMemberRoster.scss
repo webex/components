@@ -1,4 +1,6 @@
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-member-roster {
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-member-roster;
+
+.#{$C} {
   display: flex;
   flex-direction: column;
 
@@ -8,7 +10,7 @@
   padding: 0.625rem 0 0.625rem 0.75rem;
 
 
-  .section-title {
+  .#{$C}__section-title {
     @include body-fonts;
     color: var(--wxc-secondary-text-color);
     font-family: $brand-font-regular;
@@ -19,7 +21,7 @@
     padding: 0.438rem 0 0.188rem 0;
   }
 
-  .external-user-warning {
+  .#{$C}__external-user-warning {
     color: var(--wxc-warning-color);
     display: flex;
     align-items: flex-start;
@@ -28,21 +30,21 @@
     line-height: 1.375rem;
     margin-top: 0.75rem;
 
-    .external-user-icon {
+    .#{$C}__external-user-icon {
       margin-right: 0.578rem;
     }
 
-    .external-user-message {
+    .#{$C}__external-user-message {
       flex: 1;
     }
   }
 
-  .roster-header {
+  .#{$C}__header {
     display: flex;
     align-items: center;
     padding-right: 0.375rem;
 
-    .roster-title {
+    .#{$C}__title {
       font-family: $brand-font-bold;
       font-size: 1rem;
       line-height: 1.5rem;
@@ -51,7 +53,7 @@
     }
   }
 
-  .members {
+  .#{$C}__members {
     overflow-y: auto;
     flex: 1;
     padding-right: 1.25rem;

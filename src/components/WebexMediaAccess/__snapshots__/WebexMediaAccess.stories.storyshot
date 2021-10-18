@@ -32,17 +32,17 @@ Array [
       />
     </svg>
     <h2
-      className="title"
+      className="wxc-media-access__title"
     >
       Allow access to camera
     </h2>
     <p
-      className="body"
+      className="wxc-media-access__body"
     >
       Select
        
       <span
-        className="allow"
+        className="wxc-media-access__allow"
       >
         Allow
       </span>
@@ -53,7 +53,7 @@ Array [
       className="wxc-meeting-control"
     >
       <button
-        className="wxc-button control-button wxc-button--join"
+        className="wxc-button wxc-meeting-control__control-button wxc-button--join"
         disabled={false}
         onClick={[Function]}
         style={Object {}}
@@ -61,7 +61,7 @@ Array [
         type="button"
       >
         <span
-          className="button-text"
+          className="wxc-meeting-control__button-text"
         >
           Proceed without camera
         </span>
@@ -126,17 +126,17 @@ Array [
       />
     </svg>
     <h2
-      className="title"
+      className="wxc-media-access__title"
     >
       Allow access to microphone
     </h2>
     <p
-      className="body"
+      className="wxc-media-access__body"
     >
       Select
        
       <span
-        className="allow"
+        className="wxc-media-access__allow"
       >
         Allow
       </span>
@@ -147,7 +147,7 @@ Array [
       className="wxc-meeting-control"
     >
       <button
-        className="wxc-button control-button wxc-button--join"
+        className="wxc-button wxc-meeting-control__control-button wxc-button--join"
         disabled={false}
         onClick={[Function]}
         style={Object {}}
@@ -155,7 +155,7 @@ Array [
         type="button"
       >
         <span
-          className="button-text"
+          className="wxc-meeting-control__button-text"
         >
           Proceed without audio
         </span>

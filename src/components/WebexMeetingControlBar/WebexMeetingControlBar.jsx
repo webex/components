@@ -37,7 +37,7 @@ export default function WebexMeetingControlBar({
   const [collapseButtonRef, {width: collapseButtonWidth}] = useElementDimensions();
   const {JOINED} = MeetingState;
   const isActive = state === JOINED;
-  const cssClasses = webexComponentClasses('meeting-control-bar', className);
+  const [cssClasses, sc] = webexComponentClasses('meeting-control-bar', className);
   const controlNames = controls(isActive);
   const controlCount = controlNames.length;
   const [controlTexts, setControlTexts] = useState();
@@ -142,12 +142,12 @@ export default function WebexMeetingControlBar({
     const options = collapsedControls.map(({name, control}) => ({value: name, label: control}));
 
     return (
-      <OptionsList className="collapsed-controls" options={options} onSelect={toggleCollapsed} />
+      <OptionsList className={sc('collapsed-controls')} options={options} onSelect={toggleCollapsed} />
     );
   };
 
   const renderCollapseButton = (shown, onClick, ref) => (
-    <div ref={ref} key="collapse-button" className="collapse-button">
+    <div ref={ref} key="collapse-button" className={sc('collapse-button')}>
       <Button onClick={onClick}>
         <Icon name={shown ? 'more-adr' : 'more'} />
       </Button>
@@ -171,13 +171,13 @@ export default function WebexMeetingControlBar({
     <div ref={containerRef} className={cssClasses} style={style}>
       {collapsedShown && renderCollapsedControls()}
       {controlTexts && (
-        <div className="controls">
+        <div className={sc('controls')}>
           {renderControls(controlNames.slice(0, collapseStart))}
           {collapseStart < collapseEnd && renderCollapseButton(collapsedShown, toggleCollapsed)}
           {renderControls(controlNames.slice(collapseEnd))}
         </div>
       )}
-      <div className="controls control-refs">
+      <div className={`${sc('controls')} ${sc('controls--control-refs')}`}>
         {controlNames.map((name, i) => (
           <React.Fragment key={name}>
             <div ref={iconControlRefs[i]} key="icon">

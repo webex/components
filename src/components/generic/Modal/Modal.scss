@@ -1,4 +1,6 @@
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-modal {
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-modal;
+
+.#{$C} {
   position: fixed;
   left: 0;
   right: 0;
@@ -10,7 +12,7 @@
   justify-content: center;
   background-color: #{$wxc-black-alpha-40};
 
-  .modal-content {
+  .#{$C}__content {
     border: var(--wxc-modal--border);
     box-shadow: var(--wxc-modal--box-shadow);
     background-color: var(--wxc-modal--background);
@@ -21,36 +23,36 @@
     flex-direction: column;
   }
 
-  &.centered-modal{
+  &--centered-modal{
     align-items: center;
 
-    .modal-content {
+    .#{$C}__content {
       flex: 0 1 auto;
     }
   }
 
-  .modal-header {
+  .#{$C}__header {
     display: flex;
     align-items: center;
     padding: 0.75rem 1.25rem;
   }
 
-  .modal-title {
+  .#{$C}__title {
     color: var(--wxc-text-color);
     font-family: $brand-font-bold;
     font-size: 1rem;
     line-height: 1.5rem;
   }
 
-  .modal-close {
+  .#{$C}__close {
     margin-left: auto;
   }
 
-  .modal-back {
+  .#{$C}__back {
     padding: 0.6875rem;
   }
 
-  .modal-body {
+  .#{$C}__body {
     padding: 0 1.25rem 1.25rem;
     overflow-y: auto;
     flex: 1;

@@ -39,7 +39,7 @@ export default function WebexActivityStream({className, roomID, style}) {
   const showLoader = useActivityScroll(roomID, activityStreamRef, loadPreviousActivities);
   const lastActivityRef = useOverflowActivities(roomID, activityStreamRef, loadPreviousActivities);
 
-  const cssClasses = webexComponentClasses('activity-stream', className);
+  const [cssClasses, sc] = webexComponentClasses('activity-stream', className);
 
   const personName = roomType === RoomType.DIRECT ? title : '';
   const activities = activitiesData.map((activity) => {
@@ -57,7 +57,7 @@ export default function WebexActivityStream({className, roomID, style}) {
     <div className={cssClasses} ref={activityStreamRef} style={style}>
       {showLoader && <Loader />}
       {activities.length ? <>{activities}</> : <Greeting personName={personName} />}
-      <div className="last-activity" ref={lastActivityRef} />
+      <div className={sc('last-activity')} ref={lastActivityRef} />
     </div>
   );
 }

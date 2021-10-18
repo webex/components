@@ -134,7 +134,7 @@ export default function Greeting({className, personName, style}) {
   let svg = <GreetingSpaceSVG />;
   let description = 'This is a shared space between you and other group members. Here\'s where you\'ll see shared messages, files, and a call history with this space.';
 
-  const cssClasses = webexComponentClasses('greeting', className);
+  const [cssClasses, sc] = webexComponentClasses('greeting', className);
 
   if (personName) {
     svg = <GreetingDirectSVG />;
@@ -143,9 +143,9 @@ export default function Greeting({className, personName, style}) {
 
   return (
     <div className={cssClasses} style={style}>
-      <div className="greeting-header">
+      <div className={sc('header')}>
         {svg}
-        <div className="greeting-description">{description}</div>
+        <div className={sc('description')}>{description}</div>
       </div>
     </div>
   );

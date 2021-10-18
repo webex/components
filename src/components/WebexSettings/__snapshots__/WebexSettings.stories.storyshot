@@ -15,12 +15,12 @@ Array [
       className="wxc-tabs"
     >
       <ul
-        className="tabs-list"
+        className="wxc-tabs__list"
         onKeyUp={[Function]}
         tabIndex={0}
       >
         <li
-          className="tab active"
+          className="wxc-tabs__tab wxc-tabs__tab--active"
         >
           <button
             onClick={[Function]}
@@ -31,7 +31,7 @@ Array [
           </button>
         </li>
         <li
-          className="tab"
+          className="wxc-tabs__tab"
         >
           <button
             onClick={[Function]}
@@ -43,7 +43,7 @@ Array [
         </li>
       </ul>
       <div
-        className="tabs-content"
+        className="wxc-tabs__content"
       >
         <div
           className="wxc-audio-settings"
@@ -58,18 +58,18 @@ Array [
             className="wxc-meeting-control"
           >
             <div
-              className="wxc-select control-select"
+              className="wxc-select wxc-meeting-control__control-select"
             >
               <div
                 aria-hidden="true"
-                className="selected-option "
+                className="wxc-select__selected-option "
                 onClick={[Function]}
                 role="button"
                 tabIndex="0"
                 title="The current browser does not support changing speakers"
               >
                 <span
-                  className="label"
+                  className="wxc-select__label"
                 >
                   speakerID1
                 </span>
@@ -98,18 +98,18 @@ Array [
             className="wxc-meeting-control"
           >
             <div
-              className="wxc-select control-select"
+              className="wxc-select wxc-meeting-control__control-select"
             >
               <div
                 aria-hidden="true"
-                className="selected-option "
+                className="wxc-select__selected-option "
                 onClick={[Function]}
                 role="button"
                 tabIndex="0"
                 title="Microphone Devices"
               >
                 <span
-                  className="label"
+                  className="wxc-select__label"
                 >
                   microphoneID1
                 </span>

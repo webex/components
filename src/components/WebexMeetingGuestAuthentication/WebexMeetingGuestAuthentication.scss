@@ -1,4 +1,6 @@
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-guest-authentication {
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-guest-authentication;
+
+.#{$C} {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,48 +9,48 @@
   color: var(--wxc-text-color);
   line-height: 1.375rem;
 
-  .auth-header {
+  .#{$C}__header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 1.5rem;
 
-    .auth-logo {
+    .#{$C}__logo {
       background: var(--wxc-auth-logo) no-repeat center;
       width: 3.689rem;
       height: 2.625rem;
       margin-bottom: 1.25rem;
     }
 
-    .auth-title {
+    .#{$C}__title {
       font-size: 1.25rem;
       line-height: 1.875rem;
     }
   }
 
-  .form-content {
+  .#{$C}__form-content {
     display: flex;
     flex-direction: column;
     width: 17.625rem;
 
-    .auth-label {
+    .#{$C}__label {
       display: flex;
       flex-direction: column;
       margin-bottom: 1rem;
 
-      .auth-label-text {
+      .#{$C}__label-text {
         padding-left: 0.75rem;
         margin-bottom: 0.25rem;
       }
     }
   }
 
-  .host-text {
+  .#{$C}__host-text {
     margin-top: 1.25rem;
     color: var(--wxc-secondary-text-color);
 
-    .host-hyperlink {
+    .#{$C}__host-hyperlink {
       color: var(--wxc-hyperlink--normal--color);
       text-decoration: underline;
 

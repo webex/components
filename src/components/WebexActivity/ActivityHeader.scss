@@ -1,16 +1,18 @@
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-activity-header;
+
 $content-left-margin: 3.5rem; //avatar width + margin
 
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-activity-header {
+.#{$C} {
   display: flex;
   flex-direction: column;
   position: relative;
 
-  .activity-avatar {
+  .#{$C}__avatar {
     position: absolute;
     margin: 0 0.5rem;
   }
 
-  .activity-author {
+  .#{$C}__author {
     @include noselect();
     display: flex;
     min-width: 18.75rem !important;
@@ -22,12 +24,7 @@ $content-left-margin: 3.5rem; //avatar width + margin
     word-wrap: break-word;
   }
 
-  .md-avatar {
-    position: absolute;
-    margin: 0 0.5rem;
-  }
-
-  .activity-timestamp {
+  .#{$C}__timestamp {
     margin-left: 0.5rem;
   }
 }

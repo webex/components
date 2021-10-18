@@ -16,7 +16,7 @@ import WebexVideoSettings from '../WebexVideoSettings/WebexVideoSettings';
  *
  */
 export default function WebexSettings({meetingID, className, style}) {
-  const cssClasses = webexComponentClasses('settings', className);
+  const [cssClasses] = webexComponentClasses('settings', className);
   const [tab, setTab] = useState('audio');
   const tabs = [{
     key: 'audio',

@@ -6,7 +6,7 @@ Array [
     className="wxc-meeting-control"
   >
     <button
-      className="wxc-button control-button wxc-button--default"
+      className="wxc-button wxc-meeting-control__control-button wxc-button--default"
       disabled={false}
       onClick={[Function]}
       style={Object {}}
@@ -29,7 +29,7 @@ Array [
         />
       </svg>
       <span
-        className="button-text"
+        className="wxc-meeting-control__button-text"
       >
         Unmute
       </span>
@@ -64,7 +64,7 @@ Array [
     className="wxc-meeting-control"
   >
     <button
-      className="wxc-button control-button wxc-button--default"
+      className="wxc-button wxc-meeting-control__control-button wxc-button--default"
       disabled={true}
       onClick={[Function]}
       style={Object {}}
@@ -125,7 +125,7 @@ Array [
     className="wxc-meeting-control"
   >
     <button
-      className="wxc-button control-button wxc-button--join"
+      className="wxc-button wxc-meeting-control__control-button wxc-button--join"
       disabled={true}
       onClick={[Function]}
       style={Object {}}
@@ -133,7 +133,7 @@ Array [
       type="button"
     >
       <span
-        className="button-text"
+        className="wxc-meeting-control__button-text"
       >
         Join meeting
       </span>
@@ -168,18 +168,18 @@ Array [
     className="wxc-meeting-control"
   >
     <div
-      className="wxc-select control-select"
+      className="wxc-select wxc-meeting-control__control-select"
     >
       <div
         aria-hidden="true"
-        className="selected-option "
+        className="wxc-select__selected-option "
         onClick={[Function]}
         role="button"
         tabIndex="0"
         title="Video Devices"
       >
         <span
-          className="label"
+          className="wxc-select__label"
         >
           cameraID1
         </span>
@@ -227,7 +227,7 @@ Array [
     className="wxc-meeting-control"
   >
     <button
-      className="wxc-button control-button wxc-button--default"
+      className="wxc-button wxc-meeting-control__control-button wxc-button--default"
       disabled={false}
       onClick={[Function]}
       style={Object {}}
@@ -250,7 +250,7 @@ Array [
         />
       </svg>
       <span
-        className="button-text"
+        className="wxc-meeting-control__button-text"
       >
         Unmute
       </span>
@@ -286,7 +286,7 @@ Array [
   >
     <button
       aria-label="Muted, video off"
-      className="wxc-button control-button wxc-button--join"
+      className="wxc-button wxc-meeting-control__control-button wxc-button--join"
       disabled={false}
       onClick={[Function]}
       style={Object {}}
@@ -294,7 +294,7 @@ Array [
       type="button"
     >
       <span
-        className="button-text"
+        className="wxc-meeting-control__button-text"
       >
         Join meeting
       </span>

@@ -12,7 +12,7 @@ import webexComponentClasses from '../../helpers';
  * @returns {object} JSX of the element
  */
 export default function Title({children, className, style}) {
-  const cssClasses = webexComponentClasses('title', className);
+  const [cssClasses] = webexComponentClasses('title', className);
 
   return (
     <h5 className={cssClasses} style={style}>{children}</h5>

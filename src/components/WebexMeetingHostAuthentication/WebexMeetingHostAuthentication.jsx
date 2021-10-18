@@ -21,7 +21,7 @@ export default function WebexMeetingHostAuthentication({className, meetingID, st
   const {ID} = useMeeting(meetingID);
   const adapter = useContext(AdapterContext);
 
-  const cssClasses = webexComponentClasses('meeting-host-authentication', className);
+  const [cssClasses, sc] = webexComponentClasses('meeting-host-authentication', className);
 
   const joinMeeting = () => {
     adapter.meetingsAdapter.joinMeeting(ID, {name, hostKey});
@@ -29,11 +29,11 @@ export default function WebexMeetingHostAuthentication({className, meetingID, st
 
   return (
     <div className={cssClasses} style={style}>
-      <div className="auth-header">
-        <div className="auth-logo" />
-        <div className="auth-title">Enter host information to join</div>
+      <div className={sc('header')}>
+        <div className={sc('logo')} />
+        <div className={sc('title')}>Enter host information to join</div>
       </div>
-      <form className="form-content">
+      <form className={sc('form-content')}>
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
         <label>
           <span>Your name</span>
