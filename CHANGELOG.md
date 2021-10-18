@@ -1,3 +1,10 @@
+# [1.160.0](https://github.com/webex/components/compare/v1.159.0...v1.160.0) (2021-10-18)
+
+
+### Features
+
+* **WebexMediaAccess:** add hint message on "proceed without" button for accessibility ([d610595](https://github.com/webex/components/commit/d610595cc67e7cb6a2d7c0d93e30aca008c4c47a))
+
 # [1.159.0](https://github.com/webex/components/compare/v1.158.0...v1.159.0) (2021-10-18)
 
 
