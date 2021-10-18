@@ -1,3 +1,16 @@
+# [1.159.0](https://github.com/webex/components/compare/v1.158.0...v1.159.0) (2021-10-18)
+
+
+### Bug Fixes
+
+* **WebexMeetingGuestAuthentication:** move name validation from host to guest form ([59b0394](https://github.com/webex/components/commit/59b03948ff9e232ed650110880494d5560e719fd))
+
+
+### Features
+
+* **WebexAvatar:** add avatar self status ([dbc6618](https://github.com/webex/components/commit/dbc6618502a7f11619a7fe887b77fc259747aebe))
+* **WebexComponents:** prefix all css sub-classes ([901f976](https://github.com/webex/components/commit/901f9764d34af3281a51e34df446c09ae93cda3a))
+
 # [1.158.0](https://github.com/webex/components/compare/v1.157.1...v1.158.0) (2021-10-15)
 
 
