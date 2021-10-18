@@ -74,8 +74,8 @@
   font-family: 'CiscoSansTT Medium';
   font-style: normal;
   font-weight: normal;
-  src: url('#{$brand-font-folder}/CiscoSansTTRegular.woff2') format('woff2'),
-  url('#{$brand-font-folder}/CiscoSansTTRegular.woff') format('woff');
+  src: url('#{$brand-font-folder}/CiscoSansTTMedium.woff2') format('woff2'),
+  url('#{$brand-font-folder}/CiscoSansTTMedium.woff') format('woff');
   font-display: fallback;
 }
 
