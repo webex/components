@@ -1,5 +1,7 @@
-import {useEffect, useRef, useState} from 'react';
+import {useEffect, useState} from 'react';
 import {ResizeObserver as Polyfill} from '@juggle/resize-observer';
+
+import useRef from './useRef';
 
 /**
  * Custom hook that returns an element reference and the dimensions of the

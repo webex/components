@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Spinner from '../generic/Spinner/Spinner';
 
@@ -10,6 +10,7 @@ import {
   useMe,
   useMeeting,
   useStream,
+  useRef,
 } from '../hooks';
 
 /**
@@ -31,7 +32,7 @@ export default function WebexLocalMedia({
   const [mediaRef, {width}] = useElementDimensions();
   const {localVideo, localShare, settings} = useMeeting(meetingID);
   const {ID} = useMe();
-  const [videoNode, setVideoNode] = useState();
+  const videoRef = useRef();
 
   let stream;
 
@@ -49,7 +50,7 @@ export default function WebexLocalMedia({
       break;
   }
 
-  useStream({current: videoNode}, stream);
+  useStream(videoRef, stream);
 
   const [cssClasses] = webexComponentClasses('local-media', className, {
     desktop: width >= PHONE_LARGE,
@@ -60,8 +61,8 @@ export default function WebexLocalMedia({
   return (
     <div ref={mediaRef} className={cssClasses} style={style}>
       {
-        // eslint-disable-next-line jsx-a11y/media-has-caption
-        stream ? <video ref={setVideoNode} playsInline autoPlay /> : disabledVideo
+        /* eslint-disable-next-line jsx-a11y/media-has-caption */
+        stream ? <video ref={videoRef} playsInline autoPlay /> : disabledVideo
       }
     </div>
   );

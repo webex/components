@@ -2,7 +2,6 @@ import React, {
   JSX,
   useContext,
   useEffect,
-  useRef,
   useState,
 } from 'react';
 import PropTypes from 'prop-types';
@@ -20,7 +19,7 @@ import WebexMeetingHostAuthentication from '../WebexMeetingHostAuthentication/We
 import WebexMemberRoster from '../WebexMemberRoster/WebexMemberRoster';
 import WebexSettings from '../WebexSettings/WebexSettings';
 import webexComponentClasses from '../helpers';
-import {useElementDimensions, useMeeting} from '../hooks';
+import {useElementDimensions, useMeeting, useRef} from '../hooks';
 import {AdapterContext} from '../hooks/contexts';
 
 /**

@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/media-has-caption */
-import React, {useRef} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Badge from '../generic/Badge/Badge';
 import Icon from '../generic/Icon/Icon';
@@ -12,6 +12,7 @@ import {
   useElementDimensions,
   useMeeting,
   useMembers,
+  useRef,
   useSpeakers,
   useStream,
 } from '../hooks';

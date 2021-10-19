@@ -3,11 +3,12 @@ import {flatMap} from 'rxjs/operators';
 import {
   useContext,
   useEffect,
-  useRef,
   useState,
 } from 'react';
 
 import {AdapterContext} from './contexts';
+import useRef from './useRef';
+
 // TODO: Figure out how to import JS Doc definitions and remove duplication.
 /**
  * An activity that should be displayed as a time ruler.
@@ -37,7 +38,7 @@ import {AdapterContext} from './contexts';
  * @returns {object}  DOM reference to the the last activity.
  */
 export default function useOverflowActivities(roomID, elementRef, callback) {
-  const lastElementRef = useRef(null);
+  const lastElementRef = useRef();
   const {roomsAdapter} = useContext(AdapterContext);
   const [scrollToLastActivity, setScrollToLastActivity] = useState(false);
   const [lastActivityBottom, setLastActivityBottom] = useState(0);
