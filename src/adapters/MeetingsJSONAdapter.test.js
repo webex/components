@@ -841,4 +841,13 @@ describe('Meetings JSON Adapter', () => {
       ]);
     });
   });
+
+  describe('clearPasswordRequiredFlag()', () => {
+    test('clears the passwordRequired flag if set', async () => {
+      testMeeting.passwordRequired = true;
+      await meetingsJSONAdapter.clearPasswordRequiredFlag(meetingID);
+
+      expect(testMeeting).toMatchObject({passwordRequired: false});
+    });
+  });
 });

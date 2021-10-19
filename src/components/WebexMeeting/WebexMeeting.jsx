@@ -108,7 +108,7 @@ export default function WebexMeeting({
         )}
         {passwordRequired && state === NOT_JOINED && (
           <Modal
-            onClose={() => adapter.meetingsAdapter.setPasswordRequired(ID, false)}
+            onClose={() => adapter.meetingsAdapter.clearPasswordRequiredFlag(ID)}
             otherClassName={[sc('authentication')]}
             onBack={authModal === 'host' && (() => setAuthModal('guest'))}
           >
