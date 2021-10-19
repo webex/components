@@ -1,3 +1,10 @@
+# [1.161.0](https://github.com/webex/components/compare/v1.160.0...v1.161.0) (2021-10-19)
+
+
+### Features
+
+* **WebexMeetingGuestAuthentication:** disable start meeting when name and password are not valid ([647ec36](https://github.com/webex/components/commit/647ec3692669150b72047cdb0120e456ef2a239e))
+
 # [1.160.0](https://github.com/webex/components/compare/v1.159.0...v1.160.0) (2021-10-18)
 
 
