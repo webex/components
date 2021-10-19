@@ -698,13 +698,12 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   }
 
   /**
-   * Sets the password required flag.
+   * Sets the password required flag to false.
    *
    * @param {string} ID  Id of the meeting
-   * @param {boolean} passwordRequired  Flag indicating if this meeting requires password authentication
    */
-  async setPasswordRequired(ID, passwordRequired) {
-    await this.updateMeeting(ID, async () => ({passwordRequired}));
+  async clearPasswordRequiredFlag(ID) {
+    await this.updateMeeting(ID, async () => ({passwordRequired: false}));
   }
 
   /**
