@@ -4,6 +4,7 @@ import webexComponentClasses from '../helpers';
 import {Button, InputField} from '../generic';
 import {useMeeting} from '../hooks';
 import {AdapterContext} from '../hooks/contexts';
+import Spinner from '../generic/Spinner/Spinner';
 
 /**
  * Helper function for checking name format
@@ -39,14 +40,16 @@ export default function WebexMeetingGuestAuthentication({
   const [password, setPassword] = useState('');
   const [nameError, setNameError] = useState();
   const {ID, invalidPassword} = useMeeting(meetingID);
+  const [isJoining, setIsJoining] = useState(false);
   const adapter = useContext(AdapterContext);
 
   const [cssClasses, sc] = webexComponentClasses('meeting-guest-authentication', className);
 
-  const isStartButtonDisabled = nameError || !password || invalidPassword;
+  const isStartButtonDisabled = nameError || !password || invalidPassword || isJoining;
 
   const joinMeeting = () => {
-    adapter.meetingsAdapter.joinMeeting(ID, {name, password});
+    setIsJoining(true);
+    adapter.meetingsAdapter.joinMeeting(ID, {name, password}).finally(() => setIsJoining(false));
   };
 
   const handleNameChange = (value) => {
@@ -64,7 +67,7 @@ export default function WebexMeetingGuestAuthentication({
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
         <label className={sc('label')}>
           <span className={sc('label-text')}>Your name</span>
-          <InputField type="text" name="name" value={name} onChange={handleNameChange} error={nameError} />
+          <InputField type="text" name="name" value={name} onChange={handleNameChange} error={nameError} disabled={isJoining} />
         </label>
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
         <label className={sc('label')}>
@@ -74,9 +77,13 @@ export default function WebexMeetingGuestAuthentication({
             name="password"
             value={password}
             onChange={(value) => setPassword(value)}
+            disabled={isJoining}
           />
         </label>
-        <Button type="primary" onClick={joinMeeting} isDisabled={isStartButtonDisabled}>Start meeting</Button>
+        <Button type="primary" className={sc('start-button')} onClick={joinMeeting} isDisabled={isStartButtonDisabled}>
+          {isJoining && <Spinner className={sc('start-button-spinner')} size={16} />}
+          {isJoining ? 'Starting meeting...' : 'Start meeting'}
+        </Button>
       </form>
       <div className={sc('host-text')}>
         Hosting the meeting?

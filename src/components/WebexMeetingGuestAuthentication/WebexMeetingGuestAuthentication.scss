@@ -44,6 +44,14 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-guest-authentication;
         margin-bottom: 0.25rem;
       }
     }
+
+    .#{$C}__start-button {
+      align-items: center;
+    }
+  
+    .#{$C}__start-button-spinner {
+      margin-right: 0.5rem;
+    }
   }
 
   .#{$C}__host-text {
