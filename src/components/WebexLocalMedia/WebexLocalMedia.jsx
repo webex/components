@@ -29,7 +29,7 @@ export default function WebexLocalMedia({
   style,
 }) {
   const [mediaRef, {width}] = useElementDimensions();
-  const {localVideo, localShare} = useMeeting(meetingID);
+  const {localVideo, localShare, settings} = useMeeting(meetingID);
   const {ID} = useMe();
   const [videoNode, setVideoNode] = useState();
 
@@ -41,6 +41,9 @@ export default function WebexLocalMedia({
       break;
     case 'screen':
       stream = localShare?.stream;
+      break;
+    case 'preview':
+      stream = settings.preview.video;
       break;
     default:
       break;
@@ -57,7 +60,7 @@ export default function WebexLocalMedia({
   return (
     <div ref={mediaRef} className={cssClasses} style={style}>
       {
-        /* eslint-disable-next-line jsx-a11y/media-has-caption */
+        // eslint-disable-next-line jsx-a11y/media-has-caption
         stream ? <video ref={setVideoNode} playsInline autoPlay /> : disabledVideo
       }
     </div>
@@ -66,7 +69,7 @@ export default function WebexLocalMedia({
 
 WebexLocalMedia.propTypes = {
   className: PropTypes.string,
-  mediaType: PropTypes.oneOf(['video', 'screen']),
+  mediaType: PropTypes.oneOf(['video', 'screen', 'preview']),
   meetingID: PropTypes.string.isRequired,
   style: PropTypes.shape(),
 };
