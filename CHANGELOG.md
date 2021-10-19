@@ -1,3 +1,10 @@
+# [1.164.0](https://github.com/webex/components/compare/v1.163.0...v1.164.0) (2021-10-19)
+
+
+### Features
+
+* **WebexMeetingAuthentication:** display error when meeting password is invalid ([b805b97](https://github.com/webex/components/commit/b805b971c868698ec8e41a1131e7a6adfb84cb56))
+
 # [1.163.0](https://github.com/webex/components/compare/v1.162.0...v1.163.0) (2021-10-19)
 
 
