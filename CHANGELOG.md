@@ -1,3 +1,17 @@
+# [1.162.0](https://github.com/webex/components/compare/v1.161.0...v1.162.0) (2021-10-19)
+
+
+### Bug Fixes
+
+* **MeetingsJsonAdapter:** don't enable camera or microphone when it is switched from settings ([6a718d0](https://github.com/webex/components/commit/6a718d06b634b69ae5e1a23b9a9be358024b88ee))
+
+
+### Features
+
+* **fonts:** add medium font in font variables ([a864459](https://github.com/webex/components/commit/a8644593088d3ca733494a7a6ce2bac5fb9cee1c))
+* **WebexComponents:** add meeting control tooltips ([85538d8](https://github.com/webex/components/commit/85538d821307d022ec957b82bc2939a005908b15))
+* **WebexMeetingGuestAuthentication:** add visual feedback while checking password ([4da6a0b](https://github.com/webex/components/commit/4da6a0b408e6d5fc744ba6dfc5b18c1607fe2f61))
+
 # [1.161.0](https://github.com/webex/components/compare/v1.160.0...v1.161.0) (2021-10-19)
 
 
