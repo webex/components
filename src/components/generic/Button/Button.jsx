@@ -1,6 +1,7 @@
-import React, {JSX, useRef} from 'react';
+import React, {JSX} from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
+import {useRef} from '../../hooks';
 import Tooltip from '../Tooltip/Tooltip';
 
 /**
@@ -28,7 +29,7 @@ export default function Button({
   type,
 }) {
   const [cssClasses] = webexComponentClasses('button', className, {[`${type}`]: true});
-  const buttonRef = useRef(null);
+  const buttonRef = useRef();
 
   return (
     <>

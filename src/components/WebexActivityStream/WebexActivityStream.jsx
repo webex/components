@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {useRef} from 'react';
+import React from 'react';
 import {RoomType} from '@webex/component-adapter-interfaces';
 
 import WebexActivity from '../WebexActivity/WebexActivity';
@@ -10,6 +10,7 @@ import {
   useActivityStream,
   useActivityScroll,
   useOverflowActivities,
+  useRef,
   useRoom,
 } from '../hooks';
 
@@ -35,7 +36,7 @@ export default function WebexActivityStream({className, roomID, style}) {
   };
 
   const {title, roomType} = useRoom(roomID);
-  const activityStreamRef = useRef(null);
+  const activityStreamRef = useRef();
   const showLoader = useActivityScroll(roomID, activityStreamRef, loadPreviousActivities);
   const lastActivityRef = useOverflowActivities(roomID, activityStreamRef, loadPreviousActivities);
 
