@@ -600,11 +600,47 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * @param {string} ID  Id of the meeting for which to toggle the settings flag
    */
   async toggleSettings(ID) {
-    await this.updateMeeting(ID, async (meeting) => ({
-      settings: {
-        visible: !meeting.settings.visible,
-      },
-    }));
+    await this.updateMeeting(ID, async (meeting) => {
+      let updates;
+      const openingSettings = !meeting.settings.visible;
+
+      if (openingSettings) {
+        // Populate the preview streams with clones of the meeting streams
+        // so that switching cameras/microphones in preview doesn't stop the meeting streams.
+        // If the camera or microphone are muted, start them for the preview.
+        updates = {
+          settings: {
+            visible: true,
+            preview: {
+              video: meeting.localVideo.stream
+                ? meeting.localVideo.stream.clone()
+                : await this.getStream({video: {deviceId: {exact: meeting.cameraID}}}),
+              audio: meeting.localAudio.stream
+                ? meeting.localAudio.stream.clone()
+                : await this.getStream({audio: {deviceId: {exact: meeting.microphoneID}}}),
+            },
+          },
+        };
+      } else {
+        // When closing settings, stop the existing meeting streams
+        // and replace them with the last preview streams.
+        this.stopStream(meeting.localVideo.stream);
+        this.stopStream(meeting.localAudio.stream);
+        updates = {
+          settings: {
+            visible: false,
+          },
+          localVideo: {
+            stream: meeting.localVideo.stream && meeting.settings.preview.video,
+          },
+          localAudio: {
+            stream: meeting.localAudio.stream && meeting.settings.preview.audio,
+          },
+        };
+      }
+
+      return updates;
+    });
   }
 
   /**
@@ -615,11 +651,13 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    */
   async switchCamera(ID, cameraID) {
     await this.updateMeeting(ID, async (meeting) => {
-      this.stopStream(meeting.localVideo.stream);
+      this.stopStream(meeting.settings.preview.video);
 
       return {
-        localVideo: {
-          stream: await this.getStream({video: {deviceId: {exact: cameraID}}}),
+        settings: {
+          preview: {
+            video: await this.getStream({video: {deviceId: {exact: cameraID}}}),
+          },
         },
         cameraID,
       };
@@ -635,11 +673,13 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    */
   async switchMicrophone(ID, microphoneID) {
     await this.updateMeeting(ID, async (meeting) => {
-      this.stopStream(meeting.localAudio.stream);
+      this.stopStream(meeting.settings.preview.audio);
 
       return {
-        localAudio: {
-          stream: await this.getStream({audio: {deviceId: {exact: microphoneID}}}),
+        settings: {
+          preview: {
+            audio: await this.getStream({audio: {deviceId: {exact: microphoneID}}}),
+          },
         },
         microphoneID,
       };
