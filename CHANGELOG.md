@@ -1,3 +1,10 @@
+# [1.163.0](https://github.com/webex/components/compare/v1.162.0...v1.163.0) (2021-10-19)
+
+
+### Features
+
+* **WebexComponents:** update tooltips text ([1c32437](https://github.com/webex/components/commit/1c324376aa835c28956631348885450cadd51e24))
+
 # [1.162.0](https://github.com/webex/components/compare/v1.161.0...v1.162.0) (2021-10-19)
 
 
