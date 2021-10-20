@@ -13,7 +13,6 @@ Array [
   >
     <div
       className="wxc-spinner"
-      size={28}
       style={
         Object {
           "height": 28,
@@ -67,7 +66,9 @@ Array [
       <div
         className="wxc-meeting-info wxc-interstitial-meeting__info"
       >
-        <h2>
+        <h2
+          className="wxc-meeting-info__title"
+        >
           Lunch and Learn
         </h2>
       </div>
@@ -96,7 +97,7 @@ Array [
               </svg>
               <img
                 alt="avatar"
-                className=""
+                className="wxc-avatar__image"
                 onError={[Function]}
                 src="./images/barbara.png"
               />
@@ -151,7 +152,9 @@ Array [
       <div
         className="wxc-meeting-info wxc-interstitial-meeting__info"
       >
-        <h2>
+        <h2
+          className="wxc-meeting-info__title"
+        >
           Weekly Backlog Grooming
         </h2>
       </div>
@@ -180,7 +183,7 @@ Array [
               </svg>
               <img
                 alt="avatar"
-                className=""
+                className="wxc-avatar__image"
                 onError={[Function]}
                 src="./images/barbara.png"
               />

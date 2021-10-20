@@ -4,6 +4,9 @@ import webexComponentClasses from '../helpers';
 
 import Icon from '../generic/Icon/Icon';
 import Title from '../generic/Title/Title';
+
+const [, sc] = webexComponentClasses('no-media');
+
 /**
  * Component for displaying a user-friendly message when no user media is present
  *
@@ -21,12 +24,12 @@ const SCREENS = {
     /* eslint-disable react/jsx-one-expression-per-line */
     message: (
       <>
-        <p>Reload this page and select <b>Allow</b> when your browser asks.</p>
-        <p>
-          <div><b>Still not working?</b></div>
+        <p className={sc('indications')}>Reload this page and select <b className={sc('accent')}>Allow</b> when your browser asks.</p>
+        <p className={sc('indications')}>
+          <div><b className={sc('accent')}>Still not working?</b></div>
           You may need to update your webpage permissions.
-          Go to your <b>browser settings</b>, look for website settings,
-          select <b>Allow for Microphone</b>, then reload this page.
+          Go to your <b className={sc('accent')}>browser settings</b>, look for website settings,
+          select <b className={sc('accent')}>Allow for Microphone</b>, then reload this page.
         </p>
       </>
     ),
@@ -39,12 +42,12 @@ const SCREENS = {
     message:
     (
       <>
-        <p>Reload this page and select <b>Allow</b> when your browser asks.</p>
-        <p>
-          <div><b>Still not working?</b></div>
+        <p className={sc('indications')}>Reload this page and select <b className={sc('accent')}>Allow</b> when your browser asks.</p>
+        <p className={sc('indications')}>
+          <div><b className={sc('accent')}>Still not working?</b></div>
           You may need to update your webpage permissions.
-          Go to your <b>browser settings</b>, look for website settings,
-          select <b>Allow for Camera</b>, then reload this page.
+          Go to your <b className={sc('accent')}>browser settings</b>, look for website settings,
+          select <b className={sc('accent')}>Allow for Camera</b>, then reload this page.
         </p>
       </>
     ),
@@ -53,7 +56,7 @@ const SCREENS = {
 };
 
 export default function WebexNoMedia({className, style, media}) {
-  const [cssClasses, sc] = webexComponentClasses('no-media', className);
+  const [cssClasses] = webexComponentClasses('no-media', className);
   const screen = SCREENS[media];
 
   return (

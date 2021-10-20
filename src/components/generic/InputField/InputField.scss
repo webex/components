@@ -5,13 +5,6 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field;
   flex-direction: column;
   position: relative;
 
-  label {
-    margin-bottom: 0.25rem;
-    margin-left: 0.75rem;
-    font-size: 0.875rem;
-    color: var(--wxc-input--label--color);
-  }
-
   .#{$C}__form-control {
     position: relative;
   }
@@ -32,7 +25,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field;
     }
   }
 
-  input {
+  .#{$C}__input {
     all: unset;
     background: var(--wxc-input--normal--background);
     border: var(--wcx-input--normal--border);

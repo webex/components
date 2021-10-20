@@ -30,7 +30,7 @@ Array [
             </svg>
             <img
               alt="avatar"
-              className=""
+              className="wxc-avatar__image"
               onError={[Function]}
               src="./images/brenda.png"
             />
@@ -89,7 +89,7 @@ Array [
             </svg>
             <img
               alt="avatar"
-              className=""
+              className="wxc-avatar__image"
               onError={[Function]}
               src="./images/giacomo.png"
             />
@@ -141,7 +141,7 @@ Let me know if you need more help! Maybe we can talk about it during standup
             </svg>
             <img
               alt="avatar"
-              className=""
+              className="wxc-avatar__image"
               onError={[Function]}
               src="./images/brenda.png"
             />
@@ -191,7 +191,7 @@ Let me know if you need more help! Maybe we can talk about it during standup
             </svg>
             <img
               alt="avatar"
-              className=""
+              className="wxc-avatar__image"
               onError={[Function]}
               src="./images/simon.png"
             />
@@ -493,7 +493,7 @@ Array [
             </svg>
             <img
               alt="avatar"
-              className=""
+              className="wxc-avatar__image"
               onError={[Function]}
               src="./images/barbara.png"
             />
@@ -569,7 +569,7 @@ Array [
             </svg>
             <img
               alt="avatar"
-              className=""
+              className="wxc-avatar__image"
               onError={[Function]}
               src="./images/brandon.png"
             />
@@ -626,7 +626,7 @@ Array [
             </svg>
             <img
               alt="avatar"
-              className=""
+              className="wxc-avatar__image"
               onError={[Function]}
               src="./images/barbara.png"
             />

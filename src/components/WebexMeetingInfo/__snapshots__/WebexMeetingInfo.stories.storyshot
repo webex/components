@@ -5,7 +5,9 @@ Array [
   <div
     className="wxc-meeting-info"
   >
-    <h2>
+    <h2
+      className="wxc-meeting-info__title"
+    >
       Barbara German
     </h2>
   </div>,
@@ -37,7 +39,9 @@ Array [
   <div
     className="wxc-meeting-info"
   >
-    <h2>
+    <h2
+      className="wxc-meeting-info__title"
+    >
       No Meeting Information
     </h2>
   </div>,
@@ -71,7 +75,6 @@ Array [
   >
     <div
       className="wxc-spinner"
-      size={36}
       style={
         Object {
           "height": 36,
@@ -108,7 +111,9 @@ Array [
   <div
     className="wxc-meeting-info"
   >
-    <h2>
+    <h2
+      className="wxc-meeting-info__title"
+    >
       Weekly Backlog Grooming
     </h2>
   </div>,

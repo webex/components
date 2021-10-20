@@ -21,7 +21,7 @@ export default function Spinner({className, size, style}) {
   }
 
   return (
-    <div className={cssClasses} size={size} style={cssStyle} />
+    <div className={cssClasses} style={cssStyle} />
   );
 }
 

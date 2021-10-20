@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../helpers';
-import {InputField} from '../generic';
+import {Button, InputField} from '../generic';
 
 /**
  * Webex Meeting Host Authentication component
@@ -25,8 +25,8 @@ export default function WebexMeetingHostAuthentication({className, style}) {
       </div>
       <form className={sc('form-content')}>
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-        <label>
-          <span>Host key (required)</span>
+        <label className={sc('label')}>
+          <span className={sc('label-text')}>Host key (required)</span>
           <InputField
             type="password"
             name="password"
@@ -34,6 +34,7 @@ export default function WebexMeetingHostAuthentication({className, style}) {
             onChange={(value) => setHostKey(value)}
           />
         </label>
+        <Button type="primary">Start Meeting</Button>
       </form>
     </div>
   );

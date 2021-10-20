@@ -26,8 +26,12 @@ Array [
     <form
       className="wxc-meeting-host-authentication__form-content"
     >
-      <label>
-        <span>
+      <label
+        className="wxc-meeting-host-authentication__label"
+      >
+        <span
+          className="wxc-meeting-host-authentication__label-text"
+        >
           Host key (required)
         </span>
         <div
@@ -37,6 +41,7 @@ Array [
             className="wxc-input-field__form-control"
           >
             <input
+              className="wxc-input-field__input"
               disabled={false}
               name="password"
               onChange={[Function]}
@@ -49,6 +54,15 @@ Array [
           </div>
         </div>
       </label>
+      <button
+        className="wxc-button wxc-button--primary"
+        disabled={false}
+        style={Object {}}
+        type="button"
+      >
+        Start Meeting
+      </button>
+      
     </form>
   </div>,
   <video

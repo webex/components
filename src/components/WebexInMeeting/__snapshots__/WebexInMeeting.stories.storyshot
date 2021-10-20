@@ -24,13 +24,13 @@ Array [
       >
         <video
           autoPlay={true}
-          className="wxc-remote-media__remote-video"
+          className="wxc-remote-media__video wxc-remote-media__remote-video"
           muted={true}
           playsInline={true}
         />
         <video
           autoPlay={true}
-          className="wxc-remote-media__remote-share"
+          className="wxc-remote-media__video wxc-remote-media__remote-share"
           muted={true}
           playsInline={true}
         />
@@ -60,7 +60,7 @@ Array [
             </svg>
             <img
               alt="avatar"
-              className=""
+              className="wxc-avatar__image"
               onError={[Function]}
               src="./images/barbara.png"
             />
@@ -140,7 +140,7 @@ Array [
             </svg>
             <img
               alt="avatar"
-              className=""
+              className="wxc-avatar__image"
               onError={[Function]}
               src="./images/barbara.png"
             />
@@ -200,7 +200,6 @@ Array [
         >
           <div
             className="wxc-spinner wxc-remote-media__connecting-spinner"
-            size={14}
             style={
               Object {
                 "height": 14,
@@ -235,7 +234,7 @@ Array [
             </svg>
             <img
               alt="avatar"
-              className=""
+              className="wxc-avatar__image"
               onError={[Function]}
               src="./images/barbara.png"
             />
@@ -291,7 +290,7 @@ Array [
       >
         <video
           autoPlay={true}
-          className="wxc-remote-media__remote-video"
+          className="wxc-remote-media__video wxc-remote-media__remote-video"
           muted={true}
           playsInline={true}
         />
@@ -304,6 +303,7 @@ Array [
       >
         <video
           autoPlay={true}
+          className="wxc-local-media__video"
           playsInline={true}
         />
       </div>
@@ -361,13 +361,13 @@ Array [
       >
         <video
           autoPlay={true}
-          className="wxc-remote-media__remote-video"
+          className="wxc-remote-media__video wxc-remote-media__remote-video"
           muted={true}
           playsInline={true}
         />
         <video
           autoPlay={true}
-          className="wxc-remote-media__remote-share"
+          className="wxc-remote-media__video wxc-remote-media__remote-share"
           muted={true}
           playsInline={true}
         />
@@ -397,7 +397,7 @@ Array [
             </svg>
             <img
               alt="avatar"
-              className=""
+              className="wxc-avatar__image"
               onError={[Function]}
               src="./images/barbara.png"
             />
@@ -453,7 +453,7 @@ Array [
       >
         <video
           autoPlay={true}
-          className="wxc-remote-media__remote-video"
+          className="wxc-remote-media__video wxc-remote-media__remote-video"
           muted={true}
           playsInline={true}
         />
@@ -480,7 +480,7 @@ Array [
             </svg>
             <img
               alt="avatar"
-              className=""
+              className="wxc-avatar__image"
               onError={[Function]}
               src="./images/barbara.png"
             />
