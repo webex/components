@@ -52,9 +52,10 @@ export default function Tabs({
         className={sc('list')}
         tabIndex={tabIndex}
         onKeyUp={handleKeyUp}
+        aria-label="Use arrow keys to navigate between setting options"
       >
         {
-          tabs.map((tab) => (
+          tabs.map((tab, index) => (
             <li
               className={classNames(sc('tab'), selected === tab.key && sc('tab--active'))}
               key={tab.key}
@@ -62,7 +63,7 @@ export default function Tabs({
               <button
                 onClick={() => onSelect(tab.key)}
                 type="button"
-                tabIndex={-1}
+                aria-label={`Tab ${index + 1} of ${tabs.length}. ${tab.ariaLabel}`}
               >
                 {tab.heading}
               </button>

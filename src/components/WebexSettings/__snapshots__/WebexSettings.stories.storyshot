@@ -15,6 +15,7 @@ Array [
       className="wxc-tabs"
     >
       <ul
+        aria-label="Use arrow keys to navigate between setting options"
         className="wxc-tabs__list"
         onKeyUp={[Function]}
         tabIndex={0}
@@ -23,8 +24,8 @@ Array [
           className="wxc-tabs__tab wxc-tabs__tab--active"
         >
           <button
+            aria-label="Tab 1 of 2. View speaker and microphone settings."
             onClick={[Function]}
-            tabIndex={-1}
             type="button"
           >
             Audio
@@ -34,8 +35,8 @@ Array [
           className="wxc-tabs__tab"
         >
           <button
+            aria-label="Tab 2 of 2. View camera settings."
             onClick={[Function]}
-            tabIndex={-1}
             type="button"
           >
             Video
@@ -62,6 +63,7 @@ Array [
             >
               <div
                 aria-hidden="true"
+                aria-label="Use arrow keys to navigate between speaker options and hit \\"Enter\\" to select."
                 className="wxc-select__selected-option "
                 onClick={[Function]}
                 role="button"
@@ -102,6 +104,7 @@ Array [
             >
               <div
                 aria-hidden="true"
+                aria-label="Use arrow keys to navigate between microphone options and hit \\"Enter\\" to select."
                 className="wxc-select__selected-option "
                 onClick={[Function]}
                 role="button"
