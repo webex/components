@@ -24,12 +24,14 @@ export default function WebexSettings({meetingID, className, style}) {
     content: () => (
       <WebexAudioSettings meetingID={meetingID} />
     ),
+    ariaLabel: 'View speaker and microphone settings.',
   }, {
     key: 'video',
     heading: 'Video',
     content: () => (
       <WebexVideoSettings meetingID={meetingID} />
     ),
+    ariaLabel: 'View camera settings.',
   }];
 
   return (

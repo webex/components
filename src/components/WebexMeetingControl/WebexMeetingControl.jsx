@@ -72,11 +72,12 @@ function renderButton(sc, action, display, style, showText, asItem) {
  * @param {Function} action  Adapter control callback
  * @param {object} display  Display data of the control
  * @param {object} style  Custom style to apply
+ * @param {string} props.ariaLabel  aria-label html attribute
  * @returns {object} JSX of the component
  */
 function renderDropdown(sc, action, display, style) {
   const {
-    options, noOptionsMessage, selected, tooltip,
+    options, noOptionsMessage, selected, tooltip, hint,
   } = display;
 
   return (
@@ -88,6 +89,7 @@ function renderDropdown(sc, action, display, style) {
       options={options?.length === 0 ? [{value: '', label: noOptionsMessage}] : options}
       disabled={!options?.length}
       tooltip={tooltip}
+      ariaLabel={hint}
     />
   );
 }

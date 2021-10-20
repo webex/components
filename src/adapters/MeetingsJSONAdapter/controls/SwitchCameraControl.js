@@ -44,6 +44,7 @@ export default class SwitchCameraControl extends MeetingControl {
           noOptionsMessage: 'No available cameras',
           options: null,
           selected: null,
+          hint: 'Use arrow keys to navigate between camera options and hit "Enter" to select.',
         });
         observer.complete();
       } else {
