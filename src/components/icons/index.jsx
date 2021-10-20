@@ -17,6 +17,7 @@ export {default as MicrophoneIssueIcon} from './MicrophoneIssueIcon';
 export {default as MoreIcon} from './MoreIcon';
 export {default as MoreAdrIcon} from './MoreAdrIcon';
 export {default as ParticipantListIcon} from './ParticipantListIcon';
+export {default as ParticipantListFilledIcon} from './ParticipantListFilledIcon';
 export {default as PtoPresenceIcon} from './PtoPresenceIcon';
 export {default as QuietHoursPresenceIcon} from './QuietHoursPresenceIcon';
 export {default as RecentsPresenceIcon} from './RecentsPresenceIcon';
