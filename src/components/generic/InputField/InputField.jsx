@@ -49,6 +49,7 @@ export default function InputField({
           type={isPwdRevealed ? 'text' : type}
           value={value}
           name={name}
+          className={sc('input')}
           placeholder={placeholder}
           onChange={handleChange}
           disabled={disabled}

@@ -8,12 +8,12 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-options-list;
   color: var(--wxc-text-color);
   padding: 0.5rem;
 
-  ul {
+  .#{$C}__list {
     list-style: none;
     margin: 0;
     padding: 0;
 
-    li {
+    .#{$C}__option {
       padding: 0.5rem 0.75rem;
       border-radius: 0.5rem;
       display: flex;

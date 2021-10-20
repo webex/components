@@ -41,6 +41,7 @@ Array [
             className="wxc-input-field__form-control"
           >
             <input
+              className="wxc-input-field__input"
               disabled={false}
               name="name"
               onChange={[Function]}
@@ -68,6 +69,7 @@ Array [
             className="wxc-input-field__form-control"
           >
             <input
+              className="wxc-input-field__input"
               disabled={false}
               name="password"
               onChange={[Function]}

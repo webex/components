@@ -33,12 +33,12 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-host-authentication;
     flex-direction: column;
     width: 17.625rem;
 
-    label {
+    .#{$C}__label {
       display: flex;
       flex-direction: column;
       margin-bottom: 1rem;
 
-      span {
+      .#{$C}__label-text {
         padding-left: 0.75rem;
       }
     }

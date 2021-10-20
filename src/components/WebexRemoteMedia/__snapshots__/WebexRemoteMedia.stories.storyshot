@@ -13,13 +13,13 @@ Array [
   >
     <video
       autoPlay={true}
-      className="wxc-remote-media__remote-video"
+      className="wxc-remote-media__video wxc-remote-media__remote-video"
       muted={true}
       playsInline={true}
     />
     <video
       autoPlay={true}
-      className="wxc-remote-media__remote-share"
+      className="wxc-remote-media__video wxc-remote-media__remote-share"
       muted={true}
       playsInline={true}
     />
@@ -146,7 +146,6 @@ Array [
     >
       <div
         className="wxc-spinner wxc-remote-media__connecting-spinner"
-        size={14}
         style={
           Object {
             "height": 14,
@@ -233,7 +232,7 @@ Array [
   >
     <video
       autoPlay={true}
-      className="wxc-remote-media__remote-video"
+      className="wxc-remote-media__video wxc-remote-media__remote-video"
       muted={true}
       playsInline={true}
     />

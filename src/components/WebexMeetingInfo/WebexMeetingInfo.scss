@@ -1,4 +1,6 @@
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-info {
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-info;
+
+.#{$C} {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6,33 +8,33 @@
   color: var(--wxc-text-color);
   font-family: $brand-font-regular;
 
-  h2 {
+  .#{$C}__title {
     font-size: 1rem;
     text-align: center;
     margin: 0;
   }
 
-  h3 {
+  .#{$C}__time {
     font-size: 0.75rem;
     text-align: center;
   }
 
   &--tablet {
-    h2 {
+    .#{$C}__title {
       font-size: 1.255rem;
     }
 
-    h3 {
+    .#{$C}__time {
       font-size: 0.875rem;
     }
   }
 
   &--desktop {
-    h2 {
+    .#{$C}__title {
       font-size: 1.5rem;
     }
 
-    h3 {
+    .#{$C}__time {
       font-size: 1rem;
     }
   }

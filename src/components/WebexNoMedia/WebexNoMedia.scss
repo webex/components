@@ -17,11 +17,11 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-no-media;
     color: var(--wxc-error-color);
   }
 
-  p {
+  .#{$C}__indications {
     margin-top: 1.875rem;
     margin-bottom: 0;
 
-    b {
+    .#{$C}__accent {
       font-family: $brand-font-bold;
     }
   }

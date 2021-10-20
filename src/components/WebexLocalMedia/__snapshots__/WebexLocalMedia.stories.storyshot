@@ -24,7 +24,7 @@ Array [
         </svg>
         <img
           alt="avatar"
-          className=""
+          className="wxc-avatar__image"
           onError={[Function]}
           src="./images/barbara.png"
         />
@@ -61,6 +61,7 @@ Array [
   >
     <video
       autoPlay={true}
+      className="wxc-local-media__video"
       playsInline={true}
     />
   </div>,
@@ -111,7 +112,7 @@ Array [
         </svg>
         <img
           alt="avatar"
-          className=""
+          className="wxc-avatar__image"
           onError={[Function]}
           src="./images/barbara.png"
         />

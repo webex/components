@@ -52,7 +52,7 @@ export default function WebexLocalMedia({
 
   useStream(videoRef, stream);
 
-  const [cssClasses] = webexComponentClasses('local-media', className, {
+  const [cssClasses, sc] = webexComponentClasses('local-media', className, {
     desktop: width >= PHONE_LARGE,
     'no-media': !stream,
   });
@@ -62,7 +62,7 @@ export default function WebexLocalMedia({
     <div ref={mediaRef} className={cssClasses} style={style}>
       {
         /* eslint-disable-next-line jsx-a11y/media-has-caption */
-        stream ? <video ref={videoRef} playsInline autoPlay /> : disabledVideo
+        stream ? <video className={sc('video')} ref={videoRef} playsInline autoPlay /> : disabledVideo
       }
     </div>
   );

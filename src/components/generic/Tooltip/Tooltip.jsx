@@ -19,7 +19,7 @@ const Tooltip = ({
   style,
   target,
 }) => {
-  const [cssClasses] = webexComponentClasses('tooltip-container', className);
+  const [cssClasses, sc] = webexComponentClasses('tooltip-container', className);
   const [tooltipVisible, setTooltipVisible] = useState(false);
   let coords;
 
@@ -59,10 +59,10 @@ const Tooltip = ({
     tooltipVisible && (
       <Portal>
         <div className={cssClasses} style={{...style, ...coords}}>
-          <div className="tooltip-wrapper">
-            <div className="tooltip-box">
+          <div className={sc('wrapper')}>
+            <div className={sc('box')}>
               {children}
-              <span className="tooltip-arrow" />
+              <span className={sc('arrow')} />
             </div>
           </div>
         </div>

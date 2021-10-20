@@ -1,4 +1,6 @@
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-tooltip-container {
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-tooltip-container;
+
+.#{$C} {
   position: absolute;
   min-width: 4rem;
   max-width: 12.5rem;
@@ -7,11 +9,11 @@
   z-index: 1;
   bottom: 0;
 
-  .tooltip-wrapper {
+  .#{$C}__wrapper {
     position: relative;
   }
 
-  .tooltip-box {
+  .#{$C}__box {
     background: var(--wxc-tooltip-background);
     border-radius: 0.4375rem;
     border: var(--wxc-tooltip-border);
@@ -24,7 +26,7 @@
     text-align: center;
     position: relative;
 
-    .tooltip-arrow {
+    .#{$C}__arrow {
       position: absolute;
       border: var(--wxc-tooltip-border);
       left: 50%;

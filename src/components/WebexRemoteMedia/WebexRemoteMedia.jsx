@@ -73,9 +73,9 @@ export default function WebexRemoteMedia({className, meetingID, style}) {
     remoteDisplay = (
       <>
         {remoteVideo
-          && <video className={sc('remote-video')} ref={videoRef} muted playsInline autoPlay />}
+          && <video className={`${sc('video')} ${sc('remote-video')}`} ref={videoRef} muted playsInline autoPlay />}
         {remoteShare
-          && <video className={sc('remote-share')} ref={shareRef} muted playsInline autoPlay />}
+          && <video className={`${sc('video')} ${sc('remote-share')}`} ref={shareRef} muted playsInline autoPlay />}
         {remoteAudio && <audio ref={audioRef} autoPlay />}
       </>
     );

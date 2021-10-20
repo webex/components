@@ -67,7 +67,7 @@ export default function WebexAvatar({
             </svg>
           )}
         {hasImage
-          && <img className={imageError ? sc('image-error') : ''} src={avatar} alt="avatar" onError={() => setImageError(true)} />}
+          && <img className={imageError ? sc('image-error') : sc('image')} src={avatar} alt="avatar" onError={() => setImageError(true)} />}
         {hasStatus
           && (
             <div className={sc('status-icon-container')}>

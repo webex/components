@@ -49,25 +49,37 @@ Array [
     <div
       className="wxc-no-media__body"
     >
-      <p>
+      <p
+        className="wxc-no-media__indications"
+      >
         Reload this page and select 
-        <b>
+        <b
+          className="wxc-no-media__accent"
+        >
           Allow
         </b>
          when your browser asks.
       </p>
-      <p>
+      <p
+        className="wxc-no-media__indications"
+      >
         <div>
-          <b>
+          <b
+            className="wxc-no-media__accent"
+          >
             Still not working?
           </b>
         </div>
         You may need to update your webpage permissions. Go to your 
-        <b>
+        <b
+          className="wxc-no-media__accent"
+        >
           browser settings
         </b>
         , look for website settings, select 
-        <b>
+        <b
+          className="wxc-no-media__accent"
+        >
           Allow for Camera
         </b>
         , then reload this page.
@@ -146,25 +158,37 @@ Array [
     <div
       className="wxc-no-media__body"
     >
-      <p>
+      <p
+        className="wxc-no-media__indications"
+      >
         Reload this page and select 
-        <b>
+        <b
+          className="wxc-no-media__accent"
+        >
           Allow
         </b>
          when your browser asks.
       </p>
-      <p>
+      <p
+        className="wxc-no-media__indications"
+      >
         <div>
-          <b>
+          <b
+            className="wxc-no-media__accent"
+          >
             Still not working?
           </b>
         </div>
         You may need to update your webpage permissions. Go to your 
-        <b>
+        <b
+          className="wxc-no-media__accent"
+        >
           browser settings
         </b>
         , look for website settings, select 
-        <b>
+        <b
+          className="wxc-no-media__accent"
+        >
           Allow for Microphone
         </b>
         , then reload this page.

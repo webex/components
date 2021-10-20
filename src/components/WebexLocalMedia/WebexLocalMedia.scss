@@ -1,6 +1,6 @@
 $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-local-media;
 
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-local-media {
+.#{$C} {
   display: flex;
   position: relative;
   justify-content: center;
@@ -13,7 +13,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-local-media;
   border-radius: 0.5rem;
   background: var(--wxc-video-background);
 
-  video {
+  .#{$C}__video {
     height: 100%;
     width: 100%;
     object-fit: cover;

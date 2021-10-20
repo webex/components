@@ -24,7 +24,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-media;
     margin-bottom: 1.234rem;
   }
 
-  video {
+  .#{$C}__video {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -54,7 +54,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-media;
 
   &--tablet {
     &.#{$C}--remote-video-n-share {
-      .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-video {
+      .#{$C}__remote-video {
         @include media-preview-tablet();
       }
     }
@@ -62,7 +62,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-media;
 
   &--desktop {
     &.#{$C}--remote-video-n-share {
-     .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-video {
+     .#{$C}__remote-video {
         @include media-preview-tablet();
       }
     }
@@ -70,7 +70,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-media;
 
   &--desktop-xl {
     &.#{$C}--remote-video-n-share {
-     .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-remote-video {
+     .#{$C}__remote-video {
         @include media-preview-desktop-xl();
       }
     }

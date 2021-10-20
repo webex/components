@@ -25,7 +25,7 @@ export default function OptionsList({
 
   return (
     <div className={cssClasses}>
-      <ul role="menu">
+      <ul role="menu" className={sc('list')}>
         {options.map((option) => (
           <li
             className={sc('option')}
