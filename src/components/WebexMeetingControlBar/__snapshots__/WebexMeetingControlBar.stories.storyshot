@@ -264,7 +264,7 @@ Array [
             <span
               className="wxc-meeting-control__button-text"
             >
-              Share
+              Stop sharing
             </span>
           </button>
         </div>
@@ -347,7 +347,7 @@ Array [
             <span
               className="wxc-meeting-control__button-text"
             >
-              Hide Participants
+              Show participants
             </span>
           </button>
         </div>
