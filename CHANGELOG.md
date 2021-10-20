@@ -1,3 +1,16 @@
+# [1.165.0](https://github.com/webex/components/compare/v1.164.0...v1.165.0) (2021-10-20)
+
+
+### Bug Fixes
+
+* **WebexMeetingHostAuthentication:** remove name input and start meeting button from host form ([e617f1e](https://github.com/webex/components/commit/e617f1ebb583679214bea4d0c176df6a0e377977))
+
+
+### Features
+
+* **MeetingsJsonAdapter:** refactor setPasswordRequired ([d077520](https://github.com/webex/components/commit/d077520329643199c71c42817203a7255c8e52ba))
+* **WebexComponents:** create custom hook useRef that triggers a render on update ([eca765e](https://github.com/webex/components/commit/eca765e2c1d4de0200aee0b88844aef1acdf0185))
+
 # [1.164.0](https://github.com/webex/components/compare/v1.163.0...v1.164.0) (2021-10-19)
 
 
