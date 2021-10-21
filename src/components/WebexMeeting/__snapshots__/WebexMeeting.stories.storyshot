@@ -356,7 +356,7 @@ Array [
               <span
                 className="wxc-meeting-control__button-text"
               >
-                Share
+                Stop sharing
               </span>
             </button>
           </div>
@@ -439,7 +439,7 @@ Array [
               <span
                 className="wxc-meeting-control__button-text"
               >
-                Hide Participants
+                Show participants
               </span>
             </button>
           </div>
@@ -1068,7 +1068,7 @@ Array [
     }
   >
     <h5
-      className="wxc-title wxc-meeting__centered"
+      className="wxc-title wxc-meeting__centered wxc-title--subsection"
       style={Object {}}
     >
       You've successfully left the meeting
@@ -1595,7 +1595,7 @@ Array [
             className="wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
           >
             <h5
-              className="wxc-title"
+              className="wxc-title wxc-title--subsection"
               style={Object {}}
             >
               Waiting for others to join...
@@ -1881,7 +1881,7 @@ Array [
               <span
                 className="wxc-meeting-control__button-text"
               >
-                Share
+                Stop sharing
               </span>
             </button>
           </div>
@@ -1964,7 +1964,7 @@ Array [
               <span
                 className="wxc-meeting-control__button-text"
               >
-                Hide Participants
+                Show participants
               </span>
             </button>
           </div>

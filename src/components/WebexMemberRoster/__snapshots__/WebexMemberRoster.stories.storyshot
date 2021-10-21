@@ -15,7 +15,7 @@ Array [
       className="wxc-member-roster__header"
     >
       <h5
-        className="wxc-title wxc-member-roster__title"
+        className="wxc-title wxc-member-roster__title wxc-title--section"
         style={Object {}}
       >
         Participants (
@@ -241,7 +241,7 @@ Array [
       className="wxc-member-roster__header"
     >
       <h5
-        className="wxc-title wxc-member-roster__title"
+        className="wxc-title wxc-member-roster__title wxc-title--section"
         style={Object {}}
       >
         Participants (
@@ -709,7 +709,7 @@ Array [
       className="wxc-member-roster__header"
     >
       <h5
-        className="wxc-title wxc-member-roster__title"
+        className="wxc-title wxc-member-roster__title wxc-title--section"
         style={Object {}}
       >
         Participants (

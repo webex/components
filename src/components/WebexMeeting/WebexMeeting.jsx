@@ -81,7 +81,7 @@ export default function WebexMeeting({
   if (!state) {
     meetingDisplay = <div className={sc('loading-logo')} />;
   } else if (state === LEFT) {
-    meetingDisplay = <Title className={sc('centered')}>You&apos;ve successfully left the meeting</Title>;
+    meetingDisplay = <Title type="subsection" className={sc('centered')}>You&apos;ve successfully left the meeting</Title>;
   } else {
     meetingDisplay = (
       <>
