@@ -1,3 +1,10 @@
+# [1.167.0](https://github.com/webex/components/compare/v1.166.0...v1.167.0) (2021-10-21)
+
+
+### Features
+
+* **WebexComponents:** add className to elements that don't contain it ([21fb891](https://github.com/webex/components/commit/21fb89177bea4ad03b254b9b6740a3bff09f7a82))
+
 # [1.166.0](https://github.com/webex/components/compare/v1.165.0...v1.166.0) (2021-10-21)
 
 
