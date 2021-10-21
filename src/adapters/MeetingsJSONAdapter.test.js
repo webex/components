@@ -850,4 +850,13 @@ describe('Meetings JSON Adapter', () => {
       expect(testMeeting).toMatchObject({passwordRequired: false});
     });
   });
+
+  describe('clearInvalidPasswordFlag()', () => {
+    test('clears the invalidPassword flag if set', async () => {
+      testMeeting.invalidPassword = true;
+      await meetingsJSONAdapter.clearInvalidPasswordFlag(meetingID);
+
+      expect(testMeeting).toMatchObject({invalidPassword: false});
+    });
+  });
 });
