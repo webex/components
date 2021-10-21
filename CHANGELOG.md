@@ -1,3 +1,12 @@
+# [1.166.0](https://github.com/webex/components/compare/v1.165.0...v1.166.0) (2021-10-21)
+
+
+### Features
+
+* **MeetingsJsonAdapter:** add test for 'clearInvalidPasswordFlag()' method ([be67a38](https://github.com/webex/components/commit/be67a382d2493d0508a0d81ef614220f331922c6))
+* **ParticipantListFilledIcon:** add ParticipantListFilledIcon ([be6b47c](https://github.com/webex/components/commit/be6b47c21cf6215aec1eb2cb22d1f51ede07b48c))
+* **WebexSettings:** add hints for settings controls ([2439a45](https://github.com/webex/components/commit/2439a452dfe1618bfe92d28f2cb83631000b9da5))
+
 # [1.165.0](https://github.com/webex/components/compare/v1.164.0...v1.165.0) (2021-10-20)
 
 
