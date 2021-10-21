@@ -284,4 +284,32 @@ export default {
     speakerID: 'speakerID1',
     password: 'secret',
   },
+  meeting11: {
+    ID: 'meeting11',
+    title: 'Quarterly Financial Report',
+    localAudio: {
+      stream: new MediaStream(),
+    },
+    localVideo: {
+      stream: new MediaStream(),
+    },
+    localShare: {
+      stream: null,
+    },
+    remoteAudio: null,
+    remoteVideo: null,
+    remoteShare: null,
+    state: 'JOINING',
+    showRoster: false,
+    settings: {
+      visible: false,
+      preview: {
+        microphone: {},
+        video: {},
+      },
+    },
+    cameraID: 'cameraID1',
+    microphoneID: 'microphoneID1',
+    speakerID: 'speakerID1',
+  },
 };

@@ -31,6 +31,7 @@ import {
   ShowPwdIcon,
   ShareScreenIcon,
   UnreadIcon,
+  WaitingForHostIcon,
   WarningIcon,
 } from '../../icons';
 
@@ -44,6 +45,7 @@ const icons = {
   'camera-muted': CameraMutedIcon,
   'camera-presence': CameraPresenceIcon,
   cancel: CancelIcon,
+  'chat-filled': ChatFilledIcon,
   'content-share': ShareScreenIcon,
   'dnd-presence': DndPresenceIcon,
   error: RemoteMediaErrorIcon,
@@ -66,7 +68,7 @@ const icons = {
   'show-password': ShowPwdIcon,
   unread: UnreadIcon,
   warning: WarningIcon,
-  'chat-filled': ChatFilledIcon,
+  'waiting-for-host': WaitingForHostIcon,
 };
 
 /**
