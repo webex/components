@@ -1,0 +1,43 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import Icon from '../generic/Icon/Icon';
+import WebexLocalMedia from '../WebexLocalMedia/WebexLocalMedia';
+import WebexMeetingInfo from '../WebexMeetingInfo/WebexMeetingInfo';
+import webexComponentClasses from '../helpers';
+
+/**
+ * A component to be displayed while the user is waiting for the host to start the meeting.
+ * It shows a waiting message and the local video stream (if available).
+ *
+ * @param {object} props  Data passed to the component
+ * @param {string} props.className  Custom CSS class to apply
+ * @param {string} props.meetingID  ID of the meeting for which to show media
+ * @param {object} props.style  Custom style to apply
+ * @returns {object} JSX of the component
+ */
+export default function WebexWaitingForHost({className, meetingID, style}) {
+  const [cssClasses, sc] = webexComponentClasses('waiting-for-host', className);
+
+  return (
+    <div className={cssClasses} style={style}>
+      <WebexMeetingInfo className={sc('info')} meetingID={meetingID} />
+      <div className={sc('content')}>
+        <div className={sc('icon')}><Icon name="waiting-for-host" size={120} /></div>
+        <div className={sc('text')}>Thank you for waiting. We’ll start the meeting when the host joins.</div>
+      </div>
+      <WebexLocalMedia className={sc('local-media')} meetingID={meetingID} mediaType="video" />
+    </div>
+  );
+}
+
+WebexWaitingForHost.propTypes = {
+  className: PropTypes.string,
+  meetingID: PropTypes.string.isRequired,
+  style: PropTypes.shape(),
+};
+
+WebexWaitingForHost.defaultProps = {
+  className: '',
+  style: undefined,
+};

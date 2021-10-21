@@ -1,0 +1,50 @@
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-waiting-for-host;
+
+.#{$C} {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: stretch;
+  border-radius: 0.5rem;
+
+  .#{$C}__info {
+    margin-bottom: 1rem;
+  }
+
+  .#{$C}__content {
+    flex: 1;
+    min-height: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--wxc-video-background);
+    color: var(--wxc-text-color);
+    border-radius: 0.5rem;
+  }
+
+  .#{$C}__icon {
+    margin-bottom: 0.5rem;
+  }
+
+  .#{$C}__text {
+    width: 15rem;
+    height: 2.625rem;
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.3rem;
+  }
+
+  .#{$C}__local-media {
+    @include media-preview-mobile();
+
+    height: 5.625rem;
+    width: 10rem;
+    min-width: auto;
+    min-height: auto;
+    background: var(--wxc-secondary-video-background);
+  }
+}
