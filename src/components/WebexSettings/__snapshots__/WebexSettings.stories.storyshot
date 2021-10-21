@@ -50,7 +50,7 @@ Array [
           className="wxc-audio-settings"
         >
           <h5
-            className="wxc-title"
+            className="wxc-title wxc-title--subsection"
             style={Object {}}
           >
             Speaker
@@ -91,7 +91,7 @@ Array [
             </div>
           </div>
           <h5
-            className="wxc-title"
+            className="wxc-title wxc-title--subsection"
             style={Object {}}
           >
             Microphone

@@ -2,6 +2,14 @@
     color: var(--wxc-text-color);
     font-size: 1rem;
     line-height: 150%;
-    font-family: $brand-font-bold;
     margin: 1.25rem 0 0.25rem;
+    font-weight: normal;
+
+    &--section {
+        font-family: $brand-font-bold;
+    }
+
+    &--subsection {
+        font-family: $brand-font-medium;
+    }
 }

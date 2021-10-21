@@ -72,7 +72,7 @@ export default function WebexMemberRoster({
   return (
     <div className={cssClasses} style={style}>
       <div className={sc('header')}>
-        <Title className={sc('title')}>
+        <Title type="section" className={sc('title')}>
           Participants (
           {members ? members.length : <i>loading...</i>}
           )

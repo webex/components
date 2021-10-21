@@ -26,7 +26,7 @@ export default function WebexVideoSettings({meetingID, className, style}) {
       {display.options?.length !== 0
         ? (
           <>
-            <Title>Camera</Title>
+            <Title type="subsection">Camera</Title>
             <WebexMeetingControl type="switch-camera" meetingID={meetingID} />
             <div className={sc('media')}>
               <WebexLocalMedia mediaType="preview" meetingID={meetingID} />

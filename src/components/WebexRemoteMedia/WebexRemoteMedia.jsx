@@ -80,7 +80,7 @@ export default function WebexRemoteMedia({className, meetingID, style}) {
       </>
     );
   } else if (hasMedia && !hasOtherMembers) {
-    remoteDisplay = <Title>Waiting for others to join...</Title>;
+    remoteDisplay = <Title type="subsection">Waiting for others to join...</Title>;
   } else {
     remoteDisplay = (
       <Badge className={sc('connecting-badge')}>
