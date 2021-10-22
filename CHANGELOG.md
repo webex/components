@@ -1,3 +1,10 @@
+# [1.168.0](https://github.com/webex/components/compare/v1.167.0...v1.168.0) (2021-10-22)
+
+
+### Features
+
+* **WebexMeeting:** add collapsible controls range props to meeting component ([f92dfe3](https://github.com/webex/components/commit/f92dfe3e9578a01ed3f86151380c6207d16ec67a))
+
 # [1.167.0](https://github.com/webex/components/compare/v1.166.0...v1.167.0) (2021-10-21)
 
 
