@@ -1,3 +1,15 @@
+# [1.169.0](https://github.com/webex/components/compare/v1.168.0...v1.169.0) (2021-10-22)
+
+
+### Bug Fixes
+
+* **MeetingsJsonAdapter:** update controls text ([41bc7ac](https://github.com/webex/components/commit/41bc7ac4fafc64b0870e78d2937d19047a534824))
+
+
+### Features
+
+* **Title:** add title type property ([5ffbc4b](https://github.com/webex/components/commit/5ffbc4b651ac6f55ec210b3f6583feffb8d261c2))
+
 # [1.168.0](https://github.com/webex/components/compare/v1.167.0...v1.168.0) (2021-10-22)
 
 
