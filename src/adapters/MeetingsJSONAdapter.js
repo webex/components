@@ -180,6 +180,9 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       [SWITCH_MICROPHONE_CONTROL]: new SwitchMicrophoneControl(this, SWITCH_MICROPHONE_CONTROL),
       [SWITCH_SPEAKER_CONTROL]: new SwitchSpeakerControl(this, SWITCH_SPEAKER_CONTROL),
     };
+
+    // While the browser is asking for sharing permission, this variable is set to a promise that resolves when the user allows/denies access
+    this.displayStreamPromise = null;
   }
 
   /**
@@ -272,9 +275,16 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
           meeting.localAudio.stream = await this.getStream({video: false, audio: true});
         }
 
-        // Add a share stream as if it were a local sharing
+        if (this.displayStreamPromise) {
+          // The browser is currently asking the user for share permission, wait for that to finish
+          await this.displayStreamPromise;
+        }
+
+        // Get a real screen share stream if this meeting requires one
         if (this.emptyStream(meeting.localShare.stream)) {
-          meeting.localShare.stream = await this.getDisplayStream();
+          this.displayStreamPromise = this.getDisplayStream();
+          meeting.localShare.stream = await this.displayStreamPromise;
+          this.displayStreamPromise = null;
         }
 
         observer.next(meeting);
