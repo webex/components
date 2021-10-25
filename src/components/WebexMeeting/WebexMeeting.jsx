@@ -85,7 +85,6 @@ export default function WebexMeeting({
   } else {
     meetingDisplay = (
       <>
-        {logo && <div className={sc('logo')}>{logo}</div>}
         <div className={sc('body')}>
           {isActive
             ? <WebexInMeeting meetingID={ID} className={sc('inner-meeting')} />
@@ -143,6 +142,7 @@ export default function WebexMeeting({
 
   return (
     <div className={cssClasses} style={style} ref={mediaRef}>
+      {logo && <div className={sc('logo')}>{logo}</div>}
       {meetingDisplay}
     </div>
   );
