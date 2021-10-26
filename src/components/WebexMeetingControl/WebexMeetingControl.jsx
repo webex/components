@@ -12,6 +12,7 @@ const controlTypeToButtonType = {
   JOIN: 'join',
   CANCEL: 'cancel',
   CLOSE: 'ghost',
+  BUTTON: 'default',
   TOGGLE: 'default',
 };
 

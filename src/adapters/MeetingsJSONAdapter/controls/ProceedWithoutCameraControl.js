@@ -27,7 +27,7 @@ export default class ProceedWithoutCameraControl extends MeetingControl {
     return Observable.create((observer) => {
       observer.next({
         ID: this.ID,
-        type: 'JOIN',
+        type: 'BUTTON',
         text: 'Proceed without camera',
         tooltip: 'This setting cannot be changed once the meeting starts.',
         hint: 'This setting cannot be changed once the meeting starts.',

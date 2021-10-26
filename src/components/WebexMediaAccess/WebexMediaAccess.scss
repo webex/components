@@ -7,6 +7,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-media-access;
   justify-content: center;
   background: var(--wxc-primary-background);
   color: var(--wxc-text-color);
+  font-family: $brand-font-regular;
 
   .#{$C}__logo-container {
     position: absolute;
@@ -16,18 +17,21 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-media-access;
   .#{$C}__title {
     margin-top: 0.688rem;
     font-size: 1rem;
-    font-family: #{$brand-font-bold};
+    font-weight: normal;
+    font-family: #{$brand-font-medium};
   }
 
   .#{$C}__body {
     color: var(--wxc-secondary-text-color);
     margin-top: 0.5rem;
     margin-bottom: 2.25rem;
-    max-width: 21.875rem;
+    max-width: 25rem;
     text-align: center;
+    font-size: 0.875rem;
 
     .#{$C}__allow {
       font-family: #{$brand-font-bold};
     }
   }
 }
+
