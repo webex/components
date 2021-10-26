@@ -1,3 +1,10 @@
+## [1.169.1](https://github.com/webex/components/compare/v1.169.0...v1.169.1) (2021-10-26)
+
+
+### Bug Fixes
+
+* **WebexMeeting:** add logo for all meeting states ([8ff6dd0](https://github.com/webex/components/commit/8ff6dd0fb170f1938847fc16f24fece8ab21c5b6))
+
 # [1.169.0](https://github.com/webex/components/compare/v1.168.0...v1.169.0) (2021-10-22)
 
 
