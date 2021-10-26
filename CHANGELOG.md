@@ -1,3 +1,16 @@
+# [1.170.0](https://github.com/webex/components/compare/v1.169.1...v1.170.0) (2021-10-26)
+
+
+### Bug Fixes
+
+* **WebexMediaAccess:** style webex media access to reflect Figma design ([2bfa031](https://github.com/webex/components/commit/2bfa0310ce7f9c87e9249505f27f7a2ea7014bc8))
+
+
+### Features
+
+* **MeetingsJsonAdapter:** implement host key to join meeting ([a591a64](https://github.com/webex/components/commit/a591a64659347dc49d41e2407d059f40c5b163bf))
+* **WebexWaitingForHost:** create WaitingForHost component ([5831eb4](https://github.com/webex/components/commit/5831eb44825ac9809ecfa81a0e4df3e1a711271c))
+
 ## [1.169.1](https://github.com/webex/components/compare/v1.169.0...v1.169.1) (2021-10-26)
 
 
