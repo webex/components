@@ -308,10 +308,12 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
     await this.updateMeeting(ID, async (meeting) => {
       let updates;
 
-      if (meeting.password && !options.password) {
+      if (meeting.password && !(options.password || options.hostKey)) {
         updates = {passwordRequired: true};
-      } else if (meeting.password && options.password !== meeting.password) {
+      } else if (meeting.password && options.password && options.password !== meeting.password) {
         updates = {invalidPassword: true};
+      } else if (meeting.hostKey && options.hostKey && options.hostKey !== meeting.hostKey) {
+        updates = {invalidHostKey: true};
       } else {
         updates = {
           remoteVideo: await this.getStream({video: true, audio: false}),
@@ -713,6 +715,15 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    */
   async clearInvalidPasswordFlag(ID) {
     await this.updateMeeting(ID, async () => ({invalidPassword: false}));
+  }
+
+  /**
+   * Sets the invalidHostKey flag to false.
+   *
+   * @param {string} ID  Id of the meeting
+   */
+  async clearInvalidHostKeyFlag(ID) {
+    await this.updateMeeting(ID, async () => ({invalidHostKey: false}));
   }
 
   /**

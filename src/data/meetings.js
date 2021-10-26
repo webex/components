@@ -283,5 +283,6 @@ export default {
     microphoneID: 'microphoneID1',
     speakerID: 'speakerID1',
     password: 'secret',
+    hostKey: 'hostsecret',
   },
 };
