@@ -6,13 +6,13 @@ import webexComponentClasses from '../helpers';
 
 const SCREENS = {
   camera: {
-    icon: 'camera_48',
+    icon: 'camera-bold',
     title: 'Allow access to camera',
     message: 'when your browser asks to let Webex use your camera for this video call',
     control: 'proceed-without-camera',
   },
   microphone: {
-    icon: 'microphone_48',
+    icon: 'microphone-bold',
     title: 'Allow access to microphone',
     message: 'when your browser asks to let Webex use your microphone for this video call',
     control: 'proceed-without-microphone',
@@ -44,7 +44,7 @@ export default function WebexMediaAccess({
   return (
     <div className={cssClasses} style={style}>
       {logo && <div className={sc('logo-container')}>{logo}</div>}
-      <Icon name={screen.icon} />
+      <Icon name={screen.icon} size={48} />
       <h2 className={sc('title')}>{screen.title}</h2>
       <p className={sc('body')}>
         Select

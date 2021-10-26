@@ -28,7 +28,7 @@ export default class ProceedWithoutMicrophoneControl extends MeetingControl {
     return Observable.create((observer) => {
       observer.next({
         ID: this.ID,
-        type: 'JOIN',
+        type: 'BUTTON',
         text: 'Proceed without audio',
         tooltip: 'This setting cannot be changed once the meeting starts.',
         hint: 'This setting cannot be changed once the meeting starts.',
