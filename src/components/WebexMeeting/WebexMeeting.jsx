@@ -18,6 +18,7 @@ import WebexMeetingGuestAuthentication from '../WebexMeetingGuestAuthentication/
 import WebexMeetingHostAuthentication from '../WebexMeetingHostAuthentication/WebexMeetingHostAuthentication';
 import WebexMemberRoster from '../WebexMemberRoster/WebexMemberRoster';
 import WebexSettings from '../WebexSettings/WebexSettings';
+import WebexWaitingForHost from '../WebexWaitingForHost/WebexWaitingForHost';
 import webexComponentClasses from '../helpers';
 import {useElementDimensions, useMeeting, useRef} from '../hooks';
 import {AdapterContext} from '../hooks/contexts';
@@ -57,7 +58,6 @@ export default function WebexMeeting({
   } = useMeeting(meetingID);
 
   const {JOINED, NOT_JOINED, LEFT} = MeetingState;
-  const isActive = state === JOINED;
   const adapter = useContext(AdapterContext);
   const [mediaRef, {width}] = useElementDimensions();
   const [cssClasses, sc] = webexComponentClasses('meeting', className, {'roster-only': showRoster && width <= PHONE_LARGE});
@@ -85,12 +85,20 @@ export default function WebexMeeting({
   } else if (state === LEFT) {
     meetingDisplay = <Title type="subsection" className={sc('centered')}>You&apos;ve successfully left the meeting</Title>;
   } else {
+    let InnerMeeting;
+
+    if (state === JOINED) {
+      InnerMeeting = WebexInMeeting;
+    } else if (state === NOT_JOINED) {
+      InnerMeeting = WebexInterstitialMeeting;
+    } else {
+      InnerMeeting = WebexWaitingForHost;
+    }
+
     meetingDisplay = (
       <>
         <div className={sc('body')}>
-          {isActive
-            ? <WebexInMeeting meetingID={ID} className={sc('inner-meeting')} />
-            : <WebexInterstitialMeeting meetingID={ID} className={sc('inner-meeting')} />}
+          <InnerMeeting meetingID={ID} className={sc('inner-meeting')} />
           {showRoster && (
             <WebexMemberRoster
               destinationID={ID}
