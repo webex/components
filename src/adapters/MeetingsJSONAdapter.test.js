@@ -859,4 +859,13 @@ describe('Meetings JSON Adapter', () => {
       expect(testMeeting).toMatchObject({invalidPassword: false});
     });
   });
+
+  describe('clearInvalidHostKeyFlag()', () => {
+    test('clears the invalidHostKey flag if set', async () => {
+      testMeeting.invalidHostKey = true;
+      await meetingsJSONAdapter.clearInvalidHostKeyFlag(meetingID);
+
+      expect(testMeeting).toMatchObject({invalidHostKey: false});
+    });
+  });
 });
