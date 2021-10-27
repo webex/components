@@ -1,3 +1,16 @@
+# [1.171.0](https://github.com/webex/components/compare/v1.170.0...v1.171.0) (2021-10-27)
+
+
+### Bug Fixes
+
+* **MeetingsJsonAdapter:** share control is asking for permissions multiple times ([32e38bc](https://github.com/webex/components/commit/32e38bc2ca567994d967d3f1dd9e586f8b82df31))
+
+
+### Features
+
+* **JoinControl:** disable join control when meeting state isn't 'NOT_JOINED' ([d12ba32](https://github.com/webex/components/commit/d12ba3244a64eb1ee064f3b11a54c0c087d3bfe8))
+* **WebexComponents:** add custom tab order for meetings controls ([edf40bb](https://github.com/webex/components/commit/edf40bbc6fb1b33b3128608401a9305dddba0daf))
+
 # [1.170.0](https://github.com/webex/components/compare/v1.169.1...v1.170.0) (2021-10-26)
 
 
