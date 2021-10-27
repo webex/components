@@ -291,7 +291,7 @@ Array [
       aria-label="Muted, video off"
       autoFocus={false}
       className="wxc-button wxc-meeting-control__control-button wxc-button--join"
-      disabled={false}
+      disabled={true}
       onClick={[Function]}
       style={Object {}}
       type="button"
