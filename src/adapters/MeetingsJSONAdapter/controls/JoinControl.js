@@ -1,5 +1,6 @@
 import {Observable} from 'rxjs';
 import {map, distinctUntilChanged} from 'rxjs/operators';
+import {MeetingControlState} from '@webex/component-adapter-interfaces';
 import MeetingControl from './MeetingControl';
 
 /**
@@ -29,17 +30,25 @@ export default class JoinControl extends MeetingControl {
   // eslint-disable-next-line class-methods-use-this
   display(meetingID) {
     return this.adapter.getMeeting(meetingID).pipe(
-      map((meeting) => (
-        (meeting.localAudio.stream ? 'Unmuted, ' : 'Muted, ')
-        + (meeting.localVideo.stream ? 'video on' : 'video off')
+      map((meeting) => {
+        const hint = (meeting.localAudio.stream ? 'Unmuted, ' : 'Muted, ') + (meeting.localVideo.stream ? 'video on' : 'video off');
+        const state = meeting.state === 'NOT_JOINED' ? MeetingControlState.ACTIVE : MeetingControlState.DISABLED;
+
+        return {
+          hint,
+          state,
+        };
+      }),
+      distinctUntilChanged((prev, curr) => (
+        (prev.hint === curr.hint) && (prev.state === curr.state)
       )),
-      distinctUntilChanged(),
-      map((hint) => ({
+      map(({hint, state}) => ({
         ID: this.ID,
         type: 'JOIN',
         text: 'Join meeting',
         tooltip: 'Join meeting',
         hint,
+        state,
       })),
     );
   }
