@@ -28,6 +28,11 @@ WaitingForOthers.args = {
   meetingID: 'meeting4',
 };
 
+export const WaitingForHost = Template.bind({});
+WaitingForHost.args = {
+  meetingID: 'meeting11',
+};
+
 export const InMeeting = Template.bind({});
 InMeeting.args = {
   meetingID: 'meeting1',
