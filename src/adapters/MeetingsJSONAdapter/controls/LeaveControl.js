@@ -30,7 +30,7 @@ export default class LeaveControl extends MeetingControl {
       observer.next({
         ID: this.ID,
         type: 'CANCEL',
-        icon: 'cancel_28',
+        icon: 'cancel',
         tooltip: 'Leave meeting',
       });
 
