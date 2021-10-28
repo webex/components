@@ -34,7 +34,7 @@ describe('Meetings JSON Adapter', () => {
     ));
 
     meetingsJSONAdapter = new MeetingsJSONAdapter(mockMeetingsCopy);
-    meetingsJSONAdapter.getStream = jest.fn(() => new MediaStream());
+    meetingsJSONAdapter.getStream = jest.fn(() => ({stream: new MediaStream(), deviceId: ''}));
     testMeeting = mockMeetingsCopy[meetingID];
   });
 

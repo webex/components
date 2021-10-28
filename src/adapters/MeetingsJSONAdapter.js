@@ -267,12 +267,18 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
 
         // Add a video stream as if it were a local video
         if (this.emptyStream(meeting.localVideo.stream)) {
-          meeting.localVideo.stream = await this.getStream({video: true, audio: false});
+          const {stream, deviceId} = await this.getStream({video: true, audio: false});
+
+          meeting.localVideo.stream = stream;
+          meeting.cameraID = deviceId;
         }
 
         // Add an audio stream as if it were a local audio
         if (this.emptyStream(meeting.localAudio.stream)) {
-          meeting.localAudio.stream = await this.getStream({video: false, audio: true});
+          const {stream, deviceId} = await this.getStream({video: false, audio: true});
+
+          meeting.localAudio.stream = stream;
+          meeting.microphoneID = deviceId;
         }
 
         if (this.displayStreamPromise) {
@@ -326,8 +332,8 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
         updates = {invalidHostKey: true};
       } else {
         updates = {
-          remoteVideo: await this.getStream({video: true, audio: false}),
-          remoteAudio: await this.getStream({video: false, audio: true}),
+          remoteVideo: await this.getStream({video: true, audio: false}).stream,
+          remoteAudio: await this.getStream({video: false, audio: true}).stream,
           state: MeetingState.JOINED,
         };
       }
@@ -387,15 +393,20 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * Returns a promise to a MediaStream object obtained from the user's browser.
    *
    * @param {MediaStreamConstraints} constraints  Object specifying media settings
-   * @returns {Promise.<MediaStream>} Media stream that matches given constraints
+   * @returns {Promise.<{MediaStream, string}>} Media stream that matches given constraints and the corresponding device id
    * @private
    */
   // eslint-disable-next-line class-methods-use-this
   async getStream(constraints) {
     let stream;
+    let deviceId;
 
     try {
       const mediaStream = await navigator.mediaDevices.getUserMedia(constraints);
+      const availableDevices = await this.getAvailableDevices();
+      const deviceLabel = mediaStream.getTracks()[0].label;
+
+      deviceId = availableDevices.find((device) => device.label === deviceLabel)?.deviceId;
 
       // Filter out either video or audio from a given constraints and return a new media stream
       if (constraints.video) {
@@ -410,7 +421,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       console.error('Meetings JSON adapter can not display the local user stream', reason);
     }
 
-    return stream;
+    return {stream, deviceId};
   }
 
   /**
@@ -436,7 +447,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   /**
    * Returns available media devices.
    *
-   * @param {'videoinput'|'audioinput'|'audiooutput'} type  String specifying the device type.
+   * @param {'videoinput'|'audioinput'|'audiooutput'} [type]  String specifying the device type.
    * See {@link https://developer.mozilla.org/en-US/docs/Web/API/MediaDeviceInfo/kind|MDN}
    * @returns {MediaDeviceInfo[]|null} Array containing media devices or null if devices can't be read.
    * @private
@@ -447,7 +458,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
 
     try {
       devices = await navigator.mediaDevices.enumerateDevices();
-      devices = devices.filter((device) => device.kind === type && device.deviceId);
+      devices = devices.filter((device) => !type || (device.kind === type && device.deviceId));
     } catch (reason) {
       // eslint-disable-next-line no-console
       console.error('Meetings JSON adapter can not enumerate media devices', reason);
@@ -540,7 +551,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       return {
         localAudio: {
           stream: meeting.localAudio.stream
-            ? null : await this.getStream({video: false, audio: true}),
+            ? null : await this.getStream({video: false, audio: true}).stream,
         },
       };
     });
@@ -559,7 +570,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       return {
         localVideo: {
           stream: meeting.localVideo?.stream
-            ? null : await this.getStream({video: true, audio: false}),
+            ? null : await this.getStream({video: true, audio: false}).stream,
         },
       };
     });
@@ -623,16 +634,31 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
         updates = {
           settings: {
             visible: true,
-            preview: {
-              video: meeting.localVideo.stream
-                ? meeting.localVideo.stream.clone()
-                : await this.getStream({video: {deviceId: {exact: meeting.cameraID}}}),
-              audio: meeting.localAudio.stream
-                ? meeting.localAudio.stream.clone()
-                : await this.getStream({audio: {deviceId: {exact: meeting.microphoneID}}}),
-            },
+            preview: {},
           },
         };
+
+        if (meeting.localVideo.stream) {
+          updates.settings.preview.video = meeting.localVideo.stream.clone();
+        } else {
+          const {stream, deviceId} = await this.getStream(
+            {video: {deviceId: {exact: meeting.cameraID}}},
+          );
+
+          updates.settings.preview.video = stream;
+          updates.cameraID = deviceId;
+        }
+
+        if (meeting.localAudio.stream) {
+          updates.settings.preview.audio = meeting.localAudio.stream.clone();
+        } else {
+          const {stream, deviceId} = await this.getStream(
+            {audio: {deviceId: {exact: meeting.microphoneID}}},
+          );
+
+          updates.settings.preview.microphoneID = stream;
+          updates.microphoneID = deviceId;
+        }
       } else {
         // When closing settings, stop the existing meeting streams
         // and replace them with the last preview streams.
@@ -668,7 +694,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       return {
         settings: {
           preview: {
-            video: await this.getStream({video: {deviceId: {exact: cameraID}}}),
+            video: await this.getStream({video: {deviceId: {exact: cameraID}}}).stream,
           },
         },
         cameraID,
@@ -690,7 +716,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       return {
         settings: {
           preview: {
-            audio: await this.getStream({audio: {deviceId: {exact: microphoneID}}}),
+            audio: await this.getStream({audio: {deviceId: {exact: microphoneID}}}).stream,
           },
         },
         microphoneID,

@@ -184,7 +184,7 @@ Array [
         <span
           className="wxc-select__label"
         >
-          cameraID1
+          
         </span>
         <svg
           className="wxc-icon "
