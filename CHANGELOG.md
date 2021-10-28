@@ -1,3 +1,10 @@
+# [1.173.0](https://github.com/webex/components/compare/v1.172.0...v1.173.0) (2021-10-28)
+
+
+### Features
+
+* **Button:** add 'size' prop to Button component ([6176d93](https://github.com/webex/components/commit/6176d93816939b87c05c05575f7ba3a25bf44387))
+
 # [1.172.0](https://github.com/webex/components/compare/v1.171.0...v1.172.0) (2021-10-28)
 
 
