@@ -36,9 +36,9 @@ export default function Modal({
     <div ref={ref} className={cssClasses}>
       <div className={`${sc('content')} ${otherClassName}`}>
         <div className={sc('header')}>
-          {onBack && <Button type="ghost" className={sc('back')} onClick={onBack}><Icon name="arrow-left" size="13" /></Button>}
+          {onBack && <Button type="ghost" className={sc('back')} size={28} onClick={onBack}><Icon name="arrow-left" size="13" /></Button>}
           {title && <h3 className={sc('title')}>{title}</h3>}
-          {onClose && <Button className={sc('close')} type="ghost" onClick={onClose}><Icon name="cancel" size={16} /></Button>}
+          {onClose && <Button className={sc('close')} type="ghost" size={28} onClick={onClose}><Icon name="cancel" size={16} /></Button>}
         </div>
         <div className={sc('body')}>{children}</div>
       </div>

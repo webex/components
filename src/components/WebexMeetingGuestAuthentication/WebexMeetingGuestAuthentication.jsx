@@ -85,7 +85,7 @@ export default function WebexMeetingGuestAuthentication({
             error={invalidPassword ? 'Incorrect password. Try again.' : ''}
           />
         </label>
-        <Button type="primary" className={sc('start-button')} onClick={joinMeeting} isDisabled={isStartButtonDisabled}>
+        <Button type="primary" className={sc('start-button')} size={28} onClick={joinMeeting} isDisabled={isStartButtonDisabled}>
           {isJoining && <Spinner className={sc('start-button-spinner')} size={16} />}
           {isJoining ? 'Starting meeting...' : 'Start meeting'}
         </Button>

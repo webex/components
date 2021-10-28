@@ -56,12 +56,12 @@ export default function InputField({
           required={required}
         />
         {type === 'password' && value && (
-          <Button type="ghost" className={sc('input-field-right-icon')} onClick={toggleIsPwdRevealed}>
+          <Button type="ghost" className={sc('input-field-right-icon')} size={28} onClick={toggleIsPwdRevealed}>
             <Icon name={isPwdRevealed ? 'hide-password' : 'show-password'} />
           </Button>
         )}
         {type !== 'password' && value && (
-          <Button type="ghost" className={sc('input-field-right-icon')} onClick={clearInput}>
+          <Button type="ghost" className={sc('input-field-right-icon')} size={28} onClick={clearInput}>
             <Icon name="cancel" size={16} />
           </Button>
         )}

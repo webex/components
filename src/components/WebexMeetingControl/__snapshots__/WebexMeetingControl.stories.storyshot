@@ -10,7 +10,11 @@ Array [
       className="wxc-button wxc-meeting-control__control-button wxc-button--default wxc-button--pressed"
       disabled={false}
       onClick={[Function]}
-      style={Object {}}
+      style={
+        Object {
+          "height": 48,
+        }
+      }
       type="button"
     >
       <svg
@@ -68,7 +72,11 @@ Array [
       className="wxc-button wxc-meeting-control__control-button wxc-button--default"
       disabled={true}
       onClick={[Function]}
-      style={Object {}}
+      style={
+        Object {
+          "height": 48,
+        }
+      }
       type="button"
     >
       <svg
@@ -130,7 +138,11 @@ Array [
       className="wxc-button wxc-meeting-control__control-button wxc-button--join"
       disabled={true}
       onClick={[Function]}
-      style={Object {}}
+      style={
+        Object {
+          "height": 48,
+        }
+      }
       type="button"
     >
       <span
@@ -234,7 +246,11 @@ Array [
       className="wxc-button wxc-meeting-control__control-button wxc-button--default wxc-button--pressed"
       disabled={false}
       onClick={[Function]}
-      style={Object {}}
+      style={
+        Object {
+          "height": 48,
+        }
+      }
       type="button"
     >
       <svg
@@ -293,7 +309,11 @@ Array [
       className="wxc-button wxc-meeting-control__control-button wxc-button--join"
       disabled={true}
       onClick={[Function]}
-      style={Object {}}
+      style={
+        Object {
+          "height": 48,
+        }
+      }
       type="button"
     >
       <span

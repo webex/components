@@ -50,7 +50,11 @@ Array [
         className="wxc-button wxc-meeting-control__control-button wxc-button--default"
         disabled={false}
         onClick={[Function]}
-        style={Object {}}
+        style={
+          Object {
+            "height": 48,
+          }
+        }
         type="button"
       >
         <span
@@ -134,7 +138,11 @@ Array [
         className="wxc-button wxc-meeting-control__control-button wxc-button--default"
         disabled={false}
         onClick={[Function]}
-        style={Object {}}
+        style={
+          Object {
+            "height": 48,
+          }
+        }
         type="button"
       >
         <span

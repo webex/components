@@ -16,6 +16,7 @@ import Tooltip from '../Tooltip/Tooltip';
  * @param {Function} props.onClick  OnClick callback
  * @param {boolean} [props.pressed=false]  Flag indicating if the button is pressed
  * @param {object} props.style  Inline style object for the component
+ * @param {string|number} props.size  Button height
  * @param {number} props.tabIndex  Value of the tabIndex
  * @param {string} props.tooltip  Tooltip to be displayed
  * @param {'default'|'join'|'cancel'|'ghost'|'toggle'} [props.type='default']  Button type
@@ -29,6 +30,7 @@ export default function Button({
   isDisabled,
   onClick,
   pressed,
+  size,
   style,
   tabIndex,
   tooltip,
@@ -49,7 +51,7 @@ export default function Button({
         autoFocus={autoFocus}
         tabIndex={tabIndex}
         ref={buttonRef}
-        style={style}
+        style={{height: size, ...style}}
       >
         {children}
       </button>
@@ -71,6 +73,7 @@ Button.propTypes = {
   onClick: PropTypes.func.isRequired,
   pressed: PropTypes.bool,
   style: PropTypes.shape(),
+  size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   tabIndex: PropTypes.number,
   tooltip: PropTypes.string,
   type: PropTypes.oneOf(['default', 'join', 'cancel', 'ghost', 'toggle']),
@@ -83,6 +86,7 @@ Button.defaultProps = {
   isDisabled: false,
   pressed: false,
   style: {},
+  size: 32,
   tabIndex: undefined,
   tooltip: '',
   type: 'default',
