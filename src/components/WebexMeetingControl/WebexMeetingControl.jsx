@@ -55,6 +55,7 @@ function renderButton(sc, action, display, style, showText, asItem, autoFocus, t
       <Button
         className={sc('control-button')}
         type={controlTypeToButtonType[type] || 'default'}
+        size={48}
         isDisabled={isDisabled}
         onClick={action}
         ariaLabel={hint}

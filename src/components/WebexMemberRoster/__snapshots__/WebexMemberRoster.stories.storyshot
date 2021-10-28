@@ -26,7 +26,11 @@ Array [
         autoFocus={false}
         className="wxc-button wxc-button--ghost"
         disabled={false}
-        style={Object {}}
+        style={
+          Object {
+            "height": 28,
+          }
+        }
         type="button"
       >
         <svg
@@ -253,7 +257,11 @@ Array [
         autoFocus={false}
         className="wxc-button wxc-button--ghost"
         disabled={false}
-        style={Object {}}
+        style={
+          Object {
+            "height": 28,
+          }
+        }
         type="button"
       >
         <svg
@@ -722,7 +730,11 @@ Array [
         autoFocus={false}
         className="wxc-button wxc-button--ghost"
         disabled={false}
-        style={Object {}}
+        style={
+          Object {
+            "height": 28,
+          }
+        }
         type="button"
       >
         <svg

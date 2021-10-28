@@ -79,6 +79,7 @@ export default function WebexMemberRoster({
         </Title>
         <Button
           type="ghost"
+          size={28}
           onClick={onClose}
         >
           <Icon name="cancel" size={16} />
