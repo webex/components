@@ -1,3 +1,18 @@
+# [1.172.0](https://github.com/webex/components/compare/v1.171.0...v1.172.0) (2021-10-28)
+
+
+### Bug Fixes
+
+* **WebexInterstitialMeeting:** set the media container to a 16:9 aspect ratio ([c871ff7](https://github.com/webex/components/commit/c871ff7897e7334558e05955ecb7bf1f66ce57ca))
+* **WebexMeeting:** update snapshots ([91e73cd](https://github.com/webex/components/commit/91e73cdbace0d3a37066711de1272172f993b255))
+
+
+### Features
+
+* **MeetingsJsonAdapter:** add test for 'clearInvalidHostKeyFlag()' ([c017a65](https://github.com/webex/components/commit/c017a650bcd29904512b14e330d560b64b2b6ab0))
+* **WebexComponents:** add pressed state on "Participant", "Share" and "Collapse" buttons ([577b104](https://github.com/webex/components/commit/577b1040f75c91e2069e39921b2d4dedf5da1f3d))
+* **WebexMeeting:** add WaitingForHost component to be displayed in meeting ([7c77c86](https://github.com/webex/components/commit/7c77c864bf40d3a989a976b010f65cbcac2f432e))
+
 # [1.171.0](https://github.com/webex/components/compare/v1.170.0...v1.171.0) (2021-10-27)
 
 
