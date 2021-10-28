@@ -1,3 +1,11 @@
+## [1.173.1](https://github.com/webex/components/compare/v1.173.0...v1.173.1) (2021-10-28)
+
+
+### Bug Fixes
+
+* **Button:** use the 'medium' font family for 'Button' component ([43e0f3f](https://github.com/webex/components/commit/43e0f3fb15f10d7ff723f1a498ddffdcf5e0624a))
+* **MeetingsJsonAdapter:** how default camera and microphone in webex settings ([31fe02d](https://github.com/webex/components/commit/31fe02d4df16309be91fa244f2e1739a2d62af74))
+
 # [1.173.0](https://github.com/webex/components/compare/v1.172.0...v1.173.0) (2021-10-28)
 
 
