@@ -114,7 +114,7 @@ Array [
                 <span
                   className="wxc-select__label"
                 >
-                  microphoneID1
+                  
                 </span>
                 <svg
                   className="wxc-icon "
