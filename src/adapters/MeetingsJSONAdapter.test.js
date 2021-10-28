@@ -342,7 +342,7 @@ describe('Meetings JSON Adapter', () => {
       meetingsJSONAdapter.meetingControls[LEAVE_CONTROL].display().subscribe((display) => {
         expect(display).toMatchObject({
           ID: 'leave-meeting',
-          icon: 'cancel_28',
+          icon: 'cancel',
           tooltip: 'Leave meeting',
         });
         done();
@@ -365,7 +365,7 @@ describe('Meetings JSON Adapter', () => {
         .subscribe((display) => {
           expect(display).toMatchObject({
             ID: 'mute-audio',
-            icon: 'microphone_28',
+            icon: 'microphone',
             tooltip: 'Mute audio',
             state: 'inactive',
           });
@@ -382,7 +382,7 @@ describe('Meetings JSON Adapter', () => {
         .subscribe((display) => {
           expect(display).toMatchObject({
             ID: 'mute-audio',
-            icon: 'microphone-muted_28',
+            icon: 'microphone-muted',
             tooltip: 'Unmute audio',
             state: 'active',
           });
@@ -403,7 +403,7 @@ describe('Meetings JSON Adapter', () => {
             expect(display).toMatchObject({
               ID: 'mute-audio',
               type: 'BUTTON',
-              icon: 'microphone_28',
+              icon: 'microphone',
               tooltip: 'Mute audio',
               state: 'inactive',
               text: 'Mute',
@@ -415,7 +415,7 @@ describe('Meetings JSON Adapter', () => {
             expect(display).toMatchObject({
               ID: 'mute-audio',
               type: 'BUTTON',
-              icon: 'microphone-muted_28',
+              icon: 'microphone-muted',
               tooltip: 'Unmute audio',
               state: 'active',
               text: 'Unmute',
@@ -451,7 +451,7 @@ describe('Meetings JSON Adapter', () => {
         .subscribe((display) => {
           expect(display).toMatchObject({
             ID: 'mute-video',
-            icon: 'camera_28',
+            icon: 'camera',
             tooltip: 'Stop video',
             state: 'inactive',
           });
@@ -468,7 +468,7 @@ describe('Meetings JSON Adapter', () => {
         .subscribe((display) => {
           expect(display).toMatchObject({
             ID: 'mute-video',
-            icon: 'camera-muted_28',
+            icon: 'camera-muted',
             tooltip: 'Start video',
             state: 'active',
           });
@@ -488,7 +488,7 @@ describe('Meetings JSON Adapter', () => {
             expect(display).toMatchObject({
               ID: 'mute-video',
               type: 'BUTTON',
-              icon: 'camera_28',
+              icon: 'camera',
               tooltip: 'Stop video',
               state: 'inactive',
               text: 'Stop video',
@@ -500,7 +500,7 @@ describe('Meetings JSON Adapter', () => {
             expect(display).toMatchObject({
               ID: 'mute-video',
               type: 'BUTTON',
-              icon: 'camera-muted_28',
+              icon: 'camera-muted',
               tooltip: 'Start video',
               state: 'active',
               text: 'Start video',

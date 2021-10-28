@@ -31,7 +31,7 @@ export default class SettingsControl extends MeetingControl {
       ID: this.ID,
       type: 'BUTTON',
       state: MeetingControlState.ACTIVE,
-      icon: 'settings_32',
+      icon: 'settings',
       text: 'Settings',
       tooltip: 'Meeting settings',
     };
@@ -39,7 +39,7 @@ export default class SettingsControl extends MeetingControl {
       ID: this.ID,
       type: 'BUTTON',
       state: MeetingControlState.INACTIVE,
-      icon: 'settings_32',
+      icon: 'settings',
       text: 'Settings',
       tooltip: 'Meeting settings',
     };

@@ -64,7 +64,7 @@ export default function WebexMemberRoster({
     (member) => member.orgID !== undefined && orgID !== undefined && member.orgID !== orgID,
   ) && (
     <div className={sc('external-user-warning')}>
-      <Icon name="external-user_20" size={20} className={sc('external-user-icon')} />
+      <Icon name="external-user" size={20} className={sc('external-user-icon')} />
       <div className={sc('external-user-message')}>People outside your company are included in this space</div>
     </div>
   );
