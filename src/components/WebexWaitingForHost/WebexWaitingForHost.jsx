@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import PropTypes from 'prop-types';
 
 import Icon from '../generic/Icon/Icon';
+import {Button} from '../generic';
 import WebexLocalMedia from '../WebexLocalMedia/WebexLocalMedia';
 import WebexMeetingInfo from '../WebexMeetingInfo/WebexMeetingInfo';
 import webexComponentClasses from '../helpers';
+import {useMeeting} from '../hooks';
+import {AdapterContext} from '../hooks/contexts';
 
 /**
  * A component to be displayed while the user is waiting for the host to start the meeting.
@@ -18,6 +21,8 @@ import webexComponentClasses from '../helpers';
  */
 export default function WebexWaitingForHost({className, meetingID, style}) {
   const [cssClasses, sc] = webexComponentClasses('waiting-for-host', className);
+  const adapter = useContext(AdapterContext);
+  const {ID} = useMeeting(meetingID);
 
   return (
     <div className={cssClasses} style={style}>
@@ -25,6 +30,13 @@ export default function WebexWaitingForHost({className, meetingID, style}) {
       <div className={sc('content')}>
         <div className={sc('icon')}><Icon name="waiting-for-host" size={120} /></div>
         <div className={sc('text')}>Thank you for waiting. We’ll start the meeting when the host joins.</div>
+        <Button
+          type="default"
+          size={40}
+          onClick={() => adapter.meetingsAdapter.leaveMeeting(ID)}
+        >
+          Cancel
+        </Button>
       </div>
       <WebexLocalMedia className={sc('local-media')} meetingID={meetingID} mediaType="video" />
     </div>
