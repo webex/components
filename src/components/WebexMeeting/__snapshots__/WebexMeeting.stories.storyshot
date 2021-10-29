@@ -1825,6 +1825,21 @@ Array [
           >
             Thank you for waiting. We’ll start the meeting when the host joins.
           </div>
+          <button
+            autoFocus={false}
+            className="wxc-button wxc-button--default"
+            disabled={false}
+            onClick={[Function]}
+            style={
+              Object {
+                "height": 40,
+              }
+            }
+            type="button"
+          >
+            Cancel
+          </button>
+          
         </div>
         <div
           className="wxc-local-media wxc-waiting-for-host__local-media wxc-local-media--no-media"
