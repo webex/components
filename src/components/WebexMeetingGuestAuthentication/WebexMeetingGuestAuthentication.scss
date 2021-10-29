@@ -8,6 +8,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-guest-authentication;
   font-size: 0.875rem;
   color: var(--wxc-text-color);
   line-height: 1.375rem;
+  min-width: 0;
 
   .#{$C}__header {
     display: flex;
@@ -15,18 +16,23 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-guest-authentication;
     justify-content: center;
     align-items: center;
     margin-bottom: 1.5rem;
+    max-width: 100%;
+  }
 
-    .#{$C}__logo {
-      background: var(--wxc-auth-logo) no-repeat center;
-      width: 3.689rem;
-      height: 2.625rem;
-      margin-bottom: 1.25rem;
-    }
+  .#{$C}__logo {
+    background: var(--wxc-auth-logo) no-repeat center;
+    width: 3.689rem;
+    height: 2.625rem;
+    margin-bottom: 1.25rem;
+  }
 
-    .#{$C}__title {
-      font-size: 1.25rem;
-      line-height: 1.875rem;
-    }
+  .#{$C}__title {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   .#{$C}__form-content {
@@ -48,7 +54,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-guest-authentication;
     .#{$C}__start-button {
       align-items: center;
     }
-  
+
     .#{$C}__start-button-spinner {
       margin-right: 0.5rem;
     }
@@ -71,6 +77,13 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-guest-authentication;
         cursor: pointer;
         color: var(--wxc-hyperlink--active--color);
       }
+    }
+  }
+
+  &--phone {
+    .#{$C}__title {
+      font-size: 1rem;
+      line-height: 1.5rem;
     }
   }
 }

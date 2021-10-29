@@ -2,7 +2,8 @@ import React, {useState, useContext} from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../helpers';
 import {Button, InputField} from '../generic';
-import {useMeeting} from '../hooks';
+import {PHONE_LARGE} from '../breakpoints';
+import {useElementDimensions, useMeeting} from '../hooks';
 import {AdapterContext} from '../hooks/contexts';
 import Spinner from '../generic/Spinner/Spinner';
 
@@ -31,7 +32,6 @@ function getNameError(name) {
  * @param {object} props.style  Custom style to apply
  * @param {Function} props.switchToHostModal  A callback function to switch from guest form to host form
  * @returns {object} JSX of the component
- *
  */
 export default function WebexMeetingGuestAuthentication({
   className, meetingID, style, switchToHostModal,
@@ -42,8 +42,11 @@ export default function WebexMeetingGuestAuthentication({
   const {ID, invalidPassword} = useMeeting(meetingID);
   const [isJoining, setIsJoining] = useState(false);
   const adapter = useContext(AdapterContext);
+  const [ref, {width}] = useElementDimensions();
 
-  const [cssClasses, sc] = webexComponentClasses('meeting-guest-authentication', className);
+  const [cssClasses, sc] = webexComponentClasses('meeting-guest-authentication', className, {
+    phone: width <= PHONE_LARGE,
+  });
 
   const isStartButtonDisabled = nameError || !password || invalidPassword || isJoining;
 
@@ -56,16 +59,19 @@ export default function WebexMeetingGuestAuthentication({
     setName(value);
     setNameError(getNameError(value));
   };
+
   const handlePasswordChange = (value) => {
     setPassword(value);
     adapter.meetingsAdapter.clearInvalidPasswordFlag(ID);
   };
 
+  const title = 'Enter meeting information to join';
+
   return (
-    <div className={cssClasses} style={style}>
+    <div ref={ref} className={cssClasses} style={style}>
       <div className={sc('header')}>
         <div className={sc('logo')} />
-        <div className={sc('title')}>Enter meeting information to join</div>
+        <div className={sc('title')} title={title}>{title}</div>
       </div>
       <form className={sc('form-content')}>
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
