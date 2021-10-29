@@ -42,5 +42,9 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-host-authentication;
         padding-left: 0.75rem;
       }
     }
+
+    .#{$C}__start-button-spinner {
+      margin-right: 0.5rem;
+    }
   }
 }
