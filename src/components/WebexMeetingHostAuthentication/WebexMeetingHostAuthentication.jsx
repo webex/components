@@ -2,7 +2,8 @@ import React, {useContext, useState} from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../helpers';
 import {Button, InputField} from '../generic';
-import {useMeeting} from '../hooks';
+import {PHONE_LARGE} from '../breakpoints';
+import {useElementDimensions, useMeeting} from '../hooks';
 import {AdapterContext} from '../hooks/contexts';
 import Spinner from '../generic/Spinner/Spinner';
 
@@ -14,15 +15,19 @@ import Spinner from '../generic/Spinner/Spinner';
  * @param {string} props.meetingID  ID of the meeting
  * @param {object} props.style  Custom style to apply
  * @returns {object} JSX of the component
- *
  */
-export default function WebexMeetingHostAuthentication({className, meetingID, style}) {
+export default function WebexMeetingHostAuthentication({
+  className, meetingID, style,
+}) {
   const [hostKey, setHostKey] = useState('');
   const {ID, invalidHostKey} = useMeeting(meetingID);
   const [isJoining, setIsJoining] = useState(false);
   const adapter = useContext(AdapterContext);
+  const [ref, {width}] = useElementDimensions();
 
-  const [cssClasses, sc] = webexComponentClasses('meeting-host-authentication', className);
+  const [cssClasses, sc] = webexComponentClasses('meeting-host-authentication', className, {
+    phone: width <= PHONE_LARGE,
+  });
 
   const isStartButtonDisabled = !hostKey || invalidHostKey || isJoining;
 
@@ -36,11 +41,13 @@ export default function WebexMeetingHostAuthentication({className, meetingID, st
     adapter.meetingsAdapter.clearInvalidHostKeyFlag(ID);
   };
 
+  const title = 'Enter host information to join';
+
   return (
-    <div className={cssClasses} style={style}>
+    <div ref={ref} className={cssClasses} style={style}>
       <div className={sc('header')}>
         <div className={sc('logo')} />
-        <div className={sc('title')}>Enter host information to join</div>
+        <div className={sc('title')} title={title}>{title}</div>
       </div>
       <form className={sc('form-content')} onSubmit={(e) => { e.preventDefault(); }}>
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
