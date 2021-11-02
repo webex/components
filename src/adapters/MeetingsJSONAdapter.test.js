@@ -831,8 +831,6 @@ describe('Meetings JSON Adapter', () => {
         'member-roster',
         'mute-audio',
         'mute-video',
-        'proceed-without-camera',
-        'proceed-without-microphone',
         'settings',
         'share-screen',
         'switch-camera',

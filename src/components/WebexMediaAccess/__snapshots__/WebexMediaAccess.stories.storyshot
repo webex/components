@@ -41,29 +41,21 @@ Array [
        
       when your browser asks to let Webex use your camera for this video call
     </p>
-    <div
-      className="wxc-meeting-control"
-    >
-      <button
-        aria-label="This setting cannot be changed once the meeting starts."
-        autoFocus={false}
-        className="wxc-button wxc-meeting-control__control-button wxc-button--default"
-        disabled={false}
-        onClick={[Function]}
-        style={
-          Object {
-            "height": 48,
-          }
+    <button
+      autoFocus={false}
+      className="wxc-button wxc-button--default"
+      disabled={false}
+      onClick={[Function]}
+      style={
+        Object {
+          "height": 40,
         }
-        type="button"
-      >
-        <span
-          className="wxc-meeting-control__button-text"
-        >
-          Proceed without camera
-        </span>
-      </button>
-    </div>
+      }
+      type="button"
+    >
+      Proceed without camera
+    </button>
+    
   </div>,
   <video
     autoPlay={true}
@@ -129,29 +121,21 @@ Array [
        
       when your browser asks to let Webex use your microphone for this video call
     </p>
-    <div
-      className="wxc-meeting-control"
-    >
-      <button
-        aria-label="This setting cannot be changed once the meeting starts."
-        autoFocus={false}
-        className="wxc-button wxc-meeting-control__control-button wxc-button--default"
-        disabled={false}
-        onClick={[Function]}
-        style={
-          Object {
-            "height": 48,
-          }
+    <button
+      autoFocus={false}
+      className="wxc-button wxc-button--default"
+      disabled={false}
+      onClick={[Function]}
+      style={
+        Object {
+          "height": 40,
         }
-        type="button"
-      >
-        <span
-          className="wxc-meeting-control__button-text"
-        >
-          Proceed without audio
-        </span>
-      </button>
-    </div>
+      }
+      type="button"
+    >
+      Proceed without audio
+    </button>
+    
   </div>,
   <video
     autoPlay={true}
