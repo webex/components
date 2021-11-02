@@ -1,3 +1,10 @@
+## [1.173.2](https://github.com/webex/components/compare/v1.173.1...v1.173.2) (2021-11-02)
+
+
+### Bug Fixes
+
+* **WebexMeetingHostAuthentication:** add space between the spinner and the text on the button ([e332471](https://github.com/webex/components/commit/e3324713c9dc5e5d276b756902ee434029f4ceda))
+
 ## [1.173.1](https://github.com/webex/components/compare/v1.173.0...v1.173.1) (2021-10-28)
 
 
