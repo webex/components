@@ -1,3 +1,10 @@
+# [1.174.0](https://github.com/webex/components/compare/v1.173.2...v1.174.0) (2021-11-02)
+
+
+### Features
+
+* **webex-meeting-controls:** remove size from icon names ([707f6c5](https://github.com/webex/components/commit/707f6c5846e77b12ed282bcbc26df264f96ff3ed))
+
 ## [1.173.2](https://github.com/webex/components/compare/v1.173.1...v1.173.2) (2021-11-02)
 
 
