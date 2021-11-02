@@ -10,8 +10,6 @@ import JoinControl from './MeetingsJSONAdapter/controls/JoinControl';
 import LeaveControl from './MeetingsJSONAdapter/controls/LeaveControl';
 import MuteAudioControl from './MeetingsJSONAdapter/controls/MuteAudioControl';
 import MuteVideoControl from './MeetingsJSONAdapter/controls/MuteVideoControl';
-import ProceedWithoutCameraControl from './MeetingsJSONAdapter/controls/ProceedWithoutCameraControl';
-import ProceedWithoutMicrophoneControl from './MeetingsJSONAdapter/controls/ProceedWithoutMicrophoneControl';
 import RosterControl from './MeetingsJSONAdapter/controls/RosterControl';
 import SettingsControl from './MeetingsJSONAdapter/controls/SettingsControl';
 import ShareControl from './MeetingsJSONAdapter/controls/ShareControl';
@@ -26,8 +24,6 @@ export const JOIN_CONTROL = 'join-meeting';
 export const LEAVE_CONTROL = 'leave-meeting';
 export const MUTE_AUDIO_CONTROL = 'mute-audio';
 export const MUTE_VIDEO_CONTROL = 'mute-video';
-export const PROCEED_WITHOUT_CAMERA_CONTROL = 'proceed-without-camera';
-export const PROCEED_WITHOUT_MICROPHONE_CONTROL = 'proceed-without-microphone';
 export const ROSTER_CONTROL = 'member-roster';
 export const SETTINGS_CONTROL = 'settings';
 export const SHARE_CONTROL = 'share-screen';
@@ -166,10 +162,6 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       [MUTE_VIDEO_CONTROL]: new MuteVideoControl(this, MUTE_VIDEO_CONTROL),
       [SHARE_CONTROL]: new ShareControl(this, SHARE_CONTROL),
       [JOIN_CONTROL]: new JoinControl(this, JOIN_CONTROL),
-      [PROCEED_WITHOUT_CAMERA_CONTROL]:
-        new ProceedWithoutCameraControl(this, PROCEED_WITHOUT_CAMERA_CONTROL),
-      [PROCEED_WITHOUT_MICROPHONE_CONTROL]:
-        new ProceedWithoutMicrophoneControl(this, PROCEED_WITHOUT_MICROPHONE_CONTROL),
       [LEAVE_CONTROL]: new LeaveControl(this, LEAVE_CONTROL),
       [DISABLED_MUTE_AUDIO_CONTROL]:
         new DisabledMuteAudioControl(this, DISABLED_MUTE_AUDIO_CONTROL),

@@ -1,21 +1,25 @@
-import React, {JSX} from 'react';
+import React, {JSX, useContext} from 'react';
 import PropTypes from 'prop-types';
 import Icon from '../generic/Icon/Icon';
-import WebexMeetingControl from '../WebexMeetingControl/WebexMeetingControl';
+import {Button} from '../generic';
 import webexComponentClasses from '../helpers';
+import {useMeeting} from '../hooks';
+import {AdapterContext} from '../hooks/contexts';
 
 const SCREENS = {
   camera: {
     icon: 'camera-bold',
     title: 'Allow access to camera',
     message: 'when your browser asks to let Webex use your camera for this video call',
-    control: 'proceed-without-camera',
+    buttonLabel: 'Proceed without camera',
+    buttonAction: 'ignoreVideoAccessPrompt',
   },
   microphone: {
     icon: 'microphone-bold',
     title: 'Allow access to microphone',
     message: 'when your browser asks to let Webex use your microphone for this video call',
-    control: 'proceed-without-microphone',
+    buttonLabel: 'Proceed without audio',
+    buttonAction: 'ignoreAudioAccessPrompt',
   },
 };
 
@@ -40,6 +44,8 @@ export default function WebexMediaAccess({
 }) {
   const screen = SCREENS[media];
   const [cssClasses, sc] = webexComponentClasses('media-access', className);
+  const adapter = useContext(AdapterContext);
+  const {ID} = useMeeting(meetingID);
 
   return (
     <div className={cssClasses} style={style}>
@@ -53,7 +59,13 @@ export default function WebexMediaAccess({
         {' '}
         {screen.message}
       </p>
-      <WebexMeetingControl meetingID={meetingID} type={screen.control} />
+      <Button
+        type="default"
+        size={40}
+        onClick={() => adapter.meetingsAdapter[screen.buttonAction](ID)}
+      >
+        {screen.buttonLabel}
+      </Button>
     </div>
   );
 }

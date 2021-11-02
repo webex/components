@@ -5,8 +5,6 @@ export {default as LeaveControl} from './LeaveControl';
 export {default as MeetingControl} from './MeetingControl';
 export {default as MuteAudioControl} from './MuteAudioControl';
 export {default as MuteVideoControl} from './MuteVideoControl';
-export {default as ProceedWithoutCameraControl} from './ProceedWithoutCameraControl';
-export {default as ProceedWithoutMicrophoneControl} from './ProceedWithoutMicrophoneControl';
 export {default as RosterControl} from './RosterControl';
 export {default as SettingsControl} from './SettingsControl';
 export {default as ShareControl} from './ShareControl';
