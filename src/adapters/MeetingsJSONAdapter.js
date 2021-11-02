@@ -551,7 +551,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       return {
         localAudio: {
           stream: meeting.localAudio.stream
-            ? null : await this.getStream({video: false, audio: true}).stream,
+            ? null : (await this.getStream({video: false, audio: true})).stream,
         },
       };
     });
@@ -570,7 +570,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       return {
         localVideo: {
           stream: meeting.localVideo?.stream
-            ? null : await this.getStream({video: true, audio: false}).stream,
+            ? null : (await this.getStream({video: true, audio: false})).stream,
         },
       };
     });
