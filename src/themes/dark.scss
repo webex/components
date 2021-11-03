@@ -147,13 +147,13 @@
 
   --wxc-input--active--background: #{$wxc-white-alpha-11};
   --wxc-input--active--color: #{$wxc-white-alpha-70};
-  --wxc-input--active--border: 1px solid #{$wxc-white-alpha-50};
-  --wxc-input--focus--box-shadow: 0 0 0 0.25rem #{$wxc-blue-60-alpha-30}, 0 0 0 0.125rem #{$wxc-blue-60};
+  --wxc-input--active--border: 1px solid #{$wxc-white-alpha-90};
+  --wxc-input--active--box-shadow: 0 0 0 0.25rem #{$wxc-blue-40-alpha-30}, 0 0 0 0.125rem #{$wxc-blue-40};
 
   --wxc-input--focus--background: #{$wxc-white-alpha-11};
   --wxc-input--focus--color: #{$wxc-white-alpha-70};
-  --wxc-input--focus--border: 1px solid #{$wxc-white-alpha-50};
-  --wxc-input--focus--box-shadow: 0 0 0 0.25rem #{$wxc-blue-60-alpha-30}, 0 0 0 0.125rem #{$wxc-blue-60};
+  --wxc-input--focus--border: 1px solid #{$wxc-white-alpha-90};
+  --wxc-input--focus--box-shadow: 0 0 0 0.25rem #{$wxc-blue-40-alpha-30}, 0 0 0 0.125rem #{$wxc-blue-40};
 
   --wxc-input--disabled--background: #{$wxc-white-alpha-11};
   --wxc-input--disabled--color: #{$wxc-white-alpha-11};
