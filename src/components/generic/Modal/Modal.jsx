@@ -16,7 +16,7 @@ import {useElementDimensions} from '../../hooks';
  * @param {Function} [props.onClose]  Callback when the modal is closed
  * @param {string} [props.otherClassName]  Custom other CSS class to apply
  * @param {string} [props.title]  Title of the modal
- *
+ * @param {string} [props.ariaLabel]  Aria label for the modal
  * @returns {object}  JSX of the element
  */
 export default function Modal({
@@ -26,6 +26,7 @@ export default function Modal({
   onClose,
   otherClassName,
   title,
+  ariaLabel,
 }) {
   const [ref, {width}] = useElementDimensions();
   const [cssClasses, sc] = webexComponentClasses('modal', className, {
@@ -33,7 +34,7 @@ export default function Modal({
   });
 
   return (
-    <div ref={ref} className={cssClasses}>
+    <div ref={ref} className={cssClasses} role="dialog" aria-label={ariaLabel || title}>
       <div className={`${sc('content')} ${otherClassName}`}>
         <div className={sc('header')}>
           {onBack && <Button type="ghost" className={sc('back')} size={28} onClick={onBack}><Icon name="arrow-left" size="13" /></Button>}
@@ -53,6 +54,7 @@ Modal.propTypes = {
   onClose: PropTypes.func,
   otherClassName: PropTypes.string,
   title: PropTypes.string,
+  ariaLabel: PropTypes.string,
 };
 
 Modal.defaultProps = {
@@ -61,4 +63,5 @@ Modal.defaultProps = {
   onClose: undefined,
   otherClassName: undefined,
   title: '',
+  ariaLabel: undefined,
 };
