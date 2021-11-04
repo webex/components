@@ -131,6 +131,7 @@ export default function WebexMeeting({
             onClose={() => adapter.meetingsAdapter.clearPasswordRequiredFlag(ID)}
             otherClassName={[sc('authentication')]}
             onBack={authModal === 'host' && (() => setAuthModal('guest'))}
+            ariaLabel={authModal === 'guest' ? 'Meeting guest authentication' : 'Meeting host authentication'}
           >
             {
               authModal === 'guest'
