@@ -1,3 +1,10 @@
+## [1.175.1](https://github.com/webex/components/compare/v1.175.0...v1.175.1) (2021-11-04)
+
+
+### Bug Fixes
+
+* **WebexWaitingForHost:** add 'Cancel' button to WebexWaitingForHost component ([16cb01a](https://github.com/webex/components/commit/16cb01abcee56134692fb733215dec361675a309))
+
 # [1.175.0](https://github.com/webex/components/compare/v1.174.0...v1.175.0) (2021-11-04)
 
 
