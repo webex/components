@@ -1,3 +1,17 @@
+# [1.175.0](https://github.com/webex/components/compare/v1.174.0...v1.175.0) (2021-11-04)
+
+
+### Bug Fixes
+
+* **InputField:** change the font size and the colors of shadow and border ([143dbff](https://github.com/webex/components/commit/143dbffef1bd9354f5862a18d200a2168aa378b5))
+* **MeetingsJsonAdapter:** toggleMuteAudio and toggleMuteVideo return structure ([3bd59b5](https://github.com/webex/components/commit/3bd59b51b12e31928bbaa8d4d9787b8ac3ff53e0))
+* **WebexMeetingHostAuthentication:** add margin and line-height to label text ([e0d1ba3](https://github.com/webex/components/commit/e0d1ba33c9466fa0b8cdf8a3c1c5444e9a8daa25))
+
+
+### Features
+
+* **WebexMeetingAuthentication:** change the title font size in mobile viewport ([1e860c0](https://github.com/webex/components/commit/1e860c077908ddb58f62c274106aebc453314680))
+
 # [1.174.0](https://github.com/webex/components/compare/v1.173.2...v1.174.0) (2021-11-02)
 
 
