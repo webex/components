@@ -1,3 +1,10 @@
+# [1.176.0](https://github.com/webex/components/compare/v1.175.1...v1.176.0) (2021-11-05)
+
+
+### Features
+
+* **Modal:** add role and aria-label to Modal for accessibility ([dfa85ca](https://github.com/webex/components/commit/dfa85ca923e91e059b685e87c27986584f8cc410))
+
 ## [1.175.1](https://github.com/webex/components/compare/v1.175.0...v1.175.1) (2021-11-04)
 
 
