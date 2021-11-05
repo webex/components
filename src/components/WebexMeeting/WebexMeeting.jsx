@@ -122,6 +122,7 @@ export default function WebexMeeting({
             onClose={() => adapter.meetingsAdapter.toggleSettings(ID)}
             otherClassName={sc('settings')}
             title="Settings"
+            ariaLabel="Meeting settings window"
           >
             <WebexSettings meetingID={ID} />
           </Modal>
