@@ -33,8 +33,15 @@ export default function Modal({
     'centered-modal': width > TABLET,
   });
 
+  const handleKeyUp = (event) => {
+    if (event.key === 'Escape' || event.key === 'Esc') {
+      onClose();
+    }
+  };
+
   return (
-    <div ref={ref} className={cssClasses} role="dialog" aria-label={ariaLabel || title}>
+    // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
+    <div ref={ref} className={cssClasses} onKeyUp={handleKeyUp} role="dialog" aria-label={ariaLabel || title}>
       <div className={`${sc('content')} ${otherClassName}`}>
         <div className={sc('header')}>
           {onBack && <Button type="ghost" className={sc('back')} size={28} onClick={onBack}><Icon name="arrow-left" size="13" /></Button>}
