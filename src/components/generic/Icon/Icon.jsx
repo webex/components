@@ -83,11 +83,12 @@ const icons = {
  * @param {number} [props.size]  Icon width and height
  * @param {string} props.className  Additional className for the component
  * @param {object} props.style  Inline style object for the component
+ * @param {string} props.ariaLabel  Aria-label for accessibility
  * @returns {object} JSX of the Icon
  *
  */
 export default function Icon({
-  name, size, className, style,
+  name, size, className, style, ariaLabel,
 }) {
   const [baseName, baseSize] = name.split('_');
 
@@ -103,6 +104,7 @@ export default function Icon({
       size={size || (baseSize && Number(baseSize))}
       className={className}
       style={style}
+      ariaLabel={ariaLabel}
     />
   );
 }
@@ -112,10 +114,12 @@ Icon.propTypes = {
   size: PropTypes.number,
   className: PropTypes.string,
   style: PropTypes.shape(),
+  ariaLabel: PropTypes.string,
 };
 
 Icon.defaultProps = {
   size: undefined,
   className: '',
   style: {},
+  ariaLabel: undefined,
 };

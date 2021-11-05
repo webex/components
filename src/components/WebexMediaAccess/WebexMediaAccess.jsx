@@ -11,6 +11,7 @@ const SCREENS = {
     icon: 'camera-bold',
     title: 'Allow access to camera',
     message: 'when your browser asks to let Webex use your camera for this video call',
+    iconLabel: 'Camera icon',
     buttonLabel: 'Proceed without camera',
     buttonAction: 'ignoreVideoAccessPrompt',
   },
@@ -18,6 +19,7 @@ const SCREENS = {
     icon: 'microphone-bold',
     title: 'Allow access to microphone',
     message: 'when your browser asks to let Webex use your microphone for this video call',
+    iconLabel: 'Microphone icon',
     buttonLabel: 'Proceed without audio',
     buttonAction: 'ignoreAudioAccessPrompt',
   },
@@ -50,7 +52,7 @@ export default function WebexMediaAccess({
   return (
     <div className={cssClasses} style={style}>
       {logo && <div className={sc('logo-container')}>{logo}</div>}
-      <Icon name={screen.icon} size={48} />
+      <Icon name={screen.icon} size={48} ariaLabel={screen.iconLabel} />
       <h2 className={sc('title')}>{screen.title}</h2>
       <p className={sc('body')}>
         Select
