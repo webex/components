@@ -12,6 +12,7 @@ Array [
     }
   >
     <svg
+      aria-label="Camera icon"
       className="wxc-icon wxc-camera-bold-icon"
       height={48}
       style={Object {}}
@@ -92,6 +93,7 @@ Array [
     }
   >
     <svg
+      aria-label="Microphone icon"
       className="wxc-icon wxc-microphone-bold-icon"
       height={48}
       style={Object {}}
