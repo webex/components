@@ -324,8 +324,8 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
         updates = {invalidHostKey: true};
       } else {
         updates = {
-          remoteVideo: await this.getStream({video: true, audio: false}).stream,
-          remoteAudio: await this.getStream({video: false, audio: true}).stream,
+          remoteVideo: (await this.getStream({video: true, audio: false})).stream,
+          remoteAudio: (await this.getStream({video: false, audio: true})).stream,
           state: MeetingState.JOINED,
         };
       }
@@ -686,7 +686,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       return {
         settings: {
           preview: {
-            video: await this.getStream({video: {deviceId: {exact: cameraID}}}).stream,
+            video: (await this.getStream({video: {deviceId: {exact: cameraID}}})).stream,
           },
         },
         cameraID,
@@ -708,7 +708,7 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       return {
         settings: {
           preview: {
-            audio: await this.getStream({audio: {deviceId: {exact: microphoneID}}}).stream,
+            audio: (await this.getStream({audio: {deviceId: {exact: microphoneID}}})).stream,
           },
         },
         microphoneID,
