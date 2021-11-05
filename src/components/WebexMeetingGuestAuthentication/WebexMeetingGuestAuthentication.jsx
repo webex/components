@@ -7,6 +7,14 @@ import {useElementDimensions, useMeeting} from '../hooks';
 import {AdapterContext} from '../hooks/contexts';
 import Spinner from '../generic/Spinner/Spinner';
 
+const HINTS = {
+  logo: 'Webex by Cisco logo',
+  name: 'Your name appears in the participant list. Skip this optional field to use the name provided by the system.',
+  password: 'The password is provided in the invitation for a scheduled  meeting, or from the host.',
+  button: 'Start the meeting after entering the required information.',
+  hostLink: 'Click to go to a new screen where the meeting host can enter the host key.',
+};
+
 /**
  * Helper function for checking name format
  *
@@ -70,14 +78,22 @@ export default function WebexMeetingGuestAuthentication({
   return (
     <div ref={ref} className={cssClasses} style={style}>
       <div className={sc('header')}>
-        <div className={sc('logo')} />
+        <div className={sc('logo')} aria-label={HINTS.logo} />
         <div className={sc('title')} title={title}>{title}</div>
       </div>
       <form className={sc('form-content')}>
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
         <label className={sc('label')}>
           <span className={sc('label-text')}>Your name</span>
-          <InputField type="text" name="name" value={name} onChange={handleNameChange} error={nameError} disabled={isJoining} />
+          <InputField
+            type="text"
+            name="name"
+            value={name}
+            onChange={handleNameChange}
+            disabled={isJoining}
+            error={nameError}
+            ariaLabel={HINTS.name}
+          />
         </label>
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
         <label className={sc('label')}>
@@ -86,12 +102,20 @@ export default function WebexMeetingGuestAuthentication({
             type="password"
             name="password"
             value={password}
-            disabled={isJoining}
             onChange={handlePasswordChange}
+            disabled={isJoining}
             error={invalidPassword ? 'Incorrect password. Try again.' : ''}
+            ariaLabel={HINTS.password}
           />
         </label>
-        <Button type="primary" className={sc('start-button')} size={28} onClick={joinMeeting} isDisabled={isStartButtonDisabled}>
+        <Button
+          type="primary"
+          className={sc('start-button')}
+          size={28}
+          onClick={joinMeeting}
+          isDisabled={isStartButtonDisabled}
+          ariaLabel={HINTS.button}
+        >
           {isJoining && <Spinner className={sc('start-button-spinner')} size={16} />}
           {isJoining ? 'Starting meeting...' : 'Start meeting'}
         </Button>
@@ -100,7 +124,7 @@ export default function WebexMeetingGuestAuthentication({
         Hosting the meeting?
         {' '}
         {/* eslint-disable-next-line */}
-        <a className={sc('host-hyperlink')} onClick={switchToHostModal}>Enter host key.</a>
+        <a className={sc('host-hyperlink')} onClick={switchToHostModal} aria-label={HINTS.hostLink}>Enter host key.</a>
       </div>
     </div>
   );

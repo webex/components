@@ -15,6 +15,7 @@ Array [
       className="wxc-meeting-host-authentication__header"
     >
       <div
+        aria-label="Webex by Cisco logo"
         className="wxc-meeting-host-authentication__logo"
       />
       <div
@@ -43,6 +44,7 @@ Array [
             className="wxc-input-field__form-control"
           >
             <input
+              aria-label="The host key is generated when a meeting is scheduled."
               className="wxc-input-field__input"
               disabled={false}
               name="password"
@@ -58,6 +60,7 @@ Array [
         </div>
       </label>
       <button
+        aria-label="Start the meeting for all participants after entering the required information."
         autoFocus={false}
         className="wxc-button wxc-meeting-host-authentication__start-button wxc-button--primary"
         disabled={true}
