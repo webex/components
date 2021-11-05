@@ -15,6 +15,7 @@ Array [
       className="wxc-meeting-guest-authentication__header"
     >
       <div
+        aria-label="Webex by Cisco logo"
         className="wxc-meeting-guest-authentication__logo"
       />
       <div
@@ -42,6 +43,7 @@ Array [
             className="wxc-input-field__form-control"
           >
             <input
+              aria-label="Your name appears in the participant list. Skip this optional field to use the name provided by the system."
               className="wxc-input-field__input"
               disabled={false}
               name="name"
@@ -70,6 +72,7 @@ Array [
             className="wxc-input-field__form-control"
           >
             <input
+              aria-label="The password is provided in the invitation for a scheduled  meeting, or from the host."
               className="wxc-input-field__input"
               disabled={false}
               name="password"
@@ -85,6 +88,7 @@ Array [
         </div>
       </label>
       <button
+        aria-label="Start the meeting after entering the required information."
         autoFocus={false}
         className="wxc-button wxc-meeting-guest-authentication__start-button wxc-button--primary"
         disabled={true}
@@ -106,6 +110,7 @@ Array [
       Hosting the meeting?
        
       <a
+        aria-label="Click to go to a new screen where the meeting host can enter the host key."
         className="wxc-meeting-guest-authentication__host-hyperlink"
       >
         Enter host key.
