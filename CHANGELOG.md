@@ -1,3 +1,12 @@
+## [1.178.1](https://github.com/webex/components/compare/v1.178.0...v1.178.1) (2021-11-08)
+
+
+### Bug Fixes
+
+* **MeetingsJsonAdapter:** switching camera/microphone in WebexSettings in storybook ([50f9be7](https://github.com/webex/components/commit/50f9be70dc505fde4c5a8bf071830df05e74b411))
+* **Select:** fix dropdown not opening after click ([a5b5242](https://github.com/webex/components/commit/a5b52421372474212b5c6e5b7d1df6f21a7bc54c))
+* **WebexMeetingControlBar:** add setTimeout before eventListener ([8648ff2](https://github.com/webex/components/commit/8648ff23b8545b6fe0d51f10ab75fd7972b2e8dc))
+
 # [1.178.0](https://github.com/webex/components/compare/v1.177.0...v1.178.0) (2021-11-08)
 
 
