@@ -165,7 +165,7 @@ export default function WebexMeetingControlBar({
     let cleanup;
 
     if (collapsedShown) {
-      document.addEventListener('click', onOutsideClick);
+      setTimeout(() => document.addEventListener('click', onOutsideClick));
       cleanup = () => document.removeEventListener('click', onOutsideClick);
     }
 
