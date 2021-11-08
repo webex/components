@@ -1,3 +1,10 @@
+# [1.177.0](https://github.com/webex/components/compare/v1.176.0...v1.177.0) (2021-11-08)
+
+
+### Features
+
+* **WebexMeetingAuthentication:** add aria-label on all elements from authentication components ([88fbf29](https://github.com/webex/components/commit/88fbf29b7338c7dbedb6d25d9c7713b397f611c2))
+
 # [1.176.0](https://github.com/webex/components/compare/v1.175.1...v1.176.0) (2021-11-05)
 
 
