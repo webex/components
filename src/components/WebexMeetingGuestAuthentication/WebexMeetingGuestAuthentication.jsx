@@ -93,6 +93,7 @@ export default function WebexMeetingGuestAuthentication({
             disabled={isJoining}
             error={nameError}
             ariaLabel={HINTS.name}
+            autoFocus
           />
         </label>
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}

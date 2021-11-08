@@ -67,6 +67,7 @@ export default function WebexMeetingHostAuthentication({
             onChange={handleHostKeyChange}
             error={invalidHostKey ? 'Incorrect host key. Try again.' : ''}
             ariaLabel={HINTS.password}
+            autoFocus
           />
         </label>
         <Button
