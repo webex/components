@@ -48,7 +48,7 @@ export default function Select({
     let cleanup;
 
     if (expanded) {
-      document.addEventListener('click', onOutsideClick);
+      setTimeout(() => document.addEventListener('click', onOutsideClick));
       cleanup = () => document.removeEventListener('click', onOutsideClick);
     }
 
@@ -59,7 +59,7 @@ export default function Select({
     <div className={cssClasses}>
       <div
         className={`${sc('selected-option')} ${expanded ? sc('expanded') : ''}`}
-        onClick={() => toggleExpanded()}
+        onClick={toggleExpanded}
         aria-hidden="true"
         role="button"
         tabIndex="0"
