@@ -20,7 +20,8 @@
     "airbnb/hooks",
     "plugin:jest/recommended",
     "plugin:jest/style",
-    "plugin:jsdoc/recommended"
+    "plugin:jsdoc/recommended",
+    "plugin:jsx-a11y/recommended"
   ],
   "globals": {
     "rxjs": "readonly",
@@ -78,7 +79,8 @@
     "newline-after-var": "error",
     "newline-before-return": "error",
     "lines-around-directive": "error",
-    "no-useless-call": "error"
+    "no-useless-call": "error",
+    "jsx-a11y/tabindex-no-positive": "off"
   },
   "overrides": [
     {
