@@ -45,6 +45,7 @@ Array [
           >
             <input
               aria-label="The host key is generated when a meeting is scheduled."
+              autoFocus={false}
               className="wxc-input-field__input"
               disabled={false}
               name="password"

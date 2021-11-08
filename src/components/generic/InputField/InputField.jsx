@@ -8,6 +8,7 @@ import Icon from '../Icon/Icon';
  * Input Field component.
  *
  * @param {object} props  Data passed to the component
+ * @param {boolean} [props.autoFocus=false]  Flag indicating if the input should have autoFocus
  * @param {string} props.className  Custom CSS class to apply
  * @param {object} props.style  Custom style to apply
  * @param {string} props.type  Input type
@@ -33,6 +34,7 @@ export default function InputField({
   error,
   ariaLabel,
   required,
+  autoFocus,
 }) {
   const [cssClasses, sc] = webexComponentClasses('input-field', className, {error});
   const [isPwdRevealed, setIsPwdRevealed] = useState(false);
@@ -57,6 +59,8 @@ export default function InputField({
           disabled={disabled}
           aria-label={ariaLabel}
           required={required}
+          // eslint-disable-next-line jsx-a11y/no-autofocus
+          autoFocus={autoFocus}
         />
         {type === 'password' && value && (
           <Button type="ghost" className={sc('input-field-right-icon')} size={28} onClick={toggleIsPwdRevealed}>
@@ -83,6 +87,7 @@ export default function InputField({
 }
 
 InputField.propTypes = {
+  autoFocus: PropTypes.bool,
   className: PropTypes.string,
   style: PropTypes.shape(),
   type: PropTypes.string,
@@ -97,6 +102,7 @@ InputField.propTypes = {
 };
 
 InputField.defaultProps = {
+  autoFocus: false,
   className: '',
   style: undefined,
   type: 'text',
