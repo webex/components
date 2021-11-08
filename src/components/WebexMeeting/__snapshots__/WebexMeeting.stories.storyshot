@@ -118,6 +118,7 @@ Array [
                 "height": 48,
               }
             }
+            tabIndex={1}
             type="button"
           >
             <svg
@@ -641,6 +642,7 @@ Array [
                 "height": 48,
               }
             }
+            tabIndex={1}
             type="button"
           >
             <svg
@@ -788,6 +790,7 @@ Array [
                 "height": 48,
               }
             }
+            tabIndex={2}
             type="button"
           >
             <svg
@@ -1128,6 +1131,7 @@ Array [
                 "height": 48,
               }
             }
+            tabIndex={2}
             type="button"
           >
             <svg
@@ -1354,6 +1358,7 @@ Array [
                 "height": 48,
               }
             }
+            tabIndex={2}
             type="button"
           >
             <svg
@@ -1694,6 +1699,7 @@ Array [
                 "height": 48,
               }
             }
+            tabIndex={2}
             type="button"
           >
             <svg
@@ -1897,6 +1903,7 @@ Array [
                 "height": 48,
               }
             }
+            tabIndex={2}
             type="button"
           >
             <svg
@@ -2237,6 +2244,7 @@ Array [
                 "height": 48,
               }
             }
+            tabIndex={2}
             type="button"
           >
             <svg
@@ -2366,6 +2374,7 @@ Array [
                 "height": 48,
               }
             }
+            tabIndex={1}
             type="button"
           >
             <svg
@@ -2889,6 +2898,7 @@ Array [
                 "height": 48,
               }
             }
+            tabIndex={1}
             type="button"
           >
             <svg
