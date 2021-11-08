@@ -20,6 +20,7 @@ import Icon from '../Icon/Icon';
  * @param {string} props.error  Error text
  * @param {string} props.ariaLabel  Hint to be displayed as aria-label
  * @param {boolean} props.required  Flag indicating input required
+ * @param {number} props.tabIndex  Value of the tabIndex
  * @returns {object} JSX of the component
  */
 export default function InputField({
@@ -35,6 +36,7 @@ export default function InputField({
   ariaLabel,
   required,
   autoFocus,
+  tabIndex,
 }) {
   const [cssClasses, sc] = webexComponentClasses('input-field', className, {error});
   const [isPwdRevealed, setIsPwdRevealed] = useState(false);
@@ -61,6 +63,7 @@ export default function InputField({
           required={required}
           // eslint-disable-next-line jsx-a11y/no-autofocus
           autoFocus={autoFocus}
+          tabIndex={tabIndex}
         />
         {type === 'password' && value && (
           <Button type="ghost" className={sc('input-field-right-icon')} size={28} onClick={toggleIsPwdRevealed}>
@@ -99,6 +102,7 @@ InputField.propTypes = {
   error: PropTypes.string,
   ariaLabel: PropTypes.string,
   required: PropTypes.bool,
+  tabIndex: PropTypes.number,
 };
 
 InputField.defaultProps = {
@@ -114,4 +118,5 @@ InputField.defaultProps = {
   error: undefined,
   ariaLabel: undefined,
   required: false,
+  tabIndex: undefined,
 };

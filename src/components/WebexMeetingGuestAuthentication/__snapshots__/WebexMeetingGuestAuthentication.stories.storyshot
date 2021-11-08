@@ -44,13 +44,14 @@ Array [
           >
             <input
               aria-label="Your name appears in the participant list. Skip this optional field to use the name provided by the system."
-              autoFocus={false}
+              autoFocus={true}
               className="wxc-input-field__input"
               disabled={false}
               name="name"
               onChange={[Function]}
               placeholder=""
               required={false}
+              tabIndex={101}
               type="text"
               value=""
             />
@@ -81,6 +82,7 @@ Array [
               onChange={[Function]}
               placeholder=""
               required={false}
+              tabIndex={102}
               type="password"
               value=""
             />
@@ -100,6 +102,7 @@ Array [
             "height": 28,
           }
         }
+        tabIndex={103}
         type="button"
       >
         Start meeting
@@ -114,6 +117,7 @@ Array [
       <a
         aria-label="Click to go to a new screen where the meeting host can enter the host key."
         className="wxc-meeting-guest-authentication__host-hyperlink"
+        tabIndex={104}
       >
         Enter host key.
       </a>

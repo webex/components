@@ -94,6 +94,7 @@ export default function WebexMeetingGuestAuthentication({
             error={nameError}
             ariaLabel={HINTS.name}
             autoFocus
+            tabIndex={101}
           />
         </label>
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
@@ -107,6 +108,7 @@ export default function WebexMeetingGuestAuthentication({
             disabled={isJoining}
             error={invalidPassword ? 'Incorrect password. Try again.' : ''}
             ariaLabel={HINTS.password}
+            tabIndex={102}
           />
         </label>
         <Button
@@ -116,6 +118,7 @@ export default function WebexMeetingGuestAuthentication({
           onClick={joinMeeting}
           isDisabled={isStartButtonDisabled}
           ariaLabel={HINTS.button}
+          tabIndex={103}
         >
           {isJoining && <Spinner className={sc('start-button-spinner')} size={16} />}
           {isJoining ? 'Starting meeting...' : 'Start meeting'}
@@ -125,7 +128,7 @@ export default function WebexMeetingGuestAuthentication({
         Hosting the meeting?
         {' '}
         {/* eslint-disable-next-line */}
-        <a className={sc('host-hyperlink')} onClick={switchToHostModal} aria-label={HINTS.hostLink}>Enter host key.</a>
+        <a tabIndex={104} className={sc('host-hyperlink')} onClick={switchToHostModal} aria-label={HINTS.hostLink}>Enter host key.</a>
       </div>
     </div>
   );
