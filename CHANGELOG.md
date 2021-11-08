@@ -1,3 +1,10 @@
+# [1.178.0](https://github.com/webex/components/compare/v1.177.0...v1.178.0) (2021-11-08)
+
+
+### Features
+
+* **WebexMeetingControlBar:** add tabindex to collapse button ([96e3929](https://github.com/webex/components/commit/96e3929d4f230a3233a77aaf02c5081ac1e35cb4))
+
 # [1.177.0](https://github.com/webex/components/compare/v1.176.0...v1.177.0) (2021-11-08)
 
 
