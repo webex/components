@@ -44,7 +44,7 @@ Array [
           >
             <input
               aria-label="Your name appears in the participant list. Skip this optional field to use the name provided by the system."
-              autoFocus={false}
+              autoFocus={true}
               className="wxc-input-field__input"
               disabled={false}
               name="name"
