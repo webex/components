@@ -1,3 +1,10 @@
+# [1.179.0](https://github.com/webex/components/compare/v1.178.1...v1.179.0) (2021-11-09)
+
+
+### Features
+
+* **WebexMeetingAuthentication:** auto focus the first control ([c25c3c0](https://github.com/webex/components/commit/c25c3c0b23beb7dc530bc59c9a580649a5c3428b))
+
 ## [1.178.1](https://github.com/webex/components/compare/v1.178.0...v1.178.1) (2021-11-08)
 
 
