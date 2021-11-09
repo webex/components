@@ -1,3 +1,11 @@
+# [1.180.0](https://github.com/webex/components/compare/v1.179.0...v1.180.0) (2021-11-09)
+
+
+### Features
+
+* **InputField:** add 'autoFocus' prop to InputField component ([43641ec](https://github.com/webex/components/commit/43641ec2e32ff07a67abe0e1afa1982c169d6a85))
+* **WebexMeetingGuestAuthentication:** add custom tab order ([7968350](https://github.com/webex/components/commit/7968350aef102136b907aaed814c9547011c0502))
+
 # [1.179.0](https://github.com/webex/components/compare/v1.178.1...v1.179.0) (2021-11-09)
 
 
