@@ -82,7 +82,7 @@ function renderButton(sc, action, display, style, showText, asItem, autoFocus, t
  * @param {object} style  Custom style to apply
  * @returns {object} JSX of the component
  */
-function renderDropdown(sc, action, display, style) {
+function renderDropdown(sc, action, display, style, tabIndex) {
   const {
     options, noOptionsMessage, selected, tooltip, hint,
   } = display;
@@ -97,6 +97,7 @@ function renderDropdown(sc, action, display, style) {
       disabled={!options?.length}
       tooltip={tooltip}
       ariaLabel={hint}
+      tabIndex={tabIndex}
     />
   );
 }
@@ -139,7 +140,7 @@ export default function WebexMeetingControl({
   if (!display || Object.keys(display).length === 0) {
     output = '';
   } else if (display.type === 'MULTISELECT') {
-    output = renderDropdown(sc, action, display, style);
+    output = renderDropdown(sc, action, display, style, tabIndex);
   } else {
     output = renderButton(sc, action, display, style, showText, asItem, autoFocus, tabIndex);
   }

@@ -190,7 +190,6 @@ Array [
         className="wxc-select__selected-option "
         onClick={[Function]}
         role="button"
-        tabIndex="0"
         title="Video Devices"
       >
         <span

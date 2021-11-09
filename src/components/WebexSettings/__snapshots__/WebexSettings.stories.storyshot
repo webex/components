@@ -18,7 +18,7 @@ Array [
         aria-label="Use arrow keys to navigate between setting options"
         className="wxc-tabs__list"
         onKeyUp={[Function]}
-        tabIndex={0}
+        tabIndex={101}
       >
         <li
           className="wxc-tabs__tab wxc-tabs__tab--active"
@@ -67,7 +67,7 @@ Array [
                 className="wxc-select__selected-option "
                 onClick={[Function]}
                 role="button"
-                tabIndex="0"
+                tabIndex={102}
                 title="The current browser does not support changing speakers"
               >
                 <span
@@ -108,7 +108,7 @@ Array [
                 className="wxc-select__selected-option "
                 onClick={[Function]}
                 role="button"
-                tabIndex="0"
+                tabIndex={103}
                 title="Microphone Devices"
               >
                 <span
