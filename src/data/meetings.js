@@ -300,7 +300,7 @@ export default {
     remoteAudio: null,
     remoteVideo: null,
     remoteShare: null,
-    state: 'JOINING',
+    state: 'LOBBY',
     showRoster: false,
     settings: {
       visible: false,
