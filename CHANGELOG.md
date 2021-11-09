@@ -1,3 +1,13 @@
+# [1.181.0](https://github.com/webex/components/compare/v1.180.0...v1.181.0) (2021-11-09)
+
+
+### Features
+
+* **Modal:** close modal on "esc" keypress ([200c33f](https://github.com/webex/components/commit/200c33fa4c047d7bb75936a052e301219c615ac1))
+* **WebexMediaAccess:** add aria-label on icon for accessibility ([c42e0cd](https://github.com/webex/components/commit/c42e0cd03fce93b041ea3c7268bcd61c4a030b7a))
+* **WebexMeeting:** use 'ariaLabel' prop for settings modal ([a017ced](https://github.com/webex/components/commit/a017cedceba6d5fc77334904d42059eed707bf3c))
+* **WebexSettings:** add custom tab order ([ff140ac](https://github.com/webex/components/commit/ff140ac5f6b67f5f89371ce826e89a85c9f12d04))
+
 # [1.180.0](https://github.com/webex/components/compare/v1.179.0...v1.180.0) (2021-11-09)
 
 
