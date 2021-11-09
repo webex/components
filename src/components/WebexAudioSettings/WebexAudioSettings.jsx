@@ -25,9 +25,9 @@ export default function WebexAudioSettings({className, meetingID, style}) {
         ? (
           <>
             <Title type="subsection">Speaker</Title>
-            <WebexMeetingControl type="switch-speaker" meetingID={meetingID} />
+            <WebexMeetingControl type="switch-speaker" meetingID={meetingID} tabIndex={102} />
             <Title type="subsection">Microphone</Title>
-            <WebexMeetingControl type="switch-microphone" meetingID={meetingID} />
+            <WebexMeetingControl type="switch-microphone" meetingID={meetingID} tabIndex={103} />
           </>
         ) : (
           <WebexNoMedia media="microphone" className={sc('no-media')} />

@@ -16,6 +16,7 @@ import webexComponentClasses from '../../helpers';
  * @param {boolean} props.disabled  True when the control is disabled
  * @param {string} props.tooltip  Tooltip to be displayed
  * @param {string} props.ariaLabel  String that labels the current element
+ * @param {number} props.tabIndex  Value of the tabIndex
  * @returns {object}  JSX of the element
  */
 export default function Select({
@@ -26,6 +27,7 @@ export default function Select({
   disabled,
   tooltip,
   ariaLabel,
+  tabIndex,
 }) {
   const [expanded, setExpanded] = useState(false);
   const [cssClasses, sc] = webexComponentClasses('select', className, {disabled});
@@ -62,7 +64,7 @@ export default function Select({
         onClick={toggleExpanded}
         aria-hidden="true"
         role="button"
-        tabIndex="0"
+        tabIndex={tabIndex}
         title={tooltip}
         aria-label={`${label ? `${label}. ` : ''}${ariaLabel}`}
       >
@@ -92,6 +94,7 @@ Select.propTypes = {
   disabled: PropTypes.bool,
   tooltip: PropTypes.string,
   ariaLabel: PropTypes.string,
+  tabIndex: PropTypes.number,
 };
 
 Select.defaultProps = {
@@ -101,4 +104,5 @@ Select.defaultProps = {
   disabled: false,
   tooltip: undefined,
   ariaLabel: undefined,
+  tabIndex: undefined,
 };

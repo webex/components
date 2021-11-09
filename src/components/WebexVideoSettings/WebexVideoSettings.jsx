@@ -27,7 +27,7 @@ export default function WebexVideoSettings({meetingID, className, style}) {
         ? (
           <>
             <Title type="subsection">Camera</Title>
-            <WebexMeetingControl type="switch-camera" meetingID={meetingID} />
+            <WebexMeetingControl type="switch-camera" meetingID={meetingID} tabIndex={102} />
             <div className={sc('media')}>
               <WebexLocalMedia mediaType="preview" meetingID={meetingID} />
               <Banner type="bottom">Preview</Banner>
