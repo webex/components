@@ -121,11 +121,13 @@ export default function WebexMeetingControlBar({
   ]);
   /* eslint-enable react-hooks/exhaustive-deps */
 
-  const renderControls = (names) => names.map(
-    (key, i) => (
+  const range = (start, end) => Array(end - start).fill().map((_, i) => start + i);
+
+  const renderControls = (start, end) => range(start, end).map(
+    (i) => (
       <WebexMeetingControl
-        key={key}
-        type={key}
+        key={controlNames[i]}
+        type={controlNames[i]}
         meetingID={meetingID}
         showText={controlTexts[i]}
         autoFocus={controlsTabIndexes[i] === Math.min(...controlsTabIndexes) || false}
@@ -151,9 +153,9 @@ export default function WebexMeetingControlBar({
     );
   };
 
-  const renderCollapseButton = (shown, onClick, ref) => (
+  const renderCollapseButton = (shown, onClick, ref, tabIndex) => (
     <div ref={ref} key="collapse-button" className={sc('collapse-button')}>
-      <Button onClick={onClick} type="toggle" size={48} pressed={shown} tabIndex={controlsTabIndexes[collapseStart]}>
+      <Button onClick={onClick} type="toggle" size={48} pressed={shown} tabIndex={tabIndex}>
         <Icon name={shown ? 'more-adr' : 'more'} />
       </Button>
     </div>
@@ -177,9 +179,17 @@ export default function WebexMeetingControlBar({
       {collapsedShown && renderCollapsedControls()}
       {controlTexts && (
         <div className={sc('controls')}>
-          {renderControls(controlNames.slice(0, collapseStart))}
-          {collapseStart < collapseEnd && renderCollapseButton(collapsedShown, toggleCollapsed)}
-          {renderControls(controlNames.slice(collapseEnd))}
+          {renderControls(0, collapseStart)}
+          {
+            collapseStart < collapseEnd
+            && renderCollapseButton(
+              collapsedShown,
+              toggleCollapsed,
+              undefined,
+              controlsTabIndexes[collapseStart],
+            )
+          }
+          {renderControls(collapseEnd, controlCount)}
         </div>
       )}
       <div className={`${sc('controls')} ${sc('controls--control-refs')}`}>

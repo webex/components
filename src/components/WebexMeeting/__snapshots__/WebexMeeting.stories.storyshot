@@ -149,7 +149,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
-            autoFocus={true}
+            autoFocus={false}
             className="wxc-button wxc-meeting-control__control-button wxc-button--cancel"
             disabled={false}
             onClick={[Function]}
@@ -158,7 +158,7 @@ Array [
                 "height": 48,
               }
             }
-            tabIndex={1}
+            tabIndex={6}
             type="button"
           >
             <svg
@@ -642,7 +642,6 @@ Array [
                 "height": 48,
               }
             }
-            tabIndex={1}
             type="button"
           >
             <svg
@@ -822,7 +821,7 @@ Array [
         >
           <button
             aria-label="Muted, video off"
-            autoFocus={false}
+            autoFocus={true}
             className="wxc-button wxc-meeting-control__control-button wxc-button--join wxc-button--pressed"
             disabled={false}
             onClick={[Function]}
@@ -831,7 +830,7 @@ Array [
                 "height": 48,
               }
             }
-            tabIndex={2}
+            tabIndex={1}
             type="button"
           >
             <span
@@ -1131,7 +1130,6 @@ Array [
                 "height": 48,
               }
             }
-            tabIndex={2}
             type="button"
           >
             <svg
@@ -1390,7 +1388,7 @@ Array [
         >
           <button
             aria-label="Muted, video off"
-            autoFocus={false}
+            autoFocus={true}
             className="wxc-button wxc-meeting-control__control-button wxc-button--join wxc-button--pressed"
             disabled={false}
             onClick={[Function]}
@@ -1399,7 +1397,7 @@ Array [
                 "height": 48,
               }
             }
-            tabIndex={2}
+            tabIndex={1}
             type="button"
           >
             <span
@@ -1699,7 +1697,6 @@ Array [
                 "height": 48,
               }
             }
-            tabIndex={2}
             type="button"
           >
             <svg
@@ -1935,7 +1932,7 @@ Array [
         >
           <button
             aria-label="Muted, video off"
-            autoFocus={false}
+            autoFocus={true}
             className="wxc-button wxc-meeting-control__control-button wxc-button--join"
             disabled={true}
             onClick={[Function]}
@@ -1944,7 +1941,7 @@ Array [
                 "height": 48,
               }
             }
-            tabIndex={2}
+            tabIndex={1}
             type="button"
           >
             <span
@@ -2244,7 +2241,6 @@ Array [
                 "height": 48,
               }
             }
-            tabIndex={2}
             type="button"
           >
             <svg
@@ -2405,7 +2401,7 @@ Array [
           className="wxc-meeting-control"
         >
           <button
-            autoFocus={true}
+            autoFocus={false}
             className="wxc-button wxc-meeting-control__control-button wxc-button--cancel"
             disabled={false}
             onClick={[Function]}
@@ -2414,7 +2410,7 @@ Array [
                 "height": 48,
               }
             }
-            tabIndex={1}
+            tabIndex={6}
             type="button"
           >
             <svg
@@ -2898,7 +2894,6 @@ Array [
                 "height": 48,
               }
             }
-            tabIndex={1}
             type="button"
           >
             <svg
