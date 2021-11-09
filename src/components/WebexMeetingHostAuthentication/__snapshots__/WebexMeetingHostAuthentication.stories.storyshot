@@ -52,6 +52,7 @@ Array [
               onChange={[Function]}
               placeholder=""
               required={false}
+              tabIndex={101}
               type="password"
               value=""
             />
@@ -71,6 +72,7 @@ Array [
             "height": 28,
           }
         }
+        tabIndex={102}
         type="button"
       >
         Start meeting

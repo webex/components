@@ -68,6 +68,7 @@ export default function WebexMeetingHostAuthentication({
             error={invalidHostKey ? 'Incorrect host key. Try again.' : ''}
             ariaLabel={HINTS.password}
             autoFocus
+            tabIndex={101}
           />
         </label>
         <Button
@@ -77,6 +78,7 @@ export default function WebexMeetingHostAuthentication({
           onClick={joinMeeting}
           isDisabled={isStartButtonDisabled}
           ariaLabel={HINTS.button}
+          tabIndex={102}
         >
           {isJoining && <Spinner className={sc('start-button-spinner')} size={16} />}
           {isJoining ? 'Starting meeting...' : 'Start meeting'}
