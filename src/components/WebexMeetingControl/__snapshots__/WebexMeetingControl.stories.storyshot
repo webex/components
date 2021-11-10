@@ -188,9 +188,8 @@ Array [
         aria-hidden="true"
         aria-label="Use arrow keys to navigate between camera options and hit \\"Enter\\" to select."
         className="wxc-select__selected-option "
-        onBlur={[Function]}
         onClick={[Function]}
-        onKeyUp={[Function]}
+        onKeyDown={[Function]}
         role="button"
         title="Video Devices"
       >

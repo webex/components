@@ -65,9 +65,8 @@ Array [
                 aria-hidden="true"
                 aria-label="Use arrow keys to navigate between speaker options and hit \\"Enter\\" to select."
                 className="wxc-select__selected-option "
-                onBlur={[Function]}
                 onClick={[Function]}
-                onKeyUp={[Function]}
+                onKeyDown={[Function]}
                 role="button"
                 tabIndex={102}
                 title="The current browser does not support changing speakers"
@@ -108,9 +107,8 @@ Array [
                 aria-hidden="true"
                 aria-label="Use arrow keys to navigate between microphone options and hit \\"Enter\\" to select."
                 className="wxc-select__selected-option "
-                onBlur={[Function]}
                 onClick={[Function]}
-                onKeyUp={[Function]}
+                onKeyDown={[Function]}
                 role="button"
                 tabIndex={103}
                 title="Microphone Devices"
