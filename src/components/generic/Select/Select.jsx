@@ -46,14 +46,14 @@ export default function Select({
 
   const onOutsideClick = () => setExpanded(false);
 
-  const handleKeyUp = (event) => {
+  const handleKeyDown = (event) => {
     if ((event.key === 'Enter' || event.key === ' ') && event.target === event.currentTarget) {
       toggleExpanded();
     }
-  };
 
-  const handleBlur = () => {
-    setExpanded(false);
+    if (event.key === 'Tab') {
+      setExpanded(false);
+    }
   };
 
   useEffect(() => {
@@ -77,8 +77,7 @@ export default function Select({
         tabIndex={tabIndex}
         title={tooltip}
         aria-label={`${label ? `${label}. ` : ''}${ariaLabel}`}
-        onKeyUp={handleKeyUp}
-        onBlur={handleBlur}
+        onKeyDown={handleKeyDown}
       >
         <span className={sc('label')}>{label || value}</span>
         <Icon name={expanded ? 'arrow-up' : 'arrow-down'} size={13} />
