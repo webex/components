@@ -1,3 +1,10 @@
+# [1.183.0](https://github.com/webex/components/compare/v1.182.0...v1.183.0) (2021-11-10)
+
+
+### Features
+
+* **Select:** toggle/collapse dropdown when pressing enter or space on the keyboard ([caeeac4](https://github.com/webex/components/commit/caeeac4fb1422449c145f561586f1c53e24f5499))
+
 # [1.182.0](https://github.com/webex/components/compare/v1.181.0...v1.182.0) (2021-11-09)
 
 
