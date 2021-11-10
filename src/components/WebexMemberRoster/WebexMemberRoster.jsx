@@ -81,6 +81,7 @@ export default function WebexMemberRoster({
           type="ghost"
           size={28}
           onClick={onClose}
+          tabIndex={50}
         >
           <Icon name="cancel" size={16} />
         </Button>

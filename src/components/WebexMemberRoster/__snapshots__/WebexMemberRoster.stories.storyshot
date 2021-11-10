@@ -31,6 +31,7 @@ Array [
             "height": 28,
           }
         }
+        tabIndex={50}
         type="button"
       >
         <svg
@@ -262,6 +263,7 @@ Array [
             "height": 28,
           }
         }
+        tabIndex={50}
         type="button"
       >
         <svg
@@ -735,6 +737,7 @@ Array [
             "height": 28,
           }
         }
+        tabIndex={50}
         type="button"
       >
         <svg
