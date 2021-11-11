@@ -58,3 +58,10 @@ $shadow-color: rgba(0, 0, 0, 0.2);
   right: 2rem;
   z-index: 1;
 }
+
+@mixin focusable {
+  &:focus-visible {
+    box-shadow: var(--wxc-focus-box-shadow);
+    outline: none;
+  }
+}

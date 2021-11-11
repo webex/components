@@ -14,6 +14,7 @@
   --wxc-secondary-video-background: #{$wxc-gray-100};
   --wxc-meeting-border: 1px solid #{$wxc-white-alpha-30};
   --wxc-box-shadow: none;
+  --wxc-focus-box-shadow: 0 0 0 0.25rem #{$wxc-blue-40-alpha-30}, 0 0 0 0.125rem #{$wxc-blue-40};
   --wxc-person-status--active-color: #{$wxc-green-40};
   --wxc-person-status--dnd-color: #{$wxc-red-50};
   --wxc-person-status--in-a-meeting-color: #{$wxc-yellow-30};
