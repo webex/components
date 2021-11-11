@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
@@ -23,17 +23,20 @@ export default function OptionsList({
 }) {
   const [cssClasses, sc] = webexComponentClasses('options-list', className);
 
+  const [focusedOptionIndex, setFocusedOptionIndex] = useState();
+
   return (
     <div className={cssClasses}>
       <ul role="menu" className={sc('list')}>
-        {options.map((option) => (
+        {options.map((option, index) => (
           <li
-            className={sc('option')}
+            className={`${sc('option')} ${(focusedOptionIndex === index) && sc('option--focused')}`}
             key={option.value}
             onClick={() => onSelect(option)}
+            onMouseEnter={() => setFocusedOptionIndex(index)}
             aria-hidden="true"
             role="option"
-            aria-selected
+            aria-selected={selected === option.value}
             tabIndex="0"
             title={option.label}
           >
