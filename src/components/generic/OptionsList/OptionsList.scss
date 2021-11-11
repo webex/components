@@ -39,8 +39,8 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-options-list;
         }
       }
 
-      &:hover {
-        background: var(--wxc-options-list-item--hover--background);
+      &--focused {
+        background: var(--wxc-options-list-item--focused--background);
       }
 
       &:active {
