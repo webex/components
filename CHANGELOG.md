@@ -1,3 +1,10 @@
+# [1.185.0](https://github.com/webex/components/compare/v1.184.0...v1.185.0) (2021-11-11)
+
+
+### Features
+
+* **WebexComponents:** change the joining state to lobby state ([17a494f](https://github.com/webex/components/commit/17a494fa579d1d7f6282007df36a33311d5582a2))
+
 # [1.184.0](https://github.com/webex/components/compare/v1.183.1...v1.184.0) (2021-11-10)
 
 
