@@ -1,6 +1,7 @@
 $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-button;
 
 .#{$C} {
+  @include focusable;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -65,6 +65,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-guest-authentication;
     color: var(--wxc-secondary-text-color);
 
     .#{$C}__host-hyperlink {
+      @include focusable;
       color: var(--wxc-hyperlink--normal--color);
       text-decoration: underline;
 
