@@ -1,3 +1,10 @@
+# [1.186.0](https://github.com/webex/components/compare/v1.185.0...v1.186.0) (2021-11-12)
+
+
+### Features
+
+* **generic-components:** add box-shadow to focused elements ([9553129](https://github.com/webex/components/commit/9553129fb3945804a66102beac1548243809f76f))
+
 # [1.185.0](https://github.com/webex/components/compare/v1.184.0...v1.185.0) (2021-11-11)
 
 
