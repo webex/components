@@ -73,6 +73,11 @@ export default function WebexMeetingGuestAuthentication({
     adapter.meetingsAdapter.clearInvalidPasswordFlag(ID);
   };
 
+  const handleHostClick = (event) => {
+    event.preventDefault();
+    switchToHostModal();
+  };
+
   const title = 'Enter meeting information to join';
 
   return (
@@ -128,7 +133,7 @@ export default function WebexMeetingGuestAuthentication({
         Hosting the meeting?
         {' '}
         {/* eslint-disable-next-line */}
-        <a tabIndex={104} className={sc('host-hyperlink')} onClick={switchToHostModal} aria-label={HINTS.hostLink}>Enter host key.</a>
+        <a href="#" tabIndex={104} className={sc('host-hyperlink')} onClick={handleHostClick} aria-label={HINTS.hostLink}>Enter host key.</a>
       </div>
     </div>
   );
