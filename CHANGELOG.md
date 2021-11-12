@@ -1,3 +1,10 @@
+# [1.187.0](https://github.com/webex/components/compare/v1.186.0...v1.187.0) (2021-11-12)
+
+
+### Features
+
+* **hooks:** implement autoFocus hook ([ce15dea](https://github.com/webex/components/commit/ce15deae99f7c800294d62e44f577a2a5f30d492))
+
 # [1.186.0](https://github.com/webex/components/compare/v1.185.0...v1.186.0) (2021-11-12)
 
 
