@@ -53,12 +53,15 @@ export default function Tabs({
         tabIndex={tabIndex}
         onKeyUp={handleKeyUp}
         aria-label="Use arrow keys to navigate between setting options"
+        role="tablist"
       >
         {
           tabs.map((tab, index) => (
             <li
               className={classNames(sc('tab'), selected === tab.key && sc('tab--active'))}
               key={tab.key}
+              role="tab"
+              aria-selected={selected === tab.key}
             >
               <button
                 onClick={() => onSelect(tab.key)}

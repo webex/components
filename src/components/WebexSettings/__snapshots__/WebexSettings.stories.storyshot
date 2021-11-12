@@ -18,10 +18,13 @@ Array [
         aria-label="Use arrow keys to navigate between setting options"
         className="wxc-tabs__list"
         onKeyUp={[Function]}
+        role="tablist"
         tabIndex={101}
       >
         <li
+          aria-selected={true}
           className="wxc-tabs__tab wxc-tabs__tab--active"
+          role="tab"
         >
           <button
             aria-label="Tab 1 of 2. View speaker and microphone settings."
@@ -32,7 +35,9 @@ Array [
           </button>
         </li>
         <li
+          aria-selected={false}
           className="wxc-tabs__tab"
+          role="tab"
         >
           <button
             aria-label="Tab 2 of 2. View camera settings."
