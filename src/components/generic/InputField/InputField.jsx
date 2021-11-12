@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 import Button from '../Button/Button';
+import {useRef, useAutoFocus} from '../../hooks';
 import Icon from '../Icon/Icon';
 
 /**
@@ -40,6 +41,7 @@ export default function InputField({
 }) {
   const [cssClasses, sc] = webexComponentClasses('input-field', className, {error});
   const [isPwdRevealed, setIsPwdRevealed] = useState(false);
+  const inputRef = useRef();
 
   const handleChange = (event) => onChange(event.target.value);
   const clearInput = () => onChange('');
@@ -47,6 +49,8 @@ export default function InputField({
   const toggleIsPwdRevealed = () => {
     setIsPwdRevealed((revealed) => !revealed);
   };
+
+  useAutoFocus(inputRef, autoFocus);
 
   return (
     <div className={cssClasses} style={style}>
@@ -64,6 +68,7 @@ export default function InputField({
           // eslint-disable-next-line jsx-a11y/no-autofocus
           autoFocus={autoFocus}
           tabIndex={tabIndex}
+          ref={inputRef}
         />
         {type === 'password' && value && (
           <Button type="ghost" className={sc('input-field-right-icon')} size={28} onClick={toggleIsPwdRevealed}>
