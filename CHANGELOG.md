@@ -1,3 +1,10 @@
+# [1.189.0](https://github.com/webex/components/compare/v1.188.0...v1.189.0) (2021-11-12)
+
+
+### Features
+
+* **Tabs:** add role and aria-selected on list elements from Tabs component ([f6e36a3](https://github.com/webex/components/commit/f6e36a36c862dcbb13b0b68eb38c9913263eca83))
+
 # [1.188.0](https://github.com/webex/components/compare/v1.187.0...v1.188.0) (2021-11-12)
 
 
