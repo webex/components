@@ -41,6 +41,8 @@ export default function OptionsList({
       const nextFocusedOption = (focusedOptionIndex + 1) % options.length;
 
       setFocusedOptionIndex(nextFocusedOption);
+    } else if (event.key === 'Enter') {
+      onSelect(options[focusedOptionIndex]);
     }
   };
 
