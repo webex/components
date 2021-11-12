@@ -1,3 +1,12 @@
+# [1.188.0](https://github.com/webex/components/compare/v1.187.0...v1.188.0) (2021-11-12)
+
+
+### Features
+
+* **OptionsList:** add event for select an option with "Enter" key ([b5710b7](https://github.com/webex/components/commit/b5710b701e20a3c706bdd418a0e3e7af26fd0d44))
+* **OptionsList:** implement arrow keys navigation in options-list for accessibility ([2709151](https://github.com/webex/components/commit/270915172cff8782d5d16b316ca31f7c1917a581))
+* **WebexMeetingGuestAuthentication:** add href to host link to enable navigation ([985ce06](https://github.com/webex/components/commit/985ce06e087bb24980dc16696d76b58d8ded846d))
+
 # [1.187.0](https://github.com/webex/components/compare/v1.186.0...v1.187.0) (2021-11-12)
 
 
