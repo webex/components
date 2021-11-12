@@ -117,6 +117,8 @@ Array [
       <a
         aria-label="Click to go to a new screen where the meeting host can enter the host key."
         className="wxc-meeting-guest-authentication__host-hyperlink"
+        href="#"
+        onClick={[Function]}
         tabIndex={104}
       >
         Enter host key.
