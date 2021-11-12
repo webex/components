@@ -1,7 +1,7 @@
 import React, {JSX} from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
-import {useRef} from '../../hooks';
+import {useRef, useAutoFocus} from '../../hooks';
 import Tooltip from '../Tooltip/Tooltip';
 
 /**
@@ -38,6 +38,8 @@ export default function Button({
 }) {
   const [cssClasses] = webexComponentClasses('button', className, {[`${type}`]: true, pressed});
   const buttonRef = useRef();
+
+  useAutoFocus(buttonRef, autoFocus);
 
   return (
     <>
