@@ -4,6 +4,7 @@ import classNames from 'classnames';
 
 import Icon from '../Icon/Icon';
 import webexComponentClasses from '../../helpers';
+import {useRef, useAutoFocus} from '../../hooks';
 
 /**
  * OptionsList Component
@@ -13,6 +14,7 @@ import webexComponentClasses from '../../helpers';
  * @param {string} props.className  Custom CSS class to apply
  * @param {string} props.selected  Selected option label
  * @param {Function} props.onSelect  A function which will be triggerd on option selection
+ * @param {number} props.tabIndex  Value of the parent's tabIndex
  * @returns {object}  JSX of the element
  */
 export default function OptionsList({
@@ -20,14 +22,31 @@ export default function OptionsList({
   className,
   onSelect,
   selected,
+  tabIndex,
 }) {
   const [cssClasses, sc] = webexComponentClasses('options-list', className);
 
-  const [focusedOptionIndex, setFocusedOptionIndex] = useState();
+  const optionListRef = useRef();
+
+  useAutoFocus(optionListRef, true);
+
+  const [focusedOptionIndex, setFocusedOptionIndex] = useState(0);
+
+  const onKeyDown = (event) => {
+    if (event.key === 'ArrowUp') {
+      const prevFocusedOption = (focusedOptionIndex + options.length - 1) % options.length;
+
+      setFocusedOptionIndex(prevFocusedOption);
+    } else if (event.key === 'ArrowDown') {
+      const nextFocusedOption = (focusedOptionIndex + 1) % options.length;
+
+      setFocusedOptionIndex(nextFocusedOption);
+    }
+  };
 
   return (
     <div className={cssClasses}>
-      <ul role="menu" className={sc('list')}>
+      <ul role="menu" className={sc('list')} onKeyDown={onKeyDown} tabIndex={tabIndex} ref={optionListRef}>
         {options.map((option, index) => (
           <li
             className={`${sc('option')} ${(focusedOptionIndex === index) && sc('option--focused')}`}
@@ -37,7 +56,6 @@ export default function OptionsList({
             aria-hidden="true"
             role="option"
             aria-selected={selected === option.value}
-            tabIndex="0"
             title={option.label}
           >
             {option.icon && <Icon name={option.icon} />}
@@ -59,10 +77,12 @@ OptionsList.propTypes = {
   })),
   onSelect: PropTypes.func.isRequired,
   selected: PropTypes.string,
+  tabIndex: PropTypes.number,
 };
 
 OptionsList.defaultProps = {
   className: '',
   options: [],
   selected: '',
+  tabIndex: undefined,
 };

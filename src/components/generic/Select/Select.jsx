@@ -88,6 +88,7 @@ export default function Select({
           options={options}
           onSelect={(option) => handleOptionSelect(option)}
           selected={value}
+          tabIndex={tabIndex}
         />
       )}
     </div>

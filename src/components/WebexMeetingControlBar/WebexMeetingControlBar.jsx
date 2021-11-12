@@ -149,7 +149,7 @@ export default function WebexMeetingControlBar({
     const options = collapsedControls.map(({name, control}) => ({value: name, label: control}));
 
     return (
-      <OptionsList className={sc('collapsed-controls')} options={options} onSelect={toggleCollapsed} />
+      <OptionsList className={sc('collapsed-controls')} options={options} onSelect={toggleCollapsed} tabIndex={controlsTabIndexes[collapseStart]} />
     );
   };
 
