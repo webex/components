@@ -13,6 +13,7 @@ import {useRef, useAutoFocus} from '../../hooks';
  * @param {object[]} props.options  Array of options
  * @param {string} props.className  Custom CSS class to apply
  * @param {string} props.selected  Selected option label
+ * @param {Function} [props.onBlur]  Called when this component loses focus
  * @param {Function} props.onSelect  A function which will be triggerd on option selection
  * @param {number} props.tabIndex  Value of the parent's tabIndex
  * @returns {object}  JSX of the element
@@ -20,6 +21,7 @@ import {useRef, useAutoFocus} from '../../hooks';
 export default function OptionsList({
   options,
   className,
+  onBlur,
   onSelect,
   selected,
   tabIndex,
@@ -48,7 +50,7 @@ export default function OptionsList({
 
   return (
     <div className={cssClasses}>
-      <ul role="menu" className={sc('list')} onKeyDown={onKeyDown} tabIndex={tabIndex} ref={optionListRef}>
+      <ul role="menu" className={sc('list')} onKeyDown={onKeyDown} tabIndex={tabIndex} ref={optionListRef} onBlur={onBlur}>
         {options.map((option, index) => (
           <li
             className={`${sc('option')} ${(focusedOptionIndex === index) && sc('option--focused')}`}
@@ -72,6 +74,7 @@ export default function OptionsList({
 
 OptionsList.propTypes = {
   className: PropTypes.string,
+  onBlur: PropTypes.func,
   options: PropTypes.arrayOf(PropTypes.shape({
     value: PropTypes.string,
     label: PropTypes.node,
@@ -84,6 +87,7 @@ OptionsList.propTypes = {
 
 OptionsList.defaultProps = {
   className: '',
+  onBlur: undefined,
   options: [],
   selected: '',
   tabIndex: undefined,
