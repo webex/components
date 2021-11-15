@@ -28,7 +28,7 @@ const Tooltip = ({
 
     coords = {
       left: rect.x + rect.width / 2, // add half the width of the button for centering
-      bottom: window.innerHeight - rect.bottom + rect.height + 5 - window.scrollY, // offset from bottom - any Y scroll
+      bottom: window.innerHeight - rect.top + 14 - window.scrollY, // offset from bottom - any Y scroll
     };
   }
 
