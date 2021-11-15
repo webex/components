@@ -139,10 +139,11 @@ export default function WebexMeeting({
                 ? (
                   <WebexMeetingGuestAuthentication
                     meetingID={ID}
+                    className={sc('authentication-guest')}
                     switchToHostModal={() => setAuthModal('host')}
                   />
                 )
-                : <WebexMeetingHostAuthentication meetingID={ID} />
+                : <WebexMeetingHostAuthentication meetingID={ID} className={sc('authentication-host')} />
             }
           </Modal>
         )}
