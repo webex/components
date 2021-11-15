@@ -83,7 +83,11 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting;
     width: 53%;
     max-width: 31.25rem;
     min-width: 20rem;
-    height: 28.5rem;
+  }
+
+  .#{$C}__authentication-guest,
+  .#{$C}__authentication-host {
+    height: 25rem; // reserve space for validation errors
   }
 
   .#{$C}__logo {
