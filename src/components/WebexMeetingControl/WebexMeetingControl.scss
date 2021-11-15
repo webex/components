@@ -35,4 +35,10 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-control;
   .#{$C}__control-button { flex: 1; }
 
   .#{$C}__control-select { flex: 1; }
+
+  .#{$C}__as-item {
+    &:hover {
+      background: transparent;
+    }
+  }
 }

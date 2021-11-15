@@ -44,10 +44,16 @@ function renderButton(sc, action, display, style, showText, asItem, autoFocus, t
 
   if (asItem) {
     output = (
-      <div title={tooltip} style={style}>
+      <Button
+        type="ghost"
+        style={style}
+        size={24}
+        className={sc('as-item')}
+        tooltip={tooltip}
+      >
         {icon && <Icon name={icon} size={14} className={sc('item-button-icon')} />}
         <span className={sc('item-button-text')}>{text}</span>
-      </div>
+      </Button>
     );
   } else {
     output = (

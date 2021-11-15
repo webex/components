@@ -60,7 +60,7 @@ export default function OptionsList({
             aria-hidden="true"
             role="option"
             aria-selected={selected === option.value}
-            title={option.label}
+            title={typeof option.label !== 'object' && option.label}
           >
             {option.icon && <Icon name={option.icon} />}
             <span className={sc('label')}>{option.label}</span>
