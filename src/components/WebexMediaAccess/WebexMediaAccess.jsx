@@ -14,6 +14,7 @@ const SCREENS = {
     iconLabel: 'Camera icon',
     buttonLabel: 'Proceed without camera',
     buttonAction: 'ignoreVideoAccessPrompt',
+    buttonTooltip: 'This setting cannot be changed once the meeting starts.',
   },
   microphone: {
     icon: 'microphone-bold',
@@ -22,6 +23,7 @@ const SCREENS = {
     iconLabel: 'Microphone icon',
     buttonLabel: 'Proceed without audio',
     buttonAction: 'ignoreAudioAccessPrompt',
+    buttonTooltip: 'This setting cannot be changed once the meeting starts.',
   },
 };
 
@@ -65,6 +67,7 @@ export default function WebexMediaAccess({
         type="default"
         size={40}
         onClick={() => adapter.meetingsAdapter[screen.buttonAction](ID)}
+        tooltip={screen.buttonTooltip}
       >
         {screen.buttonLabel}
       </Button>
