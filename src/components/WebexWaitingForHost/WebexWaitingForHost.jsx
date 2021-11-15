@@ -35,7 +35,7 @@ export default function WebexWaitingForHost({className, meetingID, style}) {
           size={40}
           onClick={() => adapter.meetingsAdapter.leaveMeeting(ID)}
         >
-          Cancel
+          Leave
         </Button>
       </div>
       <WebexLocalMedia className={sc('local-media')} meetingID={meetingID} mediaType="video" />
