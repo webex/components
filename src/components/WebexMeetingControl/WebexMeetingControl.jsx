@@ -44,8 +44,7 @@ function renderButton(sc, action, display, style, showText, asItem, autoFocus, t
 
   if (asItem) {
     output = (
-      /* eslint-disable-next-line jsx-a11y/click-events-have-key-events */
-      <div onClick={action} title={tooltip} role="button" tabIndex="0" style={style}>
+      <div title={tooltip} style={style}>
         {icon && <Icon name={icon} size={14} className={sc('item-button-icon')} />}
         <span className={sc('item-button-text')}>{text}</span>
       </div>
@@ -80,6 +79,7 @@ function renderButton(sc, action, display, style, showText, asItem, autoFocus, t
  * @param {Function} action  Adapter control callback
  * @param {object} display  Display data of the control
  * @param {object} style  Custom style to apply
+ * @param {number} tabIndex  Value of the tabIndex attribute
  * @returns {object} JSX of the component
  */
 function renderDropdown(sc, action, display, style, tabIndex) {

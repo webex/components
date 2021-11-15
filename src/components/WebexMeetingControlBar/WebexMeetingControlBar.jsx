@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import PropTypes from 'prop-types';
 import {MeetingState} from '@webex/component-adapter-interfaces';
 
-import {useElementDimensions, useMeeting} from '../hooks';
+import {AdapterContext, useElementDimensions, useMeeting} from '../hooks';
 import webexComponentClasses from '../helpers';
 import {Button, Icon, OptionsList} from '../generic';
 import WebexMeetingControl from '../WebexMeetingControl/WebexMeetingControl';
@@ -34,6 +34,7 @@ export default function WebexMeetingControlBar({
   style,
   tabIndexes,
 }) {
+  const {meetingsAdapter} = useContext(AdapterContext);
   const {state} = useMeeting(meetingID);
   const [containerRef, {width: containerWidth}] = useElementDimensions();
   const [collapseButtonRef, {width: collapseButtonWidth}] = useElementDimensions();
@@ -140,16 +141,19 @@ export default function WebexMeetingControlBar({
 
   const renderCollapsedControls = () => {
     const names = controlNames.slice(collapseStart, collapseEnd);
-    const collapsedControls = names.map(
+    const options = names.map(
       (name) => ({
-        name,
-        control: <WebexMeetingControl key={name} type={name} meetingID={meetingID} asItem />,
+        value: name,
+        label: <WebexMeetingControl key={name} type={name} meetingID={meetingID} asItem />,
       }),
     );
-    const options = collapsedControls.map(({name, control}) => ({value: name, label: control}));
+    const onSelect = (opt) => {
+      meetingsAdapter.meetingControls[opt.value].action(meetingID);
+      toggleCollapsed();
+    };
 
     return (
-      <OptionsList className={sc('collapsed-controls')} options={options} onSelect={toggleCollapsed} tabIndex={controlsTabIndexes[collapseStart]} />
+      <OptionsList className={sc('collapsed-controls')} options={options} onSelect={onSelect} tabIndex={controlsTabIndexes[collapseStart]} />
     );
   };
 
