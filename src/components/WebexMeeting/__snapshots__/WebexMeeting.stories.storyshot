@@ -178,6 +178,7 @@ Array [
         </div>
       </div>
       <div
+        aria-hidden="true"
         className="wxc-meeting-control-bar__controls wxc-meeting-control-bar__controls--control-refs"
       >
         <div>
@@ -842,6 +843,7 @@ Array [
         </div>
       </div>
       <div
+        aria-hidden="true"
         className="wxc-meeting-control-bar__controls wxc-meeting-control-bar__controls--control-refs"
       >
         <div>
@@ -1409,6 +1411,7 @@ Array [
         </div>
       </div>
       <div
+        aria-hidden="true"
         className="wxc-meeting-control-bar__controls wxc-meeting-control-bar__controls--control-refs"
       >
         <div>
@@ -1953,6 +1956,7 @@ Array [
         </div>
       </div>
       <div
+        aria-hidden="true"
         className="wxc-meeting-control-bar__controls wxc-meeting-control-bar__controls--control-refs"
       >
         <div>
@@ -2430,6 +2434,7 @@ Array [
         </div>
       </div>
       <div
+        aria-hidden="true"
         className="wxc-meeting-control-bar__controls wxc-meeting-control-bar__controls--control-refs"
       >
         <div>
