@@ -1,3 +1,10 @@
+## [1.190.1](https://github.com/webex/components/compare/v1.190.0...v1.190.1) (2021-11-15)
+
+
+### Bug Fixes
+
+* **WebexMeetingControlBar:** move action of collapsed controls from the control to the options list ([3398538](https://github.com/webex/components/commit/33985382a63474b33ea5441ae945d1514693bd5e))
+
 # [1.190.0](https://github.com/webex/components/compare/v1.189.0...v1.190.0) (2021-11-15)
 
 
