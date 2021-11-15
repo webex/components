@@ -1,3 +1,10 @@
+# [1.191.0](https://github.com/webex/components/compare/v1.190.2...v1.191.0) (2021-11-15)
+
+
+### Features
+
+* **Select:** close the option list on blur ([d89374d](https://github.com/webex/components/commit/d89374d201ba18c990725ea7bb0bd1a7f211f158))
+
 ## [1.190.2](https://github.com/webex/components/compare/v1.190.1...v1.190.2) (2021-11-15)
 
 
