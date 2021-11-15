@@ -44,7 +44,7 @@ export default function Select({
     onChange(option.value);
   };
 
-  const onOutsideClick = () => setExpanded(false);
+  const collapse = () => setExpanded(false);
 
   const handleKeyDown = (event) => {
     if ((event.key === 'Enter' || event.key === ' ') && event.target === event.currentTarget) {
@@ -60,8 +60,8 @@ export default function Select({
     let cleanup;
 
     if (expanded) {
-      setTimeout(() => document.addEventListener('click', onOutsideClick));
-      cleanup = () => document.removeEventListener('click', onOutsideClick);
+      setTimeout(() => document.addEventListener('click', collapse));
+      cleanup = () => document.removeEventListener('click', collapse);
     }
 
     return cleanup;
@@ -89,6 +89,7 @@ export default function Select({
           onSelect={(option) => handleOptionSelect(option)}
           selected={value}
           tabIndex={tabIndex}
+          onBlur={collapse}
         />
       )}
     </div>
