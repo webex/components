@@ -1,3 +1,10 @@
+# [1.190.0](https://github.com/webex/components/compare/v1.189.0...v1.190.0) (2021-11-15)
+
+
+### Features
+
+* **WebexMeetingControlBar:** add aria-hidden to meeting controls refs container ([bf0bbba](https://github.com/webex/components/commit/bf0bbbae5489178f21b29168e8759df45c40cb6f))
+
 # [1.189.0](https://github.com/webex/components/compare/v1.188.0...v1.189.0) (2021-11-12)
 
 
