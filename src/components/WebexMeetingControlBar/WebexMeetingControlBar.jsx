@@ -192,7 +192,7 @@ export default function WebexMeetingControlBar({
           {renderControls(collapseEnd, controlCount)}
         </div>
       )}
-      <div className={`${sc('controls')} ${sc('controls--control-refs')}`}>
+      <div className={`${sc('controls')} ${sc('controls--control-refs')}`} aria-hidden="true">
         {controlNames.map((name, i) => (
           <React.Fragment key={name}>
             <div ref={iconControlRefs[i]} key="icon">
