@@ -1,3 +1,10 @@
+## [1.190.2](https://github.com/webex/components/compare/v1.190.1...v1.190.2) (2021-11-15)
+
+
+### Bug Fixes
+
+* **WebexWaitingForHost:** rename button from "Cancel" to "Leave" ([ddd86e4](https://github.com/webex/components/commit/ddd86e4d8191549a6ddf8ae17fa73a9b01c23f55))
+
 ## [1.190.1](https://github.com/webex/components/compare/v1.190.0...v1.190.1) (2021-11-15)
 
 
