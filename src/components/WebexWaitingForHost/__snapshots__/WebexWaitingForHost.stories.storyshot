@@ -87,7 +87,6 @@ Array [
       >
         Leave
       </button>
-      
     </div>
     <div
       className="wxc-local-media wxc-waiting-for-host__local-media wxc-local-media--no-media"
