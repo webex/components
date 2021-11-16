@@ -1,3 +1,10 @@
+# [1.193.0](https://github.com/webex/components/compare/v1.192.0...v1.193.0) (2021-11-16)
+
+
+### Features
+
+* **WebexWaitingForHost:** add tooltip on leave button ([f24424e](https://github.com/webex/components/commit/f24424e9db370d47214026d90c67253ffef90480))
+
 # [1.192.0](https://github.com/webex/components/compare/v1.191.0...v1.192.0) (2021-11-16)
 
 
