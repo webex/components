@@ -143,7 +143,6 @@ Array [
               />
             </svg>
           </button>
-          
         </div>
         <div
           className="wxc-meeting-control"
@@ -667,7 +666,6 @@ Array [
               />
             </svg>
           </button>
-          
         </div>
       </div>
     </div>
@@ -815,7 +813,6 @@ Array [
               />
             </svg>
           </button>
-          
         </div>
         <div
           className="wxc-meeting-control"
@@ -1156,7 +1153,6 @@ Array [
               />
             </svg>
           </button>
-          
         </div>
       </div>
     </div>
@@ -1383,7 +1379,6 @@ Array [
               />
             </svg>
           </button>
-          
         </div>
         <div
           className="wxc-meeting-control"
@@ -1724,7 +1719,6 @@ Array [
               />
             </svg>
           </button>
-          
         </div>
       </div>
     </div>
@@ -1927,7 +1921,6 @@ Array [
               />
             </svg>
           </button>
-          
         </div>
         <div
           className="wxc-meeting-control"
@@ -2268,7 +2261,6 @@ Array [
               />
             </svg>
           </button>
-          
         </div>
       </div>
     </div>
@@ -2398,7 +2390,6 @@ Array [
               />
             </svg>
           </button>
-          
         </div>
         <div
           className="wxc-meeting-control"
@@ -2922,7 +2913,6 @@ Array [
               />
             </svg>
           </button>
-          
         </div>
       </div>
     </div>
