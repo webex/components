@@ -34,6 +34,7 @@ export default function WebexWaitingForHost({className, meetingID, style}) {
           type="default"
           size={40}
           onClick={() => adapter.meetingsAdapter.leaveMeeting(ID)}
+          tooltip="Leave meeting"
         >
           Leave
         </Button>
