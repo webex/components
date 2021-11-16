@@ -1,3 +1,10 @@
+# [1.195.0](https://github.com/webex/components/compare/v1.194.0...v1.195.0) (2021-11-16)
+
+
+### Features
+
+* **WebexMeetingControlBar:** add styled tooltip on collapse button ([eaccfdf](https://github.com/webex/components/commit/eaccfdf762c7dac41608b912ac0f86d4ad025aa9))
+
 # [1.194.0](https://github.com/webex/components/compare/v1.193.0...v1.194.0) (2021-11-16)
 
 
