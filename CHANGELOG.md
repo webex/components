@@ -1,3 +1,15 @@
+# [1.194.0](https://github.com/webex/components/compare/v1.193.0...v1.194.0) (2021-11-16)
+
+
+### Bug Fixes
+
+* **WebexMeeting:** avoid adding the scrollbar for authentication forms ([f4d410a](https://github.com/webex/components/commit/f4d410aab1fa1357784ad9ed754706038986231c))
+
+
+### Features
+
+* **WebexMeetingControl:** add styled tooltip on collapsed meeting controls ([54b1e5d](https://github.com/webex/components/commit/54b1e5d3c034fe79463a7dc6165998a6df9334fe))
+
 # [1.193.0](https://github.com/webex/components/compare/v1.192.0...v1.193.0) (2021-11-16)
 
 
