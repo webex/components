@@ -82,6 +82,7 @@ export default function WebexMemberRoster({
           size={28}
           onClick={onClose}
           tabIndex={50}
+          ariaLabel="Close participants panel"
         >
           <Icon name="cancel" size={16} />
         </Button>

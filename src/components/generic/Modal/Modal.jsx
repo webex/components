@@ -46,7 +46,18 @@ export default function Modal({
         <div className={sc('header')}>
           {onBack && <Button tabIndex={198} type="ghost" className={sc('back')} size={28} onClick={onBack}><Icon name="arrow-left" size="13" /></Button>}
           {title && <h3 className={sc('title')}>{title}</h3>}
-          {onClose && <Button tabIndex={199} className={sc('close')} type="ghost" size={28} onClick={onClose}><Icon name="cancel" size={16} /></Button>}
+          {onClose && (
+          <Button
+            tabIndex={199}
+            className={sc('close')}
+            type="ghost"
+            size={28}
+            ariaLabel="Close dialog"
+            onClick={onClose}
+          >
+            <Icon name="cancel" size={16} />
+          </Button>
+          )}
         </div>
         <div className={sc('body')}>{children}</div>
       </div>
