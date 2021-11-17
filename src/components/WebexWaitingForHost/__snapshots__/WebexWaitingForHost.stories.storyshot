@@ -27,6 +27,7 @@ Array [
         className="wxc-waiting-for-host__icon"
       >
         <svg
+          aria-label="Waiting for meeting rocket illustration"
           className="wxc-waiting-for-host-icon"
           fill="none"
           height={120}
