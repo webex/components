@@ -1,3 +1,10 @@
+# [1.198.0](https://github.com/webex/components/compare/v1.197.0...v1.198.0) (2021-11-17)
+
+
+### Features
+
+* **MeetingsJsonAdapter:** show initial speaker ([b3434f3](https://github.com/webex/components/commit/b3434f3c66a7dcee5496a1304c841ba8607ce9cd))
+
 # [1.197.0](https://github.com/webex/components/compare/v1.196.0...v1.197.0) (2021-11-17)
 
 
