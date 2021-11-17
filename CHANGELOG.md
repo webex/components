@@ -1,3 +1,10 @@
+# [1.197.0](https://github.com/webex/components/compare/v1.196.0...v1.197.0) (2021-11-17)
+
+
+### Features
+
+* **WebexComponents:** add aria-label to close buttons ([e782448](https://github.com/webex/components/commit/e7824481f34e260ed8cd6c71b3cbbb9f59f2ff56))
+
 # [1.196.0](https://github.com/webex/components/compare/v1.195.0...v1.196.0) (2021-11-17)
 
 
