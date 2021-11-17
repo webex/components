@@ -68,7 +68,7 @@ Array [
             >
               <div
                 aria-hidden="true"
-                aria-label="Use arrow keys to navigate between speaker options and hit \\"Enter\\" to select."
+                aria-label="Default - Headset Earphone (Jabra EVOLVE 20 SE MS) (0b0e:0300). Use arrow keys to navigate between speaker options and hit \\"Enter\\" to select."
                 className="wxc-select__selected-option "
                 onClick={[Function]}
                 onKeyDown={[Function]}
@@ -79,7 +79,7 @@ Array [
                 <span
                   className="wxc-select__label"
                 >
-                  speakerID1
+                  Default - Headset Earphone (Jabra EVOLVE 20 SE MS) (0b0e:0300)
                 </span>
                 <svg
                   className="wxc-icon "

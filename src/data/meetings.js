@@ -27,7 +27,7 @@ export default {
     },
     cameraID: 'cameraID1',
     microphoneID: 'microphoneID1',
-    speakerID: 'speakerID1',
+    speakerID: null,
   },
   meeting2: {
     ID: 'meeting2',
@@ -55,7 +55,7 @@ export default {
     },
     cameraID: 'cameraID2',
     microphoneID: 'microphoneID2',
-    speakerID: 'speakerID2',
+    speakerID: null,
   },
   meeting3: {
     ID: 'meeting3',
@@ -83,7 +83,7 @@ export default {
     },
     cameraID: 'cameraID1',
     microphoneID: 'microphoneID1',
-    speakerID: 'speakerID1',
+    speakerID: null,
   },
   meeting4: {
     ID: 'meeting4',
@@ -111,7 +111,7 @@ export default {
     },
     cameraID: 'cameraID1',
     microphoneID: 'microphoneID1',
-    speakerID: 'speakerID1',
+    speakerID: null,
   },
   meeting5: {
     ID: 'meeting5',
@@ -139,7 +139,7 @@ export default {
     },
     cameraID: 'cameraID2',
     microphoneID: 'microphoneID2',
-    speakerID: 'speakerID2',
+    speakerID: null,
   },
   meeting6: {
     ID: 'meeting6',
@@ -167,7 +167,7 @@ export default {
     },
     cameraID: 'cameraID1',
     microphoneID: 'microphoneID2',
-    speakerID: 'speakerID1',
+    speakerID: null,
   },
   meeting7: {
     ID: 'meeting7',
@@ -281,7 +281,7 @@ export default {
     },
     cameraID: 'cameraID1',
     microphoneID: 'microphoneID1',
-    speakerID: 'speakerID1',
+    speakerID: null,
     password: 'secret',
     hostKey: 'hostsecret',
   },
@@ -311,6 +311,6 @@ export default {
     },
     cameraID: 'cameraID1',
     microphoneID: 'microphoneID1',
-    speakerID: 'speakerID1',
+    speakerID: null,
   },
 };

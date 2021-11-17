@@ -198,6 +198,12 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
     });
   }
 
+  async getDefaultSpeakerID() {
+    const availableSpeakers = await this.getAvailableDevices('audiooutput');
+
+    return availableSpeakers.find((speaker) => speaker.label.startsWith('Default '))?.deviceId || null;
+  }
+
   /**
    * Returns an observable that emits data of a meeting of the given ID.
    * Observable will complete once the current user leaves the meeting.
@@ -271,6 +277,10 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
 
           meeting.localAudio.stream = stream;
           meeting.microphoneID = deviceId;
+        }
+
+        if (!meeting.speakerID) {
+          meeting.speakerID = await this.getDefaultSpeakerID();
         }
 
         if (this.displayStreamPromise) {
