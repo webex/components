@@ -23,6 +23,7 @@ Array [
         )
       </h5>
       <button
+        aria-label="Close participants panel"
         autoFocus={false}
         className="wxc-button wxc-button--ghost"
         disabled={false}
@@ -255,6 +256,7 @@ Array [
         )
       </h5>
       <button
+        aria-label="Close participants panel"
         autoFocus={false}
         className="wxc-button wxc-button--ghost"
         disabled={false}
@@ -729,6 +731,7 @@ Array [
         )
       </h5>
       <button
+        aria-label="Close participants panel"
         autoFocus={false}
         className="wxc-button wxc-button--ghost"
         disabled={false}
