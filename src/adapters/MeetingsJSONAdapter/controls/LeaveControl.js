@@ -32,6 +32,7 @@ export default class LeaveControl extends MeetingControl {
         type: 'CANCEL',
         icon: 'cancel',
         tooltip: 'Leave meeting',
+        hint: 'Leave meeting',
       });
 
       observer.complete();

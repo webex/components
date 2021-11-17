@@ -325,7 +325,7 @@ describe('Meetings JSON Adapter', () => {
           ID: 'join-meeting',
           text: 'Join meeting',
           tooltip: 'Join meeting',
-          hint: 'Unmuted, video on',
+          hint: 'Join meeting. Unmuted, video on',
         });
         done();
       });

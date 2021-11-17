@@ -27,7 +27,7 @@ Array [
           role="tab"
         >
           <button
-            aria-label="Tab 1 of 2. View speaker and microphone settings."
+            aria-label="Audio. Tab 1 of 2. View speaker and microphone settings."
             onClick={[Function]}
             type="button"
           >
@@ -40,7 +40,7 @@ Array [
           role="tab"
         >
           <button
-            aria-label="Tab 2 of 2. View camera settings."
+            aria-label="Video. Tab 2 of 2. View camera settings."
             onClick={[Function]}
             type="button"
           >

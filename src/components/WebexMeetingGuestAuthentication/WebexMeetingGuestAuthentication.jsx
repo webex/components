@@ -11,7 +11,7 @@ const HINTS = {
   logo: 'Webex by Cisco logo',
   name: 'Your name appears in the participant list. Skip this optional field to use the name provided by the system.',
   password: 'The password is provided in the invitation for a scheduled  meeting, or from the host.',
-  button: 'Start the meeting after entering the required information.',
+  buttonHint: 'Start meeting. Start the meeting after entering the required information.',
   hostLink: 'Click to go to a new screen where the meeting host can enter the host key.',
 };
 
@@ -122,7 +122,7 @@ export default function WebexMeetingGuestAuthentication({
           size={28}
           onClick={joinMeeting}
           isDisabled={isStartButtonDisabled}
-          ariaLabel={HINTS.button}
+          ariaLabel={HINTS.buttonHint}
           tabIndex={103}
         >
           {isJoining && <Spinner className={sc('start-button-spinner')} size={16} />}
