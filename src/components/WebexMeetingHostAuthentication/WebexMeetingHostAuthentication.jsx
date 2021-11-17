@@ -10,7 +10,7 @@ import Spinner from '../generic/Spinner/Spinner';
 const HINTS = {
   logo: 'Webex by Cisco logo',
   password: 'The host key is generated when a meeting is scheduled.',
-  button: 'Start the meeting for all participants after entering the required information.',
+  buttonHint: 'Start meeting. Start the meeting for all participants after entering the required information.',
 };
 
 /**
@@ -77,7 +77,7 @@ export default function WebexMeetingHostAuthentication({
           size={28}
           onClick={joinMeeting}
           isDisabled={isStartButtonDisabled}
-          ariaLabel={HINTS.button}
+          ariaLabel={HINTS.buttonHint}
           tabIndex={102}
         >
           {isJoining && <Spinner className={sc('start-button-spinner')} size={16} />}

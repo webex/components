@@ -50,6 +50,7 @@ function renderButton(sc, action, display, style, showText, asItem, autoFocus, t
         size={24}
         className={sc('as-item')}
         tooltip={tooltip}
+        ariaLabel={hint || text}
       >
         {icon && <Icon name={icon} size={14} className={sc('item-button-icon')} />}
         <span className={sc('item-button-text')}>{text}</span>
@@ -63,7 +64,7 @@ function renderButton(sc, action, display, style, showText, asItem, autoFocus, t
         size={48}
         isDisabled={isDisabled}
         onClick={action}
-        ariaLabel={hint}
+        ariaLabel={hint || text}
         pressed={isActive}
         tooltip={tooltip}
         autoFocus={autoFocus}

@@ -66,7 +66,7 @@ export default function Tabs({
               <button
                 onClick={() => onSelect(tab.key)}
                 type="button"
-                aria-label={`Tab ${index + 1} of ${tabs.length}. ${tab.ariaLabel}`}
+                aria-label={`${tab.heading}. Tab ${index + 1} of ${tabs.length}. ${tab.ariaLabel}`}
               >
                 {tab.heading}
               </button>

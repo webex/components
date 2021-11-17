@@ -47,7 +47,7 @@ export default class JoinControl extends MeetingControl {
         type: 'JOIN',
         text: 'Join meeting',
         tooltip: 'Join meeting',
-        hint,
+        hint: `Join meeting. ${hint}`,
         state,
       })),
     );

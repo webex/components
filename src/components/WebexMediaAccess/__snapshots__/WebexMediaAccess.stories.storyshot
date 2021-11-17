@@ -43,7 +43,7 @@ Array [
       when your browser asks to let Webex use your camera for this video call
     </p>
     <button
-      aria-label="This setting cannot be changed once the meeting starts."
+      aria-label="Proceed without camera. This setting cannot be changed once the meeting starts."
       autoFocus={false}
       className="wxc-button wxc-button--default"
       disabled={false}
@@ -124,7 +124,7 @@ Array [
       when your browser asks to let Webex use your microphone for this video call
     </p>
     <button
-      aria-label="This setting cannot be changed once the meeting starts."
+      aria-label="Proceed without audio. This setting cannot be changed once the meeting starts."
       autoFocus={false}
       className="wxc-button wxc-button--default"
       disabled={false}
