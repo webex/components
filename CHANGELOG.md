@@ -1,3 +1,10 @@
+# [1.196.0](https://github.com/webex/components/compare/v1.195.0...v1.196.0) (2021-11-17)
+
+
+### Features
+
+* **WebexMediaAccess:** add aria-label to 'Proceed without' buttons ([dd76ebd](https://github.com/webex/components/commit/dd76ebd2b7e904807ec46ec82ead05d4d66c84e6))
+
 # [1.195.0](https://github.com/webex/components/compare/v1.194.0...v1.195.0) (2021-11-16)
 
 
