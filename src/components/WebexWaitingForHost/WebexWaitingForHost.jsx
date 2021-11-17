@@ -28,7 +28,7 @@ export default function WebexWaitingForHost({className, meetingID, style}) {
     <div className={cssClasses} style={style}>
       <WebexMeetingInfo className={sc('info')} meetingID={meetingID} />
       <div className={sc('content')}>
-        <div className={sc('icon')}><Icon name="waiting-for-host" size={120} /></div>
+        <div className={sc('icon')}><Icon name="waiting-for-host" size={120} ariaLabel="Waiting for meeting rocket illustration" /></div>
         <div className={sc('text')}>Thank you for waiting. We’ll start the meeting when the host joins.</div>
         <Button
           type="default"
