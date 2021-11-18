@@ -1826,6 +1826,7 @@ Array [
             Thank you for waiting. We’ll start the meeting when the host joins.
           </div>
           <button
+            aria-label="Leave the meeting to stop waiting for the host. To return to the meeting after leaving, refresh the web browser and join again."
             autoFocus={false}
             className="wxc-button wxc-button--default"
             disabled={false}
@@ -1837,7 +1838,7 @@ Array [
             }
             type="button"
           >
-            Leave
+            Leave meeting
           </button>
         </div>
         <div
