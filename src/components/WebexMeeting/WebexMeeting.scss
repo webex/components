@@ -87,7 +87,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting;
 
   .#{$C}__authentication-guest,
   .#{$C}__authentication-host {
-    height: 25rem; // reserve space for validation errors
+    height: 26rem; // reserve space for validation errors
   }
 
   .#{$C}__logo {
