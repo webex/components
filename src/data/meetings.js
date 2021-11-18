@@ -27,7 +27,7 @@ export default {
     },
     cameraID: 'cameraID1',
     microphoneID: 'microphoneID1',
-    speakerID: null,
+    speakerID: '',
   },
   meeting2: {
     ID: 'meeting2',
@@ -55,7 +55,7 @@ export default {
     },
     cameraID: 'cameraID2',
     microphoneID: 'microphoneID2',
-    speakerID: null,
+    speakerID: '',
   },
   meeting3: {
     ID: 'meeting3',
@@ -83,7 +83,7 @@ export default {
     },
     cameraID: 'cameraID1',
     microphoneID: 'microphoneID1',
-    speakerID: null,
+    speakerID: '',
   },
   meeting4: {
     ID: 'meeting4',
@@ -111,7 +111,7 @@ export default {
     },
     cameraID: 'cameraID1',
     microphoneID: 'microphoneID1',
-    speakerID: null,
+    speakerID: '',
   },
   meeting5: {
     ID: 'meeting5',
@@ -139,7 +139,7 @@ export default {
     },
     cameraID: 'cameraID2',
     microphoneID: 'microphoneID2',
-    speakerID: null,
+    speakerID: '',
   },
   meeting6: {
     ID: 'meeting6',
@@ -167,7 +167,7 @@ export default {
     },
     cameraID: 'cameraID1',
     microphoneID: 'microphoneID2',
-    speakerID: null,
+    speakerID: '',
   },
   meeting7: {
     ID: 'meeting7',
@@ -195,7 +195,7 @@ export default {
     },
     cameraID: null,
     microphoneID: null,
-    speakerID: null,
+    speakerID: '',
   },
   meeting8: {
     ID: null,
@@ -223,7 +223,7 @@ export default {
     },
     cameraID: null,
     microphoneID: null,
-    speakerID: null,
+    speakerID: '',
   },
   meeting9: {
     ID: null,
@@ -251,7 +251,7 @@ export default {
     },
     cameraID: null,
     microphoneID: null,
-    speakerID: null,
+    speakerID: '',
     error: true,
   },
 
@@ -281,7 +281,7 @@ export default {
     },
     cameraID: 'cameraID1',
     microphoneID: 'microphoneID1',
-    speakerID: null,
+    speakerID: '',
     password: 'secret',
     hostKey: 'hostsecret',
   },
@@ -311,6 +311,6 @@ export default {
     },
     cameraID: 'cameraID1',
     microphoneID: 'microphoneID1',
-    speakerID: null,
+    speakerID: '',
   },
 };

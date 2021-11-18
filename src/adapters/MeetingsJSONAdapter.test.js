@@ -101,7 +101,7 @@ describe('Meetings JSON Adapter', () => {
           showRoster: null,
           cameraID: null,
           microphoneID: null,
-          speakerID: null,
+          speakerID: '',
         });
         done();
       });
@@ -744,6 +744,10 @@ describe('Meetings JSON Adapter', () => {
 
     test('emits correct options for switch speaker control', (done) => {
       const speakerOptions = [{
+        value: '',
+        label: 'Browser Default',
+      },
+      {
         value: 'default',
         label: 'Default - Headset Earphone (Jabra EVOLVE 20 SE MS) (0b0e:0300)',
       },
