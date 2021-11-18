@@ -23,6 +23,7 @@ export default function WebexWaitingForHost({className, meetingID, style}) {
   const [cssClasses, sc] = webexComponentClasses('waiting-for-host', className);
   const adapter = useContext(AdapterContext);
   const {ID} = useMeeting(meetingID);
+  const buttonHint = 'Leave the meeting to stop waiting for the host. To return to the meeting after leaving, refresh the web browser and join again.';
 
   return (
     <div className={cssClasses} style={style}>
@@ -35,8 +36,9 @@ export default function WebexWaitingForHost({className, meetingID, style}) {
           size={40}
           onClick={() => adapter.meetingsAdapter.leaveMeeting(ID)}
           tooltip="Leave meeting"
+          ariaLabel={buttonHint}
         >
-          Leave
+          Leave meeting
         </Button>
       </div>
       <WebexLocalMedia className={sc('local-media')} meetingID={meetingID} mediaType="video" />
