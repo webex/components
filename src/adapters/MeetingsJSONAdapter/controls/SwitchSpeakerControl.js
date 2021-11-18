@@ -33,7 +33,14 @@ export default class SwitchSpeakerControl extends MeetingControl {
    * @private
    */
   display(meetingID) {
-    const availableSpeakers$ = defer(() => this.adapter.getAvailableDevices('audiooutput'));
+    const availableSpeakers$ = defer(() => this.adapter.getAvailableDevices('audiooutput')).pipe(
+      map((availableSpeakers) => availableSpeakers.map((speaker) => ({
+        value: speaker.deviceId,
+        label: speaker.label,
+        speaker,
+      }))),
+      map((options) => ([{value: '', label: 'Browser Default'}, ...options])),
+    );
 
     const initialControl$ = new Observable((observer) => {
       const meeting = this.adapter.fetchMeeting(meetingID);
@@ -60,11 +67,7 @@ export default class SwitchSpeakerControl extends MeetingControl {
       concatMap((control) => availableSpeakers$.pipe(
         map((availableSpeakers) => ({
           ...control,
-          options: (availableSpeakers || []) && availableSpeakers.map((speaker) => ({
-            value: speaker.deviceId,
-            label: speaker.label,
-            speaker,
-          })),
+          options: availableSpeakers,
         })),
       )),
     );
