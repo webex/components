@@ -1,3 +1,11 @@
+# [1.199.0](https://github.com/webex/components/compare/v1.198.0...v1.199.0) (2021-11-19)
+
+
+### Features
+
+* **WebexWaitingForHost:** add aria-label on WaitingForHost icon ([477640a](https://github.com/webex/components/commit/477640a60e50fbd3e12df23b79dd4083b381778b))
+* **WebexWaitingForHost:** change label and add aria-label for button ([73ff78a](https://github.com/webex/components/commit/73ff78afa2a7c7c3467932524a92b5776e0e51ac))
+
 # [1.198.0](https://github.com/webex/components/compare/v1.197.0...v1.198.0) (2021-11-17)
 
 
