@@ -37,6 +37,7 @@ export default function WebexWaitingForHost({className, meetingID, style}) {
           onClick={() => adapter.meetingsAdapter.leaveMeeting(ID)}
           tooltip="Leave meeting"
           ariaLabel={buttonHint}
+          tabIndex={1}
         >
           Leave meeting
         </Button>

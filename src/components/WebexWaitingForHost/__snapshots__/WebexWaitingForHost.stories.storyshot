@@ -85,6 +85,7 @@ Array [
             "height": 40,
           }
         }
+        tabIndex={1}
         type="button"
       >
         Leave meeting
