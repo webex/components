@@ -8,6 +8,7 @@ import {TABLET, DESKTOP} from '../breakpoints';
 import {
   useElementDimensions,
   useMeeting,
+  useRef,
 } from '../hooks';
 
 /**
@@ -42,7 +43,8 @@ export default function WebexMeetingInfo({className, meetingID, style}) {
     endTime,
     title,
   } = useMeeting(meetingID);
-  const [meetingInfoRef, {width}] = useElementDimensions();
+  const meetingInfoRef = useRef();
+  const {width} = useElementDimensions(meetingInfoRef);
   const [cssClasses, sc] = webexComponentClasses('meeting-info', className, {
     tablet: width >= TABLET && width < DESKTOP,
     desktop: width >= DESKTOP,

@@ -59,7 +59,7 @@ Array [
       className="wxc-interstitial-meeting__media-container"
       style={
         Object {
-          "maxWidth": 176.77777777777777,
+          "maxWidth": "none",
         }
       }
     >
@@ -145,7 +145,7 @@ Array [
       className="wxc-interstitial-meeting__media-container"
       style={
         Object {
-          "maxWidth": 176.77777777777777,
+          "maxWidth": "none",
         }
       }
     >

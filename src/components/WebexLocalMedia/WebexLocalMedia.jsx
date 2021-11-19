@@ -29,7 +29,8 @@ export default function WebexLocalMedia({
   meetingID,
   style,
 }) {
-  const [mediaRef, {width}] = useElementDimensions();
+  const mediaRef = useRef();
+  const {width} = useElementDimensions(mediaRef);
   const {localVideo, localShare, settings} = useMeeting(meetingID);
   const {ID} = useMe();
   const videoRef = useRef();

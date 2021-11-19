@@ -2,7 +2,12 @@ import React, {useState, useEffect, useContext} from 'react';
 import PropTypes from 'prop-types';
 import {MeetingState} from '@webex/component-adapter-interfaces';
 
-import {AdapterContext, useElementDimensions, useMeeting} from '../hooks';
+import {
+  AdapterContext,
+  useElementDimensions,
+  useMeeting,
+  useRef,
+} from '../hooks';
 import webexComponentClasses from '../helpers';
 import {Button, Icon, OptionsList} from '../generic';
 import WebexMeetingControl from '../WebexMeetingControl/WebexMeetingControl';
@@ -36,8 +41,10 @@ export default function WebexMeetingControlBar({
 }) {
   const {meetingsAdapter} = useContext(AdapterContext);
   const {state} = useMeeting(meetingID);
-  const [containerRef, {width: containerWidth}] = useElementDimensions();
-  const [collapseButtonRef, {width: collapseButtonWidth}] = useElementDimensions();
+  const containerRef = useRef();
+  const collapseButtonRef = useRef();
+  const {width: containerWidth} = useElementDimensions(containerRef);
+  const {width: collapseButtonWidth} = useElementDimensions(collapseButtonRef);
   const {JOINED} = MeetingState;
   const isActive = state === JOINED;
   const [cssClasses, sc] = webexComponentClasses('meeting-control-bar', className);
@@ -55,8 +62,10 @@ export default function WebexMeetingControlBar({
 
   for (let i = 0; i < MAX_CONTROLS; i += 1) {
     /* eslint-disable react-hooks/rules-of-hooks */
-    const [iconRef, {width: iconWidth}] = useElementDimensions();
-    const [textRef, {width: textWidth}] = useElementDimensions();
+    const iconRef = useRef();
+    const textRef = useRef();
+    const {width: iconWidth} = useElementDimensions(iconRef);
+    const {width: textWidth} = useElementDimensions(textRef);
     /* eslint-enable react-hooks/rules-of-hooks */
     const inRange = i < controlCount;
 

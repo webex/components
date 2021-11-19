@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
-import {useElementDimensions, useMeeting} from '../hooks';
+import {useElementDimensions, useMeeting, useRef} from '../hooks';
 import Spinner from '../generic/Spinner/Spinner';
 import Banner from '../generic/Banner/Banner';
 
@@ -21,7 +21,8 @@ import WebexMeetingInfo from '../WebexMeetingInfo/WebexMeetingInfo';
  */
 export default function WebexInterstitialMeeting({className, meetingID, style}) {
   const [cssClasses, sc] = webexComponentClasses('interstitial-meeting', className);
-  const [mediaRef, {height}] = useElementDimensions();
+  const mediaRef = useRef();
+  const {height} = useElementDimensions(mediaRef);
   const [maxWidth, setMaxWidth] = useState('none');
   const {localVideo} = useMeeting(meetingID);
 

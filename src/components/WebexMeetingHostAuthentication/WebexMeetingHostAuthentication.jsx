@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import webexComponentClasses from '../helpers';
 import {Button, InputField} from '../generic';
 import {PHONE_LARGE} from '../breakpoints';
-import {useElementDimensions, useMeeting} from '../hooks';
+import {useElementDimensions, useMeeting, useRef} from '../hooks';
 import {AdapterContext} from '../hooks/contexts';
 import Spinner from '../generic/Spinner/Spinner';
 
@@ -29,7 +29,8 @@ export default function WebexMeetingHostAuthentication({
   const {ID, invalidHostKey} = useMeeting(meetingID);
   const [isJoining, setIsJoining] = useState(false);
   const adapter = useContext(AdapterContext);
-  const [ref, {width}] = useElementDimensions();
+  const ref = useRef();
+  const {width} = useElementDimensions(ref);
 
   const [cssClasses, sc] = webexComponentClasses('meeting-host-authentication', className, {
     phone: width <= PHONE_LARGE,
