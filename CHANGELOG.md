@@ -1,3 +1,10 @@
+# [1.201.0](https://github.com/webex/components/compare/v1.200.0...v1.201.0) (2021-11-19)
+
+
+### Features
+
+* **WebexComponents:** prefix aria label value with button text ([c8bfa5d](https://github.com/webex/components/commit/c8bfa5dbb602a702c2b24bb2061ec77f885652f8))
+
 # [1.200.0](https://github.com/webex/components/compare/v1.199.0...v1.200.0) (2021-11-19)
 
 
