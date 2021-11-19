@@ -1,3 +1,10 @@
+# [1.200.0](https://github.com/webex/components/compare/v1.199.0...v1.200.0) (2021-11-19)
+
+
+### Features
+
+* **MeetingsJsonAdapter:** add browser default speaker to the available speaker list ([c5686ac](https://github.com/webex/components/commit/c5686ac54d7c0bf0b642dfb1225bd5399d4a6d76))
+
 # [1.199.0](https://github.com/webex/components/compare/v1.198.0...v1.199.0) (2021-11-19)
 
 
