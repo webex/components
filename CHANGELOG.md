@@ -1,3 +1,10 @@
+# [1.202.0](https://github.com/webex/components/compare/v1.201.0...v1.202.0) (2021-11-19)
+
+
+### Features
+
+* **WebexWaitingForHost:** add tab index to button ([7513cd9](https://github.com/webex/components/commit/7513cd9476e91d3bf6fd3eceaa74b62b0757def5))
+
 # [1.201.0](https://github.com/webex/components/compare/v1.200.0...v1.201.0) (2021-11-19)
 
 
