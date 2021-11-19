@@ -15,7 +15,7 @@ Array [
       className="wxc-in-meeting__media-container"
       style={
         Object {
-          "maxWidth": 177.77777777777777,
+          "maxWidth": "none",
         }
       }
     >
@@ -107,7 +107,7 @@ Array [
       className="wxc-in-meeting__media-container"
       style={
         Object {
-          "maxWidth": 177.77777777777777,
+          "maxWidth": "none",
         }
       }
     >
@@ -187,7 +187,7 @@ Array [
       className="wxc-in-meeting__media-container"
       style={
         Object {
-          "maxWidth": 177.77777777777777,
+          "maxWidth": "none",
         }
       }
     >
@@ -281,7 +281,7 @@ Array [
       className="wxc-in-meeting__media-container"
       style={
         Object {
-          "maxWidth": 177.77777777777777,
+          "maxWidth": "none",
         }
       }
     >
@@ -352,7 +352,7 @@ Array [
       className="wxc-in-meeting__media-container"
       style={
         Object {
-          "maxWidth": 177.77777777777777,
+          "maxWidth": "none",
         }
       }
     >
@@ -444,7 +444,7 @@ Array [
       className="wxc-in-meeting__media-container"
       style={
         Object {
-          "maxWidth": 177.77777777777777,
+          "maxWidth": "none",
         }
       }
     >

@@ -59,7 +59,8 @@ export default function WebexMeeting({
 
   const {JOINED, NOT_JOINED, LEFT} = MeetingState;
   const adapter = useContext(AdapterContext);
-  const [mediaRef, {width}] = useElementDimensions();
+  const mediaRef = useRef();
+  const {width} = useElementDimensions(mediaRef);
   const [cssClasses, sc] = webexComponentClasses('meeting', className, {'roster-only': showRoster && width <= PHONE_LARGE});
   const [showToast, setShowToast] = useState(false);
   const toastTimeoutRef = useRef();

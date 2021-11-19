@@ -1,16 +1,13 @@
 import {useEffect, useState} from 'react';
 import {ResizeObserver as Polyfill} from '@juggle/resize-observer';
 
-import useRef from './useRef';
-
 /**
  * Custom hook that returns an element reference and the dimensions of the
  * element it refers to.
  *
  * @returns {Array} Element reference and dimensions in pixels
  */
-export default function useElementDimensions() {
-  const elementRef = useRef();
+export default function useElementDimensions(elementRef) {
   const [height, setHeight] = useState(0);
   const [width, setWidth] = useState(0);
 
@@ -47,5 +44,5 @@ export default function useElementDimensions() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [elementRef.current]);
 
-  return [elementRef, {height, width}];
+  return {height, width};
 }

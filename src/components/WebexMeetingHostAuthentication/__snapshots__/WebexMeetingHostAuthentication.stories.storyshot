@@ -3,7 +3,7 @@
 exports[`Storyshots Meetings/Webex Host Authentication Authentication 1`] = `
 Array [
   <div
-    className="wxc-meeting-host-authentication wxc-meeting-host-authentication--phone"
+    className="wxc-meeting-host-authentication"
     style={
       Object {
         "height": "25rem",

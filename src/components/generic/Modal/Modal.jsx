@@ -4,7 +4,7 @@ import webexComponentClasses from '../../helpers';
 import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
 import {TABLET} from '../../breakpoints';
-import {useElementDimensions} from '../../hooks';
+import {useElementDimensions, useRef} from '../../hooks';
 
 /**
  * Modal component
@@ -28,7 +28,8 @@ export default function Modal({
   title,
   ariaLabel,
 }) {
-  const [ref, {width}] = useElementDimensions();
+  const ref = useRef();
+  const {width} = useElementDimensions(ref);
   const [cssClasses, sc] = webexComponentClasses('modal', className, {
     'centered-modal': width > TABLET,
   });

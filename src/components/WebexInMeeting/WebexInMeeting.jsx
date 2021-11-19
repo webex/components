@@ -5,7 +5,7 @@ import Banner from '../generic/Banner/Banner';
 import WebexLocalMedia from '../WebexLocalMedia/WebexLocalMedia';
 import WebexRemoteMedia from '../WebexRemoteMedia/WebexRemoteMedia';
 import webexComponentClasses from '../helpers';
-import {useElementDimensions, useMeeting} from '../hooks';
+import {useElementDimensions, useMeeting, useRef} from '../hooks';
 import {TABLET, DESKTOP, DESKTOP_LARGE} from '../breakpoints';
 
 /**
@@ -20,7 +20,8 @@ import {TABLET, DESKTOP, DESKTOP_LARGE} from '../breakpoints';
  */
 export default function WebexInMeeting({className, meetingID, style}) {
   const {remoteShare, localShare} = useMeeting(meetingID);
-  const [meetingRef, {width, height}] = useElementDimensions();
+  const meetingRef = useRef();
+  const {width, height} = useElementDimensions(meetingRef);
   const [maxWidth, setMaxWidth] = useState('none');
   const localMediaType = localShare?.stream ? 'screen' : 'video';
   const [cssClasses, sc] = webexComponentClasses('in-meeting', className, {
