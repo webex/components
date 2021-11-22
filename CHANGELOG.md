@@ -1,3 +1,10 @@
+# [1.203.0](https://github.com/webex/components/compare/v1.202.0...v1.203.0) (2021-11-22)
+
+
+### Features
+
+* **OptionsList:** create the Option component that can be focusable for navigation with arrow keys ([967fd85](https://github.com/webex/components/commit/967fd853319c1bee9a0ee8faa041d99c78df7c67))
+
 # [1.202.0](https://github.com/webex/components/compare/v1.201.0...v1.202.0) (2021-11-19)
 
 
