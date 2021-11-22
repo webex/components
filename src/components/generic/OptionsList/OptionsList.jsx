@@ -7,6 +7,82 @@ import webexComponentClasses from '../../helpers';
 import {useRef, useAutoFocus} from '../../hooks';
 
 /**
+ * Option Component
+ *
+ * @param {string} className  Custom CSS class to apply
+ * @param {boolean} focused  Focused option
+ * @param {Function} onKeyDown  A function that will be triggered when a key is pressed
+ * @param {Function} onMouseEnter  A function that will be triggered on mouse hover
+ * @param {Function} onSelect  A function which will be triggered on option selection
+ * @param {object} option  An option from options list
+ * @param {Function} sc  CSS subclass function
+ * @param {string} selected  Selected option label
+ * @param {number} tabIndex  Value of the parent's tabIndex
+ * @returns {object} JSX of the element
+ */
+function Option({
+  className,
+  focused,
+  onKeyDown,
+  onMouseEnter,
+  onSelect,
+  option,
+  sc,
+  selected,
+  tabIndex,
+}) {
+  const ref = useRef();
+
+  useAutoFocus(ref, focused);
+
+  return (
+    <li
+      aria-label={typeof option.label !== 'object' ? option.label : option.value}
+      aria-selected={selected === option.value}
+      className={className}
+      key={option.value}
+      role="option"
+      ref={ref}
+      onClick={onSelect}
+      onKeyDown={onKeyDown}
+      onMouseEnter={onMouseEnter}
+      tabIndex={tabIndex}
+      title={typeof option.label !== 'object' && option.label}
+    >
+      {option.icon && <Icon name={option.icon} />}
+      <span className={sc('label')}>{option.label}</span>
+      {selected && <Icon className={classNames(sc('check'), {[sc('check--invisible')]: (selected !== option.value)})} size={16} name="check" />}
+    </li>
+  );
+}
+
+Option.propTypes = {
+  className: PropTypes.string,
+  focused: PropTypes.bool,
+  onKeyDown: PropTypes.func,
+  onMouseEnter: PropTypes.func,
+  onSelect: PropTypes.func.isRequired,
+  option: PropTypes.objectOf(PropTypes.shape({
+    value: PropTypes.string,
+    label: PropTypes.node,
+    icon: PropTypes.string,
+  })).isRequired,
+  sc: PropTypes.func,
+  selected: PropTypes.string,
+  tabIndex: PropTypes.number,
+};
+
+Option.defaultProps = {
+  className: '',
+  focused: undefined,
+  onKeyDown: undefined,
+  onMouseEnter: undefined,
+  sc: undefined,
+  selected: undefined,
+  tabIndex: undefined,
+};
+
+/**
  * OptionsList Component
  *
  * @param {object} props  Data passed to the component
@@ -14,7 +90,7 @@ import {useRef, useAutoFocus} from '../../hooks';
  * @param {string} props.className  Custom CSS class to apply
  * @param {string} props.selected  Selected option label
  * @param {Function} [props.onBlur]  Called when this component loses focus
- * @param {Function} props.onSelect  A function which will be triggerd on option selection
+ * @param {Function} props.onSelect  A function which will be triggered on option selection
  * @param {number} props.tabIndex  Value of the parent's tabIndex
  * @returns {object}  JSX of the element
  */
@@ -27,10 +103,6 @@ export default function OptionsList({
   tabIndex,
 }) {
   const [cssClasses, sc] = webexComponentClasses('options-list', className);
-
-  const optionListRef = useRef();
-
-  useAutoFocus(optionListRef, true);
 
   const [focusedOptionIndex, setFocusedOptionIndex] = useState(0);
 
@@ -45,27 +117,26 @@ export default function OptionsList({
       setFocusedOptionIndex(nextFocusedOption);
     } else if (event.key === 'Enter') {
       onSelect(options[focusedOptionIndex]);
+    } else if (event.key === 'Tab') {
+      onBlur();
     }
   };
 
   return (
     <div className={cssClasses}>
-      <ul role="menu" className={sc('list')} onKeyDown={onKeyDown} tabIndex={tabIndex} ref={optionListRef} onBlur={onBlur}>
+      <ul role="menu" className={sc('list')} tabIndex={tabIndex}>
         {options.map((option, index) => (
-          <li
+          <Option
             className={`${sc('option')} ${(focusedOptionIndex === index) && sc('option--focused')}`}
-            key={option.value}
-            onClick={() => onSelect(option)}
+            focused={index === focusedOptionIndex}
+            onKeyDown={onKeyDown}
             onMouseEnter={() => setFocusedOptionIndex(index)}
-            aria-hidden="true"
-            role="option"
-            aria-selected={selected === option.value}
-            title={typeof option.label !== 'object' && option.label}
-          >
-            {option.icon && <Icon name={option.icon} />}
-            <span className={sc('label')}>{option.label}</span>
-            {selected && <Icon className={classNames(sc('check'), {[sc('check--invisible')]: (selected !== option.value)})} size={16} name="check" />}
-          </li>
+            onSelect={() => onSelect(option)}
+            option={option}
+            sc={sc}
+            selected={selected}
+            tabIndex={tabIndex}
+          />
         ))}
       </ul>
     </div>
