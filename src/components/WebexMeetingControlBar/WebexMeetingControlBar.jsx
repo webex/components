@@ -131,7 +131,7 @@ export default function WebexMeetingControlBar({
   ]);
   /* eslint-enable react-hooks/exhaustive-deps */
 
-  const range = (start, end) => Array(end - start).fill().map((_, i) => start + i);
+  const range = (start, end) => Array(Math.max(0, end - start)).fill().map((_, i) => start + i);
 
   const renderControls = (start, end) => range(start, end).map(
     (i) => (
