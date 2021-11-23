@@ -19,12 +19,12 @@ const Template = (args) => {
 
 export const Camera = Template.bind({});
 Camera.args = {
-  meetingID: 'meeting1',
+  meetingID: 'meeting2',
   media: 'camera',
 };
 
 export const Microphone = Template.bind({});
 Microphone.args = {
-  meetingID: 'meeting1',
+  meetingID: 'meeting2',
   media: 'microphone',
 };

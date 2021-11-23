@@ -16,7 +16,7 @@ Video.args = {
 
 export const ScreenShare = Template.bind({});
 ScreenShare.args = {
-  meetingID: 'meeting1',
+  meetingID: 'meeting12',
   mediaType: 'screen',
 };
 

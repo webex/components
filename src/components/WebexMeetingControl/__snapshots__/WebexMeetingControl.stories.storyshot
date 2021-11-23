@@ -309,8 +309,8 @@ Array [
     <button
       aria-label="Join meeting. Muted, video off"
       autoFocus={false}
-      className="wxc-button wxc-meeting-control__control-button wxc-button--join"
-      disabled={true}
+      className="wxc-button wxc-meeting-control__control-button wxc-button--join wxc-button--pressed"
+      disabled={false}
       onClick={[Function]}
       style={
         Object {
