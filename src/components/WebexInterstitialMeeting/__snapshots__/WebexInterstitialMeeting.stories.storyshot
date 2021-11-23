@@ -69,7 +69,7 @@ Array [
         <h2
           className="wxc-meeting-info__title"
         >
-          Lunch and Learn
+          Video Disabled
         </h2>
       </div>
       <div
@@ -155,7 +155,7 @@ Array [
         <h2
           className="wxc-meeting-info__title"
         >
-          Weekly Backlog Grooming
+          Interstitial
         </h2>
       </div>
       <div

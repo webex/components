@@ -299,18 +299,33 @@ Array [
         />
       </div>
       <div
-        className="wxc-local-media wxc-in-meeting__local-media-in-meeting"
+        className="wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
       >
-        <video
-          autoPlay={true}
-          className="wxc-local-media__video"
-          playsInline={true}
-        />
-      </div>
-      <div
-        className="wxc-banner wxc-in-meeting__share-banner wxc-banner--top"
-      >
-        You're sharing your screen
+        <div
+          className="wxc-avatar"
+        >
+          <div
+            className="wxc-avatar__content"
+          >
+            <svg
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                BG
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className="wxc-avatar__image"
+              onError={[Function]}
+              src="./images/barbara.png"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>,

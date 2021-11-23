@@ -23,7 +23,7 @@ Loading.args = {
 
 export const VideoEnabled = Template.bind({});
 VideoEnabled.args = {
-  meetingID: 'meeting1',
+  meetingID: 'meeting3',
 };
 
 export const VideoDisabled = Template.bind({});

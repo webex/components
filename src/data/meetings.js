@@ -3,7 +3,7 @@ import {MeetingState} from '@webex/component-adapter-interfaces';
 export default {
   meeting1: {
     ID: 'meeting1',
-    title: 'Weekly Backlog Grooming',
+    title: 'In meeting',
     localAudio: {
       stream: new MediaStream(),
     },
@@ -11,7 +11,7 @@ export default {
       stream: new MediaStream(),
     },
     localShare: {
-      stream: new MediaStream(),
+      stream: null,
     },
     remoteAudio: new MediaStream(),
     remoteVideo: new MediaStream(),
@@ -31,7 +31,7 @@ export default {
   },
   meeting2: {
     ID: 'meeting2',
-    title: 'Lunch and Learn',
+    title: 'Video Disabled',
     localAudio: {
       stream: null,
     },
@@ -59,7 +59,7 @@ export default {
   },
   meeting3: {
     ID: 'meeting3',
-    title: 'Quarterly Financial Report',
+    title: 'Interstitial',
     localAudio: {
       stream: new MediaStream(),
     },
@@ -87,7 +87,7 @@ export default {
   },
   meeting4: {
     ID: 'meeting4',
-    title: '1:1 Barbara/Brandon',
+    title: 'Waiting for others',
     localAudio: {
       stream: new MediaStream(),
     },
@@ -95,7 +95,7 @@ export default {
       stream: new MediaStream(),
     },
     localShare: {
-      stream: new MediaStream(),
+      stream: null,
     },
     remoteAudio: new MediaStream(),
     remoteVideo: new MediaStream(),
@@ -199,7 +199,7 @@ export default {
   },
   meeting8: {
     ID: null,
-    title: null,
+    title: 'Left',
     localAudio: {
       stream: null,
     },
@@ -227,7 +227,7 @@ export default {
   },
   meeting9: {
     ID: null,
-    title: null,
+    title: 'Loading',
     localAudio: {
       stream: null,
     },
@@ -257,7 +257,7 @@ export default {
 
   meeting10: {
     ID: 'meeting10',
-    title: 'Feature Planning Meeting',
+    title: 'Password required',
     localAudio: {
       stream: null,
     },
@@ -287,7 +287,7 @@ export default {
   },
   meeting11: {
     ID: 'meeting11',
-    title: 'Quarterly Financial Report',
+    title: 'Waiting for host',
     localAudio: {
       stream: new MediaStream(),
     },
@@ -312,5 +312,30 @@ export default {
     cameraID: 'cameraID1',
     microphoneID: 'microphoneID1',
     speakerID: '',
+  },
+
+  meeting12: {
+    ID: 'meeting12',
+    title: 'Share Screen',
+    localAudio: {
+      stream: null,
+    },
+    localVideo: {
+      stream: null,
+    },
+    localShare: {
+      stream: new MediaStream(),
+    },
+    remoteAudio: null,
+    remoteVideo: null,
+    remoteShare: null,
+    state: MeetingState.JOINED,
+    showRoster: false,
+    settings: {
+      visible: false,
+    },
+    cameraID: null,
+    microphoneID: null,
+    speakerID: null,
   },
 };
