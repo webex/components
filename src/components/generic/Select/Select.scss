@@ -71,7 +71,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-select;
   .#{$C}__options-list {
     position: absolute;
     z-index: 1;
-    top: calc(100% + 0.125rem);
+    top: calc(100% + 0.25rem);
     left: 0;
     right: 0;
   }

@@ -39,17 +39,17 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-options-list;
         }
       }
 
-      &--focused {
+      &:hover {
         background: var(--wxc-options-list-item--focused--background);
       }
 
       &:active {
         background: var(--wxc-options-list-item--active--background);
-        box-shadow: var(--wxc-options-list--normal--box-shadow);
       }
 
-      &:focus {
-        box-shadow: var(--wxc-options-list-item--focus--box-shadow);
+      &:focus-visible {
+        outline: 2px solid rgba(100, 180, 250, 0.3);
+        box-shadow: var(--wxc-options-list-item--focus--box-shadow)
       }
     }
   }

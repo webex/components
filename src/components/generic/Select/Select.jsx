@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Icon from '../Icon/Icon';
 import OptionsList from '../OptionsList/OptionsList';
 import webexComponentClasses from '../../helpers';
+import {useRef} from '../../hooks';
 
 /**
  * Select Component
@@ -29,30 +30,32 @@ export default function Select({
   ariaLabel,
   tabIndex,
 }) {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(undefined);
   const [cssClasses, sc] = webexComponentClasses('select', className, {disabled});
   const label = options?.find((option) => option.value === value)?.label;
+  const ref = useRef();
 
-  const toggleExpanded = () => {
+  const collapse = () => setExpanded(undefined);
+  const expand = (withKey) => setExpanded({withKey});
+  const toggleExpanded = (withKey) => {
     if (!disabled) {
-      setExpanded(!expanded);
+      setExpanded(expanded ? undefined : {withKey});
     }
   };
 
   const handleOptionSelect = (option) => {
-    setExpanded(false);
+    collapse();
     onChange(option.value);
+    ref.current.focus();
   };
-
-  const collapse = () => setExpanded(false);
 
   const handleKeyDown = (event) => {
     if ((event.key === 'Enter' || event.key === ' ') && event.target === event.currentTarget) {
-      toggleExpanded();
-    }
-
-    if (event.key === 'Tab') {
-      setExpanded(false);
+      expand(true);
+    } else if (event.key === 'Tab') {
+      collapse();
+    } else if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+      expand(true);
     }
   };
 
@@ -71,13 +74,14 @@ export default function Select({
     <div className={cssClasses}>
       <div
         className={`${sc('selected-option')} ${expanded ? sc('expanded') : ''}`}
-        onClick={toggleExpanded}
+        onClick={() => toggleExpanded(false)}
         aria-hidden="true"
         role="button"
         tabIndex={tabIndex}
         title={tooltip}
         aria-label={`${label ? `${label}. ` : ''}${ariaLabel}`}
         onKeyDown={handleKeyDown}
+        ref={ref}
       >
         <span className={sc('label')}>{label || value}</span>
         <Icon name={expanded ? 'arrow-up' : 'arrow-down'} size={13} />
@@ -86,7 +90,8 @@ export default function Select({
         <OptionsList
           className={sc('options-list')}
           options={options}
-          onSelect={(option) => handleOptionSelect(option)}
+          onSelect={handleOptionSelect}
+          withKey={expanded.withKey}
           selected={value}
           tabIndex={tabIndex}
           onBlur={collapse}

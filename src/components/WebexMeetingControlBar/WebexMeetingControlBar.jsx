@@ -43,8 +43,9 @@ export default function WebexMeetingControlBar({
   const {state} = useMeeting(meetingID);
   const containerRef = useRef();
   const collapseButtonRef = useRef();
+  const collapseButtonRefHidden = useRef();
   const {width: containerWidth} = useElementDimensions(containerRef);
-  const {width: collapseButtonWidth} = useElementDimensions(collapseButtonRef);
+  const {width: collapseButtonWidth} = useElementDimensions(collapseButtonRefHidden);
   const {JOINED} = MeetingState;
   const isActive = state === JOINED;
   const [cssClasses, sc] = webexComponentClasses('meeting-control-bar', className);
@@ -53,7 +54,7 @@ export default function WebexMeetingControlBar({
   const controlCount = controlNames.length;
   const [controlTexts, setControlTexts] = useState();
   const [[collapseStart, collapseEnd], setCollapseRange] = useState([0, 0]);
-  const [collapsedShown, setCollapsedShown] = useState(false);
+  const [collapsedShown, setCollapsedShown] = useState(undefined);
 
   const iconControlRefs = [];
   const textControlRefs = [];
@@ -74,6 +75,11 @@ export default function WebexMeetingControlBar({
     iconControlWidths[i] = inRange && (iconWidth + CONTROL_MARGIN);
     textControlWidths[i] = inRange && (textWidth + CONTROL_MARGIN);
   }
+
+  const hideCollapsed = () => setCollapsedShown(undefined);
+  const toggleCollapsedShown = (withKey) => {
+    setCollapsedShown((shown) => (shown ? undefined : {withKey}));
+  };
 
   useEffect(() => {
     iconControlWidths.splice(controlCount);
@@ -102,7 +108,7 @@ export default function WebexMeetingControlBar({
 
       if (totalWidth <= containerWidth) {
         setCollapseRange([0, 0]);
-        setCollapsedShown(false);
+        hideCollapsed();
       } else {
         const rangeStart = (collapseRangeStart + controlCount) % controlCount;
         const rangeEnd = (collapseRangeEnd + controlCount) % controlCount;
@@ -146,8 +152,6 @@ export default function WebexMeetingControlBar({
     ),
   );
 
-  const toggleCollapsed = () => setCollapsedShown(!collapsedShown);
-
   const renderCollapsedControls = () => {
     const names = controlNames.slice(collapseStart, collapseEnd);
     const options = names.map(
@@ -158,11 +162,19 @@ export default function WebexMeetingControlBar({
     );
     const onSelect = (opt) => {
       meetingsAdapter.meetingControls[opt.value].action(meetingID);
-      toggleCollapsed();
+      hideCollapsed();
+      collapseButtonRef.current.focus();
     };
 
     return (
-      <OptionsList className={sc('collapsed-controls')} options={options} onSelect={onSelect} tabIndex={controlsTabIndexes[collapseStart]} />
+      <OptionsList
+        className={sc('collapsed-controls')}
+        options={options}
+        onSelect={onSelect}
+        onBlur={hideCollapsed}
+        withKey={collapsedShown.withKey}
+        tabIndex={controlsTabIndexes[collapseStart]}
+      />
     );
   };
 
@@ -172,7 +184,7 @@ export default function WebexMeetingControlBar({
         onClick={onClick}
         type="toggle"
         size={48}
-        pressed={shown}
+        pressed={!!shown}
         tabIndex={tabIndex}
         tooltip="More options"
         ariaLabel={shown ? 'Collapse additional controls' : 'Expand additional controls'}
@@ -182,12 +194,12 @@ export default function WebexMeetingControlBar({
     </div>
   );
 
-  const onOutsideClick = () => setCollapsedShown(false);
-
   useEffect(() => {
     let cleanup;
 
     if (collapsedShown) {
+      const onOutsideClick = () => hideCollapsed();
+
       setTimeout(() => document.addEventListener('click', onOutsideClick));
       cleanup = () => document.removeEventListener('click', onOutsideClick);
     }
@@ -205,8 +217,8 @@ export default function WebexMeetingControlBar({
             collapseStart < collapseEnd
             && renderCollapseButton(
               collapsedShown,
-              toggleCollapsed,
-              undefined,
+              (event) => toggleCollapsedShown(!event.detail),
+              collapseButtonRef,
               controlsTabIndexes[collapseStart],
             )
           }
@@ -224,7 +236,7 @@ export default function WebexMeetingControlBar({
             </div>
           </React.Fragment>
         ))}
-        {renderCollapseButton(collapsedShown, () => {}, collapseButtonRef)}
+        {renderCollapseButton(collapsedShown, () => {}, collapseButtonRefHidden)}
       </div>
     </div>
   );

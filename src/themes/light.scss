@@ -171,7 +171,8 @@
 
   --wxc-options-list-item--active--background: #{$wxc-black-alpha-11};
 
-  --wxc-options-list-item--focus--box-shadow: 0 0 0 1px #{$wxc-blue-60} inset;
+  --wxc-options-list-item--focus--box-shadow: 0 0 0 2px #{$wxc-blue-60} inset;
+  --wxc-options-list-item--focus--outline: 2px solid #{$wxc-blue-60-alpha-30};
 
   --wxc-options-list-item--selected--color:  #{$wxc-blue-60};
 
