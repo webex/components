@@ -1,3 +1,10 @@
+## [1.203.1](https://github.com/webex/components/compare/v1.203.0...v1.203.1) (2021-11-23)
+
+
+### Bug Fixes
+
+* **WebexMeetingControlBar:** set a valid fallback for invalid range values ([62fe881](https://github.com/webex/components/commit/62fe881540d444029c9e2a179dde2f56953acfbd))
+
 # [1.203.0](https://github.com/webex/components/compare/v1.202.0...v1.203.0) (2021-11-22)
 
 
