@@ -4,6 +4,10 @@
 .wxc-icon {
   fill: currentColor;
 
+  :disabled & {
+    path { fill: currentColor; }
+  }
+
   .accent {
     fill: var(--wxc-icon--accent-color);
 
