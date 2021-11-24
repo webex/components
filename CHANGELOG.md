@@ -1,3 +1,10 @@
+# [1.204.0](https://github.com/webex/components/compare/v1.203.1...v1.204.0) (2021-11-24)
+
+
+### Features
+
+* **WebexComponents:** don't show the share screen prompt for stories where it is not needed ([9b4b605](https://github.com/webex/components/commit/9b4b605321ce2e41304b6c483bc9fa8b48548942))
+
 ## [1.203.1](https://github.com/webex/components/compare/v1.203.0...v1.203.1) (2021-11-23)
 
 
