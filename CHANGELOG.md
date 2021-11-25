@@ -1,3 +1,12 @@
+## [1.204.2](https://github.com/webex/components/compare/v1.204.1...v1.204.2) (2021-11-25)
+
+
+### Bug Fixes
+
+* **InputField:** apply correct background for input with an error ([50e50f7](https://github.com/webex/components/commit/50e50f7ae30ccaa75b8f515351686f5409f6fd2c))
+* **OptionsList:** move the Options component and change the focus logic ([c1c82ed](https://github.com/webex/components/commit/c1c82ede962622268cf3d0e6424000c3cd6bb51e))
+* **UseRef:** put current ref value on state to be usable as a useEffect dependency ([4f0b655](https://github.com/webex/components/commit/4f0b655a98bcf1bcf0fe59a33ffee12369c95c99))
+
 ## [1.204.1](https://github.com/webex/components/compare/v1.204.0...v1.204.1) (2021-11-25)
 
 
