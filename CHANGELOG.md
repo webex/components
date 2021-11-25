@@ -1,3 +1,10 @@
+# [1.205.0](https://github.com/webex/components/compare/v1.204.2...v1.205.0) (2021-11-25)
+
+
+### Features
+
+* **WebexMeeting:** set min-width for the settings and authentication modal to 18.5 rem ([693c466](https://github.com/webex/components/commit/693c466ccd67e11d895fd8ed178225dc1d5be7d0))
+
 ## [1.204.2](https://github.com/webex/components/compare/v1.204.1...v1.204.2) (2021-11-25)
 
 
