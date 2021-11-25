@@ -1,3 +1,10 @@
+## [1.204.1](https://github.com/webex/components/compare/v1.204.0...v1.204.1) (2021-11-25)
+
+
+### Bug Fixes
+
+* **icons:** style audio/video mute icons for disable state of the control to reflect Figma design ([263c703](https://github.com/webex/components/commit/263c7030b53ba250a45badd2bfc41990bbf8b53e))
+
 # [1.204.0](https://github.com/webex/components/compare/v1.203.1...v1.204.0) (2021-11-24)
 
 
