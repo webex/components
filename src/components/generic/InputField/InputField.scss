@@ -62,28 +62,30 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field;
     }
   }
 
-  &--error input {
-    background: var(--wxc-error-input--normal--background);
-    border: var(--wxc-error-input--normal--border);
-    box-shadow: none;
-    color: var(--wxc-text-color);
-
-    &:hover {
-      background: var(--wxc-input--hover--background);
+  &--error {
+    .#{$C}__input {
+      background: var(--wxc-error-input--normal--background);
       border: var(--wxc-error-input--normal--border);
       box-shadow: none;
-    }
+      color: var(--wxc-text-color);
 
-    &:active {
-      background: var(--wxc-input--active--background);
-      border: var(--wxc-error-input--normal--border);
-      box-shadow: none;
-    }
+      &:hover {
+        background: var(--wxc-input--hover--background);
+        border: var(--wxc-error-input--normal--border);
+        box-shadow: none;
+      }
 
-    &:focus {
-      background: var(--wxc-input--focus--background);
-      border: var(--wxc-error-input--normal--border);
-      box-shadow: none;
+      &:active {
+        background: var(--wxc-input--active--background);
+        border: var(--wxc-error-input--normal--border);
+        box-shadow: none;
+      }
+
+      &:focus {
+        background: var(--wxc-input--focus--background);
+        border: var(--wxc-error-input--normal--border);
+        box-shadow: none;
+      }
     }
   }
 
