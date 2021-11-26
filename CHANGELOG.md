@@ -1,3 +1,10 @@
+## [1.205.1](https://github.com/webex/components/compare/v1.205.0...v1.205.1) (2021-11-26)
+
+
+### Bug Fixes
+
+* **WebexSettings:** set autofocus on settings modal ([23fbe99](https://github.com/webex/components/commit/23fbe99cb9b0edc4d7517d39c23532a3fb65f212))
+
 # [1.205.0](https://github.com/webex/components/compare/v1.204.2...v1.205.0) (2021-11-25)
 
 
