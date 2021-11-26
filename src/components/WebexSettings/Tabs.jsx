@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import {useAutoFocus, useRef} from '../hooks';
 import webexComponentClasses from '../helpers';
 
 /**
@@ -32,6 +33,9 @@ export default function Tabs({
   const {content} = tabs.find((tab) => tab.key === selected);
   const [cssClasses, sc] = webexComponentClasses('tabs', className);
   const selectedTabIndex = (tabs || []).findIndex((tab) => tab.key === selected);
+  const ref = useRef();
+
+  useAutoFocus(ref, true);
 
   const handleKeyUp = (event) => {
     if (event.key === 'ArrowLeft') {
@@ -54,6 +58,7 @@ export default function Tabs({
         onKeyUp={handleKeyUp}
         aria-label="Use arrow keys to navigate between setting options"
         role="tablist"
+        ref={ref}
       >
         {
           tabs.map((tab, index) => (
