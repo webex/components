@@ -63,7 +63,7 @@ export default function Option({
     >
       {option.icon && <Icon name={option.icon} />}
       <span className={sc('label')}>{option.label}</span>
-      {selected && <Icon className={classNames(sc('check'), {[sc('check--invisible')]: (selected !== option.value)})} size={16} name="check" />}
+      {selected !== undefined && <Icon className={classNames(sc('check'), {[sc('check--invisible')]: (selected !== option.value)})} size={16} name="check" />}
     </li>
   );
 }
