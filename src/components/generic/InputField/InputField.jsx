@@ -5,6 +5,11 @@ import Button from '../Button/Button';
 import {useRef, useAutoFocus} from '../../hooks';
 import Icon from '../Icon/Icon';
 
+const HINTS = {
+  hiddenPasswordButton: 'Show password',
+  showedPasswordButton: 'Hide password',
+};
+
 /**
  * Input Field component.
  *
@@ -71,7 +76,14 @@ export default function InputField({
           ref={inputRef}
         />
         {type === 'password' && value && (
-          <Button type="ghost" className={sc('input-field-right-icon')} size={28} onClick={toggleIsPwdRevealed}>
+          <Button
+            type="ghost"
+            className={sc('input-field-right-icon')}
+            size={28}
+            onClick={toggleIsPwdRevealed}
+            tabIndex={tabIndex}
+            ariaLabel={isPwdRevealed ? HINTS.showedPasswordButton : HINTS.hiddenPasswordButton}
+          >
             <Icon name={isPwdRevealed ? 'hide-password' : 'show-password'} />
           </Button>
         )}
