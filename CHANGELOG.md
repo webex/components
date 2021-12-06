@@ -1,3 +1,10 @@
+## [1.205.3](https://github.com/webex/components/compare/v1.205.2...v1.205.3) (2021-12-06)
+
+
+### Bug Fixes
+
+* **Option:** show checked symbol even if the selected option has an empty string value ([db2e418](https://github.com/webex/components/commit/db2e418bea4b6fe2541be683cc89cf1438ae7e42))
+
 ## [1.205.2](https://github.com/webex/components/compare/v1.205.1...v1.205.2) (2021-12-06)
 
 
