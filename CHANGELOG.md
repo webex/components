@@ -1,3 +1,10 @@
+## [1.205.2](https://github.com/webex/components/compare/v1.205.1...v1.205.2) (2021-12-06)
+
+
+### Bug Fixes
+
+* **Tooltip:** controls tooltips don't hide on mobile devices ([eab9fff](https://github.com/webex/components/commit/eab9fffa56f37d4d797306d9ce515ac0f91288ad))
+
 ## [1.205.1](https://github.com/webex/components/compare/v1.205.0...v1.205.1) (2021-11-26)
 
 
