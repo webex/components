@@ -44,16 +44,24 @@ const Tooltip = ({
       };
 
       target.addEventListener('mouseenter', handleMouseEnter);
+      target.addEventListener('touchstart', handleMouseEnter);
+
       target.addEventListener('mouseleave', handleMouseLeave);
+      target.addEventListener('touchmove', handleMouseLeave);
+      target.addEventListener('click', handleMouseLeave);
 
       cleanup = () => {
         target.removeEventListener('mouseenter', handleMouseEnter);
+        target.removeEventListener('touchstart', handleMouseEnter);
+
         target.removeEventListener('mouseleave', handleMouseLeave);
+        target.removeEventListener('touchmove', handleMouseLeave);
+        target.removeEventListener('click', handleMouseLeave);
       };
     }
 
     return cleanup;
-  }, [coords, target]);
+  }, [target]);
 
   return (
     tooltipVisible && (
