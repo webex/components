@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {useMeetingControl} from '../hooks';
 import webexComponentClasses from '../helpers';
+import {useMeeting} from '../hooks';
 import Banner from '../generic/Banner/Banner';
 import Title from '../generic/Title/Title';
 import WebexLocalMedia from '../WebexLocalMedia/WebexLocalMedia';
@@ -19,12 +19,14 @@ import WebexNoMedia from '../WebexNoMedia/WebexNoMedia';
  */
 export default function WebexVideoSettings({meetingID, className, style}) {
   const [cssClasses, sc] = webexComponentClasses('video-settings', className);
-  const [, display] = useMeetingControl('switch-camera', meetingID);
+  const {localVideo: {permission}} = useMeeting(meetingID);
 
   return (
     <div className={cssClasses} style={style}>
-      {display.options?.length !== 0
+      {(permission === 'DENIED' || permission === 'DISMISSED' || permission === 'IGNORED')
         ? (
+          <WebexNoMedia media="camera" className={sc('no-media')} />
+        ) : (
           <>
             <Title type="subsection">Camera</Title>
             <WebexMeetingControl type="switch-camera" meetingID={meetingID} tabIndex={102} />
@@ -33,8 +35,6 @@ export default function WebexVideoSettings({meetingID, className, style}) {
               <Banner type="bottom">Preview</Banner>
             </div>
           </>
-        ) : (
-          <WebexNoMedia media="camera" className={sc('no-media')} />
         )}
     </div>
   );

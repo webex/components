@@ -21,8 +21,8 @@ export default {
     settings: {
       visible: false,
       preview: {
-        microphone: {},
-        video: {},
+        audio: null,
+        video: null,
       },
     },
     cameraID: 'cameraID1',
@@ -49,8 +49,8 @@ export default {
     settings: {
       visible: false,
       preview: {
-        microphone: {},
-        video: {},
+        audio: null,
+        video: null,
       },
     },
     cameraID: 'cameraID2',
@@ -77,8 +77,8 @@ export default {
     settings: {
       visible: false,
       preview: {
-        microphone: {},
-        video: {},
+        audio: null,
+        video: null,
       },
     },
     cameraID: 'cameraID1',
@@ -105,8 +105,8 @@ export default {
     settings: {
       visible: false,
       preview: {
-        microphone: {},
-        video: {},
+        audio: null,
+        video: null,
       },
     },
     cameraID: 'cameraID1',
@@ -133,8 +133,8 @@ export default {
     settings: {
       visible: false,
       preview: {
-        microphone: {},
-        video: {},
+        audio: null,
+        video: null,
       },
     },
     cameraID: 'cameraID2',
@@ -161,8 +161,8 @@ export default {
     settings: {
       visible: false,
       preview: {
-        microphone: {},
-        video: {},
+        audio: null,
+        video: null,
       },
     },
     cameraID: 'cameraID1',
@@ -189,8 +189,8 @@ export default {
     settings: {
       visible: false,
       preview: {
-        microphone: {},
-        video: {},
+        audio: null,
+        video: null,
       },
     },
     cameraID: null,
@@ -217,8 +217,8 @@ export default {
     settings: {
       visible: false,
       preview: {
-        microphone: {},
-        video: {},
+        audio: null,
+        video: null,
       },
     },
     cameraID: null,
@@ -245,8 +245,8 @@ export default {
     settings: {
       visible: false,
       preview: {
-        microphone: {},
-        video: {},
+        audio: null,
+        video: null,
       },
     },
     cameraID: null,
@@ -275,8 +275,8 @@ export default {
     settings: {
       visible: false,
       preview: {
-        microphone: {},
-        video: {},
+        audio: null,
+        video: null,
       },
     },
     cameraID: 'cameraID1',
@@ -289,10 +289,10 @@ export default {
     ID: 'meeting11',
     title: 'Waiting for host',
     localAudio: {
-      stream: new MediaStream(),
+      stream: null,
     },
     localVideo: {
-      stream: new MediaStream(),
+      stream: null,
     },
     localShare: {
       stream: null,
@@ -305,8 +305,8 @@ export default {
     settings: {
       visible: false,
       preview: {
-        microphone: {},
-        video: {},
+        audio: null,
+        video: null,
       },
     },
     cameraID: 'cameraID1',
@@ -333,6 +333,10 @@ export default {
     showRoster: false,
     settings: {
       visible: false,
+      preview: {
+        audio: null,
+        video: null,
+      },
     },
     cameraID: null,
     microphoneID: null,

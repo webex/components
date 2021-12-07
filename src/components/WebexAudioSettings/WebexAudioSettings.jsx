@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {useMeetingControl} from '../hooks';
 import webexComponentClasses from '../helpers';
+import {useMeeting} from '../hooks';
 import Title from '../generic/Title/Title';
 import WebexMeetingControl from '../WebexMeetingControl/WebexMeetingControl';
 import WebexNoMedia from '../WebexNoMedia/WebexNoMedia';
@@ -17,20 +17,20 @@ import WebexNoMedia from '../WebexNoMedia/WebexNoMedia';
  */
 export default function WebexAudioSettings({className, meetingID, style}) {
   const [cssClasses, sc] = webexComponentClasses('audio-settings', className);
-  const [, display] = useMeetingControl('switch-microphone', meetingID);
+  const {localAudio: {permission}} = useMeeting(meetingID);
 
   return (
     <div className={cssClasses} style={style}>
-      {display.options?.length !== 0
+      {(permission === 'DENIED' || permission === 'DISMISSED' || permission === 'IGNORED')
         ? (
+          <WebexNoMedia media="microphone" className={sc('no-media')} />
+        ) : (
           <>
             <Title type="subsection">Speaker</Title>
             <WebexMeetingControl type="switch-speaker" meetingID={meetingID} tabIndex={102} />
             <Title type="subsection">Microphone</Title>
             <WebexMeetingControl type="switch-microphone" meetingID={meetingID} tabIndex={103} />
           </>
-        ) : (
-          <WebexNoMedia media="microphone" className={sc('no-media')} />
         )}
     </div>
   );

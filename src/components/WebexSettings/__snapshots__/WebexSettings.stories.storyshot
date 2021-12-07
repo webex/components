@@ -65,9 +65,9 @@ Array [
           >
             <div
               className="wxc-select wxc-meeting-control__control-select"
+              disabled={false}
             >
               <div
-                aria-hidden="true"
                 aria-label="Browser Default. Use arrow keys to navigate between speaker options and hit \\"Enter\\" to select."
                 className="wxc-select__selected-option "
                 onClick={[Function]}
@@ -106,22 +106,22 @@ Array [
             className="wxc-meeting-control"
           >
             <div
-              className="wxc-select wxc-meeting-control__control-select"
+              className="wxc-select wxc-meeting-control__control-select wxc-select--disabled"
+              disabled={true}
             >
               <div
-                aria-hidden="true"
-                aria-label="Use arrow keys to navigate between microphone options and hit \\"Enter\\" to select."
+                aria-label="No available microphones. Use arrow keys to navigate between microphone options and hit \\"Enter\\" to select."
                 className="wxc-select__selected-option "
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="button"
-                tabIndex={103}
+                tabIndex={-1}
                 title="Microphone Devices"
               >
                 <span
                   className="wxc-select__label"
                 >
-                  
+                  No available microphones
                 </span>
                 <svg
                   className="wxc-icon "
