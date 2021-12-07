@@ -1,3 +1,11 @@
+# [1.207.0](https://github.com/webex/components/compare/v1.206.0...v1.207.0) (2021-12-07)
+
+
+### Features
+
+* **WebexRemoteVideo:** add changeLayout function ([aad4730](https://github.com/webex/components/commit/aad4730331ccd296199b7f9d653d0a157485e8d3))
+* **WebexSettings:** disable dropdowns when no devices are available ([5c3f106](https://github.com/webex/components/commit/5c3f106140c34fbf7ed390be24e2624452e4dc22))
+
 # [1.206.0](https://github.com/webex/components/compare/v1.205.3...v1.206.0) (2021-12-07)
 
 
