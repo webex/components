@@ -1,10 +1,11 @@
 /* eslint-disable jsx-a11y/media-has-caption */
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import Badge from '../generic/Badge/Badge';
 import Icon from '../generic/Icon/Icon';
 import Spinner from '../generic/Spinner/Spinner';
 import Title from '../generic/Title/Title';
+import {AdapterContext} from '../hooks/contexts';
 
 import webexComponentClasses from '../helpers';
 import {TABLET, DESKTOP, DESKTOP_LARGE} from '../breakpoints';
@@ -22,13 +23,16 @@ import {
  *
  * @param {object} props  Data passed to the component
  * @param {string} props.className  Custome CSS class to apply
+ * @param {string} props.layout  Layout to apply on remote video
  * @param {string} props.meetingID  ID of the meeting
  * @param {object} props.style  Custom style to apply
  * @returns {object} JSX of the component
  *
  * NOTE: waiting for the UX for a design on what to display if there is no remote video
  */
-export default function WebexRemoteMedia({className, meetingID, style}) {
+export default function WebexRemoteMedia({
+  className, layout, meetingID, style,
+}) {
   const {
     remoteAudio,
     remoteVideo,
@@ -41,6 +45,7 @@ export default function WebexRemoteMedia({className, meetingID, style}) {
   const videoRef = useRef();
   const shareRef = useRef();
   const remoteMediaRef = useRef();
+  const adapter = useContext(AdapterContext);
 
   useStream(audioRef, remoteAudio);
   useStream(videoRef, remoteVideo);
@@ -61,6 +66,12 @@ export default function WebexRemoteMedia({className, meetingID, style}) {
   });
 
   let remoteDisplay;
+
+  useEffect(() => {
+    if (remoteVideo) {
+      adapter.meetingsAdapter.changeLayout(meetingID, layout);
+    }
+  }, [adapter.meetingsAdapter, layout, meetingID, remoteVideo]);
 
   if (error) {
     remoteDisplay = (
@@ -100,11 +111,13 @@ export default function WebexRemoteMedia({className, meetingID, style}) {
 
 WebexRemoteMedia.propTypes = {
   className: PropTypes.string,
+  layout: PropTypes.string,
   meetingID: PropTypes.string.isRequired,
   style: PropTypes.shape(),
 };
 
 WebexRemoteMedia.defaultProps = {
   className: '',
+  layout: 'Grid',
   style: undefined,
 };

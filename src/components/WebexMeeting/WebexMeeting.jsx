@@ -32,6 +32,7 @@ import {AdapterContext} from '../hooks/contexts';
  * @param {number} [props.controlsCollapseRangeStart=0]  Zero-based index of the first collapsible control (can be negative)
  * @param {number} [props.controlsCollapseRangeEnd=-1]  Zero-based index before the last collapsible control (can be negative)
  * @param {Function} [props.controlsTabIndexes]  TabIndex for each control
+ * @param {string} props.layout  Layout to apply on remote video
  * @param {JSX.Element} [props.logo]  Logo
  * @param {string} [props.meetingID]  ID of the meeting
  * @param {object} [props.style]  Custom style to apply
@@ -43,6 +44,7 @@ export default function WebexMeeting({
   controlsCollapseRangeStart,
   controlsCollapseRangeEnd,
   controlsTabIndexes,
+  layout,
   logo,
   meetingID,
   style,
@@ -99,7 +101,7 @@ export default function WebexMeeting({
     meetingDisplay = (
       <>
         <div className={sc('body')}>
-          <InnerMeeting meetingID={ID} className={sc('inner-meeting')} />
+          <InnerMeeting meetingID={ID} className={sc('inner-meeting')} layout={layout} />
           {showRoster && (
             <WebexMemberRoster
               destinationID={ID}
@@ -166,6 +168,7 @@ WebexMeeting.propTypes = {
   controlsCollapseRangeStart: PropTypes.number,
   controlsCollapseRangeEnd: PropTypes.number,
   controlsTabIndexes: PropTypes.func,
+  layout: PropTypes.string,
   logo: PropTypes.node,
   meetingID: PropTypes.string,
   style: PropTypes.shape(),
@@ -185,6 +188,7 @@ WebexMeeting.defaultProps = {
       ? [1, 2, 3, 4, 5, 6]
       : [2, 3, 4, 1]
   ),
+  layout: undefined,
   logo: undefined,
   meetingID: undefined,
   style: undefined,
