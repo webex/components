@@ -1,3 +1,10 @@
+# [1.206.0](https://github.com/webex/components/compare/v1.205.3...v1.206.0) (2021-12-07)
+
+
+### Features
+
+* **InputField:** allow show/hide password button to be accessed via keyboard ([4a7e85d](https://github.com/webex/components/commit/4a7e85d39a66d40f6c9573b49444dba9d82ccbf7))
+
 ## [1.205.3](https://github.com/webex/components/compare/v1.205.2...v1.205.3) (2021-12-06)
 
 
