@@ -798,4 +798,9 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   supportedControls() {
     return Object.keys(this.meetingControls);
   }
+
+  // eslint-disable-next-line class-methods-use-this
+  changeLayout(meetingID, layoutType) {
+    console.log('Changing layout to', layoutType);
+  }
 }

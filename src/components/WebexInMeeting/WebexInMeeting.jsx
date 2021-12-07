@@ -14,11 +14,14 @@ import {TABLET, DESKTOP, DESKTOP_LARGE} from '../breakpoints';
  *
  * @param {object} props  Data passed to the component
  * @param {string} props.className  Custom CSS class to apply
+ * @param {string} props.layout  Layout to apply on remote video
  * @param {string} props.meetingID  ID of the meeting for which to show media
  * @param {object} props.style  Custom style to apply
  * @returns {object} JSX of the component
  */
-export default function WebexInMeeting({className, meetingID, style}) {
+export default function WebexInMeeting({
+  className, layout, meetingID, style,
+}) {
   const {remoteShare, localShare} = useMeeting(meetingID);
   const meetingRef = useRef();
   const {width, height} = useElementDimensions(meetingRef);
@@ -38,7 +41,7 @@ export default function WebexInMeeting({className, meetingID, style}) {
   return (
     <div ref={meetingRef} className={cssClasses} style={style}>
       <div style={{maxWidth}} className={sc('media-container')}>
-        <WebexRemoteMedia className={sc('remote-media-in-meeting')} meetingID={meetingID} />
+        <WebexRemoteMedia className={sc('remote-media-in-meeting')} layout={layout} meetingID={meetingID} />
         <WebexLocalMedia className={sc('local-media-in-meeting')} meetingID={meetingID} mediaType={localMediaType} />
         {localShare?.stream && <Banner className={sc('share-banner')}>You&apos;re sharing your screen</Banner>}
       </div>
@@ -48,11 +51,13 @@ export default function WebexInMeeting({className, meetingID, style}) {
 
 WebexInMeeting.propTypes = {
   className: PropTypes.string,
+  layout: PropTypes.string,
   meetingID: PropTypes.string.isRequired,
   style: PropTypes.shape(),
 };
 
 WebexInMeeting.defaultProps = {
   className: '',
+  layout: undefined,
   style: undefined,
 };
