@@ -1,5 +1,6 @@
 import {concat, Observable, defer} from 'rxjs';
 import {
+  first,
   map,
   concatMap,
   distinctUntilChanged,
@@ -31,7 +32,10 @@ export default class SwitchCameraControl extends MeetingControl {
    * @returns {Observable.<MeetingControlDisplay>} Observable that emits control display data
    */
   display(meetingID) {
-    const availableCameras$ = defer(() => this.adapter.getAvailableDevices('videoinput'));
+    const availableCameras$ = this.adapter.getMeeting(meetingID).pipe(
+      first(),
+      concatMap(() => defer(() => this.adapter.getAvailableDevices(meetingID, 'videoinput'))),
+    );
 
     const initialControl$ = new Observable((observer) => {
       const meeting = this.adapter.fetchMeeting(meetingID);

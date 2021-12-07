@@ -33,7 +33,7 @@ export default class SwitchSpeakerControl extends MeetingControl {
    * @private
    */
   display(meetingID) {
-    const availableSpeakers$ = defer(() => this.adapter.getAvailableDevices('audiooutput')).pipe(
+    const availableSpeakers$ = defer(() => this.adapter.getAvailableDevices(meetingID, 'audiooutput')).pipe(
       map((availableSpeakers) => availableSpeakers.map((speaker) => ({
         value: speaker.deviceId,
         label: speaker.label,

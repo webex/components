@@ -1,5 +1,6 @@
 import {concat, Observable, defer} from 'rxjs';
 import {
+  first,
   map,
   concatMap,
   distinctUntilChanged,
@@ -32,7 +33,10 @@ export default class SwitchMicrophoneControl extends MeetingControl {
    * @private
    */
   display(meetingID) {
-    const availableMicrophones$ = defer(() => this.adapter.getAvailableDevices('audioinput'));
+    const availableMicrophones$ = this.adapter.getMeeting(meetingID).pipe(
+      first(),
+      concatMap(() => defer(() => this.adapter.getAvailableDevices(meetingID, 'audioinput'))),
+    );
 
     const initialControl$ = new Observable((observer) => {
       const meeting = this.adapter.fetchMeeting(meetingID);

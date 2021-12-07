@@ -80,6 +80,7 @@
     "newline-before-return": "error",
     "lines-around-directive": "error",
     "no-useless-call": "error",
+    "operator-linebreak": "off",
     "jsx-a11y/tabindex-no-positive": "off"
   },
   "overrides": [

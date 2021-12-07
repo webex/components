@@ -71,19 +71,18 @@ export default function Select({
   }, [expanded]);
 
   return (
-    <div className={cssClasses}>
+    <div className={cssClasses} disabled={disabled}>
       <div
         className={`${sc('selected-option')} ${expanded ? sc('expanded') : ''}`}
         onClick={() => toggleExpanded(false)}
-        aria-hidden="true"
         role="button"
-        tabIndex={tabIndex}
+        tabIndex={disabled ? -1 : tabIndex}
         title={tooltip}
         aria-label={`${label ? `${label}. ` : ''}${ariaLabel}`}
         onKeyDown={handleKeyDown}
         ref={ref}
       >
-        <span className={sc('label')}>{label || value}</span>
+        <span className={sc('label')}>{options === null ? 'Loading...' : (label || value)}</span>
         <Icon name={expanded ? 'arrow-up' : 'arrow-down'} size={13} />
       </div>
       {expanded && (

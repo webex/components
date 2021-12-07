@@ -259,17 +259,19 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
 
         // Add a video stream as if it were a local video
         if (this.emptyStream(meeting.localVideo.stream)) {
-          const {stream, deviceId} = await this.getStream({video: true, audio: false});
+          const {stream, perm, deviceId} = await this.getStream({video: true, audio: false});
 
           meeting.localVideo.stream = stream;
+          meeting.localVideo.permission = perm;
           meeting.cameraID = deviceId;
         }
 
         // Add an audio stream as if it were a local audio
         if (this.emptyStream(meeting.localAudio.stream)) {
-          const {stream, deviceId} = await this.getStream({video: false, audio: true});
+          const {stream, perm, deviceId} = await this.getStream({video: false, audio: true});
 
           meeting.localAudio.stream = stream;
+          meeting.localAudio.permission = perm;
           meeting.microphoneID = deviceId;
         }
 
@@ -385,13 +387,14 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
    * Returns a promise to a MediaStream object obtained from the user's browser.
    *
    * @param {MediaStreamConstraints} constraints  Object specifying media settings
-   * @returns {Promise.<{MediaStream, string}>} Media stream that matches given constraints and the corresponding device id
+   * @returns {Promise.<{MediaStream, string, string}>} Media stream that matches given constraints and the corresponding device id
    * @private
    */
   // eslint-disable-next-line class-methods-use-this
   async getStream(constraints) {
     let stream;
     let deviceId;
+    let perm;
 
     try {
       const mediaStream = await navigator.mediaDevices.getUserMedia(constraints);
@@ -408,12 +411,32 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       if (constraints.audio) {
         stream = new MediaStream([mediaStream.getAudioTracks()[0]]);
       }
-    } catch (reason) {
+
+      perm = 'ALLOWED';
+    } catch (error) {
       // eslint-disable-next-line no-console
-      console.error('Meetings JSON adapter can not display the local user stream', reason);
+      console.error('Meetings JSON adapter can not display the local user stream', error);
+
+      if (error instanceof DOMException) {
+        if (error.name === 'NotAllowedError') {
+          if (error.message === 'Permission dismissed') {
+            perm = 'DISMISSED';
+          } else if (error.message === 'Permission denied by system') {
+            perm = 'DISABLED';
+          } else {
+            perm = 'DENIED';
+          }
+        } else if (error.name === 'NotReadableError') {
+          perm = 'DISABLED';
+        } else {
+          perm = 'ERROR';
+        }
+      } else {
+        perm = 'ERROR';
+      }
     }
 
-    return {stream, deviceId};
+    return {stream, perm, deviceId};
   }
 
   /**
@@ -439,21 +462,28 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
   /**
    * Returns available media devices.
    *
+   * @param {string} [meetingID]  Id of the meeting to get devices for
    * @param {'videoinput'|'audioinput'|'audiooutput'} [type]  String specifying the device type.
    * See {@link https://developer.mozilla.org/en-US/docs/Web/API/MediaDeviceInfo/kind|MDN}
    * @returns {MediaDeviceInfo[]|null} Array containing media devices or null if devices can't be read.
    * @private
    */
   // eslint-disable-next-line class-methods-use-this
-  async getAvailableDevices(type) {
-    let devices = null;
+  async getAvailableDevices(meetingID, type) {
+    const meeting = this.datasource[meetingID];
+    let devices = [];
 
-    try {
-      devices = await navigator.mediaDevices.enumerateDevices();
-      devices = devices.filter((device) => !type || (device.kind === type && device.deviceId));
-    } catch (reason) {
-      // eslint-disable-next-line no-console
-      console.error('Meetings JSON adapter can not enumerate media devices', reason);
+    if (
+      !(type === 'videoinput' && ['ERROR', 'DISABLED'].includes(meeting.localVideo.permission)) &&
+      !(type === 'audioinput' && ['ERROR', 'DISABLED'].includes(meeting.localAudio.permission))
+    ) {
+      try {
+        devices = await navigator.mediaDevices.enumerateDevices();
+        devices = devices.filter((device) => !type || (device.kind === type && device.deviceId));
+      } catch (reason) {
+        // eslint-disable-next-line no-console
+        console.error('Meetings JSON adapter can not enumerate media devices', reason);
+      }
     }
 
     return devices;

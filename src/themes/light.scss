@@ -7,7 +7,6 @@
   --wxc-error-color: #{$wxc-red-70};
   --wxc-primary-background: #{$wxc-gradation-webex-light-primary};
   --wxc-secondary-background: #{$wxc-gradation-webex-light-secondary};
-  --wxc-error-color: #{$wxc-red-70};
   --wxc-muted-color: #{$wxc-red-60};
   --wxc-speaking-color: #{$wxc-green-60};
   --wxc-video-background: #{$wxc-white-alpha-100};
@@ -130,6 +129,7 @@
   --wxc-select--active--color: #{$wxc-black-alpha-95};
 
   --wxc-select--disabled--background: #{$wxc-black-alpha-11};
+  --wcx-select--disabled--border: 1px solid #{$wxc-black-alpha-11};
   --wxc-select--disabled--color: #{$wxc-black-alpha-40};
 
   --wxc-select--focus--background: #{$wxc-black-alpha-11};
