@@ -38,22 +38,13 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-radio-button;
       .#{$C}__background {
         border: var(--wxc-input--off--normal--border);
         background-color: var(--wxc-input--off--normal--background);
-        .#{$C}__foreground {
-          background-color: var(--wxc-input--off--normal--foreground);
-        }
         &:hover {
           border: var(--wxc-input--off--hover--border);
           background-color: var(--wxc-input--off--hover--background);
-          .#{$C}__foreground {
-            background-color: var(--wxc-input--off--hover--foreground);
-          }
         }
         &:active {
           border: var(--wxc-input--off--active--border);
           background-color: var(--wxc-input--off--active--background);
-          .#{$C}__foreground {
-            background-color: var(--wxc-input--off--active--foreground);
-          }
         }
       }
     }
@@ -94,9 +85,6 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-radio-button;
       .#{$C}__background {
         border: var(--wxc-input--off--disabled--border);
         background-color: var(--wxc-input--off--disabled--background);
-        .#{$C}__foreground {
-          background-color: var(--wxc-input--off--disabled--foreground);
-        }
       }
     }
 

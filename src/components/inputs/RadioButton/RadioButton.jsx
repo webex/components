@@ -59,7 +59,7 @@ export default function RadioButton({
       tabIndex={tabIndex}
     >
       <div className={sc('background')}>
-        <div className={sc('foreground')} />
+        {selected && <div className={sc('foreground')} />}
       </div>
       {title && <span className={sc('title')}>{title}</span>}
     </div>
