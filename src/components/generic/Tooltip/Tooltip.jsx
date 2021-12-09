@@ -36,27 +36,25 @@ const Tooltip = ({
     let cleanup;
 
     if (target) {
-      const handleMouseEnter = () => {
-        setTooltipVisible(true);
-      };
-      const handleMouseLeave = () => {
-        setTooltipVisible(false);
-      };
+      const show = () => setTooltipVisible(true);
+      const hide = () => setTooltipVisible(false);
 
-      target.addEventListener('mouseenter', handleMouseEnter);
-      target.addEventListener('touchstart', handleMouseEnter);
+      target.addEventListener('touchstart', show);
+      target.addEventListener('touchend', hide);
 
-      target.addEventListener('mouseleave', handleMouseLeave);
-      target.addEventListener('touchmove', handleMouseLeave);
-      target.addEventListener('click', handleMouseLeave);
+      target.addEventListener('mouseenter', show);
+      target.addEventListener('mouseleave', hide);
+
+      target.addEventListener('click', hide);
 
       cleanup = () => {
-        target.removeEventListener('mouseenter', handleMouseEnter);
-        target.removeEventListener('touchstart', handleMouseEnter);
+        target.removeEventListener('touchstart', show);
+        target.removeEventListener('touchend', hide);
 
-        target.removeEventListener('mouseleave', handleMouseLeave);
-        target.removeEventListener('touchmove', handleMouseLeave);
-        target.removeEventListener('click', handleMouseLeave);
+        target.removeEventListener('mouseenter', show);
+        target.removeEventListener('mouseleave', hide);
+
+        target.removeEventListener('click', hide);
       };
     }
 
