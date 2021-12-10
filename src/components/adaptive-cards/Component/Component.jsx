@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 
 const componentTypes = {
+  'Input.Date': import('../InputDate/InputDate'),
   'Input.Time': import('../InputTime/InputTime'),
 };
 
