@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 
-const componentTypes = {};
+const componentTypes = {
+  'Input.Time': import('../InputTime/InputTime'),
+};
 
 /**
  * UnknownComponent
