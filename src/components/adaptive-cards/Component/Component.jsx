@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import webexComponentClasses from '../../components/helpers';
+import webexComponentClasses from '../../helpers';
 
 const componentTypes = {};
 
