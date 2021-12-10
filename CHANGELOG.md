@@ -1,3 +1,10 @@
+# [1.211.0](https://github.com/webex/components/compare/v1.210.0...v1.211.0) (2021-12-10)
+
+
+### Features
+
+* **AdaptiveCardsInputNumber:** create dummy Input.Number component ([18e070c](https://github.com/webex/components/commit/18e070c7613bbee3a3f9f178869779c6b4caf989))
+
 # [1.210.0](https://github.com/webex/components/compare/v1.209.0...v1.210.0) (2021-12-10)
 
 
