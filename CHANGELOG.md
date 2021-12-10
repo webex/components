@@ -1,3 +1,10 @@
+## [1.208.1](https://github.com/webex/components/compare/v1.208.0...v1.208.1) (2021-12-10)
+
+
+### Bug Fixes
+
+* **AdaptiveCard:** move component into src/components/adaptive-cards ([3d800ad](https://github.com/webex/components/commit/3d800addb2aab738c41abe16f35f275bcaca8532))
+
 # [1.208.0](https://github.com/webex/components/compare/v1.207.1...v1.208.0) (2021-12-10)
 
 
