@@ -15,33 +15,33 @@ Array [
       className="wxc-tabs"
     >
       <ul
-        aria-label="Use arrow keys to navigate between setting options"
+        aria-label="Use left and right arrow keys to navigate."
         className="wxc-tabs__list"
-        onKeyUp={[Function]}
         role="tablist"
-        tabIndex={101}
       >
         <li
-          aria-selected={true}
           className="wxc-tabs__tab wxc-tabs__tab--active"
-          role="tab"
         >
           <button
-            aria-label="Audio. Tab 1 of 2. View speaker and microphone settings."
+            aria-selected={true}
             onClick={[Function]}
+            onKeyUp={[Function]}
+            role="tab"
+            tabIndex={101}
             type="button"
           >
             Audio
           </button>
         </li>
         <li
-          aria-selected={false}
           className="wxc-tabs__tab"
-          role="tab"
         >
           <button
-            aria-label="Video. Tab 2 of 2. View camera settings."
+            aria-selected={false}
             onClick={[Function]}
+            onKeyUp={[Function]}
+            role="tab"
+            tabIndex={-1}
             type="button"
           >
             Video
