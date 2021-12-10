@@ -4,6 +4,7 @@ import webexComponentClasses from '../../helpers';
 
 const componentTypes = {
   'Input.Time': import('../InputTime/InputTime'),
+  'Input.Toggle': import('../InputToggle/InputToggle'),
 };
 
 /**
