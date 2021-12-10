@@ -1,3 +1,10 @@
+# [1.209.0](https://github.com/webex/components/compare/v1.208.1...v1.209.0) (2021-12-10)
+
+
+### Features
+
+* **AdaptiveCardsInputTime:** create dummy Input.Time component ([cbe5840](https://github.com/webex/components/commit/cbe58408c1c762541e76ab606930307b6ba24518))
+
 ## [1.208.1](https://github.com/webex/components/compare/v1.208.0...v1.208.1) (2021-12-10)
 
 
