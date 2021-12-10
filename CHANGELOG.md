@@ -1,3 +1,10 @@
+# [1.208.0](https://github.com/webex/components/compare/v1.207.1...v1.208.0) (2021-12-10)
+
+
+### Features
+
+* **AdaptiveCard:** create dummy adaptive card component ([b1a73bb](https://github.com/webex/components/commit/b1a73bbbd54d1618f6bff2984cadcfa1d38b20e7))
+
 ## [1.207.1](https://github.com/webex/components/compare/v1.207.0...v1.207.1) (2021-12-09)
 
 
