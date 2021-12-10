@@ -214,6 +214,9 @@
 
   --wxc-adaptive-cards--highlight-color: #{$wxc-gray-70};
 
+  --wxc-input--title--normal: #{$wxc-black-alpha-95};
+  --wxc-input--title--disabled: #{$wxc-black-alpha-40};
+
   --wxc-input--on--normal--border: none;
   --wxc-input--on--normal--background: #{$wxc-blue-60};
   --wxc-input--on--normal--foreground: #{$wxc-white-alpha-95};
