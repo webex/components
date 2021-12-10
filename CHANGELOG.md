@@ -1,3 +1,12 @@
+# [1.210.0](https://github.com/webex/components/compare/v1.209.0...v1.210.0) (2021-12-10)
+
+
+### Features
+
+* **AdaptiveCardsInputDate:** create dummy Input.Date component ([333558f](https://github.com/webex/components/commit/333558ff93622123f116dcaa115cc6c99f4d75c6))
+* **AdaptiveCardsInputText:** create dummy Input.Text component ([14ffcac](https://github.com/webex/components/commit/14ffcac3b805e6afd4b66b91774693dfb7ddfc15))
+* **AdaptiveCardsInputToggle:** create dummy Input.Toggle component ([6d4d782](https://github.com/webex/components/commit/6d4d7821984218b55a4cd777a0f118e5de9c2828))
+
 # [1.209.0](https://github.com/webex/components/compare/v1.208.1...v1.209.0) (2021-12-10)
 
 
