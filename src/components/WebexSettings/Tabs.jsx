@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {useAutoFocus, useRef} from '../hooks';
@@ -14,6 +14,7 @@ import webexComponentClasses from '../helpers';
  * Tabs component
  *
  * @param {object} props  Data passed to the component
+ * @param {boolean} props.autoFocus   Flag indicating whether to add autofocus on selected tab
  * @param {string} props.className  Custom CSS class to apply
  * @param {Function} props.onSelect  A callback to be executed on selecting active tab
  * @param {string} props.selected  Specifies which tab is active
@@ -23,6 +24,7 @@ import webexComponentClasses from '../helpers';
  * @returns {object} JSX of the component
  */
 export default function Tabs({
+  autoFocus,
   className,
   onSelect,
   selected,
@@ -34,44 +36,45 @@ export default function Tabs({
   const [cssClasses, sc] = webexComponentClasses('tabs', className);
   const selectedTabIndex = (tabs || []).findIndex((tab) => tab.key === selected);
   const ref = useRef();
+  const [tabChangedWithKey, setTabChangedWithKey] = useState(false);
 
-  useAutoFocus(ref, true);
+  useAutoFocus(ref, autoFocus || tabChangedWithKey);
 
   const handleKeyUp = (event) => {
     if (event.key === 'ArrowLeft') {
       const prevTabIndex = (selectedTabIndex + tabs.length - 1) % tabs.length;
 
+      setTabChangedWithKey(true);
       onSelect(tabs[prevTabIndex].key);
     } else if (event.key === 'ArrowRight') {
       const nextTabIndex = (selectedTabIndex + 1) % tabs.length;
 
+      setTabChangedWithKey(true);
       onSelect(tabs[nextTabIndex].key);
     }
   };
 
   return (
     <div className={cssClasses} style={style}>
-      {/* eslint-disable-next-line */}
       <ul
         className={sc('list')}
-        tabIndex={tabIndex}
-        onKeyUp={handleKeyUp}
-        aria-label="Use arrow keys to navigate between setting options"
         role="tablist"
-        ref={ref}
+        aria-label="Use left and right arrow keys to navigate."
       >
         {
-          tabs.map((tab, index) => (
+          tabs.map((tab) => (
             <li
               className={classNames(sc('tab'), selected === tab.key && sc('tab--active'))}
               key={tab.key}
-              role="tab"
-              aria-selected={selected === tab.key}
             >
               <button
+                aria-selected={selected === tab.key}
                 onClick={() => onSelect(tab.key)}
+                onKeyUp={handleKeyUp}
+                ref={selected === tab.key ? ref : undefined}
+                role="tab"
+                tabIndex={selected === tab.key ? tabIndex : -1}
                 type="button"
-                aria-label={`${tab.heading}. Tab ${index + 1} of ${tabs.length}. ${tab.ariaLabel}`}
               >
                 {tab.heading}
               </button>
@@ -87,6 +90,7 @@ export default function Tabs({
 }
 
 Tabs.propTypes = {
+  autoFocus: PropTypes.bool,
   className: PropTypes.string,
   onSelect: PropTypes.func.isRequired,
   selected: PropTypes.string.isRequired,
@@ -96,6 +100,7 @@ Tabs.propTypes = {
 };
 
 Tabs.defaultProps = {
+  autoFocus: false,
   className: '',
   style: undefined,
   tabIndex: -1,

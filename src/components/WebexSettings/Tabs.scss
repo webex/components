@@ -2,7 +2,6 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-tabs;
 
 .#{$C} {
   .#{$C}__list {
-    @include focusable;
     display: flex;
     list-style-type: none;
     margin: 0;
@@ -10,6 +9,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-tabs;
 
     .#{$C}__tab {
       button {
+        @include focusable;
         background: var(--wxc-tab--normal--background);
         border: none;
         cursor: pointer;
