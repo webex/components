@@ -1,6 +1,8 @@
 @import 'generic/generic';
 @import 'icons/icons';
 
+@import '../adaptive-cards/AdaptiveCard/AdaptiveCard';
+@import '../adaptive-cards/Component/Component';
 @import 'WebexActivity/WebexActivity';
 @import 'WebexActivityStream/WebexActivityStream';
 @import 'WebexAudioSettings/WebexAudioSettings';
@@ -22,4 +24,3 @@
 @import 'WebexSettings/WebexSettings';
 @import 'WebexVideoSettings/WebexVideoSettings';
 @import 'WebexWaitingForHost/WebexWaitingForHost';
-
