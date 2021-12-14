@@ -1,3 +1,10 @@
+## [1.211.1](https://github.com/webex/components/compare/v1.211.0...v1.211.1) (2021-12-14)
+
+
+### Bug Fixes
+
+* **Tabs:** change focus on tab instead of container ([49d9a17](https://github.com/webex/components/commit/49d9a179c2721e5ce121c58d4b92234727972209))
+
 # [1.211.0](https://github.com/webex/components/compare/v1.210.0...v1.211.0) (2021-12-10)
 
 
