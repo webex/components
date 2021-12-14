@@ -1,0 +1,35 @@
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-text-block;
+
+.#{$C}__fontType--monospace { font-family: #{$font-family-monospace}; }
+.#{$C}__fontType--default { font-family: #{$brand-font-regular}; }
+
+.#{$C}__horizontalAlignment {
+  &--left { text-align: left; }
+  &--center { text-align: center; }
+  &--right { text-align: right; }
+}
+
+.#{$C}__size {
+  &--default { font-size: 0.875rem; }
+  &--small { font-size: 0.75rem; }
+  &--medium { font-size: 1rem; }
+  &--large { font-size: 1.25rem; }
+  &--extraLarge { font-size: 1.5rem; }
+}
+
+.#{$C}__weight {
+  &--default { font-weight: 400; }
+  &--lighter { font-weight: lighter; }
+  &--bolder { font-weight: bolder; }
+}
+
+.#{$C}__wrap--false {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.#{$C}__style--heading {
+  font-weight: bold;
+  font-size: 200%;
+}

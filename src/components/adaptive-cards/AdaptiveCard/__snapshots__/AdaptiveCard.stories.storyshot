@@ -120,32 +120,15 @@ Array [
 }
       </pre>
     </div>
-    <div>
-      <h5>
-        TextBlock Component
-      </h5>
-      <pre
-        className="wxc-adaptive-cards-unknown-component"
-      >
-        {
-    "type": "TextBlock",
-    "text": "We're making it easier for you to interact with bots and integrations in Webex Teams. When your bot sends information in a space that includes a card with buttons, you can now easily interact with it.",
-    "wrap": true
-}
-      </pre>
+    <div
+      className="wxc-text-block wxc-text-block__wrap--true"
+    >
+      We're making it easier for you to interact with bots and integrations in Webex Teams. When your bot sends information in a space that includes a card with buttons, you can now easily interact with it.
     </div>
-    <div>
-      <h5>
-        TextBlock Component
-      </h5>
-      <pre
-        className="wxc-adaptive-cards-unknown-component"
-      >
-        {
-    "type": "TextBlock",
-    "text": "Buttons and Cards Resources:"
-}
-      </pre>
+    <div
+      className="wxc-text-block "
+    >
+      Buttons and Cards Resources:
     </div>
     <div>
       <h5>
@@ -212,6 +195,197 @@ Array [
     "spacing": "None"
 }
       </pre>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Messaging/AdaptiveCard Text Block 1`] = `
+Array [
+  <div
+    className="wxc-adaptive-card"
+  >
+    <div
+      className="wxc-text-block "
+    >
+      color: default
+    </div>
+    <div
+      className="wxc-text-block "
+    >
+      color: accent
+    </div>
+    <div
+      className="wxc-text-block "
+    >
+      color: good
+    </div>
+    <div
+      className="wxc-text-block "
+    >
+      color: warning
+    </div>
+    <div
+      className="wxc-text-block "
+    >
+      color: attention
+    </div>
+    <div
+      className="wxc-text-block "
+    >
+      color: light
+    </div>
+    <div
+      className="wxc-text-block "
+    >
+      color: dark
+    </div>
+    <div
+      className="wxc-text-block "
+    >
+      Font type not set.
+    </div>
+    <div
+      className="wxc-text-block wxc-text-block__fontType--default"
+    >
+      Font type set to *default*.
+    </div>
+    <div
+      className="wxc-text-block wxc-text-block__fontType--monospace"
+    >
+      Font type set to *monospace*.
+    </div>
+    <div
+      className="wxc-text-block wxc-text-block__horizontalAlignment--left"
+    >
+      **horizontalAlignment:left**
+    </div>
+    <div
+      className="wxc-text-block wxc-text-block__horizontalAlignment--center"
+    >
+      **horizontalAlignment:center**
+    </div>
+    <div
+      className="wxc-text-block wxc-text-block__horizontalAlignment--right"
+    >
+      **horizontalAlignment:right**
+    </div>
+    <div
+      className="wxc-text-block "
+    >
+      isSubtle:false
+    </div>
+    <div
+      className="wxc-text-block "
+    >
+      isSubtle:true
+    </div>
+    <div
+      className="wxc-text-block wxc-text-block__wrap--true"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+    <div
+      className="wxc-text-block wxc-text-block__wrap--true"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+    <div
+      className="wxc-text-block "
+    >
+      size:default
+    </div>
+    <div
+      className="wxc-text-block wxc-text-block__size--small"
+    >
+      size:small
+    </div>
+    <div
+      className="wxc-text-block wxc-text-block__size--default"
+    >
+      size:default
+    </div>
+    <div
+      className="wxc-text-block wxc-text-block__size--medium"
+    >
+      size:medium
+    </div>
+    <div
+      className="wxc-text-block wxc-text-block__size--large"
+    >
+      size:large
+    </div>
+    <div
+      className="wxc-text-block wxc-text-block__size--extraLarge"
+    >
+      size:extraLarge
+    </div>
+    <div
+      className="wxc-text-block wxc-text-block__weight--lighter"
+    >
+      weight: lighter
+    </div>
+    <div
+      className="wxc-text-block wxc-text-block__weight--default"
+    >
+      weight: default
+    </div>
+    <div
+      className="wxc-text-block wxc-text-block__weight--bolder"
+    >
+      weight: bolder
+    </div>
+    <div
+      className="wxc-text-block wxc-text-block__wrap--false"
+    >
+      **wrap: false** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+    </div>
+    <div
+      className="wxc-text-block wxc-text-block__wrap--true"
+    >
+      **wrap: true** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+    <div
+      className="wxc-text-block wxc-text-block__style--heading wxc-text-block__wrap--true"
+      role="heading"
+    >
+      Style set to heading
+    </div>
+    <div
+      className="wxc-text-block wxc-text-block__style--heading wxc-text-block__wrap--true"
+      role="heading"
+    >
+      Style set to heading, color set to good
+    </div>
+    <div
+      className="wxc-text-block wxc-text-block__style--default wxc-text-block__wrap--true"
+    >
+      Style set to default
+    </div>
+    <div
+      className="wxc-text-block wxc-text-block__wrap--true"
+    >
+      Style unset
     </div>
   </div>,
   <video

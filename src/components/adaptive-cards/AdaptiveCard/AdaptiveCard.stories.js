@@ -8,7 +8,9 @@ export default {
 
 const Template = (args) => <AdaptiveCard {...args} />;
 const exampleAdaptiveCard = {
+  $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
   type: 'AdaptiveCard',
+  version: '1.2',
   body: [
     {
       type: 'ColumnSet',
@@ -165,11 +167,186 @@ const exampleAdaptiveCard = {
       spacing: 'None',
     },
   ],
-  $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
-  version: '1.2',
 };
 
 export const Card = Template.bind({});
 Card.args = {
   data: exampleAdaptiveCard,
+};
+
+const exampleTextBlock = {
+  $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
+  type: 'AdaptiveCard',
+  version: '1.2',
+  body: [
+    {
+      type: 'TextBlock',
+      text: 'color: default',
+      color: 'default',
+    },
+    {
+      type: 'TextBlock',
+      text: 'color: accent',
+      color: 'accent',
+    },
+    {
+      type: 'TextBlock',
+      text: 'color: good',
+      color: 'good',
+    },
+    {
+      type: 'TextBlock',
+      text: 'color: warning',
+      color: 'warning',
+    },
+    {
+      type: 'TextBlock',
+      text: 'color: attention',
+      color: 'attention',
+    },
+    {
+      type: 'TextBlock',
+      text: 'color: light',
+      color: 'light',
+    },
+    {
+      type: 'TextBlock',
+      text: 'color: dark',
+      color: 'dark',
+    },
+    {
+      type: 'TextBlock',
+      text: 'Font type not set.',
+    },
+    {
+      type: 'TextBlock',
+      text: 'Font type set to *default*.',
+      fontType: 'default',
+    },
+    {
+      type: 'TextBlock',
+      text: 'Font type set to *monospace*.',
+      fontType: 'monospace',
+    },
+    {
+      type: 'TextBlock',
+      text: '**horizontalAlignment:left**',
+      horizontalAlignment: 'left',
+    },
+    {
+      type: 'TextBlock',
+      text: '**horizontalAlignment:center**',
+      horizontalAlignment: 'center',
+    },
+    {
+      type: 'TextBlock',
+      text: '**horizontalAlignment:right**',
+      horizontalAlignment: 'right',
+    },
+    {
+      type: 'TextBlock',
+      text: 'isSubtle:false',
+      isSubtle: false,
+    },
+    {
+      type: 'TextBlock',
+      text: 'isSubtle:true',
+      isSubtle: true,
+    },
+    {
+      type: 'TextBlock',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      wrap: true,
+      maxLines: 1,
+    },
+    {
+      type: 'TextBlock',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      wrap: true,
+      maxLines: 2,
+    },
+    {
+      type: 'TextBlock',
+      text: 'size:default',
+    },
+    {
+      type: 'TextBlock',
+      text: 'size:small',
+      size: 'small',
+    },
+    {
+      type: 'TextBlock',
+      text: 'size:default',
+      size: 'default',
+    },
+    {
+      type: 'TextBlock',
+      text: 'size:medium',
+      size: 'medium',
+    },
+    {
+      type: 'TextBlock',
+      text: 'size:large',
+      size: 'large',
+    },
+    {
+      type: 'TextBlock',
+      text: 'size:extraLarge',
+      size: 'extraLarge',
+    },
+    {
+      type: 'TextBlock',
+      text: 'weight: lighter',
+      weight: 'lighter',
+    },
+    {
+      type: 'TextBlock',
+      text: 'weight: default',
+      weight: 'default',
+    },
+    {
+      type: 'TextBlock',
+      text: 'weight: bolder',
+      weight: 'bolder',
+    },
+    {
+      type: 'TextBlock',
+      text: '**wrap: false** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
+      wrap: false,
+    },
+    {
+      type: 'TextBlock',
+      text: '**wrap: true** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      wrap: true,
+    },
+    {
+      type: 'TextBlock',
+      text: 'Style set to heading',
+      style: 'heading',
+      wrap: true,
+    },
+    {
+      type: 'TextBlock',
+      text: 'Style set to heading, color set to good',
+      style: 'heading',
+      color: 'good',
+      wrap: true,
+    },
+    {
+      type: 'TextBlock',
+      text: 'Style set to default',
+      style: 'default',
+      wrap: true,
+    },
+    {
+      type: 'TextBlock',
+      text: 'Style unset',
+      wrap: true,
+    },
+  ],
+};
+
+export const TextBlock = Template.bind({});
+TextBlock.args = {
+  data: exampleTextBlock,
 };
