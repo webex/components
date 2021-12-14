@@ -7,6 +7,7 @@ import InputNumber from '../InputNumber/InputNumber';
 import InputText from '../InputText/InputText';
 import InputTime from '../InputTime/InputTime';
 import InputToggle from '../InputToggle/InputToggle';
+import TextBlock from '../TextBlock/TextBlock';
 
 const componentTypes = {
   'Input.Date': InputDate,
@@ -14,6 +15,7 @@ const componentTypes = {
   'Input.Text': InputText,
   'Input.Time': InputTime,
   'Input.Toggle': InputToggle,
+  TextBlock,
 };
 
 /**
