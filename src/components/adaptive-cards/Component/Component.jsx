@@ -2,12 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 
+import InputDate from '../InputDate/InputDate';
+import InputNumber from '../InputNumber/InputNumber';
+import InputText from '../InputText/InputText';
+import InputTime from '../InputTime/InputTime';
+import InputToggle from '../InputToggle/InputToggle';
+
 const componentTypes = {
-  'Input.Date': import('../InputDate/InputDate'),
-  'Input.Number': import('../InputNumber/InputNumber'),
-  'Input.Text': import('../InputText/InputText'),
-  'Input.Time': import('../InputTime/InputTime'),
-  'Input.Toggle': import('../InputToggle/InputToggle'),
+  'Input.Date': InputDate,
+  'Input.Number': InputNumber,
+  'Input.Text': InputText,
+  'Input.Time': InputTime,
+  'Input.Toggle': InputToggle,
 };
 
 /**
