@@ -1,3 +1,10 @@
+## [1.211.2](https://github.com/webex/components/compare/v1.211.1...v1.211.2) (2021-12-14)
+
+
+### Bug Fixes
+
+* **AdaptiveCardsComponent:** move individual component imports at the top of the file ([a1702c2](https://github.com/webex/components/commit/a1702c27c10e244ce61f4daabb0b7b662a5a592d))
+
 ## [1.211.1](https://github.com/webex/components/compare/v1.211.0...v1.211.1) (2021-12-14)
 
 
