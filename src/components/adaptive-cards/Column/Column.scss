@@ -1,0 +1,15 @@
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-column;
+
+.#{$C}__bleed--false { padding: 0.625rem; }
+
+.#{$C}__rtl--true { direction: rtl; }
+.#{$C}__rtl--false { direction: ltr; }
+
+.#{$C}__style {
+  &--default { background-color: var(--wxc-adaptive-cards--background-color--default); }
+  &--emphasis { background-color: var(--wxc-adaptive-cards--background-color--emphasis); }
+  &--good { background-color: var(--wxc-adaptive-cards--background-color--good); }
+  &--attention { background-color: var(--wxc-adaptive-cards--background-color--attention); }
+  &--warning { background-color: var(--wxc-adaptive-cards--background-color--warning); }
+  &--accent { background-color: var(--wxc-adaptive-cards--background-color--accent); }
+}

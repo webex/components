@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 
 import Component from '../Component/Component';
+import '../Column/Column';
 import '../InputDate/InputDate';
 import '../InputNumber/InputNumber';
 import '../InputText/InputText';

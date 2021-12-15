@@ -185,4 +185,11 @@
   --wxc-tooltip-background: #{$wxc-black-alpha-100};
   --wxc-tooltip-border: 1px solid #{$wxc-white-alpha-20};
   --wxc-tooltip-border-color: #{$wxc-white-alpha-20};
+
+  --wxc-adaptive-cards--background-color--default: #{$wxc-gray-95};
+  --wxc-adaptive-cards--background-color--emphasis: #{$wxc-gray-80};
+  --wxc-adaptive-cards--background-color--accent: #{$wxc-blue-80};
+  --wxc-adaptive-cards--background-color--good: #{$wxc-green-80};
+  --wxc-adaptive-cards--background-color--attention: #{$wxc-red-80};
+  --wxc-adaptive-cards--background-color--warning: #{$wxc-yellow-80};
 }

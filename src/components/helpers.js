@@ -5,7 +5,7 @@ import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../constants';
  * Builds a string of css class names for webex components
  *
  * @param {string} classBaseName  Component class base name
- * @param {string} userClassName  Custom CSS class to apply
+ * @param {string} [userClassName]  Custom CSS class to apply
  * @param {object} otherClasses  Other optional classes with prefix
  * @returns {[string, function]}  Classes and a prefix function
  *

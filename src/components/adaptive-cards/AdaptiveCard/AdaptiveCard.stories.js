@@ -169,11 +169,6 @@ const exampleAdaptiveCard = {
   ],
 };
 
-export const Card = Template.bind({});
-Card.args = {
-  data: exampleAdaptiveCard,
-};
-
 const exampleTextBlock = {
   $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
   type: 'AdaptiveCard',
@@ -346,7 +341,782 @@ const exampleTextBlock = {
   ],
 };
 
+const exampleColumn = {
+  $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
+  type: 'AdaptiveCard',
+  version: '1.0',
+  body: [
+    {
+      type: 'ColumnSet',
+      columns: [
+        {
+          type: 'Column',
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'Column 1',
+            },
+            {
+              type: 'Image',
+              url: 'https://adaptivecards.io/content/cats/1.png',
+            },
+          ],
+        },
+        {
+          type: 'Column',
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'Column 2',
+            },
+            {
+              type: 'Image',
+              url: 'https://adaptivecards.io/content/cats/1.png',
+            },
+          ],
+        },
+        {
+          type: 'Column',
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'Column 3',
+            },
+            {
+              type: 'Image',
+              url: 'https://adaptivecards.io/content/cats/1.png',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      type: 'ColumnSet',
+      columns: [
+        {
+          type: 'Column',
+          minHeight: '50px',
+          backgroundImage: 'https://adaptivecards.io/content/AlkiBeach.jpg',
+          width: 'auto',
+        },
+        {
+          type: 'Column',
+          minHeight: '50px',
+          backgroundImage: {
+            url: 'https://adaptivecards.io/content/GoldenGardensPark.jpg',
+            verticalAlignment: 'Center',
+          },
+          width: 'stretch',
+        },
+        {
+          type: 'Column',
+          minHeight: '50px',
+          backgroundImage: 'https://adaptivecards.io/content/BainbridgeIsland.jpg',
+          width: 'auto',
+        },
+      ],
+    },
+    {
+      type: 'TextBlock',
+      text: 'You can even repeat the background image...',
+    },
+    {
+      type: 'ColumnSet',
+      columns: [
+        {
+          type: 'Column',
+          minHeight: '50px',
+          backgroundImage: {
+            url: 'https://adaptivecards.io/content/uparrow.png',
+            fillMode: 'Repeat',
+          },
+          width: 'stretch',
+        },
+        {
+          type: 'Column',
+          horizontalAlignment: 'Center',
+          verticalContentAlignment: 'Center',
+          items: [
+            {
+              type: 'TextBlock',
+              horizontalAlignment: 'Center',
+              text: 'Those are some neat arrows',
+              wrap: true,
+            },
+          ],
+          width: 'stretch',
+        },
+      ],
+    },
+    {
+      type: 'TextBlock',
+      text: 'Horizontal repeat...',
+    },
+    {
+      type: 'ColumnSet',
+      columns: [
+        {
+          type: 'Column',
+          minHeight: '50px',
+          backgroundImage: {
+            url: 'https://adaptivecards.io/content/downarrow.png',
+            fillMode: 'RepeatHorizontally',
+          },
+          width: 'stretch',
+        },
+        {
+          type: 'Column',
+          minHeight: '50px',
+          backgroundImage: {
+            url: 'https://adaptivecards.io/content/uparrow.png',
+            fillMode: 'RepeatHorizontally',
+            verticalAlignment: 'Center',
+          },
+          width: 'stretch',
+        },
+        {
+          type: 'Column',
+          minHeight: '50px',
+          backgroundImage: {
+            url: 'https://adaptivecards.io/content/uparrow.png',
+            fillMode: 'RepeatHorizontally',
+            verticalAlignment: 'Bottom',
+          },
+          width: 'stretch',
+        },
+      ],
+    },
+    {
+      type: 'TextBlock',
+      text: 'Vertical repeat...',
+    },
+    {
+      type: 'ColumnSet',
+      columns: [
+        {
+          type: 'Column',
+          minHeight: '50px',
+          backgroundImage: {
+            url: 'https://adaptivecards.io/content/uparrow.png',
+            fillMode: 'RepeatVertically',
+          },
+          width: 'stretch',
+        },
+        {
+          type: 'Column',
+          minHeight: '50px',
+          backgroundImage: {
+            url: 'https://adaptivecards.io/content/downarrow.png',
+            fillMode: 'RepeatVertically',
+            horizontalAlignment: 'Center',
+          },
+          width: 'stretch',
+        },
+        {
+          type: 'Column',
+          minHeight: '50px',
+          backgroundImage: {
+            url: 'https://adaptivecards.io/content/uparrow.png',
+            fillMode: 'RepeatVertically',
+            horizontalAlignment: 'Right',
+          },
+          width: 'stretch',
+        },
+      ],
+    },
+    {
+      type: 'TextBlock',
+      text: 'Bleed left',
+    },
+    {
+      type: 'ColumnSet',
+      style: 'emphasis',
+      columns: [
+        {
+          type: 'Column',
+          style: 'good',
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'Column 1',
+            },
+          ],
+          bleed: true,
+          width: 'stretch',
+        },
+        {
+          type: 'Column',
+          style: 'attention',
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'Column 2',
+            },
+          ],
+          width: 'stretch',
+        },
+        {
+          type: 'Column',
+          style: 'warning',
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'Column 3',
+            },
+          ],
+          width: 'stretch',
+        },
+      ],
+    },
+    {
+      type: 'TextBlock',
+      text: 'Bleed center',
+    },
+    {
+      type: 'ColumnSet',
+      style: 'emphasis',
+      columns: [
+        {
+          type: 'Column',
+          style: 'good',
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'Column 1',
+            },
+          ],
+          width: 'stretch',
+        },
+        {
+          type: 'Column',
+          style: 'attention',
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'Column 2',
+            },
+          ],
+          bleed: true,
+          width: 'stretch',
+        },
+        {
+          type: 'Column',
+          style: 'warning',
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'Column 3',
+            },
+          ],
+          width: 'stretch',
+        },
+      ],
+    },
+    {
+      type: 'TextBlock',
+      text: 'Bleed right',
+    },
+    {
+      type: 'ColumnSet',
+      style: 'emphasis',
+      columns: [
+        {
+          type: 'Column',
+          style: 'good',
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'Column 1',
+            },
+          ],
+          width: 'stretch',
+        },
+        {
+          type: 'Column',
+          style: 'attention',
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'Column 2',
+            },
+          ],
+          width: 'stretch',
+        },
+        {
+          type: 'Column',
+          style: 'warning',
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'Column 3',
+            },
+          ],
+          bleed: true,
+          width: 'stretch',
+        },
+      ],
+    },
+    {
+      type: 'TextBlock',
+      text: 'Bleed all',
+    },
+    {
+      type: 'ColumnSet',
+      style: 'emphasis',
+      columns: [
+        {
+          type: 'Column',
+          style: 'good',
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'Column 1',
+            },
+          ],
+          bleed: true,
+          width: 'stretch',
+        },
+        {
+          type: 'Column',
+          style: 'attention',
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'Column 2',
+            },
+          ],
+          bleed: true,
+          width: 'stretch',
+        },
+        {
+          type: 'Column',
+          style: 'warning',
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'Column 3',
+            },
+          ],
+          bleed: true,
+          width: 'stretch',
+        },
+      ],
+    },
+    {
+      type: 'ColumnSet',
+      columns: [
+        {
+          type: 'Column',
+          items: [
+            {
+              type: 'Graph',
+            },
+          ],
+          fallback: {
+            type: 'Column',
+            items: [
+              {
+                type: 'TextBlock',
+                text: 'Fallback',
+              },
+            ],
+          },
+          width: 'auto',
+        },
+        {
+          type: 'Column',
+          items: [
+            {
+              type: 'Graph',
+            },
+          ],
+          fallback: 'drop',
+        },
+        {
+          type: 'Column',
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'This is a column',
+              wrap: true,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      type: 'ColumnSet',
+      style: 'emphasis',
+      minHeight: '100px',
+      columns: [
+        {
+          type: 'Column',
+          style: 'default',
+          minHeight: '200px',
+          items: [
+            {
+              type: 'TextBlock',
+              wrap: true,
+              text: 'The columnset has a minHeight of 100px while this column has a minHeight of 200px so it should override',
+            },
+          ],
+        },
+        {
+          type: 'Column',
+          style: 'default',
+          minHeight: '50px',
+          items: [
+            {
+              type: 'FactSet',
+              facts: [
+                {
+                  title: 'ColumnSet',
+                  value: 'MinHeight: 100px',
+                },
+                {
+                  title: 'Column 1',
+                  value: 'MinHeight: 200px',
+                },
+                {
+                  title: 'Column 2',
+                  value: 'MinHeight: 50px',
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      type: 'TextBlock',
+      text: 'The middle column is set to rtl',
+      wrap: true,
+      size: 'Medium',
+    },
+    {
+      type: 'ColumnSet',
+      columns: [
+        {
+          type: 'Column',
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'Column One',
+              wrap: true,
+            },
+          ],
+        },
+        {
+          type: 'Column',
+          rtl: true,
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'العمود الثاني',
+              wrap: true,
+            },
+          ],
+        },
+        {
+          type: 'Column',
+          items: [
+            {
+              type: 'TextBlock',
+              wrap: true,
+              text: 'Column three',
+            },
+          ],
+        },
+      ],
+      spacing: 'Medium',
+    },
+    {
+      type: 'Container',
+      items: [
+        {
+          type: 'ColumnSet',
+          columns: [
+            {
+              type: 'Column',
+              width: 'auto',
+              items: [
+                {
+                  type: 'Image',
+                  url: 'https://adaptivecards.io/content/cats/3.png',
+                  size: 'medium',
+                },
+                {
+                  type: 'TextBlock',
+                  text: 'SHADES',
+                  horizontalAlignment: 'center',
+                  weight: 'bolder',
+                },
+              ],
+            },
+            {
+              type: 'Column',
+              width: 'stretch',
+              separator: true,
+              spacing: 'medium',
+              items: [
+                {
+                  type: 'TextBlock',
+                  text: 'Dec 4',
+                  horizontalAlignment: 'center',
+                },
+                {
+                  type: 'TextBlock',
+                  text: 'Final',
+                  spacing: 'none',
+                  horizontalAlignment: 'center',
+                },
+                {
+                  type: 'TextBlock',
+                  text: '7 - 40',
+                  size: 'extraLarge',
+                  horizontalAlignment: 'center',
+                },
+              ],
+            },
+            {
+              type: 'Column',
+              width: 'auto',
+              separator: true,
+              spacing: 'medium',
+              items: [
+                {
+                  type: 'Image',
+                  url: 'https://adaptivecards.io/content/cats/2.png',
+                  size: 'medium',
+                  horizontalAlignment: 'center',
+                },
+                {
+                  type: 'TextBlock',
+                  text: 'SKINS',
+                  horizontalAlignment: 'center',
+                  weight: 'bolder',
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      type: 'TextBlock',
+      text: 'Try clicking a column!',
+      weight: 'bolder',
+    },
+    {
+      type: 'ColumnSet',
+      columns: [
+        {
+          type: 'Column',
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'Column 1',
+            },
+            {
+              type: 'Image',
+              url: 'https://adaptivecards.io/content/cats/1.png',
+            },
+          ],
+          selectAction: {
+            type: 'Action.OpenUrl',
+            tooltip: 'cool link',
+            url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+          },
+        },
+        {
+          type: 'Column',
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'Column 2',
+            },
+            {
+              type: 'Image',
+              url: 'https://adaptivecards.io/content/cats/1.png',
+            },
+          ],
+          selectAction: {
+            type: 'Action.OpenUrl',
+            tooltip: 'cool link',
+            url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+          },
+        },
+        {
+          type: 'Column',
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'Column 3',
+            },
+            {
+              type: 'Image',
+              url: 'https://adaptivecards.io/content/cats/1.png',
+            },
+          ],
+          selectAction: {
+            type: 'Action.OpenUrl',
+            tooltip: 'cool link',
+            url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+          },
+        },
+      ],
+    },
+    {
+      type: 'ColumnSet',
+      columns: [
+        {
+          type: 'Column',
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'No Style',
+            },
+          ],
+        },
+        {
+          type: 'Column',
+          style: 'default',
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'Default Style',
+            },
+          ],
+        },
+        {
+          type: 'Column',
+          style: 'emphasis',
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'Emphasis Style',
+            },
+            {
+              type: 'Container',
+              items: [
+                {
+                  type: 'TextBlock',
+                  text: 'Container no style',
+                },
+              ],
+            },
+            {
+              type: 'Container',
+              style: 'default',
+              items: [
+                {
+                  type: 'TextBlock',
+                  text: 'Container default style',
+                },
+              ],
+            },
+            {
+              type: 'Container',
+              style: 'emphasis',
+              items: [
+                {
+                  type: 'TextBlock',
+                  text: 'Container emphasis style',
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      type: 'TextBlock',
+      text: 'Hi,',
+    },
+    {
+      type: 'TextBlock',
+      text: 'MasterHip',
+      isSubtle: true,
+    },
+    {
+      type: 'ColumnSet',
+      height: 'stretch',
+      columns: [
+        {
+          type: 'Column',
+          verticalContentAlignment: 'bottom',
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'Column 1',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      type: 'ColumnSet',
+      columns: [
+        {
+          type: 'Column',
+          width: 'auto',
+          items: [
+            {
+              type: 'TextBlock',
+              text: '(auto)',
+            },
+            {
+              type: 'Image',
+              url: 'https://adaptivecards.io/content/adaptive-card-50.png',
+            },
+          ],
+        },
+        {
+          type: 'Column',
+          width: 'stretch',
+          items: [
+            {
+              type: 'TextBlock',
+              horizontalAlignment: 'center',
+              text: '(stretch)',
+            },
+            {
+              type: 'Image',
+              horizontalAlignment: 'center',
+              url: 'https://adaptivecards.io/content/adaptive-card-50.png',
+            },
+          ],
+        },
+        {
+          type: 'Column',
+          width: 'auto',
+          items: [
+            {
+              type: 'TextBlock',
+              text: '(auto)',
+            },
+            {
+              type: 'Image',
+              url: 'https://adaptivecards.io/content/adaptive-card-50.png',
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
+
+export const Card = Template.bind({});
+Card.args = {
+  data: exampleAdaptiveCard,
+};
+
 export const TextBlock = Template.bind({});
 TextBlock.args = {
   data: exampleTextBlock,
+};
+
+export const Column = Template.bind({});
+Column.args = {
+  data: exampleColumn,
 };
