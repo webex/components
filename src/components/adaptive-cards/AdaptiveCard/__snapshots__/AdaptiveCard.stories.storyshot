@@ -115,7 +115,6 @@ Array [
             ]
         }
     ],
-    "spacing": "Padding",
     "horizontalAlignment": "Center"
 }
       </pre>
@@ -191,8 +190,7 @@ Array [
             }
         }
     ],
-    "horizontalAlignment": "Left",
-    "spacing": "None"
+    "horizontalAlignment": "Left"
 }
       </pre>
     </div>
@@ -818,8 +816,7 @@ Array [
                 }
             ]
         }
-    ],
-    "spacing": "Medium"
+    ]
 }
       </pre>
     </div>
