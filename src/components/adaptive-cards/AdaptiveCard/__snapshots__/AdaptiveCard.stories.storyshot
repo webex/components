@@ -823,86 +823,85 @@ Array [
 }
       </pre>
     </div>
-    <div>
-      <h5>
-        Container Component
-      </h5>
-      <pre
-        className="wxc-adaptive-cards-unknown-component"
-      >
+    <div
+      className="wxc-container"
+    >
+      <div>
+        <h5>
+          ColumnSet Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "ColumnSet",
+    "columns": [
         {
-    "type": "Container",
-    "items": [
-        {
-            "type": "ColumnSet",
-            "columns": [
+            "type": "Column",
+            "width": "auto",
+            "items": [
                 {
-                    "type": "Column",
-                    "width": "auto",
-                    "items": [
-                        {
-                            "type": "Image",
-                            "url": "https://adaptivecards.io/content/cats/3.png",
-                            "size": "medium"
-                        },
-                        {
-                            "type": "TextBlock",
-                            "text": "SHADES",
-                            "horizontalAlignment": "center",
-                            "weight": "bolder"
-                        }
-                    ]
+                    "type": "Image",
+                    "url": "https://adaptivecards.io/content/cats/3.png",
+                    "size": "medium"
                 },
                 {
-                    "type": "Column",
-                    "width": "stretch",
-                    "separator": true,
-                    "spacing": "medium",
-                    "items": [
-                        {
-                            "type": "TextBlock",
-                            "text": "Dec 4",
-                            "horizontalAlignment": "center"
-                        },
-                        {
-                            "type": "TextBlock",
-                            "text": "Final",
-                            "spacing": "none",
-                            "horizontalAlignment": "center"
-                        },
-                        {
-                            "type": "TextBlock",
-                            "text": "7 - 40",
-                            "size": "extraLarge",
-                            "horizontalAlignment": "center"
-                        }
-                    ]
+                    "type": "TextBlock",
+                    "text": "SHADES",
+                    "horizontalAlignment": "center",
+                    "weight": "bolder"
+                }
+            ]
+        },
+        {
+            "type": "Column",
+            "width": "stretch",
+            "separator": true,
+            "spacing": "medium",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Dec 4",
+                    "horizontalAlignment": "center"
                 },
                 {
-                    "type": "Column",
-                    "width": "auto",
-                    "separator": true,
-                    "spacing": "medium",
-                    "items": [
-                        {
-                            "type": "Image",
-                            "url": "https://adaptivecards.io/content/cats/2.png",
-                            "size": "medium",
-                            "horizontalAlignment": "center"
-                        },
-                        {
-                            "type": "TextBlock",
-                            "text": "SKINS",
-                            "horizontalAlignment": "center",
-                            "weight": "bolder"
-                        }
-                    ]
+                    "type": "TextBlock",
+                    "text": "Final",
+                    "spacing": "none",
+                    "horizontalAlignment": "center"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "7 - 40",
+                    "size": "extraLarge",
+                    "horizontalAlignment": "center"
+                }
+            ]
+        },
+        {
+            "type": "Column",
+            "width": "auto",
+            "separator": true,
+            "spacing": "medium",
+            "items": [
+                {
+                    "type": "Image",
+                    "url": "https://adaptivecards.io/content/cats/2.png",
+                    "size": "medium",
+                    "horizontalAlignment": "center"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "SKINS",
+                    "horizontalAlignment": "center",
+                    "weight": "bolder"
                 }
             ]
         }
     ]
 }
-      </pre>
+        </pre>
+      </div>
     </div>
     <div
       className="wxc-text-block wxc-text-block__weight--bolder"
@@ -1141,6 +1140,206 @@ Array [
     ]
 }
       </pre>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Messaging/AdaptiveCard Container 1`] = `
+Array [
+  <div
+    className="wxc-adaptive-card"
+  >
+    <div
+      className="wxc-container"
+    >
+      <div
+        className="wxc-text-block "
+      >
+        This is some text
+      </div>
+      <img
+        className="wxc-adaptive-cards-image wxc-adaptive-cards-image__size--large"
+        src="https://adaptivecards.io/content/cats/1.png"
+        style={
+          Object {
+            "backgroundColor": undefined,
+            "height": undefined,
+            "width": undefined,
+          }
+        }
+      />
+    </div>
+    <div
+      className="wxc-container wxc-container__style--default"
+    >
+      <div
+        className="wxc-text-block "
+      >
+        This container has the default style
+      </div>
+      <div
+        className="wxc-text-block "
+      >
+        color: default
+      </div>
+      <div
+        className="wxc-text-block "
+      >
+        color: accent
+      </div>
+      <div
+        className="wxc-text-block "
+      >
+        color: good
+      </div>
+      <div
+        className="wxc-text-block "
+      >
+        color: warning
+      </div>
+      <div
+        className="wxc-text-block "
+      >
+        color: attention
+      </div>
+      <div
+        className="wxc-text-block "
+      >
+        color: light
+      </div>
+      <div
+        className="wxc-text-block "
+      >
+        color: dark
+      </div>
+    </div>
+    <div
+      className="wxc-container wxc-container__style--accent"
+    >
+      <div
+        className="wxc-text-block "
+      >
+        This container has the accent style
+      </div>
+      <div
+        className="wxc-text-block "
+      >
+        color: default
+      </div>
+      <div
+        className="wxc-text-block "
+      >
+        color: accent
+      </div>
+      <div
+        className="wxc-text-block "
+      >
+        color: good
+      </div>
+      <div
+        className="wxc-text-block "
+      >
+        color: warning
+      </div>
+      <div
+        className="wxc-text-block "
+      >
+        color: attention
+      </div>
+      <div
+        className="wxc-text-block "
+      >
+        color: light
+      </div>
+      <div
+        className="wxc-text-block "
+      >
+        color: dark
+      </div>
+      <div
+        className="wxc-container"
+      >
+        <div
+          className="wxc-text-block "
+        >
+          Contained container - no style
+        </div>
+      </div>
+      <div
+        className="wxc-container wxc-container__style--emphasis"
+      >
+        <div
+          className="wxc-text-block "
+        >
+          Contained container - emphasis
+        </div>
+      </div>
+      <div
+        className="wxc-container wxc-container__style--default"
+      >
+        <div
+          className="wxc-text-block "
+        >
+          Contained container - default
+        </div>
+      </div>
+      <div
+        className="wxc-container wxc-container__style--good"
+      >
+        <div
+          className="wxc-text-block "
+        >
+          Contained container - good
+        </div>
+      </div>
+      <div
+        className="wxc-container wxc-container__style--warning"
+      >
+        <div
+          className="wxc-text-block "
+        >
+          Contained container - warning
+        </div>
+      </div>
+      <div
+        className="wxc-container wxc-container__style--attention"
+      >
+        <div
+          className="wxc-text-block "
+        >
+          Contained container - attention
+        </div>
+      </div>
+      <div
+        className="wxc-container wxc-container__style--accent"
+      >
+        <div
+          className="wxc-text-block "
+        >
+          Contained container - accent
+        </div>
+      </div>
     </div>
   </div>,
   <video

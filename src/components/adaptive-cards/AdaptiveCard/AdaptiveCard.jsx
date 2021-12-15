@@ -4,6 +4,7 @@ import webexComponentClasses from '../../helpers';
 
 import Component from '../Component/Component';
 import '../Column/Column';
+import '../Container/Container';
 import '../Image/Image';
 import '../ImageSet/ImageSet';
 import '../InputDate/InputDate';
