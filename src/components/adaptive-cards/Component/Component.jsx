@@ -51,9 +51,43 @@ UnknownComponent.defaultProps = {
  * @returns {object} JSX of the component
  */
 export default function Component({data, parentData}) {
+  const [cssClasses, sc] = webexComponentClasses('adaptive-cards-component');
+  const classes = [];
+  const getClass = (key, value) => sc(`${key}--${value}`);
+  const {
+    separator,
+    spacing,
+    isVisible,
+    ...compData
+  } = data;
+
+  for (const [key, value] of Object.entries(data)) {
+    switch (key) {
+      case 'separator':
+      case 'spacing':
+      case 'isVisible':
+        classes.push(getClass(key, value));
+        break;
+      default:
+        break;
+    }
+  }
+
+  const containerType = containerTypes[data.type];
+
+  if (containerType) {
+    classes.push(getClass('container', containerType));
+  }
+
   const C = componentTypes[data.type] || UnknownComponent;
 
-  return <C data={data} parentData={parentData} />;
+  return (
+    <C
+      data={compData}
+      className={`${cssClasses} ${classes.join(' ')}`}
+      parentData={parentData}
+    />
+  );
 }
 
 Component.propTypes = {
