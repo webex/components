@@ -1,3 +1,10 @@
+# [1.212.0](https://github.com/webex/components/compare/v1.211.2...v1.212.0) (2021-12-15)
+
+
+### Features
+
+* **TextBlock:** create TextBlock component ([4a20f59](https://github.com/webex/components/commit/4a20f594580967c4d15adfcc5471284591f9c607))
+
 ## [1.211.2](https://github.com/webex/components/compare/v1.211.1...v1.211.2) (2021-12-14)
 
 
