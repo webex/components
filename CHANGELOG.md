@@ -1,3 +1,10 @@
+# [1.214.0](https://github.com/webex/components/compare/v1.213.0...v1.214.0) (2021-12-16)
+
+
+### Features
+
+* **Image:** create Image component ([4140b0a](https://github.com/webex/components/commit/4140b0afef77d36ef4b8a8a00116d0a77acccbc5))
+
 # [1.213.0](https://github.com/webex/components/compare/v1.212.1...v1.213.0) (2021-12-16)
 
 
