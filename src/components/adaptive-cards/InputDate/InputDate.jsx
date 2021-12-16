@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {registerComponent} from '../Component/Component';
 
 /**
  * Adaptive Cards Input.Date component
@@ -27,3 +28,5 @@ export default function InputDate({data}) {
 InputDate.propTypes = {
   data: PropTypes.shape().isRequired,
 };
+
+registerComponent('Input.Date', InputDate);

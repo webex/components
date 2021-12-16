@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {registerComponent} from '../Component/Component';
 
 /**
  * Adaptive Cards Input.Toggle component
@@ -18,3 +19,5 @@ export default function InputToggle({data}) {
 InputToggle.propTypes = {
   data: PropTypes.shape().isRequired,
 };
+
+registerComponent('Input.Toggle', InputToggle);

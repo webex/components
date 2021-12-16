@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {registerComponent} from '../Component/Component';
 
 /**
  * Adaptive Cards Input.Time component
@@ -25,3 +26,5 @@ export default function InputTime({data}) {
 InputTime.propTypes = {
   data: PropTypes.shape().isRequired,
 };
+
+registerComponent('Input.Time', InputTime);

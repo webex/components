@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {registerComponent} from '../Component/Component';
 
 /**
  * Adaptive Cards Input.Number component
@@ -18,3 +19,5 @@ export default function InputNumber({data}) {
 InputNumber.propTypes = {
   data: PropTypes.shape().isRequired,
 };
+
+registerComponent('Input.Number', InputNumber);
