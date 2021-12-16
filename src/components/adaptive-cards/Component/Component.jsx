@@ -2,21 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 
-import InputDate from '../InputDate/InputDate';
-import InputNumber from '../InputNumber/InputNumber';
-import InputText from '../InputText/InputText';
-import InputTime from '../InputTime/InputTime';
-import InputToggle from '../InputToggle/InputToggle';
-import TextBlock from '../TextBlock/TextBlock';
+const componentTypes = {};
+const containerTypes = {};
 
-const componentTypes = {
-  'Input.Date': InputDate,
-  'Input.Number': InputNumber,
-  'Input.Text': InputText,
-  'Input.Time': InputTime,
-  'Input.Toggle': InputToggle,
-  TextBlock,
-};
+/**
+ * Registers a component
+ *
+ * @param {string} type  Type of the component eg. Input.Text
+ * @param {Function} component  The component that needs to be registered
+ * @param {'horizontal'|'vertical'} [containerType]  Specifies the container type
+ */
+export function registerComponent(type, component, containerType) {
+  componentTypes[type] = component;
+  containerTypes[type] = containerType;
+}
 
 /**
  * UnknownComponent

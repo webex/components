@@ -3,6 +3,12 @@ import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 
 import Component from '../Component/Component';
+import '../InputDate/InputDate';
+import '../InputNumber/InputNumber';
+import '../InputText/InputText';
+import '../InputTime/InputTime';
+import '../InputToggle/InputToggle';
+import '../TextBlock/TextBlock';
 
 /**
  * AdaptiveCard component
@@ -16,7 +22,8 @@ export default function AdaptiveCard({data}) {
 
   return (
     <div className={cssClasses}>
-      {data.body.map((item) => <Component data={item} />)}
+      {/* eslint-disable react/no-array-index-key */}
+      {data.body.map((item, index) => <Component data={item} key={index} />)}
     </div>
   );
 }

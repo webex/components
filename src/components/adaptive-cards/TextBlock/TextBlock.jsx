@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
+import {registerComponent} from '../Component/Component';
 
 /**
  * Adaptive Cards TextBlock component
@@ -45,3 +46,5 @@ export default function TextBlock({data}) {
 TextBlock.propTypes = {
   data: PropTypes.shape().isRequired,
 };
+
+registerComponent('TextBlock', TextBlock);
