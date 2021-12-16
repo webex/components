@@ -1239,6 +1239,94 @@ Array [
 ]
 `;
 
+exports[`Storyshots Messaging/AdaptiveCard Image Set 1`] = `
+Array [
+  <div
+    className="wxc-adaptive-card"
+  >
+    <div
+      className="wxc-adaptive-cards-image-set"
+    >
+      <img
+        className="wxc-adaptive-cards-image wxc-adaptive-cards-image__style--person wxc-adaptive-cards-image__size--large"
+        src="https://adaptivecards.io/content/cats/1.png"
+        style={
+          Object {
+            "backgroundColor": "red",
+            "height": undefined,
+            "width": undefined,
+          }
+        }
+      />
+      <img
+        className="wxc-adaptive-cards-image wxc-adaptive-cards-image__size--medium"
+        src="https://adaptivecards.io/content/cats/3.png"
+        style={
+          Object {
+            "backgroundColor": undefined,
+            "height": undefined,
+            "width": undefined,
+          }
+        }
+      />
+      <img
+        className="wxc-adaptive-cards-image wxc-adaptive-cards-image__size--small"
+        src="https://adaptivecards.io/content/cats/1.png"
+        style={
+          Object {
+            "backgroundColor": undefined,
+            "height": undefined,
+            "width": undefined,
+          }
+        }
+      />
+      <img
+        className="wxc-adaptive-cards-image wxc-adaptive-cards-image__size--medium"
+        src="https://adaptivecards.io/content/cats/1.png"
+        style={
+          Object {
+            "backgroundColor": "#cdcdcd",
+            "height": "60px",
+            "width": "60px",
+          }
+        }
+      />
+      <img
+        className="wxc-adaptive-cards-image wxc-adaptive-cards-image__size--medium"
+        src="https://adaptivecards.io/content/cats/2.png"
+        style={
+          Object {
+            "backgroundColor": undefined,
+            "height": undefined,
+            "width": undefined,
+          }
+        }
+      />
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
 exports[`Storyshots Messaging/AdaptiveCard Text Block 1`] = `
 Array [
   <div
