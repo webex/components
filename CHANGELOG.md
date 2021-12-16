@@ -1,3 +1,10 @@
+## [1.212.1](https://github.com/webex/components/compare/v1.212.0...v1.212.1) (2021-12-16)
+
+
+### Bug Fixes
+
+* **AdaptiveCardsComponent:** dynamically register components ([9b10324](https://github.com/webex/components/commit/9b10324bda3b2f7e776a9e77b655b556cebf8920))
+
 # [1.212.0](https://github.com/webex/components/compare/v1.211.2...v1.212.0) (2021-12-15)
 
 
