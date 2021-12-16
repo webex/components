@@ -1,3 +1,10 @@
+# [1.213.0](https://github.com/webex/components/compare/v1.212.1...v1.213.0) (2021-12-16)
+
+
+### Features
+
+* **Column:** create Column component ([18484a3](https://github.com/webex/components/commit/18484a35511c0f251d57f495632c9c47706785c6))
+
 ## [1.212.1](https://github.com/webex/components/compare/v1.212.0...v1.212.1) (2021-12-16)
 
 
