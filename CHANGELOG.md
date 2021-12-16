@@ -1,3 +1,10 @@
+# [1.215.0](https://github.com/webex/components/compare/v1.214.0...v1.215.0) (2021-12-16)
+
+
+### Features
+
+* **ImageSet:** create ImageSet component ([e4cf4e9](https://github.com/webex/components/commit/e4cf4e98baacaac419dd997d6f61a1afeaa59031))
+
 # [1.214.0](https://github.com/webex/components/compare/v1.213.0...v1.214.0) (2021-12-16)
 
 
