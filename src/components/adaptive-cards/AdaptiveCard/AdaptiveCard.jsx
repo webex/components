@@ -4,6 +4,7 @@ import webexComponentClasses from '../../helpers';
 
 import Component from '../Component/Component';
 import '../Column/Column';
+import '../Image/Image';
 import '../InputDate/InputDate';
 import '../InputNumber/InputNumber';
 import '../InputText/InputText';
@@ -24,7 +25,7 @@ export default function AdaptiveCard({data}) {
   return (
     <div className={cssClasses}>
       {/* eslint-disable react/no-array-index-key */}
-      {data.body.map((item, index) => <Component data={item} key={index} />)}
+      {data.body.map((item, index) => <Component data={item} key={index} parentData={data} />)}
     </div>
   );
 }

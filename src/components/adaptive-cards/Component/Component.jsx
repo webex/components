@@ -47,14 +47,20 @@ UnknownComponent.defaultProps = {
  *
  * @param {object} props  React properties
  * @param {object} props.data  Active Cards definition
+ * @param {object} props.parentData  Parent Card definition
  * @returns {object} JSX of the component
  */
-export default function Component({data}) {
+export default function Component({data, parentData}) {
   const C = componentTypes[data.type] || UnknownComponent;
 
-  return <C data={data} />;
+  return <C data={data} parentData={parentData} />;
 }
 
 Component.propTypes = {
   data: PropTypes.shape().isRequired,
+  parentData: PropTypes.shape(),
+};
+
+Component.defaultProps = {
+  parentData: {},
 };
