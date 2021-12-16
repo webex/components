@@ -1106,6 +1106,38 @@ const exampleColumn = {
   ],
 };
 
+const exampleImage = {
+  $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
+  type: 'AdaptiveCard',
+  version: '1.2',
+  body: [
+    {
+      type: 'Image',
+      url: 'https://adaptivecards.io/content/cats/1.png',
+      backgroundColor: 'blue',
+      size: 'medium',
+      style: 'person',
+    },
+    {
+      type: 'Image',
+      url: 'https://adaptivecards.io/content/cats/1.png',
+      width: '60px',
+      height: '60px',
+      size: 'small',
+    },
+    {
+      type: 'Image',
+      backgroundColor: '#cdcdcd',
+      url: 'https://adaptivecards.io/content/cats/2.png',
+      size: 'large',
+    },
+    {
+      type: 'Image',
+      url: 'https://adaptivecards.io/content/cats/3.png',
+    },
+  ],
+};
+
 export const Card = Template.bind({});
 Card.args = {
   data: exampleAdaptiveCard,
@@ -1119,4 +1151,9 @@ TextBlock.args = {
 export const Column = Template.bind({});
 Column.args = {
   data: exampleColumn,
+};
+
+export const Image = Template.bind({});
+Image.args = {
+  data: exampleImage,
 };
