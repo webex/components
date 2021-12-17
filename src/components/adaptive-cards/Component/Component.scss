@@ -59,6 +59,12 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-ac;
 
 .#{$C}-container--horizontal {
   display: flex;
+  flex-direction: row;
+
+  > .#{$C}-height {
+    &--auto { height: auto; }
+    &--stretch { align-self: stretch; }
+  }
 
   > .#{$C}-separator--true:not(:first-child) {
      border-left: 1px solid var(--wxc-adaptive-cards--separator-color);
@@ -87,6 +93,17 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-ac;
 .#{$C}-container--vertical {
   display: flex;
   flex-direction: column;
+
+  > .#{$C}-height {
+    &--auto { height: auto; }
+    &--stretch { flex: 1; }
+  }
+
+  &.#{$C}-vertical-content-alignment {
+    &--top { justify-content: flex-start; }
+    &--center { justify-content: center; }
+    &--bottom { justify-content: flex-end; }
+  }
 
   > .#{$C}-separator--true:not(:first-child) {
      border-top: 1px solid var(--wxc-adaptive-cards--separator-color);;
@@ -139,3 +156,4 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-ac;
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-adaptive-cards-unknown-component {
   white-space: pre-wrap;
 }
+

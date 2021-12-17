@@ -9,14 +9,15 @@ import Component, {acPropTypes, registerComponent} from '../Component/Component'
  *
  * @param {object} props  React props passed to the component
  * @param {object} props.data  Active cards definition
- * @param {string} props.className  Custom CSS class to apply
+ * @param {string} [props.className]  Custom CSS class to apply
+ * @param {object} [props.style]  Custom style to apply
  * @returns {object} JSX of the component
  */
-export default function Container({data, className}) {
+export default function Container({data, className, style}) {
   const [cssClasses] = webexComponentClasses('container', className);
 
   return (
-    <div className={cssClasses}>
+    <div className={cssClasses} style={style}>
       {/* eslint-disable react/no-array-index-key */}
       {data.items.map((item, index) => (
         <Component data={item} key={index} />
@@ -28,22 +29,27 @@ export default function Container({data, className}) {
 Container.propTypes = {
   data: PropTypes.shape().isRequired,
   className: PropTypes.string,
+  style: PropTypes.shape(),
 };
 
 Container.defaultProps = {
   className: '',
+  style: undefined,
 };
 
 Container.acPropTypes = {
   bleed: acPropTypes.bleed,
+  height: acPropTypes.height,
   id: acPropTypes.id,
   isVisible: acPropTypes.isVisible,
   items: acPropTypes.children,
+  minHeight: acPropTypes.minHeight,
   rtl: acPropTypes.rtl,
   separator: acPropTypes.separator,
   spacing: acPropTypes.spacing,
   style: acPropTypes.containerStyle,
   type: acPropTypes.type,
+  verticalContentAlignment: acPropTypes.verticalContentAlignment,
 };
 
 registerComponent('Container', Container, 'vertical');

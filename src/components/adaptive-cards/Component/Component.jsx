@@ -12,18 +12,21 @@ export const acPropTypes = {
   containerStyle: 'container-style',
   defaultImageSize: 'default-image-size',
   fontType: 'font-type',
+  height: 'height',
   horizontalAlignment: 'horizontal-alignment',
   id: 'id',
   imageSize: 'image-size',
   imageStyle: 'image-style',
   isSubtle: 'is-subtle',
   isVisible: 'is-visible',
+  minHeight: 'min-height',
   rtl: 'rtl',
   separator: 'separator',
   size: 'size',
   spacing: 'spacing',
   text: 'text',
   type: 'type',
+  verticalContentAlignment: 'vertical-content-alignment',
   weight: 'weight',
   wrap: 'wrap',
 };
@@ -76,13 +79,14 @@ export default function Component({data}) {
   const C = componentTypes[data.type] || UnknownComponent;
   const classes = [];
   const getClass = (propType, value) => `wxc-ac-${propType}--${value}`;
+  const style = {};
 
   for (const [prop, value] of Object.entries(data)) {
     const propType = (C.acPropTypes && C.acPropTypes[prop]) || undefined;
 
     switch (propType) {
       case undefined:
-        console.log('Unknown property', prop);
+        console.log('[Component]', 'Unknown property', prop);
         break;
       case acPropTypes.action:
       case acPropTypes.children:
@@ -96,6 +100,16 @@ export default function Component({data}) {
         if (value && value !== 'default') {
           classes.push(getClass('container', 'has-padding'));
         }
+        break;
+      case acPropTypes.height:
+        if (value === 'auto' || value === 'stretch') {
+          classes.push(getClass(propType, value));
+        } else {
+          style.height = data.height;
+        }
+        break;
+      case acPropTypes.minHeight:
+        style.minHeight = data.minHeight;
         break;
       default:
         classes.push(getClass(propType, value));
@@ -113,6 +127,7 @@ export default function Component({data}) {
     <C
       data={data}
       className={classes.join(' ')}
+      style={style}
     />
   );
 }

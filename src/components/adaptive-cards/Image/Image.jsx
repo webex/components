@@ -9,10 +9,11 @@ import {acPropTypes, registerComponent} from '../Component/Component';
  *
  * @param {object} props  React props passed to the component
  * @param {object} props.data  Active cards definition
- * @param {string} props.className  Custom CSS class to apply
+ * @param {string} [props.className]  Custom CSS class to apply
+ * @param {object} [props.style]  Custom style to apply
  * @returns {object} JSX of the component
  */
-export default function Image({data, className}) {
+export default function Image({data, className, style}) {
   const [cssClasses] = webexComponentClasses('adaptive-cards-image', className);
 
   return (
@@ -21,9 +22,9 @@ export default function Image({data, className}) {
       className={cssClasses}
       alt={data.altText}
       style={{
+        ...style,
         backgroundColor: data.backgroundColor,
         width: data.width,
-        height: data.height,
       }}
     />
   );
@@ -32,13 +33,16 @@ export default function Image({data, className}) {
 Image.propTypes = {
   data: PropTypes.shape().isRequired,
   className: PropTypes.string,
+  style: PropTypes.shape(),
 };
 
 Image.defaultProps = {
   className: '',
+  style: undefined,
 };
 
 Image.acPropTypes = {
+  height: acPropTypes.height,
   horizontalAlignment: acPropTypes.horizontalAlignment,
   id: acPropTypes.id,
   isVisible: acPropTypes.isVisible,
