@@ -1,3 +1,12 @@
+# [1.216.0](https://github.com/webex/components/compare/v1.215.0...v1.216.0) (2021-12-17)
+
+
+### Features
+
+* **AdaptiveCardsColumnSet:** create ColumnSet component ([0b2b614](https://github.com/webex/components/commit/0b2b61462ede62f252700daf081ccf3abe6171b7))
+* **AdaptiveCardsComponent:** implement inherited properties 'separator', 'spacing' and 'isVisible' ([26bcbab](https://github.com/webex/components/commit/26bcbabb997d0f9e6456d1cdb0a4d581c0757a15))
+* **AdaptiveCardsContainer:** create Container component ([6c45209](https://github.com/webex/components/commit/6c4520911b1c50537a73ebeea01f0e538ed0437b))
+
 # [1.215.0](https://github.com/webex/components/compare/v1.214.0...v1.215.0) (2021-12-16)
 
 
