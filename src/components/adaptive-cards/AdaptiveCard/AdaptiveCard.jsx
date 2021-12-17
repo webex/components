@@ -6,6 +6,7 @@ import Component from '../Component/Component';
 import '../Column/Column';
 import '../ColumnSet/ColumnSet';
 import '../Container/Container';
+import '../FactSet/FactSet';
 import '../Image/Image';
 import '../ImageSet/ImageSet';
 import '../InputDate/InputDate';

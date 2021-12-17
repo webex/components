@@ -1613,6 +1613,35 @@ const exampleRichTextBlock = {
   ],
 };
 
+const exampleFactSet = {
+  $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
+  type: 'AdaptiveCard',
+  version: '1.0',
+  body: [
+    {
+      type: 'FactSet',
+      facts: [
+        {
+          title: 'Fact 1',
+          value: 'Value 1',
+        },
+        {
+          title: 'Fact 2',
+          value: 'Value 2',
+        },
+        {
+          title: 'Fact 3',
+          value: 'Value 3',
+        },
+        {
+          title: 'Fact 4',
+          value: 'Value 5',
+        },
+      ],
+    },
+  ],
+};
+
 export const Card = Template.bind({});
 Card.args = {
   data: exampleAdaptiveCard,
@@ -1651,4 +1680,9 @@ ColumnSet.args = {
 export const RichTextBlock = Template.bind({});
 RichTextBlock.args = {
   data: exampleRichTextBlock,
+};
+
+export const FactSet = Template.bind({});
+FactSet.args = {
+  data: exampleFactSet,
 };
