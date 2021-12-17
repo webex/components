@@ -5,119 +5,80 @@ Array [
   <div
     className="wxc-adaptive-card"
   >
-    <div>
-      <h5>
-        ColumnSet Component
-      </h5>
-      <pre
-        className="wxc-adaptive-cards-unknown-component"
+    <div
+      className="wxc-adaptive-cards-column-set wxc-adaptive-cards-component wxc-adaptive-cards-component__container--vertical "
+    >
+      <div
+        className="wxc-column "
       >
-        {
-    "type": "ColumnSet",
-    "columns": [
-        {
-            "type": "Column",
-            "items": [
-                {
-                    "type": "Image",
-                    "style": "Person",
-                    "url": "https://developer.webex.com/images/webex-teams-logo.png",
-                    "size": "Medium",
-                    "height": "50px"
-                }
-            ],
-            "width": "auto"
-        },
-        {
-            "type": "Column",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Cisco Webex Teams",
-                    "weight": "Lighter",
-                    "color": "Accent"
-                },
-                {
-                    "type": "TextBlock",
-                    "weight": "Bolder",
-                    "text": "Buttons and Cards Release",
-                    "horizontalAlignment": "Left",
-                    "wrap": true,
-                    "color": "Light",
-                    "size": "Large",
-                    "spacing": "Small"
-                }
-            ],
-            "width": "stretch"
-        }
-    ]
-}
-      </pre>
+        <img
+          className="wxc-adaptive-cards-image wxc-adaptive-cards-image__style--Person wxc-adaptive-cards-image__size--Medium"
+          src="https://developer.webex.com/images/webex-teams-logo.png"
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "height": "50px",
+              "width": undefined,
+            }
+          }
+        />
+      </div>
+      <div
+        className="wxc-column "
+      >
+        <div
+          className="wxc-text-block wxc-text-block__weight--Lighter"
+        >
+          Cisco Webex Teams
+        </div>
+        <div
+          className="wxc-text-block wxc-text-block__weight--Bolder wxc-text-block__horizontalAlignment--Left wxc-text-block__wrap--true wxc-text-block__size--Large"
+        >
+          Buttons and Cards Release
+        </div>
+      </div>
     </div>
-    <div>
-      <h5>
-        ColumnSet Component
-      </h5>
-      <pre
-        className="wxc-adaptive-cards-unknown-component"
+    <div
+      className="wxc-adaptive-cards-column-set wxc-adaptive-cards-component wxc-adaptive-cards-component__spacing--Padding wxc-adaptive-cards-component__container--vertical "
+    >
+      <div
+        className="wxc-column "
       >
-        {
-    "type": "ColumnSet",
-    "columns": [
-        {
-            "type": "Column",
-            "width": 35,
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Release Date:",
-                    "color": "Light"
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "Product:",
-                    "weight": "Lighter",
-                    "color": "Light",
-                    "spacing": "Small"
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "OS:",
-                    "weight": "Lighter",
-                    "color": "Light",
-                    "spacing": "Small"
-                }
-            ]
-        },
-        {
-            "type": "Column",
-            "width": 65,
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Aug 6, 2019",
-                    "color": "Light"
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "Webex Teams",
-                    "color": "Light",
-                    "weight": "Lighter",
-                    "spacing": "Small"
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "Mac, Windows, Web",
-                    "weight": "Lighter",
-                    "color": "Light",
-                    "spacing": "Small"
-                }
-            ]
-        }
-    ],
-    "horizontalAlignment": "Center"
-}
-      </pre>
+        <div
+          className="wxc-text-block "
+        >
+          Release Date:
+        </div>
+        <div
+          className="wxc-text-block wxc-text-block__weight--Lighter"
+        >
+          Product:
+        </div>
+        <div
+          className="wxc-text-block wxc-text-block__weight--Lighter"
+        >
+          OS:
+        </div>
+      </div>
+      <div
+        className="wxc-column "
+      >
+        <div
+          className="wxc-text-block "
+        >
+          Aug 6, 2019
+        </div>
+        <div
+          className="wxc-text-block wxc-text-block__weight--Lighter"
+        >
+          Webex Teams
+        </div>
+        <div
+          className="wxc-text-block wxc-text-block__weight--Lighter"
+        >
+          Mac, Windows, Web
+        </div>
+      </div>
     </div>
     <div
       className="wxc-text-block wxc-text-block__wrap--true"
@@ -129,48 +90,34 @@ Array [
     >
       Buttons and Cards Resources:
     </div>
-    <div>
-      <h5>
-        ColumnSet Component
-      </h5>
-      <pre
-        className="wxc-adaptive-cards-unknown-component"
+    <div
+      className="wxc-adaptive-cards-column-set wxc-adaptive-cards-component wxc-adaptive-cards-component__container--vertical "
+    >
+      <div
+        className="wxc-column "
       >
-        {
-    "type": "ColumnSet",
-    "columns": [
-        {
-            "type": "Column",
-            "width": "auto",
-            "items": [
-                {
-                    "type": "Image",
-                    "altText": "",
-                    "url": "https://developer.webex.com/images/link-icon.png",
-                    "size": "Small",
-                    "width": "30px"
-                }
-            ],
-            "spacing": "Small"
-        },
-        {
-            "type": "Column",
-            "width": "auto",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "[Developer Portal Buttons and Cards Guide]()",
-                    "horizontalAlignment": "Left",
-                    "size": "Medium"
-                }
-            ],
-            "verticalContentAlignment": "Center",
-            "horizontalAlignment": "Left",
-            "spacing": "Small"
-        }
-    ]
-}
-      </pre>
+        <img
+          alt=""
+          className="wxc-adaptive-cards-image wxc-adaptive-cards-image__size--Small"
+          src="https://developer.webex.com/images/link-icon.png"
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "height": undefined,
+              "width": "30px",
+            }
+          }
+        />
+      </div>
+      <div
+        className="wxc-column "
+      >
+        <div
+          className="wxc-text-block wxc-text-block__horizontalAlignment--Left wxc-text-block__size--Medium"
+        >
+          [Developer Portal Buttons and Cards Guide]()
+        </div>
+      </div>
     </div>
     <div>
       <h5>
@@ -223,681 +170,473 @@ Array [
   <div
     className="wxc-adaptive-card"
   >
-    <div>
-      <h5>
-        ColumnSet Component
-      </h5>
-      <pre
-        className="wxc-adaptive-cards-unknown-component"
+    <div
+      className="wxc-adaptive-cards-column-set wxc-adaptive-cards-component wxc-adaptive-cards-component__container--vertical "
+    >
+      <div
+        className="wxc-column "
       >
-        {
-    "type": "ColumnSet",
-    "columns": [
-        {
-            "type": "Column",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Column 1"
-                },
-                {
-                    "type": "Image",
-                    "url": "https://adaptivecards.io/content/cats/1.png"
-                }
-            ]
-        },
-        {
-            "type": "Column",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Column 2"
-                },
-                {
-                    "type": "Image",
-                    "url": "https://adaptivecards.io/content/cats/1.png"
-                }
-            ]
-        },
-        {
-            "type": "Column",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Column 3"
-                },
-                {
-                    "type": "Image",
-                    "url": "https://adaptivecards.io/content/cats/1.png"
-                }
-            ]
-        }
-    ]
-}
-      </pre>
+        <div
+          className="wxc-text-block "
+        >
+          Column 1
+        </div>
+        <img
+          className="wxc-adaptive-cards-image wxc-adaptive-cards-image__size--medium"
+          src="https://adaptivecards.io/content/cats/1.png"
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "height": undefined,
+              "width": undefined,
+            }
+          }
+        />
+      </div>
+      <div
+        className="wxc-column "
+      >
+        <div
+          className="wxc-text-block "
+        >
+          Column 2
+        </div>
+        <img
+          className="wxc-adaptive-cards-image wxc-adaptive-cards-image__size--medium"
+          src="https://adaptivecards.io/content/cats/1.png"
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "height": undefined,
+              "width": undefined,
+            }
+          }
+        />
+      </div>
+      <div
+        className="wxc-column "
+      >
+        <div
+          className="wxc-text-block "
+        >
+          Column 3
+        </div>
+        <img
+          className="wxc-adaptive-cards-image wxc-adaptive-cards-image__size--medium"
+          src="https://adaptivecards.io/content/cats/1.png"
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "height": undefined,
+              "width": undefined,
+            }
+          }
+        />
+      </div>
     </div>
-    <div>
-      <h5>
-        ColumnSet Component
-      </h5>
-      <pre
-        className="wxc-adaptive-cards-unknown-component"
-      >
-        {
-    "type": "ColumnSet",
-    "columns": [
-        {
-            "type": "Column",
-            "minHeight": "50px",
-            "backgroundImage": "https://adaptivecards.io/content/AlkiBeach.jpg",
-            "width": "auto"
-        },
-        {
-            "type": "Column",
-            "minHeight": "50px",
-            "backgroundImage": {
-                "url": "https://adaptivecards.io/content/GoldenGardensPark.jpg",
-                "verticalAlignment": "Center"
-            },
-            "width": "stretch"
-        },
-        {
-            "type": "Column",
-            "minHeight": "50px",
-            "backgroundImage": "https://adaptivecards.io/content/BainbridgeIsland.jpg",
-            "width": "auto"
-        }
-    ]
-}
-      </pre>
+    <div
+      className="wxc-adaptive-cards-column-set wxc-adaptive-cards-component wxc-adaptive-cards-component__container--vertical "
+    >
+      <div
+        className="wxc-column "
+      />
+      <div
+        className="wxc-column "
+      />
+      <div
+        className="wxc-column "
+      />
     </div>
     <div
       className="wxc-text-block "
     >
       You can even repeat the background image...
     </div>
-    <div>
-      <h5>
-        ColumnSet Component
-      </h5>
-      <pre
-        className="wxc-adaptive-cards-unknown-component"
+    <div
+      className="wxc-adaptive-cards-column-set wxc-adaptive-cards-component wxc-adaptive-cards-component__container--vertical "
+    >
+      <div
+        className="wxc-column "
+      />
+      <div
+        className="wxc-column "
       >
-        {
-    "type": "ColumnSet",
-    "columns": [
-        {
-            "type": "Column",
-            "minHeight": "50px",
-            "backgroundImage": {
-                "url": "https://adaptivecards.io/content/uparrow.png",
-                "fillMode": "Repeat"
-            },
-            "width": "stretch"
-        },
-        {
-            "type": "Column",
-            "horizontalAlignment": "Center",
-            "verticalContentAlignment": "Center",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "horizontalAlignment": "Center",
-                    "text": "Those are some neat arrows",
-                    "wrap": true
-                }
-            ],
-            "width": "stretch"
-        }
-    ]
-}
-      </pre>
+        <div
+          className="wxc-text-block wxc-text-block__horizontalAlignment--Center wxc-text-block__wrap--true"
+        >
+          Those are some neat arrows
+        </div>
+      </div>
     </div>
     <div
       className="wxc-text-block "
     >
       Horizontal repeat...
     </div>
-    <div>
-      <h5>
-        ColumnSet Component
-      </h5>
-      <pre
-        className="wxc-adaptive-cards-unknown-component"
-      >
-        {
-    "type": "ColumnSet",
-    "columns": [
-        {
-            "type": "Column",
-            "minHeight": "50px",
-            "backgroundImage": {
-                "url": "https://adaptivecards.io/content/downarrow.png",
-                "fillMode": "RepeatHorizontally"
-            },
-            "width": "stretch"
-        },
-        {
-            "type": "Column",
-            "minHeight": "50px",
-            "backgroundImage": {
-                "url": "https://adaptivecards.io/content/uparrow.png",
-                "fillMode": "RepeatHorizontally",
-                "verticalAlignment": "Center"
-            },
-            "width": "stretch"
-        },
-        {
-            "type": "Column",
-            "minHeight": "50px",
-            "backgroundImage": {
-                "url": "https://adaptivecards.io/content/uparrow.png",
-                "fillMode": "RepeatHorizontally",
-                "verticalAlignment": "Bottom"
-            },
-            "width": "stretch"
-        }
-    ]
-}
-      </pre>
+    <div
+      className="wxc-adaptive-cards-column-set wxc-adaptive-cards-component wxc-adaptive-cards-component__container--vertical "
+    >
+      <div
+        className="wxc-column "
+      />
+      <div
+        className="wxc-column "
+      />
+      <div
+        className="wxc-column "
+      />
     </div>
     <div
       className="wxc-text-block "
     >
       Vertical repeat...
     </div>
-    <div>
-      <h5>
-        ColumnSet Component
-      </h5>
-      <pre
-        className="wxc-adaptive-cards-unknown-component"
-      >
-        {
-    "type": "ColumnSet",
-    "columns": [
-        {
-            "type": "Column",
-            "minHeight": "50px",
-            "backgroundImage": {
-                "url": "https://adaptivecards.io/content/uparrow.png",
-                "fillMode": "RepeatVertically"
-            },
-            "width": "stretch"
-        },
-        {
-            "type": "Column",
-            "minHeight": "50px",
-            "backgroundImage": {
-                "url": "https://adaptivecards.io/content/downarrow.png",
-                "fillMode": "RepeatVertically",
-                "horizontalAlignment": "Center"
-            },
-            "width": "stretch"
-        },
-        {
-            "type": "Column",
-            "minHeight": "50px",
-            "backgroundImage": {
-                "url": "https://adaptivecards.io/content/uparrow.png",
-                "fillMode": "RepeatVertically",
-                "horizontalAlignment": "Right"
-            },
-            "width": "stretch"
-        }
-    ]
-}
-      </pre>
+    <div
+      className="wxc-adaptive-cards-column-set wxc-adaptive-cards-component wxc-adaptive-cards-component__container--vertical "
+    >
+      <div
+        className="wxc-column "
+      />
+      <div
+        className="wxc-column "
+      />
+      <div
+        className="wxc-column "
+      />
     </div>
     <div
       className="wxc-text-block "
     >
       Bleed left
     </div>
-    <div>
-      <h5>
-        ColumnSet Component
-      </h5>
-      <pre
-        className="wxc-adaptive-cards-unknown-component"
+    <div
+      className="wxc-adaptive-cards-column-set wxc-adaptive-cards-component wxc-adaptive-cards-component__container--vertical wxc-adaptive-cards-column-set__style--emphasis"
+    >
+      <div
+        className="wxc-column wxc-column__style--good wxc-column__bleed--true"
       >
-        {
-    "type": "ColumnSet",
-    "style": "emphasis",
-    "columns": [
-        {
-            "type": "Column",
-            "style": "good",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Column 1"
-                }
-            ],
-            "bleed": true,
-            "width": "stretch"
-        },
-        {
-            "type": "Column",
-            "style": "attention",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Column 2"
-                }
-            ],
-            "width": "stretch"
-        },
-        {
-            "type": "Column",
-            "style": "warning",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Column 3"
-                }
-            ],
-            "width": "stretch"
-        }
-    ]
-}
-      </pre>
+        <div
+          className="wxc-text-block "
+        >
+          Column 1
+        </div>
+      </div>
+      <div
+        className="wxc-column wxc-column__style--attention"
+      >
+        <div
+          className="wxc-text-block "
+        >
+          Column 2
+        </div>
+      </div>
+      <div
+        className="wxc-column wxc-column__style--warning"
+      >
+        <div
+          className="wxc-text-block "
+        >
+          Column 3
+        </div>
+      </div>
     </div>
     <div
       className="wxc-text-block "
     >
       Bleed center
     </div>
-    <div>
-      <h5>
-        ColumnSet Component
-      </h5>
-      <pre
-        className="wxc-adaptive-cards-unknown-component"
+    <div
+      className="wxc-adaptive-cards-column-set wxc-adaptive-cards-component wxc-adaptive-cards-component__container--vertical wxc-adaptive-cards-column-set__style--emphasis"
+    >
+      <div
+        className="wxc-column wxc-column__style--good"
       >
-        {
-    "type": "ColumnSet",
-    "style": "emphasis",
-    "columns": [
-        {
-            "type": "Column",
-            "style": "good",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Column 1"
-                }
-            ],
-            "width": "stretch"
-        },
-        {
-            "type": "Column",
-            "style": "attention",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Column 2"
-                }
-            ],
-            "bleed": true,
-            "width": "stretch"
-        },
-        {
-            "type": "Column",
-            "style": "warning",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Column 3"
-                }
-            ],
-            "width": "stretch"
-        }
-    ]
-}
-      </pre>
+        <div
+          className="wxc-text-block "
+        >
+          Column 1
+        </div>
+      </div>
+      <div
+        className="wxc-column wxc-column__style--attention wxc-column__bleed--true"
+      >
+        <div
+          className="wxc-text-block "
+        >
+          Column 2
+        </div>
+      </div>
+      <div
+        className="wxc-column wxc-column__style--warning"
+      >
+        <div
+          className="wxc-text-block "
+        >
+          Column 3
+        </div>
+      </div>
     </div>
     <div
       className="wxc-text-block "
     >
       Bleed right
     </div>
-    <div>
-      <h5>
-        ColumnSet Component
-      </h5>
-      <pre
-        className="wxc-adaptive-cards-unknown-component"
+    <div
+      className="wxc-adaptive-cards-column-set wxc-adaptive-cards-component wxc-adaptive-cards-component__container--vertical wxc-adaptive-cards-column-set__style--emphasis"
+    >
+      <div
+        className="wxc-column wxc-column__style--good"
       >
-        {
-    "type": "ColumnSet",
-    "style": "emphasis",
-    "columns": [
-        {
-            "type": "Column",
-            "style": "good",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Column 1"
-                }
-            ],
-            "width": "stretch"
-        },
-        {
-            "type": "Column",
-            "style": "attention",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Column 2"
-                }
-            ],
-            "width": "stretch"
-        },
-        {
-            "type": "Column",
-            "style": "warning",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Column 3"
-                }
-            ],
-            "bleed": true,
-            "width": "stretch"
-        }
-    ]
-}
-      </pre>
+        <div
+          className="wxc-text-block "
+        >
+          Column 1
+        </div>
+      </div>
+      <div
+        className="wxc-column wxc-column__style--attention"
+      >
+        <div
+          className="wxc-text-block "
+        >
+          Column 2
+        </div>
+      </div>
+      <div
+        className="wxc-column wxc-column__style--warning wxc-column__bleed--true"
+      >
+        <div
+          className="wxc-text-block "
+        >
+          Column 3
+        </div>
+      </div>
     </div>
     <div
       className="wxc-text-block "
     >
       Bleed all
     </div>
-    <div>
-      <h5>
-        ColumnSet Component
-      </h5>
-      <pre
-        className="wxc-adaptive-cards-unknown-component"
+    <div
+      className="wxc-adaptive-cards-column-set wxc-adaptive-cards-component wxc-adaptive-cards-component__container--vertical wxc-adaptive-cards-column-set__style--emphasis"
+    >
+      <div
+        className="wxc-column wxc-column__style--good wxc-column__bleed--true"
       >
-        {
-    "type": "ColumnSet",
-    "style": "emphasis",
-    "columns": [
-        {
-            "type": "Column",
-            "style": "good",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Column 1"
-                }
-            ],
-            "bleed": true,
-            "width": "stretch"
-        },
-        {
-            "type": "Column",
-            "style": "attention",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Column 2"
-                }
-            ],
-            "bleed": true,
-            "width": "stretch"
-        },
-        {
-            "type": "Column",
-            "style": "warning",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Column 3"
-                }
-            ],
-            "bleed": true,
-            "width": "stretch"
-        }
-    ]
-}
-      </pre>
+        <div
+          className="wxc-text-block "
+        >
+          Column 1
+        </div>
+      </div>
+      <div
+        className="wxc-column wxc-column__style--attention wxc-column__bleed--true"
+      >
+        <div
+          className="wxc-text-block "
+        >
+          Column 2
+        </div>
+      </div>
+      <div
+        className="wxc-column wxc-column__style--warning wxc-column__bleed--true"
+      >
+        <div
+          className="wxc-text-block "
+        >
+          Column 3
+        </div>
+      </div>
     </div>
-    <div>
-      <h5>
-        ColumnSet Component
-      </h5>
-      <pre
-        className="wxc-adaptive-cards-unknown-component"
+    <div
+      className="wxc-adaptive-cards-column-set wxc-adaptive-cards-component wxc-adaptive-cards-component__container--vertical "
+    >
+      <div
+        className="wxc-column "
       >
-        {
-    "type": "ColumnSet",
-    "columns": [
-        {
-            "type": "Column",
-            "items": [
-                {
-                    "type": "Graph"
-                }
-            ],
-            "fallback": {
-                "type": "Column",
-                "items": [
-                    {
-                        "type": "TextBlock",
-                        "text": "Fallback"
-                    }
-                ]
-            },
-            "width": "auto"
-        },
-        {
-            "type": "Column",
-            "items": [
-                {
-                    "type": "Graph"
-                }
-            ],
-            "fallback": "drop"
-        },
-        {
-            "type": "Column",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "This is a column",
-                    "wrap": true
-                }
-            ]
-        }
-    ]
+        <div>
+          <h5>
+            Graph Component
+          </h5>
+          <pre
+            className="wxc-adaptive-cards-unknown-component"
+          >
+            {
+    "type": "Graph"
 }
-      </pre>
+          </pre>
+        </div>
+      </div>
+      <div
+        className="wxc-column "
+      >
+        <div>
+          <h5>
+            Graph Component
+          </h5>
+          <pre
+            className="wxc-adaptive-cards-unknown-component"
+          >
+            {
+    "type": "Graph"
+}
+          </pre>
+        </div>
+      </div>
+      <div
+        className="wxc-column "
+      >
+        <div
+          className="wxc-text-block wxc-text-block__wrap--true"
+        >
+          This is a column
+        </div>
+      </div>
     </div>
-    <div>
-      <h5>
-        ColumnSet Component
-      </h5>
-      <pre
-        className="wxc-adaptive-cards-unknown-component"
+    <div
+      className="wxc-adaptive-cards-column-set wxc-adaptive-cards-component wxc-adaptive-cards-component__container--vertical wxc-adaptive-cards-column-set__style--emphasis"
+    >
+      <div
+        className="wxc-column wxc-column__style--default"
       >
+        <div
+          className="wxc-text-block wxc-text-block__wrap--true"
+        >
+          The columnset has a minHeight of 100px while this column has a minHeight of 200px so it should override
+        </div>
+      </div>
+      <div
+        className="wxc-column wxc-column__style--default"
+      >
+        <div>
+          <h5>
+            FactSet Component
+          </h5>
+          <pre
+            className="wxc-adaptive-cards-unknown-component"
+          >
+            {
+    "type": "FactSet",
+    "facts": [
         {
-    "type": "ColumnSet",
-    "style": "emphasis",
-    "minHeight": "100px",
-    "columns": [
-        {
-            "type": "Column",
-            "style": "default",
-            "minHeight": "200px",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "wrap": true,
-                    "text": "The columnset has a minHeight of 100px while this column has a minHeight of 200px so it should override"
-                }
-            ]
+            "title": "ColumnSet",
+            "value": "MinHeight: 100px"
         },
         {
-            "type": "Column",
-            "style": "default",
-            "minHeight": "50px",
-            "items": [
-                {
-                    "type": "FactSet",
-                    "facts": [
-                        {
-                            "title": "ColumnSet",
-                            "value": "MinHeight: 100px"
-                        },
-                        {
-                            "title": "Column 1",
-                            "value": "MinHeight: 200px"
-                        },
-                        {
-                            "title": "Column 2",
-                            "value": "MinHeight: 50px"
-                        }
-                    ]
-                }
-            ]
+            "title": "Column 1",
+            "value": "MinHeight: 200px"
+        },
+        {
+            "title": "Column 2",
+            "value": "MinHeight: 50px"
         }
     ]
 }
-      </pre>
+          </pre>
+        </div>
+      </div>
     </div>
     <div
       className="wxc-text-block wxc-text-block__wrap--true wxc-text-block__size--Medium"
     >
       The middle column is set to rtl
     </div>
-    <div>
-      <h5>
-        ColumnSet Component
-      </h5>
-      <pre
-        className="wxc-adaptive-cards-unknown-component"
+    <div
+      className="wxc-adaptive-cards-column-set wxc-adaptive-cards-component wxc-adaptive-cards-component__spacing--Medium wxc-adaptive-cards-component__container--vertical "
+    >
+      <div
+        className="wxc-column "
       >
-        {
-    "type": "ColumnSet",
-    "columns": [
-        {
-            "type": "Column",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Column One",
-                    "wrap": true
-                }
-            ]
-        },
-        {
-            "type": "Column",
-            "rtl": true,
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "العمود الثاني",
-                    "wrap": true
-                }
-            ]
-        },
-        {
-            "type": "Column",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "wrap": true,
-                    "text": "Column three"
-                }
-            ]
-        }
-    ]
-}
-      </pre>
+        <div
+          className="wxc-text-block wxc-text-block__wrap--true"
+        >
+          Column One
+        </div>
+      </div>
+      <div
+        className="wxc-column wxc-column__rtl--true"
+      >
+        <div
+          className="wxc-text-block wxc-text-block__wrap--true"
+        >
+          العمود الثاني
+        </div>
+      </div>
+      <div
+        className="wxc-column "
+      >
+        <div
+          className="wxc-text-block wxc-text-block__wrap--true"
+        >
+          Column three
+        </div>
+      </div>
     </div>
     <div
       className="wxc-container"
     >
-      <div>
-        <h5>
-          ColumnSet Component
-        </h5>
-        <pre
-          className="wxc-adaptive-cards-unknown-component"
+      <div
+        className="wxc-adaptive-cards-column-set wxc-adaptive-cards-component wxc-adaptive-cards-component__container--vertical "
+      >
+        <div
+          className="wxc-column "
         >
-          {
-    "type": "ColumnSet",
-    "columns": [
-        {
-            "type": "Column",
-            "width": "auto",
-            "items": [
-                {
-                    "type": "Image",
-                    "url": "https://adaptivecards.io/content/cats/3.png",
-                    "size": "medium"
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "SHADES",
-                    "horizontalAlignment": "center",
-                    "weight": "bolder"
-                }
-            ]
-        },
-        {
-            "type": "Column",
-            "width": "stretch",
-            "separator": true,
-            "spacing": "medium",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Dec 4",
-                    "horizontalAlignment": "center"
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "Final",
-                    "spacing": "none",
-                    "horizontalAlignment": "center"
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "7 - 40",
-                    "size": "extraLarge",
-                    "horizontalAlignment": "center"
-                }
-            ]
-        },
-        {
-            "type": "Column",
-            "width": "auto",
-            "separator": true,
-            "spacing": "medium",
-            "items": [
-                {
-                    "type": "Image",
-                    "url": "https://adaptivecards.io/content/cats/2.png",
-                    "size": "medium",
-                    "horizontalAlignment": "center"
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "SKINS",
-                    "horizontalAlignment": "center",
-                    "weight": "bolder"
-                }
-            ]
-        }
-    ]
-}
-        </pre>
+          <img
+            className="wxc-adaptive-cards-image wxc-adaptive-cards-image__size--medium"
+            src="https://adaptivecards.io/content/cats/3.png"
+            style={
+              Object {
+                "backgroundColor": undefined,
+                "height": undefined,
+                "width": undefined,
+              }
+            }
+          />
+          <div
+            className="wxc-text-block wxc-text-block__horizontalAlignment--center wxc-text-block__weight--bolder"
+          >
+            SHADES
+          </div>
+        </div>
+        <div
+          className="wxc-column "
+        >
+          <div
+            className="wxc-text-block wxc-text-block__horizontalAlignment--center"
+          >
+            Dec 4
+          </div>
+          <div
+            className="wxc-text-block wxc-text-block__horizontalAlignment--center"
+          >
+            Final
+          </div>
+          <div
+            className="wxc-text-block wxc-text-block__size--extraLarge wxc-text-block__horizontalAlignment--center"
+          >
+            7 - 40
+          </div>
+        </div>
+        <div
+          className="wxc-column "
+        >
+          <img
+            className="wxc-adaptive-cards-image wxc-adaptive-cards-image__horizontalAlignment--center wxc-adaptive-cards-image__size--medium"
+            src="https://adaptivecards.io/content/cats/2.png"
+            style={
+              Object {
+                "backgroundColor": undefined,
+                "height": undefined,
+                "width": undefined,
+              }
+            }
+          />
+          <div
+            className="wxc-text-block wxc-text-block__horizontalAlignment--center wxc-text-block__weight--bolder"
+          >
+            SKINS
+          </div>
+        </div>
       </div>
     </div>
     <div
@@ -905,145 +644,127 @@ Array [
     >
       Try clicking a column!
     </div>
-    <div>
-      <h5>
-        ColumnSet Component
-      </h5>
-      <pre
-        className="wxc-adaptive-cards-unknown-component"
+    <div
+      className="wxc-adaptive-cards-column-set wxc-adaptive-cards-component wxc-adaptive-cards-component__container--vertical "
+    >
+      <div
+        className="wxc-column "
       >
-        {
-    "type": "ColumnSet",
-    "columns": [
-        {
-            "type": "Column",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Column 1"
-                },
-                {
-                    "type": "Image",
-                    "url": "https://adaptivecards.io/content/cats/1.png"
-                }
-            ],
-            "selectAction": {
-                "type": "Action.OpenUrl",
-                "tooltip": "cool link",
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        <div
+          className="wxc-text-block "
+        >
+          Column 1
+        </div>
+        <img
+          className="wxc-adaptive-cards-image wxc-adaptive-cards-image__size--medium"
+          src="https://adaptivecards.io/content/cats/1.png"
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "height": undefined,
+              "width": undefined,
             }
-        },
-        {
-            "type": "Column",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Column 2"
-                },
-                {
-                    "type": "Image",
-                    "url": "https://adaptivecards.io/content/cats/1.png"
-                }
-            ],
-            "selectAction": {
-                "type": "Action.OpenUrl",
-                "tooltip": "cool link",
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          }
+        />
+      </div>
+      <div
+        className="wxc-column "
+      >
+        <div
+          className="wxc-text-block "
+        >
+          Column 2
+        </div>
+        <img
+          className="wxc-adaptive-cards-image wxc-adaptive-cards-image__size--medium"
+          src="https://adaptivecards.io/content/cats/1.png"
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "height": undefined,
+              "width": undefined,
             }
-        },
-        {
-            "type": "Column",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Column 3"
-                },
-                {
-                    "type": "Image",
-                    "url": "https://adaptivecards.io/content/cats/1.png"
-                }
-            ],
-            "selectAction": {
-                "type": "Action.OpenUrl",
-                "tooltip": "cool link",
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          }
+        />
+      </div>
+      <div
+        className="wxc-column "
+      >
+        <div
+          className="wxc-text-block "
+        >
+          Column 3
+        </div>
+        <img
+          className="wxc-adaptive-cards-image wxc-adaptive-cards-image__size--medium"
+          src="https://adaptivecards.io/content/cats/1.png"
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "height": undefined,
+              "width": undefined,
             }
-        }
-    ]
-}
-      </pre>
+          }
+        />
+      </div>
     </div>
-    <div>
-      <h5>
-        ColumnSet Component
-      </h5>
-      <pre
-        className="wxc-adaptive-cards-unknown-component"
+    <div
+      className="wxc-adaptive-cards-column-set wxc-adaptive-cards-component wxc-adaptive-cards-component__container--vertical "
+    >
+      <div
+        className="wxc-column "
       >
-        {
-    "type": "ColumnSet",
-    "columns": [
-        {
-            "type": "Column",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "No Style"
-                }
-            ]
-        },
-        {
-            "type": "Column",
-            "style": "default",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Default Style"
-                }
-            ]
-        },
-        {
-            "type": "Column",
-            "style": "emphasis",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Emphasis Style"
-                },
-                {
-                    "type": "Container",
-                    "items": [
-                        {
-                            "type": "TextBlock",
-                            "text": "Container no style"
-                        }
-                    ]
-                },
-                {
-                    "type": "Container",
-                    "style": "default",
-                    "items": [
-                        {
-                            "type": "TextBlock",
-                            "text": "Container default style"
-                        }
-                    ]
-                },
-                {
-                    "type": "Container",
-                    "style": "emphasis",
-                    "items": [
-                        {
-                            "type": "TextBlock",
-                            "text": "Container emphasis style"
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-}
-      </pre>
+        <div
+          className="wxc-text-block "
+        >
+          No Style
+        </div>
+      </div>
+      <div
+        className="wxc-column wxc-column__style--default"
+      >
+        <div
+          className="wxc-text-block "
+        >
+          Default Style
+        </div>
+      </div>
+      <div
+        className="wxc-column wxc-column__style--emphasis"
+      >
+        <div
+          className="wxc-text-block "
+        >
+          Emphasis Style
+        </div>
+        <div
+          className="wxc-container"
+        >
+          <div
+            className="wxc-text-block "
+          >
+            Container no style
+          </div>
+        </div>
+        <div
+          className="wxc-container wxc-container__style--default"
+        >
+          <div
+            className="wxc-text-block "
+          >
+            Container default style
+          </div>
+        </div>
+        <div
+          className="wxc-container wxc-container__style--emphasis"
+        >
+          <div
+            className="wxc-text-block "
+          >
+            Container emphasis style
+          </div>
+        </div>
+      </div>
     </div>
     <div
       className="wxc-text-block "
@@ -1055,88 +776,215 @@ Array [
     >
       MasterHip
     </div>
-    <div>
-      <h5>
-        ColumnSet Component
-      </h5>
-      <pre
-        className="wxc-adaptive-cards-unknown-component"
+    <div
+      className="wxc-adaptive-cards-column-set wxc-adaptive-cards-component wxc-adaptive-cards-component__container--vertical "
+    >
+      <div
+        className="wxc-column "
       >
-        {
-    "type": "ColumnSet",
-    "height": "stretch",
-    "columns": [
-        {
-            "type": "Column",
-            "verticalContentAlignment": "bottom",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Column 1"
-                }
-            ]
-        }
-    ]
-}
-      </pre>
+        <div
+          className="wxc-text-block "
+        >
+          Column 1
+        </div>
+      </div>
     </div>
-    <div>
-      <h5>
-        ColumnSet Component
-      </h5>
-      <pre
-        className="wxc-adaptive-cards-unknown-component"
+    <div
+      className="wxc-adaptive-cards-column-set wxc-adaptive-cards-component wxc-adaptive-cards-component__container--vertical "
+    >
+      <div
+        className="wxc-column "
       >
-        {
-    "type": "ColumnSet",
-    "columns": [
-        {
-            "type": "Column",
-            "width": "auto",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "(auto)"
-                },
-                {
-                    "type": "Image",
-                    "url": "https://adaptivecards.io/content/adaptive-card-50.png"
-                }
-            ]
-        },
-        {
-            "type": "Column",
-            "width": "stretch",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "horizontalAlignment": "center",
-                    "text": "(stretch)"
-                },
-                {
-                    "type": "Image",
-                    "horizontalAlignment": "center",
-                    "url": "https://adaptivecards.io/content/adaptive-card-50.png"
-                }
-            ]
-        },
-        {
-            "type": "Column",
-            "width": "auto",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "(auto)"
-                },
-                {
-                    "type": "Image",
-                    "url": "https://adaptivecards.io/content/adaptive-card-50.png"
-                }
-            ]
-        }
-    ]
-}
-      </pre>
+        <div
+          className="wxc-text-block "
+        >
+          (auto)
+        </div>
+        <img
+          className="wxc-adaptive-cards-image wxc-adaptive-cards-image__size--medium"
+          src="https://adaptivecards.io/content/adaptive-card-50.png"
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "height": undefined,
+              "width": undefined,
+            }
+          }
+        />
+      </div>
+      <div
+        className="wxc-column "
+      >
+        <div
+          className="wxc-text-block wxc-text-block__horizontalAlignment--center"
+        >
+          (stretch)
+        </div>
+        <img
+          className="wxc-adaptive-cards-image wxc-adaptive-cards-image__horizontalAlignment--center wxc-adaptive-cards-image__size--medium"
+          src="https://adaptivecards.io/content/adaptive-card-50.png"
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "height": undefined,
+              "width": undefined,
+            }
+          }
+        />
+      </div>
+      <div
+        className="wxc-column "
+      >
+        <div
+          className="wxc-text-block "
+        >
+          (auto)
+        </div>
+        <img
+          className="wxc-adaptive-cards-image wxc-adaptive-cards-image__size--medium"
+          src="https://adaptivecards.io/content/adaptive-card-50.png"
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "height": undefined,
+              "width": undefined,
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Messaging/AdaptiveCard Column Set 1`] = `
+Array [
+  <div
+    className="wxc-adaptive-card"
+  >
+    <div
+      className="wxc-text-block wxc-text-block__weight--bolder"
+    >
+      Pick up where you left off?
+    </div>
+    <div
+      className="wxc-adaptive-cards-column-set wxc-adaptive-cards-component wxc-adaptive-cards-component__spacing--medium wxc-adaptive-cards-component__container--vertical "
+    >
+      <div
+        className="wxc-column "
+      >
+        <img
+          className="wxc-adaptive-cards-image wxc-adaptive-cards-image__size--medium"
+          src="https://unsplash.it/80?image=1083"
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "height": undefined,
+              "width": undefined,
+            }
+          }
+        />
+      </div>
+      <div
+        className="wxc-column "
+      >
+        <div
+          className="wxc-text-block "
+        >
+          Silver Star Mountain
+        </div>
+        <div
+          className="wxc-text-block "
+        >
+          Maps
+        </div>
+      </div>
+    </div>
+    <div
+      className="wxc-adaptive-cards-column-set wxc-adaptive-cards-component wxc-adaptive-cards-component__container--vertical "
+    >
+      <div
+        className="wxc-column "
+      >
+        <img
+          className="wxc-adaptive-cards-image wxc-adaptive-cards-image__size--medium"
+          src="https://unsplash.it/80?image=1082"
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "height": undefined,
+              "width": undefined,
+            }
+          }
+        />
+      </div>
+      <div
+        className="wxc-column wxc-column__style--emphasis"
+      >
+        <div
+          className="wxc-text-block "
+        >
+          Kitchen Remodel
+        </div>
+        <div
+          className="wxc-text-block "
+        >
+          With EMPHASIS
+        </div>
+      </div>
+    </div>
+    <div
+      className="wxc-adaptive-cards-column-set wxc-adaptive-cards-component wxc-adaptive-cards-component__container--vertical "
+    >
+      <div
+        className="wxc-column "
+      >
+        <img
+          className="wxc-adaptive-cards-image wxc-adaptive-cards-image__size--medium"
+          src="https://unsplash.it/80?image=1080"
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "height": undefined,
+              "width": undefined,
+            }
+          }
+        />
+      </div>
+      <div
+        className="wxc-column "
+      >
+        <div
+          className="wxc-text-block "
+        >
+          The Witcher
+        </div>
+        <div
+          className="wxc-text-block "
+        >
+          Netflix
+        </div>
+      </div>
     </div>
   </div>,
   <video

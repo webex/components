@@ -1368,6 +1368,144 @@ const exampleImage = {
   ],
 };
 
+const exampleColumnSet = {
+  type: 'AdaptiveCard',
+  version: '1.0',
+  body: [
+    {
+      type: 'TextBlock',
+      text: 'Pick up where you left off?',
+      weight: 'bolder',
+    },
+    {
+      type: 'ColumnSet',
+      spacing: 'medium',
+      columns: [
+        {
+          type: 'Column',
+          width: 'auto',
+          items: [
+            {
+              type: 'Image',
+              url: 'https://unsplash.it/80?image=1083',
+              size: 'medium',
+            },
+          ],
+        },
+        {
+          type: 'Column',
+          width: 4,
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'Silver Star Mountain',
+            },
+            {
+              type: 'TextBlock',
+              text: 'Maps',
+              isSubtle: true,
+              spacing: 'none',
+            },
+          ],
+        },
+      ],
+      selectAction: {
+        type: 'Action.OpenUrl',
+        url: 'https://www.msn.com',
+        tooltip: 'View a map of Silver Star Mountain',
+      },
+    },
+    {
+      type: 'ColumnSet',
+      columns: [
+        {
+          type: 'Column',
+          width: 'auto',
+          items: [
+            {
+              type: 'Image',
+              url: 'https://unsplash.it/80?image=1082',
+              size: 'medium',
+            },
+          ],
+        },
+        {
+          type: 'Column',
+          width: 4,
+          style: 'emphasis',
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'Kitchen Remodel',
+            },
+            {
+              type: 'TextBlock',
+              text: 'With EMPHASIS',
+              isSubtle: true,
+              spacing: 'none',
+            },
+          ],
+        },
+      ],
+      selectAction: {
+        type: 'Action.OpenUrl',
+        url: 'https://www.AdaptiveCards.io',
+        tooltip: 'Remodel your kitchen with our new cabinet styles!',
+      },
+    },
+    {
+      type: 'ColumnSet',
+      bleed: false,
+      columns: [
+        {
+          type: 'Column',
+          width: 'auto',
+          items: [
+            {
+              type: 'Image',
+              url: 'https://unsplash.it/80?image=1080',
+              size: 'medium',
+            },
+          ],
+        },
+        {
+          type: 'Column',
+          width: 4,
+          items: [
+            {
+              type: 'TextBlock',
+              text: 'The Witcher',
+            },
+            {
+              type: 'TextBlock',
+              text: 'Netflix',
+              isSubtle: true,
+              spacing: 'none',
+            },
+          ],
+        },
+      ],
+      selectAction: {
+        type: 'Action.OpenUrl',
+        url: 'https://www.outlook.com',
+        tooltip: 'Watch the newest episode today!',
+      },
+    },
+  ],
+  actions: [
+    {
+      type: 'Action.OpenUrl',
+      title: 'Resume all',
+      url: 'ms-cortana:resume-all',
+    },
+    {
+      type: 'Action.OpenUrl',
+      title: 'More activities',
+      url: 'ms-cortana:more-activities',
+    },
+  ],
+};
+
 export const Card = Template.bind({});
 Card.args = {
   data: exampleAdaptiveCard,
@@ -1396,4 +1534,9 @@ ImageSet.args = {
 export const Image = Template.bind({});
 Image.args = {
   data: exampleImage,
+};
+
+export const ColumnSet = Template.bind({});
+ColumnSet.args = {
+  data: exampleColumnSet,
 };
