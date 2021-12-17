@@ -9,7 +9,7 @@ import {acPropTypes, registerComponent} from '../Component/Component';
  *
  * @param {object} props  React props passed to the component
  * @param {object} props.data  Active cards definition
- * @param {string} props.className  Custom CSS class to apply
+ * @param {string} [props.className]  Custom CSS class to apply
  * @returns {object} JSX of the component
  */
 export default function TextBlock({data, className}) {
@@ -37,6 +37,7 @@ TextBlock.defaultProps = {
 TextBlock.acPropTypes = {
   color: acPropTypes.color,
   fontType: acPropTypes.fontType,
+  height: acPropTypes.height,
   horizontalAlignment: acPropTypes.horizontalAlignment,
   id: acPropTypes.id,
   isSubtle: acPropTypes.isSubtle,

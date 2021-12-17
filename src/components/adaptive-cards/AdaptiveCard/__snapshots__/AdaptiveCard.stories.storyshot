@@ -3,13 +3,15 @@
 exports[`Storyshots Messaging/AdaptiveCard Card 1`] = `
 Array [
   <div
-    className="wxc-adaptive-card wxc-ac-container--has-padding"
+    className="wxc-adaptive-card wxc-ac-container--has-padding wxc-ac-container--vertical"
   >
     <div
       className="wxc-adaptive-cards-column-set wxc-ac-container--horizontal"
+      style={Object {}}
     >
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={Object {}}
       >
         <img
           className="wxc-adaptive-cards-image wxc-ac-image-style--Person wxc-ac-image-size--Medium"
@@ -25,6 +27,7 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block wxc-ac-weight--Lighter wxc-ac-color--Accent"
@@ -40,9 +43,11 @@ Array [
     </div>
     <div
       className="wxc-adaptive-cards-column-set wxc-ac-spacing--Padding wxc-ac-horizontal-alignment--Center wxc-ac-container--horizontal"
+      style={Object {}}
     >
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block wxc-ac-color--Light"
@@ -62,6 +67,7 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block wxc-ac-color--Light"
@@ -92,9 +98,11 @@ Array [
     </div>
     <div
       className="wxc-adaptive-cards-column-set wxc-ac-container--horizontal"
+      style={Object {}}
     >
       <div
         className="wxc-adaptive-cards-column wxc-ac-spacing--Small wxc-ac-container--vertical"
+        style={Object {}}
       >
         <img
           alt=""
@@ -103,14 +111,14 @@ Array [
           style={
             Object {
               "backgroundColor": undefined,
-              "height": undefined,
               "width": "30px",
             }
           }
         />
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac-spacing--Small wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac-vertical-content-alignment--Center wxc-ac-spacing--Small wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block wxc-ac-horizontal-alignment--Left wxc-ac-size--Medium"
@@ -169,13 +177,15 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard Column 1`] = `
 Array [
   <div
-    className="wxc-adaptive-card wxc-ac-container--has-padding"
+    className="wxc-adaptive-card wxc-ac-container--has-padding wxc-ac-container--vertical"
   >
     <div
       className="wxc-adaptive-cards-column-set wxc-ac-container--horizontal"
+      style={Object {}}
     >
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -188,7 +198,6 @@ Array [
           style={
             Object {
               "backgroundColor": undefined,
-              "height": undefined,
               "width": undefined,
             }
           }
@@ -196,6 +205,7 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -208,7 +218,6 @@ Array [
           style={
             Object {
               "backgroundColor": undefined,
-              "height": undefined,
               "width": undefined,
             }
           }
@@ -216,6 +225,7 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -228,7 +238,6 @@ Array [
           style={
             Object {
               "backgroundColor": undefined,
-              "height": undefined,
               "width": undefined,
             }
           }
@@ -237,15 +246,31 @@ Array [
     </div>
     <div
       className="wxc-adaptive-cards-column-set wxc-ac-container--horizontal"
+      style={Object {}}
     >
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={
+          Object {
+            "minHeight": "50px",
+          }
+        }
       />
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={
+          Object {
+            "minHeight": "50px",
+          }
+        }
       />
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={
+          Object {
+            "minHeight": "50px",
+          }
+        }
       />
     </div>
     <div
@@ -255,12 +280,19 @@ Array [
     </div>
     <div
       className="wxc-adaptive-cards-column-set wxc-ac-container--horizontal"
+      style={Object {}}
     >
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={
+          Object {
+            "minHeight": "50px",
+          }
+        }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac-vertical-content-alignment--Center wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block wxc-ac-horizontal-alignment--Center wxc-ac-wrap--true"
@@ -276,15 +308,31 @@ Array [
     </div>
     <div
       className="wxc-adaptive-cards-column-set wxc-ac-container--horizontal"
+      style={Object {}}
     >
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={
+          Object {
+            "minHeight": "50px",
+          }
+        }
       />
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={
+          Object {
+            "minHeight": "50px",
+          }
+        }
       />
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={
+          Object {
+            "minHeight": "50px",
+          }
+        }
       />
     </div>
     <div
@@ -294,15 +342,31 @@ Array [
     </div>
     <div
       className="wxc-adaptive-cards-column-set wxc-ac-container--horizontal"
+      style={Object {}}
     >
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={
+          Object {
+            "minHeight": "50px",
+          }
+        }
       />
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={
+          Object {
+            "minHeight": "50px",
+          }
+        }
       />
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={
+          Object {
+            "minHeight": "50px",
+          }
+        }
       />
     </div>
     <div
@@ -312,9 +376,11 @@ Array [
     </div>
     <div
       className="wxc-adaptive-cards-column-set wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--horizontal"
+      style={Object {}}
     >
       <div
         className="wxc-adaptive-cards-column wxc-ac-container-style--good wxc-ac-container--has-padding wxc-ac-bleed--true wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -324,6 +390,7 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-container-style--attention wxc-ac-container--has-padding wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -333,6 +400,7 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-container-style--warning wxc-ac-container--has-padding wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -348,9 +416,11 @@ Array [
     </div>
     <div
       className="wxc-adaptive-cards-column-set wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--horizontal"
+      style={Object {}}
     >
       <div
         className="wxc-adaptive-cards-column wxc-ac-container-style--good wxc-ac-container--has-padding wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -360,6 +430,7 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-container-style--attention wxc-ac-container--has-padding wxc-ac-bleed--true wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -369,6 +440,7 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-container-style--warning wxc-ac-container--has-padding wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -384,9 +456,11 @@ Array [
     </div>
     <div
       className="wxc-adaptive-cards-column-set wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--horizontal"
+      style={Object {}}
     >
       <div
         className="wxc-adaptive-cards-column wxc-ac-container-style--good wxc-ac-container--has-padding wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -396,6 +470,7 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-container-style--attention wxc-ac-container--has-padding wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -405,6 +480,7 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-container-style--warning wxc-ac-container--has-padding wxc-ac-bleed--true wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -420,9 +496,11 @@ Array [
     </div>
     <div
       className="wxc-adaptive-cards-column-set wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--horizontal"
+      style={Object {}}
     >
       <div
         className="wxc-adaptive-cards-column wxc-ac-container-style--good wxc-ac-container--has-padding wxc-ac-bleed--true wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -432,6 +510,7 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-container-style--attention wxc-ac-container--has-padding wxc-ac-bleed--true wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -441,6 +520,7 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-container-style--warning wxc-ac-container--has-padding wxc-ac-bleed--true wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -451,9 +531,11 @@ Array [
     </div>
     <div
       className="wxc-adaptive-cards-column-set wxc-ac-container--horizontal"
+      style={Object {}}
     >
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div>
           <h5>
@@ -470,6 +552,7 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div>
           <h5>
@@ -486,6 +569,7 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block wxc-ac-wrap--true"
@@ -496,9 +580,19 @@ Array [
     </div>
     <div
       className="wxc-adaptive-cards-column-set wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--horizontal"
+      style={
+        Object {
+          "minHeight": "100px",
+        }
+      }
     >
       <div
         className="wxc-adaptive-cards-column wxc-ac-container-style--default wxc-ac-container--vertical"
+        style={
+          Object {
+            "minHeight": "200px",
+          }
+        }
       >
         <div
           className="wxc-adaptive-cards-text-block wxc-ac-wrap--true"
@@ -508,6 +602,11 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-container-style--default wxc-ac-container--vertical"
+        style={
+          Object {
+            "minHeight": "50px",
+          }
+        }
       >
         <div
           className="wxc-adaptive-cards-fact-set"
@@ -556,9 +655,11 @@ Array [
     </div>
     <div
       className="wxc-adaptive-cards-column-set wxc-ac-spacing--Medium wxc-ac-container--horizontal"
+      style={Object {}}
     >
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block wxc-ac-wrap--true"
@@ -568,6 +669,7 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-rtl--true wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block wxc-ac-wrap--true"
@@ -577,6 +679,7 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block wxc-ac-wrap--true"
@@ -587,12 +690,15 @@ Array [
     </div>
     <div
       className="wxc-container wxc-ac-container--vertical"
+      style={Object {}}
     >
       <div
         className="wxc-adaptive-cards-column-set wxc-ac-container--horizontal"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+          style={Object {}}
         >
           <img
             className="wxc-adaptive-cards-image wxc-ac-image-size--medium"
@@ -600,7 +706,6 @@ Array [
             style={
               Object {
                 "backgroundColor": undefined,
-                "height": undefined,
                 "width": undefined,
               }
             }
@@ -613,6 +718,7 @@ Array [
         </div>
         <div
           className="wxc-adaptive-cards-column wxc-ac-separator--true wxc-ac-spacing--medium wxc-ac-container--vertical"
+          style={Object {}}
         >
           <div
             className="wxc-adaptive-cards-text-block wxc-ac-horizontal-alignment--center"
@@ -632,6 +738,7 @@ Array [
         </div>
         <div
           className="wxc-adaptive-cards-column wxc-ac-separator--true wxc-ac-spacing--medium wxc-ac-container--vertical"
+          style={Object {}}
         >
           <img
             className="wxc-adaptive-cards-image wxc-ac-image-size--medium wxc-ac-horizontal-alignment--center"
@@ -639,7 +746,6 @@ Array [
             style={
               Object {
                 "backgroundColor": undefined,
-                "height": undefined,
                 "width": undefined,
               }
             }
@@ -659,9 +765,11 @@ Array [
     </div>
     <div
       className="wxc-adaptive-cards-column-set wxc-ac-container--horizontal"
+      style={Object {}}
     >
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -674,7 +782,6 @@ Array [
           style={
             Object {
               "backgroundColor": undefined,
-              "height": undefined,
               "width": undefined,
             }
           }
@@ -682,6 +789,7 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -694,7 +802,6 @@ Array [
           style={
             Object {
               "backgroundColor": undefined,
-              "height": undefined,
               "width": undefined,
             }
           }
@@ -702,6 +809,7 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -714,7 +822,6 @@ Array [
           style={
             Object {
               "backgroundColor": undefined,
-              "height": undefined,
               "width": undefined,
             }
           }
@@ -723,9 +830,11 @@ Array [
     </div>
     <div
       className="wxc-adaptive-cards-column-set wxc-ac-container--horizontal"
+      style={Object {}}
     >
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -735,6 +844,7 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-container-style--default wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -744,6 +854,7 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -752,6 +863,7 @@ Array [
         </div>
         <div
           className="wxc-container wxc-ac-container--vertical"
+          style={Object {}}
         >
           <div
             className="wxc-adaptive-cards-text-block"
@@ -761,6 +873,7 @@ Array [
         </div>
         <div
           className="wxc-container wxc-ac-container-style--default wxc-ac-container--vertical"
+          style={Object {}}
         >
           <div
             className="wxc-adaptive-cards-text-block"
@@ -770,6 +883,7 @@ Array [
         </div>
         <div
           className="wxc-container wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--vertical"
+          style={Object {}}
         >
           <div
             className="wxc-adaptive-cards-text-block"
@@ -790,10 +904,12 @@ Array [
       MasterHip
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac-height--stretch wxc-ac-container--horizontal"
+      style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac-vertical-content-alignment--bottom wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -804,9 +920,11 @@ Array [
     </div>
     <div
       className="wxc-adaptive-cards-column-set wxc-ac-container--horizontal"
+      style={Object {}}
     >
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -819,7 +937,6 @@ Array [
           style={
             Object {
               "backgroundColor": undefined,
-              "height": undefined,
               "width": undefined,
             }
           }
@@ -827,6 +944,7 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block wxc-ac-horizontal-alignment--center"
@@ -839,7 +957,6 @@ Array [
           style={
             Object {
               "backgroundColor": undefined,
-              "height": undefined,
               "width": undefined,
             }
           }
@@ -847,6 +964,7 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -859,7 +977,6 @@ Array [
           style={
             Object {
               "backgroundColor": undefined,
-              "height": undefined,
               "width": undefined,
             }
           }
@@ -893,7 +1010,7 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard Column Set 1`] = `
 Array [
   <div
-    className="wxc-adaptive-card wxc-ac-container--has-padding"
+    className="wxc-adaptive-card wxc-ac-container--has-padding wxc-ac-container--vertical"
   >
     <div
       className="wxc-adaptive-cards-text-block wxc-ac-weight--bolder"
@@ -902,9 +1019,11 @@ Array [
     </div>
     <div
       className="wxc-adaptive-cards-column-set wxc-ac-spacing--medium wxc-ac-container--horizontal"
+      style={Object {}}
     >
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={Object {}}
       >
         <img
           className="wxc-adaptive-cards-image wxc-ac-image-size--medium"
@@ -912,7 +1031,6 @@ Array [
           style={
             Object {
               "backgroundColor": undefined,
-              "height": undefined,
               "width": undefined,
             }
           }
@@ -920,6 +1038,7 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -935,9 +1054,11 @@ Array [
     </div>
     <div
       className="wxc-adaptive-cards-column-set wxc-ac-container--horizontal"
+      style={Object {}}
     >
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={Object {}}
       >
         <img
           className="wxc-adaptive-cards-image wxc-ac-image-size--medium"
@@ -945,7 +1066,6 @@ Array [
           style={
             Object {
               "backgroundColor": undefined,
-              "height": undefined,
               "width": undefined,
             }
           }
@@ -953,6 +1073,7 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -968,9 +1089,11 @@ Array [
     </div>
     <div
       className="wxc-adaptive-cards-column-set wxc-ac-bleed--false wxc-ac-container--horizontal"
+      style={Object {}}
     >
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={Object {}}
       >
         <img
           className="wxc-adaptive-cards-image wxc-ac-image-size--medium"
@@ -978,7 +1101,6 @@ Array [
           style={
             Object {
               "backgroundColor": undefined,
-              "height": undefined,
               "width": undefined,
             }
           }
@@ -986,6 +1108,7 @@ Array [
       </div>
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -1026,10 +1149,15 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard Container 1`] = `
 Array [
   <div
-    className="wxc-adaptive-card wxc-ac-container--has-padding"
+    className="wxc-adaptive-card wxc-ac-container--has-padding wxc-ac-container--vertical"
   >
     <div
       className="wxc-container wxc-ac-container--vertical"
+      style={
+        Object {
+          "minHeight": "15rem",
+        }
+      }
     >
       <div
         className="wxc-adaptive-cards-text-block"
@@ -1042,7 +1170,6 @@ Array [
         style={
           Object {
             "backgroundColor": undefined,
-            "height": undefined,
             "width": undefined,
           }
         }
@@ -1050,6 +1177,7 @@ Array [
     </div>
     <div
       className="wxc-container wxc-ac-container-style--default wxc-ac-container--vertical"
+      style={Object {}}
     >
       <div
         className="wxc-adaptive-cards-text-block"
@@ -1094,6 +1222,7 @@ Array [
     </div>
     <div
       className="wxc-container wxc-ac-container-style--accent wxc-ac-container--has-padding wxc-ac-container--vertical"
+      style={Object {}}
     >
       <div
         className="wxc-adaptive-cards-text-block"
@@ -1137,6 +1266,7 @@ Array [
       </div>
       <div
         className="wxc-container wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block wxc-ac-color--dark"
@@ -1146,6 +1276,7 @@ Array [
       </div>
       <div
         className="wxc-container wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block wxc-ac-color--dark"
@@ -1155,6 +1286,7 @@ Array [
       </div>
       <div
         className="wxc-container wxc-ac-container-style--default wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block wxc-ac-color--dark"
@@ -1164,6 +1296,7 @@ Array [
       </div>
       <div
         className="wxc-container wxc-ac-container-style--good wxc-ac-container--has-padding wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block wxc-ac-color--dark"
@@ -1173,6 +1306,7 @@ Array [
       </div>
       <div
         className="wxc-container wxc-ac-container-style--warning wxc-ac-container--has-padding wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block wxc-ac-color--dark"
@@ -1182,6 +1316,7 @@ Array [
       </div>
       <div
         className="wxc-container wxc-ac-container-style--attention wxc-ac-container--has-padding wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block wxc-ac-color--dark"
@@ -1191,6 +1326,7 @@ Array [
       </div>
       <div
         className="wxc-container wxc-ac-container-style--accent wxc-ac-container--has-padding wxc-ac-container--vertical"
+        style={Object {}}
       >
         <div
           className="wxc-adaptive-cards-text-block wxc-ac-color--dark"
@@ -1226,7 +1362,7 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard Fact Set 1`] = `
 Array [
   <div
-    className="wxc-adaptive-card wxc-ac-container--has-padding"
+    className="wxc-adaptive-card wxc-ac-container--has-padding wxc-ac-container--vertical"
   >
     <div
       className="wxc-adaptive-cards-fact-set"
@@ -1303,7 +1439,7 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard Image 1`] = `
 Array [
   <div
-    className="wxc-adaptive-card wxc-ac-container--has-padding"
+    className="wxc-adaptive-card wxc-ac-container--has-padding wxc-ac-container--vertical"
   >
     <img
       className="wxc-adaptive-cards-image wxc-ac-image-size--medium wxc-ac-image-style--person"
@@ -1311,7 +1447,6 @@ Array [
       style={
         Object {
           "backgroundColor": "blue",
-          "height": undefined,
           "width": undefined,
         }
       }
@@ -1333,7 +1468,6 @@ Array [
       style={
         Object {
           "backgroundColor": "#cdcdcd",
-          "height": undefined,
           "width": undefined,
         }
       }
@@ -1344,7 +1478,6 @@ Array [
       style={
         Object {
           "backgroundColor": undefined,
-          "height": undefined,
           "width": undefined,
         }
       }
@@ -1376,7 +1509,7 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard Image Set 1`] = `
 Array [
   <div
-    className="wxc-adaptive-card wxc-ac-container--has-padding"
+    className="wxc-adaptive-card wxc-ac-container--has-padding wxc-ac-container--vertical"
   >
     <div
       className="wxc-adaptive-cards-image-set wxc-ac-container--horizontal"
@@ -1387,7 +1520,6 @@ Array [
         style={
           Object {
             "backgroundColor": "red",
-            "height": undefined,
             "width": undefined,
           }
         }
@@ -1398,7 +1530,6 @@ Array [
         style={
           Object {
             "backgroundColor": undefined,
-            "height": undefined,
             "width": undefined,
           }
         }
@@ -1409,7 +1540,6 @@ Array [
         style={
           Object {
             "backgroundColor": undefined,
-            "height": undefined,
             "width": undefined,
           }
         }
@@ -1431,7 +1561,6 @@ Array [
         style={
           Object {
             "backgroundColor": undefined,
-            "height": undefined,
             "width": undefined,
           }
         }
@@ -1464,7 +1593,7 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard Rich Text Block 1`] = `
 Array [
   <div
-    className="wxc-adaptive-card wxc-ac-container--has-padding"
+    className="wxc-adaptive-card wxc-ac-container--has-padding wxc-ac-container--vertical"
   >
     <div
       className="wxc-adaptive-cards-rich-text-block"
@@ -1732,7 +1861,7 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard Text Block 1`] = `
 Array [
   <div
-    className="wxc-adaptive-card wxc-ac-container--has-padding"
+    className="wxc-adaptive-card wxc-ac-container--has-padding wxc-ac-container--vertical"
   >
     <div
       className="wxc-adaptive-cards-text-block wxc-ac-color--default"

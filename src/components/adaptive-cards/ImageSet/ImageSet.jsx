@@ -9,7 +9,7 @@ import Component, {acPropTypes, registerComponent} from '../Component/Component'
  *
  * @param {object} props  React props passed to the component
  * @param {object} props.data  Active cards definition
- * @param {string} props.className  Custom CSS class to apply
+ * @param {string} [props.className]  Custom CSS class to apply
  * @returns {object} JSX of the component
  */
 export default function ImageSet({data, className}) {
@@ -39,6 +39,7 @@ ImageSet.defaultProps = {
 };
 
 ImageSet.acPropTypes = {
+  height: acPropTypes.height,
   images: acPropTypes.children,
   id: acPropTypes.id,
   imageSize: acPropTypes.defaultImageSize,
