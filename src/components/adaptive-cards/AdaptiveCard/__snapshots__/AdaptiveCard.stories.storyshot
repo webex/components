@@ -509,31 +509,43 @@ Array [
       <div
         className="wxc-adaptive-cards-column wxc-ac-container-style--default wxc-ac-container--vertical"
       >
-        <div>
-          <h5>
-            FactSet Component
-          </h5>
-          <pre
-            className="wxc-adaptive-cards-unknown-component"
-          >
-            {
-    "type": "FactSet",
-    "facts": [
-        {
-            "title": "ColumnSet",
-            "value": "MinHeight: 100px"
-        },
-        {
-            "title": "Column 1",
-            "value": "MinHeight: 200px"
-        },
-        {
-            "title": "Column 2",
-            "value": "MinHeight: 50px"
-        }
-    ]
-}
-          </pre>
+        <div
+          className="wxc-adaptive-cards-fact-set"
+        >
+          <table>
+            <tbody>
+              <tr>
+                <th
+                  className="wxc-adaptive-cards-fact-set__fact-title"
+                >
+                  ColumnSet
+                </th>
+                <td>
+                  MinHeight: 100px
+                </td>
+              </tr>
+              <tr>
+                <th
+                  className="wxc-adaptive-cards-fact-set__fact-title"
+                >
+                  Column 1
+                </th>
+                <td>
+                  MinHeight: 200px
+                </td>
+              </tr>
+              <tr>
+                <th
+                  className="wxc-adaptive-cards-fact-set__fact-title"
+                >
+                  Column 2
+                </th>
+                <td>
+                  MinHeight: 50px
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -1211,6 +1223,83 @@ Array [
 ]
 `;
 
+exports[`Storyshots Messaging/AdaptiveCard Fact Set 1`] = `
+Array [
+  <div
+    className="wxc-adaptive-card"
+  >
+    <div
+      className="wxc-adaptive-cards-fact-set"
+    >
+      <table>
+        <tbody>
+          <tr>
+            <th
+              className="wxc-adaptive-cards-fact-set__fact-title"
+            >
+              Fact 1
+            </th>
+            <td>
+              Value 1
+            </td>
+          </tr>
+          <tr>
+            <th
+              className="wxc-adaptive-cards-fact-set__fact-title"
+            >
+              Fact 2
+            </th>
+            <td>
+              Value 2
+            </td>
+          </tr>
+          <tr>
+            <th
+              className="wxc-adaptive-cards-fact-set__fact-title"
+            >
+              Fact 3
+            </th>
+            <td>
+              Value 3
+            </td>
+          </tr>
+          <tr>
+            <th
+              className="wxc-adaptive-cards-fact-set__fact-title"
+            >
+              Fact 4
+            </th>
+            <td>
+              Value 5
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
 exports[`Storyshots Messaging/AdaptiveCard Image 1`] = `
 Array [
   <div
@@ -1378,7 +1467,7 @@ Array [
     className="wxc-adaptive-card"
   >
     <div
-      className="wxc-adaptive-cards-rich-text-block wxc-adaptive-cards-component "
+      className="wxc-adaptive-cards-rich-text-block"
     >
       <div>
         <h5>
@@ -1563,7 +1652,7 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-rich-text-block wxc-adaptive-cards-component "
+      className="wxc-adaptive-cards-rich-text-block"
     >
       <div>
         <h5>
@@ -1580,7 +1669,7 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-rich-text-block wxc-adaptive-cards-component "
+      className="wxc-adaptive-cards-rich-text-block"
     >
       <div>
         <h5>
@@ -1597,7 +1686,7 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-rich-text-block wxc-adaptive-cards-component "
+      className="wxc-adaptive-cards-rich-text-block"
     >
       <div>
         <h5>
@@ -1614,7 +1703,7 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-rich-text-block wxc-adaptive-cards-component "
+      className="wxc-adaptive-cards-rich-text-block"
     />
   </div>,
   <video
