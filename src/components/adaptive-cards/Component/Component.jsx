@@ -47,10 +47,11 @@ UnknownComponent.defaultProps = {
  *
  * @param {object} props  React properties
  * @param {object} props.data  Active Cards definition
+ * @param {string} [props.type]  Active Cards type definition
  * @param {object} props.parentData  Parent Card definition
  * @returns {object} JSX of the component
  */
-export default function Component({data, parentData}) {
+export default function Component({data, type, parentData}) {
   const [cssClasses, sc] = webexComponentClasses('adaptive-cards-component');
   const classes = [];
   const getClass = (key, value) => sc(`${key}--${value}`);
@@ -79,7 +80,7 @@ export default function Component({data, parentData}) {
     classes.push(getClass('container', containerType));
   }
 
-  const C = componentTypes[data.type] || UnknownComponent;
+  const C = componentTypes[data.type || type] || UnknownComponent;
 
   return (
     <C
@@ -92,9 +93,11 @@ export default function Component({data, parentData}) {
 
 Component.propTypes = {
   data: PropTypes.shape().isRequired,
+  type: PropTypes.string,
   parentData: PropTypes.shape(),
 };
 
 Component.defaultProps = {
+  type: undefined,
   parentData: {},
 };
