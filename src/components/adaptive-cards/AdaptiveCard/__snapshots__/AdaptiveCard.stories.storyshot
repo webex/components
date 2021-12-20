@@ -1371,6 +1371,274 @@ Array [
 ]
 `;
 
+exports[`Storyshots Messaging/AdaptiveCard Rich Text Block 1`] = `
+Array [
+  <div
+    className="wxc-adaptive-card"
+  >
+    <div
+      className="wxc-adaptive-cards-rich-text-block wxc-adaptive-cards-component "
+    >
+      <div>
+        <h5>
+          TextRun Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "TextRun",
+    "text": "This is the first inline. "
+}
+        </pre>
+      </div>
+      <div>
+        <h5>
+          TextRun Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "TextRun",
+    "text": "We support colors,",
+    "color": "good"
+}
+        </pre>
+      </div>
+      <div>
+        <h5>
+          TextRun Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "TextRun",
+    "text": " both regular and subtle. ",
+    "isSubtle": true
+}
+        </pre>
+      </div>
+      <div>
+        <h5>
+          TextRun Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "TextRun",
+    "text": "Text ",
+    "size": "small"
+}
+        </pre>
+      </div>
+      <div>
+        <h5>
+          TextRun Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "TextRun",
+    "text": "of ",
+    "size": "medium"
+}
+        </pre>
+      </div>
+      <div>
+        <h5>
+          TextRun Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "TextRun",
+    "text": "all ",
+    "size": "large"
+}
+        </pre>
+      </div>
+      <div>
+        <h5>
+          TextRun Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "TextRun",
+    "text": "sizes! ",
+    "size": "extraLarge"
+}
+        </pre>
+      </div>
+      <div>
+        <h5>
+          TextRun Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "TextRun",
+    "text": "Light weight text. ",
+    "weight": "lighter"
+}
+        </pre>
+      </div>
+      <div>
+        <h5>
+          TextRun Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "TextRun",
+    "text": "Bold weight text. ",
+    "weight": "bolder"
+}
+        </pre>
+      </div>
+      <div>
+        <h5>
+          TextRun Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "TextRun",
+    "text": "Highlights. ",
+    "highlight": true
+}
+        </pre>
+      </div>
+      <div>
+        <h5>
+          TextRun Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "TextRun",
+    "text": "Italics. ",
+    "italic": true
+}
+        </pre>
+      </div>
+      <div>
+        <h5>
+          TextRun Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "TextRun",
+    "text": "Strikethrough. ",
+    "strikethrough": true
+}
+        </pre>
+      </div>
+      <div>
+        <h5>
+          TextRun Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "TextRun",
+    "text": "Monospace too!",
+    "fontType": "monospace"
+}
+        </pre>
+      </div>
+    </div>
+    <div
+      className="wxc-adaptive-cards-rich-text-block wxc-adaptive-cards-component "
+    >
+      <div>
+        <h5>
+          TextRun Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "TextRun",
+    "text": "Date-Time parsing: {{DATE(2017-02-14T06:08:39Z,LONG)}} {{TIME(2017-02-14T06:08:39Z)}}"
+}
+        </pre>
+      </div>
+    </div>
+    <div
+      className="wxc-adaptive-cards-rich-text-block wxc-adaptive-cards-component "
+    >
+      <div>
+        <h5>
+          TextRun Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "TextRun",
+    "text": "Rich text blocks also support center alignment. Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor "
+}
+        </pre>
+      </div>
+    </div>
+    <div
+      className="wxc-adaptive-cards-rich-text-block wxc-adaptive-cards-component "
+    >
+      <div>
+        <h5>
+          TextRun Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "TextRun",
+    "text": "Rich text blocks also support right alignment. Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor "
+}
+        </pre>
+      </div>
+    </div>
+    <div
+      className="wxc-adaptive-cards-rich-text-block wxc-adaptive-cards-component "
+    />
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
 exports[`Storyshots Messaging/AdaptiveCard Text Block 1`] = `
 Array [
   <div
