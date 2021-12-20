@@ -32,6 +32,22 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-ac;
 .#{$C}-rtl--true { direction: rtl; }
 .#{$C}-rtl--false { direction: ltr; }
 
+.#{$C}-highlight--true {
+  background-color: var(--wxc-adaptive-cards--highlight-color);
+}
+
+.#{$C}-italic--true {
+  font-style: italic;
+}
+
+.#{$C}-strikethrough--true {
+  text-decoration: line-through;
+}
+
+.#{$C}-underline--true {
+  text-decoration: underline;
+}
+
 .#{$C}-container-style {
   &--heading {
     font-weight: bold;

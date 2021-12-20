@@ -1598,238 +1598,114 @@ Array [
     <div
       className="wxc-adaptive-cards-rich-text-block wxc-ac-horizontal-alignment--left"
     >
-      <div>
-        <h5>
-          TextRun Component
-        </h5>
-        <pre
-          className="wxc-adaptive-cards-unknown-component"
-        >
-          {
-    "type": "TextRun",
-    "text": "This is the first inline. "
-}
-        </pre>
-      </div>
-      <div>
-        <h5>
-          TextRun Component
-        </h5>
-        <pre
-          className="wxc-adaptive-cards-unknown-component"
-        >
-          {
-    "type": "TextRun",
-    "text": "We support colors,",
-    "color": "good"
-}
-        </pre>
-      </div>
-      <div>
-        <h5>
-          TextRun Component
-        </h5>
-        <pre
-          className="wxc-adaptive-cards-unknown-component"
-        >
-          {
-    "type": "TextRun",
-    "text": " both regular and subtle. ",
-    "isSubtle": true
-}
-        </pre>
-      </div>
-      <div>
-        <h5>
-          TextRun Component
-        </h5>
-        <pre
-          className="wxc-adaptive-cards-unknown-component"
-        >
-          {
-    "type": "TextRun",
-    "text": "Text ",
-    "size": "small"
-}
-        </pre>
-      </div>
-      <div>
-        <h5>
-          TextRun Component
-        </h5>
-        <pre
-          className="wxc-adaptive-cards-unknown-component"
-        >
-          {
-    "type": "TextRun",
-    "text": "of ",
-    "size": "medium"
-}
-        </pre>
-      </div>
-      <div>
-        <h5>
-          TextRun Component
-        </h5>
-        <pre
-          className="wxc-adaptive-cards-unknown-component"
-        >
-          {
-    "type": "TextRun",
-    "text": "all ",
-    "size": "large"
-}
-        </pre>
-      </div>
-      <div>
-        <h5>
-          TextRun Component
-        </h5>
-        <pre
-          className="wxc-adaptive-cards-unknown-component"
-        >
-          {
-    "type": "TextRun",
-    "text": "sizes! ",
-    "size": "extraLarge"
-}
-        </pre>
-      </div>
-      <div>
-        <h5>
-          TextRun Component
-        </h5>
-        <pre
-          className="wxc-adaptive-cards-unknown-component"
-        >
-          {
-    "type": "TextRun",
-    "text": "Light weight text. ",
-    "weight": "lighter"
-}
-        </pre>
-      </div>
-      <div>
-        <h5>
-          TextRun Component
-        </h5>
-        <pre
-          className="wxc-adaptive-cards-unknown-component"
-        >
-          {
-    "type": "TextRun",
-    "text": "Bold weight text. ",
-    "weight": "bolder"
-}
-        </pre>
-      </div>
-      <div>
-        <h5>
-          TextRun Component
-        </h5>
-        <pre
-          className="wxc-adaptive-cards-unknown-component"
-        >
-          {
-    "type": "TextRun",
-    "text": "Highlights. ",
-    "highlight": true
-}
-        </pre>
-      </div>
-      <div>
-        <h5>
-          TextRun Component
-        </h5>
-        <pre
-          className="wxc-adaptive-cards-unknown-component"
-        >
-          {
-    "type": "TextRun",
-    "text": "Italics. ",
-    "italic": true
-}
-        </pre>
-      </div>
-      <div>
-        <h5>
-          TextRun Component
-        </h5>
-        <pre
-          className="wxc-adaptive-cards-unknown-component"
-        >
-          {
-    "type": "TextRun",
-    "text": "Strikethrough. ",
-    "strikethrough": true
-}
-        </pre>
-      </div>
-      <div>
-        <h5>
-          TextRun Component
-        </h5>
-        <pre
-          className="wxc-adaptive-cards-unknown-component"
-        >
-          {
-    "type": "TextRun",
-    "text": "Monospace too!",
-    "fontType": "monospace"
-}
-        </pre>
-      </div>
+      <span
+        className="wxc-adaptive-cards-text-run"
+        style={Object {}}
+      >
+        This is the first inline. 
+      </span>
+      <span
+        className="wxc-adaptive-cards-text-run wxc-ac-color--good"
+        style={Object {}}
+      >
+        We support colors,
+      </span>
+      <span
+        className="wxc-adaptive-cards-text-run wxc-ac-is-subtle--true"
+        style={Object {}}
+      >
+         both regular and subtle. 
+      </span>
+      <span
+        className="wxc-adaptive-cards-text-run wxc-ac-size--small"
+        style={Object {}}
+      >
+        Text 
+      </span>
+      <span
+        className="wxc-adaptive-cards-text-run wxc-ac-size--medium"
+        style={Object {}}
+      >
+        of 
+      </span>
+      <span
+        className="wxc-adaptive-cards-text-run wxc-ac-size--large"
+        style={Object {}}
+      >
+        all 
+      </span>
+      <span
+        className="wxc-adaptive-cards-text-run wxc-ac-size--extraLarge"
+        style={Object {}}
+      >
+        sizes! 
+      </span>
+      <span
+        className="wxc-adaptive-cards-text-run wxc-ac-weight--lighter"
+        style={Object {}}
+      >
+        Light weight text. 
+      </span>
+      <span
+        className="wxc-adaptive-cards-text-run wxc-ac-weight--bolder"
+        style={Object {}}
+      >
+        Bold weight text. 
+      </span>
+      <span
+        className="wxc-adaptive-cards-text-run wxc-ac-highlight--true"
+        style={Object {}}
+      >
+        Highlights. 
+      </span>
+      <span
+        className="wxc-adaptive-cards-text-run wxc-ac-italic--true"
+        style={Object {}}
+      >
+        Italics. 
+      </span>
+      <span
+        className="wxc-adaptive-cards-text-run wxc-ac-strikethrough--true"
+        style={Object {}}
+      >
+        Strikethrough. 
+      </span>
+      <span
+        className="wxc-adaptive-cards-text-run wxc-ac-font-type--monospace"
+        style={Object {}}
+      >
+        Monospace too!
+      </span>
     </div>
     <div
       className="wxc-adaptive-cards-rich-text-block wxc-ac-horizontal-alignment--left"
     >
-      <div>
-        <h5>
-          TextRun Component
-        </h5>
-        <pre
-          className="wxc-adaptive-cards-unknown-component"
-        >
-          {
-    "type": "TextRun",
-    "text": "Date-Time parsing: {{DATE(2017-02-14T06:08:39Z,LONG)}} {{TIME(2017-02-14T06:08:39Z)}}"
-}
-        </pre>
-      </div>
+      <span
+        className="wxc-adaptive-cards-text-run"
+        style={Object {}}
+      >
+        Date-Time parsing: {{DATE(2017-02-14T06:08:39Z,LONG)}} {{TIME(2017-02-14T06:08:39Z)}}
+      </span>
     </div>
     <div
       className="wxc-adaptive-cards-rich-text-block wxc-ac-horizontal-alignment--center"
     >
-      <div>
-        <h5>
-          TextRun Component
-        </h5>
-        <pre
-          className="wxc-adaptive-cards-unknown-component"
-        >
-          {
-    "type": "TextRun",
-    "text": "Rich text blocks also support center alignment. Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor "
-}
-        </pre>
-      </div>
+      <span
+        className="wxc-adaptive-cards-text-run"
+        style={Object {}}
+      >
+        Rich text blocks also support center alignment. Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
+      </span>
     </div>
     <div
       className="wxc-adaptive-cards-rich-text-block wxc-ac-horizontal-alignment--right"
     >
-      <div>
-        <h5>
-          TextRun Component
-        </h5>
-        <pre
-          className="wxc-adaptive-cards-unknown-component"
-        >
-          {
-    "type": "TextRun",
-    "text": "Rich text blocks also support right alignment. Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor "
-}
-        </pre>
-      </div>
+      <span
+        className="wxc-adaptive-cards-text-run"
+        style={Object {}}
+      >
+        Rich text blocks also support right alignment. Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
+      </span>
     </div>
     <div
       className="wxc-adaptive-cards-rich-text-block wxc-ac-horizontal-alignment--left"
