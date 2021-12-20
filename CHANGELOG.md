@@ -1,3 +1,10 @@
+## [1.216.1](https://github.com/webex/components/compare/v1.216.0...v1.216.1) (2021-12-20)
+
+
+### Bug Fixes
+
+* **AdaptiveCards:** implement generic handling of adaptive card properties ([a37b133](https://github.com/webex/components/commit/a37b133d705c10dc1ad88efe7726e5bbc7c51f3d))
+
 # [1.216.0](https://github.com/webex/components/compare/v1.215.0...v1.216.0) (2021-12-17)
 
 
