@@ -35,9 +35,11 @@ TextBlock.defaultProps = {
 };
 
 TextBlock.acPropTypes = {
+  color: acPropTypes.color,
   fontType: acPropTypes.fontType,
   horizontalAlignment: acPropTypes.horizontalAlignment,
   id: acPropTypes.id,
+  isSubtle: acPropTypes.isSubtle,
   isVisible: acPropTypes.isVisible,
   separator: acPropTypes.separator,
   size: acPropTypes.size,

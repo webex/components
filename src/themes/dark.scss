@@ -194,4 +194,20 @@
   --wxc-adaptive-cards--background-color--warning: #{$wxc-yellow-80};
 
   --wxc-adaptive-cards--separator-color: #{$wxc-black-alpha-60};
+
+  --wxc-adaptive-cards--color--default: #{$wxc-white-alpha-95};
+  --wxc-adaptive-cards--color--dark: #{$wxc-white-alpha-95};
+  --wxc-adaptive-cards--color--light: #{$wxc-white-alpha-70};
+  --wxc-adaptive-cards--color--accent: #{$wxc-blue-40};
+  --wxc-adaptive-cards--color--good: #{$wxc-green-40};
+  --wxc-adaptive-cards--color--warning: #{$wxc-yellow-40};
+  --wxc-adaptive-cards--color--attention: #{$wxc-red-40};
+
+  --wxc-adaptive-cards--subtle-color--default: #{$wxc-white-alpha-70};
+  --wxc-adaptive-cards--subtle-color--dark: #{$wxc-white-alpha-70};
+  --wxc-adaptive-cards--subtle-color--light: #{$wxc-white-alpha-60};
+  --wxc-adaptive-cards--subtle-color--accent: #{$wxc-blue-30};
+  --wxc-adaptive-cards--subtle-color--good: #{$wxc-green-30};
+  --wxc-adaptive-cards--subtle-color--warning: #{$wxc-yellow-30};
+  --wxc-adaptive-cards--subtle-color--attention: #{$wxc-red-30};
 }
