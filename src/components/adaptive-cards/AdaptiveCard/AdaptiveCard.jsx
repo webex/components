@@ -13,6 +13,7 @@ import '../InputNumber/InputNumber';
 import '../InputText/InputText';
 import '../InputTime/InputTime';
 import '../InputToggle/InputToggle';
+import '../RichTextBlock/RichTextBlock';
 import '../TextBlock/TextBlock';
 
 /**
