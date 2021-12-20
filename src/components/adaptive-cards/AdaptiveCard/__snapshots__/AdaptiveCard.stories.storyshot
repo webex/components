@@ -27,12 +27,12 @@ Array [
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac-weight--Lighter"
+          className="wxc-adaptive-cards-text-block wxc-ac-weight--Lighter wxc-ac-color--Accent"
         >
           Cisco Webex Teams
         </div>
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac-weight--Bolder wxc-ac-horizontal-alignment--Left wxc-ac-wrap--true wxc-ac-size--Large wxc-ac-spacing--Small"
+          className="wxc-adaptive-cards-text-block wxc-ac-weight--Bolder wxc-ac-horizontal-alignment--Left wxc-ac-wrap--true wxc-ac-color--Light wxc-ac-size--Large wxc-ac-spacing--Small"
         >
           Buttons and Cards Release
         </div>
@@ -45,17 +45,17 @@ Array [
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
       >
         <div
-          className="wxc-adaptive-cards-text-block"
+          className="wxc-adaptive-cards-text-block wxc-ac-color--Light"
         >
           Release Date:
         </div>
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac-weight--Lighter wxc-ac-spacing--Small"
+          className="wxc-adaptive-cards-text-block wxc-ac-weight--Lighter wxc-ac-color--Light wxc-ac-spacing--Small"
         >
           Product:
         </div>
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac-weight--Lighter wxc-ac-spacing--Small"
+          className="wxc-adaptive-cards-text-block wxc-ac-weight--Lighter wxc-ac-color--Light wxc-ac-spacing--Small"
         >
           OS:
         </div>
@@ -64,17 +64,17 @@ Array [
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
       >
         <div
-          className="wxc-adaptive-cards-text-block"
+          className="wxc-adaptive-cards-text-block wxc-ac-color--Light"
         >
           Aug 6, 2019
         </div>
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac-weight--Lighter wxc-ac-spacing--Small"
+          className="wxc-adaptive-cards-text-block wxc-ac-color--Light wxc-ac-weight--Lighter wxc-ac-spacing--Small"
         >
           Webex Teams
         </div>
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac-weight--Lighter wxc-ac-spacing--Small"
+          className="wxc-adaptive-cards-text-block wxc-ac-weight--Lighter wxc-ac-color--Light wxc-ac-spacing--Small"
         >
           Mac, Windows, Web
         </div>
@@ -773,7 +773,7 @@ Array [
       Hi,
     </div>
     <div
-      className="wxc-adaptive-cards-text-block"
+      className="wxc-adaptive-cards-text-block wxc-ac-is-subtle--true"
     >
       MasterHip
     </div>
@@ -915,7 +915,7 @@ Array [
           Silver Star Mountain
         </div>
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac-spacing--none"
+          className="wxc-adaptive-cards-text-block wxc-ac-is-subtle--true wxc-ac-spacing--none"
         >
           Maps
         </div>
@@ -948,7 +948,7 @@ Array [
           Kitchen Remodel
         </div>
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac-spacing--none"
+          className="wxc-adaptive-cards-text-block wxc-ac-is-subtle--true wxc-ac-spacing--none"
         >
           With EMPHASIS
         </div>
@@ -981,7 +981,7 @@ Array [
           The Witcher
         </div>
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac-spacing--none"
+          className="wxc-adaptive-cards-text-block wxc-ac-is-subtle--true wxc-ac-spacing--none"
         >
           Netflix
         </div>
@@ -1045,37 +1045,37 @@ Array [
         This container has the default style
       </div>
       <div
-        className="wxc-adaptive-cards-text-block"
+        className="wxc-adaptive-cards-text-block wxc-ac-color--default"
       >
         color: default
       </div>
       <div
-        className="wxc-adaptive-cards-text-block"
+        className="wxc-adaptive-cards-text-block wxc-ac-color--accent"
       >
         color: accent
       </div>
       <div
-        className="wxc-adaptive-cards-text-block"
+        className="wxc-adaptive-cards-text-block wxc-ac-color--good"
       >
         color: good
       </div>
       <div
-        className="wxc-adaptive-cards-text-block"
+        className="wxc-adaptive-cards-text-block wxc-ac-color--warning"
       >
         color: warning
       </div>
       <div
-        className="wxc-adaptive-cards-text-block"
+        className="wxc-adaptive-cards-text-block wxc-ac-color--attention"
       >
         color: attention
       </div>
       <div
-        className="wxc-adaptive-cards-text-block"
+        className="wxc-adaptive-cards-text-block wxc-ac-color--light"
       >
         color: light
       </div>
       <div
-        className="wxc-adaptive-cards-text-block"
+        className="wxc-adaptive-cards-text-block wxc-ac-color--dark"
       >
         color: dark
       </div>
@@ -1089,37 +1089,37 @@ Array [
         This container has the accent style
       </div>
       <div
-        className="wxc-adaptive-cards-text-block"
+        className="wxc-adaptive-cards-text-block wxc-ac-color--default"
       >
         color: default
       </div>
       <div
-        className="wxc-adaptive-cards-text-block"
+        className="wxc-adaptive-cards-text-block wxc-ac-color--accent"
       >
         color: accent
       </div>
       <div
-        className="wxc-adaptive-cards-text-block"
+        className="wxc-adaptive-cards-text-block wxc-ac-color--good"
       >
         color: good
       </div>
       <div
-        className="wxc-adaptive-cards-text-block"
+        className="wxc-adaptive-cards-text-block wxc-ac-color--warning"
       >
         color: warning
       </div>
       <div
-        className="wxc-adaptive-cards-text-block"
+        className="wxc-adaptive-cards-text-block wxc-ac-color--attention"
       >
         color: attention
       </div>
       <div
-        className="wxc-adaptive-cards-text-block"
+        className="wxc-adaptive-cards-text-block wxc-ac-color--light"
       >
         color: light
       </div>
       <div
-        className="wxc-adaptive-cards-text-block"
+        className="wxc-adaptive-cards-text-block wxc-ac-color--dark"
       >
         color: dark
       </div>
@@ -1127,7 +1127,7 @@ Array [
         className="wxc-container wxc-ac-container--vertical"
       >
         <div
-          className="wxc-adaptive-cards-text-block"
+          className="wxc-adaptive-cards-text-block wxc-ac-color--dark"
         >
           Contained container - no style
         </div>
@@ -1136,7 +1136,7 @@ Array [
         className="wxc-container wxc-ac-container-style--emphasis wxc-ac-container--vertical"
       >
         <div
-          className="wxc-adaptive-cards-text-block"
+          className="wxc-adaptive-cards-text-block wxc-ac-color--dark"
         >
           Contained container - emphasis
         </div>
@@ -1145,7 +1145,7 @@ Array [
         className="wxc-container wxc-ac-container-style--default wxc-ac-container--vertical"
       >
         <div
-          className="wxc-adaptive-cards-text-block"
+          className="wxc-adaptive-cards-text-block wxc-ac-color--dark"
         >
           Contained container - default
         </div>
@@ -1154,7 +1154,7 @@ Array [
         className="wxc-container wxc-ac-container-style--good wxc-ac-container--vertical"
       >
         <div
-          className="wxc-adaptive-cards-text-block"
+          className="wxc-adaptive-cards-text-block wxc-ac-color--dark"
         >
           Contained container - good
         </div>
@@ -1163,7 +1163,7 @@ Array [
         className="wxc-container wxc-ac-container-style--warning wxc-ac-container--vertical"
       >
         <div
-          className="wxc-adaptive-cards-text-block"
+          className="wxc-adaptive-cards-text-block wxc-ac-color--dark"
         >
           Contained container - warning
         </div>
@@ -1172,7 +1172,7 @@ Array [
         className="wxc-container wxc-ac-container-style--attention wxc-ac-container--vertical"
       >
         <div
-          className="wxc-adaptive-cards-text-block"
+          className="wxc-adaptive-cards-text-block wxc-ac-color--dark"
         >
           Contained container - attention
         </div>
@@ -1181,7 +1181,7 @@ Array [
         className="wxc-container wxc-ac-container-style--accent wxc-ac-container--vertical"
       >
         <div
-          className="wxc-adaptive-cards-text-block"
+          className="wxc-adaptive-cards-text-block wxc-ac-color--dark"
         >
           Contained container - accent
         </div>
@@ -1378,37 +1378,37 @@ Array [
     className="wxc-adaptive-card"
   >
     <div
-      className="wxc-adaptive-cards-text-block"
+      className="wxc-adaptive-cards-text-block wxc-ac-color--default"
     >
       color: default
     </div>
     <div
-      className="wxc-adaptive-cards-text-block"
+      className="wxc-adaptive-cards-text-block wxc-ac-color--accent"
     >
       color: accent
     </div>
     <div
-      className="wxc-adaptive-cards-text-block"
+      className="wxc-adaptive-cards-text-block wxc-ac-color--good"
     >
       color: good
     </div>
     <div
-      className="wxc-adaptive-cards-text-block"
+      className="wxc-adaptive-cards-text-block wxc-ac-color--warning"
     >
       color: warning
     </div>
     <div
-      className="wxc-adaptive-cards-text-block"
+      className="wxc-adaptive-cards-text-block wxc-ac-color--attention"
     >
       color: attention
     </div>
     <div
-      className="wxc-adaptive-cards-text-block"
+      className="wxc-adaptive-cards-text-block wxc-ac-color--light"
     >
       color: light
     </div>
     <div
-      className="wxc-adaptive-cards-text-block"
+      className="wxc-adaptive-cards-text-block wxc-ac-color--dark"
     >
       color: dark
     </div>
@@ -1443,12 +1443,12 @@ Array [
       **horizontalAlignment:right**
     </div>
     <div
-      className="wxc-adaptive-cards-text-block"
+      className="wxc-adaptive-cards-text-block wxc-ac-is-subtle--false"
     >
       isSubtle:false
     </div>
     <div
-      className="wxc-adaptive-cards-text-block"
+      className="wxc-adaptive-cards-text-block wxc-ac-is-subtle--true"
     >
       isSubtle:true
     </div>
@@ -1524,7 +1524,7 @@ Array [
       Style set to heading
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac-container-style--heading wxc-ac-wrap--true"
+      className="wxc-adaptive-cards-text-block wxc-ac-container-style--heading wxc-ac-color--good wxc-ac-wrap--true"
       role="heading"
     >
       Style set to heading, color set to good

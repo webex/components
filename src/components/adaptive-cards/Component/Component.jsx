@@ -7,6 +7,7 @@ const containerTypes = {};
 
 export const acPropTypes = {
   children: 'children',
+  color: 'color',
   containerStyle: 'container-style',
   defaultImageSize: 'default-image-size',
   fontType: 'font-type',
@@ -14,6 +15,7 @@ export const acPropTypes = {
   id: 'id',
   imageSize: 'image-size',
   imageStyle: 'image-style',
+  isSubtle: 'is-subtle',
   isVisible: 'is-visible',
   rtl: 'rtl',
   separator: 'separator',
