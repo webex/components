@@ -16,6 +16,7 @@ import '../InputTime/InputTime';
 import '../InputToggle/InputToggle';
 import '../RichTextBlock/RichTextBlock';
 import '../TextBlock/TextBlock';
+import '../TextRun/TextRun';
 
 /**
  * AdaptiveCard component
