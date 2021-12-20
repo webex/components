@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Component, {registerComponent} from '../Component/Component';
+import Component, {acPropTypes, registerComponent} from '../Component/Component';
 import webexComponentClasses from '../../helpers';
 
 /**
@@ -9,28 +9,14 @@ import webexComponentClasses from '../../helpers';
  *
  * @param {object} props  React props passed to the component
  * @param {object} props.data  Active cards definition
+ * @param {string} props.className  Custom CSS class to apply
  * @returns {object} JSX of the component
  */
-export default function Column({data}) {
-  const [cssClasses, sc] = webexComponentClasses('column');
-  const classes = [];
-  const getClass = (key, value) => sc(`${key}--${value}`);
-
-  for (const [key, value] of Object.entries(data)) {
-    switch (key) {
-      case 'items': break;
-      case 'bleed':
-      case 'rtl':
-      case 'style':
-        classes.push(getClass(key, value));
-        break;
-      default:
-        console.log('[Column]', 'Unknown property:', key, value);
-    }
-  }
+export default function Column({data, className}) {
+  const [cssClasses] = webexComponentClasses('adaptive-cards-column', className);
 
   return (
-    <div className={`${cssClasses} ${classes.join(' ')}`}>
+    <div className={cssClasses}>
       {/* eslint-disable react/no-array-index-key */}
       {data.items?.map((item, index) => <Component data={item} key={index} />)}
     </div>
@@ -39,6 +25,22 @@ export default function Column({data}) {
 
 Column.propTypes = {
   data: PropTypes.shape().isRequired,
+  className: PropTypes.string,
 };
 
-registerComponent('Column', Column);
+Column.defaultProps = {
+  className: '',
+};
+
+Column.acPropTypes = {
+  id: acPropTypes.id,
+  isVisible: acPropTypes.isVisible,
+  items: acPropTypes.children,
+  rtl: acPropTypes.rtl,
+  separator: acPropTypes.separator,
+  spacing: acPropTypes.spacing,
+  style: acPropTypes.containerStyle,
+  type: acPropTypes.type,
+};
+
+registerComponent('Column', Column, 'vertical');

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Component, {registerComponent} from '../Component/Component';
+import Component, {acPropTypes, registerComponent} from '../Component/Component';
 import webexComponentClasses from '../../helpers';
 
 /**
@@ -13,27 +13,18 @@ import webexComponentClasses from '../../helpers';
  * @returns {object} JSX of the component
  */
 export default function ColumnSet({data, className}) {
-  const [cssClasses, sc] = webexComponentClasses('adaptive-cards-column-set', className);
-  const classes = [];
-  const getClass = (key, value) => sc(`${key}--${value}`);
-
-  for (const [key, value] of Object.entries(data)) {
-    switch (key) {
-      case 'columns': break;
-      case 'style':
-        classes.push(getClass(key, value));
-        break;
-      default:
-        console.log('[ColumnSet]', 'Unknown property:', key, value);
-    }
-  }
+  const [cssClasses] = webexComponentClasses('adaptive-cards-column-set', className);
 
   return (
-    <div className={`${cssClasses} ${classes.join(' ')}`}>
+    <div className={cssClasses}>
       {/* eslint-disable react/no-array-index-key */}
-      {data.columns.map((item, index) => (
-        <Component data={item} type="Column" key={index} style={{minHeight: data.minHeight}} />
-      ))}
+      {data.columns.map((item, index) => {
+        const itemData = {type: 'Column', ...item};
+
+        return (
+          <Component data={itemData} key={index} />
+        );
+      })}
     </div>
   );
 }
@@ -47,4 +38,16 @@ ColumnSet.defaultProps = {
   className: '',
 };
 
-registerComponent('ColumnSet', ColumnSet, 'vertical');
+ColumnSet.acPropTypes = {
+  columns: acPropTypes.children,
+  horizontalAlignment: acPropTypes.horizontalAlignment,
+  id: acPropTypes.id,
+  isVisible: acPropTypes.isVisible,
+  minHeight: acPropTypes.minHeight,
+  separator: acPropTypes.separator,
+  spacing: acPropTypes.spacing,
+  style: acPropTypes.containerStyle,
+  type: acPropTypes.type,
+};
+
+registerComponent('ColumnSet', ColumnSet, 'horizontal');

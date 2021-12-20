@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
-import {registerComponent} from '../Component/Component';
+import {acPropTypes, registerComponent} from '../Component/Component';
 
 /**
  * Adaptive Cards TextBlock component
@@ -9,33 +9,15 @@ import {registerComponent} from '../Component/Component';
  *
  * @param {object} props  React props passed to the component
  * @param {object} props.data  Active cards definition
+ * @param {string} props.className  Custom CSS class to apply
  * @returns {object} JSX of the component
  */
-export default function TextBlock({data}) {
-  const [cssClasses, sc] = webexComponentClasses('text-block', undefined);
-  const classes = [];
-  const getClass = (key, value) => sc(`${key}--${value}`);
-
-  for (const [key, value] of Object.entries(data)) {
-    switch (key) {
-      case 'type': break;
-      case 'text': break;
-      case 'fontType':
-      case 'horizontalAlignment':
-      case 'size':
-      case 'weight':
-      case 'wrap':
-      case 'style':
-        classes.push(getClass(key, value));
-        break;
-      default:
-        console.log('[TextBlock]', 'Unknown property:', key, value);
-    }
-  }
+export default function TextBlock({data, className}) {
+  const [cssClasses] = webexComponentClasses('adaptive-cards-text-block', className);
 
   return (
     <div
-      className={`${cssClasses} ${classes.join(' ')}`}
+      className={cssClasses}
       role={data.style === 'heading' ? 'heading' : undefined}
     >
       {data.text}
@@ -45,6 +27,26 @@ export default function TextBlock({data}) {
 
 TextBlock.propTypes = {
   data: PropTypes.shape().isRequired,
+  className: PropTypes.string,
+};
+
+TextBlock.defaultProps = {
+  className: '',
+};
+
+TextBlock.acPropTypes = {
+  fontType: acPropTypes.fontType,
+  horizontalAlignment: acPropTypes.horizontalAlignment,
+  id: acPropTypes.id,
+  isVisible: acPropTypes.isVisible,
+  separator: acPropTypes.separator,
+  size: acPropTypes.size,
+  spacing: acPropTypes.spacing,
+  style: acPropTypes.containerStyle,
+  text: acPropTypes.text,
+  type: acPropTypes.type,
+  weight: acPropTypes.weight,
+  wrap: acPropTypes.wrap,
 };
 
 registerComponent('TextBlock', TextBlock);
