@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
-import {registerComponent} from '../Component/Component';
+import {acPropTypes, registerComponent} from '../Component/Component';
 
 /**
  * Adaptive Cards Image component
@@ -9,38 +9,11 @@ import {registerComponent} from '../Component/Component';
  *
  * @param {object} props  React props passed to the component
  * @param {object} props.data  Active cards definition
- * @param {object} props.parentData  Parent card definition
+ * @param {string} props.className  Custom CSS class to apply
  * @returns {object} JSX of the component
  */
-export default function Image({data, parentData}) {
-  const [, sc] = webexComponentClasses('adaptive-cards-image');
-  const classes = [];
-
-  const getClass = (key, value) => sc(`${key}--${value}`);
-
-  for (const [key, value] of Object.entries(data)) {
-    switch (key) {
-      case 'type':
-      case 'url':
-      case 'altText':
-      case 'backgroundColor':
-      case 'size':
-        break;
-      case 'horizontalAlignment':
-      case 'isVisible':
-      case 'separator':
-      case 'spacing':
-      case 'style':
-        classes.push(getClass(key, value));
-        break;
-      default:
-        console.log('[Image]', 'Unknown property', key, value);
-    }
-  }
-
-  classes.push(getClass('size', data.size || parentData.size || 'medium'));
-
-  const [cssClasses] = webexComponentClasses('adaptive-cards-image', classes.join(' '));
+export default function Image({data, className}) {
+  const [cssClasses] = webexComponentClasses('adaptive-cards-image', className);
 
   return (
     <img
@@ -58,11 +31,22 @@ export default function Image({data, parentData}) {
 
 Image.propTypes = {
   data: PropTypes.shape().isRequired,
-  parentData: PropTypes.shape(),
+  className: PropTypes.string,
 };
 
 Image.defaultProps = {
-  parentData: {},
+  className: '',
+};
+
+Image.acPropTypes = {
+  horizontalAlignment: acPropTypes.horizontalAlignment,
+  id: acPropTypes.id,
+  isVisible: acPropTypes.isVisible,
+  type: acPropTypes.type,
+  separator: acPropTypes.separator,
+  size: acPropTypes.imageSize,
+  spacing: acPropTypes.spacing,
+  style: acPropTypes.imageStyle,
 };
 
 registerComponent('Image', Image);

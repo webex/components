@@ -5,6 +5,26 @@ import webexComponentClasses from '../../helpers';
 const componentTypes = {};
 const containerTypes = {};
 
+export const acPropTypes = {
+  children: 'children',
+  containerStyle: 'container-style',
+  defaultImageSize: 'default-image-size',
+  fontType: 'font-type',
+  horizontalAlignment: 'horizontal-alignment',
+  id: 'id',
+  imageSize: 'image-size',
+  imageStyle: 'image-style',
+  isVisible: 'is-visible',
+  rtl: 'rtl',
+  separator: 'separator',
+  size: 'size',
+  spacing: 'spacing',
+  text: 'text',
+  type: 'type',
+  weight: 'weight',
+  wrap: 'wrap',
+};
+
 /**
  * Registers a component
  *
@@ -47,29 +67,29 @@ UnknownComponent.defaultProps = {
  *
  * @param {object} props  React properties
  * @param {object} props.data  Active Cards definition
- * @param {string} [props.type]  Active Cards type definition
- * @param {object} props.parentData  Parent Card definition
  * @returns {object} JSX of the component
  */
-export default function Component({data, type, parentData}) {
-  const [cssClasses, sc] = webexComponentClasses('adaptive-cards-component');
+export default function Component({data}) {
+  const C = componentTypes[data.type] || UnknownComponent;
   const classes = [];
-  const getClass = (key, value) => sc(`${key}--${value}`);
-  const {
-    separator,
-    spacing,
-    isVisible,
-    ...compData
-  } = data;
+  const getClass = (propType, value) => `wxc-ac-${propType}--${value}`;
 
-  for (const [key, value] of Object.entries(data)) {
-    switch (key) {
-      case 'separator':
-      case 'spacing':
-      case 'isVisible':
-        classes.push(getClass(key, value));
+  for (const [prop, value] of Object.entries(data)) {
+    const propType = (C.acPropTypes && C.acPropTypes[prop]) || undefined;
+
+    switch (propType) {
+      case undefined:
+        console.log('Unknown property', prop);
+        break;
+      case acPropTypes.action:
+      case acPropTypes.children:
+      case acPropTypes.defaultImageSize:
+      case acPropTypes.id:
+      case acPropTypes.text:
+      case acPropTypes.type:
         break;
       default:
+        classes.push(getClass(propType, value));
         break;
     }
   }
@@ -80,24 +100,14 @@ export default function Component({data, type, parentData}) {
     classes.push(getClass('container', containerType));
   }
 
-  const C = componentTypes[data.type || type] || UnknownComponent;
-
   return (
     <C
-      data={compData}
-      className={`${cssClasses} ${classes.join(' ')}`}
-      parentData={parentData}
+      data={data}
+      className={classes.join(' ')}
     />
   );
 }
 
 Component.propTypes = {
   data: PropTypes.shape().isRequired,
-  type: PropTypes.string,
-  parentData: PropTypes.shape(),
-};
-
-Component.defaultProps = {
-  type: undefined,
-  parentData: {},
 };
