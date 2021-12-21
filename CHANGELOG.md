@@ -1,3 +1,10 @@
+# [1.219.0](https://github.com/webex/components/compare/v1.218.0...v1.219.0) (2021-12-21)
+
+
+### Features
+
+* **AdaptiveCardsComponent:** implement properties 'minHeight','height','verticalContentAlignment' ([770a8d8](https://github.com/webex/components/commit/770a8d826be3edd7671d8db7a7f323df6d1e186f))
+
 # [1.218.0](https://github.com/webex/components/compare/v1.217.0...v1.218.0) (2021-12-21)
 
 
