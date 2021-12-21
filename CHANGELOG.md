@@ -1,3 +1,10 @@
+# [1.220.0](https://github.com/webex/components/compare/v1.219.0...v1.220.0) (2021-12-21)
+
+
+### Features
+
+* **AdaptiveCardsComponent:** add default props for adaptive cards ([222fd98](https://github.com/webex/components/commit/222fd98d7e997c66c11d6322f2cb1ca649729d86))
+
 # [1.219.0](https://github.com/webex/components/compare/v1.218.0...v1.219.0) (2021-12-21)
 
 
