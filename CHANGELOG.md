@@ -1,3 +1,10 @@
+# [1.218.0](https://github.com/webex/components/compare/v1.217.0...v1.218.0) (2021-12-21)
+
+
+### Features
+
+* **AdaptiveCardsComponent:** implement 'bleed' property ([87033ae](https://github.com/webex/components/commit/87033aea53cc1ca9d99bb2ba47fa035668a817c6))
+
 # [1.217.0](https://github.com/webex/components/compare/v1.216.1...v1.217.0) (2021-12-21)
 
 
