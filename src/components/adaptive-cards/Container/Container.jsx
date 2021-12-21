@@ -52,4 +52,8 @@ Container.acPropTypes = {
   verticalContentAlignment: acPropTypes.verticalContentAlignment,
 };
 
+Container.acDefaultProps = {
+  verticalContentAlignment: 'top',
+};
+
 registerComponent('Container', Container, 'vertical');

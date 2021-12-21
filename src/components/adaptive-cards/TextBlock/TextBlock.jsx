@@ -52,4 +52,8 @@ TextBlock.acPropTypes = {
   wrap: acPropTypes.wrap,
 };
 
+TextBlock.acDefaultProps = {
+  horizontalAlignment: 'left',
+};
+
 registerComponent('TextBlock', TextBlock);

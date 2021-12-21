@@ -55,4 +55,8 @@ ColumnSet.acPropTypes = {
   type: acPropTypes.type,
 };
 
+ColumnSet.acDefaultProps = {
+  horizontalAlignment: 'left',
+};
+
 registerComponent('ColumnSet', ColumnSet, 'horizontal');

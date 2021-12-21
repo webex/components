@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
-import Component, {registerComponent} from '../Component/Component';
+import Component, {acPropTypes, registerComponent} from '../Component/Component';
 
 /**
  * Adaptive Cards RichTextBlock component
@@ -38,6 +38,20 @@ RichTextBlock.propTypes = {
 
 RichTextBlock.defaultProps = {
   className: '',
+};
+
+RichTextBlock.acPropTypes = {
+  horizontalAlignment: acPropTypes.horizontalAlignment,
+  id: acPropTypes.id,
+  inlines: acPropTypes.children,
+  isVisible: acPropTypes.isVisible,
+  separator: acPropTypes.separator,
+  spacing: acPropTypes.spacing,
+  type: acPropTypes.type,
+};
+
+RichTextBlock.acDefaultProps = {
+  horizontalAlignment: 'left',
 };
 
 registerComponent('RichTextBlock', RichTextBlock);
