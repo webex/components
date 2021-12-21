@@ -53,4 +53,9 @@ Image.acPropTypes = {
   style: acPropTypes.imageStyle,
 };
 
+Image.acDefaultProps = {
+  horizontalAlignment: 'left',
+  size: 'medium',
+};
+
 registerComponent('Image', Image);

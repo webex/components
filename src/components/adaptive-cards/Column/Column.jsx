@@ -49,4 +49,8 @@ Column.acPropTypes = {
   verticalContentAlignment: acPropTypes.verticalContentAlignment,
 };
 
+Column.acDefaultProps = {
+  verticalContentAlignment: 'top',
+};
+
 registerComponent('Column', Column, 'vertical');

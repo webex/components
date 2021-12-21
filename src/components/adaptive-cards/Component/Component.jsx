@@ -81,7 +81,9 @@ export default function Component({data}) {
   const getClass = (propType, value) => `wxc-ac-${propType}--${value}`;
   const style = {};
 
-  for (const [prop, value] of Object.entries(data)) {
+  const dataWithDefaults = {...C.acDefaultProps, ...data};
+
+  for (const [prop, value] of Object.entries(dataWithDefaults)) {
     const propType = (C.acPropTypes && C.acPropTypes[prop]) || undefined;
 
     switch (propType) {
