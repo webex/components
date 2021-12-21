@@ -25,7 +25,7 @@ import '../TextBlock/TextBlock';
  * @returns {object} JSX of the component
  */
 export default function AdaptiveCard({data}) {
-  const [cssClasses] = webexComponentClasses('adaptive-card');
+  const [cssClasses] = webexComponentClasses('adaptive-card', 'wxc-ac-container--has-padding');
 
   return (
     <div className={cssClasses}>

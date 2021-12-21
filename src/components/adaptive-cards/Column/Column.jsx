@@ -33,6 +33,7 @@ Column.defaultProps = {
 };
 
 Column.acPropTypes = {
+  bleed: acPropTypes.bleed,
   id: acPropTypes.id,
   isVisible: acPropTypes.isVisible,
   items: acPropTypes.children,

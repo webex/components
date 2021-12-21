@@ -39,6 +39,7 @@ ColumnSet.defaultProps = {
 };
 
 ColumnSet.acPropTypes = {
+  bleed: acPropTypes.bleed,
   columns: acPropTypes.children,
   horizontalAlignment: acPropTypes.horizontalAlignment,
   id: acPropTypes.id,

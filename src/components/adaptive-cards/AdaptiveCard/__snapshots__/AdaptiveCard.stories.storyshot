@@ -3,7 +3,7 @@
 exports[`Storyshots Messaging/AdaptiveCard Card 1`] = `
 Array [
   <div
-    className="wxc-adaptive-card"
+    className="wxc-adaptive-card wxc-ac-container--has-padding"
   >
     <div
       className="wxc-adaptive-cards-column-set wxc-ac-container--horizontal"
@@ -169,7 +169,7 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard Column 1`] = `
 Array [
   <div
-    className="wxc-adaptive-card"
+    className="wxc-adaptive-card wxc-ac-container--has-padding"
   >
     <div
       className="wxc-adaptive-cards-column-set wxc-ac-container--horizontal"
@@ -311,10 +311,10 @@ Array [
       Bleed left
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac-container-style--emphasis wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--horizontal"
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac-container-style--good wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac-container-style--good wxc-ac-container--has-padding wxc-ac-bleed--true wxc-ac-container--vertical"
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -323,7 +323,7 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac-container-style--attention wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac-container-style--attention wxc-ac-container--has-padding wxc-ac-container--vertical"
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -332,7 +332,7 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac-container-style--warning wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac-container-style--warning wxc-ac-container--has-padding wxc-ac-container--vertical"
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -347,10 +347,10 @@ Array [
       Bleed center
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac-container-style--emphasis wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--horizontal"
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac-container-style--good wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac-container-style--good wxc-ac-container--has-padding wxc-ac-container--vertical"
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -359,7 +359,7 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac-container-style--attention wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac-container-style--attention wxc-ac-container--has-padding wxc-ac-bleed--true wxc-ac-container--vertical"
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -368,7 +368,7 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac-container-style--warning wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac-container-style--warning wxc-ac-container--has-padding wxc-ac-container--vertical"
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -383,10 +383,10 @@ Array [
       Bleed right
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac-container-style--emphasis wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--horizontal"
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac-container-style--good wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac-container-style--good wxc-ac-container--has-padding wxc-ac-container--vertical"
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -395,7 +395,7 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac-container-style--attention wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac-container-style--attention wxc-ac-container--has-padding wxc-ac-container--vertical"
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -404,7 +404,7 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac-container-style--warning wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac-container-style--warning wxc-ac-container--has-padding wxc-ac-bleed--true wxc-ac-container--vertical"
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -419,10 +419,10 @@ Array [
       Bleed all
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac-container-style--emphasis wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--horizontal"
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac-container-style--good wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac-container-style--good wxc-ac-container--has-padding wxc-ac-bleed--true wxc-ac-container--vertical"
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -431,7 +431,7 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac-container-style--attention wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac-container-style--attention wxc-ac-container--has-padding wxc-ac-bleed--true wxc-ac-container--vertical"
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -440,7 +440,7 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac-container-style--warning wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac-container-style--warning wxc-ac-container--has-padding wxc-ac-bleed--true wxc-ac-container--vertical"
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -495,7 +495,7 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac-container-style--emphasis wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--horizontal"
     >
       <div
         className="wxc-adaptive-cards-column wxc-ac-container-style--default wxc-ac-container--vertical"
@@ -743,7 +743,7 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac-container-style--emphasis wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--vertical"
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -769,7 +769,7 @@ Array [
           </div>
         </div>
         <div
-          className="wxc-container wxc-ac-container-style--emphasis wxc-ac-container--vertical"
+          className="wxc-container wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--vertical"
         >
           <div
             className="wxc-adaptive-cards-text-block"
@@ -893,7 +893,7 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard Column Set 1`] = `
 Array [
   <div
-    className="wxc-adaptive-card"
+    className="wxc-adaptive-card wxc-ac-container--has-padding"
   >
     <div
       className="wxc-adaptive-cards-text-block wxc-ac-weight--bolder"
@@ -952,7 +952,7 @@ Array [
         />
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac-container-style--emphasis wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--vertical"
       >
         <div
           className="wxc-adaptive-cards-text-block"
@@ -967,7 +967,7 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac-bleed--false wxc-ac-container--horizontal"
     >
       <div
         className="wxc-adaptive-cards-column wxc-ac-container--vertical"
@@ -1026,7 +1026,7 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard Container 1`] = `
 Array [
   <div
-    className="wxc-adaptive-card"
+    className="wxc-adaptive-card wxc-ac-container--has-padding"
   >
     <div
       className="wxc-container wxc-ac-container--vertical"
@@ -1093,7 +1093,7 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-container wxc-ac-container-style--accent wxc-ac-container--vertical"
+      className="wxc-container wxc-ac-container-style--accent wxc-ac-container--has-padding wxc-ac-container--vertical"
     >
       <div
         className="wxc-adaptive-cards-text-block"
@@ -1145,7 +1145,7 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-container wxc-ac-container-style--emphasis wxc-ac-container--vertical"
+        className="wxc-container wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--vertical"
       >
         <div
           className="wxc-adaptive-cards-text-block wxc-ac-color--dark"
@@ -1163,7 +1163,7 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-container wxc-ac-container-style--good wxc-ac-container--vertical"
+        className="wxc-container wxc-ac-container-style--good wxc-ac-container--has-padding wxc-ac-container--vertical"
       >
         <div
           className="wxc-adaptive-cards-text-block wxc-ac-color--dark"
@@ -1172,7 +1172,7 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-container wxc-ac-container-style--warning wxc-ac-container--vertical"
+        className="wxc-container wxc-ac-container-style--warning wxc-ac-container--has-padding wxc-ac-container--vertical"
       >
         <div
           className="wxc-adaptive-cards-text-block wxc-ac-color--dark"
@@ -1181,7 +1181,7 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-container wxc-ac-container-style--attention wxc-ac-container--vertical"
+        className="wxc-container wxc-ac-container-style--attention wxc-ac-container--has-padding wxc-ac-container--vertical"
       >
         <div
           className="wxc-adaptive-cards-text-block wxc-ac-color--dark"
@@ -1190,7 +1190,7 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-container wxc-ac-container-style--accent wxc-ac-container--vertical"
+        className="wxc-container wxc-ac-container-style--accent wxc-ac-container--has-padding wxc-ac-container--vertical"
       >
         <div
           className="wxc-adaptive-cards-text-block wxc-ac-color--dark"
@@ -1226,7 +1226,7 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard Fact Set 1`] = `
 Array [
   <div
-    className="wxc-adaptive-card"
+    className="wxc-adaptive-card wxc-ac-container--has-padding"
   >
     <div
       className="wxc-adaptive-cards-fact-set"
@@ -1303,7 +1303,7 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard Image 1`] = `
 Array [
   <div
-    className="wxc-adaptive-card"
+    className="wxc-adaptive-card wxc-ac-container--has-padding"
   >
     <img
       className="wxc-adaptive-cards-image wxc-ac-image-size--medium wxc-ac-image-style--person"
@@ -1376,7 +1376,7 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard Image Set 1`] = `
 Array [
   <div
-    className="wxc-adaptive-card"
+    className="wxc-adaptive-card wxc-ac-container--has-padding"
   >
     <div
       className="wxc-adaptive-cards-image-set wxc-ac-container--horizontal"
@@ -1464,7 +1464,7 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard Rich Text Block 1`] = `
 Array [
   <div
-    className="wxc-adaptive-card"
+    className="wxc-adaptive-card wxc-ac-container--has-padding"
   >
     <div
       className="wxc-adaptive-cards-rich-text-block"
@@ -1732,7 +1732,7 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard Text Block 1`] = `
 Array [
   <div
-    className="wxc-adaptive-card"
+    className="wxc-adaptive-card wxc-ac-container--has-padding"
   >
     <div
       className="wxc-adaptive-cards-text-block wxc-ac-color--default"
@@ -1875,13 +1875,13 @@ Array [
       **wrap: true** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac-container-style--heading wxc-ac-wrap--true"
+      className="wxc-adaptive-cards-text-block wxc-ac-container-style--heading wxc-ac-container--has-padding wxc-ac-wrap--true"
       role="heading"
     >
       Style set to heading
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac-container-style--heading wxc-ac-color--good wxc-ac-wrap--true"
+      className="wxc-adaptive-cards-text-block wxc-ac-container-style--heading wxc-ac-container--has-padding wxc-ac-color--good wxc-ac-wrap--true"
       role="heading"
     >
       Style set to heading, color set to good
