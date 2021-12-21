@@ -6,6 +6,7 @@ const componentTypes = {};
 const containerTypes = {};
 
 export const acPropTypes = {
+  bleed: 'bleed',
   children: 'children',
   color: 'color',
   containerStyle: 'container-style',
@@ -89,6 +90,12 @@ export default function Component({data}) {
       case acPropTypes.id:
       case acPropTypes.text:
       case acPropTypes.type:
+        break;
+      case acPropTypes.containerStyle:
+        classes.push(getClass(propType, value));
+        if (value && value !== 'default') {
+          classes.push(getClass('container', 'has-padding'));
+        }
         break;
       default:
         classes.push(getClass(propType, value));

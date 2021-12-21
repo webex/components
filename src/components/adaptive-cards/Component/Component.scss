@@ -53,6 +53,10 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-ac;
   &--large { width: 160px; height: 160px; }
 }
 
+.#{$C}-container--has-padding {
+  padding: 0.625rem;
+}
+
 .#{$C}-container--horizontal {
   display: flex;
 
@@ -69,6 +73,14 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-ac;
     &--large { margin-left: 1.875rem; }
     &--extraLarge { margin-left: 2.5rem; }
     &--padding { margin-left: 0.625rem; }
+  }
+
+  &.#{$C}-container--has-padding > .#{$C}-bleed--true {
+    margin-top: -0.625rem;
+    margin-bottom: -0.625rem;
+
+    &:first-child { margin-left: -0.625rem; }
+    &:last-child { margin-right: -0.625rem; }
   }
 }
 
@@ -89,6 +101,14 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-ac;
     &--large { margin-top: 1.875rem; }
     &--extraLarge { margin-top: 2.5rem; }
     &--padding { margin-top: 0.625rem; }
+  }
+
+  &.#{$C}-container--has-padding > .#{$C}-bleed--true {
+    margin-left: -0.625rem;
+    margin-right: -0.625rem;
+
+    &:first-child { margin-top: -0.625rem; }
+    &:last-child { margin-bottom: -0.625rem; }
   }
 }
 
