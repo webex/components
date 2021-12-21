@@ -1,3 +1,12 @@
+# [1.217.0](https://github.com/webex/components/compare/v1.216.1...v1.217.0) (2021-12-21)
+
+
+### Features
+
+* **AdaptiveCardsComponent:** implement properties 'color' and 'isSubtle' ([61744e1](https://github.com/webex/components/commit/61744e1ed114774038e42248a0b8e3f126409366))
+* **AdaptiveCardsFactSet:** create FactSet component ([cd7e0ec](https://github.com/webex/components/commit/cd7e0ecb516a39ca0f6f41794627dd046d0e54df))
+* **AdaptiveCardsRichTextBlock:** create RichTextBlock component ([416232d](https://github.com/webex/components/commit/416232d0b5456b12a756f12f5659f9c5af2acafc))
+
 ## [1.216.1](https://github.com/webex/components/compare/v1.216.0...v1.216.1) (2021-12-20)
 
 
