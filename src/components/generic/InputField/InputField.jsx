@@ -23,6 +23,8 @@ const HINTS = {
  * @param {string} [props.placeholder]  Input placeholder
  * @param {number} [props.max]  Maximum value for the input element
  * @param {number} [props.min]  Minimum value for the input element
+ * @param {number} [props.maxLength]  Maximum number of characters allowed
+ * @param {string} [props.pattern]  Specifies a regular expression that the element's value is checked against
  * @param {Function} [props.onChange]  Action to perform on input change
  * @param {boolean} [props.disabled=false]  Flag indicating input disabled
  * @param {string} [props.error]  Error text
@@ -38,6 +40,8 @@ export default function InputField({
   name,
   value,
   placeholder,
+  maxLength,
+  pattern,
   onChange,
   max,
   min,
@@ -74,6 +78,8 @@ export default function InputField({
           placeholder={placeholder}
           max={max}
           min={min}
+          maxLength={maxLength}
+          pattern={pattern}
           onChange={handleChange}
           disabled={disabled}
           aria-label={ariaLabel}
@@ -135,6 +141,8 @@ InputField.propTypes = {
   ]),
   name: PropTypes.string,
   placeholder: PropTypes.string,
+  maxLength: PropTypes.number,
+  pattern: PropTypes.string,
   onChange: PropTypes.func,
   max: PropTypes.number,
   min: PropTypes.number,
@@ -147,12 +155,14 @@ InputField.propTypes = {
 
 InputField.defaultProps = {
   autoFocus: false,
-  className: '',
+  className: undefined,
   style: undefined,
   type: 'text',
-  value: '',
-  name: '',
-  placeholder: '',
+  value: undefined,
+  name: undefined,
+  placeholder: undefined,
+  maxLength: undefined,
+  pattern: undefined,
   onChange: undefined,
   max: undefined,
   min: undefined,

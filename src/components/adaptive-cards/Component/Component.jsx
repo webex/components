@@ -20,15 +20,18 @@ export const acPropTypes = {
   id: 'id',
   imageSize: 'image-size',
   imageStyle: 'image-style',
+  inputStyle: 'input-style',
   isRequired: 'is-required',
   isSubtle: 'is-subtle',
   isVisible: 'is-visible',
   italic: 'italic',
   label: 'label',
+  maxLength: 'max-length',
   maxValue: 'max-value',
-  minValue: 'min-value',
   minHeight: 'min-height',
+  minValue: 'min-value',
   placeholder: 'placeholder',
+  regex: 'regex',
   rtl: 'rtl',
   separator: 'separator',
   size: 'size',
@@ -37,8 +40,8 @@ export const acPropTypes = {
   text: 'text',
   type: 'type',
   underline: 'underline',
-  verticalContentAlignment: 'vertical-content-alignment',
   value: 'value',
+  verticalContentAlignment: 'vertical-content-alignment',
   weight: 'weight',
   width: 'width',
   wrap: 'wrap',
@@ -112,9 +115,11 @@ export default function Component({data, className, style: styleProp}) {
       case acPropTypes.errorMessage:
       case acPropTypes.id:
       case acPropTypes.label:
+      case acPropTypes.maxLength:
       case acPropTypes.maxValue:
       case acPropTypes.minValue:
       case acPropTypes.placeholder:
+      case acPropTypes.regex:
       case acPropTypes.text:
       case acPropTypes.type:
       case acPropTypes.value:
@@ -183,6 +188,6 @@ Component.propTypes = {
 };
 
 Component.defaultProps = {
-  className: '',
+  className: undefined,
   style: undefined,
 };
