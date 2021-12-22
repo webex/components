@@ -19,7 +19,7 @@ import Tooltip from '../Tooltip/Tooltip';
  * @param {string|number} props.size  Button height
  * @param {number} props.tabIndex  Value of the tabIndex
  * @param {string} props.tooltip  Tooltip to be displayed
- * @param {'default'|'join'|'cancel'|'ghost'|'toggle'} [props.type='default']  Button type
+ * @param {'default'|'join'|'cancel'|'ghost'|'toggle'|'primary'} [props.type='default']  Button type
  * @returns {object}  JSX of the element
  */
 export default function Button({
@@ -78,7 +78,7 @@ Button.propTypes = {
   size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   tabIndex: PropTypes.number,
   tooltip: PropTypes.string,
-  type: PropTypes.oneOf(['default', 'join', 'cancel', 'ghost', 'toggle']),
+  type: PropTypes.oneOf(['default', 'join', 'cancel', 'ghost', 'toggle', 'primary']),
 };
 
 Button.defaultProps = {

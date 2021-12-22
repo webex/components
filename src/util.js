@@ -58,7 +58,25 @@ export function chainWith(createDependentObservable) {
   });
 }
 
+/**
+ * @param {string} url  The Url
+ * @param {string[]} acceptedProtocols  Specifies accepted protocols
+ * @returns {boolean} True if the url is valid, otherwise false
+ */
+export function isValidUrl(url, acceptedProtocols) {
+  let urlObject;
+
+  try {
+    urlObject = new URL(url);
+  } catch (_) {
+    return false;
+  }
+
+  return acceptedProtocols.includes(urlObject.protocol);
+}
+
 export default {
   deepMerge,
   chainWith,
+  isValidUrl,
 };
