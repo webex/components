@@ -1,3 +1,10 @@
+# [1.222.0](https://github.com/webex/components/compare/v1.221.0...v1.222.0) (2021-12-22)
+
+
+### Features
+
+* **AdaptiveCard:** make AdaptiveCard use Component ([3db468f](https://github.com/webex/components/commit/3db468f9ef0b2654f80d49facda1e97bdd5ee652))
+
 # [1.221.0](https://github.com/webex/components/compare/v1.220.0...v1.221.0) (2021-12-22)
 
 
