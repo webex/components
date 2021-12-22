@@ -1,3 +1,10 @@
+# [1.221.0](https://github.com/webex/components/compare/v1.220.0...v1.221.0) (2021-12-22)
+
+
+### Features
+
+* **AdaptiveCardsTextRun:** create TextRun component ([c7cb00d](https://github.com/webex/components/commit/c7cb00de8655463a19bd5576f168084a6444e2a6))
+
 # [1.220.0](https://github.com/webex/components/compare/v1.219.0...v1.220.0) (2021-12-21)
 
 
