@@ -49,11 +49,9 @@ Array [
               disabled={false}
               name="name"
               onChange={[Function]}
-              placeholder=""
               required={false}
               tabIndex={101}
               type="text"
-              value=""
             />
           </div>
         </div>
@@ -79,7 +77,6 @@ Array [
               disabled={false}
               name="password"
               onChange={[Function]}
-              placeholder=""
               required={false}
               tabIndex={102}
               type="password"

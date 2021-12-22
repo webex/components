@@ -1746,6 +1746,59 @@ const exampleActionSet = {
   ],
 };
 
+const exampleInputText = {
+  $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
+  type: 'AdaptiveCard',
+  version: '1.0',
+  body: [
+    {
+      type: 'TextBlock',
+      text: 'Specify the type of text being requested:',
+      style: 'heading',
+    },
+    {
+      type: 'Input.Text',
+      id: 'myComment',
+      style: 'text',
+      height: 'auto',
+      isRequired: true,
+      errorMessage: 'This is a required input',
+    },
+    {
+      type: 'Input.Text',
+      id: 'myEmail',
+      label: 'style: email',
+      style: 'email',
+      errorMessage: 'This is a required input',
+    },
+    {
+      type: 'Input.Text',
+      id: 'myTel',
+      label: 'style: tel',
+      style: 'tel',
+      height: 'stretch',
+    },
+    {
+      type: 'Input.Text',
+      id: 'myUrl',
+      label: 'style: url',
+      style: 'url',
+    },
+    {
+      type: 'Input.Text',
+      id: 'myPassword',
+      label: 'style: password',
+      style: 'password',
+    },
+  ],
+  actions: [
+    {
+      type: 'Action.Submit',
+      title: 'OK',
+    },
+  ],
+};
+
 const exampleInputNumber = {
   $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
   type: 'AdaptiveCard',
@@ -1825,4 +1878,9 @@ ActionSet.args = {
 export const InputNumber = Template.bind({});
 InputNumber.args = {
   template: exampleInputNumber,
+};
+
+export const InputText = Template.bind({});
+InputText.args = {
+  template: exampleInputText,
 };

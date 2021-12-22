@@ -50,7 +50,6 @@ Array [
               disabled={false}
               name="password"
               onChange={[Function]}
-              placeholder=""
               required={false}
               tabIndex={101}
               type="password"
