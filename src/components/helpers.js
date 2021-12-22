@@ -15,14 +15,18 @@ export default function webexComponentClasses(
   userClassName,
   otherClasses,
 ) {
-  const cssClasses = classNames({
-    [`${WEBEX_COMPONENTS_CLASS_PREFIX}-${classBaseName}`]: true,
-    [userClassName]: !!userClassName,
-    ...Object.fromEntries(
-      Object.entries(otherClasses || {})
-        .map(([key, val]) => [`${WEBEX_COMPONENTS_CLASS_PREFIX}-${classBaseName}--${key}`, val]),
-    ),
-  });
+  const userClassNames = Array.isArray(userClassName) ? userClassName : [userClassName];
+
+  const cssClasses = classNames(
+    `${WEBEX_COMPONENTS_CLASS_PREFIX}-${classBaseName}`,
+    ...userClassNames,
+    {
+      ...Object.fromEntries(
+        Object.entries(otherClasses || {})
+          .map(([key, val]) => [`${WEBEX_COMPONENTS_CLASS_PREFIX}-${classBaseName}--${key}`, val]),
+      ),
+    },
+  );
 
   const sc = (subclass) => `${WEBEX_COMPONENTS_CLASS_PREFIX}-${classBaseName}__${subclass}`;
 
