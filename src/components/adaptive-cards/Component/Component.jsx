@@ -77,9 +77,12 @@ UnknownComponent.defaultProps = {
  *
  * @param {object} props  React properties
  * @param {object} props.data  Active Cards definition
+ * @param {string} [props.className]  Custom CSS class to apply
+ * @param {object} [props.style]  Custom style to apply
  * @returns {object} JSX of the component
  */
-export default function Component({data}) {
+export default function Component({data, className, style: styleProp}) {
+  const [cssClasses] = webexComponentClasses('ac', className);
   const C = componentTypes[data.type] || UnknownComponent;
   const classes = [];
   const getClass = (propType, value) => `wxc-ac-${propType}--${value}`;
@@ -132,12 +135,19 @@ export default function Component({data}) {
   return (
     <C
       data={data}
-      className={classes.join(' ')}
-      style={style}
+      className={`${cssClasses} ${classes.join(' ')}`}
+      style={{...style, ...styleProp}}
     />
   );
 }
 
 Component.propTypes = {
   data: PropTypes.shape().isRequired,
+  className: PropTypes.string,
+  style: PropTypes.shape(),
+};
+
+Component.defaultProps = {
+  className: '',
+  style: undefined,
 };
