@@ -4,6 +4,7 @@ import {Template} from 'adaptivecards-templating';
 import webexComponentClasses from '../../helpers';
 
 import Component, {acPropTypes, registerComponent} from '../Component/Component';
+import '../ActionOpenURL/ActionOpenUrl';
 import '../ActionSet/ActionSet';
 import '../Column/Column';
 import '../ColumnSet/ColumnSet';

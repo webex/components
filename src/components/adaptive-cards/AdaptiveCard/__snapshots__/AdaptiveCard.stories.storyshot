@@ -1,5 +1,118 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Messaging/AdaptiveCard Action Open URL 1`] = `
+Array [
+  <div
+    className="wxc-adaptive-card wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
+    style={Object {}}
+  >
+    <div
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+    >
+      The action of these cards will open a URL
+    </div>
+    <div
+      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-container--horizontal"
+      style={Object {}}
+    >
+      <button
+        autoFocus={false}
+        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac  wxc-button--primary"
+        disabled={false}
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 32,
+          }
+        }
+        type="button"
+      >
+        <span>
+          Open url
+        </span>
+      </button>
+      
+      <button
+        autoFocus={false}
+        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac  wxc-button--join"
+        disabled={false}
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 32,
+          }
+        }
+        type="button"
+      >
+        <img
+          alt=""
+          className="wxc-ac-action__icon"
+          src="https://developer.webex.com/images/webex-teams-logo.png"
+        />
+        <span>
+          Action.OpenUrl
+        </span>
+      </button>
+      
+      <button
+        autoFocus={false}
+        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac  wxc-button--cancel"
+        disabled={false}
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 32,
+          }
+        }
+        type="button"
+      >
+        <span>
+          Open url
+        </span>
+      </button>
+      
+      <button
+        autoFocus={false}
+        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac  wxc-ac-action--disabled wxc-button--primary"
+        disabled={true}
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 32,
+          }
+        }
+        type="button"
+      >
+        <span>
+          Open url
+        </span>
+      </button>
+      
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
 exports[`Storyshots Messaging/AdaptiveCard Action Set 1`] = `
 Array [
   <div
@@ -37,20 +150,23 @@ Array [
 }
         </pre>
       </div>
-      <div>
-        <h5>
-          Action.OpenUrl Component
-        </h5>
-        <pre
-          className="wxc-adaptive-cards-unknown-component"
-        >
-          {
-    "type": "Action.OpenUrl",
-    "title": "OpenUrl",
-    "url": "https://adaptivecards.io"
-}
-        </pre>
-      </div>
+      <button
+        autoFocus={false}
+        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac  wxc-button--primary"
+        disabled={false}
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 32,
+          }
+        }
+        type="button"
+      >
+        <span>
+          OpenUrl
+        </span>
+      </button>
+      
     </div>
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-wrap--true"
@@ -83,20 +199,23 @@ Array [
 }
         </pre>
       </div>
-      <div>
-        <h5>
-          Action.OpenUrl Component
-        </h5>
-        <pre
-          className="wxc-adaptive-cards-unknown-component"
-        >
-          {
-    "type": "Action.OpenUrl",
-    "title": "OpenUrl",
-    "url": "https://adaptivecards.io"
-}
-        </pre>
-      </div>
+      <button
+        autoFocus={false}
+        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac  wxc-button--primary"
+        disabled={false}
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 32,
+          }
+        }
+        type="button"
+      >
+        <span>
+          OpenUrl
+        </span>
+      </button>
+      
     </div>
   </div>,
   <video
@@ -1279,34 +1398,40 @@ Array [
       className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-container--horizontal"
       style={Object {}}
     >
-      <div>
-        <h5>
-          Action.OpenUrl Component
-        </h5>
-        <pre
-          className="wxc-adaptive-cards-unknown-component"
-        >
-          {
-    "type": "Action.OpenUrl",
-    "title": "Resume all",
-    "url": "ms-cortana:resume-all"
-}
-        </pre>
-      </div>
-      <div>
-        <h5>
-          Action.OpenUrl Component
-        </h5>
-        <pre
-          className="wxc-adaptive-cards-unknown-component"
-        >
-          {
-    "type": "Action.OpenUrl",
-    "title": "More activities",
-    "url": "ms-cortana:more-activities"
-}
-        </pre>
-      </div>
+      <button
+        autoFocus={false}
+        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac  wxc-button--primary"
+        disabled={false}
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 32,
+          }
+        }
+        type="button"
+      >
+        <span>
+          Resume all
+        </span>
+      </button>
+      
+      <button
+        autoFocus={false}
+        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac  wxc-button--primary"
+        disabled={false}
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 32,
+          }
+        }
+        type="button"
+      >
+        <span>
+          More activities
+        </span>
+      </button>
+      
     </div>
   </div>,
   <video

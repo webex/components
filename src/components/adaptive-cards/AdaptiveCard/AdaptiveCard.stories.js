@@ -1822,6 +1822,44 @@ const exampleInputNumber = {
   ],
 };
 
+const exampleActionOpenUrl = {
+  $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
+  type: 'AdaptiveCard',
+  version: '1.0',
+  body: [
+    {
+      type: 'TextBlock',
+      text: 'The action of these cards will open a URL',
+    },
+  ],
+  actions: [
+    {
+      type: 'Action.OpenUrl',
+      title: 'Open url',
+      url: 'https://adaptivecards.io',
+    },
+    {
+      type: 'Action.OpenUrl',
+      title: 'Action.OpenUrl',
+      url: 'https://adaptivecards.io',
+      iconUrl: 'https://developer.webex.com/images/webex-teams-logo.png',
+      style: 'positive',
+    },
+    {
+      type: 'Action.OpenUrl',
+      title: 'Open url',
+      url: 'https://adaptivecards.io',
+      style: 'destructive',
+    },
+    {
+      type: 'Action.OpenUrl',
+      title: 'Open url',
+      url: 'https://adaptivecards.io',
+      isEnabled: false,
+    },
+  ],
+};
+
 export const Card = Template.bind({});
 Card.args = {
   template: exampleAdaptiveCard,
@@ -1883,4 +1921,9 @@ InputNumber.args = {
 export const InputText = Template.bind({});
 InputText.args = {
   template: exampleInputText,
+};
+
+export const ActionOpenURL = Template.bind({});
+ActionOpenURL.args = {
+  template: exampleActionOpenUrl,
 };

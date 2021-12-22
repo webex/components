@@ -17,10 +17,12 @@ export const acPropTypes = {
   height: 'height',
   highlight: 'highlight',
   horizontalAlignment: 'horizontal-alignment',
+  iconUrl: 'icon-url',
   id: 'id',
   imageSize: 'image-size',
   imageStyle: 'image-style',
   inputStyle: 'input-style',
+  isEnabled: 'is-enabled',
   isRequired: 'is-required',
   isSubtle: 'is-subtle',
   isVisible: 'is-visible',
@@ -30,6 +32,7 @@ export const acPropTypes = {
   maxValue: 'max-value',
   minHeight: 'min-height',
   minValue: 'min-value',
+  mode: 'mode',
   placeholder: 'placeholder',
   regex: 'regex',
   rtl: 'rtl',
@@ -37,9 +40,13 @@ export const acPropTypes = {
   size: 'size',
   spacing: 'spacing',
   strikethrough: 'strikethrough',
+  style: 'style',
   text: 'text',
+  title: 'title',
+  tooltip: 'tooltip',
   type: 'type',
   underline: 'underline',
+  url: 'url',
   value: 'value',
   verticalContentAlignment: 'vertical-content-alignment',
   weight: 'weight',
@@ -113,15 +120,20 @@ export default function Component({data, className, style: styleProp}) {
       case acPropTypes.children:
       case acPropTypes.defaultImageSize:
       case acPropTypes.errorMessage:
+      case acPropTypes.iconUrl:
       case acPropTypes.id:
       case acPropTypes.label:
       case acPropTypes.maxLength:
       case acPropTypes.maxValue:
       case acPropTypes.minValue:
+      case acPropTypes.mode:
       case acPropTypes.placeholder:
       case acPropTypes.regex:
+      case acPropTypes.style:
       case acPropTypes.text:
+      case acPropTypes.tooltip:
       case acPropTypes.type:
+      case acPropTypes.url:
       case acPropTypes.value:
         break;
       case acPropTypes.containerStyle:
