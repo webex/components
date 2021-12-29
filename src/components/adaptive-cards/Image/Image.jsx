@@ -51,6 +51,7 @@ Image.acPropTypes = {
   size: acPropTypes.imageSize,
   spacing: acPropTypes.spacing,
   style: acPropTypes.imageStyle,
+  width: acPropTypes.width,
 };
 
 Image.acDefaultProps = {
