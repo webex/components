@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 
 import Component, {acPropTypes, registerComponent} from '../Component/Component';
+import '../ActionSet/ActionSet';
 import '../Column/Column';
 import '../ColumnSet/ColumnSet';
 import '../Container/Container';
@@ -33,7 +34,8 @@ function AdaptiveCardInternal({data, className, style}) {
   return (
     <div className={cssClasses} style={style}>
       {/* eslint-disable react/no-array-index-key */}
-      {data.body.map((item, index) => <Component data={item} key={index} parentData={data} />)}
+      {data.body?.map((item, index) => <Component data={item} key={index} />)}
+      {data.actions && <Component data={{type: 'ActionSet', actions: data.actions}} />}
     </div>
   );
 }
