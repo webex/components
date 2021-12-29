@@ -40,6 +40,7 @@ export const acPropTypes = {
   verticalContentAlignment: 'vertical-content-alignment',
   value: 'value',
   weight: 'weight',
+  width: 'width',
   wrap: 'wrap',
 };
 
@@ -122,6 +123,15 @@ export default function Component({data, className, style: styleProp}) {
         classes.push(getClass(propType, value));
         if (value && value !== 'default') {
           classes.push(getClass('container', 'has-padding'));
+        }
+        break;
+      case acPropTypes.width:
+        if (value === 'auto' || value === 'stretch') {
+          classes.push(getClass(propType, value));
+        } else if (typeof value === 'number') {
+          style.flex = data.width;
+        } else {
+          style.width = data.width;
         }
         break;
       case acPropTypes.height:

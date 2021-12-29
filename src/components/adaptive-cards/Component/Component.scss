@@ -3,10 +3,18 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-ac;
 .#{$C}-font-type--monospace { font-family: #{$font-family-monospace}; }
 .#{$C}-font-type--default { font-family: #{$brand-font-regular}; }
 
-.#{$C}-horizontal-alignment {
-  &--left { text-align: left; }
-  &--center { text-align: center; }
-  &--right { text-align: right; }
+.#{$C}-container--horizontal {
+  &.#{$C}-horizontal-alignment--left { justify-content: flex-start; }
+  &.#{$C}-horizontal-alignment--center { justify-content: center; }
+  &.#{$C}-horizontal-alignment--right { justify-content: flex-end; }
+}
+
+.#{$C}-container--vertical {
+  > :not(.#{$C}-container--horizontal) {
+    &.#{$C}-horizontal-alignment--left { align-self: flex-start; }
+    &.#{$C}-horizontal-alignment--center { align-self: center; }
+    &.#{$C}-horizontal-alignment--right { align-self: flex-end; }
+  }
 }
 
 .#{$C}-size {
@@ -77,6 +85,11 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-ac;
   display: flex;
   flex-direction: row;
 
+  > .#{$C}-width {
+    &--auto { width: auto; }
+    &--stretch { flex: 1; }
+  }
+
   > .#{$C}-height {
     &--auto { height: auto; }
     &--stretch { align-self: stretch; }
@@ -109,6 +122,11 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-ac;
 .#{$C}-container--vertical {
   display: flex;
   flex-direction: column;
+
+  > .#{$C}-width {
+    &--auto { width: auto; }
+    &--stretch { align-self: stretch; }
+  }
 
   > .#{$C}-height {
     &--auto { height: auto; }

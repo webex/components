@@ -48,6 +48,7 @@ Column.acPropTypes = {
   style: acPropTypes.containerStyle,
   type: acPropTypes.type,
   verticalContentAlignment: acPropTypes.verticalContentAlignment,
+  width: acPropTypes.width,
 };
 
 Column.acDefaultProps = {
