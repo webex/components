@@ -98,7 +98,8 @@ const exampleAdaptiveCard = {
             },
             {
               type: 'TextBlock',
-              text: 'Mac, Windows, Web',
+              // eslint-disable-next-line no-template-curly-in-string
+              text: '${supportedOS}',
               weight: 'Lighter',
               color: 'Light',
               spacing: 'Small',
@@ -1644,45 +1645,48 @@ const exampleFactSet = {
 
 export const Card = Template.bind({});
 Card.args = {
-  data: exampleAdaptiveCard,
+  template: exampleAdaptiveCard,
+  context: {
+    supportedOS: 'Mac, Windows, Web',
+  },
 };
 
 export const TextBlock = Template.bind({});
 TextBlock.args = {
-  data: exampleTextBlock,
+  template: exampleTextBlock,
 };
 
 export const Column = Template.bind({});
 Column.args = {
-  data: exampleColumn,
+  template: exampleColumn,
 };
 
 export const Container = Template.bind({});
 Container.args = {
-  data: exampleContainer,
+  template: exampleContainer,
 };
 
 export const ImageSet = Template.bind({});
 ImageSet.args = {
-  data: exampleImageSet,
+  template: exampleImageSet,
 };
 
 export const Image = Template.bind({});
 Image.args = {
-  data: exampleImage,
+  template: exampleImage,
 };
 
 export const ColumnSet = Template.bind({});
 ColumnSet.args = {
-  data: exampleColumnSet,
+  template: exampleColumnSet,
 };
 
 export const RichTextBlock = Template.bind({});
 RichTextBlock.args = {
-  data: exampleRichTextBlock,
+  template: exampleRichTextBlock,
 };
 
 export const FactSet = Template.bind({});
 FactSet.args = {
-  data: exampleFactSet,
+  template: exampleFactSet,
 };

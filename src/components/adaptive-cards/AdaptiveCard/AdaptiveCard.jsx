@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Template} from 'adaptivecards-templating';
 import webexComponentClasses from '../../helpers';
 
 import Component, {acPropTypes, registerComponent} from '../Component/Component';
@@ -17,7 +18,6 @@ import '../InputToggle/InputToggle';
 import '../RichTextBlock/RichTextBlock';
 import '../TextBlock/TextBlock';
 import '../TextRun/TextRun';
-
 /**
  * AdaptiveCardInternal component
  *
@@ -62,22 +62,35 @@ registerComponent('AdaptiveCard', AdaptiveCardInternal, 'vertical');
  * AdaptiveCard component
  *
  * @param {object} props  React properties
- * @param {object} props.data  Active Cards definition
+ * @param {object} props.template  Adaptive Card template
+ * @param {object} [props.context]  Provided data for binding to Adaptive Card
  * @param {string} [props.className]  Custom CSS class to apply
  * @param {object} [props.style]  Custom style to apply
  * @returns {object} JSX of the component
  */
-export default function AdaptiveCard({data, className, style}) {
+export default function AdaptiveCard({
+  template,
+  context,
+  className,
+  style,
+}) {
+  const templateInstance = new Template(template);
+  const data = templateInstance.expand({
+    $root: context,
+  });
+
   return <Component data={data} className={className} style={style} />;
 }
 
 AdaptiveCard.propTypes = {
-  data: PropTypes.shape().isRequired,
+  template: PropTypes.shape().isRequired,
+  context: PropTypes.shape(),
   className: PropTypes.string,
   style: PropTypes.shape(),
 };
 
 AdaptiveCard.defaultProps = {
   className: undefined,
+  context: undefined,
   style: undefined,
 };
