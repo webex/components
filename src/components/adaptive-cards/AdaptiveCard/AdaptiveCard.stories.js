@@ -1642,6 +1642,67 @@ const exampleFactSet = {
   ],
 };
 
+const exampleActionSet = {
+  $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
+  type: 'AdaptiveCard',
+  version: '1.0',
+  body: [
+    {
+      type: 'TextBlock',
+      wrap: true,
+      text: 'Cards can have action sets in the middle of their body.',
+    },
+    {
+      type: 'ActionSet',
+      actions: [
+        {
+          type: 'Action.ShowCard',
+          title: 'ShowCard',
+          card: {
+            type: 'AdaptiveCard',
+            body: [
+              {
+                type: 'TextBlock',
+                text: 'This is a show card',
+              },
+            ],
+          },
+        },
+        {
+          type: 'Action.OpenUrl',
+          title: 'OpenUrl',
+          url: 'https://adaptivecards.io',
+        },
+      ],
+    },
+    {
+      type: 'TextBlock',
+      wrap: true,
+      text: 'There are also still actions\'s at the bottom of the card',
+    },
+  ],
+  actions: [
+    {
+      type: 'Action.ShowCard',
+      title: 'ShowCard',
+      card: {
+        type: 'AdaptiveCard',
+        body: [
+          {
+            type: 'TextBlock',
+            text: 'This is a show card',
+          },
+        ],
+      },
+    },
+    {
+      type: 'Action.OpenUrl',
+      title: 'OpenUrl',
+      url: 'https://adaptivecards.io',
+    },
+  ],
+};
+
 export const Card = Template.bind({});
 Card.args = {
   data: exampleAdaptiveCard,
@@ -1685,4 +1746,9 @@ RichTextBlock.args = {
 export const FactSet = Template.bind({});
 FactSet.args = {
   data: exampleFactSet,
+};
+
+export const ActionSet = Template.bind({});
+ActionSet.args = {
+  data: exampleActionSet,
 };

@@ -1,5 +1,127 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Messaging/AdaptiveCard Action Set 1`] = `
+Array [
+  <div
+    className="wxc-adaptive-card wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
+    style={Object {}}
+  >
+    <div
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-wrap--true"
+    >
+      Cards can have action sets in the middle of their body.
+    </div>
+    <div
+      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-container--horizontal"
+      style={Object {}}
+    >
+      <div>
+        <h5>
+          Action.ShowCard Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "Action.ShowCard",
+    "title": "ShowCard",
+    "card": {
+        "type": "AdaptiveCard",
+        "body": [
+            {
+                "type": "TextBlock",
+                "text": "This is a show card"
+            }
+        ]
+    }
+}
+        </pre>
+      </div>
+      <div>
+        <h5>
+          Action.OpenUrl Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "Action.OpenUrl",
+    "title": "OpenUrl",
+    "url": "https://adaptivecards.io"
+}
+        </pre>
+      </div>
+    </div>
+    <div
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-wrap--true"
+    >
+      There are also still actions's at the bottom of the card
+    </div>
+    <div
+      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-container--horizontal"
+      style={Object {}}
+    >
+      <div>
+        <h5>
+          Action.ShowCard Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "Action.ShowCard",
+    "title": "ShowCard",
+    "card": {
+        "type": "AdaptiveCard",
+        "body": [
+            {
+                "type": "TextBlock",
+                "text": "This is a show card"
+            }
+        ]
+    }
+}
+        </pre>
+      </div>
+      <div>
+        <h5>
+          Action.OpenUrl Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "Action.OpenUrl",
+    "title": "OpenUrl",
+    "url": "https://adaptivecards.io"
+}
+        </pre>
+      </div>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
 exports[`Storyshots Messaging/AdaptiveCard Card 1`] = `
 Array [
   <div
@@ -128,28 +250,26 @@ Array [
         </div>
       </div>
     </div>
-    <div>
-      <h5>
-        ActionSet Component
-      </h5>
-      <pre
-        className="wxc-adaptive-cards-unknown-component"
-      >
-        {
-    "type": "ActionSet",
-    "actions": [
-        {
-            "type": "Action.Submit",
-            "title": "Subscribe to Release Notes",
-            "data": {
-                "subscribe": true
-            }
-        }
-    ],
-    "horizontalAlignment": "Left",
-    "spacing": "None"
+    <div
+      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-spacing--None wxc-ac-container--horizontal"
+      style={Object {}}
+    >
+      <div>
+        <h5>
+          Action.Submit Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "Action.Submit",
+    "title": "Subscribe to Release Notes",
+    "data": {
+        "subscribe": true
+    }
 }
-      </pre>
+        </pre>
+      </div>
     </div>
   </div>,
   <video
@@ -1123,6 +1243,39 @@ Array [
         >
           Netflix
         </div>
+      </div>
+    </div>
+    <div
+      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-container--horizontal"
+      style={Object {}}
+    >
+      <div>
+        <h5>
+          Action.OpenUrl Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "Action.OpenUrl",
+    "title": "Resume all",
+    "url": "ms-cortana:resume-all"
+}
+        </pre>
+      </div>
+      <div>
+        <h5>
+          Action.OpenUrl Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "Action.OpenUrl",
+    "title": "More activities",
+    "url": "ms-cortana:more-activities"
+}
+        </pre>
       </div>
     </div>
   </div>,
