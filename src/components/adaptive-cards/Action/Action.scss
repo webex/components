@@ -8,4 +8,8 @@
   &__right-icon {
     margin-left: 0.375rem;
   }
+
+  .wxc-ac-container--vertical > &:not(:first-child) { margin-top: 0.5rem; }
+  .wxc-ac-container--horizontal > &:not(:first-child) { margin-left: 0.5rem; }
+
 }

@@ -1,0 +1,52 @@
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-ac-spacer;
+
+.#{$C} {
+  flex-shrink: 0;
+
+  .wxc-ac-container--vertical > & {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:first-child { display: none; }
+    &--spacing {
+      &--default { height: 0.5rem; }
+      &--none { height: 0; }
+      &--small { height: 0.188rem; }
+      &--medium { height: 1.125rem; }
+      &--large { height: 1.875rem; }
+      &--extralarge { height: 2.5rem; }
+      &--padding { height: 0.625rem; }
+    }
+
+    > :first-child {
+      height: 0.063rem;
+      background-color: var(--wxc-adaptive-cards--separator-color);
+      align-self: stretch;   
+    }
+  }
+
+  .wxc-ac-container--horizontal > & {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &:first-child { display: none; }
+    &--spacing {
+      &--default { width: 0.5rem; }
+      &--none { width: 0; }
+      &--small { width: 0.188rem; }
+      &--medium { width: 1.125rem; }
+      &--large { width: 1.875rem; }
+      &--extralarge { width: 2.5rem; }
+      &--padding { width: 0.625rem; }
+    }
+
+    > :first-child {
+      width: 0.063rem;
+      background-color: var(--wxc-adaptive-cards--separator-color);
+      align-self: stretch;
+    }
+  }
+}
+
