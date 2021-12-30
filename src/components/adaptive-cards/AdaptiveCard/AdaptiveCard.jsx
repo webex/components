@@ -58,6 +58,7 @@ AdaptiveCardInternal.defaultProps = {
 };
 
 AdaptiveCardInternal.acPropTypes = {
+  body: acPropTypes.children,
   type: acPropTypes.type,
   minHeight: acPropTypes.minHeight,
   rtl: acPropTypes.rtl,

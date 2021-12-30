@@ -2,6 +2,7 @@ import React, {useContext, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 import AdaptiveCardContext from '../context/adaptive-card-context';
+import Spacer from '../Spacer/Spacer';
 
 const componentTypes = {};
 const containerTypes = {};
@@ -153,6 +154,8 @@ export default function Component({
       case acPropTypes.mode:
       case acPropTypes.placeholder:
       case acPropTypes.regex:
+      case acPropTypes.separator:
+      case acPropTypes.spacing:
       case acPropTypes.style:
       case acPropTypes.isMultiSelect:
       case acPropTypes.isRequired:
@@ -221,9 +224,19 @@ export default function Component({
     ...otherProps,
   };
 
+  const spacer = C.acPropTypes?.spacing && (
+    <Spacer
+      spacing={data.spacing}
+      separator={data.separator}
+    />
+  );
+
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <C {...props} />
+    <>
+      {spacer}
+      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+      <C {...props} />
+    </>
   );
 }
 

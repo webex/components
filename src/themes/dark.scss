@@ -250,8 +250,6 @@
   --wxc-adaptive-cards--background--attention: #{$wxc-red-80};
   --wxc-adaptive-cards--background--warning: #{$wxc-yellow-80};
 
-  --wxc-adaptive-cards--separator-color: #{$wxc-black-alpha-60};
-
   --wxc-adaptive-cards--color--default: #{$wxc-white-alpha-95};
   --wxc-adaptive-cards--color--dark: #{$wxc-white-alpha-95};
   --wxc-adaptive-cards--color--light: #{$wxc-white-alpha-70};
@@ -269,6 +267,7 @@
   --wxc-adaptive-cards--subtle-color--attention: #{$wxc-red-30};
 
   --wxc-adaptive-cards--highlight-color: #{$wxc-gray-40};
+  --wxc-adaptive-cards--separator-color: #{$wxc-gray-50};
 
   --wxc-input--title--normal: #{$wxc-white-alpha-95};
   --wxc-input--title--disabled: #{$wxc-white-alpha-40};
