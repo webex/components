@@ -6,6 +6,7 @@ import webexComponentClasses from '../../helpers';
 import Component, {acPropTypes, registerComponent} from '../Component/Component';
 import '../ActionOpenURL/ActionOpenUrl';
 import '../ActionSet/ActionSet';
+import '../ActionShowCard/ActionShowCard';
 import '../Column/Column';
 import '../ColumnSet/ColumnSet';
 import '../Container/Container';

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 import Component, {acPropTypes, registerComponent} from '../Component/Component';
@@ -15,14 +15,26 @@ import Component, {acPropTypes, registerComponent} from '../Component/Component'
  */
 export default function ActionSet({data, className, style}) {
   const [cssClasses] = webexComponentClasses('adaptive-cards-action-set', className);
+  const [shownCards, setShownCards] = useState({});
+
+  const toggleCard = (index) => {
+    setShownCards({...shownCards, [index]: !shownCards[index]});
+  };
 
   return (
-    <div className={cssClasses} style={style}>
-      {/* eslint-disable react/no-array-index-key */}
-      {data.actions.map((action, index) => (
-        <Component data={action} key={index} />
-      ))}
-    </div>
+    <>
+      <div className={cssClasses} style={style}>
+        {/* eslint-disable react/no-array-index-key */}
+        {data.actions.map((action, index) => (
+          <Component data={action} key={index} onClick={action.type === 'Action.ShowCard' && (() => toggleCard(index))} pressed={shownCards[index]} />
+        ))}
+      </div>
+      <div>
+        {data.actions.map((action, index) => (
+          shownCards[index] && <Component data={action.card} key={index} />
+        ))}
+      </div>
+    </>
   );
 }
 
