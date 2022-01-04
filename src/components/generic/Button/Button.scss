@@ -25,7 +25,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-button;
     background: var(--wxc-button--join--hover--bg);
   }
 
-  &:active {
+  &:active, &.#{$C}--pressed {
     background: var(--wxc-button--join--active--bg);
   }
 
@@ -45,7 +45,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-button;
     background: var(--wxc-button--default--hover--bg);
   }
 
-  &:active {
+  &:active, &.#{$C}--pressed {
     background: var(--wxc-button--default--active--bg);
   }
 
@@ -54,10 +54,6 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-button;
     border: var(--wxc-button--default--disabled--border);
     color: var(--wxc-button--default--disabled--color);
   }
-}
-
-.#{$C}--toggle.#{$C}--pressed {
-  background: var(--wxc-button--default--active--bg);
 }
 
 .#{$C}--cancel {
@@ -69,7 +65,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-button;
     background: var(--wxc-button--cancel--hover--bg);
   }
 
-  &:active {
+  &:active, &.#{$C}--pressed {
     background: var(--wxc-button--cancel--active--bg);
   }
 
@@ -113,7 +109,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-button;
     background: var(--wxc-button--primary--hover--bg);
   }
 
-  &:active {
+  &:active, &.#{$C}--pressed {
     background: var(--wxc-button--primary--active--bg);
   }
 

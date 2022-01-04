@@ -7,6 +7,7 @@ import AdaptiveCardContext from '../context/adaptive-card-context';
 import Component, {acPropTypes, registerComponent} from '../Component/Component';
 import '../ActionOpenURL/ActionOpenUrl';
 import '../ActionSet/ActionSet';
+import '../ActionShowCard/ActionShowCard';
 import '../Column/Column';
 import '../ColumnSet/ColumnSet';
 import '../Container/Container';

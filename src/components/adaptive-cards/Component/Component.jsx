@@ -6,6 +6,7 @@ const componentTypes = {};
 const containerTypes = {};
 
 export const acPropTypes = {
+  actionStyle: 'action-style',
   backgroundImage: 'background-image',
   bleed: 'bleed',
   children: 'children',
@@ -98,9 +99,12 @@ UnknownComponent.defaultProps = {
  * @param {object} props.data  Active Cards definition
  * @param {string} [props.className]  Custom CSS class to apply
  * @param {object} [props.style]  Custom style to apply
+ * @param {object} [otherProps]  Other props that must be passed from a parent AC component to a child
  * @returns {object} JSX of the component
  */
-export default function Component({data, className, style: styleProp}) {
+export default function Component({
+  data, className, style: styleProp, ...otherProps
+}) {
   const [cssClasses] = webexComponentClasses('ac', className);
   const C = componentTypes[data.type] || UnknownComponent;
   const classes = [];
@@ -184,12 +188,16 @@ export default function Component({data, className, style: styleProp}) {
     classes.push(getClass('container', containerType));
   }
 
+  const props = {
+    data,
+    className: `${cssClasses} ${classes.join(' ')}`,
+    style: {...style, ...styleProp},
+    ...otherProps,
+  };
+
   return (
-    <C
-      data={data}
-      className={`${cssClasses} ${classes.join(' ')}`}
-      style={{...style, ...styleProp}}
-    />
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <C {...props} />
   );
 }
 
@@ -197,9 +205,11 @@ Component.propTypes = {
   data: PropTypes.shape().isRequired,
   className: PropTypes.string,
   style: PropTypes.shape(),
+  otherProps: PropTypes.shape(),
 };
 
 Component.defaultProps = {
   className: undefined,
   style: undefined,
+  otherProps: undefined,
 };

@@ -1860,6 +1860,58 @@ const exampleActionOpenUrl = {
   ],
 };
 
+const exampleActionShowCard = {
+  $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
+  type: 'AdaptiveCard',
+  version: '1.0',
+  body: [
+    {
+      type: 'TextBlock',
+      text: 'This card\'s action will show another card',
+    },
+  ],
+  actions: [
+    {
+      type: 'Action.ShowCard',
+      title: 'Show another card 1',
+      card: {
+        type: 'AdaptiveCard',
+        body: [
+          {
+            type: 'TextBlock',
+            text: 'Card 1: What do you think?',
+          },
+        ],
+        actions: [
+          {
+            type: 'Action.Submit',
+            title: 'Neat!',
+          },
+        ],
+      },
+    },
+    {
+      type: 'Action.ShowCard',
+      title: 'Show another card 2',
+      card: {
+        type: 'AdaptiveCard',
+        body: [
+          {
+            type: 'TextBlock',
+            text: 'Card 2: What do you think?',
+          },
+        ],
+        actions: [
+          {
+            type: 'Action.Submit',
+            title: 'Neat!',
+          },
+        ],
+      },
+    },
+  ],
+};
+
 export const Card = Template.bind({});
 Card.args = {
   template: exampleAdaptiveCard,
@@ -1926,4 +1978,9 @@ InputText.args = {
 export const ActionOpenURL = Template.bind({});
 ActionOpenURL.args = {
   template: exampleActionOpenUrl,
+};
+
+export const ActionShowCard = Template.bind({});
+ActionShowCard.args = {
+  template: exampleActionShowCard,
 };
