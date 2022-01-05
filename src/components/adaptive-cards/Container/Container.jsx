@@ -19,7 +19,7 @@ export default function Container({data, className, style}) {
   return (
     <div className={cssClasses} style={style}>
       {/* eslint-disable react/no-array-index-key */}
-      {data.items.map((item, index) => (
+      {data.items?.map((item, index) => (
         <Component data={item} key={index} />
       ))}
     </div>
@@ -38,6 +38,7 @@ Container.defaultProps = {
 };
 
 Container.acPropTypes = {
+  backgroundImage: acPropTypes.backgroundImage,
   bleed: acPropTypes.bleed,
   height: acPropTypes.height,
   id: acPropTypes.id,

@@ -6,6 +6,7 @@ const componentTypes = {};
 const containerTypes = {};
 
 export const acPropTypes = {
+  backgroundImage: 'background-image',
   bleed: 'bleed',
   children: 'children',
   color: 'color',
@@ -85,7 +86,7 @@ export default function Component({data, className, style: styleProp}) {
   const [cssClasses] = webexComponentClasses('ac', className);
   const C = componentTypes[data.type] || UnknownComponent;
   const classes = [];
-  const getClass = (propType, value) => `wxc-ac-${propType}--${value}`;
+  const getClass = (propType, value) => (value ? `wxc-ac-${propType}--${String(value).toLowerCase()}` : '');
   const style = {};
 
   const dataWithDefaults = {...C.acDefaultProps, ...data};
@@ -119,6 +120,17 @@ export default function Component({data, className, style: styleProp}) {
         break;
       case acPropTypes.minHeight:
         style.minHeight = data.minHeight;
+        break;
+      case acPropTypes.backgroundImage:
+        if (typeof value === 'string') {
+          style.backgroundImage = `url(${value})`;
+        } else if (typeof value === 'object' && value !== null) {
+          style.backgroundImage = `url(${value.url})`;
+
+          classes.push(getClass(`${propType}-fill-mode`, value.fillMode));
+          classes.push(getClass(`${propType}-horizontal-alignment`, value.horizontalAlignment));
+          classes.push(getClass(`${propType}-vertical-alignment`, value.verticalAlignment));
+        }
         break;
       default:
         classes.push(getClass(propType, value));

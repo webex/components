@@ -15,7 +15,7 @@ Array [
         style={Object {}}
       >
         <img
-          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--Medium wxc-ac-image-style--Person"
+          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--medium wxc-ac-image-style--person"
           src="https://developer.webex.com/images/webex-teams-logo.png"
           style={
             Object {
@@ -31,19 +31,19 @@ Array [
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-weight--Lighter wxc-ac-color--Accent"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-weight--lighter wxc-ac-color--accent"
         >
           Cisco Webex Teams
         </div>
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--Left wxc-ac-weight--Bolder wxc-ac-wrap--true wxc-ac-color--Light wxc-ac-size--Large wxc-ac-spacing--Small"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-weight--bolder wxc-ac-wrap--true wxc-ac-color--light wxc-ac-size--large wxc-ac-spacing--small"
         >
           Buttons and Cards Release
         </div>
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--Center wxc-ac-spacing--Padding wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-spacing--padding wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
@@ -51,17 +51,17 @@ Array [
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--Light"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--light"
         >
           Release Date:
         </div>
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-weight--Lighter wxc-ac-color--Light wxc-ac-spacing--Small"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-weight--lighter wxc-ac-color--light wxc-ac-spacing--small"
         >
           Product:
         </div>
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-weight--Lighter wxc-ac-color--Light wxc-ac-spacing--Small"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-weight--lighter wxc-ac-color--light wxc-ac-spacing--small"
         >
           OS:
         </div>
@@ -71,17 +71,17 @@ Array [
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--Light"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--light"
         >
           Aug 6, 2019
         </div>
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--Light wxc-ac-weight--Lighter wxc-ac-spacing--Small"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--light wxc-ac-weight--lighter wxc-ac-spacing--small"
         >
           Webex Teams
         </div>
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-weight--Lighter wxc-ac-color--Light wxc-ac-spacing--Small"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-weight--lighter wxc-ac-color--light wxc-ac-spacing--small"
         >
           Mac, Windows, Web
         </div>
@@ -102,12 +102,12 @@ Array [
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-spacing--Small wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-spacing--small wxc-ac-container--vertical"
         style={Object {}}
       >
         <img
           alt=""
-          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--Small"
+          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--small"
           src="https://developer.webex.com/images/link-icon.png"
           style={
             Object {
@@ -118,11 +118,11 @@ Array [
         />
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--Center wxc-ac-spacing--Small wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--center wxc-ac-spacing--small wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--Left wxc-ac-size--Medium"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-size--medium"
         >
           [Developer Portal Buttons and Cards Guide]()
         </div>
@@ -254,6 +254,16 @@ Array [
         className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
         style={
           Object {
+            "backgroundImage": "url(https://adaptivecards.io/content/AlkiBeach.jpg)",
+            "minHeight": "50px",
+          }
+        }
+      />
+      <div
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top   wxc-ac-background-image-vertical-alignment--center wxc-ac-container--vertical"
+        style={
+          Object {
+            "backgroundImage": "url(https://adaptivecards.io/content/GoldenGardensPark.jpg)",
             "minHeight": "50px",
           }
         }
@@ -262,14 +272,7 @@ Array [
         className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
         style={
           Object {
-            "minHeight": "50px",
-          }
-        }
-      />
-      <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
-        style={
-          Object {
+            "backgroundImage": "url(https://adaptivecards.io/content/BainbridgeIsland.jpg)",
             "minHeight": "50px",
           }
         }
@@ -285,19 +288,20 @@ Array [
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeat   wxc-ac-container--vertical"
         style={
           Object {
+            "backgroundImage": "url(https://adaptivecards.io/content/uparrow.png)",
             "minHeight": "50px",
           }
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--Center wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--center wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--Center wxc-ac-wrap--true"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-wrap--true"
         >
           Those are some neat arrows
         </div>
@@ -313,25 +317,28 @@ Array [
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeathorizontally   wxc-ac-container--vertical"
         style={
           Object {
+            "backgroundImage": "url(https://adaptivecards.io/content/downarrow.png)",
             "minHeight": "50px",
           }
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeathorizontally  wxc-ac-background-image-vertical-alignment--center wxc-ac-container--vertical"
         style={
           Object {
+            "backgroundImage": "url(https://adaptivecards.io/content/uparrow.png)",
             "minHeight": "50px",
           }
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeathorizontally  wxc-ac-background-image-vertical-alignment--bottom wxc-ac-container--vertical"
         style={
           Object {
+            "backgroundImage": "url(https://adaptivecards.io/content/uparrow.png)",
             "minHeight": "50px",
           }
         }
@@ -347,25 +354,28 @@ Array [
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeatvertically   wxc-ac-container--vertical"
         style={
           Object {
+            "backgroundImage": "url(https://adaptivecards.io/content/uparrow.png)",
             "minHeight": "50px",
           }
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeatvertically wxc-ac-background-image-horizontal-alignment--center  wxc-ac-container--vertical"
         style={
           Object {
+            "backgroundImage": "url(https://adaptivecards.io/content/downarrow.png)",
             "minHeight": "50px",
           }
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeatvertically wxc-ac-background-image-horizontal-alignment--right  wxc-ac-container--vertical"
         style={
           Object {
+            "backgroundImage": "url(https://adaptivecards.io/content/uparrow.png)",
             "minHeight": "50px",
           }
         }
@@ -651,12 +661,12 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-wrap--true wxc-ac-size--Medium"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-wrap--true wxc-ac-size--medium"
     >
       The middle column is set to rtl
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-spacing--Medium wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-spacing--medium wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
@@ -733,7 +743,7 @@ Array [
             Final
           </div>
           <div
-            className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-size--extraLarge"
+            className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-size--extralarge"
           >
             7 - 40
           </div>
@@ -1091,7 +1101,7 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-bleed--false wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left  wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
@@ -1339,6 +1349,53 @@ Array [
         </div>
       </div>
     </div>
+    <div
+      className="wxc-container wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+      style={
+        Object {
+          "backgroundImage": "url(https://adaptivecards.io/content/AlkiBeach.jpg)",
+          "minHeight": "150px",
+        }
+      }
+    >
+      <div
+        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+      >
+        What a beautiful background
+      </div>
+    </div>
+    <div
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+    >
+      They can even repeat a bunch of different ways...
+    </div>
+    <div
+      className="wxc-container wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeat   wxc-ac-container--vertical"
+      style={
+        Object {
+          "backgroundImage": "url(https://adaptivecards.io/content/uparrow.png)",
+          "minHeight": "100px",
+        }
+      }
+    />
+    <div
+      className="wxc-container wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeathorizontally  wxc-ac-background-image-vertical-alignment--center wxc-ac-container--vertical"
+      style={
+        Object {
+          "backgroundImage": "url(https://adaptivecards.io/content/uparrow.png)",
+          "minHeight": "40px",
+        }
+      }
+    />
+    <div
+      className="wxc-container wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeatvertically wxc-ac-background-image-horizontal-alignment--center  wxc-ac-container--vertical"
+      style={
+        Object {
+          "backgroundImage": "url(https://adaptivecards.io/content/uparrow.png)",
+          "minHeight": "100px",
+        }
+      }
+    />
   </div>,
   <video
     autoPlay={true}
@@ -1643,7 +1700,7 @@ Array [
         all 
       </span>
       <span
-        className="wxc-adaptive-cards-text-run wxc-ac wxc-ac-size--extraLarge"
+        className="wxc-adaptive-cards-text-run wxc-ac wxc-ac-size--extralarge"
         style={Object {}}
       >
         sizes! 
@@ -1814,7 +1871,7 @@ Array [
       **horizontalAlignment:right**
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-subtle--false"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left "
     >
       isSubtle:false
     </div>
@@ -1859,7 +1916,7 @@ Array [
       size:large
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-size--extraLarge"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-size--extralarge"
     >
       size:extraLarge
     </div>
@@ -1879,7 +1936,7 @@ Array [
       weight: bolder
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-wrap--false"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left "
     >
       **wrap: false** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
     </div>
