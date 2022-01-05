@@ -169,6 +169,29 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-ac;
   &.#{$C}-color--attention { color: var(--wxc-adaptive-cards--color--attention); }
 }
 
+.#{$C}-background-image {
+  background-repeat: no-repeat;
+
+  &-fill-mode {
+    &--repeat { background-repeat: repeat; }
+    &--repeathorizontally { background-repeat: repeat-x; }
+    &--repeatvertically { background-repeat: repeat-y; }
+    &--cover { background-size: cover; }
+  }
+
+  &-vertical-alignment {
+    &--top { background-position: top; }
+    &--center { background-position: center; }
+    &--bottom { background-position: bottom; }
+  }
+
+  &-horizontal-alignment {
+    &--left { background-position: left; }
+    &--center { background-position: center; }
+    &--right { background-position: right; }
+  }
+}
+
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-adaptive-cards-unknown-component {
   white-space: pre-wrap;
 }

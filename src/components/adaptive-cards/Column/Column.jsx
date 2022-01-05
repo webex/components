@@ -36,6 +36,7 @@ Column.defaultProps = {
 };
 
 Column.acPropTypes = {
+  backgroundImage: acPropTypes.backgroundImage,
   bleed: acPropTypes.bleed,
   id: acPropTypes.id,
   isVisible: acPropTypes.isVisible,

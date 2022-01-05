@@ -405,7 +405,7 @@ const exampleColumn = {
           minHeight: '50px',
           backgroundImage: {
             url: 'https://adaptivecards.io/content/GoldenGardensPark.jpg',
-            verticalAlignment: 'Center',
+            verticalAlignment: 'center',
           },
           width: 'stretch',
         },
@@ -429,7 +429,7 @@ const exampleColumn = {
           minHeight: '50px',
           backgroundImage: {
             url: 'https://adaptivecards.io/content/uparrow.png',
-            fillMode: 'Repeat',
+            fillMode: 'repeat',
           },
           width: 'stretch',
         },
@@ -461,7 +461,7 @@ const exampleColumn = {
           minHeight: '50px',
           backgroundImage: {
             url: 'https://adaptivecards.io/content/downarrow.png',
-            fillMode: 'RepeatHorizontally',
+            fillMode: 'repeatHorizontally',
           },
           width: 'stretch',
         },
@@ -470,8 +470,8 @@ const exampleColumn = {
           minHeight: '50px',
           backgroundImage: {
             url: 'https://adaptivecards.io/content/uparrow.png',
-            fillMode: 'RepeatHorizontally',
-            verticalAlignment: 'Center',
+            fillMode: 'repeatHorizontally',
+            verticalAlignment: 'center',
           },
           width: 'stretch',
         },
@@ -480,8 +480,8 @@ const exampleColumn = {
           minHeight: '50px',
           backgroundImage: {
             url: 'https://adaptivecards.io/content/uparrow.png',
-            fillMode: 'RepeatHorizontally',
-            verticalAlignment: 'Bottom',
+            fillMode: 'repeatHorizontally',
+            verticalAlignment: 'bottom',
           },
           width: 'stretch',
         },
@@ -499,7 +499,7 @@ const exampleColumn = {
           minHeight: '50px',
           backgroundImage: {
             url: 'https://adaptivecards.io/content/uparrow.png',
-            fillMode: 'RepeatVertically',
+            fillMode: 'repeatVertically',
           },
           width: 'stretch',
         },
@@ -508,8 +508,8 @@ const exampleColumn = {
           minHeight: '50px',
           backgroundImage: {
             url: 'https://adaptivecards.io/content/downarrow.png',
-            fillMode: 'RepeatVertically',
-            horizontalAlignment: 'Center',
+            fillMode: 'repeatVertically',
+            horizontalAlignment: 'center',
           },
           width: 'stretch',
         },
@@ -518,8 +518,8 @@ const exampleColumn = {
           minHeight: '50px',
           backgroundImage: {
             url: 'https://adaptivecards.io/content/uparrow.png',
-            fillMode: 'RepeatVertically',
-            horizontalAlignment: 'Right',
+            fillMode: 'repeatVertically',
+            horizontalAlignment: 'right',
           },
           width: 'stretch',
         },
@@ -1292,6 +1292,47 @@ const exampleContainer = {
           ],
         },
       ],
+    },
+    {
+      type: 'Container',
+      minHeight: '150px',
+      backgroundImage: 'https://adaptivecards.io/content/AlkiBeach.jpg',
+      items: [
+        {
+          type: 'TextBlock',
+          text: 'What a beautiful background',
+        },
+      ],
+    },
+    {
+      type: 'TextBlock',
+      text: 'They can even repeat a bunch of different ways...',
+    },
+    {
+      type: 'Container',
+      minHeight: '100px',
+      backgroundImage: {
+        url: 'https://adaptivecards.io/content/uparrow.png',
+        fillMode: 'repeat',
+      },
+    },
+    {
+      type: 'Container',
+      minHeight: '40px',
+      backgroundImage: {
+        url: 'https://adaptivecards.io/content/uparrow.png',
+        fillMode: 'repeatHorizontally',
+        verticalAlignment: 'center',
+      },
+    },
+    {
+      type: 'Container',
+      minHeight: '100px',
+      backgroundImage: {
+        url: 'https://adaptivecards.io/content/uparrow.png',
+        fillMode: 'repeatVertically',
+        horizontalAlignment: 'center',
+      },
     },
   ],
 };
