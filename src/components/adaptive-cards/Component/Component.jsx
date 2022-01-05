@@ -12,6 +12,7 @@ export const acPropTypes = {
   color: 'color',
   containerStyle: 'container-style',
   defaultImageSize: 'default-image-size',
+  errorMessage: 'error-message',
   fontType: 'font-type',
   height: 'height',
   highlight: 'highlight',
@@ -19,10 +20,15 @@ export const acPropTypes = {
   id: 'id',
   imageSize: 'image-size',
   imageStyle: 'image-style',
+  isRequired: 'is-required',
   isSubtle: 'is-subtle',
   isVisible: 'is-visible',
   italic: 'italic',
+  label: 'label',
+  maxValue: 'max-value',
+  minValue: 'min-value',
   minHeight: 'min-height',
+  placeholder: 'placeholder',
   rtl: 'rtl',
   separator: 'separator',
   size: 'size',
@@ -32,6 +38,7 @@ export const acPropTypes = {
   type: 'type',
   underline: 'underline',
   verticalContentAlignment: 'vertical-content-alignment',
+  value: 'value',
   weight: 'weight',
   wrap: 'wrap',
 };
@@ -101,9 +108,15 @@ export default function Component({data, className, style: styleProp}) {
       case acPropTypes.action:
       case acPropTypes.children:
       case acPropTypes.defaultImageSize:
+      case acPropTypes.errorMessage:
       case acPropTypes.id:
+      case acPropTypes.label:
+      case acPropTypes.maxValue:
+      case acPropTypes.minValue:
+      case acPropTypes.placeholder:
       case acPropTypes.text:
       case acPropTypes.type:
+      case acPropTypes.value:
         break;
       case acPropTypes.containerStyle:
         classes.push(getClass(propType, value));

@@ -11,6 +11,8 @@ export {default as CameraPresenceIcon} from './CameraPresenceIcon';
 export {default as CameraIssue} from './CameraIssue';
 export {default as CancelIcon} from './CancelIcon';
 export {default as ChatFilledIcon} from './ChatFilledIcon';
+export {default as ControlDown} from './ControlDown';
+export {default as ControlUp} from './ControlUp';
 export {default as DndPresenceIcon} from './DndPresenceIcon';
 export {default as ExternalUserIcon} from './ExternalUserIcon';
 export {default as HidePwdIcon} from './HidePwdIcon';

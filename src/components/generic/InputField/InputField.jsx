@@ -15,18 +15,20 @@ const HINTS = {
  *
  * @param {object} props  Data passed to the component
  * @param {boolean} [props.autoFocus=false]  Flag indicating if the input should have autoFocus
- * @param {string} props.className  Custom CSS class to apply
- * @param {object} props.style  Custom style to apply
- * @param {string} props.type  Input type
- * @param {string} props.name  Input name
- * @param {string} props.value  Input value
- * @param {string} props.placeholder  Input placeholder
- * @param {Function} props.onChange  Action to perform on input change
- * @param {boolean} props.disabled  Flag indicating input disabled
- * @param {string} props.error  Error text
- * @param {string} props.ariaLabel  Hint to be displayed as aria-label
- * @param {boolean} props.required  Flag indicating input required
- * @param {number} props.tabIndex  Value of the tabIndex
+ * @param {string} [props.className]  Custom CSS class to apply
+ * @param {object} [props.style]  Custom style to apply
+ * @param {string} [props.type=text]  Input type
+ * @param {string} [props.name]  Input name
+ * @param {(string|number)} [props.value]  Input value
+ * @param {string} [props.placeholder]  Input placeholder
+ * @param {number} [props.max]  Maximum value for the input element
+ * @param {number} [props.min]  Minimum value for the input element
+ * @param {Function} [props.onChange]  Action to perform on input change
+ * @param {boolean} [props.disabled=false]  Flag indicating input disabled
+ * @param {string} [props.error]  Error text
+ * @param {string} [props.ariaLabel]  Hint to be displayed as aria-label
+ * @param {boolean} [props.required=false]  Flag indicating input required
+ * @param {number} [props.tabIndex]  Value of the tabIndex
  * @returns {object} JSX of the component
  */
 export default function InputField({
@@ -37,6 +39,8 @@ export default function InputField({
   value,
   placeholder,
   onChange,
+  max,
+  min,
   disabled,
   error,
   ariaLabel,
@@ -49,6 +53,8 @@ export default function InputField({
   const inputRef = useRef();
 
   const handleChange = (event) => onChange(event.target.value);
+  const handleIncrement = () => value < max && onChange(Math.min(max, Number(value) + 1));
+  const handleDecrement = () => value > min && onChange(Math.max(min, Number(value) - 1));
   const clearInput = () => onChange('');
 
   const toggleIsPwdRevealed = () => {
@@ -66,6 +72,8 @@ export default function InputField({
           name={name}
           className={sc('input')}
           placeholder={placeholder}
+          max={max}
+          min={min}
           onChange={handleChange}
           disabled={disabled}
           aria-label={ariaLabel}
@@ -87,10 +95,20 @@ export default function InputField({
             <Icon name={isPwdRevealed ? 'hide-password' : 'show-password'} />
           </Button>
         )}
-        {type !== 'password' && value && (
+        {type !== 'password' && (value || value === 0) && (
           <Button type="ghost" className={sc('input-field-right-icon')} size={28} onClick={clearInput}>
             <Icon name="cancel" size={16} />
           </Button>
+        )}
+        {type === 'number' && (
+          <div className={sc('input-controls')}>
+            <Button type="ghost" className={sc('input-increment-button')} onClick={handleIncrement}>
+              <Icon name="control-up" size={13} />
+            </Button>
+            <Button type="ghost" className={sc('input-decrement-button')} onClick={handleDecrement}>
+              <Icon name="control-down" size={13} />
+            </Button>
+          </div>
         )}
       </div>
       {
@@ -111,10 +129,15 @@ InputField.propTypes = {
   className: PropTypes.string,
   style: PropTypes.shape(),
   type: PropTypes.string,
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
   name: PropTypes.string,
   placeholder: PropTypes.string,
   onChange: PropTypes.func,
+  max: PropTypes.number,
+  min: PropTypes.number,
   disabled: PropTypes.bool,
   error: PropTypes.string,
   ariaLabel: PropTypes.string,
@@ -131,6 +154,8 @@ InputField.defaultProps = {
   name: '',
   placeholder: '',
   onChange: undefined,
+  max: undefined,
+  min: undefined,
   disabled: false,
   error: undefined,
   ariaLabel: undefined,
