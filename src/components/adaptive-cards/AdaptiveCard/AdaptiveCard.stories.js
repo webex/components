@@ -7,6 +7,7 @@ export default {
 };
 
 const Template = (args) => <AdaptiveCard {...args} />;
+
 const exampleAdaptiveCard = {
   $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
   type: 'AdaptiveCard',
@@ -1745,6 +1746,29 @@ const exampleActionSet = {
   ],
 };
 
+const exampleInputNumber = {
+  $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
+  type: 'AdaptiveCard',
+  version: '1.0',
+  body: [
+    {
+      type: 'Input.Number',
+      id: 'number',
+      placeholder: 'Enter a number',
+      label: 'Test',
+      min: 1,
+      max: 10,
+      value: 3,
+    },
+  ],
+  actions: [
+    {
+      type: 'Action.Submit',
+      title: 'OK',
+    },
+  ],
+};
+
 export const Card = Template.bind({});
 Card.args = {
   template: exampleAdaptiveCard,
@@ -1795,5 +1819,10 @@ FactSet.args = {
 
 export const ActionSet = Template.bind({});
 ActionSet.args = {
-  data: exampleActionSet,
+  template: exampleActionSet,
+};
+
+export const InputNumber = Template.bind({});
+InputNumber.args = {
+  template: exampleInputNumber,
 };

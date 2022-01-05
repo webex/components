@@ -5,6 +5,11 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field;
   flex-direction: column;
   position: relative;
 
+  .#{$C}__input-label {
+    font-size: 0.875rem;
+    margin-left: 0.75rem;
+  }
+
   .#{$C}__form-control {
     position: relative;
   }
@@ -37,6 +42,26 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field;
     cursor: pointer;
     width: 100%;
     box-sizing: border-box;
+
+    &[type="number"] {
+      -moz-appearance: textfield;
+
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance:none;
+        margin: 0;
+      }
+
+      &:hover::-webkit-inner-spin-button,
+      &:hover::-webkit-outer-spin-button {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance:none;
+        margin: 0;
+      }
+    }
 
     &:hover {
       background: var(--wxc-input--hover--background);
@@ -96,8 +121,57 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field;
     right: 0;
     transform: translateY(-50%);
 
+    &:not(:last-child) {
+      right: 2rem;
+    }
+
     &:hover, &:active, &:disabled {
       background: none;
+    }
+  }
+
+  .#{$C}__input-controls {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border-left: var(--wcx-input--normal--border);
+    right: 0.0625rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.9375rem;
+    height: calc(100% - 0.125rem);
+
+  }
+
+  .#{$C}__input-increment-button {
+    border-radius: 0 0.5rem 0 0;
+  }
+
+  .#{$C}__input-decrement-button {
+    border-radius: 0 0 0.5rem 0;
+  }
+
+  .#{$C}__input-increment-button,
+  .#{$C}__input-decrement-button {
+    flex-basis: 50%;
+
+    &:active {
+      background: var(--wxc-input--active--background);
+      border: var(--wxc-input--active--border);
+      box-shadow: var(--wxc-input--active--box-shadow);
+    }
+
+    &:focus {
+      background: var(--wxc-input--focus--background);
+      border: var(--wxc-input--focus--border);
+      color: var(--wxc-input--focus--color);
+      box-shadow: var(--wxc-input--focus--box-shadow);
+    }
+
+    &:disabled {
+      background: var(--wxc-input--disabled--background);
+      border: var(--wxc-input--disabled--border);
+      color: var(--wxc-input--disabled--color);
     }
   }
 }
