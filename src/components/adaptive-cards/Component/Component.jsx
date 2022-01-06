@@ -60,6 +60,8 @@ export const acPropTypes = {
   underline: 'underline',
   url: 'url',
   value: 'value',
+  valueOff: 'value-off',
+  valueOn: 'value-on',
   version: 'version',
   verticalContentAlignment: 'vertical-content-alignment',
   weight: 'weight',
@@ -193,10 +195,13 @@ export default function Component({
       case acPropTypes.targetElements:
       case acPropTypes.text:
       case acPropTypes.tooltip:
+      case acPropTypes.title:
       case acPropTypes.type:
       case acPropTypes.url:
       case acPropTypes.value:
       case acPropTypes.version:
+      case acPropTypes.valueOff:
+      case acPropTypes.valueOn:
         break;
       case acPropTypes.containerStyle:
         classes.push(getClass(propType, value));
@@ -250,7 +255,7 @@ export default function Component({
   }
 
   const props = {
-    data,
+    data: {...dataWithDefaults},
     className: `${cssClasses} ${classes.join(' ')}`,
     inherited: childrenInherited,
     style: {...style, ...styleProp},
