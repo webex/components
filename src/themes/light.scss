@@ -177,6 +177,7 @@
   --wxc-options-list-item--selected--color:  #{$wxc-blue-60};
 
   --wxc-scrollbar-thumb: #{$wxc-black-alpha-11};
+  --wxc-scrollbar-bgcolor: #{$wxc-black-alpha-20};
 
   --wxc-hyperlink--normal--color: #{$wxc-blue-70};
   --wxc-hyperlink--hover--color: #{$wxc-blue-90};
@@ -212,4 +213,13 @@
   --wxc-adaptive-cards--subtle-color--attention: #{$wxc-red-60};
 
   --wxc-adaptive-cards--highlight-color: #{$wxc-gray-70};
+
+  ::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--wxc-scrollbar-bgcolor);
+    border-radius: 0.125rem;
+  }
 }

@@ -1,0 +1,34 @@
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-textbox;
+
+.#{$C} {
+  background: var(--wxc-input--normal--background);
+  border: var(--wcx-input--normal--border);
+  border-radius: 0.5rem;
+  color: var(--wxc-input--normal--color);
+  line-height: 1.5;
+  font-family: #{$brand-font-regular};
+  font-size: 0.875rem;
+  padding: 0.25rem 0.75rem;
+  text-align: left;
+
+  &:hover {
+    background: var(--wxc-input--hover--background);
+  }
+
+  &:active {
+    background: var(--wxc-input--active--background);
+    border: var(--wxc-input--active--border);
+  }
+
+  &:focus {
+    background: var(--wxc-input--focus--background);
+    border: var(--wxc-input--focus--border);
+    color: var(--wxc-input--focus--color);
+  }
+
+  &:disabled {
+    background: var(--wxc-input--disabled--background);
+    border: var(--wxc-input--disabled--border);
+    color: var(--wxc-input--disabled--color);
+  }
+}
