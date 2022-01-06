@@ -837,7 +837,7 @@ Array [
         >
           <button
             autoFocus={false}
-            className="wxc-button wxc-ac-action wxc-ac-action-submit wxc-ac wxc-ac-action-style--default wxc-ac-title--submit wxc-button--primary"
+            className="wxc-button wxc-ac-action wxc-ac-action-submit wxc-ac wxc-ac-action-style--default wxc-button--primary"
             disabled={false}
             onClick={[Function]}
             style={
