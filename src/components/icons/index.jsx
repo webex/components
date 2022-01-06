@@ -16,6 +16,7 @@ export {default as ControlUp} from './ControlUp';
 export {default as DndPresenceIcon} from './DndPresenceIcon';
 export {default as ExternalUserIcon} from './ExternalUserIcon';
 export {default as HidePwdIcon} from './HidePwdIcon';
+export {default as IndeterminateIcon} from './IndeterminateIcon';
 export {default as MeetingsPresenceIcon} from './MeetingsPresenceIcon';
 export {default as MicrophoneBoldIcon} from './MicrophoneBoldIcon';
 export {default as MicrophoneIssueIcon} from './MicrophoneIssueIcon';

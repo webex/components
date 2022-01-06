@@ -1,0 +1,83 @@
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-checkbox;
+
+.#{$C} {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  .#{$C}__title {
+    color: var(--wxc-text-color);
+    margin-left: 0.5rem;
+  }
+  .#{$C}__box {
+    @include focusable;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 1rem;
+    height: 1rem;
+    padding: 0.25rem;
+    border-radius: 0.125rem;
+
+    .#{$C}__checkmark {
+      width: 9px;
+      height: 6.5px;
+    }
+
+    &--enabled {
+      &.#{$C}__box--checked,
+      &.#{$C}__box--indeterminate {
+        background-color: var(--wxc-input--on--normal--background);
+        border: var(--wxc-input--on--normal--border);
+
+        .#{$C}__checkmark {
+          color: var(--wxc-input--on--normal--foreground);
+        }
+
+        &:hover {
+          background-color: var(--wxc-input--on--hover--background);
+          border: var(--wxc-input--on--hover--border);
+        }
+
+        &:active {
+          background-color: var(--wxc-input--on--active--background);
+          border: var(--wxc-input--on--active--border);
+        }
+      }
+
+      &.#{$C}__box--unchecked {
+        background-color: var(--wxc-input--off--normal--background);
+        border: var(--wxc-input--off--normal--border);
+
+        &:hover {
+          background-color: var(--wxc-input--off--hover--background);
+          border: var(--wxc-input--off--hover--border);
+        }
+
+        &:active {
+          background-color: var(--wxc-input--off--active--background);
+          border: var(--wxc-input--off--active--border);
+        }
+      }
+    }
+
+    &--disabled {
+        cursor: default;
+
+      &.#{$C}__box--checked {
+        background-color: var(--wxc-input--on--disabled--background);
+        border: var(--wxc-input--on--disabled--border);
+
+        .#{$C}__checkmark {
+          color: var(--wxc-input--on--disabled--foreground);
+        }
+      }
+
+      &.#{$C}__box--unchecked {
+        background-color: var(--wxc-input--off--disabled--background);
+        border: var(--wxc-input--off--disabled--border);
+      }
+    }
+  }
+}

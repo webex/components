@@ -214,6 +214,38 @@
 
   --wxc-adaptive-cards--highlight-color: #{$wxc-gray-70};
 
+  --wxc-input--on--normal--border: none;
+  --wxc-input--on--normal--background: #{$wxc-blue-60};
+  --wxc-input--on--normal--foreground: #{$wxc-white-alpha-95};
+
+  --wxc-input--on--hover--border: none;
+  --wxc-input--on--hover--background: #{$wxc-blue-70};
+  --wxc-input--on--hover--foreground: #{$wxc-white-alpha-95};
+
+  --wxc-input--on--active--border: none;
+  --wxc-input--on--active--background: #{$wxc-blue-80};
+  --wxc-input--on--active--foreground: #{$wxc-white-alpha-95};
+
+  --wxc-input--on--disabled--border: none;
+  --wxc-input--on--disabled--background: #{$wxc-blue-20};
+  --wxc-input--on--disabled--foreground: #{$wxc-white-alpha-50};
+
+  --wxc-input--off--normal--border: 1px solid #{$wxc-black-alpha-50};
+  --wxc-input--off--normal--background:  #{$wxc-black-alpha-20};
+  --wxc-input--off--normal--foreground: transparent;
+
+  --wxc-input--off--hover--border: 1px solid #{$wxc-black-alpha-50};
+  --wxc-input--off--hover--background: #{$wxc-black-alpha-30};
+  --wxc-input--off--hover--foreground: transparent;
+
+  --wxc-input--off--active--border: 1px solid #{$wxc-black-alpha-50};
+  --wxc-input--off--active--background: #{$wxc-black-alpha-40};
+  --wxc-input--off--active--foreground: transparent;
+
+  --wxc-input--off--disabled--border: none;
+  --wxc-input--off--disabled--background: #{$wxc-black-alpha-11};
+  --wxc-input--off--disabled--foreground: transparent;
+
   ::-webkit-scrollbar {
     width: 0.25rem;
   }
