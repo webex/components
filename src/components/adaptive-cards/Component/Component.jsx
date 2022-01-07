@@ -6,6 +6,7 @@ const componentTypes = {};
 const containerTypes = {};
 
 export const acPropTypes = {
+  action: 'action',
   actionStyle: 'action-style',
   backgroundImage: 'background-image',
   bleed: 'bleed',
@@ -24,6 +25,7 @@ export const acPropTypes = {
   imageStyle: 'image-style',
   inputStyle: 'input-style',
   isEnabled: 'is-enabled',
+  isMultiSelect: 'is-multi-select',
   isRequired: 'is-required',
   isSubtle: 'is-subtle',
   isVisible: 'is-visible',
@@ -134,6 +136,8 @@ export default function Component({
       case acPropTypes.placeholder:
       case acPropTypes.regex:
       case acPropTypes.style:
+      case acPropTypes.isMultiSelect:
+      case acPropTypes.isRequired:
       case acPropTypes.text:
       case acPropTypes.tooltip:
       case acPropTypes.type:

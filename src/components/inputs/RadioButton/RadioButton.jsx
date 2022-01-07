@@ -82,7 +82,7 @@ RadioButton.defaultProps = {
   ariaLabel: undefined,
   className: undefined,
   selected: false,
-  disabled: true,
+  disabled: false,
   required: false,
   error: undefined,
   onChange: undefined,

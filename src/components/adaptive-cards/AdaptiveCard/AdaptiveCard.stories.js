@@ -1912,6 +1912,137 @@ const exampleActionShowCard = {
   ],
 };
 
+const exampleInputChoiceSet = {
+  $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
+  type: 'AdaptiveCard',
+  version: '1.0',
+  body: [
+    {
+      type: 'Input.ChoiceSet',
+      id: 'input1',
+      style: 'compact',
+      isMultiSelect: false,
+      label: 'Default Input.ChoiceSet label (compact)',
+      placeholder: 'Please make a selection',
+      choices: [
+        {
+          title: 'Option 1',
+          value: '1',
+        },
+        {
+          title: 'Option 2',
+          value: '2',
+        },
+      ],
+    },
+    {
+      type: 'Input.ChoiceSet',
+      id: 'input2',
+      style: 'compact',
+      isMultiSelect: false,
+      label: 'Required Input.ChoiceSet label (compact)',
+      isRequired: true,
+      errorMessage: 'Required input',
+      placeholder: 'Please make a selection',
+      value: '1',
+      choices: [
+        {
+          title: 'Option 1',
+          value: '1',
+        },
+        {
+          title: 'Option 2',
+          value: '2',
+        },
+      ],
+    },
+    {
+      type: 'Input.ChoiceSet',
+      id: 'input3',
+      style: 'expanded',
+      isMultiSelect: false,
+      label: 'Default Input.ChoiceSet label (expanded)',
+      value: '2',
+      choices: [
+        {
+          title: 'Option 1',
+          value: '1',
+        },
+        {
+          title: 'Option 2',
+          value: '2',
+        },
+      ],
+    },
+    {
+      type: 'Input.ChoiceSet',
+      id: 'input4',
+      style: 'expanded',
+      isMultiSelect: false,
+      label: 'Required Input.ChoiceSet label (expanded)',
+      isRequired: true,
+      errorMessage: 'Required input',
+      choices: [
+        {
+          title: 'Option 1',
+          value: '1',
+        },
+        {
+          title: 'Option 2',
+          value: '2',
+        },
+      ],
+    },
+    {
+      type: 'Input.ChoiceSet',
+      id: 'input5',
+      style: 'expanded',
+      isMultiSelect: true,
+      label: 'Default Input.ChoiceSet label (expanded, multiselect)',
+      choices: [
+        {
+          title: 'Option 1',
+          value: '1',
+        },
+        {
+          title: 'Option 2',
+          value: '2',
+        },
+      ],
+    },
+    {
+      type: 'Input.ChoiceSet',
+      id: 'input6',
+      style: 'compact',
+      isMultiSelect: true,
+      isRequired: true,
+      value: '1,3',
+      label: 'Required Input.ChoiceSet label (compact, multiselect)',
+      errorMessage: 'Required input',
+      choices: [
+        {
+          title: 'Option 1',
+          value: '1',
+        },
+        {
+          title: 'Option 2',
+          value: '2',
+        },
+        {
+          title: 'Option 3',
+          value: '3',
+        },
+      ],
+    },
+  ],
+  actions: [
+    {
+      type: 'Action.Submit',
+      title: 'OK',
+    },
+  ],
+};
+
 export const Card = Template.bind({});
 Card.args = {
   template: exampleAdaptiveCard,
@@ -1983,4 +2114,9 @@ ActionOpenURL.args = {
 export const ActionShowCard = Template.bind({});
 ActionShowCard.args = {
   template: exampleActionShowCard,
+};
+
+export const InputChoiceSet = Template.bind({});
+InputChoiceSet.args = {
+  template: exampleInputChoiceSet,
 };
