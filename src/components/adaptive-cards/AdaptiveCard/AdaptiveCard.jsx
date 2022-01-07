@@ -14,6 +14,7 @@ import '../Container/Container';
 import '../FactSet/FactSet';
 import '../Image/Image';
 import '../ImageSet/ImageSet';
+import '../InputChoiceSet/InputChoiceSet';
 import '../InputDate/InputDate';
 import '../InputNumber/InputNumber';
 import '../InputText/InputText';

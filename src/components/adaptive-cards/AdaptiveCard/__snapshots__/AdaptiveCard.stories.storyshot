@@ -2070,6 +2070,423 @@ Array [
 ]
 `;
 
+exports[`Storyshots Messaging/AdaptiveCard Input Choice Set 1`] = `
+Array [
+  <div
+    className="wxc-adaptive-card wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
+    style={Object {}}
+  >
+    <label
+      className="wxc-label wxc-adaptive-cards-input-choice-set wxc-ac wxc-ac-container--vertical"
+    >
+      <div
+        className="wxc-label__label-text"
+      >
+        Default Input.ChoiceSet label (compact)
+      </div>
+      <div
+        className="wxc-label__control"
+        style={Object {}}
+      >
+        <label
+          className="wxc-label wxc-select"
+        >
+          <div
+            className="wxc-label__control"
+          >
+            <div
+              className="wxc-select__control"
+              disabled={false}
+            >
+              <div
+                aria-label="undefined"
+                className="wxc-select__selected-option "
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="button"
+              >
+                <span
+                  className="wxc-select__label"
+                >
+                  Please make a selection
+                </span>
+                <svg
+                  className="wxc-icon "
+                  height={13}
+                  style={Object {}}
+                  viewBox="0 0 26 14"
+                  width={13}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M25.7075 0.293202C25.52 0.105701 25.2656 0.000366211 25.0004 0.000366211C24.7353 0.000366211 24.4809 0.105701 24.2934 0.293202L13 11.5862L1.70699 0.293202C1.51851 0.110381 1.26568 0.00902984 1.0031 0.0110359C0.740528 0.013042 0.489278 0.118244 0.303611 0.303925C0.117943 0.489605 0.0127584 0.740862 0.0107709 1.00344C0.00878336 1.26601 0.110153 1.51883 0.292988 1.7073L12.293 13.7073C12.4805 13.8948 12.7348 14.0001 13 14.0001C13.2652 14.0001 13.5195 13.8948 13.707 13.7073L25.707 1.7073C25.8946 1.51984 26 1.26555 26.0001 1.00036C26.0002 0.735168 25.8949 0.4808 25.7075 0.293202Z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </label>
+      </div>
+    </label>
+    <label
+      className="wxc-label wxc-adaptive-cards-input-choice-set wxc-ac wxc-ac-container--vertical"
+    >
+      <div
+        className="wxc-label__label-text"
+      >
+        Required Input.ChoiceSet label (compact)
+      </div>
+      <div
+        className="wxc-label__control"
+        style={Object {}}
+      >
+        <label
+          className="wxc-label wxc-select"
+        >
+          <div
+            className="wxc-label__control"
+          >
+            <div
+              className="wxc-select__control"
+              disabled={false}
+            >
+              <div
+                aria-label="Option 1. undefined"
+                className="wxc-select__selected-option "
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="button"
+              >
+                <span
+                  className="wxc-select__label"
+                >
+                  Option 1
+                </span>
+                <svg
+                  className="wxc-icon "
+                  height={13}
+                  style={Object {}}
+                  viewBox="0 0 26 14"
+                  width={13}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M25.7075 0.293202C25.52 0.105701 25.2656 0.000366211 25.0004 0.000366211C24.7353 0.000366211 24.4809 0.105701 24.2934 0.293202L13 11.5862L1.70699 0.293202C1.51851 0.110381 1.26568 0.00902984 1.0031 0.0110359C0.740528 0.013042 0.489278 0.118244 0.303611 0.303925C0.117943 0.489605 0.0127584 0.740862 0.0107709 1.00344C0.00878336 1.26601 0.110153 1.51883 0.292988 1.7073L12.293 13.7073C12.4805 13.8948 12.7348 14.0001 13 14.0001C13.2652 14.0001 13.5195 13.8948 13.707 13.7073L25.707 1.7073C25.8946 1.51984 26 1.26555 26.0001 1.00036C26.0002 0.735168 25.8949 0.4808 25.7075 0.293202Z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </label>
+      </div>
+    </label>
+    <label
+      className="wxc-label wxc-adaptive-cards-input-choice-set wxc-ac wxc-ac-container--vertical"
+    >
+      <div
+        className="wxc-label__label-text"
+      >
+        Default Input.ChoiceSet label (expanded)
+      </div>
+      <div
+        className="wxc-label__control"
+        style={Object {}}
+      >
+        <div
+          aria-checked={false}
+          aria-disabled={false}
+          className="wxc-radio-button wxc-radio-button--enabled"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          required={false}
+          role="radio"
+          tabIndex={0}
+        >
+          <div
+            className="wxc-radio-button__background"
+          >
+            <div
+              className="wxc-radio-button__foreground"
+            />
+          </div>
+          <span
+            className="wxc-radio-button__title"
+          >
+            Option 1
+          </span>
+        </div>
+        <div
+          aria-checked={true}
+          aria-disabled={false}
+          className="wxc-radio-button wxc-radio-button--enabled"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          required={false}
+          role="radio"
+          tabIndex={0}
+        >
+          <div
+            className="wxc-radio-button__background"
+          >
+            <div
+              className="wxc-radio-button__foreground"
+            />
+          </div>
+          <span
+            className="wxc-radio-button__title"
+          >
+            Option 2
+          </span>
+        </div>
+      </div>
+    </label>
+    <label
+      className="wxc-label wxc-adaptive-cards-input-choice-set wxc-ac wxc-ac-container--vertical"
+    >
+      <div
+        className="wxc-label__label-text"
+      >
+        Required Input.ChoiceSet label (expanded)
+      </div>
+      <div
+        className="wxc-label__control"
+        style={Object {}}
+      >
+        <div
+          aria-checked={false}
+          aria-disabled={false}
+          className="wxc-radio-button wxc-radio-button--enabled"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          required={false}
+          role="radio"
+          tabIndex={0}
+        >
+          <div
+            className="wxc-radio-button__background"
+          >
+            <div
+              className="wxc-radio-button__foreground"
+            />
+          </div>
+          <span
+            className="wxc-radio-button__title"
+          >
+            Option 1
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={false}
+          className="wxc-radio-button wxc-radio-button--enabled"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          required={false}
+          role="radio"
+          tabIndex={0}
+        >
+          <div
+            className="wxc-radio-button__background"
+          >
+            <div
+              className="wxc-radio-button__foreground"
+            />
+          </div>
+          <span
+            className="wxc-radio-button__title"
+          >
+            Option 2
+          </span>
+        </div>
+      </div>
+    </label>
+    <label
+      className="wxc-label wxc-adaptive-cards-input-choice-set wxc-ac wxc-ac-container--vertical"
+    >
+      <div
+        className="wxc-label__label-text"
+      >
+        Default Input.ChoiceSet label (expanded, multiselect)
+      </div>
+      <div
+        className="wxc-label__control"
+        style={Object {}}
+      >
+        <label
+          className="wxc-checkbox"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          <div
+            aria-checked={false}
+            aria-disabled={false}
+            className="wxc-checkbox__box wxc-checkbox__box--enabled wxc-checkbox__box--unchecked"
+            role="checkbox"
+            tabIndex={0}
+          />
+          <span
+            className="wxc-checkbox__title"
+          >
+            Option 1
+          </span>
+        </label>
+        <label
+          className="wxc-checkbox"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          <div
+            aria-checked={false}
+            aria-disabled={false}
+            className="wxc-checkbox__box wxc-checkbox__box--enabled wxc-checkbox__box--unchecked"
+            role="checkbox"
+            tabIndex={0}
+          />
+          <span
+            className="wxc-checkbox__title"
+          >
+            Option 2
+          </span>
+        </label>
+      </div>
+    </label>
+    <label
+      className="wxc-label wxc-adaptive-cards-input-choice-set wxc-ac wxc-ac-container--vertical"
+    >
+      <div
+        className="wxc-label__label-text"
+      >
+        Required Input.ChoiceSet label (compact, multiselect)
+      </div>
+      <div
+        className="wxc-label__control"
+        style={Object {}}
+      >
+        <label
+          className="wxc-checkbox"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          <div
+            aria-checked={true}
+            aria-disabled={false}
+            className="wxc-checkbox__box wxc-checkbox__box--enabled wxc-checkbox__box--checked"
+            role="checkbox"
+            tabIndex={0}
+          >
+            <svg
+              className="wxc-icon wxc-checkbox__checkmark"
+              height={26}
+              style={Object {}}
+              viewBox="0 0 26 18"
+              width={26}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.20046 17.1999C8.06863 17.2002 7.93805 17.1743 7.81633 17.1236C7.69461 17.073 7.58418 16.9987 7.49146 16.905L0.291276 9.66962C0.198683 9.57651 0.125336 9.46608 0.0754228 9.34463C0.0255091 9.22317 6.0504e-06 9.09308 0.000370053 8.96177C0.000734056 8.83046 0.026958 8.70051 0.0775442 8.57933C0.12813 8.45816 0.202088 8.34813 0.295196 8.25554C0.388303 8.16295 0.498736 8.0896 0.620189 8.03969C0.741643 7.98977 0.871738 7.96427 1.00305 7.96463C1.13436 7.965 1.26431 7.99122 1.38548 8.04181C1.50666 8.09239 1.61668 8.16635 1.70928 8.25946L8.2542 14.8366L24.3499 1.04169C24.5511 0.869196 24.8126 0.783711 25.0769 0.80404C25.3412 0.824369 25.5866 0.948847 25.759 1.15009C25.9315 1.35133 26.017 1.61286 25.9967 1.87713C25.9764 2.1414 25.8519 2.38678 25.6506 2.55927L8.85085 16.9587C8.67 17.1145 8.43917 17.2001 8.20046 17.1999Z"
+              />
+            </svg>
+          </div>
+          <span
+            className="wxc-checkbox__title"
+          >
+            Option 1
+          </span>
+        </label>
+        <label
+          className="wxc-checkbox"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          <div
+            aria-checked={false}
+            aria-disabled={false}
+            className="wxc-checkbox__box wxc-checkbox__box--enabled wxc-checkbox__box--unchecked"
+            role="checkbox"
+            tabIndex={0}
+          />
+          <span
+            className="wxc-checkbox__title"
+          >
+            Option 2
+          </span>
+        </label>
+        <label
+          className="wxc-checkbox"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          <div
+            aria-checked={true}
+            aria-disabled={false}
+            className="wxc-checkbox__box wxc-checkbox__box--enabled wxc-checkbox__box--checked"
+            role="checkbox"
+            tabIndex={0}
+          >
+            <svg
+              className="wxc-icon wxc-checkbox__checkmark"
+              height={26}
+              style={Object {}}
+              viewBox="0 0 26 18"
+              width={26}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.20046 17.1999C8.06863 17.2002 7.93805 17.1743 7.81633 17.1236C7.69461 17.073 7.58418 16.9987 7.49146 16.905L0.291276 9.66962C0.198683 9.57651 0.125336 9.46608 0.0754228 9.34463C0.0255091 9.22317 6.0504e-06 9.09308 0.000370053 8.96177C0.000734056 8.83046 0.026958 8.70051 0.0775442 8.57933C0.12813 8.45816 0.202088 8.34813 0.295196 8.25554C0.388303 8.16295 0.498736 8.0896 0.620189 8.03969C0.741643 7.98977 0.871738 7.96427 1.00305 7.96463C1.13436 7.965 1.26431 7.99122 1.38548 8.04181C1.50666 8.09239 1.61668 8.16635 1.70928 8.25946L8.2542 14.8366L24.3499 1.04169C24.5511 0.869196 24.8126 0.783711 25.0769 0.80404C25.3412 0.824369 25.5866 0.948847 25.759 1.15009C25.9315 1.35133 26.017 1.61286 25.9967 1.87713C25.9764 2.1414 25.8519 2.38678 25.6506 2.55927L8.85085 16.9587C8.67 17.1145 8.43917 17.2001 8.20046 17.1999Z"
+              />
+            </svg>
+          </div>
+          <span
+            className="wxc-checkbox__title"
+          >
+            Option 3
+          </span>
+        </label>
+      </div>
+    </label>
+    <div
+      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-container--horizontal"
+      style={Object {}}
+    >
+      <div>
+        <h5>
+          Action.Submit Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "Action.Submit",
+    "title": "OK"
+}
+        </pre>
+      </div>
+    </div>
+    <div />
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
 exports[`Storyshots Messaging/AdaptiveCard Input Number 1`] = `
 Array [
   <div
@@ -2245,7 +2662,7 @@ Array [
       Specify the type of text being requested:
     </div>
     <label
-      className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-input-style--text wxc-ac-height--auto wxc-ac-is-required--true wxc-input-field--error"
+      className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-input-style--text wxc-ac-height--auto wxc-input-field--error"
     >
       <div
         className="wxc-label__control"
