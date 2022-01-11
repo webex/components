@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
+import Label from '../Label/Label';
 
 /**
  * Textbox component
@@ -13,6 +14,7 @@ import webexComponentClasses from '../../helpers';
  * @param {boolean} [props.disabled=false]  Flag indicating whether textbox is disabled
  * @param {boolean} [props.required=false]  Flag indicating whether textbox is required
  * @param {string} [props.error]  Error text
+ * @param {string} [props.label]  Label text
  * @param {Function} [props.onChange]  Action to perform on textbox change
  * @returns {object}  JSX of the element
  */
@@ -23,23 +25,23 @@ export default function Textbox({
   placeholder = name,
   disabled,
   required,
-  // eslint-disable-next-line no-unused-vars
   error,
+  label,
   onChange,
 }) {
-  const [cssClasses] = webexComponentClasses('textbox', className);
+  const [cssClasses, sc] = webexComponentClasses('textbox', className);
 
   return (
-    <textarea
-      className={cssClasses}
-      style={style}
-      aria-label={name}
-      name={name}
-      placeholder={placeholder}
-      disabled={disabled}
-      required={required}
-      onChange={(event) => onChange(event.target.value)}
-    />
+    <Label className={cssClasses} style={style} required={required} label={label} error={error}>
+      <textarea
+        className={sc('control')}
+        aria-label={name}
+        name={name}
+        placeholder={placeholder}
+        disabled={disabled}
+        onChange={(event) => onChange(event.target.value)}
+      />
+    </Label>
   );
 }
 
@@ -51,6 +53,7 @@ Textbox.propTypes = {
   disabled: PropTypes.bool,
   required: PropTypes.bool,
   error: PropTypes.string,
+  label: PropTypes.string,
   onChange: PropTypes.func,
 };
 
@@ -61,5 +64,6 @@ Textbox.defaultProps = {
   disabled: false,
   required: false,
   error: null,
+  label: undefined,
   onChange: null,
 };

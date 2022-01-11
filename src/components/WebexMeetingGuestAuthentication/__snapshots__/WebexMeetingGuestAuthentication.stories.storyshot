@@ -29,15 +29,15 @@ Array [
       className="wxc-meeting-guest-authentication__form-content"
     >
       <label
-        className="wxc-meeting-guest-authentication__label"
+        className="wxc-label wxc-input-field wxc-meeting-guest-authentication__input"
       >
-        <span
-          className="wxc-meeting-guest-authentication__label-text"
+        <div
+          className="wxc-label__label-text"
         >
           Your name
-        </span>
+        </div>
         <div
-          className="wxc-input-field"
+          className="wxc-label__control"
         >
           <div
             className="wxc-input-field__form-control"
@@ -57,15 +57,15 @@ Array [
         </div>
       </label>
       <label
-        className="wxc-meeting-guest-authentication__label"
+        className="wxc-label wxc-input-field wxc-meeting-guest-authentication__input"
       >
-        <span
-          className="wxc-meeting-guest-authentication__label-text"
+        <div
+          className="wxc-label__label-text"
         >
           Meeting password (required)
-        </span>
+        </div>
         <div
-          className="wxc-input-field"
+          className="wxc-label__control"
         >
           <div
             className="wxc-input-field__form-control"
@@ -84,8 +84,8 @@ Array [
             />
             
           </div>
-          
         </div>
+        
       </label>
       <button
         aria-label="Start meeting. Start the meeting after entering the required information."

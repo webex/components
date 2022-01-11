@@ -1,7 +1,9 @@
 $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-select;
 
 .#{$C} {
-  position: relative;
+  &__control {
+    position: relative;
+  }
 
   .#{$C}__selected-option {
     display: flex;
@@ -67,4 +69,3 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-select;
     }
   }
 }
-

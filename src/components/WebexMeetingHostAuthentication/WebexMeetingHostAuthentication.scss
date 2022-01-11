@@ -40,15 +40,8 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-host-authentication;
     flex-direction: column;
     width: 17.625rem;
 
-    .#{$C}__label {
-      display: flex;
-      flex-direction: column;
+    .#{$C}__input {
       margin-bottom: 1rem;
-
-      .#{$C}__label-text {
-        padding-left: 0.75rem;
-        margin-bottom: 0.25rem;
-      }
     }
 
     .#{$C}__start-button-spinner {

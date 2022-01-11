@@ -89,34 +89,32 @@ export default function WebexMeetingGuestAuthentication({
       </div>
       <form className={sc('form-content')}>
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-        <label className={sc('label')}>
-          <span className={sc('label-text')}>Your name</span>
-          <InputField
-            type="text"
-            name="name"
-            value={name}
-            onChange={handleNameChange}
-            disabled={isJoining}
-            error={nameError}
-            ariaLabel={HINTS.name}
-            autoFocus
-            tabIndex={101}
-          />
-        </label>
+        <InputField
+          className={sc('input')}
+          type="text"
+          name="name"
+          value={name}
+          onChange={handleNameChange}
+          disabled={isJoining}
+          error={nameError}
+          label="Your name"
+          ariaLabel={HINTS.name}
+          autoFocus
+          tabIndex={101}
+        />
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-        <label className={sc('label')}>
-          <span className={sc('label-text')}>Meeting password (required)</span>
-          <InputField
-            type="password"
-            name="password"
-            value={password}
-            onChange={handlePasswordChange}
-            disabled={isJoining}
-            error={invalidPassword ? 'Incorrect password. Try again.' : ''}
-            ariaLabel={HINTS.password}
-            tabIndex={102}
-          />
-        </label>
+        <InputField
+          className={sc('input')}
+          type="password"
+          name="password"
+          value={password}
+          onChange={handlePasswordChange}
+          disabled={isJoining}
+          error={invalidPassword ? 'Incorrect password. Try again.' : ''}
+          label="Meeting password (required)"
+          ariaLabel={HINTS.password}
+          tabIndex={102}
+        />
         <Button
           type="primary"
           className={sc('start-button')}
