@@ -5,23 +5,29 @@ import Icon from '../Icon/Icon';
 import OptionsList from '../OptionsList/OptionsList';
 import webexComponentClasses from '../../helpers';
 import {useRef} from '../../hooks';
+import Label from '../../inputs/Label/Label';
 
 /**
  * Select Component
  *
  * @param {object} props  Data passed to the component
- * @param {string} props.className  Custom CSS class to apply
- * @param {string} props.value  Selected option
- * @param {object[]} props.options  Array of options
+ * @param {string} [props.className]  Custom CSS class to apply
+ * @param {obect} [props.style]  Custom style to apply
+ * @param {string} [props.value]  Selected option
+ * @param {object[]} [props.options]  Array of options
  * @param {Function} props.onChange  Action to perform on option selection
- * @param {boolean} props.disabled  True when the control is disabled
- * @param {string} props.tooltip  Tooltip to be displayed
- * @param {string} props.ariaLabel  String that labels the current element
- * @param {number} props.tabIndex  Value of the tabIndex
+ * @param {boolean} [props.disabled=false]  True when the control is disabled
+ * @param {string} [props.tooltip]  Tooltip to be displayed
+ * @param {string} [props.ariaLabel]  String that labels the current element
+ * @param {number} [props.tabIndex]  Value of the tabIndex
+ * @param {string} [props.error]  Error text
+ * @param {string} [props.label]  Label text
+ * @param {boolean} [props.required=false]  Flag indicating control required
  * @returns {object}  JSX of the element
  */
 export default function Select({
   className,
+  style,
   value,
   options,
   onChange,
@@ -29,6 +35,9 @@ export default function Select({
   tooltip,
   ariaLabel,
   tabIndex,
+  error,
+  label: controlLabel,
+  required,
 }) {
   const [expanded, setExpanded] = useState(undefined);
   const [cssClasses, sc] = webexComponentClasses('select', className, {disabled});
@@ -71,37 +80,46 @@ export default function Select({
   }, [expanded]);
 
   return (
-    <div className={cssClasses} disabled={disabled}>
-      <div
-        className={`${sc('selected-option')} ${expanded ? sc('expanded') : ''}`}
-        onClick={() => toggleExpanded(false)}
-        role="button"
-        tabIndex={disabled ? -1 : tabIndex}
-        title={tooltip}
-        aria-label={`${label ? `${label}. ` : ''}${ariaLabel}`}
-        onKeyDown={handleKeyDown}
-        ref={ref}
-      >
-        <span className={sc('label')}>{options === null ? 'Loading...' : (label || value)}</span>
-        <Icon name={expanded ? 'arrow-up' : 'arrow-down'} size={13} />
+    <Label
+      className={cssClasses}
+      style={style}
+      error={error}
+      label={controlLabel}
+      required={required}
+    >
+      <div className={sc('control')} disabled={disabled}>
+        <div
+          className={`${sc('selected-option')} ${expanded ? sc('expanded') : ''}`}
+          onClick={() => toggleExpanded(false)}
+          role="button"
+          tabIndex={disabled ? -1 : tabIndex}
+          title={tooltip}
+          aria-label={`${label ? `${label}. ` : ''}${ariaLabel}`}
+          onKeyDown={handleKeyDown}
+          ref={ref}
+        >
+          <span className={sc('label')}>{options === null ? 'Loading...' : (label || value)}</span>
+          <Icon name={expanded ? 'arrow-up' : 'arrow-down'} size={13} />
+        </div>
+        {expanded && (
+          <OptionsList
+            className={sc('options-list')}
+            options={options}
+            onSelect={handleOptionSelect}
+            withKey={expanded.withKey}
+            selected={value}
+            tabIndex={tabIndex}
+            onBlur={collapse}
+          />
+        )}
       </div>
-      {expanded && (
-        <OptionsList
-          className={sc('options-list')}
-          options={options}
-          onSelect={handleOptionSelect}
-          withKey={expanded.withKey}
-          selected={value}
-          tabIndex={tabIndex}
-          onBlur={collapse}
-        />
-      )}
-    </div>
+    </Label>
   );
 }
 
 Select.propTypes = {
   className: PropTypes.string,
+  style: PropTypes.shape(),
   value: PropTypes.string,
   options: PropTypes.arrayOf(PropTypes.shape({
     value: PropTypes.string,
@@ -112,14 +130,21 @@ Select.propTypes = {
   tooltip: PropTypes.string,
   ariaLabel: PropTypes.string,
   tabIndex: PropTypes.number,
+  error: PropTypes.string,
+  label: PropTypes.string,
+  required: PropTypes.bool,
 };
 
 Select.defaultProps = {
-  className: '',
+  className: undefined,
+  style: undefined,
   value: '',
   options: [],
   disabled: false,
   tooltip: undefined,
   ariaLabel: undefined,
   tabIndex: undefined,
+  error: undefined,
+  label: undefined,
+  required: false,
 };

@@ -4,6 +4,7 @@ import webexComponentClasses from '../../helpers';
 import Button from '../Button/Button';
 import {useRef, useAutoFocus} from '../../hooks';
 import Icon from '../Icon/Icon';
+import Label from '../../inputs/Label/Label';
 
 const HINTS = {
   hiddenPasswordButton: 'Show password',
@@ -28,6 +29,7 @@ const HINTS = {
  * @param {Function} [props.onChange]  Action to perform on input change
  * @param {boolean} [props.disabled=false]  Flag indicating input disabled
  * @param {string} [props.error]  Error text
+ * @param {string} [props.label]  Label text
  * @param {string} [props.ariaLabel]  Hint to be displayed as aria-label
  * @param {boolean} [props.required=false]  Flag indicating input required
  * @param {number} [props.tabIndex]  Value of the tabIndex
@@ -47,6 +49,7 @@ export default function InputField({
   min,
   disabled,
   error,
+  label,
   ariaLabel,
   required,
   autoFocus,
@@ -68,7 +71,13 @@ export default function InputField({
   useAutoFocus(inputRef, autoFocus);
 
   return (
-    <div className={cssClasses} style={style}>
+    <Label
+      className={cssClasses}
+      error={error}
+      label={label}
+      required={required}
+      style={style}
+    >
       <div className={sc('form-control')}>
         <input
           type={isPwdRevealed ? 'text' : type}
@@ -101,7 +110,7 @@ export default function InputField({
             <Icon name={isPwdRevealed ? 'hide-password' : 'show-password'} />
           </Button>
         )}
-        {type !== 'password' && (value || value === 0) && (
+        {type !== 'password' && value && (
           <Button type="ghost" className={sc('input-field-right-icon')} size={28} onClick={clearInput}>
             <Icon name="cancel" size={16} />
           </Button>
@@ -117,16 +126,7 @@ export default function InputField({
           </div>
         )}
       </div>
-      {
-        error
-        && (
-          <div className={sc('input-error-container')}>
-            <Icon name="warning" size={16} className={sc('input-error-icon')} />
-            <span className={sc('input-error-text')}>{error}</span>
-          </div>
-        )
-      }
-    </div>
+    </Label>
   );
 }
 
@@ -148,6 +148,7 @@ InputField.propTypes = {
   min: PropTypes.number,
   disabled: PropTypes.bool,
   error: PropTypes.string,
+  label: PropTypes.string,
   ariaLabel: PropTypes.string,
   required: PropTypes.bool,
   tabIndex: PropTypes.number,
@@ -168,6 +169,7 @@ InputField.defaultProps = {
   min: undefined,
   disabled: false,
   error: undefined,
+  label: undefined,
   ariaLabel: undefined,
   required: false,
   tabIndex: undefined,

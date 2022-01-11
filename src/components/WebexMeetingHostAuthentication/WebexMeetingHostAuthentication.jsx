@@ -58,20 +58,19 @@ export default function WebexMeetingHostAuthentication({
       </div>
       <form className={sc('form-content')} onSubmit={(e) => { e.preventDefault(); }}>
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-        <label className={sc('label')}>
-          <span className={sc('label-text')}>Host key (required)</span>
-          <InputField
-            type="password"
-            name="password"
-            value={hostKey}
-            disabled={isJoining}
-            onChange={handleHostKeyChange}
-            error={invalidHostKey ? 'Incorrect host key. Try again.' : ''}
-            ariaLabel={HINTS.password}
-            autoFocus
-            tabIndex={101}
-          />
-        </label>
+        <InputField
+          className={sc('input')}
+          type="password"
+          name="password"
+          value={hostKey}
+          disabled={isJoining}
+          onChange={handleHostKeyChange}
+          error={invalidHostKey ? 'Incorrect host key. Try again.' : ''}
+          label="Host key (required)"
+          ariaLabel={HINTS.password}
+          autoFocus
+          tabIndex={101}
+        />
         <Button
           type="primary"
           className={sc('start-button')}

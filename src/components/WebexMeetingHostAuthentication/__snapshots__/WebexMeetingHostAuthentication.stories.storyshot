@@ -30,15 +30,15 @@ Array [
       onSubmit={[Function]}
     >
       <label
-        className="wxc-meeting-host-authentication__label"
+        className="wxc-label wxc-input-field wxc-meeting-host-authentication__input"
       >
-        <span
-          className="wxc-meeting-host-authentication__label-text"
+        <div
+          className="wxc-label__label-text"
         >
           Host key (required)
-        </span>
+        </div>
         <div
-          className="wxc-input-field"
+          className="wxc-label__control"
         >
           <div
             className="wxc-input-field__form-control"
@@ -57,8 +57,8 @@ Array [
             />
             
           </div>
-          
         </div>
+        
       </label>
       <button
         aria-label="Start meeting. Start the meeting for all participants after entering the required information."
