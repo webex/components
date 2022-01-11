@@ -1,3 +1,10 @@
+# [1.224.0](https://github.com/webex/components/compare/v1.223.0...v1.224.0) (2022-01-11)
+
+
+### Features
+
+* **AdaptiveCardsComponent:** implement width property ([7dfd15a](https://github.com/webex/components/commit/7dfd15a3240de6683f98194b2ab2b4ae449ed1c4))
+
 # [1.223.0](https://github.com/webex/components/compare/v1.222.0...v1.223.0) (2022-01-11)
 
 
