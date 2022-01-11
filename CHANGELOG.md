@@ -1,3 +1,13 @@
+# [1.223.0](https://github.com/webex/components/compare/v1.222.0...v1.223.0) (2022-01-11)
+
+
+### Features
+
+* **AdaptiveCard:** configure templating support ([7d58328](https://github.com/webex/components/commit/7d583288a6e3604dfd4599f89a7c01b070c6ac8a))
+* **AdaptiveCardsActionSet:** create ActionSet component ([ffaec88](https://github.com/webex/components/commit/ffaec88776aa878333577839bc5de5a6c04585c3))
+* **AdaptiveCardsComponent:** implement backgroundImage property ([abbc2ba](https://github.com/webex/components/commit/abbc2ba9b813c9dda5a32916e07136fc6bccc47c))
+* **AdaptiveCardsInputNumber:** implement Input.Number component ([18be70c](https://github.com/webex/components/commit/18be70cbb318b9e9a0427e9eb6da75039910be49))
+
 # [1.222.0](https://github.com/webex/components/compare/v1.221.0...v1.222.0) (2021-12-22)
 
 
