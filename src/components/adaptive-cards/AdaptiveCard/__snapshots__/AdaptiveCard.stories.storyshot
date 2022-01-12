@@ -5866,6 +5866,7 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-rich-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={Object {}}
     >
       <span
         className="wxc-adaptive-cards-text-run wxc-ac "
@@ -5956,6 +5957,7 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-rich-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={Object {}}
     >
       <span
         className="wxc-adaptive-cards-text-run wxc-ac "
@@ -5974,6 +5976,7 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-rich-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-is-visible--true"
+      style={Object {}}
     >
       <span
         className="wxc-adaptive-cards-text-run wxc-ac "
@@ -5992,6 +5995,7 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-rich-text-block wxc-ac wxc-ac-horizontal-alignment--right wxc-ac-is-visible--true"
+      style={Object {}}
     >
       <span
         className="wxc-adaptive-cards-text-run wxc-ac "
@@ -6010,6 +6014,7 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-rich-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={Object {}}
     />
   </div>,
   <video

@@ -100,6 +100,10 @@ UnknownComponent.defaultProps = {
   data: undefined,
 };
 
+UnknownComponent.acPropTypes = {
+  type: acPropTypes.type,
+};
+
 /**
  * Component generic component
  *
@@ -107,11 +111,12 @@ UnknownComponent.defaultProps = {
  * @param {object} props.data  Active Cards definition
  * @param {string} [props.className]  Custom CSS class to apply
  * @param {object} [props.style]  Custom style to apply
+ * @param {object} props.inherited  Inherited properties
  * @param {object} [otherProps]  Other props that must be passed from a parent AC component to a child
  * @returns {object} JSX of the component
  */
 export default function Component({
-  data, className, style: styleProp, ...otherProps
+  data, className, style: styleProp, inherited, ...otherProps
 }) {
   const {setElement, getIsVisible} = useContext(AdaptiveCardContext);
 
@@ -132,8 +137,23 @@ export default function Component({
   const classes = [];
   const getClass = (propType, value) => (value ? `wxc-ac-${propType}--${String(value).toLowerCase()}` : '');
   const style = {};
+  let myInherited = {}; // inherited props that apply to this component
+  let childrenInherited = inherited; // inherited props for this component's children
 
-  const dataWithDefaults = {...C.acDefaultProps, ...data};
+  // handle inherited props
+  for (const prop of ['fallback', 'verticalContentAlignment']) {
+    const propType = (C.acPropTypes && C.acPropTypes[prop]) || undefined;
+
+    if (propType) {
+      if (data[prop] !== undefined) {
+        childrenInherited = {...childrenInherited, [prop]: data[prop]};
+      } else if (inherited[prop] !== undefined) {
+        myInherited = {...myInherited, [prop]: inherited[prop]};
+      }
+    }
+  }
+
+  const dataWithDefaults = {...C.acDefaultProps, ...myInherited, ...data};
 
   for (const [prop, value] of Object.entries(dataWithDefaults)) {
     const propType = (C.acPropTypes && C.acPropTypes[prop]) || undefined;
@@ -224,6 +244,7 @@ export default function Component({
   const props = {
     data,
     className: `${cssClasses} ${classes.join(' ')}`,
+    inherited: childrenInherited,
     style: {...style, ...styleProp},
     ...otherProps,
   };
@@ -247,6 +268,7 @@ export default function Component({
 Component.propTypes = {
   data: PropTypes.shape().isRequired,
   className: PropTypes.string,
+  inherited: PropTypes.shape().isRequired,
   style: PropTypes.shape(),
   otherProps: PropTypes.shape(),
 };
