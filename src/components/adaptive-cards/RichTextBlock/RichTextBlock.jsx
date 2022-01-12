@@ -10,13 +10,17 @@ import Component, {acPropTypes, registerComponent} from '../Component/Component'
  * @param {object} props  React props passed to the component
  * @param {object} props.data  Active cards definition
  * @param {string} props.className  Custom CSS class to apply
+ * @param {object} props.inherited  Inherited data
+ * @param {object} [props.style]  Custom style to apply
  * @returns {object} JSX of the component
  */
-export default function RichTextBlock({data, className}) {
+export default function RichTextBlock({
+  data, className, inherited, style,
+}) {
   const [cssClasses] = webexComponentClasses('adaptive-cards-rich-text-block', className);
 
   return (
-    <div className={cssClasses}>
+    <div className={cssClasses} style={style}>
       {data.inlines.map(
         (inline, index) => {
           let inlineData = typeof inline === 'string' ? {text: inline} : inline;
@@ -24,7 +28,7 @@ export default function RichTextBlock({data, className}) {
           inlineData = {type: 'TextRun', ...inlineData};
 
           // eslint-disable-next-line react/no-array-index-key
-          return <Component data={inlineData} key={index} />;
+          return <Component data={inlineData} inherited={inherited} key={index} />;
         },
       )}
     </div>
@@ -34,10 +38,13 @@ export default function RichTextBlock({data, className}) {
 RichTextBlock.propTypes = {
   data: PropTypes.shape().isRequired,
   className: PropTypes.string,
+  inherited: PropTypes.shape().isRequired,
+  style: PropTypes.shape(),
 };
 
 RichTextBlock.defaultProps = {
   className: '',
+  style: undefined,
 };
 
 RichTextBlock.acPropTypes = {

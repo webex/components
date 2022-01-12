@@ -33,17 +33,20 @@ import '../TextRun/TextRun';
  * @param {object} props  React properties
  * @param {object} props.data  Active Cards definition
  * @param {string} [props.className]  Custom CSS class to apply
+ * @param {object} props.inherited  Inherited data
  * @param {object} [props.style]  Custom style to apply
  * @returns {object} JSX of the component
  */
-function AdaptiveCardInternal({data, className, style}) {
+function AdaptiveCardInternal({
+  data, inherited, className, style,
+}) {
   const [cssClasses] = webexComponentClasses('adaptive-card', [className, 'wxc-ac-container--has-padding']);
 
   return (
     <div className={cssClasses} style={style}>
       {/* eslint-disable react/no-array-index-key */}
-      {data.body?.map((item, index) => <Component data={item} key={index} />)}
-      {data.actions && <Component data={{type: 'ActionSet', actions: data.actions}} />}
+      {data.body?.map((item, index) => <Component data={item} inherited={inherited} key={index} />)}
+      {data.actions && <Component data={{type: 'ActionSet', actions: data.actions}} inherited={inherited} />}
     </div>
   );
 }
@@ -51,6 +54,7 @@ function AdaptiveCardInternal({data, className, style}) {
 AdaptiveCardInternal.propTypes = {
   data: PropTypes.shape().isRequired,
   className: PropTypes.string,
+  inherited: PropTypes.shape().isRequired,
   style: PropTypes.shape(),
 };
 
@@ -91,6 +95,7 @@ export default function AdaptiveCard({
   const data = templateInstance.expand({
     $root: context,
   });
+  const inherited = {};
 
   const [inputs, setInputs] = useState({});
   const [elements, setElements] = useState({});
@@ -176,7 +181,7 @@ export default function AdaptiveCard({
         getIsVisible,
       }}
     >
-      <Component data={data} className={className} style={style} />
+      <Component data={data} className={className} inherited={inherited} style={style} />
     </AdaptiveCardContext.Provider>
   );
 }

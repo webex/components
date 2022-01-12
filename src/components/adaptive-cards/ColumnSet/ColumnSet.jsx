@@ -10,10 +10,13 @@ import webexComponentClasses from '../../helpers';
  * @param {object} props  React props passed to the component
  * @param {object} props.data  Active cards definition
  * @param {string} [props.className]  Custom CSS class to apply
+ * @param {object} props.inherited  Inherited data
  * @param {object} [props.style]  Custom style to apply
  * @returns {object} JSX of the component
  */
-export default function ColumnSet({data, className, style}) {
+export default function ColumnSet({
+  data, className, inherited, style,
+}) {
   const [cssClasses] = webexComponentClasses('adaptive-cards-column-set', className);
 
   return (
@@ -23,7 +26,7 @@ export default function ColumnSet({data, className, style}) {
         const itemData = {type: 'Column', ...item};
 
         return (
-          <Component data={itemData} key={index} />
+          <Component data={itemData} inherited={inherited} key={index} />
         );
       })}
     </div>
@@ -33,6 +36,7 @@ export default function ColumnSet({data, className, style}) {
 ColumnSet.propTypes = {
   data: PropTypes.shape().isRequired,
   className: PropTypes.string,
+  inherited: PropTypes.shape().isRequired,
   style: PropTypes.shape(),
 };
 
