@@ -1,3 +1,10 @@
+# [1.225.0](https://github.com/webex/components/compare/v1.224.0...v1.225.0) (2022-01-12)
+
+
+### Features
+
+* **AdaptiveCardsInputText:** implement Input.Text component ([656bc62](https://github.com/webex/components/commit/656bc62f9ba1aea17129a7e763fdfbe321b62adb))
+
 # [1.224.0](https://github.com/webex/components/compare/v1.223.0...v1.224.0) (2022-01-11)
 
 
