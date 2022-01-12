@@ -1,3 +1,10 @@
+# [1.226.0](https://github.com/webex/components/compare/v1.225.0...v1.226.0) (2022-01-12)
+
+
+### Features
+
+* **Textbox:** implement Textbox component ([85df775](https://github.com/webex/components/commit/85df77551f802c7df82f37030fa893d4e8290b6e))
+
 # [1.225.0](https://github.com/webex/components/compare/v1.224.0...v1.225.0) (2022-01-12)
 
 
