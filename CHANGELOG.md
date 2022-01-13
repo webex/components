@@ -1,3 +1,10 @@
+# [1.227.0](https://github.com/webex/components/compare/v1.226.0...v1.227.0) (2022-01-13)
+
+
+### Features
+
+* **AdaptiveCardsActionOpenUrl:** create Action.OpenUrl component ([64f0cd2](https://github.com/webex/components/commit/64f0cd21d7c374d03c8ce41a7f35428f350801bf))
+
 # [1.226.0](https://github.com/webex/components/compare/v1.225.0...v1.226.0) (2022-01-12)
 
 
