@@ -1,3 +1,10 @@
+# [1.228.0](https://github.com/webex/components/compare/v1.227.0...v1.228.0) (2022-01-13)
+
+
+### Features
+
+* **inputs:** implement Label component ([1238c9b](https://github.com/webex/components/commit/1238c9bc812ba679f2cc42a32b9b7f5182dcb4bb))
+
 # [1.227.0](https://github.com/webex/components/compare/v1.226.0...v1.227.0) (2022-01-13)
 
 
