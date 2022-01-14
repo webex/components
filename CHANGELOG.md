@@ -1,3 +1,10 @@
+# [1.229.0](https://github.com/webex/components/compare/v1.228.0...v1.229.0) (2022-01-14)
+
+
+### Features
+
+* **inputs:** create Checkbox component ([cb9b385](https://github.com/webex/components/commit/cb9b385db9c4056e81e9f48c168ee9099ccc3d4d))
+
 # [1.228.0](https://github.com/webex/components/compare/v1.227.0...v1.228.0) (2022-01-13)
 
 
