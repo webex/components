@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 import Button from '../Button/Button';
 import {useRef, useAutoFocus} from '../../hooks';
+import {clamp} from '../../../util';
 import Icon from '../Icon/Icon';
 import Label from '../../inputs/Label/Label';
 
@@ -60,8 +61,8 @@ export default function InputField({
   const inputRef = useRef();
 
   const handleChange = (event) => onChange(event.target.value);
-  const handleIncrement = () => value < max && onChange(Math.min(max, Number(value) + 1));
-  const handleDecrement = () => value > min && onChange(Math.max(min, Number(value) - 1));
+  const handleIncrement = () => onChange(clamp(Number(value) + 1, min, max));
+  const handleDecrement = () => onChange(clamp(Number(value) - 1, min, max));
   const clearInput = () => onChange('');
 
   const toggleIsPwdRevealed = () => {
@@ -110,7 +111,7 @@ export default function InputField({
             <Icon name={isPwdRevealed ? 'hide-password' : 'show-password'} />
           </Button>
         )}
-        {type !== 'password' && value && (
+        {type !== 'password' && value !== undefined && (
           <Button type="ghost" className={sc('input-field-right-icon')} size={28} onClick={clearInput}>
             <Icon name="cancel" size={16} />
           </Button>

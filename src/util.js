@@ -75,8 +75,21 @@ export function isValidUrl(url, acceptedProtocols) {
   return acceptedProtocols.includes(urlObject.protocol);
 }
 
+/**
+ * Returns a number whose value is limited to the given range.
+ *
+ * @param {number} num  Number
+ * @param {number} min  The lower boundary of the output range
+ * @param {number} max  The upper boundary of the output range
+ * @returns {number} A number in the range [min, max]
+ */
+export function clamp(num, min, max) {
+  return Math.min(Math.max(num, min), max);
+}
+
 export default {
   deepMerge,
   chainWith,
   isValidUrl,
+  clamp,
 };
