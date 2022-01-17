@@ -1,3 +1,10 @@
+## [1.230.1](https://github.com/webex/components/compare/v1.230.0...v1.230.1) (2022-01-17)
+
+
+### Bug Fixes
+
+* **InputField:** clamp input value between min and max ([677fc37](https://github.com/webex/components/commit/677fc370615519d0bbdf2e647a6ba46f81799350))
+
 # [1.230.0](https://github.com/webex/components/compare/v1.229.0...v1.230.0) (2022-01-17)
 
 
