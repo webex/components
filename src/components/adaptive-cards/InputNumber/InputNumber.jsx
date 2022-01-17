@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, {useContext, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
+import AdaptiveCardContext from '../context/adaptive-card-context';
 import {acPropTypes, registerComponent} from '../Component/Component';
 import InputField from '../../generic/InputField/InputField';
 
@@ -16,8 +17,26 @@ import InputField from '../../generic/InputField/InputField';
  */
 export default function InputNumber({data, className, style}) {
   const [cssClasses] = webexComponentClasses('adaptive-cards-input-number', className);
-  const [inputValue, setInputValue] = useState(data.value);
-  const handleInputChange = (value) => setInputValue(value);
+  const {setValue, getValue, setInput} = useContext(AdaptiveCardContext);
+
+  useEffect(() => {
+    setInput({
+      id: data.id,
+      value: data.value,
+      isRequired: data.isRequired,
+      max: data.max,
+      min: data.min,
+      errorMessage: data.errorMessage,
+    });
+  }, [
+    data.id,
+    data.value,
+    data.isRequired,
+    data.errorMessage,
+    data.max,
+    data.min,
+    setInput,
+  ]);
 
   return (
     <InputField
@@ -27,11 +46,11 @@ export default function InputNumber({data, className, style}) {
       max={data.max}
       min={data.min}
       placeholder={data.placeholder}
-      value={inputValue}
+      value={getValue(data.id)}
       error={data.errorMessage}
       required={data.required}
       label={data.label}
-      onChange={handleInputChange}
+      onChange={(value) => setValue(data.id, value)}
     />
   );
 }

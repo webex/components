@@ -2142,7 +2142,9 @@ Array [
             onChange={[Function]}
             required={true}
             type="text"
+            value=""
           />
+          
         </div>
       </div>
       <div
@@ -2195,7 +2197,9 @@ Array [
             onChange={[Function]}
             required={false}
             type="email"
+            value=""
           />
+          
         </div>
       </div>
       <div
@@ -2248,7 +2252,9 @@ Array [
             onChange={[Function]}
             required={false}
             type="tel"
+            value=""
           />
+          
         </div>
       </div>
     </label>
@@ -2274,7 +2280,9 @@ Array [
             onChange={[Function]}
             required={false}
             type="url"
+            value=""
           />
+          
         </div>
       </div>
     </label>
@@ -2300,7 +2308,9 @@ Array [
             onChange={[Function]}
             required={false}
             type="password"
+            value=""
           />
+          
         </div>
       </div>
     </label>

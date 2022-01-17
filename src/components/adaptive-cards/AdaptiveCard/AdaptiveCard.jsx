@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useCallback, useState} from 'react';
 import PropTypes from 'prop-types';
 import {Template} from 'adaptivecards-templating';
 import webexComponentClasses from '../../helpers';
+import AdaptiveCardContext from '../context/adaptive-card-context';
 
 import Component, {acPropTypes, registerComponent} from '../Component/Component';
 import '../ActionOpenURL/ActionOpenUrl';
@@ -20,6 +21,7 @@ import '../InputToggle/InputToggle';
 import '../RichTextBlock/RichTextBlock';
 import '../TextBlock/TextBlock';
 import '../TextRun/TextRun';
+
 /**
  * AdaptiveCardInternal component
  *
@@ -81,8 +83,37 @@ export default function AdaptiveCard({
   const data = templateInstance.expand({
     $root: context,
   });
+  const [inputs, setInputs] = useState({});
+  const setValue = (id, value) => {
+    setInputs((prevInputs) => {
+      const input = prevInputs[id];
 
-  return <Component data={data} className={className} style={style} />;
+      return {
+        ...prevInputs,
+        [id]: {...input, value},
+      };
+    });
+  };
+  const setInput = useCallback((input) => {
+    setInputs((prevInputs) => ({...prevInputs, [input.id]: input}));
+  }, [setInputs]);
+  const getValue = (id, defval = '') => ((id in inputs && inputs[id].value) ? inputs[id].value : defval);
+  const getAllValues = () => Object.entries(inputs).reduce((allValues, [id, input]) => (
+    {...allValues, [id]: input.value}
+  ), {});
+
+  return (
+    <AdaptiveCardContext.Provider
+      value={{
+        setValue,
+        getValue,
+        setInput,
+        getAllValues,
+      }}
+    >
+      <Component data={data} className={className} style={style} />
+    </AdaptiveCardContext.Provider>
+  );
 }
 
 AdaptiveCard.propTypes = {
