@@ -1,9 +1,9 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-spinner {
   position: relative;
   display: inline-block;
-  border: 1px solid var(--wxc-spinner-circle-color);
+  border: 1px solid var(--wxc-spinner--circle--color);
   border-radius: 50%;
-  border-top-color: var(--wxc-spinner-moving-color);
+  border-top-color: var(--wxc-spinner--moving--color);
   animation: spin 1s infinite linear;
   -webkit-animation: spin 1s infinite linear;
 }

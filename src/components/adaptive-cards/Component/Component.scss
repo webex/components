@@ -61,12 +61,12 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-ac;
     font-weight: bold;
     font-size: 200%;
   }
-  &--default { background-color: var(--wxc-adaptive-cards--background-color--default); }
-  &--emphasis { background-color: var(--wxc-adaptive-cards--background-color--emphasis); }
-  &--good { background-color: var(--wxc-adaptive-cards--background-color--good); }
-  &--attention { background-color: var(--wxc-adaptive-cards--background-color--attention); }
-  &--warning { background-color: var(--wxc-adaptive-cards--background-color--warning); }
-  &--accent { background-color: var(--wxc-adaptive-cards--background-color--accent); }
+  &--default { background-color: var(--wxc-adaptive-cards--background--default); }
+  &--emphasis { background-color: var(--wxc-adaptive-cards--background--emphasis); }
+  &--good { background-color: var(--wxc-adaptive-cards--background--good); }
+  &--attention { background-color: var(--wxc-adaptive-cards--background--attention); }
+  &--warning { background-color: var(--wxc-adaptive-cards--background--warning); }
+  &--accent { background-color: var(--wxc-adaptive-cards--background--accent); }
 }
 
 .#{$C}-image-style--person { border-radius: 50%; }

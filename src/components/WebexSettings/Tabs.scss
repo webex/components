@@ -11,23 +11,25 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-tabs;
       button {
         @include focusable;
         background: var(--wxc-tab--normal--background);
-        border: none;
+        color: var(--wxc-tab--normal--color);
+        border: var(--wxc-tab--normal--border);
         cursor: pointer;
         font-family: $brand-font-bold;
         font-size: 0.875rem;
         line-height: 1.375rem;
         padding: 0.1875rem 1rem;
-        color: var(--wxc-tab--normal--color);
         border-radius: 0.875rem;
 
         &:hover {
           color: var(--wxc-tab--hover--color);
           background: var(--wxc-tab--hover--background);
+          border: var(--wxc-tab--hover--border);
         }
 
         &:active {
           color: var(--wxc-tab--active--color);
           background: var(--wxc-tab--active--background);
+          border: var(--wxc-tab--active--border);
         }
       }
 

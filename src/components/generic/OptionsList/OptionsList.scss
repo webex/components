@@ -1,11 +1,11 @@
 $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-options-list;
 
 .#{$C} {
-  border: var(--wxc-options-list--normal--border);
   border-radius: 0.75rem;
-  box-shadow: var(--wxc-box-shadow);
+  box-shadow: var(--wxc-options-list--normal--box-shadow);
   background: var(--wxc-options-list--normal--background);
-  color: var(--wxc-text-color);
+  color: var(--wxc-options-list--normal--color);
+  border: var(--wxc-options-list--normal--border);
   padding: 0.5rem;
 
   .#{$C}__list {
@@ -31,7 +31,9 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-options-list;
       }
 
       .#{$C}__check {
-        color: var(--wxc-options-list-item--selected--color);
+        background: var(--wxc-options-list--item--selected--background);
+        color: var(--wxc-options-list--item--selected--color);
+        border: var(--wxc-options-list--item--selected--border);
         margin-left: 0.25rem;
 
         &--invisible {
@@ -40,16 +42,20 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-options-list;
       }
 
       &:hover {
-        background: var(--wxc-options-list-item--focused--background);
+        background: var(--wxc-options-list--item--hover--background);
+        color: var(--wxc-options-list--item--hover--color);
+        border: var(--wxc-options-list--item--hover--border);
       }
 
       &:active {
-        background: var(--wxc-options-list-item--active--background);
+        background: var(--wxc-options-list--item--active--background);
+        color: var(--wxc-options-list--item--active--color);
+        border: var(--wxc-options-list--item--active--border);
       }
 
       &:focus-visible {
-        outline: 2px solid rgba(100, 180, 250, 0.3);
-        box-shadow: var(--wxc-options-list-item--focus--box-shadow)
+        outline: var(--wxc-options-list--item--focus--outline);
+        box-shadow: var(--wxc-options-list--item--focus--box-shadow);
       }
     }
   }

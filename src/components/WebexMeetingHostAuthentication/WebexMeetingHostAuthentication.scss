@@ -20,7 +20,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-host-authentication;
   }
 
   .#{$C}__logo {
-    background: var(--wxc-auth-logo) no-repeat center;
+    background: var(--wxc-auth-logo--url) no-repeat center;
     width: 3.689rem;
     height: 2.625rem;
     margin-bottom: 1.25rem;
