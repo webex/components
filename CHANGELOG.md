@@ -1,3 +1,10 @@
+## [1.231.1](https://github.com/webex/components/compare/v1.231.0...v1.231.1) (2022-01-20)
+
+
+### Bug Fixes
+
+* **themes:** standardize naming of scss variables ([29ab3f3](https://github.com/webex/components/commit/29ab3f301213a0ab2ba439873e366de2a58685f8))
+
 # [1.231.0](https://github.com/webex/components/compare/v1.230.1...v1.231.0) (2022-01-20)
 
 
