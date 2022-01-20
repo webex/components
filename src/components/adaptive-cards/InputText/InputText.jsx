@@ -16,13 +16,18 @@ import InputField from '../../generic/InputField/InputField';
  * @returns {object} JSX of the component
  */
 export default function InputText({data, className, style}) {
-  const {setValue, getValue, setInput} = useContext(AdaptiveCardContext);
+  const {
+    setValue,
+    getValue,
+    setInput,
+    getError,
+  } = useContext(AdaptiveCardContext);
   const [cssClasses] = webexComponentClasses('adaptive-cards-input-text', className);
 
   useEffect(() => {
     setInput({
       id: data.id,
-      value: data.value,
+      value: data.value || '',
       isRequired: data.isRequired,
       errorMessage: data.errorMessage,
       maxLength: data.maxLength,
@@ -47,7 +52,7 @@ export default function InputText({data, className, style}) {
       pattern={data.regex}
       type={data.style}
       value={getValue(data.id)}
-      error={data.errorMessage}
+      error={getError(data.id)}
       required={data.isRequired}
       label={data.label}
       onChange={(value) => setValue(data.id, value)}

@@ -8,11 +8,13 @@ const containerTypes = {};
 export const acPropTypes = {
   action: 'action',
   actionStyle: 'action-style',
+  associatedInputs: 'associated-inputs',
   backgroundImage: 'background-image',
   bleed: 'bleed',
   children: 'children',
   color: 'color',
   containerStyle: 'container-style',
+  data: 'data',
   defaultImageSize: 'default-image-size',
   errorMessage: 'error-message',
   fontType: 'font-type',
@@ -123,7 +125,9 @@ export default function Component({
         console.log('[Component]', 'Unknown property', prop);
         break;
       case acPropTypes.action:
+      case acPropTypes.associatedInputs:
       case acPropTypes.children:
+      case acPropTypes.data:
       case acPropTypes.defaultImageSize:
       case acPropTypes.errorMessage:
       case acPropTypes.iconUrl:
