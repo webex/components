@@ -18,7 +18,9 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-option;
   }
 
   .#{$C}__check {
-    color: var(--wxc-options-list-item--selected--color);
+    background: var(--wxc-options-list--item--selected--background);
+    color: var(--wxc-options-list--item--selected--color);
+    border: var(--wxc-options-list--item--selected--border);
     margin-left: 0.25rem;
 
     &--invisible {
@@ -27,16 +29,20 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-option;
   }
 
   &:hover {
-    background: var(--wxc-options-list-item--focused--background);
+    background: var(--wxc-options-list--item--hover--background);
+    color: var(--wxc-options-list--item--hover--color);
+    border: var(--wxc-options-list--item--hover--border);
   }
 
   &:active {
-    background: var(--wxc-options-list-item--active--background);
+    background: var(--wxc-options-list--item--active--background);
+    color: var(--wxc-options-list--item--active--color);
+    border: var(--wxc-options-list--item--active--border);
   }
 
   &:focus-visible {
-    outline: var(--wxc-options-list-item--focus--outline);
-    box-shadow: var(--wxc-options-list-item--focus--box-shadow);
+    outline: var(--wxc-options-list--item--focus--outline);
+    box-shadow: var(--wxc-options-list--item--focus--box-shadow);
   }
 }
 

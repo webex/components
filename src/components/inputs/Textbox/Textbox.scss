@@ -2,10 +2,11 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-textbox;
 
 .#{$C} {
   &__control {
-    background: var(--wxc-input--normal--background);
-    border: var(--wcx-input--normal--border);
+    background: var(--wxc-input-field--normal--background);
+    color: var(--wxc-input-field--normal--color);
+    border: var(--wxc-input-field--normal--border);
+    box-shadow: var(--wxc-input-field--normal--box-shadow);
     border-radius: 0.5rem;
-    color: var(--wxc-input--normal--color);
     line-height: 1.5;
     font-family: #{$brand-font-regular};
     font-size: 0.875rem;
@@ -13,24 +14,30 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-textbox;
     text-align: left;
 
     &:hover {
-      background: var(--wxc-input--hover--background);
+      background: var(--wxc-input-field--hover--background);
+      color: var(--wxc-input-field--hover--color);
+      border: var(--wxc-input-field--hover--border);
+      box-shadow: var(--wxc-input-field--hover--box-shadow);
     }
 
     &:active {
-      background: var(--wxc-input--active--background);
-      border: var(--wxc-input--active--border);
+      background: var(--wxc-input-field--active--background);
+      color: var(--wxc-input-field--active--color);
+      border: var(--wxc-input-field--active--border);
+      box-shadow: var(--wxc-input-field--active--box-shadow);
     }
 
     &:focus {
-      background: var(--wxc-input--focus--background);
-      border: var(--wxc-input--focus--border);
-      color: var(--wxc-input--focus--color);
+      background: var(--wxc-input-field--focus--background);
+      color: var(--wxc-input-field--focus--color);
+      border: var(--wxc-input-field--focus--border);
+      box-shadow: var(--wxc-input-field--focus--box-shadow);
     }
 
     &:disabled {
-      background: var(--wxc-input--disabled--background);
-      border: var(--wxc-input--disabled--border);
-      color: var(--wxc-input--disabled--color);
+      background: var(--wxc-input-field--disabled--background);
+      border: var(--wxc-input-field--disabled--border);
+      color: var(--wxc-input-field--disabled--color);
     }
   }
 }

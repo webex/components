@@ -40,15 +40,22 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-select;
     .#{$C}__selected-option {
       background: var(--wxc-select--normal--background);
       border: var(--wcx-select--normal--border);
+      box-shadow: var(--wxc-select--normal--box-shadow);
       color: var(--wxc-select--normal--color);
       cursor: pointer;
 
       &:hover {
         background: var(--wxc-select--hover--background);
+        border: var(--wcx-select--hover--border);
+        box-shadow: var(--wxc-select--hover--box-shadow);
+        color: var(--wxc-select--hover--color);
       }
 
       &:active {
         background: var(--wxc-select--active--background);
+        border: var(--wxc-select--active--border);
+        box-shadow: var(--wxc-select--active--box-shadow);
+        color: var(--wxc-select--active--color);
       }
 
       &:focus {

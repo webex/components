@@ -12,18 +12,16 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field;
   .#{$C}__input {
     font-size: 1rem;
     line-height: 1.5rem;
-    background: var(--wxc-input--normal--background);
-    border: var(--wcx-input--normal--border);
-    color: var(--wxc-input--normal--color);
+    background: var(--wxc-input-field--normal--background);
+    border: var(--wxc-input-field--normal--border);
+    color: var(--wxc-input-field--normal--color);
     border-radius: 0.5rem;
     padding: 0.1875rem 2.18rem 0.1875rem 0.75rem;
     cursor: pointer;
     width: 100%;
     box-sizing: border-box;
 
-
     &[type="number"] {
-      padding: 0.25rem 3.85rem 0.125rem 0.75rem;
       -moz-appearance: textfield;
 
       &::-webkit-inner-spin-button,
@@ -44,51 +42,51 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field;
     }
 
     &:hover {
-      background: var(--wxc-input--hover--background);
+      background: var(--wxc-input-field--hover--background);
     }
 
     &:active {
-      background: var(--wxc-input--active--background);
-      border: var(--wxc-input--active--border);
-      box-shadow: var(--wxc-input--active--box-shadow);
+      background: var(--wxc-input-field--active--background);
+      border: var(--wxc-input-field--active--border);
+      box-shadow: var(--wxc-input-field--active--box-shadow);
     }
 
     &:focus {
-      background: var(--wxc-input--focus--background);
-      border: var(--wxc-input--focus--border);
-      color: var(--wxc-input--focus--color);
-      box-shadow: var(--wxc-input--focus--box-shadow);
+      background: var(--wxc-input-field--focus--background);
+      border: var(--wxc-input-field--focus--border);
+      color: var(--wxc-input-field--focus--color);
+      box-shadow: var(--wxc-input-field--focus--box-shadow);
     }
 
     &:disabled {
-      background: var(--wxc-input--disabled--background);
-      border: var(--wxc-input--disabled--border);
-      color: var(--wxc-input--disabled--color);
+      background: var(--wxc-input-field--disabled--background);
+      border: var(--wxc-input-field--disabled--border);
+      color: var(--wxc-input-field--disabled--color);
     }
   }
 
   &--error {
     .#{$C}__input {
-      background: var(--wxc-error-input--normal--background);
-      border: var(--wxc-error-input--normal--border);
+      background: var(--wxc-error-input-field--normal--background);
+      border: var(--wxc-error-input-field--normal--border);
       box-shadow: none;
       color: var(--wxc-text-color);
 
       &:hover {
-        background: var(--wxc-input--hover--background);
-        border: var(--wxc-error-input--normal--border);
+        background: var(--wxc-input-field--hover--background);
+        border: var(--wxc-error-input-field--normal--border);
         box-shadow: none;
       }
 
       &:active {
-        background: var(--wxc-input--active--background);
-        border: var(--wxc-error-input--normal--border);
+        background: var(--wxc-input-field--active--background);
+        border: var(--wxc-error-input-field--normal--border);
         box-shadow: none;
       }
 
       &:focus {
-        background: var(--wxc-input--focus--background);
-        border: var(--wxc-error-input--normal--border);
+        background: var(--wxc-input-field--focus--background);
+        border: var(--wxc-error-input-field--normal--border);
         box-shadow: none;
       }
     }
@@ -114,7 +112,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field;
     position: absolute;
     display: flex;
     flex-direction: column;
-    border-left: var(--wcx-input--normal--border);
+    border-left: var(--wxc-input-field--normal--border);
     right: 0.0625rem;
     top: 50%;
     transform: translateY(-50%);
@@ -136,22 +134,24 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field;
     flex-basis: 50%;
 
     &:active {
-      background: var(--wxc-input--active--background);
-      border: var(--wxc-input--active--border);
-      box-shadow: var(--wxc-input--active--box-shadow);
+      background: var(--wxc-input-field--active--background);
+      border: var(--wxc-input-field--active--border);
+      color: var(--wxc-input-field--active--color);
+      box-shadow: var(--wxc-input-field--active--box-shadow);
     }
 
     &:focus {
-      background: var(--wxc-input--focus--background);
-      border: var(--wxc-input--focus--border);
-      color: var(--wxc-input--focus--color);
-      box-shadow: var(--wxc-input--focus--box-shadow);
+      background: var(--wxc-input-field--focus--background);
+      border: var(--wxc-input-field--focus--border);
+      color: var(--wxc-input-field--focus--color);
+      box-shadow: var(--wxc-input-field--focus--box-shadow);
     }
 
     &:disabled {
-      background: var(--wxc-input--disabled--background);
-      border: var(--wxc-input--disabled--border);
-      color: var(--wxc-input--disabled--color);
+      background: var(--wxc-input-field--disabled--background);
+      border: var(--wxc-input-field--disabled--border);
+      color: var(--wxc-input-field--disabled--color);
+      box-shadow: var(--wxc-input-field--disabled--box-shadow);
     }
   }
 }
