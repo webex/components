@@ -1,3 +1,17 @@
+# [1.231.0](https://github.com/webex/components/compare/v1.230.1...v1.231.0) (2022-01-20)
+
+
+### Bug Fixes
+
+* **ActivityHeader:** make avatar smaller in Activity ([03d30c1](https://github.com/webex/components/commit/03d30c12548cc7da5eef56fab909992de6044e1f))
+* **InputField:** prevent clear button overlapping inserted number ([335891e](https://github.com/webex/components/commit/335891ed5fbcc547b6a4fb63aa727a21a3022485))
+
+
+### Features
+
+* **AdaptiveCardContext:** implement input data management ([adddaef](https://github.com/webex/components/commit/adddaeff10088e29ecfda7001c10eed7d2a3c7c8))
+* **AdaptiveCardsActionShowCard:** create Action.ShowCard component ([38cfca9](https://github.com/webex/components/commit/38cfca92dc541d95a26bf760aedcb45af8fe015b))
+
 ## [1.230.1](https://github.com/webex/components/compare/v1.230.0...v1.230.1) (2022-01-17)
 
 
