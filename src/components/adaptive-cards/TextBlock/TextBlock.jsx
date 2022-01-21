@@ -36,6 +36,7 @@ TextBlock.defaultProps = {
 
 TextBlock.acPropTypes = {
   color: acPropTypes.color,
+  fallback: acPropTypes.fallback,
   fontType: acPropTypes.fontType,
   height: acPropTypes.height,
   horizontalAlignment: acPropTypes.horizontalAlignment,

@@ -42,6 +42,7 @@ Image.defaultProps = {
 };
 
 Image.acPropTypes = {
+  fallback: acPropTypes.fallback,
   height: acPropTypes.height,
   horizontalAlignment: acPropTypes.horizontalAlignment,
   id: acPropTypes.id,

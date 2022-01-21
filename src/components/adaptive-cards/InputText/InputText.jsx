@@ -68,6 +68,7 @@ InputText.defaultProps = {
 
 InputText.acPropTypes = {
   errorMessage: acPropTypes.errorMessage,
+  fallback: acPropTypes.fallback,
   height: acPropTypes.height,
   id: acPropTypes.id,
   isRequired: acPropTypes.isRequired,

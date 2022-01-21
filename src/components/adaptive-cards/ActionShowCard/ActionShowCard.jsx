@@ -48,6 +48,7 @@ ActionShowCard.defaultProps = {
 };
 
 ActionShowCard.acPropTypes = {
+  fallback: acPropTypes.fallback,
   iconUrl: acPropTypes.iconUrl,
   id: acPropTypes.id,
   isEnable: acPropTypes.isEnabled,

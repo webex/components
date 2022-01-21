@@ -51,6 +51,7 @@ ActionSet.defaultProps = {
 
 ActionSet.acPropTypes = {
   actions: acPropTypes.children,
+  fallback: acPropTypes.fallback,
   height: acPropTypes.height,
   id: acPropTypes.id,
   isVisible: acPropTypes.isVisible,
