@@ -1,3 +1,10 @@
+# [1.232.0](https://github.com/webex/components/compare/v1.231.1...v1.232.0) (2022-01-21)
+
+
+### Features
+
+* **AdaptiveCardsInputChoiceSet:** create InputChoiceSet component ([370e1e8](https://github.com/webex/components/commit/370e1e892bb47d40ab8b9b3941bf50eb7437b19a))
+
 ## [1.231.1](https://github.com/webex/components/compare/v1.231.0...v1.231.1) (2022-01-20)
 
 
