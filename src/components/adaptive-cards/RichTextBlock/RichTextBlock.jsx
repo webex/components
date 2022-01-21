@@ -41,6 +41,7 @@ RichTextBlock.defaultProps = {
 };
 
 RichTextBlock.acPropTypes = {
+  fallback: acPropTypes.fallback,
   horizontalAlignment: acPropTypes.horizontalAlignment,
   id: acPropTypes.id,
   inlines: acPropTypes.children,

@@ -39,6 +39,7 @@ ImageSet.defaultProps = {
 };
 
 ImageSet.acPropTypes = {
+  fallback: acPropTypes.fallback,
   height: acPropTypes.height,
   images: acPropTypes.children,
   id: acPropTypes.id,

@@ -43,6 +43,7 @@ FactSet.defaultProps = {
 
 FactSet.acPropTypes = {
   facts: acPropTypes.children,
+  fallback: acPropTypes.fallback,
   id: acPropTypes.id,
   isVisible: acPropTypes.isVisible,
   separator: acPropTypes.separator,

@@ -14,6 +14,7 @@ export const acPropTypes = {
   containerStyle: 'container-style',
   defaultImageSize: 'default-image-size',
   errorMessage: 'error-message',
+  fallback: 'fallback',
   fontType: 'font-type',
   height: 'height',
   highlight: 'highlight',
@@ -106,7 +107,8 @@ export default function Component({
   data, className, style: styleProp, ...otherProps
 }) {
   const [cssClasses] = webexComponentClasses('ac', className);
-  const C = componentTypes[data.type] || UnknownComponent;
+  const fallback = data.fallback !== 'drop' && componentTypes[data.fallback];
+  const C = componentTypes[data.type] || fallback || UnknownComponent;
   const classes = [];
   const getClass = (propType, value) => (value ? `wxc-ac-${propType}--${String(value).toLowerCase()}` : '');
   const style = {};
@@ -124,6 +126,7 @@ export default function Component({
       case acPropTypes.children:
       case acPropTypes.defaultImageSize:
       case acPropTypes.errorMessage:
+      case acPropTypes.fallback:
       case acPropTypes.iconUrl:
       case acPropTypes.id:
       case acPropTypes.label:

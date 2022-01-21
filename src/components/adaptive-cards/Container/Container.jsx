@@ -40,6 +40,7 @@ Container.defaultProps = {
 Container.acPropTypes = {
   backgroundImage: acPropTypes.backgroundImage,
   bleed: acPropTypes.bleed,
+  fallback: acPropTypes.fallback,
   height: acPropTypes.height,
   id: acPropTypes.id,
   isVisible: acPropTypes.isVisible,
