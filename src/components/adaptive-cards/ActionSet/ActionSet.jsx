@@ -60,4 +60,8 @@ ActionSet.acPropTypes = {
   type: acPropTypes.type,
 };
 
+ActionSet.acDefaultProps = {
+  isVisible: true,
+};
+
 registerComponent('ActionSet', ActionSet, 'horizontal');

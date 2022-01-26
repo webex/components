@@ -1912,6 +1912,103 @@ const exampleActionShowCard = {
   ],
 };
 
+const exampleActionToggleVisibility = {
+  type: 'AdaptiveCard',
+  version: '1.2',
+  body: [
+    {
+      type: 'TextBlock',
+      text: 'Press the buttons to toggle the images!',
+      wrap: true,
+    },
+    {
+      type: 'TextBlock',
+      text: 'Here are some images:',
+      isVisible: false,
+      id: 'textToToggle',
+    },
+    {
+      type: 'ColumnSet',
+      columns: [
+        {
+          type: 'Column',
+          items: [
+            {
+              style: 'person',
+              type: 'Image',
+              url: 'https://picsum.photos/100/100?image=112',
+              isVisible: false,
+              id: 'imageToToggle',
+              altText: 'sample image 1',
+              size: 'medium',
+            },
+          ],
+        },
+        {
+          type: 'Column',
+          items: [
+            {
+              type: 'Image',
+              url: 'https://picsum.photos/100/100?image=123',
+              isVisible: false,
+              id: 'imageToToggle2',
+              altText: 'sample image 2',
+              size: 'medium',
+            },
+          ],
+        },
+      ],
+    },
+  ],
+  actions: [
+    {
+      type: 'Action.ToggleVisibility',
+      title: 'Toggle!',
+      targetElements: [
+        'textToToggle',
+        'imageToToggle',
+        'imageToToggle2',
+      ],
+    },
+    {
+      type: 'Action.ToggleVisibility',
+      title: 'Show!',
+      targetElements: [
+        {
+          elementId: 'textToToggle',
+          isVisible: true,
+        },
+        {
+          elementId: 'imageToToggle',
+          isVisible: true,
+        },
+        {
+          elementId: 'imageToToggle2',
+          isVisible: true,
+        },
+      ],
+    },
+    {
+      type: 'Action.ToggleVisibility',
+      title: 'Hide!',
+      targetElements: [
+        {
+          elementId: 'textToToggle',
+          isVisible: false,
+        },
+        {
+          elementId: 'imageToToggle',
+          isVisible: false,
+        },
+        {
+          elementId: 'imageToToggle2',
+          isVisible: false,
+        },
+      ],
+    },
+  ],
+};
+
 const exampleInputChoiceSet = {
   $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
   type: 'AdaptiveCard',
@@ -2114,6 +2211,11 @@ ActionOpenURL.args = {
 export const ActionShowCard = Template.bind({});
 ActionShowCard.args = {
   template: exampleActionShowCard,
+};
+
+export const ActionToggleVisibility = Template.bind({});
+ActionToggleVisibility.args = {
+  template: exampleActionToggleVisibility,
 };
 
 export const InputChoiceSet = Template.bind({});

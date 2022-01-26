@@ -7,17 +7,17 @@ Array [
     style={Object {}}
   >
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
     >
       The action of these cards will open a URL
     </div>
     <div
-      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac  wxc-button--primary"
+        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac wxc-ac-action-style--default wxc-ac-title--open url wxc-button--primary"
         disabled={false}
         onClick={[Function]}
         style={
@@ -34,7 +34,7 @@ Array [
       
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac  wxc-button--join"
+        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac wxc-ac-action-style--positive wxc-ac-title--action.openurl wxc-button--join"
         disabled={false}
         onClick={[Function]}
         style={
@@ -56,7 +56,7 @@ Array [
       
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac  wxc-button--cancel"
+        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac wxc-ac-action-style--destructive wxc-ac-title--open url wxc-button--cancel"
         disabled={false}
         onClick={[Function]}
         style={
@@ -73,7 +73,7 @@ Array [
       
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac  wxc-ac-action--disabled wxc-button--primary"
+        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac wxc-ac-action-style--default wxc-ac-title--open url  wxc-ac-action--disabled wxc-button--primary"
         disabled={true}
         onClick={[Function]}
         style={
@@ -121,12 +121,12 @@ Array [
     style={Object {}}
   >
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-wrap--true"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
     >
       Cards can have action sets in the middle of their body.
     </div>
     <div
-      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <button
@@ -160,7 +160,7 @@ Array [
       
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac  wxc-button--primary"
+        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac wxc-ac-action-style--default wxc-ac-title--openurl wxc-button--primary"
         disabled={false}
         onClick={[Function]}
         style={
@@ -178,12 +178,12 @@ Array [
     </div>
     <div />
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-wrap--true"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
     >
       There are also still actions's at the bottom of the card
     </div>
     <div
-      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <button
@@ -217,7 +217,7 @@ Array [
       
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac  wxc-button--primary"
+        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac wxc-ac-action-style--default wxc-ac-title--openurl wxc-button--primary"
         disabled={false}
         onClick={[Function]}
         style={
@@ -265,12 +265,12 @@ Array [
     style={Object {}}
   >
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
     >
       This card's action will show another card
     </div>
     <div
-      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <button
@@ -357,6 +357,140 @@ Array [
 ]
 `;
 
+exports[`Storyshots Messaging/AdaptiveCard Action Toggle Visibility 1`] = `
+Array [
+  <div
+    className="wxc-adaptive-card wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
+    style={Object {}}
+  >
+    <div
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
+    >
+      Press the buttons to toggle the images!
+    </div>
+    <div
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--false"
+    >
+      Here are some images:
+    </div>
+    <div
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
+      style={Object {}}
+    >
+      <div
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        style={Object {}}
+      >
+        <img
+          alt="sample image 1"
+          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--false wxc-ac-image-size--medium wxc-ac-image-style--person"
+          src="https://picsum.photos/100/100?image=112"
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "width": undefined,
+            }
+          }
+        />
+      </div>
+      <div
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        style={Object {}}
+      >
+        <img
+          alt="sample image 2"
+          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--false wxc-ac-image-size--medium"
+          src="https://picsum.photos/100/100?image=123"
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "width": undefined,
+            }
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
+      style={Object {}}
+    >
+      <button
+        autoFocus={false}
+        className="wxc-button wxc-ac-action wxc-ac-action-toggle-visibility wxc-ac wxc-ac-action-style--default wxc-ac-title--toggle! wxc-button--primary"
+        disabled={false}
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 32,
+          }
+        }
+        type="button"
+      >
+        <span>
+          Toggle!
+        </span>
+      </button>
+      
+      <button
+        autoFocus={false}
+        className="wxc-button wxc-ac-action wxc-ac-action-toggle-visibility wxc-ac wxc-ac-action-style--default wxc-ac-title--show! wxc-button--primary"
+        disabled={false}
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 32,
+          }
+        }
+        type="button"
+      >
+        <span>
+          Show!
+        </span>
+      </button>
+      
+      <button
+        autoFocus={false}
+        className="wxc-button wxc-ac-action wxc-ac-action-toggle-visibility wxc-ac wxc-ac-action-style--default wxc-ac-title--hide! wxc-button--primary"
+        disabled={false}
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 32,
+          }
+        }
+        type="button"
+      >
+        <span>
+          Hide!
+        </span>
+      </button>
+      
+    </div>
+    <div />
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
 exports[`Storyshots Messaging/AdaptiveCard Card 1`] = `
 Array [
   <div
@@ -364,15 +498,15 @@ Array [
     style={Object {}}
   >
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-container--vertical"
         style={Object {}}
       >
         <img
-          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--medium wxc-ac-image-style--person"
+          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--medium wxc-ac-image-style--person"
           src="https://developer.webex.com/images/webex-teams-logo.png"
           style={
             Object {
@@ -384,27 +518,27 @@ Array [
         />
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-width--stretch wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-weight--lighter wxc-ac-color--accent"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--lighter wxc-ac-color--accent"
         >
           Cisco Webex Teams
         </div>
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-weight--bolder wxc-ac-wrap--true wxc-ac-color--light wxc-ac-size--large wxc-ac-spacing--small"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--bolder wxc-ac-wrap--true wxc-ac-color--light wxc-ac-size--large wxc-ac-spacing--small"
         >
           Buttons and Cards Release
         </div>
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-spacing--padding wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-is-visible--true wxc-ac-spacing--padding wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
         style={
           Object {
             "flex": 35,
@@ -412,23 +546,23 @@ Array [
         }
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--light"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--light"
         >
           Release Date:
         </div>
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-weight--lighter wxc-ac-color--light wxc-ac-spacing--small"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--lighter wxc-ac-color--light wxc-ac-spacing--small"
         >
           Product:
         </div>
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-weight--lighter wxc-ac-color--light wxc-ac-spacing--small"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--lighter wxc-ac-color--light wxc-ac-spacing--small"
         >
           OS:
         </div>
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
         style={
           Object {
             "flex": 65,
@@ -436,43 +570,43 @@ Array [
         }
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--light"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--light"
         >
           Aug 6, 2019
         </div>
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--light wxc-ac-weight--lighter wxc-ac-spacing--small"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--light wxc-ac-weight--lighter wxc-ac-spacing--small"
         >
           Webex Teams
         </div>
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-weight--lighter wxc-ac-color--light wxc-ac-spacing--small"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--lighter wxc-ac-color--light wxc-ac-spacing--small"
         >
           Mac, Windows, Web
         </div>
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-wrap--true"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
     >
       We're making it easier for you to interact with bots and integrations in Webex Teams. When your bot sends information in a space that includes a card with buttons, you can now easily interact with it.
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
     >
       Buttons and Cards Resources:
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-spacing--small wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-spacing--small wxc-ac-container--vertical"
         style={Object {}}
       >
         <img
           alt=""
-          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--small"
+          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--small"
           src="https://developer.webex.com/images/link-icon.png"
           style={
             Object {
@@ -483,18 +617,18 @@ Array [
         />
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--center wxc-ac-width--auto wxc-ac-spacing--small wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--center wxc-ac-width--auto wxc-ac-spacing--small wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-size--medium"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-size--medium"
         >
           [Developer Portal Buttons and Cards Guide]()
         </div>
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-spacing--none wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-is-visible--true wxc-ac-spacing--none wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div>
@@ -546,20 +680,20 @@ Array [
     style={Object {}}
   >
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           Column 1
         </div>
         <img
-          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--medium"
+          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--medium"
           src="https://adaptivecards.io/content/cats/1.png"
           style={
             Object {
@@ -570,16 +704,16 @@ Array [
         />
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           Column 2
         </div>
         <img
-          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--medium"
+          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--medium"
           src="https://adaptivecards.io/content/cats/1.png"
           style={
             Object {
@@ -590,16 +724,16 @@ Array [
         />
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           Column 3
         </div>
         <img
-          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--medium"
+          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--medium"
           src="https://adaptivecards.io/content/cats/1.png"
           style={
             Object {
@@ -611,11 +745,11 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-container--vertical"
         style={
           Object {
             "backgroundImage": "url(https://adaptivecards.io/content/AlkiBeach.jpg)",
@@ -624,7 +758,7 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top   wxc-ac-background-image-vertical-alignment--center wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top   wxc-ac-background-image-vertical-alignment--center wxc-ac-width--stretch wxc-ac-container--vertical"
         style={
           Object {
             "backgroundImage": "url(https://adaptivecards.io/content/GoldenGardensPark.jpg)",
@@ -633,7 +767,7 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-container--vertical"
         style={
           Object {
             "backgroundImage": "url(https://adaptivecards.io/content/BainbridgeIsland.jpg)",
@@ -643,16 +777,16 @@ Array [
       />
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
     >
       You can even repeat the background image...
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeat   wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeat   wxc-ac-width--stretch wxc-ac-container--vertical"
         style={
           Object {
             "backgroundImage": "url(https://adaptivecards.io/content/uparrow.png)",
@@ -661,27 +795,27 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--center wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--center wxc-ac-width--stretch wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-wrap--true"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-is-visible--true wxc-ac-wrap--true"
         >
           Those are some neat arrows
         </div>
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
     >
       Horizontal repeat...
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeathorizontally   wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeathorizontally   wxc-ac-width--stretch wxc-ac-container--vertical"
         style={
           Object {
             "backgroundImage": "url(https://adaptivecards.io/content/downarrow.png)",
@@ -690,7 +824,7 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeathorizontally  wxc-ac-background-image-vertical-alignment--center wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeathorizontally  wxc-ac-background-image-vertical-alignment--center wxc-ac-width--stretch wxc-ac-container--vertical"
         style={
           Object {
             "backgroundImage": "url(https://adaptivecards.io/content/uparrow.png)",
@@ -699,7 +833,7 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeathorizontally  wxc-ac-background-image-vertical-alignment--bottom wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeathorizontally  wxc-ac-background-image-vertical-alignment--bottom wxc-ac-width--stretch wxc-ac-container--vertical"
         style={
           Object {
             "backgroundImage": "url(https://adaptivecards.io/content/uparrow.png)",
@@ -709,16 +843,16 @@ Array [
       />
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
     >
       Vertical repeat...
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeatvertically   wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeatvertically   wxc-ac-width--stretch wxc-ac-container--vertical"
         style={
           Object {
             "backgroundImage": "url(https://adaptivecards.io/content/uparrow.png)",
@@ -727,7 +861,7 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeatvertically wxc-ac-background-image-horizontal-alignment--center  wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeatvertically wxc-ac-background-image-horizontal-alignment--center  wxc-ac-width--stretch wxc-ac-container--vertical"
         style={
           Object {
             "backgroundImage": "url(https://adaptivecards.io/content/downarrow.png)",
@@ -736,7 +870,7 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeatvertically wxc-ac-background-image-horizontal-alignment--right  wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeatvertically wxc-ac-background-image-horizontal-alignment--right  wxc-ac-width--stretch wxc-ac-container--vertical"
         style={
           Object {
             "backgroundImage": "url(https://adaptivecards.io/content/uparrow.png)",
@@ -746,171 +880,171 @@ Array [
       />
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
     >
       Bleed left
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--good wxc-ac-container--has-padding wxc-ac-bleed--true wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--good wxc-ac-container--has-padding wxc-ac-bleed--true wxc-ac-width--stretch wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           Column 1
         </div>
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--attention wxc-ac-container--has-padding wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--attention wxc-ac-container--has-padding wxc-ac-width--stretch wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           Column 2
         </div>
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--warning wxc-ac-container--has-padding wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--warning wxc-ac-container--has-padding wxc-ac-width--stretch wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           Column 3
         </div>
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
     >
       Bleed center
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--good wxc-ac-container--has-padding wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--good wxc-ac-container--has-padding wxc-ac-width--stretch wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           Column 1
         </div>
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--attention wxc-ac-container--has-padding wxc-ac-bleed--true wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--attention wxc-ac-container--has-padding wxc-ac-bleed--true wxc-ac-width--stretch wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           Column 2
         </div>
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--warning wxc-ac-container--has-padding wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--warning wxc-ac-container--has-padding wxc-ac-width--stretch wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           Column 3
         </div>
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
     >
       Bleed right
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--good wxc-ac-container--has-padding wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--good wxc-ac-container--has-padding wxc-ac-width--stretch wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           Column 1
         </div>
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--attention wxc-ac-container--has-padding wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--attention wxc-ac-container--has-padding wxc-ac-width--stretch wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           Column 2
         </div>
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--warning wxc-ac-container--has-padding wxc-ac-bleed--true wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--warning wxc-ac-container--has-padding wxc-ac-bleed--true wxc-ac-width--stretch wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           Column 3
         </div>
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
     >
       Bleed all
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--good wxc-ac-container--has-padding wxc-ac-bleed--true wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--good wxc-ac-container--has-padding wxc-ac-bleed--true wxc-ac-width--stretch wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           Column 1
         </div>
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--attention wxc-ac-container--has-padding wxc-ac-bleed--true wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--attention wxc-ac-container--has-padding wxc-ac-bleed--true wxc-ac-width--stretch wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           Column 2
         </div>
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--warning wxc-ac-container--has-padding wxc-ac-bleed--true wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--warning wxc-ac-container--has-padding wxc-ac-bleed--true wxc-ac-width--stretch wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           Column 3
         </div>
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-container--vertical"
         style={Object {}}
       >
         <div>
@@ -927,7 +1061,7 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
         style={Object {}}
       >
         <div>
@@ -944,18 +1078,18 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-wrap--true"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
         >
           This is a column
         </div>
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--horizontal"
       style={
         Object {
           "minHeight": "100px",
@@ -963,7 +1097,7 @@ Array [
       }
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--default wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--default wxc-ac-container--vertical"
         style={
           Object {
             "minHeight": "200px",
@@ -971,13 +1105,13 @@ Array [
         }
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-wrap--true"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
         >
           The columnset has a minHeight of 100px while this column has a minHeight of 200px so it should override
         </div>
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--default wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--default wxc-ac-container--vertical"
         style={
           Object {
             "minHeight": "50px",
@@ -985,7 +1119,7 @@ Array [
         }
       >
         <div
-          className="wxc-adaptive-cards-fact-set wxc-ac "
+          className="wxc-adaptive-cards-fact-set wxc-ac wxc-ac-is-visible--true"
         >
           <table>
             <tbody>
@@ -1025,59 +1159,59 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-wrap--true wxc-ac-size--medium"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true wxc-ac-size--medium"
     >
       The middle column is set to rtl
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-spacing--medium wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-spacing--medium wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-wrap--true"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
         >
           Column One
         </div>
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-rtl--true wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-rtl--true wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-wrap--true"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
         >
           العمود الثاني
         </div>
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-wrap--true"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
         >
           Column three
         </div>
       </div>
     </div>
     <div
-      className="wxc-container wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+      className="wxc-container wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-container--horizontal"
+        className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-container--vertical"
+          className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-container--vertical"
           style={Object {}}
         >
           <img
-            className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--medium"
+            className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--medium"
             src="https://adaptivecards.io/content/cats/3.png"
             style={
               Object {
@@ -1087,37 +1221,37 @@ Array [
             }
           />
           <div
-            className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-weight--bolder"
+            className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-is-visible--true wxc-ac-weight--bolder"
           >
             SHADES
           </div>
         </div>
         <div
-          className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-width--stretch wxc-ac-separator--true wxc-ac-spacing--medium wxc-ac-container--vertical"
+          className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-width--stretch wxc-ac-separator--true wxc-ac-spacing--medium wxc-ac-container--vertical"
           style={Object {}}
         >
           <div
-            className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center"
+            className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-is-visible--true"
           >
             Dec 4
           </div>
           <div
-            className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-spacing--none"
+            className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-is-visible--true wxc-ac-spacing--none"
           >
             Final
           </div>
           <div
-            className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-size--extralarge"
+            className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-is-visible--true wxc-ac-size--extralarge"
           >
             7 - 40
           </div>
         </div>
         <div
-          className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-separator--true wxc-ac-spacing--medium wxc-ac-container--vertical"
+          className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-separator--true wxc-ac-spacing--medium wxc-ac-container--vertical"
           style={Object {}}
         >
           <img
-            className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-image-size--medium"
+            className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-is-visible--true wxc-ac-image-size--medium"
             src="https://adaptivecards.io/content/cats/2.png"
             style={
               Object {
@@ -1127,7 +1261,7 @@ Array [
             }
           />
           <div
-            className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-weight--bolder"
+            className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-is-visible--true wxc-ac-weight--bolder"
           >
             SKINS
           </div>
@@ -1135,25 +1269,25 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-weight--bolder"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--bolder"
     >
       Try clicking a column!
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           Column 1
         </div>
         <img
-          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--medium"
+          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--medium"
           src="https://adaptivecards.io/content/cats/1.png"
           style={
             Object {
@@ -1164,16 +1298,16 @@ Array [
         />
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           Column 2
         </div>
         <img
-          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--medium"
+          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--medium"
           src="https://adaptivecards.io/content/cats/1.png"
           style={
             Object {
@@ -1184,16 +1318,16 @@ Array [
         />
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           Column 3
         </div>
         <img
-          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--medium"
+          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--medium"
           src="https://adaptivecards.io/content/cats/1.png"
           style={
             Object {
@@ -1205,64 +1339,64 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           No Style
         </div>
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--default wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--default wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           Default Style
         </div>
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           Emphasis Style
         </div>
         <div
-          className="wxc-container wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+          className="wxc-container wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
           style={Object {}}
         >
           <div
-            className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+            className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
           >
             Container no style
           </div>
         </div>
         <div
-          className="wxc-container wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--default wxc-ac-container--vertical"
+          className="wxc-container wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--default wxc-ac-container--vertical"
           style={Object {}}
         >
           <div
-            className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+            className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
           >
             Container default style
           </div>
         </div>
         <div
-          className="wxc-container wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--vertical"
+          className="wxc-container wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--vertical"
           style={Object {}}
         >
           <div
-            className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+            className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
           >
             Container emphasis style
           </div>
@@ -1270,45 +1404,45 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
     >
       Hi,
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-subtle--true"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-is-subtle--true"
     >
       MasterHip
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-height--stretch wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-height--stretch wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--bottom wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--bottom wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           Column 1
         </div>
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           (auto)
         </div>
         <img
-          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--medium"
+          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--medium"
           src="https://adaptivecards.io/content/adaptive-card-50.png"
           style={
             Object {
@@ -1319,16 +1453,16 @@ Array [
         />
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-width--stretch wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-is-visible--true"
         >
           (stretch)
         </div>
         <img
-          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-image-size--medium"
+          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-is-visible--true wxc-ac-image-size--medium"
           src="https://adaptivecards.io/content/adaptive-card-50.png"
           style={
             Object {
@@ -1339,16 +1473,16 @@ Array [
         />
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           (auto)
         </div>
         <img
-          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--medium"
+          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--medium"
           src="https://adaptivecards.io/content/adaptive-card-50.png"
           style={
             Object {
@@ -1390,20 +1524,20 @@ Array [
     style={Object {}}
   >
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-weight--bolder"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--bolder"
     >
       Pick up where you left off?
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-spacing--medium wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-spacing--medium wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-container--vertical"
         style={Object {}}
       >
         <img
-          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--medium"
+          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--medium"
           src="https://unsplash.it/80?image=1083"
           style={
             Object {
@@ -1414,7 +1548,7 @@ Array [
         />
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
         style={
           Object {
             "flex": 4,
@@ -1422,27 +1556,27 @@ Array [
         }
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           Silver Star Mountain
         </div>
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-subtle--true wxc-ac-spacing--none"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-is-subtle--true wxc-ac-spacing--none"
         >
           Maps
         </div>
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-container--vertical"
         style={Object {}}
       >
         <img
-          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--medium"
+          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--medium"
           src="https://unsplash.it/80?image=1082"
           style={
             Object {
@@ -1453,7 +1587,7 @@ Array [
         />
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--vertical"
         style={
           Object {
             "flex": 4,
@@ -1461,27 +1595,27 @@ Array [
         }
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           Kitchen Remodel
         </div>
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-subtle--true wxc-ac-spacing--none"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-is-subtle--true wxc-ac-spacing--none"
         >
           With EMPHASIS
         </div>
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left  wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true  wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-container--vertical"
         style={Object {}}
       >
         <img
-          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--medium"
+          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--medium"
           src="https://unsplash.it/80?image=1080"
           style={
             Object {
@@ -1492,7 +1626,7 @@ Array [
         />
       </div>
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
         style={
           Object {
             "flex": 4,
@@ -1500,24 +1634,24 @@ Array [
         }
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
         >
           The Witcher
         </div>
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-subtle--true wxc-ac-spacing--none"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-is-subtle--true wxc-ac-spacing--none"
         >
           Netflix
         </div>
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac  wxc-button--primary"
+        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac wxc-ac-action-style--default wxc-ac-title--resume all wxc-button--primary"
         disabled={false}
         onClick={[Function]}
         style={
@@ -1534,7 +1668,7 @@ Array [
       
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac  wxc-button--primary"
+        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac wxc-ac-action-style--default wxc-ac-title--more activities wxc-button--primary"
         disabled={false}
         onClick={[Function]}
         style={
@@ -1582,7 +1716,7 @@ Array [
     style={Object {}}
   >
     <div
-      className="wxc-container wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+      className="wxc-container wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
       style={
         Object {
           "minHeight": "15rem",
@@ -1590,12 +1724,12 @@ Array [
       }
     >
       <div
-        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
       >
         This is some text
       </div>
       <img
-        className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--large"
+        className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--large"
         src="https://adaptivecards.io/content/cats/1.png"
         style={
           Object {
@@ -1606,167 +1740,167 @@ Array [
       />
     </div>
     <div
-      className="wxc-container wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--default wxc-ac-container--vertical"
+      className="wxc-container wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--default wxc-ac-container--vertical"
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
       >
         This container has the default style
       </div>
       <div
-        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--default"
+        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--default"
       >
         color: default
       </div>
       <div
-        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--accent"
+        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--accent"
       >
         color: accent
       </div>
       <div
-        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--good"
+        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--good"
       >
         color: good
       </div>
       <div
-        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--warning"
+        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--warning"
       >
         color: warning
       </div>
       <div
-        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--attention"
+        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--attention"
       >
         color: attention
       </div>
       <div
-        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--light"
+        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--light"
       >
         color: light
       </div>
       <div
-        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--dark"
+        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--dark"
       >
         color: dark
       </div>
     </div>
     <div
-      className="wxc-container wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--accent wxc-ac-container--has-padding wxc-ac-container--vertical"
+      className="wxc-container wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--accent wxc-ac-container--has-padding wxc-ac-container--vertical"
       style={Object {}}
     >
       <div
-        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
       >
         This container has the accent style
       </div>
       <div
-        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--default"
+        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--default"
       >
         color: default
       </div>
       <div
-        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--accent"
+        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--accent"
       >
         color: accent
       </div>
       <div
-        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--good"
+        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--good"
       >
         color: good
       </div>
       <div
-        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--warning"
+        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--warning"
       >
         color: warning
       </div>
       <div
-        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--attention"
+        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--attention"
       >
         color: attention
       </div>
       <div
-        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--light"
+        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--light"
       >
         color: light
       </div>
       <div
-        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--dark"
+        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--dark"
       >
         color: dark
       </div>
       <div
-        className="wxc-container wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-container wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--dark"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--dark"
         >
           Contained container - no style
         </div>
       </div>
       <div
-        className="wxc-container wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--vertical"
+        className="wxc-container wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--emphasis wxc-ac-container--has-padding wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--dark"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--dark"
         >
           Contained container - emphasis
         </div>
       </div>
       <div
-        className="wxc-container wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--default wxc-ac-container--vertical"
+        className="wxc-container wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--default wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--dark"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--dark"
         >
           Contained container - default
         </div>
       </div>
       <div
-        className="wxc-container wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--good wxc-ac-container--has-padding wxc-ac-container--vertical"
+        className="wxc-container wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--good wxc-ac-container--has-padding wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--dark"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--dark"
         >
           Contained container - good
         </div>
       </div>
       <div
-        className="wxc-container wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--warning wxc-ac-container--has-padding wxc-ac-container--vertical"
+        className="wxc-container wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--warning wxc-ac-container--has-padding wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--dark"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--dark"
         >
           Contained container - warning
         </div>
       </div>
       <div
-        className="wxc-container wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--attention wxc-ac-container--has-padding wxc-ac-container--vertical"
+        className="wxc-container wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--attention wxc-ac-container--has-padding wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--dark"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--dark"
         >
           Contained container - attention
         </div>
       </div>
       <div
-        className="wxc-container wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container-style--accent wxc-ac-container--has-padding wxc-ac-container--vertical"
+        className="wxc-container wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container-style--accent wxc-ac-container--has-padding wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--dark"
+          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--dark"
         >
           Contained container - accent
         </div>
       </div>
     </div>
     <div
-      className="wxc-container wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+      className="wxc-container wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
       style={
         Object {
           "backgroundImage": "url(https://adaptivecards.io/content/AlkiBeach.jpg)",
@@ -1775,18 +1909,18 @@ Array [
       }
     >
       <div
-        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+        className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
       >
         What a beautiful background
       </div>
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
     >
       They can even repeat a bunch of different ways...
     </div>
     <div
-      className="wxc-container wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeat   wxc-ac-container--vertical"
+      className="wxc-container wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeat   wxc-ac-container--vertical"
       style={
         Object {
           "backgroundImage": "url(https://adaptivecards.io/content/uparrow.png)",
@@ -1795,7 +1929,7 @@ Array [
       }
     />
     <div
-      className="wxc-container wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeathorizontally  wxc-ac-background-image-vertical-alignment--center wxc-ac-container--vertical"
+      className="wxc-container wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeathorizontally  wxc-ac-background-image-vertical-alignment--center wxc-ac-container--vertical"
       style={
         Object {
           "backgroundImage": "url(https://adaptivecards.io/content/uparrow.png)",
@@ -1804,7 +1938,7 @@ Array [
       }
     />
     <div
-      className="wxc-container wxc-ac wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeatvertically wxc-ac-background-image-horizontal-alignment--center  wxc-ac-container--vertical"
+      className="wxc-container wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeatvertically wxc-ac-background-image-horizontal-alignment--center  wxc-ac-container--vertical"
       style={
         Object {
           "backgroundImage": "url(https://adaptivecards.io/content/uparrow.png)",
@@ -1843,7 +1977,7 @@ Array [
     style={Object {}}
   >
     <div
-      className="wxc-adaptive-cards-fact-set wxc-ac "
+      className="wxc-adaptive-cards-fact-set wxc-ac wxc-ac-is-visible--true"
     >
       <table>
         <tbody>
@@ -1921,7 +2055,7 @@ Array [
     style={Object {}}
   >
     <img
-      className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--medium wxc-ac-image-style--person"
+      className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--medium wxc-ac-image-style--person"
       src="https://adaptivecards.io/content/cats/1.png"
       style={
         Object {
@@ -1931,7 +2065,7 @@ Array [
       }
     />
     <img
-      className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--small"
+      className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--small"
       src="https://adaptivecards.io/content/cats/1.png"
       style={
         Object {
@@ -1942,7 +2076,7 @@ Array [
       }
     />
     <img
-      className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--large"
+      className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--large"
       src="https://adaptivecards.io/content/cats/2.png"
       style={
         Object {
@@ -1952,7 +2086,7 @@ Array [
       }
     />
     <img
-      className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--medium"
+      className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--medium"
       src="https://adaptivecards.io/content/cats/3.png"
       style={
         Object {
@@ -1992,10 +2126,10 @@ Array [
     style={Object {}}
   >
     <div
-      className="wxc-adaptive-cards-image-set wxc-ac wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-image-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
     >
       <img
-        className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--large wxc-ac-image-style--person"
+        className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--large wxc-ac-image-style--person"
         src="https://adaptivecards.io/content/cats/1.png"
         style={
           Object {
@@ -2005,7 +2139,7 @@ Array [
         }
       />
       <img
-        className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--medium"
+        className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--medium"
         src="https://adaptivecards.io/content/cats/3.png"
         style={
           Object {
@@ -2015,7 +2149,7 @@ Array [
         }
       />
       <img
-        className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--small"
+        className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--small"
         src="https://adaptivecards.io/content/cats/1.png"
         style={
           Object {
@@ -2025,7 +2159,7 @@ Array [
         }
       />
       <img
-        className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--medium"
+        className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--medium"
         src="https://adaptivecards.io/content/cats/1.png"
         style={
           Object {
@@ -2036,7 +2170,7 @@ Array [
         }
       />
       <img
-        className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-image-size--medium"
+        className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--medium"
         src="https://adaptivecards.io/content/cats/2.png"
         style={
           Object {
@@ -2077,7 +2211,7 @@ Array [
     style={Object {}}
   >
     <label
-      className="wxc-label wxc-adaptive-cards-input-choice-set wxc-ac wxc-ac-container--vertical"
+      className="wxc-label wxc-adaptive-cards-input-choice-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
     >
       <div
         className="wxc-label__label-text"
@@ -2129,7 +2263,7 @@ Array [
       </div>
     </label>
     <label
-      className="wxc-label wxc-adaptive-cards-input-choice-set wxc-ac wxc-ac-container--vertical"
+      className="wxc-label wxc-adaptive-cards-input-choice-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
     >
       <div
         className="wxc-label__label-text"
@@ -2181,7 +2315,7 @@ Array [
       </div>
     </label>
     <label
-      className="wxc-label wxc-adaptive-cards-input-choice-set wxc-ac wxc-ac-container--vertical"
+      className="wxc-label wxc-adaptive-cards-input-choice-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
     >
       <div
         className="wxc-label__label-text"
@@ -2241,7 +2375,7 @@ Array [
       </div>
     </label>
     <label
-      className="wxc-label wxc-adaptive-cards-input-choice-set wxc-ac wxc-ac-container--vertical"
+      className="wxc-label wxc-adaptive-cards-input-choice-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
     >
       <div
         className="wxc-label__label-text"
@@ -2301,7 +2435,7 @@ Array [
       </div>
     </label>
     <label
-      className="wxc-label wxc-adaptive-cards-input-choice-set wxc-ac wxc-ac-container--vertical"
+      className="wxc-label wxc-adaptive-cards-input-choice-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
     >
       <div
         className="wxc-label__label-text"
@@ -2351,7 +2485,7 @@ Array [
       </div>
     </label>
     <label
-      className="wxc-label wxc-adaptive-cards-input-choice-set wxc-ac wxc-ac-container--vertical"
+      className="wxc-label wxc-adaptive-cards-input-choice-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
     >
       <div
         className="wxc-label__label-text"
@@ -2445,7 +2579,7 @@ Array [
       </div>
     </label>
     <div
-      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div>
@@ -2494,7 +2628,7 @@ Array [
     style={Object {}}
   >
     <label
-      className="wxc-label wxc-input-field wxc-adaptive-cards-input-number wxc-ac "
+      className="wxc-label wxc-input-field wxc-adaptive-cards-input-number wxc-ac wxc-ac-is-visible--true"
     >
       <div
         className="wxc-label__label-text"
@@ -2607,7 +2741,7 @@ Array [
       </div>
     </label>
     <div
-      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div>
@@ -2656,13 +2790,13 @@ Array [
     style={Object {}}
   >
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-container-style--heading wxc-ac-container--has-padding"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container-style--heading wxc-ac-container--has-padding"
       role="heading"
     >
       Specify the type of text being requested:
     </div>
     <label
-      className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-input-style--text wxc-ac-height--auto wxc-input-field--error"
+      className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--text wxc-ac-height--auto wxc-input-field--error"
     >
       <div
         className="wxc-label__control"
@@ -2738,7 +2872,7 @@ Array [
       </div>
     </label>
     <label
-      className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-input-style--email wxc-input-field--error"
+      className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--email wxc-input-field--error"
     >
       <div
         className="wxc-label__label-text"
@@ -2819,7 +2953,7 @@ Array [
       </div>
     </label>
     <label
-      className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-input-style--tel wxc-ac-height--stretch"
+      className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--tel wxc-ac-height--stretch"
     >
       <div
         className="wxc-label__label-text"
@@ -2873,7 +3007,7 @@ Array [
       </div>
     </label>
     <label
-      className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-input-style--url"
+      className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--url"
     >
       <div
         className="wxc-label__label-text"
@@ -2927,7 +3061,7 @@ Array [
       </div>
     </label>
     <label
-      className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-input-style--password"
+      className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--password"
     >
       <div
         className="wxc-label__label-text"
@@ -2955,7 +3089,7 @@ Array [
       </div>
     </label>
     <div
-      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div>
@@ -3004,7 +3138,7 @@ Array [
     style={Object {}}
   >
     <div
-      className="wxc-adaptive-cards-rich-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+      className="wxc-adaptive-cards-rich-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
     >
       <span
         className="wxc-adaptive-cards-text-run wxc-ac "
@@ -3086,7 +3220,7 @@ Array [
       </span>
     </div>
     <div
-      className="wxc-adaptive-cards-rich-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+      className="wxc-adaptive-cards-rich-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
     >
       <span
         className="wxc-adaptive-cards-text-run wxc-ac "
@@ -3096,7 +3230,7 @@ Array [
       </span>
     </div>
     <div
-      className="wxc-adaptive-cards-rich-text-block wxc-ac wxc-ac-horizontal-alignment--center"
+      className="wxc-adaptive-cards-rich-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-is-visible--true"
     >
       <span
         className="wxc-adaptive-cards-text-run wxc-ac "
@@ -3106,7 +3240,7 @@ Array [
       </span>
     </div>
     <div
-      className="wxc-adaptive-cards-rich-text-block wxc-ac wxc-ac-horizontal-alignment--right"
+      className="wxc-adaptive-cards-rich-text-block wxc-ac wxc-ac-horizontal-alignment--right wxc-ac-is-visible--true"
     >
       <span
         className="wxc-adaptive-cards-text-run wxc-ac "
@@ -3116,7 +3250,7 @@ Array [
       </span>
     </div>
     <div
-      className="wxc-adaptive-cards-rich-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+      className="wxc-adaptive-cards-rich-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
     />
   </div>,
   <video
@@ -3149,164 +3283,164 @@ Array [
     style={Object {}}
   >
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--default"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--default"
     >
       color: default
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--accent"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--accent"
     >
       color: accent
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--good"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--good"
     >
       color: good
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--warning"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--warning"
     >
       color: warning
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--attention"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--attention"
     >
       color: attention
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--light"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--light"
     >
       color: light
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-color--dark"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--dark"
     >
       color: dark
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
     >
       Font type not set.
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-font-type--default"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-font-type--default"
     >
       Font type set to *default*.
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-font-type--monospace"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-font-type--monospace"
     >
       Font type set to *monospace*.
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
     >
       **horizontalAlignment:left**
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-is-visible--true"
     >
       **horizontalAlignment:center**
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--right"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--right wxc-ac-is-visible--true"
     >
       **horizontalAlignment:right**
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left "
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true "
     >
       isSubtle:false
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-subtle--true"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-is-subtle--true"
     >
       isSubtle:true
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-wrap--true"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
     >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-wrap--true"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
     >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
     >
       size:default
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-size--small"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-size--small"
     >
       size:small
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-size--default"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-size--default"
     >
       size:default
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-size--medium"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-size--medium"
     >
       size:medium
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-size--large"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-size--large"
     >
       size:large
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-size--extralarge"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-size--extralarge"
     >
       size:extraLarge
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-weight--lighter"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--lighter"
     >
       weight: lighter
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-weight--default"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--default"
     >
       weight: default
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-weight--bolder"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--bolder"
     >
       weight: bolder
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left "
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true "
     >
       **wrap: false** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-wrap--true"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
     >
       **wrap: true** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-container-style--heading wxc-ac-container--has-padding wxc-ac-wrap--true"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container-style--heading wxc-ac-container--has-padding wxc-ac-wrap--true"
       role="heading"
     >
       Style set to heading
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-container-style--heading wxc-ac-container--has-padding wxc-ac-color--good wxc-ac-wrap--true"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container-style--heading wxc-ac-container--has-padding wxc-ac-color--good wxc-ac-wrap--true"
       role="heading"
     >
       Style set to heading, color set to good
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-container-style--default wxc-ac-wrap--true"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container-style--default wxc-ac-wrap--true"
     >
       Style set to default
     </div>
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-wrap--true"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
     >
       Style unset
     </div>

@@ -55,6 +55,7 @@ TextBlock.acPropTypes = {
 
 TextBlock.acDefaultProps = {
   horizontalAlignment: 'left',
+  isVisible: true,
 };
 
 registerComponent('TextBlock', TextBlock);

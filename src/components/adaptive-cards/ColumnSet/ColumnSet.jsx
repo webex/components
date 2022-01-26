@@ -58,6 +58,7 @@ ColumnSet.acPropTypes = {
 
 ColumnSet.acDefaultProps = {
   horizontalAlignment: 'left',
+  isVisible: true,
 };
 
 registerComponent('ColumnSet', ColumnSet, 'horizontal');

@@ -8,6 +8,7 @@ import Component, {acPropTypes, registerComponent} from '../Component/Component'
 import '../ActionOpenURL/ActionOpenUrl';
 import '../ActionSet/ActionSet';
 import '../ActionShowCard/ActionShowCard';
+import '../ActionToggleVisibility/ActionToggleVisibility';
 import '../Column/Column';
 import '../ColumnSet/ColumnSet';
 import '../Container/Container';
@@ -85,6 +86,28 @@ export default function AdaptiveCard({
   const data = templateInstance.expand({
     $root: context,
   });
+
+  const [elements, setElements] = useState({});
+
+  const setElement = useCallback((element) => {
+    setElements((prevElements) => (
+      {...prevElements, [element.id]: element}
+    ));
+  }, [setElements]);
+
+  const setIsVisible = (id, isVisible) => {
+    setElements((prevElements) => {
+      const targetElem = prevElements[id];
+
+      return {
+        ...prevElements,
+        [id]: {...targetElem, isVisible},
+      };
+    });
+  };
+
+  const getIsVisible = (id) => (elements[id]?.isVisible !== false);
+
   const [inputs, setInputs] = useState({});
   const setValue = (id, value) => {
     setInputs((prevInputs) => {
@@ -111,6 +134,9 @@ export default function AdaptiveCard({
         getValue,
         setInput,
         getAllValues,
+        setElement,
+        setIsVisible,
+        getIsVisible,
       }}
     >
       <Component data={data} className={className} style={style} />

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
+import AdaptiveCardContext from '../context/adaptive-card-context';
 
 const componentTypes = {};
 const containerTypes = {};
@@ -45,6 +46,7 @@ export const acPropTypes = {
   spacing: 'spacing',
   strikethrough: 'strikethrough',
   style: 'style',
+  targetElements: 'target-elements',
   text: 'text',
   title: 'title',
   tooltip: 'tooltip',
@@ -108,6 +110,19 @@ UnknownComponent.defaultProps = {
 export default function Component({
   data, className, style: styleProp, ...otherProps
 }) {
+  const {setElement, getIsVisible} = useContext(AdaptiveCardContext);
+
+  useEffect(() => {
+    setElement({
+      id: data.id,
+      isVisible: data.isVisible !== false,
+    });
+  }, [
+    data.id,
+    data.isVisible,
+    setElement,
+  ]);
+
   const [cssClasses] = webexComponentClasses('ac', className);
   const fallback = data.fallback !== 'drop' && componentTypes[data.fallback];
   const C = componentTypes[data.type] || fallback || UnknownComponent;
@@ -141,6 +156,7 @@ export default function Component({
       case acPropTypes.style:
       case acPropTypes.isMultiSelect:
       case acPropTypes.isRequired:
+      case acPropTypes.targetElements:
       case acPropTypes.text:
       case acPropTypes.tooltip:
       case acPropTypes.type:
@@ -182,6 +198,9 @@ export default function Component({
           classes.push(getClass(`${propType}-horizontal-alignment`, value.horizontalAlignment));
           classes.push(getClass(`${propType}-vertical-alignment`, value.verticalAlignment));
         }
+        break;
+      case acPropTypes.isVisible:
+        classes.push(getClass(propType, getIsVisible(data.id).toString()));
         break;
       default:
         classes.push(getClass(propType, value));

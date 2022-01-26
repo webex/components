@@ -57,6 +57,7 @@ Image.acPropTypes = {
 
 Image.acDefaultProps = {
   horizontalAlignment: 'left',
+  isVisible: true,
   size: 'medium',
 };
 

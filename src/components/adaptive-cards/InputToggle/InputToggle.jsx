@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {registerComponent} from '../Component/Component';
+import {acPropTypes, registerComponent} from '../Component/Component';
 
 /**
  * Adaptive Cards Input.Toggle component
@@ -18,6 +18,25 @@ export default function InputToggle({data}) {
 
 InputToggle.propTypes = {
   data: PropTypes.shape().isRequired,
+};
+
+InputToggle.acPropTypes = {
+  errorMessage: acPropTypes.errorMessage,
+  height: acPropTypes.height,
+  id: acPropTypes.id,
+  isRequired: acPropTypes.isRequired,
+  isVisible: acPropTypes.isVisible,
+  label: acPropTypes.label,
+  separator: acPropTypes.separator,
+  spacing: acPropTypes.spacing,
+  title: acPropTypes.title,
+  type: acPropTypes.type,
+  value: acPropTypes.value,
+  wrap: acPropTypes.wrap,
+};
+
+InputToggle.acDefaultProps = {
+  isVisible: true,
 };
 
 registerComponent('Input.Toggle', InputToggle);

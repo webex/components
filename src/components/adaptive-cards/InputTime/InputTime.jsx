@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {registerComponent} from '../Component/Component';
+import {acPropTypes, registerComponent} from '../Component/Component';
 
 /**
  * Adaptive Cards Input.Time component
@@ -25,6 +25,26 @@ export default function InputTime({data}) {
 
 InputTime.propTypes = {
   data: PropTypes.shape().isRequired,
+};
+
+InputTime.acPropTypes = {
+  errorMessage: acPropTypes.errorMessage,
+  height: acPropTypes.height,
+  id: acPropTypes.id,
+  isRequired: acPropTypes.isRequired,
+  isVisible: acPropTypes.isVisible,
+  label: acPropTypes.label,
+  max: acPropTypes.maxValue,
+  min: acPropTypes.minValue,
+  placeholder: acPropTypes.placeholder,
+  separator: acPropTypes.separator,
+  spacing: acPropTypes.spacing,
+  type: acPropTypes.type,
+  value: acPropTypes.value,
+};
+
+InputTime.acDefaultProps = {
+  isVisible: true,
 };
 
 registerComponent('Input.Time', InputTime);

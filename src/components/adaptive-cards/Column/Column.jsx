@@ -53,6 +53,7 @@ Column.acPropTypes = {
 };
 
 Column.acDefaultProps = {
+  isVisible: true,
   verticalContentAlignment: 'top',
 };
 
