@@ -3131,6 +3131,285 @@ Array [
 ]
 `;
 
+exports[`Storyshots Messaging/AdaptiveCard Input Time 1`] = `
+Array [
+  <div
+    className="wxc-adaptive-card wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
+    style={Object {}}
+  >
+    <label
+      className="wxc-label wxc-adaptive-cards-input-time wxc-ac wxc-ac-is-visible--true"
+    >
+      <div
+        className="wxc-label__label-text"
+      >
+        Start time
+      </div>
+      <div
+        className="wxc-label__control"
+        style={Object {}}
+      >
+        <div
+          className="wxc-adaptive-cards-input-time__body"
+        >
+          <label
+            className="wxc-label wxc-select"
+          >
+            <div
+              className="wxc-label__control"
+            >
+              <div
+                className="wxc-select__control"
+                disabled={false}
+              >
+                <div
+                  aria-label="12. Start time - Hour"
+                  className="wxc-select__selected-option "
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  role="button"
+                >
+                  <span
+                    className="wxc-select__label"
+                  >
+                    12
+                  </span>
+                  <svg
+                    className="wxc-icon "
+                    height={13}
+                    style={Object {}}
+                    viewBox="0 0 26 14"
+                    width={13}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M25.7075 0.293202C25.52 0.105701 25.2656 0.000366211 25.0004 0.000366211C24.7353 0.000366211 24.4809 0.105701 24.2934 0.293202L13 11.5862L1.70699 0.293202C1.51851 0.110381 1.26568 0.00902984 1.0031 0.0110359C0.740528 0.013042 0.489278 0.118244 0.303611 0.303925C0.117943 0.489605 0.0127584 0.740862 0.0107709 1.00344C0.00878336 1.26601 0.110153 1.51883 0.292988 1.7073L12.293 13.7073C12.4805 13.8948 12.7348 14.0001 13 14.0001C13.2652 14.0001 13.5195 13.8948 13.707 13.7073L25.707 1.7073C25.8946 1.51984 26 1.26555 26.0001 1.00036C26.0002 0.735168 25.8949 0.4808 25.7075 0.293202Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </label>
+          <span
+            className="wxc-adaptive-cards-input-time__separator"
+          >
+            :
+          </span>
+          <label
+            className="wxc-label wxc-select"
+          >
+            <div
+              className="wxc-label__control"
+            >
+              <div
+                className="wxc-select__control"
+                disabled={false}
+              >
+                <div
+                  aria-label="43. Start time - Minutes"
+                  className="wxc-select__selected-option "
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  role="button"
+                >
+                  <span
+                    className="wxc-select__label"
+                  >
+                    43
+                  </span>
+                  <svg
+                    className="wxc-icon "
+                    height={13}
+                    style={Object {}}
+                    viewBox="0 0 26 14"
+                    width={13}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M25.7075 0.293202C25.52 0.105701 25.2656 0.000366211 25.0004 0.000366211C24.7353 0.000366211 24.4809 0.105701 24.2934 0.293202L13 11.5862L1.70699 0.293202C1.51851 0.110381 1.26568 0.00902984 1.0031 0.0110359C0.740528 0.013042 0.489278 0.118244 0.303611 0.303925C0.117943 0.489605 0.0127584 0.740862 0.0107709 1.00344C0.00878336 1.26601 0.110153 1.51883 0.292988 1.7073L12.293 13.7073C12.4805 13.8948 12.7348 14.0001 13 14.0001C13.2652 14.0001 13.5195 13.8948 13.707 13.7073L25.707 1.7073C25.8946 1.51984 26 1.26555 26.0001 1.00036C26.0002 0.735168 25.8949 0.4808 25.7075 0.293202Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+    </label>
+    <label
+      className="wxc-label wxc-adaptive-cards-input-time wxc-ac wxc-ac-is-visible--true"
+    >
+      <div
+        className="wxc-label__label-text"
+      >
+        End time
+        <span
+          className="wxc-label__required"
+        >
+           *
+        </span>
+      </div>
+      <div
+        className="wxc-label__control"
+        style={Object {}}
+      >
+        <div
+          className="wxc-adaptive-cards-input-time__body"
+        >
+          <label
+            className="wxc-label wxc-select"
+          >
+            <div
+              className="wxc-label__control"
+            >
+              <div
+                className="wxc-select__control"
+                disabled={false}
+              >
+                <div
+                  aria-label="00. End time - Hour"
+                  className="wxc-select__selected-option "
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  role="button"
+                >
+                  <span
+                    className="wxc-select__label"
+                  >
+                    00
+                  </span>
+                  <svg
+                    className="wxc-icon "
+                    height={13}
+                    style={Object {}}
+                    viewBox="0 0 26 14"
+                    width={13}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M25.7075 0.293202C25.52 0.105701 25.2656 0.000366211 25.0004 0.000366211C24.7353 0.000366211 24.4809 0.105701 24.2934 0.293202L13 11.5862L1.70699 0.293202C1.51851 0.110381 1.26568 0.00902984 1.0031 0.0110359C0.740528 0.013042 0.489278 0.118244 0.303611 0.303925C0.117943 0.489605 0.0127584 0.740862 0.0107709 1.00344C0.00878336 1.26601 0.110153 1.51883 0.292988 1.7073L12.293 13.7073C12.4805 13.8948 12.7348 14.0001 13 14.0001C13.2652 14.0001 13.5195 13.8948 13.707 13.7073L25.707 1.7073C25.8946 1.51984 26 1.26555 26.0001 1.00036C26.0002 0.735168 25.8949 0.4808 25.7075 0.293202Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </label>
+          <span
+            className="wxc-adaptive-cards-input-time__separator"
+          >
+            :
+          </span>
+          <label
+            className="wxc-label wxc-select"
+          >
+            <div
+              className="wxc-label__control"
+            >
+              <div
+                className="wxc-select__control"
+                disabled={false}
+              >
+                <div
+                  aria-label="00. End time - Minutes"
+                  className="wxc-select__selected-option "
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  role="button"
+                >
+                  <span
+                    className="wxc-select__label"
+                  >
+                    00
+                  </span>
+                  <svg
+                    className="wxc-icon "
+                    height={13}
+                    style={Object {}}
+                    viewBox="0 0 26 14"
+                    width={13}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M25.7075 0.293202C25.52 0.105701 25.2656 0.000366211 25.0004 0.000366211C24.7353 0.000366211 24.4809 0.105701 24.2934 0.293202L13 11.5862L1.70699 0.293202C1.51851 0.110381 1.26568 0.00902984 1.0031 0.0110359C0.740528 0.013042 0.489278 0.118244 0.303611 0.303925C0.117943 0.489605 0.0127584 0.740862 0.0107709 1.00344C0.00878336 1.26601 0.110153 1.51883 0.292988 1.7073L12.293 13.7073C12.4805 13.8948 12.7348 14.0001 13 14.0001C13.2652 14.0001 13.5195 13.8948 13.707 13.7073L25.707 1.7073C25.8946 1.51984 26 1.26555 26.0001 1.00036C26.0002 0.735168 25.8949 0.4808 25.7075 0.293202Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div
+        className="wxc-label__error"
+      >
+        <svg
+          className="wxc-icon wxc-label__error-icon"
+          height={16}
+          style={Object {}}
+          viewBox="0 0 16 16"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M13.7971 10.7495L8.2991 1.24998C8.16738 1.02195 7.97797 0.832599 7.7499 0.700952C7.52182 0.569305 7.26312 0.5 6.99978 0.5C6.73644 0.5 6.47774 0.569305 6.24966 0.700952C6.02159 0.832599 5.83218 1.02195 5.70046 1.24998L5.70096 1.24948L0.200962 10.75C0.0693183 10.978 9.13466e-06 11.2366 9.02787e-10 11.4999C-9.13286e-06 11.7632 0.069282 12.0219 0.20091 12.2499C0.332538 12.4779 0.521865 12.6673 0.749865 12.7989C0.977865 12.9306 1.2365 12.9999 1.49979 13H12.4983C12.7617 13.0001 13.0205 12.9308 13.2486 12.7991C13.4767 12.6674 13.6661 12.478 13.7977 12.2499C13.9294 12.0217 13.9986 11.763 13.9985 11.4996C13.9984 11.2362 13.929 10.9775 13.7971 10.7495ZM12.9314 11.75C12.8882 11.8266 12.8253 11.8903 12.7491 11.9342C12.6729 11.9782 12.5863 12.0009 12.4983 12H1.49978C1.4121 11.9999 1.32598 11.9768 1.25006 11.9329C1.17414 11.889 1.11108 11.826 1.06721 11.7501C1.02334 11.6742 1.0002 11.588 1.00011 11.5004C1.00001 11.4127 1.02297 11.3265 1.06668 11.2505L6.56618 1.75049L6.56668 1.74999C6.61063 1.67394 6.67383 1.61079 6.74993 1.56691C6.82602 1.52303 6.91233 1.49995 7.00017 1.5C7.08801 1.50005 7.17429 1.52323 7.25034 1.5672C7.32638 1.61117 7.38951 1.67439 7.43337 1.75049L12.9314 11.25C12.9762 11.3257 12.9999 11.412 12.9999 11.5C12.9999 11.5879 12.9762 11.6743 12.9314 11.75Z"
+          />
+          <path
+            d="M6.99984 10.9999C7.34502 10.9999 7.62484 10.7201 7.62484 10.3749C7.62484 10.0297 7.34502 9.74992 6.99984 9.74992C6.65466 9.74992 6.37484 10.0297 6.37484 10.3749C6.37484 10.7201 6.65466 10.9999 6.99984 10.9999Z"
+          />
+          <path
+            d="M6.99978 8.99998C7.06545 9.00002 7.13049 8.98711 7.19117 8.962C7.25185 8.93689 7.30698 8.90006 7.35342 8.85362C7.39986 8.80718 7.43669 8.75205 7.4618 8.69137C7.48691 8.63069 7.49982 8.56565 7.49978 8.49998V4.99998C7.49978 4.86738 7.4471 4.7402 7.35334 4.64643C7.25957 4.55266 7.13239 4.49998 6.99978 4.49998C6.86717 4.49998 6.74 4.55266 6.64623 4.64643C6.55246 4.7402 6.49978 4.86738 6.49978 4.99998V8.49998C6.49974 8.56565 6.51265 8.63069 6.53777 8.69137C6.56288 8.75205 6.59971 8.80719 6.64614 8.85362C6.69258 8.90006 6.74772 8.93689 6.8084 8.962C6.86908 8.98711 6.93411 9.00002 6.99978 8.99998Z"
+          />
+        </svg>
+        <span
+          className="wxc-label__error-text"
+        >
+          This input is required
+        </span>
+      </div>
+    </label>
+    <div
+      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
+      style={Object {}}
+    >
+      <div>
+        <h5>
+          Action.Submit Component
+        </h5>
+        <pre
+          className="wxc-adaptive-cards-unknown-component"
+        >
+          {
+    "type": "Action.Submit",
+    "title": "OK"
+}
+        </pre>
+      </div>
+    </div>
+    <div />
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
 exports[`Storyshots Messaging/AdaptiveCard Rich Text Block 1`] = `
 Array [
   <div

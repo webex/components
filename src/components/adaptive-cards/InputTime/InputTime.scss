@@ -1,0 +1,12 @@
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-adaptive-cards-input-time;
+
+.#{$C} {
+  .#{$C}__body {
+    display: flex;
+    align-items: center;
+  }
+
+  .#{$C}__separator {
+    margin: 0 0.313rem;
+  }
+}
