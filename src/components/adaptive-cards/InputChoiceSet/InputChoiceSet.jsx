@@ -120,4 +120,8 @@ InputChoiceSet.acPropTypes = {
   wrap: acPropTypes.wrap,
 };
 
+InputChoiceSet.acDefaultProps = {
+  isVisible: true,
+};
+
 registerComponent('Input.ChoiceSet', InputChoiceSet, 'vertical');

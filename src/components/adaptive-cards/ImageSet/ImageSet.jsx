@@ -50,4 +50,8 @@ ImageSet.acPropTypes = {
   type: acPropTypes.type,
 };
 
+ImageSet.acDefaultProps = {
+  isVisible: true,
+};
+
 registerComponent('ImageSet', ImageSet, 'horizontal');

@@ -53,6 +53,7 @@ RichTextBlock.acPropTypes = {
 
 RichTextBlock.acDefaultProps = {
   horizontalAlignment: 'left',
+  isVisible: true,
 };
 
 registerComponent('RichTextBlock', RichTextBlock);

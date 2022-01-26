@@ -82,5 +82,8 @@ InputNumber.acPropTypes = {
   type: acPropTypes.type,
   value: acPropTypes.value,
 };
+InputNumber.acDefaultProps = {
+  isVisible: true,
+};
 
 registerComponent('Input.Number', InputNumber);

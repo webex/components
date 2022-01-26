@@ -84,4 +84,8 @@ InputText.acPropTypes = {
   value: acPropTypes.value,
 };
 
+InputText.acDefaultProps = {
+  isVisible: true,
+};
+
 registerComponent('Input.Text', InputText);

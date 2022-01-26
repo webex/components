@@ -55,6 +55,7 @@ Container.acPropTypes = {
 };
 
 Container.acDefaultProps = {
+  isVisible: true,
   verticalContentAlignment: 'top',
 };
 

@@ -51,4 +51,8 @@ FactSet.acPropTypes = {
   type: acPropTypes.type,
 };
 
+FactSet.acDefaultProps = {
+  isVisible: true,
+};
+
 registerComponent('FactSet', FactSet);
