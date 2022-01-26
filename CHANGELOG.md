@@ -1,3 +1,10 @@
+# [1.233.0](https://github.com/webex/components/compare/v1.232.0...v1.233.0) (2022-01-26)
+
+
+### Features
+
+* **AdaptiveCardsComponent:** implement fallback property ([f7154ab](https://github.com/webex/components/commit/f7154abf9a4d87000f74d10829fd4bca830107a9))
+
 # [1.232.0](https://github.com/webex/components/compare/v1.231.1...v1.232.0) (2022-01-21)
 
 
