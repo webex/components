@@ -1799,6 +1799,35 @@ const exampleInputText = {
   ],
 };
 
+const exampleInputTime = {
+  $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
+  type: 'AdaptiveCard',
+  version: '1.0',
+  body: [
+    {
+      type: 'Input.Time',
+      id: 'timeValueSet',
+      label: 'Start time',
+      min: '10:00',
+      max: '18:00',
+      value: '12:43',
+    },
+    {
+      type: 'Input.Time',
+      id: 'timeValueUnset',
+      label: 'End time',
+      isRequired: 'true',
+      errorMessage: 'This input is required',
+    },
+  ],
+  actions: [
+    {
+      type: 'Action.Submit',
+      title: 'OK',
+    },
+  ],
+};
+
 const exampleInputNumber = {
   $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
   type: 'AdaptiveCard',
@@ -2201,6 +2230,11 @@ InputNumber.args = {
 export const InputText = Template.bind({});
 InputText.args = {
   template: exampleInputText,
+};
+
+export const InputTime = Template.bind({});
+InputTime.args = {
+  template: exampleInputTime,
 };
 
 export const ActionOpenURL = Template.bind({});

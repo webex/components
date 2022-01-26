@@ -87,9 +87,32 @@ export function clamp(num, min, max) {
   return Math.min(Math.max(num, min), max);
 }
 
+/**
+ * Returns an array that contains all the numbers in a specified range.
+ *
+ * @param {number} start  The first number in the interval
+ * @param {number} end  The last number in the interval
+ * @returns {Array<number>} An array with all the numbers in the range [start, end]
+ */
+export function range(start, end) {
+  return [...Array(end - start - 1).keys()].map((val) => start + val);
+}
+
+/**
+ * Appends the character '0' to a one-digit number
+ *
+ * @param {number} value  The given number
+ * @returns {string} The result string
+ */
+export function pad2Zeros(value) {
+  return String(value || '').padStart(2, '0');
+}
+
 export default {
   deepMerge,
   chainWith,
   isValidUrl,
   clamp,
+  range,
+  pad2Zeros,
 };
