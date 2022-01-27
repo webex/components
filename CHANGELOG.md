@@ -1,3 +1,10 @@
+# [1.234.0](https://github.com/webex/components/compare/v1.233.0...v1.234.0) (2022-01-27)
+
+
+### Features
+
+* **AdaptiveCardsActionToggleVisibility:** create Action.ToggleVisibility component ([ac551a2](https://github.com/webex/components/commit/ac551a2a819c57ad51f8ac9c051428c8c40172a6))
+
 # [1.233.0](https://github.com/webex/components/compare/v1.232.0...v1.233.0) (2022-01-26)
 
 
