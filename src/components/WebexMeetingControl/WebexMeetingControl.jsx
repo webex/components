@@ -172,5 +172,5 @@ WebexMeetingControl.defaultProps = {
   className: '',
   showText: true,
   style: undefined,
-  tabIndex: undefined,
+  tabIndex: 0,
 };

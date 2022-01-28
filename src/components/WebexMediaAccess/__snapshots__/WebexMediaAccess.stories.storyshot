@@ -53,6 +53,7 @@ Array [
           "height": 40,
         }
       }
+      tabIndex={0}
       type="button"
     >
       Proceed without camera
@@ -134,6 +135,7 @@ Array [
           "height": 40,
         }
       }
+      tabIndex={0}
       type="button"
     >
       Proceed without audio
