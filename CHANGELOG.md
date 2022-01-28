@@ -1,3 +1,10 @@
+# [1.235.0](https://github.com/webex/components/compare/v1.234.1...v1.235.0) (2022-01-28)
+
+
+### Features
+
+* **hooks:** implement useAdaptiveCard hook ([0ebf781](https://github.com/webex/components/commit/0ebf7818da5b2442311925175b8c0e894df81611))
+
 ## [1.234.1](https://github.com/webex/components/compare/v1.234.0...v1.234.1) (2022-01-28)
 
 
