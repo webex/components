@@ -2169,6 +2169,48 @@ const exampleInputChoiceSet = {
   ],
 };
 
+const exampleActionSubmit = {
+  $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
+  type: 'AdaptiveCard',
+  version: '1.0',
+  body: [
+    {
+      type: 'TextBlock',
+      text: 'Present a form and submit it back to the originator',
+    },
+    {
+      type: 'Input.Text',
+      id: 'firstName',
+      placeholder: 'What is your first name?',
+      isRequired: true,
+      errorMessage: 'FirstName is required',
+    },
+    {
+      type: 'Input.Text',
+      id: 'lastName',
+      placeholder: 'What is your last name?',
+    },
+    {
+      type: 'Input.Number',
+      id: 'review',
+      placeholder: 'Enter a number between 1 and 10',
+      min: 1,
+      max: 10,
+      value: 3,
+    },
+  ],
+  actions: [
+    {
+      type: 'Action.Submit',
+      title: 'Action.Submit',
+      data: {
+        x: 13,
+        y: 12,
+      },
+    },
+  ],
+};
+
 export const Card = Template.bind({});
 Card.args = {
   template: exampleAdaptiveCard,
@@ -2255,4 +2297,9 @@ ActionToggleVisibility.args = {
 export const InputChoiceSet = Template.bind({});
 InputChoiceSet.args = {
   template: exampleInputChoiceSet,
+};
+
+export const ActionSubmit = Template.bind({});
+ActionSubmit.args = {
+  template: exampleActionSubmit,
 };
