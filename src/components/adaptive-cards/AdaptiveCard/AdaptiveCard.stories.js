@@ -1790,6 +1790,29 @@ const exampleInputText = {
       label: 'style: password',
       style: 'password',
     },
+    {
+      type: 'TextBlock',
+      text: 'Multiline text input:',
+    },
+    {
+      type: 'Input.Text',
+      id: 'multilineInputId',
+      placeholder: 'enter comment',
+      maxLength: 500,
+      isMultiline: true,
+    },
+    {
+      type: 'TextBlock',
+      text: 'Pre-filled value:',
+    },
+    {
+      type: 'Input.Text',
+      id: 'prefilledInputId',
+      placeholder: 'enter comment',
+      maxLength: 500,
+      isMultiline: true,
+      value: 'This value was pre-filled',
+    },
   ],
   actions: [
     {

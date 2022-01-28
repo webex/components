@@ -438,10 +438,26 @@ Array [
     style={Object {}}
   >
     <div
+      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      style={
+        Object {
+          "style": undefined,
+        }
+      }
+    />
+    <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
     >
       Present a form and submit it back to the originator
     </div>
+    <div
+      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      style={
+        Object {
+          "style": undefined,
+        }
+      }
+    />
     <label
       className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-is-visible--true"
     >
@@ -459,6 +475,7 @@ Array [
             onChange={[Function]}
             placeholder="What is your first name?"
             required={true}
+            tabIndex={0}
             type="text"
             value=""
           />
@@ -472,6 +489,7 @@ Array [
                 "height": 28,
               }
             }
+            tabIndex={0}
             type="button"
           >
             <svg
@@ -492,6 +510,14 @@ Array [
         </div>
       </div>
     </label>
+    <div
+      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      style={
+        Object {
+          "style": undefined,
+        }
+      }
+    />
     <label
       className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-is-visible--true"
     >
@@ -509,6 +535,7 @@ Array [
             onChange={[Function]}
             placeholder="What is your last name?"
             required={false}
+            tabIndex={0}
             type="text"
             value=""
           />
@@ -522,6 +549,7 @@ Array [
                 "height": 28,
               }
             }
+            tabIndex={0}
             type="button"
           >
             <svg
@@ -542,6 +570,14 @@ Array [
         </div>
       </div>
     </label>
+    <div
+      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      style={
+        Object {
+          "style": undefined,
+        }
+      }
+    />
     <label
       className="wxc-label wxc-input-field wxc-adaptive-cards-input-number wxc-ac wxc-ac-is-visible--true"
     >
@@ -561,6 +597,7 @@ Array [
             onChange={[Function]}
             placeholder="Enter a number between 1 and 10"
             required={false}
+            tabIndex={0}
             type="number"
             value={3}
           />
@@ -574,6 +611,7 @@ Array [
                 "height": 28,
               }
             }
+            tabIndex={0}
             type="button"
           >
             <svg
@@ -604,6 +642,7 @@ Array [
                   "height": 32,
                 }
               }
+              tabIndex={0}
               type="button"
             >
               <svg
@@ -630,6 +669,7 @@ Array [
                   "height": 32,
                 }
               }
+              tabIndex={0}
               type="button"
             >
               <svg
@@ -651,6 +691,14 @@ Array [
       </div>
     </label>
     <div
+      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      style={
+        Object {
+          "style": undefined,
+        }
+      }
+    />
+    <div
       className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
@@ -664,6 +712,7 @@ Array [
             "height": 32,
           }
         }
+        tabIndex={0}
         type="button"
       >
         <span>
@@ -1232,6 +1281,7 @@ Array [
             "height": 32,
           }
         }
+        tabIndex={0}
         type="button"
       >
         <span>
@@ -4864,6 +4914,7 @@ Array [
             "height": 32,
           }
         }
+        tabIndex={0}
         type="button"
       >
         <span>
@@ -5050,6 +5101,7 @@ Array [
             "height": 32,
           }
         }
+        tabIndex={0}
         type="button"
       >
         <span>
@@ -5400,6 +5452,84 @@ Array [
       }
     />
     <div
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+    >
+      Multiline text input:
+    </div>
+    <div
+      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      style={
+        Object {
+          "style": undefined,
+        }
+      }
+    />
+    <label
+      className="wxc-label wxc-textbox wxc-adaptive-cards-input-text wxc-ac wxc-ac-is-visible--true"
+    >
+      <div
+        className="wxc-label__control"
+        style={Object {}}
+      >
+        <textarea
+          aria-label=""
+          className="wxc-textbox__control"
+          disabled={false}
+          maxLength={500}
+          onChange={[Function]}
+          placeholder="enter comment"
+          value=""
+        />
+      </div>
+    </label>
+    <div
+      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      style={
+        Object {
+          "style": undefined,
+        }
+      }
+    />
+    <div
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+    >
+      Pre-filled value:
+    </div>
+    <div
+      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      style={
+        Object {
+          "style": undefined,
+        }
+      }
+    />
+    <label
+      className="wxc-label wxc-textbox wxc-adaptive-cards-input-text wxc-ac wxc-ac-is-visible--true"
+    >
+      <div
+        className="wxc-label__control"
+        style={Object {}}
+      >
+        <textarea
+          aria-label=""
+          className="wxc-textbox__control"
+          disabled={false}
+          maxLength={500}
+          onChange={[Function]}
+          placeholder="enter comment"
+          value="This value was pre-filled"
+        />
+      </div>
+    </label>
+    <div
+      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      style={
+        Object {
+          "style": undefined,
+        }
+      }
+    />
+    <div
       className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
@@ -5413,6 +5543,7 @@ Array [
             "height": 32,
           }
         }
+        tabIndex={0}
         type="button"
       >
         <span>
@@ -5452,6 +5583,14 @@ Array [
     className="wxc-adaptive-card wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
     style={Object {}}
   >
+    <div
+      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      style={
+        Object {
+          "style": undefined,
+        }
+      }
+    />
     <label
       className="wxc-label wxc-adaptive-cards-input-time wxc-ac wxc-ac-is-visible--true"
     >
@@ -5553,6 +5692,14 @@ Array [
         </div>
       </div>
     </label>
+    <div
+      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      style={
+        Object {
+          "style": undefined,
+        }
+      }
+    />
     <label
       className="wxc-label wxc-adaptive-cards-input-time wxc-ac wxc-ac-is-visible--true"
     >
@@ -5687,6 +5834,14 @@ Array [
       </div>
     </label>
     <div
+      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      style={
+        Object {
+          "style": undefined,
+        }
+      }
+    />
+    <div
       className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
@@ -5700,6 +5855,7 @@ Array [
             "height": 32,
           }
         }
+        tabIndex={0}
         type="button"
       >
         <span>
