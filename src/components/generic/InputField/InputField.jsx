@@ -173,5 +173,5 @@ InputField.defaultProps = {
   label: undefined,
   ariaLabel: undefined,
   required: false,
-  tabIndex: undefined,
+  tabIndex: 0,
 };

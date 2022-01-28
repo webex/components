@@ -87,5 +87,5 @@ Option.defaultProps = {
   autoFocus: undefined,
   onMouseEnter: undefined,
   selected: undefined,
-  tabIndex: undefined,
+  tabIndex: 0,
 };

@@ -25,6 +25,7 @@ Array [
             "height": 32,
           }
         }
+        tabIndex={0}
         type="button"
       >
         <span>
@@ -42,6 +43,7 @@ Array [
             "height": 32,
           }
         }
+        tabIndex={0}
         type="button"
       >
         <img
@@ -64,6 +66,7 @@ Array [
             "height": 32,
           }
         }
+        tabIndex={0}
         type="button"
       >
         <span>
@@ -81,6 +84,7 @@ Array [
             "height": 32,
           }
         }
+        tabIndex={0}
         type="button"
       >
         <span>
@@ -139,6 +143,7 @@ Array [
             "height": 32,
           }
         }
+        tabIndex={0}
         type="button"
       >
         <span>
@@ -168,6 +173,7 @@ Array [
             "height": 32,
           }
         }
+        tabIndex={0}
         type="button"
       >
         <span>
@@ -196,6 +202,7 @@ Array [
             "height": 32,
           }
         }
+        tabIndex={0}
         type="button"
       >
         <span>
@@ -225,6 +232,7 @@ Array [
             "height": 32,
           }
         }
+        tabIndex={0}
         type="button"
       >
         <span>
@@ -283,6 +291,7 @@ Array [
             "height": 32,
           }
         }
+        tabIndex={0}
         type="button"
       >
         <span>
@@ -312,6 +321,7 @@ Array [
             "height": 32,
           }
         }
+        tabIndex={0}
         type="button"
       >
         <span>
@@ -424,6 +434,7 @@ Array [
             "height": 32,
           }
         }
+        tabIndex={0}
         type="button"
       >
         <span>
@@ -441,6 +452,7 @@ Array [
             "height": 32,
           }
         }
+        tabIndex={0}
         type="button"
       >
         <span>
@@ -458,6 +470,7 @@ Array [
             "height": 32,
           }
         }
+        tabIndex={0}
         type="button"
       >
         <span>
@@ -1659,6 +1672,7 @@ Array [
             "height": 32,
           }
         }
+        tabIndex={0}
         type="button"
       >
         <span>
@@ -1676,6 +1690,7 @@ Array [
             "height": 32,
           }
         }
+        tabIndex={0}
         type="button"
       >
         <span>
@@ -2238,6 +2253,7 @@ Array [
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="button"
+                tabIndex={0}
               >
                 <span
                   className="wxc-select__label"
@@ -2290,6 +2306,7 @@ Array [
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="button"
+                tabIndex={0}
               >
                 <span
                   className="wxc-select__label"
@@ -2651,6 +2668,7 @@ Array [
             onChange={[Function]}
             placeholder="Enter a number"
             required={false}
+            tabIndex={0}
             type="number"
             value={3}
           />
@@ -2664,6 +2682,7 @@ Array [
                 "height": 28,
               }
             }
+            tabIndex={0}
             type="button"
           >
             <svg
@@ -2694,6 +2713,7 @@ Array [
                   "height": 32,
                 }
               }
+              tabIndex={0}
               type="button"
             >
               <svg
@@ -2720,6 +2740,7 @@ Array [
                   "height": 32,
                 }
               }
+              tabIndex={0}
               type="button"
             >
               <svg
@@ -2811,6 +2832,7 @@ Array [
             disabled={false}
             onChange={[Function]}
             required={true}
+            tabIndex={0}
             type="text"
             value=""
           />
@@ -2824,6 +2846,7 @@ Array [
                 "height": 28,
               }
             }
+            tabIndex={0}
             type="button"
           >
             <svg
@@ -2892,6 +2915,7 @@ Array [
             disabled={false}
             onChange={[Function]}
             required={false}
+            tabIndex={0}
             type="email"
             value=""
           />
@@ -2905,6 +2929,7 @@ Array [
                 "height": 28,
               }
             }
+            tabIndex={0}
             type="button"
           >
             <svg
@@ -2973,6 +2998,7 @@ Array [
             disabled={false}
             onChange={[Function]}
             required={false}
+            tabIndex={0}
             type="tel"
             value=""
           />
@@ -2986,6 +3012,7 @@ Array [
                 "height": 28,
               }
             }
+            tabIndex={0}
             type="button"
           >
             <svg
@@ -3027,6 +3054,7 @@ Array [
             disabled={false}
             onChange={[Function]}
             required={false}
+            tabIndex={0}
             type="url"
             value=""
           />
@@ -3040,6 +3068,7 @@ Array [
                 "height": 28,
               }
             }
+            tabIndex={0}
             type="button"
           >
             <svg
@@ -3081,6 +3110,7 @@ Array [
             disabled={false}
             onChange={[Function]}
             required={false}
+            tabIndex={0}
             type="password"
             value=""
           />
@@ -3168,6 +3198,7 @@ Array [
                   onClick={[Function]}
                   onKeyDown={[Function]}
                   role="button"
+                  tabIndex={0}
                 >
                   <span
                     className="wxc-select__label"
@@ -3211,6 +3242,7 @@ Array [
                   onClick={[Function]}
                   onKeyDown={[Function]}
                   role="button"
+                  tabIndex={0}
                 >
                   <span
                     className="wxc-select__label"
@@ -3272,6 +3304,7 @@ Array [
                   onClick={[Function]}
                   onKeyDown={[Function]}
                   role="button"
+                  tabIndex={0}
                 >
                   <span
                     className="wxc-select__label"
@@ -3315,6 +3348,7 @@ Array [
                   onClick={[Function]}
                   onKeyDown={[Function]}
                   role="button"
+                  tabIndex={0}
                 >
                   <span
                     className="wxc-select__label"

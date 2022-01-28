@@ -90,7 +90,7 @@ Button.defaultProps = {
   pressed: false,
   style: {},
   size: 32,
-  tabIndex: undefined,
+  tabIndex: 0,
   tooltip: '',
   type: 'default',
 };

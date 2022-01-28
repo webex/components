@@ -71,6 +71,6 @@ OptionsList.defaultProps = {
   onBlur: undefined,
   options: [],
   selected: '',
-  tabIndex: undefined,
+  tabIndex: 0,
   withKey: false,
 };

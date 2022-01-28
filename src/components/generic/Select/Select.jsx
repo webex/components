@@ -148,7 +148,7 @@ Select.defaultProps = {
   placeholder: undefined,
   required: false,
   style: undefined,
-  tabIndex: undefined,
+  tabIndex: 0,
   tooltip: undefined,
   value: '',
 };
