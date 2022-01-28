@@ -18,14 +18,18 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-option;
   }
 
   .#{$C}__check {
-    background: var(--wxc-options-list--item--selected--background);
-    color: var(--wxc-options-list--item--selected--color);
-    border: var(--wxc-options-list--item--selected--border);
+    color: var(--wxc-options-list--checked-icon--color);
     margin-left: 0.25rem;
 
     &--invisible {
       visibility: hidden;
     }
+  }
+
+  &[aria-selected="true"] {
+    background: var(--wxc-options-list--item--selected--background);
+    color: var(--wxc-options-list--item--selected--color);
+    border: var(--wxc-options-list--item--selected--border);
   }
 
   &:hover {

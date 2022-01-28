@@ -12,52 +12,6 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-options-list;
     list-style: none;
     margin: 0;
     padding: 0;
-
-    .#{$C}__option {
-      padding: 0.5rem 0.75rem;
-      border-radius: 0.5rem;
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      color: var(--wxc-text-color);
-
-      .#{$C}__label {
-        flex: 1;
-        display: block;
-        font-size: 1rem;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-      }
-
-      .#{$C}__check {
-        background: var(--wxc-options-list--item--selected--background);
-        color: var(--wxc-options-list--item--selected--color);
-        border: var(--wxc-options-list--item--selected--border);
-        margin-left: 0.25rem;
-
-        &--invisible {
-          visibility: hidden;
-        }
-      }
-
-      &:hover {
-        background: var(--wxc-options-list--item--hover--background);
-        color: var(--wxc-options-list--item--hover--color);
-        border: var(--wxc-options-list--item--hover--border);
-      }
-
-      &:active {
-        background: var(--wxc-options-list--item--active--background);
-        color: var(--wxc-options-list--item--active--color);
-        border: var(--wxc-options-list--item--active--border);
-      }
-
-      &:focus-visible {
-        outline: var(--wxc-options-list--item--focus--outline);
-        box-shadow: var(--wxc-options-list--item--focus--box-shadow);
-      }
-    }
   }
 }
 
