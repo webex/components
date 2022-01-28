@@ -39,14 +39,14 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-select;
   &:not(.#{$C}--disabled) {
     .#{$C}__selected-option {
       background: var(--wxc-select--normal--background);
-      border: var(--wcx-select--normal--border);
+      border: var(--wxc-select--normal--border);
       box-shadow: var(--wxc-select--normal--box-shadow);
       color: var(--wxc-select--normal--color);
       cursor: pointer;
 
       &:hover {
         background: var(--wxc-select--hover--background);
-        border: var(--wcx-select--hover--border);
+        border: var(--wxc-select--hover--border);
         box-shadow: var(--wxc-select--hover--box-shadow);
         color: var(--wxc-select--hover--color);
       }
@@ -70,7 +70,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-select;
   &--disabled {
     .#{$C}__selected-option {
       background: var(--wxc-select--disabled--background);
-      border: var(--wcx-select--disabled--border);
+      border: var(--wxc-select--disabled--border);
       color: var(--wxc-select--disabled--color);
       cursor: default;
     }
