@@ -108,6 +108,12 @@ export function pad2Zeros(value) {
   return String(value || '').padStart(2, '0');
 }
 
+export function mapValues(object, mapper) {
+  return Object.fromEntries(Object.entries(object).map(([key, value]) => (
+    [key, mapper(value, key)]
+  )));
+}
+
 export default {
   deepMerge,
   chainWith,
@@ -115,4 +121,5 @@ export default {
   clamp,
   range,
   pad2Zeros,
+  mapValues,
 };
