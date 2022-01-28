@@ -1,3 +1,10 @@
+## [1.234.1](https://github.com/webex/components/compare/v1.234.0...v1.234.1) (2022-01-28)
+
+
+### Bug Fixes
+
+* **Select:** modify incorrect values for scss variables ([a9044f3](https://github.com/webex/components/commit/a9044f3f90e3cdf2691302944ebf348a97a65f45))
+
 # [1.234.0](https://github.com/webex/components/compare/v1.233.0...v1.234.0) (2022-01-27)
 
 
