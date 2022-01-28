@@ -4,6 +4,7 @@ import webexComponentClasses from '../../helpers';
 import AdaptiveCardContext from '../context/adaptive-card-context';
 import {acPropTypes, registerComponent} from '../Component/Component';
 import InputField from '../../generic/InputField/InputField';
+import Textbox from '../../inputs/Textbox/Textbox';
 
 /**
  * Adaptive Cards Input.Text component
@@ -44,25 +45,39 @@ export default function InputText({data, className, style}) {
   ]);
 
   return (
-    <InputField
-      className={cssClasses}
-      style={style}
-      maxLength={data.maxLength}
-      placeholder={data.placeholder}
-      pattern={data.regex}
-      type={data.style}
-      value={getValue(data.id)}
-      error={getError(data.id)}
-      required={data.isRequired}
-      label={data.label}
-      onChange={(value) => setValue(data.id, value)}
-    />
+    !data.isMultiline ? (
+      <InputField
+        className={cssClasses}
+        error={getError(data.id)}
+        label={data.label}
+        maxLength={data.maxLength}
+        onChange={(value) => setValue(data.id, value)}
+        pattern={data.regex}
+        placeholder={data.placeholder}
+        required={data.isRequired}
+        style={style}
+        type={data.style}
+        value={getValue(data.id)}
+      />
+    ) : (
+      <Textbox
+        className={cssClasses}
+        error={getError(data.id)}
+        label={data.label}
+        maxLength={data.maxLength}
+        onChange={(value) => setValue(data.id, value)}
+        placeholder={data.placeholder}
+        required={data.isRequired}
+        style={style}
+        value={getValue(data.id)}
+      />
+    )
   );
 }
 
 InputText.propTypes = {
-  data: PropTypes.shape().isRequired,
   className: PropTypes.string,
+  data: PropTypes.shape().isRequired,
   style: PropTypes.shape(),
 };
 

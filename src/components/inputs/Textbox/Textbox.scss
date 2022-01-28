@@ -2,10 +2,12 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-textbox;
 
 .#{$C} {
   &__control {
+    box-sizing: border-box;
+    width: 100%;
+    height: 5rem;
     background: var(--wxc-input-field--normal--background);
     color: var(--wxc-input-field--normal--color);
     border: var(--wxc-input-field--normal--border);
-    box-shadow: var(--wxc-input-field--normal--box-shadow);
     border-radius: 0.5rem;
     line-height: 1.5;
     font-family: #{$brand-font-regular};
@@ -17,7 +19,6 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-textbox;
       background: var(--wxc-input-field--hover--background);
       color: var(--wxc-input-field--hover--color);
       border: var(--wxc-input-field--hover--border);
-      box-shadow: var(--wxc-input-field--hover--box-shadow);
     }
 
     &:active {

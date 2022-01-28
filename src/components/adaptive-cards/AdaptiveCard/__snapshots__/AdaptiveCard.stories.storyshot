@@ -5440,6 +5440,84 @@ Array [
       }
     />
     <div
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+    >
+      Multiline text input:
+    </div>
+    <div
+      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      style={
+        Object {
+          "style": undefined,
+        }
+      }
+    />
+    <label
+      className="wxc-label wxc-textbox wxc-adaptive-cards-input-text wxc-ac wxc-ac-is-visible--true"
+    >
+      <div
+        className="wxc-label__control"
+        style={Object {}}
+      >
+        <textarea
+          aria-label=""
+          className="wxc-textbox__control"
+          disabled={false}
+          maxLength={500}
+          onChange={[Function]}
+          placeholder="enter comment"
+          value=""
+        />
+      </div>
+    </label>
+    <div
+      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      style={
+        Object {
+          "style": undefined,
+        }
+      }
+    />
+    <div
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+    >
+      Pre-filled value:
+    </div>
+    <div
+      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      style={
+        Object {
+          "style": undefined,
+        }
+      }
+    />
+    <label
+      className="wxc-label wxc-textbox wxc-adaptive-cards-input-text wxc-ac wxc-ac-is-visible--true"
+    >
+      <div
+        className="wxc-label__control"
+        style={Object {}}
+      >
+        <textarea
+          aria-label=""
+          className="wxc-textbox__control"
+          disabled={false}
+          maxLength={500}
+          onChange={[Function]}
+          placeholder="enter comment"
+          value="This value was pre-filled"
+        />
+      </div>
+    </label>
+    <div
+      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      style={
+        Object {
+          "style": undefined,
+        }
+      }
+    />
+    <div
       className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
