@@ -1,3 +1,10 @@
+# [1.236.0](https://github.com/webex/components/compare/v1.235.0...v1.236.0) (2022-01-28)
+
+
+### Features
+
+* **AdaptiveCardsInputTime:** implement Input.Time component ([631f4b8](https://github.com/webex/components/commit/631f4b8c3c94861558b65ab324ba5dff07cb23b4))
+
 # [1.235.0](https://github.com/webex/components/compare/v1.234.1...v1.235.0) (2022-01-28)
 
 
