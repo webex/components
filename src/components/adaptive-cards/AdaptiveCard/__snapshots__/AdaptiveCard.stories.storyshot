@@ -4628,11 +4628,7 @@ Array [
         >
           <div
             className="wxc-radio-button__background"
-          >
-            <div
-              className="wxc-radio-button__foreground"
-            />
-          </div>
+          />
           <span
             className="wxc-radio-button__title"
           >
@@ -4696,11 +4692,7 @@ Array [
         >
           <div
             className="wxc-radio-button__background"
-          >
-            <div
-              className="wxc-radio-button__foreground"
-            />
-          </div>
+          />
           <span
             className="wxc-radio-button__title"
           >
@@ -4719,11 +4711,7 @@ Array [
         >
           <div
             className="wxc-radio-button__background"
-          >
-            <div
-              className="wxc-radio-button__foreground"
-            />
-          </div>
+          />
           <span
             className="wxc-radio-button__title"
           >
