@@ -13,7 +13,7 @@ import {AdapterContext} from './contexts';
  * Custom hook that returns an adaptive card, given an activity id
  *
  * @param {string} activityID  ID of the activity containing the card
- * @returns {object} The activity card definition
+ * @returns {Array.<object, Function>}  The activity card definition and submit data function that returns an observable
  */
 export default function useAdaptiveCard(activityID) {
   const [card, setCard] = useState({});
@@ -35,5 +35,5 @@ export default function useAdaptiveCard(activityID) {
     return cleanup;
   }, [activitiesAdapter, activityID]);
 
-  return card;
+  return [card, (inputs) => activitiesAdapter.postAction(activityID, inputs)];
 }

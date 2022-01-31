@@ -63,4 +63,68 @@ export default {
     created: 'August 5, 2020 11:08:00',
     displayHeader: true,
   },
+  activity9: {
+    ID: 'activity9',
+    roomID: 'room1',
+    text: 'Adaptive card activity',
+    personID: 'user3',
+    created: 'February 1, 2022 13:00:00',
+    displayHeader: true,
+    card: {
+      $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
+      type: 'AdaptiveCard',
+      version: '1.2',
+      body: [
+        {
+          type: 'TextBlock',
+          text: 'Please fill out and submit this form',
+        },
+        {
+          type: 'Input.Text',
+          id: 'firstName',
+          placeholder: 'What is your first name?',
+        },
+        {
+          type: 'Input.Text',
+          id: 'lastName',
+          placeholder: 'What is your last name?',
+        },
+      ],
+      actions: [
+        {
+          type: 'Action.Submit',
+          title: 'Submit',
+          data: {
+            x: 13,
+          },
+        },
+      ],
+    },
+    actions: [
+      {
+        actionID: 'action-activity9-1',
+        personID: 'user1',
+        roomID: 'room1',
+        type: 'submit',
+        activityID: 'activity9',
+        inputs: {
+          firstName: 'Barbara',
+          lastName: 'German',
+        },
+        created: 'February 2, 2022 13:00:00',
+      },
+      {
+        actionID: 'action-activity9-2',
+        personID: 'user1',
+        roomID: 'room1',
+        type: 'submit',
+        activityID: 'activity9',
+        inputs: {
+          firstName: 'Giacomo',
+          lastName: 'Edwards',
+        },
+        created: 'February 1, 2022 14:00:00',
+      },
+    ],
+  },
 };

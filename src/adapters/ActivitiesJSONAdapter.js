@@ -1,6 +1,16 @@
 import {ActivitiesAdapter} from '@webex/component-adapter-interfaces';
 import {Observable} from 'rxjs';
 
+const EMPTY_ACTION = {
+  actionID: null,
+  personID: null,
+  roomID: null,
+  type: 'submit',
+  activityID: null,
+  inputs: null,
+  created: null,
+};
+
 // TODO: Figure out how to import JS Doc definitions and remove duplication.
 /**
  * An activity a person performs in Webex.
@@ -57,6 +67,41 @@ export default class ActivitiesJSONAdapter extends ActivitiesAdapter {
       }
 
       observer.complete();
+    });
+  }
+
+  /**
+   * Posts an attachment action, returns an observable that emits the created action
+   *
+   * @param {string} activityID  ID of the activity corresponding to this submit action
+   * @param {object} inputs  The message content
+   * @returns {Observable.<object>} Observable stream that emits data of the newly created action
+   */
+  postAction(activityID, inputs) {
+    return Observable.create((observer) => {
+      const activity = this.datasource[activityID];
+
+      if (activity) {
+        const actionID = `action-${activityID}-${activity?.actions.length + 1}`;
+        const personID = 'user1';
+        const newAction = {
+          ...EMPTY_ACTION,
+          actionID,
+          personID,
+          roomID: activity.roomID,
+          activityID,
+          inputs,
+          created: new Date().toISOString(),
+        };
+        const activityActions = this.datasource[activityID].actions;
+
+        activityActions.push(newAction);
+
+        observer.next(newAction);
+        observer.complete();
+      } else {
+        observer.error(new Error(`Unable to create an attachment action for activity with id "${activityID}"`));
+      }
     });
   }
 }

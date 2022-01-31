@@ -90,3 +90,29 @@ export const MultiLine = Template.bind({});
 MultiLine.args = {
   activityID: 'activity3',
 };
+
+export const AdaptiveCard = Template.bind({});
+AdaptiveCard.args = {
+  activityID: 'activity9',
+};
+// Modify time data for actions on the fly
+AdaptiveCard.parameters = {
+  mockData: {
+    activities: {
+      ...activities,
+      activity9: {
+        ...activities.activity9,
+        actions: [
+          {
+            ...activities.activity9.actions[0],
+            created: new Date().toISOString(),
+          },
+          {
+            ...activities.activity9.actions[1],
+            created: new Date().toISOString(),
+          },
+        ],
+      },
+    },
+  },
+};
