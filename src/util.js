@@ -108,6 +108,22 @@ export function pad2Zeros(value) {
   return String(value || '').padStart(2, '0');
 }
 
+/**
+ * A callback that receives a value and a key and returns an updated value.
+ *
+ * @callback MapperCallback
+ * @param {*} value  The value to update.
+ * @param {string} key  The key corresponding to the value to update.
+ * @returns {*} The updated value
+ */
+
+/**
+ * Maps the values of an object
+ *
+ * @param {object} object  The object to modify
+ * @param {MapperCallback} mapper  Mapper function
+ * @returns {object} Returns an updated object with the same keys and updated object values
+ */
 export function mapValues(object, mapper) {
   return Object.fromEntries(Object.entries(object).map(([key, value]) => (
     [key, mapper(value, key)]
