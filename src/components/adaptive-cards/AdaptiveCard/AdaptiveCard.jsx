@@ -131,7 +131,7 @@ export default function AdaptiveCard({
 
   const getValue = (id, defval = '') => ((id in inputs && inputs[id].value !== undefined) ? inputs[id].value : defval);
 
-  const getAllValues = mapValues(inputs, (input) => (input.value));
+  const getAllValues = () => mapValues(inputs, (input) => (input.value));
 
   const getError = (id) => inputs[id]?.error;
 
