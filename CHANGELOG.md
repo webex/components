@@ -1,3 +1,10 @@
+# [1.238.0](https://github.com/webex/components/compare/v1.237.0...v1.238.0) (2022-01-31)
+
+
+### Features
+
+* **Select:** allow select options to expand horizontally ([fabfd29](https://github.com/webex/components/commit/fabfd29fa3636bef2c7745ba6107fa3b07e921e3))
+
 # [1.237.0](https://github.com/webex/components/compare/v1.236.0...v1.237.0) (2022-01-31)
 
 
