@@ -1,3 +1,18 @@
+# [1.237.0](https://github.com/webex/components/compare/v1.236.0...v1.237.0) (2022-01-31)
+
+
+### Bug Fixes
+
+* **InputField:** prevent clear button overlapping inserted number ([3727076](https://github.com/webex/components/commit/37270760ef610d634bc847b16a48e2a07d2873d7))
+* **inputs:** set default value for tabIndex to zero ([49758c4](https://github.com/webex/components/commit/49758c4ec757d8badc9c90585d838dceec034cba))
+* **Option:** change the color of the check icon and remove the border and background from it ([84da4d9](https://github.com/webex/components/commit/84da4d9af34bdb090d7ea23018fca3c032b3d3f4))
+
+
+### Features
+
+* **AdaptiveCard:** implement spacing and separator properties ([72a35da](https://github.com/webex/components/commit/72a35daf5abc257503247db8c4ac5c00a83aa819))
+* **AdaptiveCardsActionSubmit:** create Action.Submit component ([70cef5d](https://github.com/webex/components/commit/70cef5d404aa7fc03d9ad28bce210ca3dca87002))
+
 # [1.236.0](https://github.com/webex/components/compare/v1.235.0...v1.236.0) (2022-01-28)
 
 
