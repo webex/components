@@ -1,5 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Messaging/Webex Activity Adaptive Card 1`] = `
+Array [
+  <div
+    className="wxc-activity"
+  >
+    <div
+      className="wxc-activity-header"
+    >
+      <div
+        className="wxc-avatar wxc-activity-header__avatar"
+      >
+        <div
+          className="wxc-avatar__content"
+        >
+          <svg
+            className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
+            viewBox="0 0 40 40"
+          >
+            <text
+              x="50%"
+              y="50%"
+            >
+              BS
+            </text>
+          </svg>
+          <img
+            alt="avatar"
+            className="wxc-avatar__image"
+            onError={[Function]}
+            src="./images/brenda.png"
+          />
+        </div>
+      </div>
+      <div
+        className="wxc-activity-header__author"
+      >
+        <span>
+          Brenda Song
+        </span>
+        <span
+          className="wxc-activity-header__timestamp"
+        >
+          02/01/2022, 1:00 PM
+        </span>
+      </div>
+    </div>
+    <div
+      className="wxc-activity__content"
+    >
+      Adaptive card activity
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
 exports[`Storyshots Messaging/Webex Activity Created Long Back 1`] = `
 Array [
   <div
