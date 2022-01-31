@@ -23,6 +23,7 @@ export default function InputTime({data, className, style}) {
     setValue,
     getValue,
     setInput,
+    getError,
   } = useContext(AdaptiveCardContext);
   const timeParts = getValue(data.id).split(':');
   const hours = (timeParts[0] || '').padStart(2, '0');
@@ -52,7 +53,7 @@ export default function InputTime({data, className, style}) {
   return (
     <Label
       className={cssClasses}
-      error={data.errorMessage}
+      error={getError(data.id)}
       label={data.label}
       required={data.isRequired}
       style={style}
