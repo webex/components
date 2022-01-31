@@ -1,3 +1,12 @@
+# [1.239.0](https://github.com/webex/components/compare/v1.238.0...v1.239.0) (2022-01-31)
+
+
+### Features
+
+* **AdaptiveCard:** add jsdoc for mapValues() and use getError() in Input.Time component ([71be868](https://github.com/webex/components/commit/71be86864d4764e70913cc57e9150821cc8bac67))
+* **AdaptiveCardsInputText:** render Textbox component depending on isMultiline property ([0d46409](https://github.com/webex/components/commit/0d4640948d01bc5f83a9995f917bbe4433b50efd))
+* **inputs:** create Toggle component ([76ac323](https://github.com/webex/components/commit/76ac32364d032cd04481bb17b28b7c2d223e3666))
+
 # [1.238.0](https://github.com/webex/components/compare/v1.237.0...v1.238.0) (2022-01-31)
 
 
