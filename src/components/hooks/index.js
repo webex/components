@@ -6,6 +6,7 @@ export {default as useActivityStream} from './useActivityStream';
 export {default as useAdaptiveCard} from './useAdaptiveCard';
 export {default as useAutoFocus} from './useAutoFocus';
 export {default as useElementDimensions} from './useElementDimensions';
+export {default as useElementPosition} from './useElementPosition';
 export {default as useMe} from './useMe';
 export {default as useMeeting} from './useMeeting';
 export {default as useMeetingControl} from './useMeetingControl';

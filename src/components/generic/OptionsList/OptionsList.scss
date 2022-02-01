@@ -7,6 +7,8 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-options-list;
   color: var(--wxc-options-list--normal--color);
   border: var(--wxc-options-list--normal--border);
   padding: 0.5rem;
+  overflow: auto;
+  min-height: 1.5rem;
 
   .#{$C}__list {
     list-style: none;
@@ -14,4 +16,3 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-options-list;
     padding: 0;
   }
 }
-
