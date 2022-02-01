@@ -26,7 +26,8 @@ export default function Label({
   const [cssClasses, sc] = webexComponentClasses('label', className);
 
   return (
-    /* eslint-disable-next-line jsx-a11y/label-has-associated-control */
+    // disabling label-has-associated-control as eslint does not see role attribute as a nested control
+    // eslint-disable-next-line jsx-a11y/label-has-associated-control
     <label className={cssClasses}>
       {
         label && (

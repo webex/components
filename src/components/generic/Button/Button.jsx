@@ -49,6 +49,7 @@ export default function Button({
         type="button"
         onClick={onClick}
         aria-label={ariaLabel}
+        // disabling no-autofocus because otherwise this element cannot be autofocused depending on the autoFocus prop
         // eslint-disable-next-line jsx-a11y/no-autofocus
         autoFocus={autoFocus}
         tabIndex={tabIndex}
