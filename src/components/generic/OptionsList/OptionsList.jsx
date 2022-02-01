@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 
 import webexComponentClasses from '../../helpers';
+import {useRef, useElementPosition} from '../../hooks';
 import Option from './Option';
 
 /**
@@ -27,6 +28,9 @@ export default function OptionsList({
   withKey,
 }) {
   const [cssClasses, sc] = webexComponentClasses('options-list', className);
+  const ref = useRef();
+  const position = useElementPosition(ref);
+  const [maxHeight, setMaxHeight] = useState(0);
 
   const onKeyDown = (event) => {
     if (event.key === 'Tab') {
@@ -34,9 +38,15 @@ export default function OptionsList({
     }
   };
 
+  useEffect(() => {
+    if (position) {
+      setMaxHeight(window.innerHeight - position.top - window.scrollY - 50);
+    }
+  }, [position]);
+
   return (
-    <div className={cssClasses}>
-      <ul role="menu" className={sc('list')} tabIndex={tabIndex} onKeyDown={onKeyDown}>
+    <div ref={ref} className={cssClasses}>
+      <ul style={{maxHeight}} role="menu" className={sc('list')} tabIndex={tabIndex} onKeyDown={onKeyDown}>
         {options.map((option, index) => (
           <Option
             key={option.value}
