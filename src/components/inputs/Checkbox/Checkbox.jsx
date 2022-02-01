@@ -44,6 +44,8 @@ export default function Checkbox({
   };
 
   return (
+    // disabling label-has-associated-control as eslint does not see role="checkbox" as a nested control
+    // disabling no-noninteractive-element-interactions because otherwise clicking the label does not activate the control
     // eslint-disable-next-line jsx-a11y/label-has-associated-control,jsx-a11y/no-noninteractive-element-interactions
     <label
       className={cssClasses}
