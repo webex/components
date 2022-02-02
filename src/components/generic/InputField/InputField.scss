@@ -140,13 +140,6 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field;
       box-shadow: var(--wxc-input-field--active--box-shadow);
     }
 
-    &:focus {
-      background: var(--wxc-input-field--focus--background);
-      border: var(--wxc-input-field--focus--border);
-      color: var(--wxc-input-field--focus--color);
-      box-shadow: var(--wxc-input-field--focus--box-shadow);
-    }
-
     &:disabled {
       background: var(--wxc-input-field--disabled--background);
       border: var(--wxc-input-field--disabled--border);
