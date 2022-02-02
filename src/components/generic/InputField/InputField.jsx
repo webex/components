@@ -80,26 +80,6 @@ export default function InputField({
       style={style}
     >
       <div className={sc('form-control')}>
-        <input
-          type={isPwdRevealed ? 'text' : type}
-          value={value}
-          name={name}
-          className={sc('input')}
-          placeholder={placeholder}
-          max={max}
-          min={min}
-          maxLength={maxLength}
-          pattern={pattern}
-          onChange={handleChange}
-          disabled={disabled}
-          aria-label={ariaLabel}
-          required={required}
-          // disabling no-autofocus because otherwise this element cannot be autofocused depending on the autoFocus prop
-          // eslint-disable-next-line jsx-a11y/no-autofocus
-          autoFocus={autoFocus}
-          tabIndex={tabIndex}
-          ref={inputRef}
-        />
         {type === 'password' && value && (
           <Button
             type="ghost"
@@ -127,6 +107,26 @@ export default function InputField({
             </Button>
           </div>
         )}
+        <input
+          type={isPwdRevealed ? 'text' : type}
+          value={value}
+          name={name}
+          className={sc('input')}
+          placeholder={placeholder}
+          max={max}
+          min={min}
+          maxLength={maxLength}
+          pattern={pattern}
+          onChange={handleChange}
+          disabled={disabled}
+          aria-label={ariaLabel}
+          required={required}
+          // disabling no-autofocus because otherwise this element cannot be autofocused depending on the autoFocus prop
+          // eslint-disable-next-line jsx-a11y/no-autofocus
+          autoFocus={autoFocus}
+          tabIndex={tabIndex}
+          ref={inputRef}
+        />
       </div>
     </Label>
   );

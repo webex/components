@@ -468,17 +468,6 @@ Array [
         <div
           className="wxc-input-field__form-control"
         >
-          <input
-            autoFocus={false}
-            className="wxc-input-field__input"
-            disabled={false}
-            onChange={[Function]}
-            placeholder="What is your first name?"
-            required={true}
-            tabIndex={0}
-            type="text"
-            value=""
-          />
           <button
             autoFocus={false}
             className="wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
@@ -507,6 +496,17 @@ Array [
             </svg>
           </button>
           
+          <input
+            autoFocus={false}
+            className="wxc-input-field__input"
+            disabled={false}
+            onChange={[Function]}
+            placeholder="What is your first name?"
+            required={true}
+            tabIndex={0}
+            type="text"
+            value=""
+          />
         </div>
       </div>
     </label>
@@ -528,17 +528,6 @@ Array [
         <div
           className="wxc-input-field__form-control"
         >
-          <input
-            autoFocus={false}
-            className="wxc-input-field__input"
-            disabled={false}
-            onChange={[Function]}
-            placeholder="What is your last name?"
-            required={false}
-            tabIndex={0}
-            type="text"
-            value=""
-          />
           <button
             autoFocus={false}
             className="wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
@@ -567,6 +556,17 @@ Array [
             </svg>
           </button>
           
+          <input
+            autoFocus={false}
+            className="wxc-input-field__input"
+            disabled={false}
+            onChange={[Function]}
+            placeholder="What is your last name?"
+            required={false}
+            tabIndex={0}
+            type="text"
+            value=""
+          />
         </div>
       </div>
     </label>
@@ -588,19 +588,6 @@ Array [
         <div
           className="wxc-input-field__form-control"
         >
-          <input
-            autoFocus={false}
-            className="wxc-input-field__input"
-            disabled={false}
-            max={10}
-            min={1}
-            onChange={[Function]}
-            placeholder="Enter a number between 1 and 10"
-            required={false}
-            tabIndex={0}
-            type="number"
-            value={3}
-          />
           <button
             autoFocus={false}
             className="wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
@@ -687,6 +674,19 @@ Array [
             </button>
             
           </div>
+          <input
+            autoFocus={false}
+            className="wxc-input-field__input"
+            disabled={false}
+            max={10}
+            min={1}
+            onChange={[Function]}
+            placeholder="Enter a number between 1 and 10"
+            required={false}
+            tabIndex={0}
+            type="number"
+            value={3}
+          />
         </div>
       </div>
     </label>
@@ -4965,19 +4965,6 @@ Array [
         <div
           className="wxc-input-field__form-control"
         >
-          <input
-            autoFocus={false}
-            className="wxc-input-field__input"
-            disabled={false}
-            max={10}
-            min={1}
-            onChange={[Function]}
-            placeholder="Enter a number"
-            required={false}
-            tabIndex={0}
-            type="number"
-            value={3}
-          />
           <button
             autoFocus={false}
             className="wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
@@ -5064,6 +5051,19 @@ Array [
             </button>
             
           </div>
+          <input
+            autoFocus={false}
+            className="wxc-input-field__input"
+            disabled={false}
+            max={10}
+            min={1}
+            onChange={[Function]}
+            placeholder="Enter a number"
+            required={false}
+            tabIndex={0}
+            type="number"
+            value={3}
+          />
         </div>
       </div>
     </label>
@@ -5161,16 +5161,6 @@ Array [
         <div
           className="wxc-input-field__form-control"
         >
-          <input
-            autoFocus={false}
-            className="wxc-input-field__input"
-            disabled={false}
-            onChange={[Function]}
-            required={true}
-            tabIndex={0}
-            type="text"
-            value=""
-          />
           <button
             autoFocus={false}
             className="wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
@@ -5199,6 +5189,16 @@ Array [
             </svg>
           </button>
           
+          <input
+            autoFocus={false}
+            className="wxc-input-field__input"
+            disabled={false}
+            onChange={[Function]}
+            required={true}
+            tabIndex={0}
+            type="text"
+            value=""
+          />
         </div>
       </div>
     </label>
@@ -5225,16 +5225,6 @@ Array [
         <div
           className="wxc-input-field__form-control"
         >
-          <input
-            autoFocus={false}
-            className="wxc-input-field__input"
-            disabled={false}
-            onChange={[Function]}
-            required={false}
-            tabIndex={0}
-            type="email"
-            value=""
-          />
           <button
             autoFocus={false}
             className="wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
@@ -5263,6 +5253,16 @@ Array [
             </svg>
           </button>
           
+          <input
+            autoFocus={false}
+            className="wxc-input-field__input"
+            disabled={false}
+            onChange={[Function]}
+            required={false}
+            tabIndex={0}
+            type="email"
+            value=""
+          />
         </div>
       </div>
     </label>
@@ -5289,16 +5289,6 @@ Array [
         <div
           className="wxc-input-field__form-control"
         >
-          <input
-            autoFocus={false}
-            className="wxc-input-field__input"
-            disabled={false}
-            onChange={[Function]}
-            required={false}
-            tabIndex={0}
-            type="tel"
-            value=""
-          />
           <button
             autoFocus={false}
             className="wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
@@ -5327,6 +5317,16 @@ Array [
             </svg>
           </button>
           
+          <input
+            autoFocus={false}
+            className="wxc-input-field__input"
+            disabled={false}
+            onChange={[Function]}
+            required={false}
+            tabIndex={0}
+            type="tel"
+            value=""
+          />
         </div>
       </div>
     </label>
@@ -5353,16 +5353,6 @@ Array [
         <div
           className="wxc-input-field__form-control"
         >
-          <input
-            autoFocus={false}
-            className="wxc-input-field__input"
-            disabled={false}
-            onChange={[Function]}
-            required={false}
-            tabIndex={0}
-            type="url"
-            value=""
-          />
           <button
             autoFocus={false}
             className="wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
@@ -5391,6 +5381,16 @@ Array [
             </svg>
           </button>
           
+          <input
+            autoFocus={false}
+            className="wxc-input-field__input"
+            disabled={false}
+            onChange={[Function]}
+            required={false}
+            tabIndex={0}
+            type="url"
+            value=""
+          />
         </div>
       </div>
     </label>
@@ -5417,6 +5417,7 @@ Array [
         <div
           className="wxc-input-field__form-control"
         >
+          
           <input
             autoFocus={false}
             className="wxc-input-field__input"
@@ -5427,7 +5428,6 @@ Array [
             type="password"
             value=""
           />
-          
         </div>
       </div>
     </label>

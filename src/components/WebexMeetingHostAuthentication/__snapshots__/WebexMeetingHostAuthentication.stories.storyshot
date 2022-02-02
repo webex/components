@@ -43,6 +43,7 @@ Array [
           <div
             className="wxc-input-field__form-control"
           >
+            
             <input
               aria-label="The host key is generated when a meeting is scheduled."
               autoFocus={true}
@@ -55,7 +56,6 @@ Array [
               type="password"
               value=""
             />
-            
           </div>
         </div>
         
