@@ -1,3 +1,10 @@
+## [1.240.1](https://github.com/webex/components/compare/v1.240.0...v1.240.1) (2022-02-03)
+
+
+### Bug Fixes
+
+* **InputTime:** display the missing hours and minutes ([8656d90](https://github.com/webex/components/commit/8656d908324338cb7d9fc008848fc0a51aeb72a6))
+
 # [1.240.0](https://github.com/webex/components/compare/v1.239.2...v1.240.0) (2022-02-03)
 
 
