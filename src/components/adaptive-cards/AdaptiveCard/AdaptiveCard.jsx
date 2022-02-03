@@ -42,6 +42,20 @@ function AdaptiveCardInternal({
 }) {
   const [cssClasses] = webexComponentClasses('adaptive-card', [className, 'wxc-ac-container--has-padding']);
 
+  if (data.$schema && data.$schema !== 'http://adaptivecards.io/schemas/adaptive-card.json') {
+    console.warn('Unknown AdaptiveCard schema:', data.$schema);
+  }
+
+  if (data.version) {
+    const version = parseFloat(data.version);
+
+    if (!version) {
+      console.warn(`Invalid version ${data.version}`);
+    } else if (version > 1.2) {
+      console.warn(`Adaptive card requires version ${data.version}, this renderer only supports version 1.2`);
+    }
+  }
+
   return (
     <div className={cssClasses} style={style}>
       {/* eslint-disable react/no-array-index-key */}
@@ -69,7 +83,9 @@ AdaptiveCardInternal.acPropTypes = {
   body: acPropTypes.children,
   minHeight: acPropTypes.minHeight,
   rtl: acPropTypes.rtl,
+  $schema: acPropTypes.$schema,
   type: acPropTypes.type,
+  version: acPropTypes.version,
   verticalContentAlignment: acPropTypes.verticalContentAlignment,
 };
 
@@ -98,6 +114,10 @@ export default function AdaptiveCard({
     $root: context,
   });
   const inherited = {};
+
+  if (!data.version) {
+    console.warn('AdaptiveCard missing version property');
+  }
 
   const [inputs, setInputs] = useState({});
   const [elements, setElements] = useState({});
