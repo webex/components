@@ -1,3 +1,10 @@
+# [1.240.0](https://github.com/webex/components/compare/v1.239.2...v1.240.0) (2022-02-03)
+
+
+### Features
+
+* **ActivitiesJsonAdapter:** implement postAction() and use it in useActivity hook ([52a1603](https://github.com/webex/components/commit/52a1603356aeafe41284d944ef1ce73eb9ea467f))
+
 ## [1.239.2](https://github.com/webex/components/compare/v1.239.1...v1.239.2) (2022-02-03)
 
 
