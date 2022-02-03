@@ -46,6 +46,7 @@ export const acPropTypes = {
   placeholder: 'placeholder',
   regex: 'regex',
   rtl: 'rtl',
+  $schema: '$schema',
   separator: 'separator',
   size: 'size',
   spacing: 'spacing',
@@ -59,6 +60,7 @@ export const acPropTypes = {
   underline: 'underline',
   url: 'url',
   value: 'value',
+  version: 'version',
   verticalContentAlignment: 'vertical-content-alignment',
   weight: 'weight',
   width: 'width',
@@ -181,6 +183,7 @@ export default function Component({
       case acPropTypes.minValue:
       case acPropTypes.placeholder:
       case acPropTypes.regex:
+      case acPropTypes.$schema:
       case acPropTypes.separator:
       case acPropTypes.spacing:
       case acPropTypes.style:
@@ -193,6 +196,7 @@ export default function Component({
       case acPropTypes.type:
       case acPropTypes.url:
       case acPropTypes.value:
+      case acPropTypes.version:
         break;
       case acPropTypes.containerStyle:
         classes.push(getClass(propType, value));
