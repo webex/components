@@ -95,7 +95,7 @@ export function clamp(num, min, max) {
  * @returns {Array<number>} An array with all the numbers in the range [start, end]
  */
 export function range(start, end) {
-  return [...Array(end - start - 1).keys()].map((val) => start + val);
+  return [...Array(end - start + 1).keys()].map((val) => start + val);
 }
 
 /**
