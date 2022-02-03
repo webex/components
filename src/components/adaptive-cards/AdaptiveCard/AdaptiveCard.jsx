@@ -135,6 +135,11 @@ export default function AdaptiveCard({
 
   const getError = (id) => inputs[id]?.error;
 
+  /**
+   * Validates input values, returns true if all are valid, false if any is invalid
+   *
+   * @returns {boolean} True if all values are valid
+   */
   const validate = () => {
     const newInputs = mapValues(inputs, (input) => {
       let error;
@@ -156,7 +161,7 @@ export default function AdaptiveCard({
 
     setInputs(newInputs);
 
-    return Object.values(newInputs).some((input) => input.error);
+    return Object.values(newInputs).every((input) => !input.error);
   };
 
   const submit = (values) => onSubmit(values);

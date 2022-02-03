@@ -32,6 +32,8 @@ export default function ActionSubmit({className, data, style}) {
           values = {...values, ...data.data};
         }
         submit(values);
+      } else {
+        console.log('Submitted invalid values:', getAllValues());
       }
     } else {
       submit(data.data);
