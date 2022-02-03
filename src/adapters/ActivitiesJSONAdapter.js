@@ -60,8 +60,15 @@ export default class ActivitiesJSONAdapter extends ActivitiesAdapter {
    */
   getActivity(ID) {
     return Observable.create((observer) => {
-      if (this.datasource[ID]) {
-        observer.next(this.datasource[ID]);
+      const activity = this.datasource[ID];
+
+      if (activity) {
+        const card = activity.attachments && activity.attachments[0] && activity.attachments[0].contentType === 'application/vnd.microsoft.card.adaptive' ? activity.attachments[0].content : undefined;
+
+        observer.next({
+          ...this.datasource[ID],
+          card,
+        });
       } else {
         observer.error(new Error(`Could not find activity with ID "${ID}"`));
       }

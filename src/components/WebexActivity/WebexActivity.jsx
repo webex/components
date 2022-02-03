@@ -5,6 +5,7 @@ import webexComponentClasses from '../helpers';
 import {useActivity} from '../hooks';
 
 import ActivityHeader from './ActivityHeader';
+import WebexAdaptiveCard from '../WebexAdaptiveCard/WebexAdaptiveCard';
 
 /**
  * WebexActivity component displays activity content.
@@ -22,13 +23,17 @@ export default function WebexActivity({activityID, className, style}) {
     displayHeader,
     personID,
     text,
+    card,
   } = useActivity(activityID);
   const [cssClasses, sc] = webexComponentClasses('activity', className);
 
   return (
     <div className={cssClasses} key={ID} style={style}>
       {displayHeader && <ActivityHeader personID={personID} timestamp={created} />}
-      <div className={sc('content')}>{text}</div>
+      <div className={sc('content')}>
+        {text}
+        {card && <WebexAdaptiveCard activityID={ID} />}
+      </div>
     </div>
   );
 }
