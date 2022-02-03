@@ -1,3 +1,10 @@
+## [1.239.2](https://github.com/webex/components/compare/v1.239.1...v1.239.2) (2022-02-03)
+
+
+### Bug Fixes
+
+* **InputField:** remove focus on the increment controls after click ([2ecca21](https://github.com/webex/components/commit/2ecca21006f58e0593239a92ba91b5ea92d30bd3))
+
 ## [1.239.1](https://github.com/webex/components/compare/v1.239.0...v1.239.1) (2022-02-03)
 
 
