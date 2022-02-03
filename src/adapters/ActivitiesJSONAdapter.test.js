@@ -28,7 +28,10 @@ describe('Activities JSON Adapter', () => {
 
     test('emits an Activity object on subscription', (done) => {
       activitiesJSONAdapter.getActivity(activityID).subscribe((data) => {
-        expect(data).toEqual(testActivity);
+        expect(data).toEqual({
+          ...testActivity,
+          card: testActivity.attachments && testActivity.attachments[0].content,
+        });
         done();
       });
     });

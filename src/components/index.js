@@ -1,6 +1,7 @@
 export {default as WebexAvatar} from './WebexAvatar/WebexAvatar';
 export {default as WebexActivity} from './WebexActivity/WebexActivity';
 export {default as WebexActivityStream} from './WebexActivityStream/WebexActivityStream';
+export {default as WebexAdaptiveCard} from './WebexAdaptiveCard/WebexAdaptiveCard';
 export {default as WebexDataProvider} from './WebexDataProvider/WebexDataProvider';
 export {default as WebexInMeeting} from './WebexInMeeting/WebexInMeeting';
 export {default as WebexInterstitialMeeting} from './WebexInterstitialMeeting/WebexInterstitialMeeting';
