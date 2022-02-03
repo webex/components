@@ -1,3 +1,10 @@
+## [1.239.1](https://github.com/webex/components/compare/v1.239.0...v1.239.1) (2022-02-03)
+
+
+### Bug Fixes
+
+* **AdaptiveCardsActionSet:** add margin bottom to ActionSet ([6f2b63c](https://github.com/webex/components/commit/6f2b63c2686b20fa5ce3b6452b8278ec6f5226d4))
+
 # [1.239.0](https://github.com/webex/components/compare/v1.238.0...v1.239.0) (2022-01-31)
 
 
