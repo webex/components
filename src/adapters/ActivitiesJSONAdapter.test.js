@@ -6,11 +6,13 @@ import ActivitiesJSONAdapter from './ActivitiesJSONAdapter';
 describe('Activities JSON Adapter', () => {
   const activityID = 'activity9';
   let activitiesJSONAdapter;
+  let mockActivitiesString;
+  let mockActivitiesCopy;
   let testActivity;
 
   beforeEach(() => {
-    const mockActivitiesString = JSON.stringify(activities);
-    const mockActivitiesCopy = JSON.parse(mockActivitiesString);
+    mockActivitiesString = JSON.stringify(activities);
+    mockActivitiesCopy = JSON.parse(mockActivitiesString);
 
     activitiesJSONAdapter = new ActivitiesJSONAdapter(mockActivitiesCopy);
     testActivity = mockActivitiesCopy[activityID];
@@ -84,6 +86,56 @@ describe('Activities JSON Adapter', () => {
         () => {},
         (error) => {
           expect(error.message).toBe('Unable to create an attachment action for activity with id "activity10"');
+          done();
+        },
+      );
+    });
+  });
+
+  describe('postActivity()', () => {
+    const activityData = {
+      roomID: 'roomID',
+      text: 'text',
+      card: {
+        $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
+        type: 'AdaptiveCard',
+        version: '1.2',
+        body: [
+          {
+            type: 'TextBlock',
+            text: 'Adaptive Cards',
+            size: 'large',
+          },
+        ],
+        actions: [
+          {
+            type: 'Action.OpenUrl',
+            url: 'http://adaptivecards.io',
+            title: 'Learn More',
+          },
+        ],
+      },
+      displayHeader: true,
+    };
+
+    test('returns an observable', () => {
+      expect(isObservable(activitiesJSONAdapter.postActivity())).toBeTruthy();
+    });
+
+    test('emits the posted Activity object', (done) => {
+      activitiesJSONAdapter.postActivity(activityData).pipe(last()).subscribe((activity) => {
+        expect(activity).toMatchObject(mockActivitiesCopy[
+          Object.keys(mockActivitiesCopy).slice(-1)[0]
+        ]);
+        done();
+      });
+    });
+
+    test('emits an error on invalid room id', (done) => {
+      activitiesJSONAdapter.postActivity({roomID: undefined}).subscribe(
+        () => {},
+        (error) => {
+          expect(error.message).toBe('Unable to post an activity in room with id undefined');
           done();
         },
       );
