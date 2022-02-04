@@ -8,18 +8,20 @@ const componentTypes = {};
 const containerTypes = {};
 
 export const acPropTypes = {
-  action: 'action',
+  actions: 'actions',
   actionStyle: 'action-style',
+  altText: 'alt-text',
   associatedInputs: 'associated-inputs',
+  backgroundColor: 'background-color',
   backgroundImage: 'background-image',
   bleed: 'bleed',
+  card: 'card',
   children: 'children',
   color: 'color',
   containerStyle: 'container-style',
   data: 'data',
   defaultImageSize: 'default-image-size',
   errorMessage: 'error-message',
-  fallback: 'fallback',
   fontType: 'font-type',
   height: 'height',
   highlight: 'highlight',
@@ -30,6 +32,7 @@ export const acPropTypes = {
   imageStyle: 'image-style',
   inputStyle: 'input-style',
   isEnabled: 'is-enabled',
+  isMultiline: 'is-multi-line',
   isMultiSelect: 'is-multi-select',
   isRequired: 'is-required',
   isSubtle: 'is-subtle',
@@ -40,7 +43,6 @@ export const acPropTypes = {
   maxValue: 'max-value',
   minHeight: 'min-height',
   minValue: 'min-value',
-  mode: 'mode',
   placeholder: 'placeholder',
   regex: 'regex',
   rtl: 'rtl',
@@ -140,27 +142,29 @@ export default function Component({
 
     switch (propType) {
       case undefined:
-        console.log('[Component]', 'Unknown property', prop);
+        console.log(`[${data.type}]`, 'Unknown property', prop);
         break;
-      case acPropTypes.action:
+      case acPropTypes.actions:
+      case acPropTypes.altText:
       case acPropTypes.associatedInputs:
+      case acPropTypes.backgroundColor:
+      case acPropTypes.card:
       case acPropTypes.children:
       case acPropTypes.data:
       case acPropTypes.defaultImageSize:
       case acPropTypes.errorMessage:
-      case acPropTypes.fallback:
       case acPropTypes.iconUrl:
       case acPropTypes.id:
       case acPropTypes.label:
       case acPropTypes.maxLength:
       case acPropTypes.maxValue:
       case acPropTypes.minValue:
-      case acPropTypes.mode:
       case acPropTypes.placeholder:
       case acPropTypes.regex:
       case acPropTypes.separator:
       case acPropTypes.spacing:
       case acPropTypes.style:
+      case acPropTypes.isMultiline:
       case acPropTypes.isMultiSelect:
       case acPropTypes.isRequired:
       case acPropTypes.targetElements:

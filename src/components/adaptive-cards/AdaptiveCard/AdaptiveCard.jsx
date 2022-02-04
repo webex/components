@@ -60,10 +60,12 @@ AdaptiveCardInternal.defaultProps = {
 };
 
 AdaptiveCardInternal.acPropTypes = {
+  actions: acPropTypes.actions,
+  backgroundImage: acPropTypes.backgroundImage,
   body: acPropTypes.children,
-  type: acPropTypes.type,
   minHeight: acPropTypes.minHeight,
   rtl: acPropTypes.rtl,
+  type: acPropTypes.type,
   verticalContentAlignment: acPropTypes.verticalContentAlignment,
 };
 

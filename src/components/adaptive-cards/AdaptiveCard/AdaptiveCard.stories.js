@@ -149,7 +149,6 @@ const exampleAdaptiveCard = {
             },
           ],
           verticalContentAlignment: 'Center',
-          horizontalAlignment: 'Left',
           spacing: 'Small',
         },
       ],
@@ -165,7 +164,6 @@ const exampleAdaptiveCard = {
           },
         },
       ],
-      horizontalAlignment: 'Left',
       spacing: 'None',
     },
   ],
@@ -436,7 +434,6 @@ const exampleColumn = {
         },
         {
           type: 'Column',
-          horizontalAlignment: 'Center',
           verticalContentAlignment: 'Center',
           items: [
             {
@@ -1839,7 +1836,7 @@ const exampleInputTime = {
       type: 'Input.Time',
       id: 'timeValueUnset',
       label: 'End time',
-      isRequired: 'true',
+      isRequired: true,
       errorMessage: 'This input is required',
     },
   ],

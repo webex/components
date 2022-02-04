@@ -91,6 +91,7 @@ InputText.acPropTypes = {
   fallback: acPropTypes.fallback,
   height: acPropTypes.height,
   id: acPropTypes.id,
+  isMultiline: acPropTypes.isMultiline,
   isRequired: acPropTypes.isRequired,
   isVisible: acPropTypes.isVisible,
   label: acPropTypes.label,

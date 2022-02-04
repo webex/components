@@ -42,16 +42,19 @@ Image.defaultProps = {
 };
 
 Image.acPropTypes = {
+  altText: acPropTypes.altText,
+  backgroundColor: acPropTypes.backgroundColor,
   fallback: acPropTypes.fallback,
   height: acPropTypes.height,
   horizontalAlignment: acPropTypes.horizontalAlignment,
   id: acPropTypes.id,
   isVisible: acPropTypes.isVisible,
-  type: acPropTypes.type,
   separator: acPropTypes.separator,
   size: acPropTypes.imageSize,
   spacing: acPropTypes.spacing,
   style: acPropTypes.imageStyle,
+  type: acPropTypes.type,
+  url: acPropTypes.url,
   width: acPropTypes.width,
 };
 
