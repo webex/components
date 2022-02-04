@@ -36,8 +36,10 @@ export default function Option({
     let toFocus;
 
     if (event.key === 'ArrowUp') {
+      event.preventDefault(); // prevent page scrolling
       toFocus = ref.current.previousElementSibling;
     } else if (event.key === 'ArrowDown') {
+      event.preventDefault(); // prevent page scrolling
       toFocus = ref.current.nextElementSibling;
     } else if (event.key === 'Enter') {
       onSelect(option, true);

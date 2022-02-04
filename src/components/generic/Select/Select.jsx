@@ -66,6 +66,7 @@ export default function Select({
     } else if (event.key === 'Tab') {
       collapse();
     } else if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+      event.preventDefault(); // prevent page scrolling
       expand(true);
     }
   };
