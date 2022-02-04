@@ -37,8 +37,10 @@ export default function InputChoiceSet({
   };
 
   if (data.isMultiSelect === true || data.choices.length === 1) {
-    input = data.choices.map((choice) => (
+    input = data.choices.map((choice, index) => (
       <Checkbox
+        // eslint-disable-next-line react/no-array-index-key
+        key={index}
         onChange={(isSelected) => onMultiChange(choice.value, isSelected)}
         selected={values[choice.value]}
         title={choice.title}
@@ -54,8 +56,10 @@ export default function InputChoiceSet({
       />
     );
   } else {
-    input = data.choices.map((choice) => (
+    input = data.choices.map((choice, index) => (
       <RadioButton
+        // eslint-disable-next-line react/no-array-index-key
+        key={index}
         onChange={() => onSingleChange(choice.value)}
         selected={choice.value === value}
         title={choice.title}
@@ -83,7 +87,7 @@ export default function InputChoiceSet({
       className={cssClasses}
       error={data.error}
       label={data.label}
-      required={data.required}
+      required={data.isRequired}
       style={style}
     >
       {input}
@@ -105,6 +109,7 @@ InputChoiceSet.defaultProps = {
 InputChoiceSet.acPropTypes = {
   choices: acPropTypes.children,
   errorMessage: acPropTypes.errorMessage,
+  fallback: acPropTypes.fallback,
   height: acPropTypes.height,
   id: acPropTypes.id,
   isMultiSelect: acPropTypes.isMultiSelect,

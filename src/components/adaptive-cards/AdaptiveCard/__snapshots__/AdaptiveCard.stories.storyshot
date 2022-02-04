@@ -704,7 +704,7 @@ Array [
     >
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-submit wxc-ac  wxc-button--primary"
+        className="wxc-button wxc-ac-action wxc-ac-action-submit wxc-ac wxc-ac-action-style--default wxc-ac-title--action.submit wxc-button--primary"
         disabled={false}
         onClick={[Function]}
         style={
@@ -1273,7 +1273,7 @@ Array [
     >
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-submit wxc-ac  wxc-button--primary"
+        className="wxc-button wxc-ac-action wxc-ac-action-submit wxc-ac wxc-ac-action-style--default wxc-ac-title--subscribe to release notes wxc-button--primary"
         disabled={false}
         onClick={[Function]}
         style={
@@ -4550,6 +4550,11 @@ Array [
         className="wxc-label__label-text"
       >
         Required Input.ChoiceSet label (compact)
+        <span
+          className="wxc-label__required"
+        >
+           *
+        </span>
       </div>
       <div
         className="wxc-label__control"
@@ -4675,6 +4680,11 @@ Array [
         className="wxc-label__label-text"
       >
         Required Input.ChoiceSet label (expanded)
+        <span
+          className="wxc-label__required"
+        >
+           *
+        </span>
       </div>
       <div
         className="wxc-label__control"
@@ -4793,6 +4803,11 @@ Array [
         className="wxc-label__label-text"
       >
         Required Input.ChoiceSet label (compact, multiselect)
+        <span
+          className="wxc-label__required"
+        >
+           *
+        </span>
       </div>
       <div
         className="wxc-label__control"
@@ -4894,7 +4909,7 @@ Array [
     >
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-submit wxc-ac  wxc-button--primary"
+        className="wxc-button wxc-ac-action wxc-ac-action-submit wxc-ac wxc-ac-action-style--default wxc-ac-title--ok wxc-button--primary"
         disabled={false}
         onClick={[Function]}
         style={
@@ -5081,7 +5096,7 @@ Array [
     >
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-submit wxc-ac  wxc-button--primary"
+        className="wxc-button wxc-ac-action wxc-ac-action-submit wxc-ac wxc-ac-action-style--default wxc-ac-title--ok wxc-button--primary"
         disabled={false}
         onClick={[Function]}
         style={
@@ -5523,7 +5538,7 @@ Array [
     >
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-submit wxc-ac  wxc-button--primary"
+        className="wxc-button wxc-ac-action wxc-ac-action-submit wxc-ac wxc-ac-action-style--default wxc-ac-title--ok wxc-button--primary"
         disabled={false}
         onClick={[Function]}
         style={
@@ -5808,7 +5823,7 @@ Array [
     >
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-submit wxc-ac  wxc-button--primary"
+        className="wxc-button wxc-ac-action wxc-ac-action-submit wxc-ac wxc-ac-action-style--default wxc-ac-title--ok wxc-button--primary"
         disabled={false}
         onClick={[Function]}
         style={

@@ -22,6 +22,7 @@ InputToggle.propTypes = {
 
 InputToggle.acPropTypes = {
   errorMessage: acPropTypes.errorMessage,
+  fallback: acPropTypes.fallback,
   height: acPropTypes.height,
   id: acPropTypes.id,
   isRequired: acPropTypes.isRequired,

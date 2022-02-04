@@ -59,20 +59,20 @@ ActionSubmit.defaultProps = {
   style: undefined,
 };
 
-Action.acPropTypes = {
+ActionSubmit.acPropTypes = {
   associatedInputs: acPropTypes.associatedInputs,
   data: acPropTypes.data,
+  fallback: acPropTypes.fallback,
   iconUrl: acPropTypes.iconUrl,
   id: acPropTypes.id,
   isEnabled: acPropTypes.isEnabled,
-  mode: acPropTypes.mode,
   style: acPropTypes.actionStyle,
   title: acPropTypes.title,
   tooltip: acPropTypes.tooltip,
   type: acPropTypes.type,
 };
 
-Action.acDefaultProps = {
+ActionSubmit.acDefaultProps = {
   associatedInputs: 'auto',
   style: 'default',
 };

@@ -70,7 +70,6 @@ Action.acPropTypes = {
   iconUrl: acPropTypes.iconUrl,
   id: acPropTypes.id,
   isEnabled: acPropTypes.isEnabled,
-  mode: acPropTypes.mode,
   style: acPropTypes.actionStyle,
   title: acPropTypes.title,
   tooltip: acPropTypes.tooltip,
