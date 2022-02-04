@@ -85,7 +85,7 @@ export default class ActivitiesJSONAdapter extends ActivitiesAdapter {
    * @returns {Observable.<object>} Observable stream that emits data of the newly created action
    */
   postAction(activityID, inputs) {
-    return Observable.create((observer) => {
+    return new Observable((observer) => {
       const activity = this.datasource[activityID];
 
       if (activity) {
@@ -110,5 +110,49 @@ export default class ActivitiesJSONAdapter extends ActivitiesAdapter {
         observer.error(new Error(`Unable to create an attachment action for activity with id "${activityID}"`));
       }
     });
+  }
+
+  /**
+   * Posts an activity and returns an observable to the new activity data
+   *
+   * @param {object} activity  The activity to post
+   * @returns {Observable.<Activity>} Observable that emits the posted activity (including id)
+   */
+  postActivity(activity) {
+    const activity$ = new Observable((observer) => {
+      const activities = this.datasource;
+
+      if (activity.roomID) {
+        const ID = `activity${Object.keys(activities).length + 1}`;
+        const newActivity = {
+          attachments: [],
+          actions: [],
+          ...activity,
+          ID,
+          roomID: activity.roomID,
+          personID: 'user1',
+          text: activity.text,
+          created: new Date().toISOString(),
+          displayHeader: activity.displayHeader,
+        };
+
+        if (newActivity.card) {
+          newActivity.attachments = [{
+            contentType: 'application/vnd.microsoft.card.adaptive',
+            content: activity.card,
+          }];
+          delete newActivity.card;
+        }
+
+        activities[ID] = newActivity;
+
+        observer.next(newActivity);
+        observer.complete();
+      } else {
+        observer.error(new Error(`Unable to post an activity in room with id ${activity.roomID}`));
+      }
+    });
+
+    return activity$;
   }
 }
