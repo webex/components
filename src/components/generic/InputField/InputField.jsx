@@ -112,7 +112,7 @@ export default function InputField({
             <Icon name={isPwdRevealed ? 'hide-password' : 'show-password'} />
           </Button>
         )}
-        {type !== 'password' && value !== undefined && (
+        {type !== 'password' && value !== undefined && value !== '' && (
           <Button type="ghost" className={sc('input-field-right-icon')} size={28} onClick={clearInput}>
             <Icon name="cancel" size={16} />
           </Button>
