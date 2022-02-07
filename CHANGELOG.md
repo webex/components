@@ -1,3 +1,10 @@
+## [1.242.1](https://github.com/webex/components/compare/v1.242.0...v1.242.1) (2022-02-07)
+
+
+### Bug Fixes
+
+* **OptionsList:** prevent scroll on page when navigating with arrow keys between dropdown items ([f47abc7](https://github.com/webex/components/commit/f47abc74b0966462514d015f2737193762715c58))
+
 # [1.242.0](https://github.com/webex/components/compare/v1.241.0...v1.242.0) (2022-02-07)
 
 
