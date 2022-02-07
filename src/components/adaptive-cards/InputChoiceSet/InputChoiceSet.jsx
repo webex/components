@@ -7,6 +7,7 @@ import {Select} from '../../generic';
 import Checkbox from '../../inputs/Checkbox/Checkbox';
 import Label from '../../inputs/Label/Label';
 import RadioButton from '../../inputs/RadioButton/RadioButton';
+import {formatDateTime} from '../util';
 
 /**
  * Adaptive Cards InputChoiceSet component
@@ -88,7 +89,7 @@ export default function InputChoiceSet({
     <Label
       className={cssClasses}
       error={getError(data.id)}
-      label={data.label}
+      label={formatDateTime(data.label)}
       required={data.isRequired}
       style={style}
     >

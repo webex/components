@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {acPropTypes, registerComponent} from '../Component/Component';
 import webexComponentClasses from '../../helpers';
+import {formatDateTime} from '../util';
 
 /**
  * Adaptive Cards TextRun component
@@ -18,7 +19,7 @@ export default function TextRun({data, className, style}) {
 
   return (
     <span className={cssClasses} style={style}>
-      {data.text}
+      {formatDateTime(data.text)}
     </span>
   );
 }

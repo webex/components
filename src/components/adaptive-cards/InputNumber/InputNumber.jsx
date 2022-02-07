@@ -4,6 +4,7 @@ import webexComponentClasses from '../../helpers';
 import AdaptiveCardContext from '../context/adaptive-card-context';
 import {acPropTypes, registerComponent} from '../Component/Component';
 import InputField from '../../generic/InputField/InputField';
+import {formatDateTime} from '../util';
 
 /**
  * Adaptive Cards Input.Number component
@@ -54,7 +55,7 @@ export default function InputNumber({data, className, style}) {
       value={getValue(data.id)}
       error={getError(data.id)}
       required={data.required}
-      label={data.label}
+      label={formatDateTime(data.label)}
       onChange={(value) => setValue(data.id, value)}
     />
   );

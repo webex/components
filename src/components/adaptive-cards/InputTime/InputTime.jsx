@@ -6,6 +6,7 @@ import {Select} from '../../generic';
 import {range, pad2Zeros} from '../../../util';
 import AdaptiveCardContext from '../context/adaptive-card-context';
 import Label from '../../inputs/Label/Label';
+import {formatDateTime} from '../util';
 
 /**
  * Adaptive Cards Input.Time component
@@ -54,7 +55,7 @@ export default function InputTime({data, className, style}) {
     <Label
       className={cssClasses}
       error={getError(data.id)}
-      label={data.label}
+      label={formatDateTime(data.label)}
       required={data.isRequired}
       style={style}
     >

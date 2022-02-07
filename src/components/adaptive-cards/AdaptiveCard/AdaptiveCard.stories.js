@@ -1622,7 +1622,25 @@ const exampleRichTextBlock = {
       inlines: [
         {
           type: 'TextRun',
-          text: 'Date-Time parsing: {{DATE(2017-02-14T06:08:39Z,LONG)}} {{TIME(2017-02-14T06:08:39Z)}}',
+          text: 'Date-Time parsing (COMPACT): {{DATE(2017-02-14T06:08:39Z,COMPACT)}} {{TIME(2017-02-14T06:08:39Z)}}',
+        },
+      ],
+    },
+    {
+      type: 'RichTextBlock',
+      inlines: [
+        {
+          type: 'TextRun',
+          text: 'Date-Time parsing (SHORT): {{DATE(2017-02-14T06:08:39Z,SHORT)}} {{TIME(2017-02-14T06:08:39Z)}}',
+        },
+      ],
+    },
+    {
+      type: 'RichTextBlock',
+      inlines: [
+        {
+          type: 'TextRun',
+          text: 'Date-Time parsing (LONG): {{DATE(2017-02-14T06:08:39Z,LONG)}} {{TIME(2017-02-14T06:08:39Z)}}',
         },
       ],
     },

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 import {acPropTypes, registerComponent} from '../Component/Component';
+import {formatDateTime} from '../util';
 
 /**
  * Adaptive Cards FactSet component
@@ -22,8 +23,8 @@ export default function FactSet({data, className}) {
           {data.facts.map((fact, index) => (
             // eslint-disable-next-line react/no-array-index-key
             <tr key={index}>
-              <th className={sc('fact-title')}>{fact.title}</th>
-              <td>{fact.value}</td>
+              <th className={sc('fact-title')}>{formatDateTime(fact.title)}</th>
+              <td>{formatDateTime(fact.value)}</td>
             </tr>
           ))}
         </tbody>

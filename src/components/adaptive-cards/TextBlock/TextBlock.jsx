@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 import {acPropTypes, registerComponent} from '../Component/Component';
+import {formatDateTime} from '../util';
 
 /**
  * Adaptive Cards TextBlock component
@@ -20,7 +21,7 @@ export default function TextBlock({data, className}) {
       className={cssClasses}
       role={data.style === 'heading' ? 'heading' : undefined}
     >
-      {data.text}
+      {formatDateTime(data.text)}
     </div>
   );
 }
