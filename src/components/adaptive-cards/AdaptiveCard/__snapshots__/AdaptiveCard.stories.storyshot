@@ -6071,7 +6071,45 @@ Array [
         className="wxc-adaptive-cards-text-run wxc-ac "
         style={Object {}}
       >
-        Date-Time parsing: {{DATE(2017-02-14T06:08:39Z,LONG)}} {{TIME(2017-02-14T06:08:39Z)}}
+        Date-Time parsing (COMPACT): 2/14/17 August 1, 2020 10:00:00
+      </span>
+    </div>
+    <div
+      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      style={
+        Object {
+          "style": undefined,
+        }
+      }
+    />
+    <div
+      className="wxc-adaptive-cards-rich-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={Object {}}
+    >
+      <span
+        className="wxc-adaptive-cards-text-run wxc-ac "
+        style={Object {}}
+      >
+        Date-Time parsing (SHORT): Tue, Feb 14, 2017 August 1, 2020 10:00:00
+      </span>
+    </div>
+    <div
+      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      style={
+        Object {
+          "style": undefined,
+        }
+      }
+    />
+    <div
+      className="wxc-adaptive-cards-rich-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={Object {}}
+    >
+      <span
+        className="wxc-adaptive-cards-text-run wxc-ac "
+        style={Object {}}
+      >
+        Date-Time parsing (LONG): Tuesday, February 14, 2017 August 1, 2020 10:00:00
       </span>
     </div>
     <div

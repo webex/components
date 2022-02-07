@@ -5,6 +5,7 @@ import AdaptiveCardContext from '../context/adaptive-card-context';
 import {acPropTypes, registerComponent} from '../Component/Component';
 import InputField from '../../generic/InputField/InputField';
 import Textbox from '../../inputs/Textbox/Textbox';
+import {formatDateTime} from '../util';
 
 /**
  * Adaptive Cards Input.Text component
@@ -49,7 +50,7 @@ export default function InputText({data, className, style}) {
       <InputField
         className={cssClasses}
         error={getError(data.id)}
-        label={data.label}
+        label={formatDateTime(data.label)}
         maxLength={data.maxLength}
         onChange={(value) => setValue(data.id, value)}
         pattern={data.regex}
@@ -63,7 +64,7 @@ export default function InputText({data, className, style}) {
       <Textbox
         className={cssClasses}
         error={getError(data.id)}
-        label={data.label}
+        label={formatDateTime(data.label)}
         maxLength={data.maxLength}
         onChange={(value) => setValue(data.id, value)}
         placeholder={data.placeholder}

@@ -4,6 +4,7 @@ import {acPropTypes} from '../Component/Component';
 import webexComponentClasses from '../../helpers';
 import {Button, Icon} from '../../generic';
 import {isValidUrl} from '../../../util';
+import {formatDateTime} from '../util';
 
 /**
  * Adaptive Cards generic Action component
@@ -44,7 +45,7 @@ export default function Action({
       type={buttonType}
     >
       {data.iconUrl && isValidIconUrl && <img className={sc('icon')} src={data.iconUrl} alt="" />}
-      <span>{data.title}</span>
+      <span>{formatDateTime(data.title)}</span>
       {rightIcon && <Icon className={sc('right-icon')} name={rightIcon} size={10} />}
     </Button>
   );
