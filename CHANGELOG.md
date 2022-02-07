@@ -1,3 +1,17 @@
+# [1.242.0](https://github.com/webex/components/compare/v1.241.0...v1.242.0) (2022-02-07)
+
+
+### Bug Fixes
+
+* **AdaptiveCard:** fix return value of the validate() function ([66d7c7e](https://github.com/webex/components/commit/66d7c7eba362135a66343f5d19f4648ed9d0a78a))
+* **AdaptiveCards:** add the missing ac prop types to each component ([34c939b](https://github.com/webex/components/commit/34c939badb983e9af114c2719d0b0642d21e125c))
+* **AdaptiveCards:** process AdaptiveCard  and version properties ([322730e](https://github.com/webex/components/commit/322730e8a7e78df08ea2a4876198c5b2e854cc6c))
+
+
+### Features
+
+* **OptionsList:** limit the height of dropdown options ([7a071a7](https://github.com/webex/components/commit/7a071a7f22b0578f91c745d5959cf5219a6a095d))
+
 # [1.241.0](https://github.com/webex/components/compare/v1.240.1...v1.241.0) (2022-02-07)
 
 
