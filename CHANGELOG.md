@@ -1,3 +1,10 @@
+# [1.241.0](https://github.com/webex/components/compare/v1.240.1...v1.241.0) (2022-02-07)
+
+
+### Features
+
+* **AdaptiveCardsComponent:** implement inherited verticalContentAlignment property ([7d04e01](https://github.com/webex/components/commit/7d04e01110065f31bae2c7af5240c6b65341cf97))
+
 ## [1.240.1](https://github.com/webex/components/compare/v1.240.0...v1.240.1) (2022-02-03)
 
 
