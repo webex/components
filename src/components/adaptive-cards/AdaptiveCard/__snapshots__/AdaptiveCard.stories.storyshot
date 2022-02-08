@@ -16,6 +16,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       The action of these cards will open a URL
     </div>
@@ -150,6 +155,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       Cards can have action sets in the middle of their body.
     </div>
@@ -225,6 +235,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       There are also still actions's at the bottom of the card
     </div>
@@ -330,6 +345,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       This card's action will show another card
     </div>
@@ -447,6 +467,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       Present a form and submit it back to the originator
     </div>
@@ -762,6 +787,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       Press the buttons to toggle the images!
     </div>
@@ -775,6 +805,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--false"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       Here are some images:
     </div>
@@ -1019,6 +1054,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--lighter wxc-ac-color--accent"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Cisco Webex Teams
         </div>
@@ -1032,6 +1072,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--bolder wxc-ac-wrap--true wxc-ac-color--light wxc-ac-size--large"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Buttons and Cards Release
         </div>
@@ -1075,6 +1120,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--light"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Release Date:
         </div>
@@ -1088,6 +1138,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--lighter wxc-ac-color--light"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Product:
         </div>
@@ -1101,6 +1156,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--lighter wxc-ac-color--light"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           OS:
         </div>
@@ -1131,6 +1191,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--light"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Aug 6, 2019
         </div>
@@ -1144,6 +1209,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--light wxc-ac-weight--lighter"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Webex Teams
         </div>
@@ -1157,6 +1227,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--lighter wxc-ac-color--light"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Mac, Windows, Web
         </div>
@@ -1172,6 +1247,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       We're making it easier for you to interact with bots and integrations in Webex Teams. When your bot sends information in a space that includes a card with buttons, you can now easily interact with it.
     </div>
@@ -1185,6 +1265,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       Buttons and Cards Resources:
     </div>
@@ -1254,6 +1339,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-size--medium"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           [Developer Portal Buttons and Cards Guide]()
         </div>
@@ -1355,6 +1445,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Column 1
         </div>
@@ -1399,6 +1494,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Column 2
         </div>
@@ -1443,6 +1543,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Column 3
         </div>
@@ -1540,6 +1645,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       You can even repeat the background image...
     </div>
@@ -1594,6 +1704,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-is-visible--true wxc-ac-wrap--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Those are some neat arrows
         </div>
@@ -1609,6 +1724,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       Horizontal repeat...
     </div>
@@ -1686,6 +1806,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       Vertical repeat...
     </div>
@@ -1763,6 +1888,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       Bleed left
     </div>
@@ -1800,6 +1930,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Column 1
         </div>
@@ -1826,6 +1961,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Column 2
         </div>
@@ -1852,6 +1992,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Column 3
         </div>
@@ -1867,6 +2012,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       Bleed center
     </div>
@@ -1904,6 +2054,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Column 1
         </div>
@@ -1930,6 +2085,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Column 2
         </div>
@@ -1956,6 +2116,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Column 3
         </div>
@@ -1971,6 +2136,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       Bleed right
     </div>
@@ -2008,6 +2178,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Column 1
         </div>
@@ -2034,6 +2209,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Column 2
         </div>
@@ -2060,6 +2240,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Column 3
         </div>
@@ -2075,6 +2260,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       Bleed all
     </div>
@@ -2112,6 +2302,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Column 1
         </div>
@@ -2138,6 +2333,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Column 2
         </div>
@@ -2164,6 +2364,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Column 3
         </div>
@@ -2253,6 +2458,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           This is a column
         </div>
@@ -2300,6 +2510,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           The columnset has a minHeight of 100px while this column has a minHeight of 200px so it should override
         </div>
@@ -2378,6 +2593,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true wxc-ac-size--medium"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       The middle column is set to rtl
     </div>
@@ -2415,6 +2635,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Column One
         </div>
@@ -2441,6 +2666,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           العمود الثاني
         </div>
@@ -2467,6 +2697,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Column three
         </div>
@@ -2536,6 +2771,11 @@ Array [
           />
           <div
             className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-is-visible--true wxc-ac-weight--bolder"
+            style={
+              Object {
+                "WebkitLineClamp": undefined,
+              }
+            }
           >
             SHADES
           </div>
@@ -2564,6 +2804,11 @@ Array [
           />
           <div
             className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-is-visible--true"
+            style={
+              Object {
+                "WebkitLineClamp": undefined,
+              }
+            }
           >
             Dec 4
           </div>
@@ -2577,6 +2822,11 @@ Array [
           />
           <div
             className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-is-visible--true"
+            style={
+              Object {
+                "WebkitLineClamp": undefined,
+              }
+            }
           >
             Final
           </div>
@@ -2590,6 +2840,11 @@ Array [
           />
           <div
             className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-is-visible--true wxc-ac-size--extralarge"
+            style={
+              Object {
+                "WebkitLineClamp": undefined,
+              }
+            }
           >
             7 - 40
           </div>
@@ -2636,6 +2891,11 @@ Array [
           />
           <div
             className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-is-visible--true wxc-ac-weight--bolder"
+            style={
+              Object {
+                "WebkitLineClamp": undefined,
+              }
+            }
           >
             SKINS
           </div>
@@ -2652,6 +2912,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--bolder"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       Try clicking a column!
     </div>
@@ -2689,6 +2954,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Column 1
         </div>
@@ -2733,6 +3003,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Column 2
         </div>
@@ -2777,6 +3052,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Column 3
         </div>
@@ -2834,6 +3114,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           No Style
         </div>
@@ -2860,6 +3145,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Default Style
         </div>
@@ -2886,6 +3176,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Emphasis Style
         </div>
@@ -2911,6 +3206,11 @@ Array [
           />
           <div
             className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+            style={
+              Object {
+                "WebkitLineClamp": undefined,
+              }
+            }
           >
             Container no style
           </div>
@@ -2937,6 +3237,11 @@ Array [
           />
           <div
             className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+            style={
+              Object {
+                "WebkitLineClamp": undefined,
+              }
+            }
           >
             Container default style
           </div>
@@ -2963,6 +3268,11 @@ Array [
           />
           <div
             className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+            style={
+              Object {
+                "WebkitLineClamp": undefined,
+              }
+            }
           >
             Container emphasis style
           </div>
@@ -2979,6 +3289,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       Hi,
     </div>
@@ -2992,6 +3307,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-is-subtle--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       MasterHip
     </div>
@@ -3029,6 +3349,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Column 1
         </div>
@@ -3068,6 +3393,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           (auto)
         </div>
@@ -3112,6 +3442,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           (stretch)
         </div>
@@ -3156,6 +3491,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           (auto)
         </div>
@@ -3219,6 +3559,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--bolder"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       Pick up where you left off?
     </div>
@@ -3291,6 +3636,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Silver Star Mountain
         </div>
@@ -3304,6 +3654,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-is-subtle--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Maps
         </div>
@@ -3378,6 +3733,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Kitchen Remodel
         </div>
@@ -3391,6 +3751,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-is-subtle--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           With EMPHASIS
         </div>
@@ -3465,6 +3830,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           The Witcher
         </div>
@@ -3478,6 +3848,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-is-subtle--true"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Netflix
         </div>
@@ -3589,6 +3964,11 @@ Array [
       />
       <div
         className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+        style={
+          Object {
+            "WebkitLineClamp": undefined,
+          }
+        }
       >
         This is some text
       </div>
@@ -3633,6 +4013,11 @@ Array [
       />
       <div
         className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+        style={
+          Object {
+            "WebkitLineClamp": undefined,
+          }
+        }
       >
         This container has the default style
       </div>
@@ -3646,6 +4031,11 @@ Array [
       />
       <div
         className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--default"
+        style={
+          Object {
+            "WebkitLineClamp": undefined,
+          }
+        }
       >
         color: default
       </div>
@@ -3659,6 +4049,11 @@ Array [
       />
       <div
         className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--accent"
+        style={
+          Object {
+            "WebkitLineClamp": undefined,
+          }
+        }
       >
         color: accent
       </div>
@@ -3672,6 +4067,11 @@ Array [
       />
       <div
         className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--good"
+        style={
+          Object {
+            "WebkitLineClamp": undefined,
+          }
+        }
       >
         color: good
       </div>
@@ -3685,6 +4085,11 @@ Array [
       />
       <div
         className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--warning"
+        style={
+          Object {
+            "WebkitLineClamp": undefined,
+          }
+        }
       >
         color: warning
       </div>
@@ -3698,6 +4103,11 @@ Array [
       />
       <div
         className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--attention"
+        style={
+          Object {
+            "WebkitLineClamp": undefined,
+          }
+        }
       >
         color: attention
       </div>
@@ -3711,6 +4121,11 @@ Array [
       />
       <div
         className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--light"
+        style={
+          Object {
+            "WebkitLineClamp": undefined,
+          }
+        }
       >
         color: light
       </div>
@@ -3724,6 +4139,11 @@ Array [
       />
       <div
         className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--dark"
+        style={
+          Object {
+            "WebkitLineClamp": undefined,
+          }
+        }
       >
         color: dark
       </div>
@@ -3750,6 +4170,11 @@ Array [
       />
       <div
         className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+        style={
+          Object {
+            "WebkitLineClamp": undefined,
+          }
+        }
       >
         This container has the accent style
       </div>
@@ -3763,6 +4188,11 @@ Array [
       />
       <div
         className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--default"
+        style={
+          Object {
+            "WebkitLineClamp": undefined,
+          }
+        }
       >
         color: default
       </div>
@@ -3776,6 +4206,11 @@ Array [
       />
       <div
         className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--accent"
+        style={
+          Object {
+            "WebkitLineClamp": undefined,
+          }
+        }
       >
         color: accent
       </div>
@@ -3789,6 +4224,11 @@ Array [
       />
       <div
         className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--good"
+        style={
+          Object {
+            "WebkitLineClamp": undefined,
+          }
+        }
       >
         color: good
       </div>
@@ -3802,6 +4242,11 @@ Array [
       />
       <div
         className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--warning"
+        style={
+          Object {
+            "WebkitLineClamp": undefined,
+          }
+        }
       >
         color: warning
       </div>
@@ -3815,6 +4260,11 @@ Array [
       />
       <div
         className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--attention"
+        style={
+          Object {
+            "WebkitLineClamp": undefined,
+          }
+        }
       >
         color: attention
       </div>
@@ -3828,6 +4278,11 @@ Array [
       />
       <div
         className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--light"
+        style={
+          Object {
+            "WebkitLineClamp": undefined,
+          }
+        }
       >
         color: light
       </div>
@@ -3841,6 +4296,11 @@ Array [
       />
       <div
         className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--dark"
+        style={
+          Object {
+            "WebkitLineClamp": undefined,
+          }
+        }
       >
         color: dark
       </div>
@@ -3866,6 +4326,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--dark"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Contained container - no style
         </div>
@@ -3892,6 +4357,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--dark"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Contained container - emphasis
         </div>
@@ -3918,6 +4388,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--dark"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Contained container - default
         </div>
@@ -3944,6 +4419,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--dark"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Contained container - good
         </div>
@@ -3970,6 +4450,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--dark"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Contained container - warning
         </div>
@@ -3996,6 +4481,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--dark"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Contained container - attention
         </div>
@@ -4022,6 +4512,11 @@ Array [
         />
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--dark"
+          style={
+            Object {
+              "WebkitLineClamp": undefined,
+            }
+          }
         >
           Contained container - accent
         </div>
@@ -4054,6 +4549,11 @@ Array [
       />
       <div
         className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+        style={
+          Object {
+            "WebkitLineClamp": undefined,
+          }
+        }
       >
         What a beautiful background
       </div>
@@ -4068,6 +4568,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       They can even repeat a bunch of different ways...
     </div>
@@ -5155,6 +5660,11 @@ Array [
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container-style--heading wxc-ac-container--has-padding"
       role="heading"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       Specify the type of text being requested:
     </div>
@@ -5456,6 +5966,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       Multiline text input:
     </div>
@@ -5495,6 +6010,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       Pre-filled value:
     </div>
@@ -6202,6 +6722,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--default"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       color: default
     </div>
@@ -6215,6 +6740,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--accent"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       color: accent
     </div>
@@ -6228,6 +6758,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--good"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       color: good
     </div>
@@ -6241,6 +6776,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--warning"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       color: warning
     </div>
@@ -6254,6 +6794,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--attention"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       color: attention
     </div>
@@ -6267,6 +6812,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--light"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       color: light
     </div>
@@ -6280,6 +6830,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--dark"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       color: dark
     </div>
@@ -6293,6 +6848,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       Font type not set.
     </div>
@@ -6306,6 +6866,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-font-type--default"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       Font type set to *default*.
     </div>
@@ -6319,6 +6884,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-font-type--monospace"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       Font type set to *monospace*.
     </div>
@@ -6332,6 +6902,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       **horizontalAlignment:left**
     </div>
@@ -6345,6 +6920,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-is-visible--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       **horizontalAlignment:center**
     </div>
@@ -6358,6 +6938,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--right wxc-ac-is-visible--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       **horizontalAlignment:right**
     </div>
@@ -6371,6 +6956,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true "
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       isSubtle:false
     </div>
@@ -6384,6 +6974,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-is-subtle--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       isSubtle:true
     </div>
@@ -6396,7 +6991,12 @@ Array [
       }
     />
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true wxc-adaptive-cards-text-block--max-lines"
+      style={
+        Object {
+          "WebkitLineClamp": 1,
+        }
+      }
     >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </div>
@@ -6409,7 +7009,12 @@ Array [
       }
     />
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true wxc-adaptive-cards-text-block--max-lines"
+      style={
+        Object {
+          "WebkitLineClamp": 2,
+        }
+      }
     >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </div>
@@ -6423,6 +7028,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       size:default
     </div>
@@ -6436,6 +7046,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-size--small"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       size:small
     </div>
@@ -6449,6 +7064,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-size--default"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       size:default
     </div>
@@ -6462,6 +7082,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-size--medium"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       size:medium
     </div>
@@ -6475,6 +7100,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-size--large"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       size:large
     </div>
@@ -6488,6 +7118,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-size--extralarge"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       size:extraLarge
     </div>
@@ -6501,6 +7136,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--lighter"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       weight: lighter
     </div>
@@ -6514,6 +7154,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--default"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       weight: default
     </div>
@@ -6527,6 +7172,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--bolder"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       weight: bolder
     </div>
@@ -6540,6 +7190,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true "
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       **wrap: false** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
     </div>
@@ -6553,6 +7208,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       **wrap: true** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </div>
@@ -6567,6 +7227,11 @@ Array [
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container-style--heading wxc-ac-container--has-padding wxc-ac-wrap--true"
       role="heading"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       Style set to heading
     </div>
@@ -6581,6 +7246,11 @@ Array [
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container-style--heading wxc-ac-container--has-padding wxc-ac-color--good wxc-ac-wrap--true"
       role="heading"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       Style set to heading, color set to good
     </div>
@@ -6594,6 +7264,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container-style--default wxc-ac-wrap--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       Style set to default
     </div>
@@ -6607,6 +7282,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       Style unset
     </div>

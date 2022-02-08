@@ -40,6 +40,7 @@ export const acPropTypes = {
   italic: 'italic',
   label: 'label',
   maxLength: 'max-length',
+  maxLines: 'max-lines',
   maxValue: 'max-value',
   minHeight: 'min-height',
   minValue: 'min-value',
@@ -181,6 +182,7 @@ export default function Component({
       case acPropTypes.id:
       case acPropTypes.label:
       case acPropTypes.maxLength:
+      case acPropTypes.maxLines:
       case acPropTypes.maxValue:
       case acPropTypes.minValue:
       case acPropTypes.placeholder:
