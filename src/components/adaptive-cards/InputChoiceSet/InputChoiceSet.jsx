@@ -22,7 +22,9 @@ export default function InputChoiceSet({
   data, className, style,
 }) {
   const [cssClasses] = webexComponentClasses('adaptive-cards-input-choice-set', className);
-  const {setValue, getValue, setInput} = useContext(AdaptiveCardContext);
+  const {
+    setValue, getValue, setInput, getError,
+  } = useContext(AdaptiveCardContext);
   const value = getValue(data.id);
   const values = value ? Object.fromEntries(String(value).split(',').map((v) => [v, true])) : {};
   let input;
@@ -85,7 +87,7 @@ export default function InputChoiceSet({
   return (
     <Label
       className={cssClasses}
-      error={data.error}
+      error={getError(data.id)}
       label={data.label}
       required={data.isRequired}
       style={style}
