@@ -65,7 +65,15 @@ Array [
         <div
           className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-size--large"
         >
-          Hotel Booking
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Hotel Booking</p>
+",
+              }
+            }
+          />
         </div>
         <div
           className="wxc-ac-spacer wxc-ac-spacer--spacing--medium"

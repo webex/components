@@ -1,0 +1,19 @@
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-markdown;
+
+.#{$C} {
+  a {
+    @include focusable;
+    color: var(--wxc-hyperlink--normal--color);
+    text-decoration: underline;
+
+    &:hover {
+      cursor: pointer;
+      color: var(--wxc-hyperlink--hover--color);
+    }
+
+    &:active {
+      cursor: pointer;
+      color: var(--wxc-hyperlink--active--color);
+    }
+  }
+}
