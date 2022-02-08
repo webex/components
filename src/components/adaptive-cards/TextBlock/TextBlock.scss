@@ -1,0 +1,10 @@
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-adaptive-cards-text-block;
+
+.#{$C} {
+  &--max-lines {
+    display: -webkit-box;
+    flex-shrink: 0;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
