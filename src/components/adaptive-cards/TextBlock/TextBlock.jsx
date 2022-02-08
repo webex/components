@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 import {acPropTypes, registerComponent} from '../Component/Component';
 import {formatDateTime} from '../util';
+import Markdown from '../Markdown/Markdown';
 
 /**
  * Adaptive Cards TextBlock component
@@ -24,7 +25,7 @@ export default function TextBlock({data, className, style}) {
       style={{...style, WebkitLineClamp: data.maxLines}}
       role={data.style === 'heading' ? 'heading' : undefined}
     >
-      {formatDateTime(data.text)}
+      <Markdown>{formatDateTime(data.text)}</Markdown>
     </div>
   );
 }

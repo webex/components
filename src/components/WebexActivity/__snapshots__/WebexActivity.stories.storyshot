@@ -70,7 +70,15 @@ Array [
             }
           }
         >
-          Hotel Booking
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Hotel Booking</p>
+",
+              }
+            }
+          />
         </div>
         <div
           className="wxc-ac-spacer wxc-ac-spacer--spacing--medium"

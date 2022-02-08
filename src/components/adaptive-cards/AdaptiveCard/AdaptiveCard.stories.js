@@ -211,6 +211,22 @@ const exampleTextBlock = {
     },
     {
       type: 'TextBlock',
+      text: 'TextBlock supports markdown:  \n' +
+        'The text can be **bold** or _italic_.  \n' +
+        'Bullet lists \n' +
+        '- one\r' +
+        '- two\r' +
+        '- three\r \n' +
+        'Numbered lists \n' +
+        '1. one\r' +
+        '2. two\r' +
+        '3. three\r \n' +
+        'Links: [AdaptiveCards](https://adaptivecards.io)  \n' +
+        'Headers are not supported \n' +
+        '# This header is not processed',
+    },
+    {
+      type: 'TextBlock',
       text: 'Font type not set.',
     },
     {

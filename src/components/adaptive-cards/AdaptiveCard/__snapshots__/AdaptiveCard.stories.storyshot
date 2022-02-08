@@ -22,7 +22,15 @@ Array [
         }
       }
     >
-      The action of these cards will open a URL
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>The action of these cards will open a URL</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -161,7 +169,15 @@ Array [
         }
       }
     >
-      Cards can have action sets in the middle of their body.
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Cards can have action sets in the middle of their body.</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -241,7 +257,15 @@ Array [
         }
       }
     >
-      There are also still actions's at the bottom of the card
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>There are also still actions's at the bottom of the card</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -351,7 +375,15 @@ Array [
         }
       }
     >
-      This card's action will show another card
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>This card's action will show another card</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -473,7 +505,15 @@ Array [
         }
       }
     >
-      Present a form and submit it back to the originator
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Present a form and submit it back to the originator</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -793,7 +833,15 @@ Array [
         }
       }
     >
-      Press the buttons to toggle the images!
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Press the buttons to toggle the images!</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -811,7 +859,15 @@ Array [
         }
       }
     >
-      Here are some images:
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Here are some images:</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -1060,7 +1116,15 @@ Array [
             }
           }
         >
-          Cisco Webex Teams
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Cisco Webex Teams</p>
+",
+              }
+            }
+          />
         </div>
         <div
           className="wxc-ac-spacer wxc-ac-spacer--spacing--small"
@@ -1078,7 +1142,15 @@ Array [
             }
           }
         >
-          Buttons and Cards Release
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Buttons and Cards Release</p>
+",
+              }
+            }
+          />
         </div>
       </div>
     </div>
@@ -1126,7 +1198,15 @@ Array [
             }
           }
         >
-          Release Date:
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Release Date:</p>
+",
+              }
+            }
+          />
         </div>
         <div
           className="wxc-ac-spacer wxc-ac-spacer--spacing--small"
@@ -1144,7 +1224,15 @@ Array [
             }
           }
         >
-          Product:
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Product:</p>
+",
+              }
+            }
+          />
         </div>
         <div
           className="wxc-ac-spacer wxc-ac-spacer--spacing--small"
@@ -1162,7 +1250,15 @@ Array [
             }
           }
         >
-          OS:
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>OS:</p>
+",
+              }
+            }
+          />
         </div>
       </div>
       <div
@@ -1197,7 +1293,15 @@ Array [
             }
           }
         >
-          Aug 6, 2019
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Aug 6, 2019</p>
+",
+              }
+            }
+          />
         </div>
         <div
           className="wxc-ac-spacer wxc-ac-spacer--spacing--small"
@@ -1215,7 +1319,15 @@ Array [
             }
           }
         >
-          Webex Teams
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Webex Teams</p>
+",
+              }
+            }
+          />
         </div>
         <div
           className="wxc-ac-spacer wxc-ac-spacer--spacing--small"
@@ -1233,7 +1345,15 @@ Array [
             }
           }
         >
-          Mac, Windows, Web
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Mac, Windows, Web</p>
+",
+              }
+            }
+          />
         </div>
       </div>
     </div>
@@ -1253,7 +1373,15 @@ Array [
         }
       }
     >
-      We're making it easier for you to interact with bots and integrations in Webex Teams. When your bot sends information in a space that includes a card with buttons, you can now easily interact with it.
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>We're making it easier for you to interact with bots and integrations in Webex Teams. When your bot sends information in a space that includes a card with buttons, you can now easily interact with it.</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -1271,7 +1399,15 @@ Array [
         }
       }
     >
-      Buttons and Cards Resources:
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Buttons and Cards Resources:</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -1345,7 +1481,15 @@ Array [
             }
           }
         >
-          [Developer Portal Buttons and Cards Guide]()
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p><a href=\\"\\">Developer Portal Buttons and Cards Guide</a></p>
+",
+              }
+            }
+          />
         </div>
       </div>
     </div>
@@ -1451,7 +1595,15 @@ Array [
             }
           }
         >
-          Column 1
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Column 1</p>
+",
+              }
+            }
+          />
         </div>
         <div
           className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -1500,7 +1652,15 @@ Array [
             }
           }
         >
-          Column 2
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Column 2</p>
+",
+              }
+            }
+          />
         </div>
         <div
           className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -1549,7 +1709,15 @@ Array [
             }
           }
         >
-          Column 3
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Column 3</p>
+",
+              }
+            }
+          />
         </div>
         <div
           className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -1651,7 +1819,15 @@ Array [
         }
       }
     >
-      You can even repeat the background image...
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>You can even repeat the background image...</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -1710,7 +1886,15 @@ Array [
             }
           }
         >
-          Those are some neat arrows
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Those are some neat arrows</p>
+",
+              }
+            }
+          />
         </div>
       </div>
     </div>
@@ -1730,7 +1914,15 @@ Array [
         }
       }
     >
-      Horizontal repeat...
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Horizontal repeat...</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -1812,7 +2004,15 @@ Array [
         }
       }
     >
-      Vertical repeat...
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Vertical repeat...</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -1894,7 +2094,15 @@ Array [
         }
       }
     >
-      Bleed left
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Bleed left</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -1936,7 +2144,15 @@ Array [
             }
           }
         >
-          Column 1
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Column 1</p>
+",
+              }
+            }
+          />
         </div>
       </div>
       <div
@@ -1967,7 +2183,15 @@ Array [
             }
           }
         >
-          Column 2
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Column 2</p>
+",
+              }
+            }
+          />
         </div>
       </div>
       <div
@@ -1998,7 +2222,15 @@ Array [
             }
           }
         >
-          Column 3
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Column 3</p>
+",
+              }
+            }
+          />
         </div>
       </div>
     </div>
@@ -2018,7 +2250,15 @@ Array [
         }
       }
     >
-      Bleed center
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Bleed center</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -2060,7 +2300,15 @@ Array [
             }
           }
         >
-          Column 1
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Column 1</p>
+",
+              }
+            }
+          />
         </div>
       </div>
       <div
@@ -2091,7 +2339,15 @@ Array [
             }
           }
         >
-          Column 2
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Column 2</p>
+",
+              }
+            }
+          />
         </div>
       </div>
       <div
@@ -2122,7 +2378,15 @@ Array [
             }
           }
         >
-          Column 3
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Column 3</p>
+",
+              }
+            }
+          />
         </div>
       </div>
     </div>
@@ -2142,7 +2406,15 @@ Array [
         }
       }
     >
-      Bleed right
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Bleed right</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -2184,7 +2456,15 @@ Array [
             }
           }
         >
-          Column 1
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Column 1</p>
+",
+              }
+            }
+          />
         </div>
       </div>
       <div
@@ -2215,7 +2495,15 @@ Array [
             }
           }
         >
-          Column 2
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Column 2</p>
+",
+              }
+            }
+          />
         </div>
       </div>
       <div
@@ -2246,7 +2534,15 @@ Array [
             }
           }
         >
-          Column 3
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Column 3</p>
+",
+              }
+            }
+          />
         </div>
       </div>
     </div>
@@ -2266,7 +2562,15 @@ Array [
         }
       }
     >
-      Bleed all
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Bleed all</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -2308,7 +2612,15 @@ Array [
             }
           }
         >
-          Column 1
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Column 1</p>
+",
+              }
+            }
+          />
         </div>
       </div>
       <div
@@ -2339,7 +2651,15 @@ Array [
             }
           }
         >
-          Column 2
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Column 2</p>
+",
+              }
+            }
+          />
         </div>
       </div>
       <div
@@ -2370,7 +2690,15 @@ Array [
             }
           }
         >
-          Column 3
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Column 3</p>
+",
+              }
+            }
+          />
         </div>
       </div>
     </div>
@@ -2464,7 +2792,15 @@ Array [
             }
           }
         >
-          This is a column
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>This is a column</p>
+",
+              }
+            }
+          />
         </div>
       </div>
     </div>
@@ -2516,7 +2852,15 @@ Array [
             }
           }
         >
-          The columnset has a minHeight of 100px while this column has a minHeight of 200px so it should override
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>The columnset has a minHeight of 100px while this column has a minHeight of 200px so it should override</p>
+",
+              }
+            }
+          />
         </div>
       </div>
       <div
@@ -2599,7 +2943,15 @@ Array [
         }
       }
     >
-      The middle column is set to rtl
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>The middle column is set to rtl</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--medium"
@@ -2641,7 +2993,15 @@ Array [
             }
           }
         >
-          Column One
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Column One</p>
+",
+              }
+            }
+          />
         </div>
       </div>
       <div
@@ -2672,7 +3032,15 @@ Array [
             }
           }
         >
-          العمود الثاني
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>العمود الثاني</p>
+",
+              }
+            }
+          />
         </div>
       </div>
       <div
@@ -2703,7 +3071,15 @@ Array [
             }
           }
         >
-          Column three
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Column three</p>
+",
+              }
+            }
+          />
         </div>
       </div>
     </div>
@@ -2777,7 +3153,15 @@ Array [
               }
             }
           >
-            SHADES
+            <div
+              className="wxc-markdown"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<p>SHADES</p>
+",
+                }
+              }
+            />
           </div>
         </div>
         <div
@@ -2810,7 +3194,15 @@ Array [
               }
             }
           >
-            Dec 4
+            <div
+              className="wxc-markdown"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<p>Dec 4</p>
+",
+                }
+              }
+            />
           </div>
           <div
             className="wxc-ac-spacer wxc-ac-spacer--spacing--none"
@@ -2828,7 +3220,15 @@ Array [
               }
             }
           >
-            Final
+            <div
+              className="wxc-markdown"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<p>Final</p>
+",
+                }
+              }
+            />
           </div>
           <div
             className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -2846,7 +3246,15 @@ Array [
               }
             }
           >
-            7 - 40
+            <div
+              className="wxc-markdown"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<p>7 - 40</p>
+",
+                }
+              }
+            />
           </div>
         </div>
         <div
@@ -2897,7 +3305,15 @@ Array [
               }
             }
           >
-            SKINS
+            <div
+              className="wxc-markdown"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<p>SKINS</p>
+",
+                }
+              }
+            />
           </div>
         </div>
       </div>
@@ -2918,7 +3334,15 @@ Array [
         }
       }
     >
-      Try clicking a column!
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Try clicking a column!</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -2960,7 +3384,15 @@ Array [
             }
           }
         >
-          Column 1
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Column 1</p>
+",
+              }
+            }
+          />
         </div>
         <div
           className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -3009,7 +3441,15 @@ Array [
             }
           }
         >
-          Column 2
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Column 2</p>
+",
+              }
+            }
+          />
         </div>
         <div
           className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -3058,7 +3498,15 @@ Array [
             }
           }
         >
-          Column 3
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Column 3</p>
+",
+              }
+            }
+          />
         </div>
         <div
           className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -3120,7 +3568,15 @@ Array [
             }
           }
         >
-          No Style
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>No Style</p>
+",
+              }
+            }
+          />
         </div>
       </div>
       <div
@@ -3151,7 +3607,15 @@ Array [
             }
           }
         >
-          Default Style
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Default Style</p>
+",
+              }
+            }
+          />
         </div>
       </div>
       <div
@@ -3182,7 +3646,15 @@ Array [
             }
           }
         >
-          Emphasis Style
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Emphasis Style</p>
+",
+              }
+            }
+          />
         </div>
         <div
           className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -3212,7 +3684,15 @@ Array [
               }
             }
           >
-            Container no style
+            <div
+              className="wxc-markdown"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<p>Container no style</p>
+",
+                }
+              }
+            />
           </div>
         </div>
         <div
@@ -3243,7 +3723,15 @@ Array [
               }
             }
           >
-            Container default style
+            <div
+              className="wxc-markdown"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<p>Container default style</p>
+",
+                }
+              }
+            />
           </div>
         </div>
         <div
@@ -3274,7 +3762,15 @@ Array [
               }
             }
           >
-            Container emphasis style
+            <div
+              className="wxc-markdown"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<p>Container emphasis style</p>
+",
+                }
+              }
+            />
           </div>
         </div>
       </div>
@@ -3295,7 +3791,15 @@ Array [
         }
       }
     >
-      Hi,
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Hi,</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -3313,7 +3817,15 @@ Array [
         }
       }
     >
-      MasterHip
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>MasterHip</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -3355,7 +3867,15 @@ Array [
             }
           }
         >
-          Column 1
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Column 1</p>
+",
+              }
+            }
+          />
         </div>
       </div>
     </div>
@@ -3399,7 +3919,15 @@ Array [
             }
           }
         >
-          (auto)
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>(auto)</p>
+",
+              }
+            }
+          />
         </div>
         <div
           className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -3448,7 +3976,15 @@ Array [
             }
           }
         >
-          (stretch)
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>(stretch)</p>
+",
+              }
+            }
+          />
         </div>
         <div
           className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -3497,7 +4033,15 @@ Array [
             }
           }
         >
-          (auto)
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>(auto)</p>
+",
+              }
+            }
+          />
         </div>
         <div
           className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -3565,7 +4109,15 @@ Array [
         }
       }
     >
-      Pick up where you left off?
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Pick up where you left off?</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--medium"
@@ -3642,7 +4194,15 @@ Array [
             }
           }
         >
-          Silver Star Mountain
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Silver Star Mountain</p>
+",
+              }
+            }
+          />
         </div>
         <div
           className="wxc-ac-spacer wxc-ac-spacer--spacing--none"
@@ -3660,7 +4220,15 @@ Array [
             }
           }
         >
-          Maps
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Maps</p>
+",
+              }
+            }
+          />
         </div>
       </div>
     </div>
@@ -3739,7 +4307,15 @@ Array [
             }
           }
         >
-          Kitchen Remodel
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Kitchen Remodel</p>
+",
+              }
+            }
+          />
         </div>
         <div
           className="wxc-ac-spacer wxc-ac-spacer--spacing--none"
@@ -3757,7 +4333,15 @@ Array [
             }
           }
         >
-          With EMPHASIS
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>With EMPHASIS</p>
+",
+              }
+            }
+          />
         </div>
       </div>
     </div>
@@ -3836,7 +4420,15 @@ Array [
             }
           }
         >
-          The Witcher
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>The Witcher</p>
+",
+              }
+            }
+          />
         </div>
         <div
           className="wxc-ac-spacer wxc-ac-spacer--spacing--none"
@@ -3854,7 +4446,15 @@ Array [
             }
           }
         >
-          Netflix
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Netflix</p>
+",
+              }
+            }
+          />
         </div>
       </div>
     </div>
@@ -3970,7 +4570,15 @@ Array [
           }
         }
       >
-        This is some text
+        <div
+          className="wxc-markdown"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>This is some text</p>
+",
+            }
+          }
+        />
       </div>
       <div
         className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -4019,7 +4627,15 @@ Array [
           }
         }
       >
-        This container has the default style
+        <div
+          className="wxc-markdown"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>This container has the default style</p>
+",
+            }
+          }
+        />
       </div>
       <div
         className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -4037,7 +4653,15 @@ Array [
           }
         }
       >
-        color: default
+        <div
+          className="wxc-markdown"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>color: default</p>
+",
+            }
+          }
+        />
       </div>
       <div
         className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -4055,7 +4679,15 @@ Array [
           }
         }
       >
-        color: accent
+        <div
+          className="wxc-markdown"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>color: accent</p>
+",
+            }
+          }
+        />
       </div>
       <div
         className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -4073,7 +4705,15 @@ Array [
           }
         }
       >
-        color: good
+        <div
+          className="wxc-markdown"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>color: good</p>
+",
+            }
+          }
+        />
       </div>
       <div
         className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -4091,7 +4731,15 @@ Array [
           }
         }
       >
-        color: warning
+        <div
+          className="wxc-markdown"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>color: warning</p>
+",
+            }
+          }
+        />
       </div>
       <div
         className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -4109,7 +4757,15 @@ Array [
           }
         }
       >
-        color: attention
+        <div
+          className="wxc-markdown"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>color: attention</p>
+",
+            }
+          }
+        />
       </div>
       <div
         className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -4127,7 +4783,15 @@ Array [
           }
         }
       >
-        color: light
+        <div
+          className="wxc-markdown"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>color: light</p>
+",
+            }
+          }
+        />
       </div>
       <div
         className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -4145,7 +4809,15 @@ Array [
           }
         }
       >
-        color: dark
+        <div
+          className="wxc-markdown"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>color: dark</p>
+",
+            }
+          }
+        />
       </div>
     </div>
     <div
@@ -4176,7 +4848,15 @@ Array [
           }
         }
       >
-        This container has the accent style
+        <div
+          className="wxc-markdown"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>This container has the accent style</p>
+",
+            }
+          }
+        />
       </div>
       <div
         className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -4194,7 +4874,15 @@ Array [
           }
         }
       >
-        color: default
+        <div
+          className="wxc-markdown"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>color: default</p>
+",
+            }
+          }
+        />
       </div>
       <div
         className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -4212,7 +4900,15 @@ Array [
           }
         }
       >
-        color: accent
+        <div
+          className="wxc-markdown"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>color: accent</p>
+",
+            }
+          }
+        />
       </div>
       <div
         className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -4230,7 +4926,15 @@ Array [
           }
         }
       >
-        color: good
+        <div
+          className="wxc-markdown"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>color: good</p>
+",
+            }
+          }
+        />
       </div>
       <div
         className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -4248,7 +4952,15 @@ Array [
           }
         }
       >
-        color: warning
+        <div
+          className="wxc-markdown"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>color: warning</p>
+",
+            }
+          }
+        />
       </div>
       <div
         className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -4266,7 +4978,15 @@ Array [
           }
         }
       >
-        color: attention
+        <div
+          className="wxc-markdown"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>color: attention</p>
+",
+            }
+          }
+        />
       </div>
       <div
         className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -4284,7 +5004,15 @@ Array [
           }
         }
       >
-        color: light
+        <div
+          className="wxc-markdown"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>color: light</p>
+",
+            }
+          }
+        />
       </div>
       <div
         className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -4302,7 +5030,15 @@ Array [
           }
         }
       >
-        color: dark
+        <div
+          className="wxc-markdown"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>color: dark</p>
+",
+            }
+          }
+        />
       </div>
       <div
         className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -4332,7 +5068,15 @@ Array [
             }
           }
         >
-          Contained container - no style
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Contained container - no style</p>
+",
+              }
+            }
+          />
         </div>
       </div>
       <div
@@ -4363,7 +5107,15 @@ Array [
             }
           }
         >
-          Contained container - emphasis
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Contained container - emphasis</p>
+",
+              }
+            }
+          />
         </div>
       </div>
       <div
@@ -4394,7 +5146,15 @@ Array [
             }
           }
         >
-          Contained container - default
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Contained container - default</p>
+",
+              }
+            }
+          />
         </div>
       </div>
       <div
@@ -4425,7 +5185,15 @@ Array [
             }
           }
         >
-          Contained container - good
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Contained container - good</p>
+",
+              }
+            }
+          />
         </div>
       </div>
       <div
@@ -4456,7 +5224,15 @@ Array [
             }
           }
         >
-          Contained container - warning
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Contained container - warning</p>
+",
+              }
+            }
+          />
         </div>
       </div>
       <div
@@ -4487,7 +5263,15 @@ Array [
             }
           }
         >
-          Contained container - attention
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Contained container - attention</p>
+",
+              }
+            }
+          />
         </div>
       </div>
       <div
@@ -4518,7 +5302,15 @@ Array [
             }
           }
         >
-          Contained container - accent
+          <div
+            className="wxc-markdown"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Contained container - accent</p>
+",
+              }
+            }
+          />
         </div>
       </div>
     </div>
@@ -4555,7 +5347,15 @@ Array [
           }
         }
       >
-        What a beautiful background
+        <div
+          className="wxc-markdown"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>What a beautiful background</p>
+",
+            }
+          }
+        />
       </div>
     </div>
     <div
@@ -4574,7 +5374,15 @@ Array [
         }
       }
     >
-      They can even repeat a bunch of different ways...
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>They can even repeat a bunch of different ways...</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -5666,7 +6474,15 @@ Array [
         }
       }
     >
-      Specify the type of text being requested:
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Specify the type of text being requested:</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -5972,7 +6788,15 @@ Array [
         }
       }
     >
-      Multiline text input:
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Multiline text input:</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -6016,7 +6840,15 @@ Array [
         }
       }
     >
-      Pre-filled value:
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Pre-filled value:</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -6728,7 +7560,15 @@ Array [
         }
       }
     >
-      color: default
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>color: default</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -6746,7 +7586,15 @@ Array [
         }
       }
     >
-      color: accent
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>color: accent</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -6764,7 +7612,15 @@ Array [
         }
       }
     >
-      color: good
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>color: good</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -6782,7 +7638,15 @@ Array [
         }
       }
     >
-      color: warning
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>color: warning</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -6800,7 +7664,15 @@ Array [
         }
       }
     >
-      color: attention
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>color: attention</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -6818,7 +7690,15 @@ Array [
         }
       }
     >
-      color: light
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>color: light</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -6836,7 +7716,52 @@ Array [
         }
       }
     >
-      color: dark
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>color: dark</p>
+",
+          }
+        }
+      />
+    </div>
+    <div
+      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      style={
+        Object {
+          "style": undefined,
+        }
+      }
+    />
+    <div
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+    >
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>TextBlock supports markdown:<br>
+The text can be <strong>bold</strong> or <em>italic</em>.<br>
+Bullet lists</p>
+<ul>
+<li>one</li>
+<li>two</li>
+<li>three</li>
+</ul>
+<p>Numbered lists</p>
+<ol>
+<li>one</li>
+<li>two</li>
+<li>three</li>
+</ol>
+<p>Links: <a href=\\"https://adaptivecards.io\\">AdaptiveCards</a><br>
+Headers are not supported
+# This header is not processed</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -6854,7 +7779,15 @@ Array [
         }
       }
     >
-      Font type not set.
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Font type not set.</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -6872,7 +7805,15 @@ Array [
         }
       }
     >
-      Font type set to *default*.
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Font type set to <em>default</em>.</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -6890,7 +7831,15 @@ Array [
         }
       }
     >
-      Font type set to *monospace*.
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Font type set to <em>monospace</em>.</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -6908,7 +7857,15 @@ Array [
         }
       }
     >
-      **horizontalAlignment:left**
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p><strong>horizontalAlignment:left</strong></p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -6926,7 +7883,15 @@ Array [
         }
       }
     >
-      **horizontalAlignment:center**
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p><strong>horizontalAlignment:center</strong></p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -6944,7 +7909,15 @@ Array [
         }
       }
     >
-      **horizontalAlignment:right**
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p><strong>horizontalAlignment:right</strong></p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -6962,7 +7935,15 @@ Array [
         }
       }
     >
-      isSubtle:false
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>isSubtle:false</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -6980,7 +7961,15 @@ Array [
         }
       }
     >
-      isSubtle:true
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>isSubtle:true</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -6998,7 +7987,15 @@ Array [
         }
       }
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -7016,7 +8013,15 @@ Array [
         }
       }
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -7034,7 +8039,15 @@ Array [
         }
       }
     >
-      size:default
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>size:default</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -7052,7 +8065,15 @@ Array [
         }
       }
     >
-      size:small
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>size:small</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -7070,7 +8091,15 @@ Array [
         }
       }
     >
-      size:default
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>size:default</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -7088,7 +8117,15 @@ Array [
         }
       }
     >
-      size:medium
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>size:medium</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -7106,7 +8143,15 @@ Array [
         }
       }
     >
-      size:large
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>size:large</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -7124,7 +8169,15 @@ Array [
         }
       }
     >
-      size:extraLarge
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>size:extraLarge</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -7142,7 +8195,15 @@ Array [
         }
       }
     >
-      weight: lighter
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>weight: lighter</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -7160,7 +8221,15 @@ Array [
         }
       }
     >
-      weight: default
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>weight: default</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -7178,7 +8247,15 @@ Array [
         }
       }
     >
-      weight: bolder
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>weight: bolder</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -7196,7 +8273,15 @@ Array [
         }
       }
     >
-      **wrap: false** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p><strong>wrap: false</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -7214,7 +8299,15 @@ Array [
         }
       }
     >
-      **wrap: true** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p><strong>wrap: true</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -7233,7 +8326,15 @@ Array [
         }
       }
     >
-      Style set to heading
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Style set to heading</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -7252,7 +8353,15 @@ Array [
         }
       }
     >
-      Style set to heading, color set to good
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Style set to heading, color set to good</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -7270,7 +8379,15 @@ Array [
         }
       }
     >
-      Style set to default
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Style set to default</p>
+",
+          }
+        }
+      />
     </div>
     <div
       className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -7288,7 +8405,15 @@ Array [
         }
       }
     >
-      Style unset
+      <div
+        className="wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Style unset</p>
+",
+          }
+        }
+      />
     </div>
   </div>,
   <video
