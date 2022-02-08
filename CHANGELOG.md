@@ -1,3 +1,15 @@
+# [1.243.0](https://github.com/webex/components/compare/v1.242.1...v1.243.0) (2022-02-08)
+
+
+### Bug Fixes
+
+* **InputChoiceSet:** add getError function ([c0699e8](https://github.com/webex/components/commit/c0699e8f5c0408b61006a37999f6b321246ec0d5))
+
+
+### Features
+
+* **WebexAdaptiveCard:** create WebexAdaptiveCard component ([7038ed1](https://github.com/webex/components/commit/7038ed13fba2fd93245a52b042631ccd7238a881))
+
 ## [1.242.1](https://github.com/webex/components/compare/v1.242.0...v1.242.1) (2022-02-07)
 
 
