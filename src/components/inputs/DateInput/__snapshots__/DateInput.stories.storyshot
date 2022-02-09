@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Inputs/Date Input Date 1`] = `
+Array [
+  <label
+    className="wxc-label wxc-input-field wxc-date-input"
+  >
+    <div
+      className="wxc-label__control"
+      style={
+        Object {
+          "height": "100%",
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="wxc-input-field__form-control"
+      >
+        <input
+          autoFocus={false}
+          className="wxc-input-field__input"
+          disabled={false}
+          onChange={[Function]}
+          required={false}
+          tabIndex={0}
+          type="date"
+        />
+      </div>
+    </div>
+  </label>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;

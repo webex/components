@@ -306,6 +306,8 @@
   --wxc-input--off--disabled--background: #{$wxc-black-alpha-11};
   --wxc-input--off--disabled--foreground: #{$wxc-black-alpha-40};
 
+  --wxc-date-input--calendar-picker-indicator--filter: invert(60%);
+
   ::-webkit-scrollbar {
     width: 0.25rem;
   }
