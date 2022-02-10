@@ -1,3 +1,10 @@
+# [1.245.0](https://github.com/webex/components/compare/v1.244.0...v1.245.0) (2022-02-10)
+
+
+### Features
+
+* **AdaptiveCardsTextBlock:** implement maxLines property ([0178d1b](https://github.com/webex/components/commit/0178d1b60cefc8cfdfd7663c794e6fc1bb81fbbd))
+
 # [1.244.0](https://github.com/webex/components/compare/v1.243.0...v1.244.0) (2022-02-10)
 
 
