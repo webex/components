@@ -186,7 +186,7 @@ export default {
               height: 'auto',
               isRequired: true,
               errorMessage: 'This is a required input',
-              label: 'Departure Date is required',
+              label: 'Departure Date',
             },
             {
               type: 'Input.ChoiceSet',
@@ -196,7 +196,7 @@ export default {
               isMultiSelect: false,
               label: 'Free pickup?',
               isRequired: true,
-              errorMessage: 'Pick up opton on arrival is required',
+              errorMessage: 'Pick up option on arrival',
               choices: [
                 {
                   title: 'Yes Please! - Pick me up on arrival',
