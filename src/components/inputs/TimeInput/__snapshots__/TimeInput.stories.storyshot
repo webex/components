@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Inputs/Time Input Time 1`] = `
+Array [
+  <label
+    className="wxc-label wxc-input-field wxc-time-input"
+  >
+    <div
+      className="wxc-label__control"
+    >
+      <div
+        className="wxc-input-field__form-control"
+      >
+        <input
+          autoFocus={false}
+          className="wxc-input-field__input"
+          disabled={false}
+          onChange={[Function]}
+          required={false}
+          tabIndex={0}
+          type="time"
+        />
+      </div>
+    </div>
+  </label>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
