@@ -6,7 +6,7 @@ export default {
   component: DateInput,
 };
 
-const Template = (args) => <DateInput {...args} style={{height: '100%', width: '100%'}} />;
+const Template = (args) => <DateInput {...args} />;
 
 export const Date = Template.bind({});
 Date.args = {

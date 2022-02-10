@@ -7,12 +7,6 @@ Array [
   >
     <div
       className="wxc-label__control"
-      style={
-        Object {
-          "height": "100%",
-          "width": "100%",
-        }
-      }
     >
       <div
         className="wxc-input-field__form-control"
