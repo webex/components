@@ -7736,6 +7736,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       <div
         className="wxc-markdown"
