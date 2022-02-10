@@ -1,0 +1,14 @@
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-time-input;
+
+.#{$C} {
+  input[type="time"] {
+    position: relative;
+    padding-left: 2rem;
+
+    &::-webkit-calendar-picker-indicator {
+      position: absolute;
+      left: -0.1rem;
+      filter: var(--wxc-date-input--calendar-picker-indicator--filter);
+    }
+  }
+}
