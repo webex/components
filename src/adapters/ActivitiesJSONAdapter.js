@@ -60,15 +60,8 @@ export default class ActivitiesJSONAdapter extends ActivitiesAdapter {
    */
   getActivity(ID) {
     return Observable.create((observer) => {
-      const activity = this.datasource[ID];
-
-      if (activity) {
-        const card = activity.attachments && activity.attachments[0] && activity.attachments[0].contentType === 'application/vnd.microsoft.card.adaptive' ? activity.attachments[0].content : undefined;
-
-        observer.next({
-          ...this.datasource[ID],
-          card,
-        });
+      if (this.datasource[ID]) {
+        observer.next(this.datasource[ID]);
       } else {
         observer.error(new Error(`Could not find activity with ID "${ID}"`));
       }
@@ -129,20 +122,9 @@ export default class ActivitiesJSONAdapter extends ActivitiesAdapter {
           actions: [],
           ...activity,
           ID,
-          roomID: activity.roomID,
           personID: 'user1',
-          text: activity.text,
           created: new Date().toISOString(),
-          displayHeader: activity.displayHeader,
         };
-
-        if (newActivity.card) {
-          newActivity.attachments = [{
-            contentType: 'application/vnd.microsoft.card.adaptive',
-            content: activity.card,
-          }];
-          delete newActivity.card;
-        }
 
         activities[ID] = newActivity;
 
@@ -154,5 +136,45 @@ export default class ActivitiesJSONAdapter extends ActivitiesAdapter {
     });
 
     return activity$;
+  }
+
+  /**
+   * A function that checks whether or not an Activity object contains a card attachment.
+   *
+   * @param {Activity} activity  Activity object
+   * @returns {boolean} True if received Activity object contains a card attachment
+   */
+  // eslint-disable-next-line class-methods-use-this
+  hasAdaptiveCard(activity) {
+    return !!(activity.attachments && activity.attachments[0] && activity.attachments[0].contentType === 'application/vnd.microsoft.card.adaptive');
+  }
+
+  /**
+   * A function that returns adaptive card data of an Activity object.
+   *
+   * @param {Activity} activity  Activity object
+   * @returns {object|undefined} Adaptive card data object
+   */
+  // eslint-disable-next-line class-methods-use-this
+  getAdaptiveCard(activity) {
+    const hasCard = this.hasAdaptiveCard(activity);
+
+    return hasCard ? activity.attachments[0].content : undefined;
+  }
+
+  /**
+   * A function that attaches an adaptive card to an Activity object.
+   *
+   * @param {Activity} activity  The activity to post
+   * @param {object} card  The card attachment
+   */
+  // eslint-disable-next-line class-methods-use-this
+  attachAdaptiveCard(activity, card) {
+    const mutableActivity = activity;
+
+    mutableActivity.attachments = [{
+      contenType: 'application/vnd.microsoft.card.adaptive',
+      content: card,
+    }];
   }
 }

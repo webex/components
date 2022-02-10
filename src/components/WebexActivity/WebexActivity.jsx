@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import PropTypes from 'prop-types';
 
 import webexComponentClasses from '../helpers';
 import {useActivity} from '../hooks';
+import {AdapterContext} from '../hooks/contexts';
 
 import ActivityHeader from './ActivityHeader';
 import WebexAdaptiveCard from '../WebexAdaptiveCard/WebexAdaptiveCard';
@@ -17,22 +18,20 @@ import WebexAdaptiveCard from '../WebexAdaptiveCard/WebexAdaptiveCard';
  * @returns {object} JSX of the component
  */
 export default function WebexActivity({activityID, className, style}) {
-  const {
-    ID,
-    created,
-    displayHeader,
-    personID,
-    text,
-    card,
-  } = useActivity(activityID);
+  const activity = useActivity(activityID);
+  const adapter = useContext(AdapterContext);
+  const hasCard = adapter.activitiesAdapter.hasAdaptiveCard(activity);
+
   const [cssClasses, sc] = webexComponentClasses('activity', className);
 
   return (
-    <div className={cssClasses} key={ID} style={style}>
-      {displayHeader && <ActivityHeader personID={personID} timestamp={created} />}
+    <div className={cssClasses} key={activity.ID} style={style}>
+      {activity.displayHeader && (
+        <ActivityHeader personID={activity.personID} timestamp={activity.created} />
+      )}
       <div className={sc('content')}>
-        {text}
-        {card && <WebexAdaptiveCard activityID={ID} />}
+        {activity.text}
+        {hasCard && <WebexAdaptiveCard activityID={activity.ID} />}
       </div>
     </div>
   );

@@ -27,7 +27,11 @@ export default function useAdaptiveCard(activityID) {
       cleanup = undefined;
     } else {
       const subscription = activitiesAdapter.getActivity(activityID)
-        .subscribe((activity) => setCard(activity.card));
+        .subscribe((activity) => {
+          const newCard = activitiesAdapter.getAdaptiveCard(activity);
+
+          setCard(newCard);
+        });
 
       cleanup = () => subscription.unsubscribe();
     }
