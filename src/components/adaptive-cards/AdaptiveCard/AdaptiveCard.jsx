@@ -147,7 +147,7 @@ export default function AdaptiveCard({
 
       return {
         ...prevInputs,
-        [id]: {...input, value},
+        [id]: {...input, value, error: undefined},
       };
     });
   };
