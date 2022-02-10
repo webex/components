@@ -180,7 +180,20 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-ac;
   }
 }
 
+.#{$C}-select-action {
+  @include focusable;
+  &:hover {
+    border: var(--wxc-adaptive-cards--action--hover--border);
+    background-color: var(--wxc-adaptive-cards--action--hover--background);
+    color: var(--wxc-adaptive-cards--action--hover--foreground)
+  }
+  &:active {
+    border: var(--wxc-adaptive-cards--action--active--border);
+    background-color: var(--wxc-adaptive-cards--action--active--background);
+    color: var(--wxc-adaptive-cards--action--active--foreground)
+  }
+}
+
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-adaptive-cards-unknown-component {
   white-space: pre-wrap;
 }
-

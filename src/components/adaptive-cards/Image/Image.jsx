@@ -8,19 +8,24 @@ import {acPropTypes, registerComponent} from '../Component/Component';
  * https://adaptivecards.io/explorer/ImageSet.html
  *
  * @param {object} props  React props passed to the component
+ * @param {object} [props.action]  A set of attributes to apply when the component behaves as an action
  * @param {object} props.data  Active cards definition
  * @param {string} [props.className]  Custom CSS class to apply
  * @param {object} [props.style]  Custom style to apply
  * @returns {object} JSX of the component
  */
-export default function Image({data, className, style}) {
+export default function Image({
+  action, data, className, style,
+}) {
   const [cssClasses] = webexComponentClasses('adaptive-cards-image', className);
 
   return (
     <img
-      src={data.url}
-      className={cssClasses}
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...action}
       alt={data.altText}
+      className={cssClasses}
+      src={data.url}
       style={{
         ...style,
         backgroundColor: data.backgroundColor,
@@ -31,12 +36,14 @@ export default function Image({data, className, style}) {
 }
 
 Image.propTypes = {
+  action: PropTypes.shape(),
   data: PropTypes.shape().isRequired,
   className: PropTypes.string,
   style: PropTypes.shape(),
 };
 
 Image.defaultProps = {
+  action: undefined,
   className: '',
   style: undefined,
 };
@@ -49,6 +56,7 @@ Image.acPropTypes = {
   horizontalAlignment: acPropTypes.horizontalAlignment,
   id: acPropTypes.id,
   isVisible: acPropTypes.isVisible,
+  selectAction: acPropTypes.selectAction,
   separator: acPropTypes.separator,
   size: acPropTypes.imageSize,
   spacing: acPropTypes.spacing,

@@ -9,18 +9,20 @@ import webexComponentClasses from '../../helpers';
  *
  * @param {object} props  React props passed to the component
  * @param {object} props.data  Active cards definition
+ * @param {object} [props.action]  A set of attributes to apply when the component behaves as an action
  * @param {string} [props.className]  Custom CSS class to apply
  * @param {object} props.inherited  Inherited data
  * @param {object} [props.style]  Custom style to apply
  * @returns {object} JSX of the component
  */
 export default function Column({
-  data, className, inherited, style,
+  action, data, className, inherited, style,
 }) {
   const [cssClasses] = webexComponentClasses('adaptive-cards-column', className);
 
   return (
-    <div className={cssClasses} style={style}>
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <div className={cssClasses} {...action} style={style}>
       {/* eslint-disable react/no-array-index-key */}
       {data.items?.map(
         (item, index) => <Component data={item} inherited={inherited} key={index} />,
@@ -30,6 +32,7 @@ export default function Column({
 }
 
 Column.propTypes = {
+  action: PropTypes.shape(),
   data: PropTypes.shape().isRequired,
   className: PropTypes.string,
   inherited: PropTypes.shape().isRequired,
@@ -37,6 +40,7 @@ Column.propTypes = {
 };
 
 Column.defaultProps = {
+  action: undefined,
   className: '',
   style: undefined,
 };
@@ -50,6 +54,7 @@ Column.acPropTypes = {
   items: acPropTypes.children,
   minHeight: acPropTypes.minHeight,
   rtl: acPropTypes.rtl,
+  selectAction: acPropTypes.selectAction,
   separator: acPropTypes.separator,
   spacing: acPropTypes.spacing,
   style: acPropTypes.containerStyle,

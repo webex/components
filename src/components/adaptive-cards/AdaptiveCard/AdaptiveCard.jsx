@@ -32,13 +32,14 @@ import '../TextRun/TextRun';
  *
  * @param {object} props  React properties
  * @param {object} props.data  Active Cards definition
+ * @param {object} [props.action]  A set of attributes to apply when the component behaves as an action
  * @param {string} [props.className]  Custom CSS class to apply
  * @param {object} props.inherited  Inherited data
  * @param {object} [props.style]  Custom style to apply
  * @returns {object} JSX of the component
  */
 function AdaptiveCardInternal({
-  data, inherited, className, style,
+  action, data, className, inherited, style,
 }) {
   const [cssClasses] = webexComponentClasses('adaptive-card', [className, 'wxc-ac-container--has-padding']);
 
@@ -57,7 +58,8 @@ function AdaptiveCardInternal({
   }
 
   return (
-    <div className={cssClasses} style={style}>
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <div className={cssClasses} {...action} style={style}>
       {/* eslint-disable react/no-array-index-key */}
       {data.body?.map((item, index) => <Component data={item} inherited={inherited} key={index} />)}
       {data.actions && <Component data={{type: 'ActionSet', actions: data.actions}} inherited={inherited} />}
@@ -66,6 +68,7 @@ function AdaptiveCardInternal({
 }
 
 AdaptiveCardInternal.propTypes = {
+  action: PropTypes.shape(),
   data: PropTypes.shape().isRequired,
   className: PropTypes.string,
   inherited: PropTypes.shape().isRequired,
@@ -73,6 +76,7 @@ AdaptiveCardInternal.propTypes = {
 };
 
 AdaptiveCardInternal.defaultProps = {
+  action: undefined,
   className: undefined,
   style: undefined,
 };
@@ -84,6 +88,7 @@ AdaptiveCardInternal.acPropTypes = {
   minHeight: acPropTypes.minHeight,
   rtl: acPropTypes.rtl,
   $schema: acPropTypes.$schema,
+  selectAction: acPropTypes.selectAction,
   type: acPropTypes.type,
   version: acPropTypes.version,
   verticalContentAlignment: acPropTypes.verticalContentAlignment,

@@ -1,9 +1,9 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {acPropTypes, registerComponent} from '../Component/Component';
 import webexComponentClasses from '../../helpers';
 import Action from '../Action/Action';
-import AdaptiveCardContext from '../context/adaptive-card-context';
+import useActionToggleVisibility from '../hooks/useActionToggleVisibility';
 
 /**
  * Adaptive Cards Action.ToggleVisibility component
@@ -17,17 +17,14 @@ import AdaptiveCardContext from '../context/adaptive-card-context';
  */
 export default function ActionToggleVisibility({className, data, style}) {
   const [cssClasses] = webexComponentClasses('ac-action-toggle-visibility', className);
-  const {getIsVisible, setIsVisible} = useContext(AdaptiveCardContext);
-
-  const handleClick = () => {
-    (data.targetElements || []).map((elem) => (
-      typeof elem === 'string'
-        ? setIsVisible(elem, !getIsVisible(elem))
-        : setIsVisible(elem.elementId, elem.isVisible)));
-  };
 
   return (
-    <Action data={data} className={cssClasses} onClick={handleClick} style={style} />
+    <Action
+      className={cssClasses}
+      data={data}
+      onClick={useActionToggleVisibility(data).onClick}
+      style={style}
+    />
   );
 }
 

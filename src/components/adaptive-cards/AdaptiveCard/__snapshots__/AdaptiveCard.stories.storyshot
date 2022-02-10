@@ -105,7 +105,7 @@ Array [
       
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac wxc-ac-action-style--default  wxc-ac-action--disabled wxc-button--primary"
+        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac wxc-ac-action-style--default wxc-ac-is-enabled--false wxc-ac-action--disabled wxc-button--primary"
         disabled={true}
         onClick={[Function]}
         style={
@@ -1777,7 +1777,7 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top   wxc-ac-background-image-vertical-alignment--center wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode wxc-ac-background-image-horizontal-alignment wxc-ac-background-image-vertical-alignment--center wxc-ac-width--stretch wxc-ac-container--vertical"
         style={
           Object {
             "backgroundImage": "url(https://adaptivecards.io/content/GoldenGardensPark.jpg)",
@@ -1850,7 +1850,7 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeat   wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeat wxc-ac-background-image-horizontal-alignment wxc-ac-background-image-vertical-alignment wxc-ac-width--stretch wxc-ac-container--vertical"
         style={
           Object {
             "backgroundImage": "url(https://adaptivecards.io/content/uparrow.png)",
@@ -1945,7 +1945,7 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeathorizontally   wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeathorizontally wxc-ac-background-image-horizontal-alignment wxc-ac-background-image-vertical-alignment wxc-ac-width--stretch wxc-ac-container--vertical"
         style={
           Object {
             "backgroundImage": "url(https://adaptivecards.io/content/downarrow.png)",
@@ -1962,7 +1962,7 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeathorizontally  wxc-ac-background-image-vertical-alignment--center wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeathorizontally wxc-ac-background-image-horizontal-alignment wxc-ac-background-image-vertical-alignment--center wxc-ac-width--stretch wxc-ac-container--vertical"
         style={
           Object {
             "backgroundImage": "url(https://adaptivecards.io/content/uparrow.png)",
@@ -1979,7 +1979,7 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeathorizontally  wxc-ac-background-image-vertical-alignment--bottom wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeathorizontally wxc-ac-background-image-horizontal-alignment wxc-ac-background-image-vertical-alignment--bottom wxc-ac-width--stretch wxc-ac-container--vertical"
         style={
           Object {
             "backgroundImage": "url(https://adaptivecards.io/content/uparrow.png)",
@@ -2035,7 +2035,7 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeatvertically   wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeatvertically wxc-ac-background-image-horizontal-alignment wxc-ac-background-image-vertical-alignment wxc-ac-width--stretch wxc-ac-container--vertical"
         style={
           Object {
             "backgroundImage": "url(https://adaptivecards.io/content/uparrow.png)",
@@ -2052,7 +2052,7 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeatvertically wxc-ac-background-image-horizontal-alignment--center  wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeatvertically wxc-ac-background-image-horizontal-alignment--center wxc-ac-background-image-vertical-alignment wxc-ac-width--stretch wxc-ac-container--vertical"
         style={
           Object {
             "backgroundImage": "url(https://adaptivecards.io/content/downarrow.png)",
@@ -2069,7 +2069,7 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeatvertically wxc-ac-background-image-horizontal-alignment--right  wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeatvertically wxc-ac-background-image-horizontal-alignment--right wxc-ac-background-image-vertical-alignment wxc-ac-width--stretch wxc-ac-container--vertical"
         style={
           Object {
             "backgroundImage": "url(https://adaptivecards.io/content/uparrow.png)",
@@ -3365,8 +3365,13 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-select-action wxc-ac-container--vertical"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="link"
         style={Object {}}
+        tabIndex={0}
+        title="cool link"
       >
         <div
           className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -3422,8 +3427,13 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-select-action wxc-ac-container--vertical"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="link"
         style={Object {}}
+        tabIndex={0}
+        title="cool link"
       >
         <div
           className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -3479,8 +3489,13 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-select-action wxc-ac-container--vertical"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="link"
         style={Object {}}
+        tabIndex={0}
+        title="cool link"
       >
         <div
           className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -4128,8 +4143,13 @@ Array [
       }
     />
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-select-action wxc-ac-container--horizontal"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="link"
       style={Object {}}
+      tabIndex={0}
+      title="View a map of Silver Star Mountain"
     >
       <div
         className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -4241,8 +4261,12 @@ Array [
       }
     />
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-select-action wxc-ac-container--horizontal"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="button"
       style={Object {}}
+      tabIndex={0}
     >
       <div
         className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -4311,7 +4335,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Kitchen Remodel</p>
+                "__html": "<p>Toggle button</p>
 ",
               }
             }
@@ -4354,8 +4378,12 @@ Array [
       }
     />
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true  wxc-ac-container--horizontal"
+      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-bleed--false wxc-ac-select-action wxc-ac-container--horizontal"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="button"
       style={Object {}}
+      tabIndex={0}
     >
       <div
         className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
@@ -4424,7 +4452,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>The Witcher</p>
+                "__html": "<p>Submit button</p>
 ",
               }
             }
@@ -4450,7 +4478,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Netflix</p>
+                "__html": "<p>Send data</p>
 ",
               }
             }
@@ -4474,7 +4502,6 @@ Array [
         autoFocus={false}
         className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac wxc-ac-action-style--default wxc-button--primary"
         disabled={false}
-        onClick={[Function]}
         style={
           Object {
             "height": 32,
@@ -4492,7 +4519,6 @@ Array [
         autoFocus={false}
         className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac wxc-ac-action-style--default wxc-button--primary"
         disabled={false}
-        onClick={[Function]}
         style={
           Object {
             "height": 32,
@@ -5393,7 +5419,7 @@ Array [
       }
     />
     <div
-      className="wxc-container wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeat   wxc-ac-container--vertical"
+      className="wxc-container wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeat wxc-ac-background-image-horizontal-alignment wxc-ac-background-image-vertical-alignment wxc-ac-container--vertical"
       style={
         Object {
           "backgroundImage": "url(https://adaptivecards.io/content/uparrow.png)",
@@ -5410,7 +5436,7 @@ Array [
       }
     />
     <div
-      className="wxc-container wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeathorizontally  wxc-ac-background-image-vertical-alignment--center wxc-ac-container--vertical"
+      className="wxc-container wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeathorizontally wxc-ac-background-image-horizontal-alignment wxc-ac-background-image-vertical-alignment--center wxc-ac-container--vertical"
       style={
         Object {
           "backgroundImage": "url(https://adaptivecards.io/content/uparrow.png)",
@@ -5427,7 +5453,7 @@ Array [
       }
     />
     <div
-      className="wxc-container wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeatvertically wxc-ac-background-image-horizontal-alignment--center  wxc-ac-container--vertical"
+      className="wxc-container wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-background-image-fill-mode--repeatvertically wxc-ac-background-image-horizontal-alignment--center wxc-ac-background-image-vertical-alignment wxc-ac-container--vertical"
       style={
         Object {
           "backgroundImage": "url(https://adaptivecards.io/content/uparrow.png)",
@@ -7736,6 +7762,11 @@ Array [
     />
     <div
       className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
     >
       <div
         className="wxc-markdown"
@@ -7928,7 +7959,7 @@ Headers are not supported
       }
     />
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true "
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-is-subtle--false"
       style={
         Object {
           "WebkitLineClamp": undefined,
@@ -8266,7 +8297,7 @@ Headers are not supported
       }
     />
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true "
+      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--false"
       style={
         Object {
           "WebkitLineClamp": undefined,

@@ -8,6 +8,7 @@ import webexComponentClasses from '../../helpers';
  * https://adaptivecards.io/explorer/ColumnSet.html
  *
  * @param {object} props  React props passed to the component
+ * @param {object} [props.action]  A set of attributes to apply when the component behaves as an action
  * @param {object} props.data  Active cards definition
  * @param {string} [props.className]  Custom CSS class to apply
  * @param {object} props.inherited  Inherited data
@@ -15,12 +16,13 @@ import webexComponentClasses from '../../helpers';
  * @returns {object} JSX of the component
  */
 export default function ColumnSet({
-  data, className, inherited, style,
+  action, data, className, inherited, style,
 }) {
   const [cssClasses] = webexComponentClasses('adaptive-cards-column-set', className);
 
   return (
-    <div className={cssClasses} style={style}>
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <div className={cssClasses} {...action} style={style}>
       {/* eslint-disable react/no-array-index-key */}
       {data.columns.map((item, index) => {
         const itemData = {type: 'Column', ...item};
@@ -34,6 +36,7 @@ export default function ColumnSet({
 }
 
 ColumnSet.propTypes = {
+  action: PropTypes.shape(),
   data: PropTypes.shape().isRequired,
   className: PropTypes.string,
   inherited: PropTypes.shape().isRequired,
@@ -41,6 +44,7 @@ ColumnSet.propTypes = {
 };
 
 ColumnSet.defaultProps = {
+  action: undefined,
   className: '',
   style: undefined,
 };
@@ -54,6 +58,7 @@ ColumnSet.acPropTypes = {
   id: acPropTypes.id,
   isVisible: acPropTypes.isVisible,
   minHeight: acPropTypes.minHeight,
+  selectAction: acPropTypes.selectAction,
   separator: acPropTypes.separator,
   spacing: acPropTypes.spacing,
   style: acPropTypes.containerStyle,

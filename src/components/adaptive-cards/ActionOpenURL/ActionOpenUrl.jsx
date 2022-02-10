@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {isValidUrl} from '../../../util';
 import {acPropTypes, registerComponent} from '../Component/Component';
 import webexComponentClasses from '../../helpers';
 import Action from '../Action/Action';
+import useActionOpenUrl from '../hooks/useActionOpenUrl';
 
 /**
  * Adaptive Cards Action.OpenUrl component
@@ -17,10 +17,14 @@ import Action from '../Action/Action';
  */
 export default function ActionOpenUrl({className, data, style}) {
   const [cssClasses] = webexComponentClasses('ac-action-open-url', className);
-  const isValidHttpUrl = isValidUrl(data.url, ['https:', 'http:']);
 
   return (
-    <Action data={data} className={cssClasses} onClick={() => isValidHttpUrl && window.open(data.url, '_blank')} style={style} />
+    <Action
+      className={cssClasses}
+      data={data}
+      onClick={useActionOpenUrl(data)?.onClick}
+      style={style}
+    />
   );
 }
 
