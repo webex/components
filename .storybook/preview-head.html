@@ -2,11 +2,14 @@
 <style>
   #root {
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100%;
     width: 100%;
     background: black;
+    overflow: auto;
+  }
+
+  #root > :first-child {
+    margin: auto;
   }
 
   .wxc-theme-light #root {
