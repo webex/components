@@ -396,6 +396,11 @@ Array [
             className="wxc-label__label-text"
           >
             Number of Guests
+            <span
+              className="wxc-label__required"
+            >
+               *
+            </span>
           </div>
           <div
             className="wxc-label__control"
@@ -412,7 +417,7 @@ Array [
                 min={1}
                 onChange={[Function]}
                 placeholder="Please select the number of guests"
-                required={false}
+                required={true}
                 tabIndex={0}
                 type="number"
                 value={0}
