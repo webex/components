@@ -716,7 +716,7 @@ Array [
           <div
             className="wxc-label__label-text"
           >
-            Departure Date is required
+            Departure Date
             <span
               className="wxc-label__required"
             >
