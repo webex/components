@@ -1,3 +1,13 @@
+# [1.244.0](https://github.com/webex/components/compare/v1.243.0...v1.244.0) (2022-02-10)
+
+
+### Features
+
+* **ActivitiesJsonAdapter:** implement postActivity() method ([ab35212](https://github.com/webex/components/commit/ab352127af07067b12610f4fdb5d0ab8ec0f9206))
+* **AdaptiveCard:** implement date and time formatting ([1798062](https://github.com/webex/components/commit/179806217d51a722cfeaf8b4318257a70bcf280f))
+* **AdaptiveCardsInputToggle:** implement Input.Toggle component ([0563aa6](https://github.com/webex/components/commit/0563aa6b7840ea94cc902910c963d10e169407c3))
+* **DateInput:** implement DateInput component ([2b2d986](https://github.com/webex/components/commit/2b2d986e7c325443f8c9708a682bdfaf10c95151))
+
 # [1.243.0](https://github.com/webex/components/compare/v1.242.1...v1.243.0) (2022-02-08)
 
 
