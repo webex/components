@@ -308,6 +308,15 @@
 
   --wxc-date-input--calendar-picker-indicator--filter: invert(70%);
 
+  --wxc-adaptive-cards--action--hover--border: inherit;
+  --wxc-adaptive-cards--action--hover--background: #{$wxc-white-alpha-07};
+  --wxc-adaptive-cards--action--hover--foreground: inherit;
+
+
+  --wxc-adaptive-cards--action--active--border: inherit;
+  --wxc-adaptive-cards--action--active--background: #{$wxc-white-alpha-11};
+  --wxc-adaptive-cards--action--active--foreground: inherit;
+
   ::-webkit-scrollbar {
     width: 0.25rem;
   }

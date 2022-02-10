@@ -260,9 +260,9 @@
   --wxc-adaptive-cards--color--attention: #{$wxc-red-70};
   --wxc-adaptive-cards--color--warning: #{$wxc-yellow-70};
 
-  --wxc-adaptive-cards--subtle-color--default: #{$wxc-white-alpha-60};
-  --wxc-adaptive-cards--subtle-color--dark: #{$wxc-white-alpha-60};
-  --wxc-adaptive-cards--subtle-color--light: #{$wxc-white-alpha-50};
+  --wxc-adaptive-cards--subtle-color--default: #{$wxc-black-alpha-60};
+  --wxc-adaptive-cards--subtle-color--dark: #{$wxc-black-alpha-60};
+  --wxc-adaptive-cards--subtle-color--light: #{$wxc-black-alpha-50};
   --wxc-adaptive-cards--subtle-color--accent: #{$wxc-blue-60};
   --wxc-adaptive-cards--subtle-color--good: #{$wxc-green-60};
   --wxc-adaptive-cards--subtle-color--warning: #{$wxc-yellow-60};
@@ -307,6 +307,14 @@
   --wxc-input--off--disabled--foreground: #{$wxc-black-alpha-40};
 
   --wxc-date-input--calendar-picker-indicator--filter: invert(60%);
+
+  --wxc-adaptive-cards--action--hover--border: inherit;
+  --wxc-adaptive-cards--action--hover--background: #{$wxc-black-alpha-07};
+  --wxc-adaptive-cards--action--hover--foreground: inherit;
+
+  --wxc-adaptive-cards--action--active--border: inherit;
+  --wxc-adaptive-cards--action--active--background: #{$wxc-black-alpha-11};
+  --wxc-adaptive-cards--action--active--foreground: inherit;
 
   ::-webkit-scrollbar {
     width: 0.25rem;

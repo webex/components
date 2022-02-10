@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 import AdaptiveCardContext from '../context/adaptive-card-context';
 import Spacer from '../Spacer/Spacer';
+import useAction from '../hooks/useAction';
 
 const componentTypes = {};
 const containerTypes = {};
@@ -48,6 +49,7 @@ export const acPropTypes = {
   regex: 'regex',
   rtl: 'rtl',
   $schema: '$schema',
+  selectAction: 'select-action',
   separator: 'separator',
   size: 'size',
   spacing: 'spacing',
@@ -142,8 +144,9 @@ export default function Component({
   const fallback = data.fallback !== 'drop' && componentTypes[data.fallback];
   const C = componentTypes[data.type] || fallback || UnknownComponent;
   const classes = [];
-  const getClass = (propType, value) => (value ? `wxc-ac-${propType}--${String(value).toLowerCase()}` : '');
+  const getClass = (propType, value) => (value !== undefined ? `wxc-ac-${propType}--${String(value).toLowerCase()}` : `wxc-ac-${propType}`);
   const style = {};
+  const action = useAction(data.selectAction);
   let myInherited = {}; // inherited props that apply to this component
   let childrenInherited = inherited; // inherited props for this component's children
 
@@ -242,7 +245,10 @@ export default function Component({
         }
         break;
       case acPropTypes.isVisible:
-        classes.push(getClass(propType, getIsVisible(data.id).toString()));
+        classes.push(getClass(propType, getIsVisible(data.id)));
+        break;
+      case acPropTypes.selectAction:
+        classes.push(getClass(propType));
         break;
       default:
         classes.push(getClass(propType, value));
@@ -257,8 +263,9 @@ export default function Component({
   }
 
   const props = {
-    data: {...dataWithDefaults},
+    action: action && {...action, tabIndex: 0},
     className: `${cssClasses} ${classes.join(' ')}`,
+    data: {...dataWithDefaults},
     inherited: childrenInherited,
     style: {...style, ...styleProp},
     ...otherProps,

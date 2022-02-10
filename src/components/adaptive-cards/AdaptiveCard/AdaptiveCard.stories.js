@@ -1492,7 +1492,7 @@ const exampleColumnSet = {
           items: [
             {
               type: 'TextBlock',
-              text: 'Kitchen Remodel',
+              text: 'Toggle button',
             },
             {
               type: 'TextBlock',
@@ -1504,14 +1504,14 @@ const exampleColumnSet = {
         },
       ],
       selectAction: {
-        type: 'Action.OpenUrl',
-        url: 'https://www.AdaptiveCards.io',
-        tooltip: 'Remodel your kitchen with our new cabinet styles!',
+        type: 'Action.ToggleVisibility',
+        targetElements: ['submitActionColumnSet'],
       },
     },
     {
       type: 'ColumnSet',
       bleed: false,
+      id: 'submitActionColumnSet',
       columns: [
         {
           type: 'Column',
@@ -1530,11 +1530,11 @@ const exampleColumnSet = {
           items: [
             {
               type: 'TextBlock',
-              text: 'The Witcher',
+              text: 'Submit button',
             },
             {
               type: 'TextBlock',
-              text: 'Netflix',
+              text: 'Send data',
               isSubtle: true,
               spacing: 'none',
             },
@@ -1542,9 +1542,7 @@ const exampleColumnSet = {
         },
       ],
       selectAction: {
-        type: 'Action.OpenUrl',
-        url: 'https://www.outlook.com',
-        tooltip: 'Watch the newest episode today!',
+        type: 'Action.Submit',
       },
     },
   ],

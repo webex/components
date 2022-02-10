@@ -1,9 +1,9 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {acPropTypes, registerComponent} from '../Component/Component';
 import webexComponentClasses from '../../helpers';
 import Action from '../Action/Action';
-import AdaptiveCardContext from '../context/adaptive-card-context';
+import useActionSubmit from '../hooks/useActionSubmit';
 
 /**
  * Adaptive Cards Action.Submit component
@@ -17,35 +17,13 @@ import AdaptiveCardContext from '../context/adaptive-card-context';
  */
 export default function ActionSubmit({className, data, style}) {
   const [cssClasses] = webexComponentClasses('ac-action-submit', className);
-  const {
-    getAllValues,
-    validate,
-    submit,
-  } = useContext(AdaptiveCardContext);
-
-  const handleSubmit = () => {
-    if (data.associatedInputs?.toLowerCase() !== 'none') {
-      if (validate()) {
-        let values = getAllValues();
-
-        if (typeof data.data === 'object') {
-          values = {...values, ...data.data};
-        }
-        submit(values);
-      } else {
-        console.log('Submitted invalid values:', getAllValues());
-      }
-    } else {
-      submit(data.data);
-    }
-  };
 
   return (
     <Action
       className={cssClasses}
       style={style}
       data={data}
-      onClick={handleSubmit}
+      onClick={useActionSubmit(data).onClick}
     />
   );
 }
