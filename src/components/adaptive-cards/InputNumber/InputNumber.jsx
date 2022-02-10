@@ -54,7 +54,7 @@ export default function InputNumber({data, className, style}) {
       placeholder={data.placeholder}
       value={getValue(data.id)}
       error={getError(data.id)}
-      required={data.required}
+      required={data.isRequired}
       label={formatDateTime(data.label)}
       onChange={(value) => setValue(data.id, value)}
     />
