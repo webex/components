@@ -115,6 +115,7 @@ Array [
             />
             <label
               className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--text wxc-ac-height--auto"
+              style={Object {}}
             >
               <div
                 className="wxc-label__label-text"
@@ -128,7 +129,6 @@ Array [
               </div>
               <div
                 className="wxc-label__control"
-                style={Object {}}
               >
                 <div
                   className="wxc-input-field__form-control"
@@ -184,6 +184,7 @@ Array [
             />
             <label
               className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--text wxc-ac-height--auto"
+              style={Object {}}
             >
               <div
                 className="wxc-label__label-text"
@@ -197,7 +198,6 @@ Array [
               </div>
               <div
                 className="wxc-label__control"
-                style={Object {}}
               >
                 <div
                   className="wxc-input-field__form-control"
@@ -254,6 +254,7 @@ Array [
           />
           <label
             className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--email wxc-ac-height--auto"
+            style={Object {}}
           >
             <div
               className="wxc-label__label-text"
@@ -267,7 +268,6 @@ Array [
             </div>
             <div
               className="wxc-label__control"
-              style={Object {}}
             >
               <div
                 className="wxc-input-field__form-control"
@@ -324,6 +324,7 @@ Array [
         />
         <label
           className="wxc-label wxc-adaptive-cards-input-choice-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
+          style={Object {}}
         >
           <div
             className="wxc-label__label-text"
@@ -337,7 +338,6 @@ Array [
           </div>
           <div
             className="wxc-label__control"
-            style={Object {}}
           >
             <label
               className="wxc-label wxc-select"
@@ -390,6 +390,7 @@ Array [
         />
         <label
           className="wxc-label wxc-input-field wxc-adaptive-cards-input-number wxc-ac wxc-ac-is-visible--true"
+          style={Object {}}
         >
           <div
             className="wxc-label__label-text"
@@ -403,7 +404,6 @@ Array [
           </div>
           <div
             className="wxc-label__control"
-            style={Object {}}
           >
             <div
               className="wxc-input-field__form-control"
@@ -532,6 +532,7 @@ Array [
           />
           <label
             className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--text wxc-ac-height--auto"
+            style={Object {}}
           >
             <div
               className="wxc-label__label-text"
@@ -545,7 +546,6 @@ Array [
             </div>
             <div
               className="wxc-label__control"
-              style={Object {}}
             >
               <div
                 className="wxc-input-field__form-control"
@@ -601,6 +601,7 @@ Array [
           />
           <label
             className="wxc-label wxc-input-field wxc-time-input wxc-adaptive-cards-input-time wxc-ac wxc-ac-is-visible--true"
+            style={Object {}}
           >
             <div
               className="wxc-label__label-text"
@@ -614,7 +615,6 @@ Array [
             </div>
             <div
               className="wxc-label__control"
-              style={Object {}}
             >
               <div
                 className="wxc-input-field__form-control"
@@ -671,6 +671,7 @@ Array [
         />
         <label
           className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--text wxc-ac-height--auto"
+          style={Object {}}
         >
           <div
             className="wxc-label__label-text"
@@ -684,7 +685,6 @@ Array [
           </div>
           <div
             className="wxc-label__control"
-            style={Object {}}
           >
             <div
               className="wxc-input-field__form-control"
@@ -740,6 +740,7 @@ Array [
         />
         <label
           className="wxc-label wxc-adaptive-cards-input-choice-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
+          style={Object {}}
         >
           <div
             className="wxc-label__label-text"
@@ -753,7 +754,6 @@ Array [
           </div>
           <div
             className="wxc-label__control"
-            style={Object {}}
           >
             <div
               aria-checked={false}

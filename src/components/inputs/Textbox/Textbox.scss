@@ -4,7 +4,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-textbox;
   &__control {
     box-sizing: border-box;
     width: 100%;
-    height: 5rem;
+    height: 100%;
     background: var(--wxc-input-field--normal--background);
     color: var(--wxc-input-field--normal--color);
     border: var(--wxc-input-field--normal--border);
@@ -14,6 +14,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-textbox;
     font-size: 0.875rem;
     padding: 0.25rem 0.75rem;
     text-align: left;
+    resize: none;
 
     &:hover {
       background: var(--wxc-input-field--hover--background);
