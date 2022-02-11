@@ -26,8 +26,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>The action of these cards will open a URL</p>
-",
+            "__html": "The action of these cards will open a URL",
           }
         }
       />
@@ -173,8 +172,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Cards can have action sets in the middle of their body.</p>
-",
+            "__html": "Cards can have action sets in the middle of their body.",
           }
         }
       />
@@ -261,8 +259,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>There are also still actions's at the bottom of the card</p>
-",
+            "__html": "There are also still actions's at the bottom of the card",
           }
         }
       />
@@ -379,8 +376,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>This card's action will show another card</p>
-",
+            "__html": "This card's action will show another card",
           }
         }
       />
@@ -509,8 +505,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Present a form and submit it back to the originator</p>
-",
+            "__html": "Present a form and submit it back to the originator",
           }
         }
       />
@@ -837,8 +832,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Press the buttons to toggle the images!</p>
-",
+            "__html": "Press the buttons to toggle the images!",
           }
         }
       />
@@ -863,8 +857,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Here are some images:</p>
-",
+            "__html": "Here are some images:",
           }
         }
       />
@@ -1120,8 +1113,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Cisco Webex Teams</p>
-",
+                "__html": "Cisco Webex Teams",
               }
             }
           />
@@ -1146,8 +1138,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Buttons and Cards Release</p>
-",
+                "__html": "Buttons and Cards Release",
               }
             }
           />
@@ -1202,8 +1193,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Release Date:</p>
-",
+                "__html": "Release Date:",
               }
             }
           />
@@ -1228,8 +1218,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Product:</p>
-",
+                "__html": "Product:",
               }
             }
           />
@@ -1254,8 +1243,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>OS:</p>
-",
+                "__html": "OS:",
               }
             }
           />
@@ -1297,8 +1285,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Aug 6, 2019</p>
-",
+                "__html": "Aug 6, 2019",
               }
             }
           />
@@ -1323,8 +1310,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Webex Teams</p>
-",
+                "__html": "Webex Teams",
               }
             }
           />
@@ -1349,8 +1335,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Mac, Windows, Web</p>
-",
+                "__html": "Mac, Windows, Web",
               }
             }
           />
@@ -1377,8 +1362,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>We're making it easier for you to interact with bots and integrations in Webex Teams. When your bot sends information in a space that includes a card with buttons, you can now easily interact with it.</p>
-",
+            "__html": "We're making it easier for you to interact with bots and integrations in Webex Teams. When your bot sends information in a space that includes a card with buttons, you can now easily interact with it.",
           }
         }
       />
@@ -1403,8 +1387,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Buttons and Cards Resources:</p>
-",
+            "__html": "Buttons and Cards Resources:",
           }
         }
       />
@@ -1485,8 +1468,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p><a href=\\"\\">Developer Portal Buttons and Cards Guide</a></p>
-",
+                "__html": "<a href=\\"\\">Developer Portal Buttons and Cards Guide</a>",
               }
             }
           />
@@ -1599,8 +1581,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Column 1</p>
-",
+                "__html": "Column 1",
               }
             }
           />
@@ -1656,8 +1637,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Column 2</p>
-",
+                "__html": "Column 2",
               }
             }
           />
@@ -1713,8 +1693,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Column 3</p>
-",
+                "__html": "Column 3",
               }
             }
           />
@@ -1823,8 +1802,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>You can even repeat the background image...</p>
-",
+            "__html": "You can even repeat the background image...",
           }
         }
       />
@@ -1890,8 +1868,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Those are some neat arrows</p>
-",
+                "__html": "Those are some neat arrows",
               }
             }
           />
@@ -1918,8 +1895,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Horizontal repeat...</p>
-",
+            "__html": "Horizontal repeat...",
           }
         }
       />
@@ -2008,8 +1984,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Vertical repeat...</p>
-",
+            "__html": "Vertical repeat...",
           }
         }
       />
@@ -2098,8 +2073,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Bleed left</p>
-",
+            "__html": "Bleed left",
           }
         }
       />
@@ -2148,8 +2122,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Column 1</p>
-",
+                "__html": "Column 1",
               }
             }
           />
@@ -2187,8 +2160,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Column 2</p>
-",
+                "__html": "Column 2",
               }
             }
           />
@@ -2226,8 +2198,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Column 3</p>
-",
+                "__html": "Column 3",
               }
             }
           />
@@ -2254,8 +2225,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Bleed center</p>
-",
+            "__html": "Bleed center",
           }
         }
       />
@@ -2304,8 +2274,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Column 1</p>
-",
+                "__html": "Column 1",
               }
             }
           />
@@ -2343,8 +2312,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Column 2</p>
-",
+                "__html": "Column 2",
               }
             }
           />
@@ -2382,8 +2350,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Column 3</p>
-",
+                "__html": "Column 3",
               }
             }
           />
@@ -2410,8 +2377,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Bleed right</p>
-",
+            "__html": "Bleed right",
           }
         }
       />
@@ -2460,8 +2426,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Column 1</p>
-",
+                "__html": "Column 1",
               }
             }
           />
@@ -2499,8 +2464,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Column 2</p>
-",
+                "__html": "Column 2",
               }
             }
           />
@@ -2538,8 +2502,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Column 3</p>
-",
+                "__html": "Column 3",
               }
             }
           />
@@ -2566,8 +2529,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Bleed all</p>
-",
+            "__html": "Bleed all",
           }
         }
       />
@@ -2616,8 +2578,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Column 1</p>
-",
+                "__html": "Column 1",
               }
             }
           />
@@ -2655,8 +2616,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Column 2</p>
-",
+                "__html": "Column 2",
               }
             }
           />
@@ -2694,8 +2654,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Column 3</p>
-",
+                "__html": "Column 3",
               }
             }
           />
@@ -2796,8 +2755,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>This is a column</p>
-",
+                "__html": "This is a column",
               }
             }
           />
@@ -2856,8 +2814,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>The columnset has a minHeight of 100px while this column has a minHeight of 200px so it should override</p>
-",
+                "__html": "The columnset has a minHeight of 100px while this column has a minHeight of 200px so it should override",
               }
             }
           />
@@ -2947,8 +2904,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>The middle column is set to rtl</p>
-",
+            "__html": "The middle column is set to rtl",
           }
         }
       />
@@ -2997,8 +2953,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Column One</p>
-",
+                "__html": "Column One",
               }
             }
           />
@@ -3036,8 +2991,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>العمود الثاني</p>
-",
+                "__html": "العمود الثاني",
               }
             }
           />
@@ -3075,8 +3029,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Column three</p>
-",
+                "__html": "Column three",
               }
             }
           />
@@ -3157,8 +3110,7 @@ Array [
               className="wxc-markdown"
               dangerouslySetInnerHTML={
                 Object {
-                  "__html": "<p>SHADES</p>
-",
+                  "__html": "SHADES",
                 }
               }
             />
@@ -3198,8 +3150,7 @@ Array [
               className="wxc-markdown"
               dangerouslySetInnerHTML={
                 Object {
-                  "__html": "<p>Dec 4</p>
-",
+                  "__html": "Dec 4",
                 }
               }
             />
@@ -3224,8 +3175,7 @@ Array [
               className="wxc-markdown"
               dangerouslySetInnerHTML={
                 Object {
-                  "__html": "<p>Final</p>
-",
+                  "__html": "Final",
                 }
               }
             />
@@ -3250,8 +3200,7 @@ Array [
               className="wxc-markdown"
               dangerouslySetInnerHTML={
                 Object {
-                  "__html": "<p>7 - 40</p>
-",
+                  "__html": "7 - 40",
                 }
               }
             />
@@ -3309,8 +3258,7 @@ Array [
               className="wxc-markdown"
               dangerouslySetInnerHTML={
                 Object {
-                  "__html": "<p>SKINS</p>
-",
+                  "__html": "SKINS",
                 }
               }
             />
@@ -3338,8 +3286,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Try clicking a column!</p>
-",
+            "__html": "Try clicking a column!",
           }
         }
       />
@@ -3393,8 +3340,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Column 1</p>
-",
+                "__html": "Column 1",
               }
             }
           />
@@ -3455,8 +3401,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Column 2</p>
-",
+                "__html": "Column 2",
               }
             }
           />
@@ -3517,8 +3462,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Column 3</p>
-",
+                "__html": "Column 3",
               }
             }
           />
@@ -3587,8 +3531,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>No Style</p>
-",
+                "__html": "No Style",
               }
             }
           />
@@ -3626,8 +3569,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Default Style</p>
-",
+                "__html": "Default Style",
               }
             }
           />
@@ -3665,8 +3607,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Emphasis Style</p>
-",
+                "__html": "Emphasis Style",
               }
             }
           />
@@ -3703,8 +3644,7 @@ Array [
               className="wxc-markdown"
               dangerouslySetInnerHTML={
                 Object {
-                  "__html": "<p>Container no style</p>
-",
+                  "__html": "Container no style",
                 }
               }
             />
@@ -3742,8 +3682,7 @@ Array [
               className="wxc-markdown"
               dangerouslySetInnerHTML={
                 Object {
-                  "__html": "<p>Container default style</p>
-",
+                  "__html": "Container default style",
                 }
               }
             />
@@ -3781,8 +3720,7 @@ Array [
               className="wxc-markdown"
               dangerouslySetInnerHTML={
                 Object {
-                  "__html": "<p>Container emphasis style</p>
-",
+                  "__html": "Container emphasis style",
                 }
               }
             />
@@ -3810,8 +3748,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Hi,</p>
-",
+            "__html": "Hi,",
           }
         }
       />
@@ -3836,8 +3773,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>MasterHip</p>
-",
+            "__html": "MasterHip",
           }
         }
       />
@@ -3886,8 +3822,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Column 1</p>
-",
+                "__html": "Column 1",
               }
             }
           />
@@ -3938,8 +3873,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>(auto)</p>
-",
+                "__html": "(auto)",
               }
             }
           />
@@ -3995,8 +3929,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>(stretch)</p>
-",
+                "__html": "(stretch)",
               }
             }
           />
@@ -4052,8 +3985,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>(auto)</p>
-",
+                "__html": "(auto)",
               }
             }
           />
@@ -4128,8 +4060,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Pick up where you left off?</p>
-",
+            "__html": "Pick up where you left off?",
           }
         }
       />
@@ -4218,8 +4149,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Silver Star Mountain</p>
-",
+                "__html": "Silver Star Mountain",
               }
             }
           />
@@ -4244,8 +4174,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Maps</p>
-",
+                "__html": "Maps",
               }
             }
           />
@@ -4335,8 +4264,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Toggle button</p>
-",
+                "__html": "Toggle button",
               }
             }
           />
@@ -4361,8 +4289,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>With EMPHASIS</p>
-",
+                "__html": "With EMPHASIS",
               }
             }
           />
@@ -4452,8 +4379,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Submit button</p>
-",
+                "__html": "Submit button",
               }
             }
           />
@@ -4478,8 +4404,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Send data</p>
-",
+                "__html": "Send data",
               }
             }
           />
@@ -4600,8 +4525,7 @@ Array [
           className="wxc-markdown"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<p>This is some text</p>
-",
+              "__html": "This is some text",
             }
           }
         />
@@ -4657,8 +4581,7 @@ Array [
           className="wxc-markdown"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<p>This container has the default style</p>
-",
+              "__html": "This container has the default style",
             }
           }
         />
@@ -4683,8 +4606,7 @@ Array [
           className="wxc-markdown"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<p>color: default</p>
-",
+              "__html": "color: default",
             }
           }
         />
@@ -4709,8 +4631,7 @@ Array [
           className="wxc-markdown"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<p>color: accent</p>
-",
+              "__html": "color: accent",
             }
           }
         />
@@ -4735,8 +4656,7 @@ Array [
           className="wxc-markdown"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<p>color: good</p>
-",
+              "__html": "color: good",
             }
           }
         />
@@ -4761,8 +4681,7 @@ Array [
           className="wxc-markdown"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<p>color: warning</p>
-",
+              "__html": "color: warning",
             }
           }
         />
@@ -4787,8 +4706,7 @@ Array [
           className="wxc-markdown"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<p>color: attention</p>
-",
+              "__html": "color: attention",
             }
           }
         />
@@ -4813,8 +4731,7 @@ Array [
           className="wxc-markdown"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<p>color: light</p>
-",
+              "__html": "color: light",
             }
           }
         />
@@ -4839,8 +4756,7 @@ Array [
           className="wxc-markdown"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<p>color: dark</p>
-",
+              "__html": "color: dark",
             }
           }
         />
@@ -4878,8 +4794,7 @@ Array [
           className="wxc-markdown"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<p>This container has the accent style</p>
-",
+              "__html": "This container has the accent style",
             }
           }
         />
@@ -4904,8 +4819,7 @@ Array [
           className="wxc-markdown"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<p>color: default</p>
-",
+              "__html": "color: default",
             }
           }
         />
@@ -4930,8 +4844,7 @@ Array [
           className="wxc-markdown"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<p>color: accent</p>
-",
+              "__html": "color: accent",
             }
           }
         />
@@ -4956,8 +4869,7 @@ Array [
           className="wxc-markdown"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<p>color: good</p>
-",
+              "__html": "color: good",
             }
           }
         />
@@ -4982,8 +4894,7 @@ Array [
           className="wxc-markdown"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<p>color: warning</p>
-",
+              "__html": "color: warning",
             }
           }
         />
@@ -5008,8 +4919,7 @@ Array [
           className="wxc-markdown"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<p>color: attention</p>
-",
+              "__html": "color: attention",
             }
           }
         />
@@ -5034,8 +4944,7 @@ Array [
           className="wxc-markdown"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<p>color: light</p>
-",
+              "__html": "color: light",
             }
           }
         />
@@ -5060,8 +4969,7 @@ Array [
           className="wxc-markdown"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<p>color: dark</p>
-",
+              "__html": "color: dark",
             }
           }
         />
@@ -5098,8 +5006,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Contained container - no style</p>
-",
+                "__html": "Contained container - no style",
               }
             }
           />
@@ -5137,8 +5044,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Contained container - emphasis</p>
-",
+                "__html": "Contained container - emphasis",
               }
             }
           />
@@ -5176,8 +5082,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Contained container - default</p>
-",
+                "__html": "Contained container - default",
               }
             }
           />
@@ -5215,8 +5120,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Contained container - good</p>
-",
+                "__html": "Contained container - good",
               }
             }
           />
@@ -5254,8 +5158,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Contained container - warning</p>
-",
+                "__html": "Contained container - warning",
               }
             }
           />
@@ -5293,8 +5196,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Contained container - attention</p>
-",
+                "__html": "Contained container - attention",
               }
             }
           />
@@ -5332,8 +5234,7 @@ Array [
             className="wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "<p>Contained container - accent</p>
-",
+                "__html": "Contained container - accent",
               }
             }
           />
@@ -5377,8 +5278,7 @@ Array [
           className="wxc-markdown"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<p>What a beautiful background</p>
-",
+              "__html": "What a beautiful background",
             }
           }
         />
@@ -5404,8 +5304,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>They can even repeat a bunch of different ways...</p>
-",
+            "__html": "They can even repeat a bunch of different ways...",
           }
         }
       />
@@ -6504,8 +6403,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Specify the type of text being requested:</p>
-",
+            "__html": "Specify the type of text being requested:",
           }
         }
       />
@@ -6818,8 +6716,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Multiline text input:</p>
-",
+            "__html": "Multiline text input:",
           }
         }
       />
@@ -6870,8 +6767,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Pre-filled value:</p>
-",
+            "__html": "Pre-filled value:",
           }
         }
       />
@@ -7590,8 +7486,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>color: default</p>
-",
+            "__html": "color: default",
           }
         }
       />
@@ -7616,8 +7511,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>color: accent</p>
-",
+            "__html": "color: accent",
           }
         }
       />
@@ -7642,8 +7536,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>color: good</p>
-",
+            "__html": "color: good",
           }
         }
       />
@@ -7668,8 +7561,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>color: warning</p>
-",
+            "__html": "color: warning",
           }
         }
       />
@@ -7694,8 +7586,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>color: attention</p>
-",
+            "__html": "color: attention",
           }
         }
       />
@@ -7720,8 +7611,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>color: light</p>
-",
+            "__html": "color: light",
           }
         }
       />
@@ -7746,8 +7636,7 @@ Array [
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>color: dark</p>
-",
+            "__html": "color: dark",
           }
         }
       />
@@ -7786,6 +7675,22 @@ Bullet lists</p>
 <li>two</li>
 <li>three</li>
 </ol>
+<p>Nested lists</p>
+<ul>
+<li>Fruit
+<ul>
+<li>Apple</li>
+<li>Orange</li>
+<li>Banana</li>
+</ul>
+</li>
+<li>Dairy
+<ul>
+<li>Milk</li>
+<li>Cheese</li>
+</ul>
+</li>
+</ul>
 <p>Links: <a href=\\"https://adaptivecards.io\\">AdaptiveCards</a><br>
 Headers are not supported
 # This header is not processed</p>
@@ -7814,8 +7719,7 @@ Headers are not supported
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Font type not set.</p>
-",
+            "__html": "Font type not set.",
           }
         }
       />
@@ -7840,8 +7744,7 @@ Headers are not supported
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Font type set to <em>default</em>.</p>
-",
+            "__html": "Font type set to <em>default</em>.",
           }
         }
       />
@@ -7866,8 +7769,7 @@ Headers are not supported
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Font type set to <em>monospace</em>.</p>
-",
+            "__html": "Font type set to <em>monospace</em>.",
           }
         }
       />
@@ -7892,8 +7794,7 @@ Headers are not supported
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p><strong>horizontalAlignment:left</strong></p>
-",
+            "__html": "<strong>horizontalAlignment:left</strong>",
           }
         }
       />
@@ -7918,8 +7819,7 @@ Headers are not supported
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p><strong>horizontalAlignment:center</strong></p>
-",
+            "__html": "<strong>horizontalAlignment:center</strong>",
           }
         }
       />
@@ -7944,8 +7844,7 @@ Headers are not supported
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p><strong>horizontalAlignment:right</strong></p>
-",
+            "__html": "<strong>horizontalAlignment:right</strong>",
           }
         }
       />
@@ -7970,8 +7869,7 @@ Headers are not supported
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>isSubtle:false</p>
-",
+            "__html": "isSubtle:false",
           }
         }
       />
@@ -7996,8 +7894,7 @@ Headers are not supported
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>isSubtle:true</p>
-",
+            "__html": "isSubtle:true",
           }
         }
       />
@@ -8022,8 +7919,7 @@ Headers are not supported
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-",
+            "__html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
           }
         }
       />
@@ -8048,8 +7944,7 @@ Headers are not supported
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-",
+            "__html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
           }
         }
       />
@@ -8074,8 +7969,7 @@ Headers are not supported
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>size:default</p>
-",
+            "__html": "size:default",
           }
         }
       />
@@ -8100,8 +7994,7 @@ Headers are not supported
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>size:small</p>
-",
+            "__html": "size:small",
           }
         }
       />
@@ -8126,8 +8019,7 @@ Headers are not supported
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>size:default</p>
-",
+            "__html": "size:default",
           }
         }
       />
@@ -8152,8 +8044,7 @@ Headers are not supported
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>size:medium</p>
-",
+            "__html": "size:medium",
           }
         }
       />
@@ -8178,8 +8069,7 @@ Headers are not supported
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>size:large</p>
-",
+            "__html": "size:large",
           }
         }
       />
@@ -8204,8 +8094,7 @@ Headers are not supported
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>size:extraLarge</p>
-",
+            "__html": "size:extraLarge",
           }
         }
       />
@@ -8230,8 +8119,7 @@ Headers are not supported
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>weight: lighter</p>
-",
+            "__html": "weight: lighter",
           }
         }
       />
@@ -8256,8 +8144,7 @@ Headers are not supported
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>weight: default</p>
-",
+            "__html": "weight: default",
           }
         }
       />
@@ -8282,8 +8169,7 @@ Headers are not supported
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>weight: bolder</p>
-",
+            "__html": "weight: bolder",
           }
         }
       />
@@ -8308,8 +8194,7 @@ Headers are not supported
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p><strong>wrap: false</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-",
+            "__html": "<strong>wrap: false</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
           }
         }
       />
@@ -8334,8 +8219,7 @@ Headers are not supported
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p><strong>wrap: true</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-",
+            "__html": "<strong>wrap: true</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
           }
         }
       />
@@ -8361,8 +8245,7 @@ Headers are not supported
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Style set to heading</p>
-",
+            "__html": "Style set to heading",
           }
         }
       />
@@ -8388,8 +8271,7 @@ Headers are not supported
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Style set to heading, color set to good</p>
-",
+            "__html": "Style set to heading, color set to good",
           }
         }
       />
@@ -8414,8 +8296,7 @@ Headers are not supported
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Style set to default</p>
-",
+            "__html": "Style set to default",
           }
         }
       />
@@ -8440,8 +8321,7 @@ Headers are not supported
         className="wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Style unset</p>
-",
+            "__html": "Style unset",
           }
         }
       />

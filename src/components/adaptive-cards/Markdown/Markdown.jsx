@@ -15,6 +15,7 @@ export default function Markdown({children, className}) {
   const [cssClasses] = webexComponentClasses('markdown', className);
   const markdownIt = useMemo(() => new MarkdownIt('zero').enable(
     [
+      // https://github.com/markdown-it/markdown-it/issues/289
       'emphasis',
       'escape',
       'link',
@@ -25,7 +26,11 @@ export default function Markdown({children, className}) {
       'strikethrough',
     ],
   ), []);
-  const html = markdownIt.render(children);
+  let html = markdownIt.render(children);
+
+  if (html.startsWith('<p>') && html.indexOf('</p>') === html.length - 5) {
+    html = html.slice(3, -5);
+  }
 
   return (
     <div className={cssClasses} dangerouslySetInnerHTML={{__html: html}} />
