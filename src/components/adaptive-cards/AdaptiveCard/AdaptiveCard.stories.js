@@ -1894,6 +1894,30 @@ const exampleInputTime = {
   ],
 };
 
+const exampleInputDate = {
+  $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
+  type: 'AdaptiveCard',
+  version: '1.0',
+  body: [
+    {
+      type: 'TextBlock',
+      text: 'Date Input',
+    },
+    {
+      type: 'Input.Date',
+      id: 'date',
+      placeholder: 'Enter a date',
+      value: '2017-10-12',
+    },
+  ],
+  actions: [
+    {
+      type: 'Action.Submit',
+      title: 'OK',
+    },
+  ],
+};
+
 const exampleInputNumber = {
   $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
   type: 'AdaptiveCard',
@@ -2368,6 +2392,11 @@ InputText.args = {
 export const InputTime = Template.bind({});
 InputTime.args = {
   template: exampleInputTime,
+};
+
+export const InputDate = Template.bind({});
+InputDate.args = {
+  template: exampleInputDate,
 };
 
 export const InputChoiceSet = Template.bind({});
