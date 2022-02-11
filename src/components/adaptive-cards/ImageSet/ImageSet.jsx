@@ -21,7 +21,6 @@ export default function ImageSet({
 
   return (
     <div className={cssClasses}>
-      {/* eslint-disable react/no-array-index-key */}
       {data.images.map((image, index) => {
         const itemData = {size: data.imageSize, ...image};
 

@@ -22,7 +22,6 @@ export default function ColumnSet({
 
   return (
     <div className={cssClasses} {...action} style={style}>
-      {/* eslint-disable react/no-array-index-key */}
       {data.columns.map((item, index) => {
         const itemData = {type: 'Column', ...item};
 

@@ -21,7 +21,6 @@ export default function FactSet({data, className}) {
       <table>
         <tbody>
           {data.facts.map((fact, index) => (
-            // eslint-disable-next-line react/no-array-index-key
             <tr key={index}>
               <th className={sc('fact-title')}>{formatDateTime(fact.title)}</th>
               <td>{formatDateTime(fact.value)}</td>

@@ -22,7 +22,6 @@ export default function Container({
 
   return (
     <div className={cssClasses} {...action} style={style}>
-      {/* eslint-disable react/no-array-index-key */}
       {data.items?.map((item, index) => (
         <Component data={item} inherited={inherited} key={index} />
       ))}
