@@ -34,8 +34,8 @@ export default function Toggle({
 
   const handleClick = () => enabled && onChange(!selected);
   const handleKeyDown = (event) => {
-    event.preventDefault();
     if (enabled && (event.key === SPACE_KEY || event.key === ENTER_KEY)) {
+      event.preventDefault();
       onChange(!selected);
     }
   };
