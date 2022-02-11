@@ -6,6 +6,7 @@ import scss from 'rollup-plugin-scss';
 import visualizer from 'rollup-plugin-visualizer';
 import {nodeResolve} from '@rollup/plugin-node-resolve';
 import {terser} from 'rollup-plugin-terser';
+import json from '@rollup/plugin-json';
 
 const moduleName = 'webex-components';
 const ESModulePath = `dist/es/${moduleName}`;
@@ -21,6 +22,7 @@ const plugins = [
     ],
   }),
   commonjs(),
+  json(),
   babel({
     babelHelpers: 'runtime',
     babelrc: true,
