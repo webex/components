@@ -99,7 +99,6 @@ export default function withAdapter(WrappedComponent, adapterFactory) {
     }, [adapter]);
 
     const wrappedProps = {...props, adapterConnected};
-    // eslint-disable-next-line react/jsx-props-no-spreading
     const newComponent = <WrappedComponent {...wrappedProps} />;
 
     return adapterConnected ? (

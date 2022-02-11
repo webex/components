@@ -21,7 +21,6 @@ export default function TextRun({
   const [cssClasses] = webexComponentClasses('adaptive-cards-text-run', className);
 
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
     <span className={cssClasses} {...action} style={style}>
       {formatDateTime(data.text)}
     </span>

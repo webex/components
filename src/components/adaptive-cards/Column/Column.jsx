@@ -21,7 +21,6 @@ export default function Column({
   const [cssClasses] = webexComponentClasses('adaptive-cards-column', className);
 
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
     <div className={cssClasses} {...action} style={style}>
       {/* eslint-disable react/no-array-index-key */}
       {data.items?.map(

@@ -58,7 +58,6 @@ function AdaptiveCardInternal({
   }
 
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
     <div className={cssClasses} {...action} style={style}>
       {/* eslint-disable react/no-array-index-key */}
       {data.body?.map((item, index) => <Component data={item} inherited={inherited} key={index} />)}
