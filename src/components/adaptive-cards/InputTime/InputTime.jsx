@@ -2,11 +2,9 @@ import React, {useContext, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 import {acPropTypes, registerComponent} from '../Component/Component';
-import {Select} from '../../generic';
-import {range, pad2Zeros} from '../../../util';
 import AdaptiveCardContext from '../context/adaptive-card-context';
-import Label from '../../inputs/Label/Label';
 import {formatDateTime} from '../util';
+import TimeInput from '../../inputs/TimeInput/TimeInput';
 
 /**
  * Adaptive Cards Input.Time component
@@ -19,18 +17,13 @@ import {formatDateTime} from '../util';
  * @returns {object} JSX of the component
  */
 export default function InputTime({data, className, style}) {
-  const [cssClasses, sc] = webexComponentClasses('adaptive-cards-input-time', className);
+  const [cssClasses] = webexComponentClasses('adaptive-cards-input-time', className);
   const {
     setValue,
     getValue,
     setInput,
     getError,
   } = useContext(AdaptiveCardContext);
-  const timeParts = getValue(data.id).split(':');
-  const hours = (timeParts[0] || '').padStart(2, '0');
-  const minutes = (timeParts[1] || '').padStart(2, '0');
-  const hoursOptions = range(0, 23).map(pad2Zeros).map((hh) => ({value: hh, label: hh}));
-  const minutesOptions = range(0, 59).map(pad2Zeros).map((mm) => ({value: mm, label: mm}));
 
   useEffect(() => {
     setInput({
@@ -52,29 +45,17 @@ export default function InputTime({data, className, style}) {
   ]);
 
   return (
-    <Label
+    <TimeInput
       className={cssClasses}
-      error={getError(data.id)}
-      label={formatDateTime(data.label)}
-      required={data.isRequired}
       style={style}
-    >
-      <div className={sc('body')}>
-        <Select
-          ariaLabel={data.label ? `${data.label} - Hour` : 'Hour'}
-          value={hours}
-          onChange={(value) => setValue(data.id, `${value}:${minutes}`)}
-          options={hoursOptions}
-        />
-        <span className={sc('separator')}>:</span>
-        <Select
-          ariaLabel={data.label ? `${data.label} - Minutes` : 'Minutes'}
-          value={minutes}
-          onChange={(value) => setValue(data.id, `${hours}:${value}`)}
-          options={minutesOptions}
-        />
-      </div>
-    </Label>
+      max={data.max}
+      min={data.min}
+      value={getValue(data.id)}
+      error={getError(data.id)}
+      required={data.isRequired}
+      label={formatDateTime(data.label)}
+      onChange={(value) => setValue(data.id, value)}
+    />
   );
 }
 
