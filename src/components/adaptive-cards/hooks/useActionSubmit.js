@@ -23,6 +23,7 @@ export default function useActionSubmit(data) {
     getAllValues,
     validate,
     submit,
+    invalidSubmit,
   } = useContext(AdaptiveCardContext);
 
   let handleAction;
@@ -38,7 +39,7 @@ export default function useActionSubmit(data) {
           }
           submit(values);
         } else {
-          console.log('Submitted invalid values:', getAllValues());
+          invalidSubmit(getAllValues());
         }
       } else {
         submit(data.data);
