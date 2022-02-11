@@ -59,7 +59,6 @@ function AdaptiveCardInternal({
 
   return (
     <div className={cssClasses} {...action} style={style}>
-      {/* eslint-disable react/no-array-index-key */}
       {data.body?.map((item, index) => <Component data={item} inherited={inherited} key={index} />)}
       {data.actions && <Component data={{type: 'ActionSet', actions: data.actions}} inherited={inherited} />}
     </div>

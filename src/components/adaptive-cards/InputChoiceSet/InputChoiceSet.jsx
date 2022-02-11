@@ -42,7 +42,6 @@ export default function InputChoiceSet({
   if (data.isMultiSelect === true || data.choices.length === 1) {
     input = data.choices.map((choice, index) => (
       <Checkbox
-        // eslint-disable-next-line react/no-array-index-key
         key={index}
         onChange={(isSelected) => onMultiChange(choice.value, isSelected)}
         selected={values[choice.value]}
@@ -61,7 +60,6 @@ export default function InputChoiceSet({
   } else {
     input = data.choices.map((choice, index) => (
       <RadioButton
-        // eslint-disable-next-line react/no-array-index-key
         key={index}
         onChange={() => onSingleChange(choice.value)}
         selected={choice.value === value}

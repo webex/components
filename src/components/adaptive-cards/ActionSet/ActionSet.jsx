@@ -27,7 +27,6 @@ export default function ActionSet({
   return (
     <>
       <div className={cssClasses} style={style}>
-        {/* eslint-disable react/no-array-index-key */}
         {data.actions.map((action, index) => (
           <Component data={action} key={index} inherited={inherited} onClick={action.type === 'Action.ShowCard' && (() => toggleCard(index))} pressed={shownCards[index]} />
         ))}

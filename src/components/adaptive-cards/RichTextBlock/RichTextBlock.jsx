@@ -27,7 +27,6 @@ export default function RichTextBlock({
 
           inlineData = {type: 'TextRun', ...inlineData};
 
-          // eslint-disable-next-line react/no-array-index-key
           return <Component data={inlineData} inherited={inherited} key={index} />;
         },
       )}
