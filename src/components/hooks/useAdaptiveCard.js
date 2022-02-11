@@ -30,7 +30,24 @@ export default function useAdaptiveCard(activityID) {
         .subscribe((activity) => {
           const newCard = activitiesAdapter.getAdaptiveCard(activity);
 
-          setCard(newCard);
+          setCard(newCard || {
+            type: 'AdaptiveCard',
+            version: '1.0',
+            body: [{
+              type: 'TextBlock',
+              text: 'This message does not contain a card.',
+            }],
+          });
+        }, (error) => {
+          console.error(error);
+          setCard({
+            type: 'AdaptiveCard',
+            version: '1.0',
+            body: [{
+              type: 'TextBlock',
+              text: `Message could not be loaded. ${error}`,
+            }],
+          });
         });
 
       cleanup = () => subscription.unsubscribe();
