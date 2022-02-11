@@ -172,13 +172,13 @@ export default function AdaptiveCard({
       let error;
 
       if (input.isRequired && !input.value && input.value !== 0) {
-        error = input.errorMessage;
+        error = input.errorMessage || 'This field is required';
       } else if (input.value < input.min) {
         error = `Minimum value is ${input.min}`;
       } else if (input.value > input.max) {
         error = `Maximum value is ${input.max}`;
       } else if (input.regex && !String(input.value).match(input.regex)) {
-        error = input.errorMessage;
+        error = input.errorMessage || `The value you entered must match the pattern ${input.regex}`;
       } else if (String(input.value).length > input.maxLength) {
         error = `Maximum length is ${input.maxLength}`;
       }
