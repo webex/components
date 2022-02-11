@@ -281,7 +281,6 @@ export default function Component({
   return (
     <>
       {spacer}
-      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       <C {...props} />
     </>
   );

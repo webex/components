@@ -21,7 +21,6 @@ export default function Image({
 
   return (
     <img
-      // eslint-disable-next-line react/jsx-props-no-spreading
       {...action}
       alt={data.altText}
       className={cssClasses}

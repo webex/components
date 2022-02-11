@@ -21,7 +21,6 @@ export default function ColumnSet({
   const [cssClasses] = webexComponentClasses('adaptive-cards-column-set', className);
 
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
     <div className={cssClasses} {...action} style={style}>
       {/* eslint-disable react/no-array-index-key */}
       {data.columns.map((item, index) => {

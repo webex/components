@@ -32,7 +32,6 @@ export default function withMeeting(WrappedComponent) {
     const {meetingDestination} = props;
     const meeting = useMeetingDestination(meetingDestination);
 
-    // eslint-disable-next-line react/jsx-props-no-spreading
     return <WrappedComponent meeting={meeting} {...props} />;
   }
 
