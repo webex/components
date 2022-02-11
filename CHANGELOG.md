@@ -1,3 +1,10 @@
+## [1.246.1](https://github.com/webex/components/compare/v1.246.0...v1.246.1) (2022-02-11)
+
+
+### Bug Fixes
+
+* **UseAdaptiveCard:** handle missing activity or card ([0ccd2cd](https://github.com/webex/components/commit/0ccd2cd1869bbc6f3a480f6d12d4d2bde3c45498))
+
 # [1.246.0](https://github.com/webex/components/compare/v1.245.0...v1.246.0) (2022-02-11)
 
 
