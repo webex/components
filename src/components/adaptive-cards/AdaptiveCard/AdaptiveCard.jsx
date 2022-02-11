@@ -105,6 +105,7 @@ registerComponent('AdaptiveCard', AdaptiveCardInternal, 'vertical');
  * @param {string} [props.className]  Custom CSS class to apply
  * @param {object} [props.style]  Custom style to apply
  * @param {Function} [props.onSubmit]  Action to perform on submit
+ * @param {Function} [props.onInvalidSubmit]  Action to perform on invalid submit
  * @returns {object} JSX of the component
  */
 export default function AdaptiveCard({
@@ -113,6 +114,7 @@ export default function AdaptiveCard({
   className,
   style,
   onSubmit,
+  onInvalidSubmit,
 }) {
   const templateInstance = new Template(template);
   const data = templateInstance.expand({
@@ -197,6 +199,7 @@ export default function AdaptiveCard({
   };
 
   const submit = (values) => onSubmit(values);
+  const invalidSubmit = (values) => onInvalidSubmit && onInvalidSubmit(values);
 
   return (
     <AdaptiveCardContext.Provider
@@ -208,6 +211,7 @@ export default function AdaptiveCard({
         getError,
         validate,
         submit,
+        invalidSubmit,
         setElement,
         setIsVisible,
         getIsVisible,
@@ -224,6 +228,7 @@ AdaptiveCard.propTypes = {
   className: PropTypes.string,
   style: PropTypes.shape(),
   onSubmit: PropTypes.func,
+  onInvalidSubmit: PropTypes.func,
 };
 
 AdaptiveCard.defaultProps = {
@@ -231,4 +236,5 @@ AdaptiveCard.defaultProps = {
   context: undefined,
   style: undefined,
   onSubmit: undefined,
+  onInvalidSubmit: undefined,
 };

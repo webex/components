@@ -6,7 +6,13 @@ export default {
   component: AdaptiveCard,
 };
 
-const Template = (args) => <AdaptiveCard {...args} onSubmit={(inputs) => alert(`Submitted values:\n${JSON.stringify(inputs, null, 4)}`)} />;
+const Template = (args) => (
+  <AdaptiveCard
+    {...args}
+    onSubmit={(inputs) => alert(`Submitted values:\n${JSON.stringify(inputs, null, 4)}`)}
+    onInvalidSubmit={(inputs) => alert(`Submitted invalid values:\n${JSON.stringify(inputs, null, 4)}`)}
+  />
+);
 
 const exampleAdaptiveCard = {
   $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
