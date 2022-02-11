@@ -1,3 +1,27 @@
+# [1.246.0](https://github.com/webex/components/compare/v1.245.0...v1.246.0) (2022-02-11)
+
+
+### Bug Fixes
+
+* **ActivitiesJsonAdapter:** correct the unit tests that failed on master ([3362575](https://github.com/webex/components/commit/33625755d1e05d4596de4fa3db8644dd530bc3b3))
+* **AdaptiveCardsInputNumber:** use the correct adaptive cards property for required (isRequired) ([6b1f95c](https://github.com/webex/components/commit/6b1f95cee3348d0bec9e42fe9cfb990a9f1b2b89))
+* **Markdown:** reset margins for p, ul, ol and remove <p> wrapper ([6d12213](https://github.com/webex/components/commit/6d12213ea87a550c1ae5ebf62bab618a3e6d58c4))
+* **preview-head:** set overflow property on root container ([4b598d3](https://github.com/webex/components/commit/4b598d356da5c0b1eb28aa1de0c0f369530e8faf))
+* **rollup:** use rollup plugin json in rollup config file ([074beb5](https://github.com/webex/components/commit/074beb5bc222a43fa007547b75dbcff85de99a54))
+* **Toggle:** move preventDefault function to be able to navigate with tab ([a2da33d](https://github.com/webex/components/commit/a2da33d5fbe7e7078b14ef91ff86510869b69b9f))
+
+
+### Features
+
+* **AdaptiveCard:** display a default error message for required and regex if missing ([acc3f35](https://github.com/webex/components/commit/acc3f353a4b03d73ca54aaf83f23dceee9f903fe))
+* **AdaptiveCard:** remove input error when user changes value ([3b12401](https://github.com/webex/components/commit/3b12401535232e0d1bc21cb7fb70e677bf58b0c2))
+* **AdaptiveCard:** show values on invalid submit only on storybook ([a2dfc9b](https://github.com/webex/components/commit/a2dfc9bc4d82af2e2b17159e6d933c4bf32769d3))
+* **AdaptiveCards:** implement selectAction property ([d8b61ad](https://github.com/webex/components/commit/d8b61ad86d007a565dc46c928c11e40ebbed86a3))
+* **AdaptiveCardsInputTime:** implement Input.Time component ([ac4dbe9](https://github.com/webex/components/commit/ac4dbe9717575608bb64296c2d391417519c2850))
+* **AdaptiveCardsTextBlock:** add markdown support ([e579f19](https://github.com/webex/components/commit/e579f19f7791c7b8e70af79fb2a63c0c5f90d7cd))
+* **InputDate:** implement Input.Date component ([669851a](https://github.com/webex/components/commit/669851a4da8ca81c626b8d08db626fd52bd7624a))
+* **TimeInput:** implement TimeInput component ([73d1605](https://github.com/webex/components/commit/73d1605665d92642e66c57335e6f4ca24ec56e6d))
+
 # [1.245.0](https://github.com/webex/components/compare/v1.244.0...v1.245.0) (2022-02-10)
 
 
