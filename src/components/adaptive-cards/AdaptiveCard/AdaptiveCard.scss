@@ -3,4 +3,6 @@
   color: var(--wxc-text-color);
   height: 100%;
   overflow: auto;
+  border: var(--wxc-adaptive-cards--card--border);
+  border-radius: var(--wxc-adaptive-cards--card--border-radius);
 }

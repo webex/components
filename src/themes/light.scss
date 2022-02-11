@@ -245,6 +245,9 @@
   --wxc-tooltip-border: 1px solid #{$wxc-black-alpha-20};
   --wxc-tooltip-border-color: #{$wxc-black-alpha-20};
 
+  --wxc-adaptive-cards--card--border: 1px solid #{$wxc-black-alpha-20};
+  --wxc-adaptive-cards--card--border-radius: 8px;
+
   --wxc-adaptive-cards--background--default: #{$wxc-white-alpha-100};
   --wxc-adaptive-cards--background--emphasis: #{$wxc-gray-10};
   --wxc-adaptive-cards--background--accent: #{$wxc-blue-10};
