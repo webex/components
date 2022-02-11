@@ -221,6 +221,14 @@ const exampleTextBlock = {
         '1. one\r' +
         '2. two\r' +
         '3. three\r \n' +
+        'Nested lists \n' +
+        '* Fruit\r' +
+        '  * Apple\r' +
+        '  * Orange\r' +
+        '  * Banana\r' +
+        '* Dairy\r' +
+        '  * Milk\r' +
+        '  * Cheese\r \n' +
         'Links: [AdaptiveCards](https://adaptivecards.io)  \n' +
         'Headers are not supported \n' +
         '# This header is not processed',
