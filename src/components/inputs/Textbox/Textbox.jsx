@@ -48,6 +48,7 @@ export default function Textbox({
         onChange={(event) => onChange(event.target.value)}
         placeholder={placeholder}
         value={value}
+        rows={5}
       />
     </Label>
   );

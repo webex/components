@@ -1,6 +1,9 @@
 $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-label;
 
 .#{$C} {
+  display: flex;
+  flex-direction: column;
+
   &__label-text {
     color: var(--wxc-text-color);
     font-size: 0.875rem;
@@ -9,6 +12,10 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-label;
 
   &__required {
     color: var(--wxc-error-color);
+  }
+
+  &__control {
+    flex: 1;
   }
 
   &__error {
