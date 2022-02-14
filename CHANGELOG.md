@@ -1,3 +1,10 @@
+## [1.246.2](https://github.com/webex/components/compare/v1.246.1...v1.246.2) (2022-02-14)
+
+
+### Bug Fixes
+
+* **AdaptiveCard:** remove height property from adaptive card ([021b8ae](https://github.com/webex/components/commit/021b8aeded40755f31607459b82436c456a6f6ca))
+
 ## [1.246.1](https://github.com/webex/components/compare/v1.246.0...v1.246.1) (2022-02-11)
 
 
