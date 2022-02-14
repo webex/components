@@ -29,7 +29,7 @@ Array [
       className="wxc-meeting-guest-authentication__form-content"
     >
       <label
-        className="wxc wxc-label wxc wxc-input-field wxc-meeting-guest-authentication__input"
+        className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc-meeting-guest-authentication__input wxc-input-field--has-right-icon"
       >
         <div
           className="wxc-label__label-text"
