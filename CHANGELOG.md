@@ -1,3 +1,10 @@
+# [1.248.0](https://github.com/webex/components/compare/v1.247.0...v1.248.0) (2022-02-14)
+
+
+### Features
+
+* **AdaptiveCard:** add round border for adaptive card ([b09909a](https://github.com/webex/components/commit/b09909a309119e41a13cf63e0c2c7aa941738d0c))
+
 # [1.247.0](https://github.com/webex/components/compare/v1.246.3...v1.247.0) (2022-02-14)
 
 
