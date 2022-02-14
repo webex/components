@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 import AdaptiveCardContext from '../context/adaptive-card-context';
 import {acPropTypes, registerComponent} from '../Component/Component';
-import InputField from '../../generic/InputField/InputField';
+import TextInput from '../../inputs/TextInput/TextInput';
 import Textbox from '../../inputs/Textbox/Textbox';
 import {formatDateTime} from '../util';
 
@@ -47,7 +47,7 @@ export default function InputText({data, className, style}) {
 
   return (
     !data.isMultiline ? (
-      <InputField
+      <TextInput
         className={cssClasses}
         error={getError(data.id)}
         label={formatDateTime(data.label)}

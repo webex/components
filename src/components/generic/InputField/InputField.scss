@@ -17,7 +17,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field;
     border: var(--wxc-input-field--normal--border);
     color: var(--wxc-input-field--normal--color);
     border-radius: 0.5rem;
-    padding: 0.1875rem 2.18rem 0.1875rem 0.75rem;
+    padding: 0.1875rem 0.75rem 0.1875rem 0.75rem;
     width: 100%;
 
     &[type="number"] {
@@ -92,19 +92,21 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field;
     }
   }
 
-  .#{$C}__input-field-right-icon {
+  .#{$C}__right-icon {
     position: absolute;
     color: var(--wxc-input-icon-color);
     top: 50%;
-    right: 0;
+    right: 2px;
     transform: translateY(-50%);
 
     &:not(:last-child) {
       right: 2rem;
     }
+  }
 
-    &:hover, &:active, &:disabled {
-      background: none;
+  &--has-right-icon {
+    .#{$C}__input{
+      padding-right: 1.875rem;
     }
   }
 
