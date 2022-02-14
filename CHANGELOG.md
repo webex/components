@@ -1,3 +1,10 @@
+## [1.246.3](https://github.com/webex/components/compare/v1.246.2...v1.246.3) (2022-02-14)
+
+
+### Bug Fixes
+
+* **OptionsList:** prevent horizontal scrollbar ([1b30e0e](https://github.com/webex/components/commit/1b30e0e5d0b8a8b2191f4d545889bfc2cda2ff90))
+
 ## [1.246.2](https://github.com/webex/components/compare/v1.246.1...v1.246.2) (2022-02-14)
 
 
