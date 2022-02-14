@@ -1,8 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-
 import webexComponentClasses from '../../helpers';
-import {useRef, useElementPosition} from '../../hooks';
+
 import Option from './Option';
 
 /**
@@ -14,6 +13,7 @@ import Option from './Option';
  * @param {Function} props.onSelect  A function which will be triggered on option selection
  * @param {object[]} props.options  Array of options
  * @param {string} props.selected  Selected option label
+ * @param {object} props.style  Custom style to apply
  * @param {number} props.tabIndex  Value of the parent's tabIndex
  * @param {boolean} props.withKey  Options list was opened with keyboard
  * @returns {object}  JSX of the element
@@ -24,13 +24,11 @@ export default function OptionsList({
   onSelect,
   options,
   selected,
+  style,
   tabIndex,
   withKey,
 }) {
   const [cssClasses, sc] = webexComponentClasses('options-list', className);
-  const ref = useRef();
-  const position = useElementPosition(ref);
-  const [maxHeight, setMaxHeight] = useState(0);
 
   const onKeyDown = (event) => {
     if (event.key === 'Tab') {
@@ -38,15 +36,9 @@ export default function OptionsList({
     }
   };
 
-  useEffect(() => {
-    if (position) {
-      setMaxHeight(window.innerHeight - position.top - window.scrollY - 50);
-    }
-  }, [position]);
-
   return (
-    <div ref={ref} className={cssClasses}>
-      <ul style={{maxHeight}} role="menu" className={sc('list')} tabIndex={tabIndex} onKeyDown={onKeyDown}>
+    <div style={style} className={cssClasses}>
+      <ul role="menu" className={sc('list')} tabIndex={tabIndex} onKeyDown={onKeyDown}>
         {options.map((option, index) => (
           <Option
             key={option.value}
@@ -72,6 +64,7 @@ OptionsList.propTypes = {
     icon: PropTypes.string,
   })),
   selected: PropTypes.string,
+  style: PropTypes.shape(),
   tabIndex: PropTypes.number,
   withKey: PropTypes.bool,
 };
@@ -81,6 +74,7 @@ OptionsList.defaultProps = {
   onBlur: undefined,
   options: [],
   selected: '',
+  style: undefined,
   tabIndex: 0,
   withKey: false,
 };

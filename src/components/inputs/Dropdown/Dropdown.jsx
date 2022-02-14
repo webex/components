@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
+import webexComponentClasses from '../../helpers';
+import {useElementPosition, useRef} from '../../hooks';
 
 import Icon from '../../generic/Icon/Icon';
 import OptionsList from '../../generic/OptionsList/OptionsList';
-import webexComponentClasses from '../../helpers';
-import {useRef} from '../../hooks';
 import Label from '../Label/Label';
 
 /**
@@ -42,9 +42,12 @@ export default function Dropdown({
   value,
 }) {
   const [expanded, setExpanded] = useState(undefined);
+  const [layout, setLayout] = useState(undefined);
   const [cssClasses, sc] = webexComponentClasses('dropdown', className, {disabled});
   const label = options?.find((option) => option.value === value)?.label;
-  const ref = useRef();
+  const controlRef = useRef();
+  const selectedOptionRef = useRef();
+  const position = useElementPosition(controlRef);
 
   const collapse = () => setExpanded(undefined);
   const expand = (withKey) => setExpanded({withKey});
@@ -57,7 +60,7 @@ export default function Dropdown({
   const handleOptionSelect = (option) => {
     collapse();
     onChange(option.value);
-    ref.current.focus();
+    selectedOptionRef.current.focus();
   };
 
   const handleKeyDown = (event) => {
@@ -90,6 +93,34 @@ export default function Dropdown({
     return cleanup;
   }, [expanded]);
 
+  useEffect(() => {
+    if (position) {
+      setLayout({
+        maxHeight: window.innerHeight - position.bottom - window.scrollY - 24,
+        minWidth: position.width,
+        top: position.bottom + 4,
+      });
+    }
+  }, [position]);
+
+  useEffect(() => {
+    let cleanup;
+
+    if (expanded) {
+      const handleScroll = (event) => {
+        if (controlRef.current && !controlRef.current.contains(event.target)) {
+          collapse();
+        }
+      };
+
+      window.addEventListener('scroll', handleScroll, true);
+
+      cleanup = () => window.removeEventListener('scroll', handleScroll, true);
+    }
+
+    return cleanup;
+  }, [expanded, controlRef]);
+
   return (
     <Label
       className={cssClasses}
@@ -100,7 +131,7 @@ export default function Dropdown({
     >
       {/* This element handles delegated keyboard events from its descendants (Esc key) */}
       {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
-      <div className={sc('control')} disabled={disabled} onKeyDown={handleKeyDown}>
+      <div className={sc('control')} ref={controlRef} disabled={disabled} onKeyDown={handleKeyDown}>
         <div
           className={`${sc('selected-option')} ${expanded ? sc('expanded') : ''}`}
           onClick={() => toggleExpanded(false)}
@@ -109,7 +140,7 @@ export default function Dropdown({
           title={tooltip}
           onKeyDown={handleSelectedOptionKeyDown}
           aria-label={`${label ? `${label}. ` : ''}${ariaLabel}`}
-          ref={ref}
+          ref={selectedOptionRef}
         >
           <span className={sc('label')}>{options === null ? 'Loading...' : (label || value || placeholder)}</span>
           <Icon name={expanded ? 'arrow-up' : 'arrow-down'} size={13} />
@@ -121,6 +152,7 @@ export default function Dropdown({
             onSelect={handleOptionSelect}
             withKey={expanded.withKey}
             selected={value}
+            style={layout}
             tabIndex={tabIndex}
             onBlur={collapse}
           />

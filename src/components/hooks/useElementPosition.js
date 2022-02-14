@@ -35,10 +35,14 @@ export default function useElementPosition(elementRef) {
     let cleanup;
 
     if (target) {
-      const onWindowResize = () => setPosition(target.getBoundingClientRect());
+      const updatePosition = () => setPosition(target.getBoundingClientRect());
 
-      window.addEventListener('resize', onWindowResize);
-      cleanup = () => window.removeEventListener('resize', onWindowResize);
+      window.addEventListener('resize', updatePosition);
+      window.addEventListener('scroll', updatePosition, true);
+      cleanup = () => {
+        window.removeEventListener('resize', updatePosition);
+        window.removeEventListener('scroll', updatePosition, true);
+      };
     }
 
     return cleanup;
