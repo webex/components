@@ -1,3 +1,10 @@
+# [1.247.0](https://github.com/webex/components/compare/v1.246.3...v1.247.0) (2022-02-14)
+
+
+### Features
+
+* **Textbox:** allow custom height in multiline input text ([a6a57c8](https://github.com/webex/components/commit/a6a57c89790b91525f9930a3b2ffd4a01fff9d20))
+
 ## [1.246.3](https://github.com/webex/components/compare/v1.246.2...v1.246.3) (2022-02-14)
 
 
