@@ -7,6 +7,14 @@ Array [
     style={Object {}}
   >
     <div
+      className="wxc wxc-markdown"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "This card requires version <strong>1.5</strong> but your renderer does not support it.",
+        }
+      }
+    />
+    <div
       className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
         Object {
