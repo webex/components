@@ -17,7 +17,8 @@ const Template = (args) => (
 const exampleAdaptiveCard = {
   $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
   type: 'AdaptiveCard',
-  version: '1.2',
+  version: '1.5',
+  fallbackText: 'This card requires version **1.5** but your renderer does not support it.',
   body: [
     {
       type: 'ColumnSet',

@@ -4,6 +4,8 @@ import {Template} from 'adaptivecards-templating';
 import webexComponentClasses from '../../helpers';
 import AdaptiveCardContext from '../context/adaptive-card-context';
 import {mapValues} from '../../../util';
+import {formatDateTime} from '../util';
+import Markdown from '../Markdown/Markdown';
 
 import Component, {acPropTypes, registerComponent} from '../Component/Component';
 import '../ActionOpenURL/ActionOpenUrl';
@@ -42,6 +44,7 @@ function AdaptiveCardInternal({
   action, data, className, inherited, style,
 }) {
   const [cssClasses] = webexComponentClasses('adaptive-card', [className, 'wxc-ac-container--has-padding']);
+  let showFallbackText = false;
 
   if (data.$schema && data.$schema !== 'http://adaptivecards.io/schemas/adaptive-card.json') {
     console.warn('Unknown AdaptiveCard schema:', data.$schema);
@@ -54,11 +57,13 @@ function AdaptiveCardInternal({
       console.warn(`Invalid version ${data.version}`);
     } else if (version > 1.2) {
       console.warn(`Adaptive card requires version ${data.version}, this renderer only supports version 1.2`);
+      showFallbackText = true;
     }
   }
 
   return (
     <div className={cssClasses} {...action} style={style}>
+      {showFallbackText && <Markdown>{formatDateTime(data.fallbackText)}</Markdown>}
       {data.body?.map((item, index) => <Component data={item} inherited={inherited} key={index} />)}
       {data.actions && <Component data={{type: 'ActionSet', actions: data.actions}} inherited={inherited} />}
     </div>
