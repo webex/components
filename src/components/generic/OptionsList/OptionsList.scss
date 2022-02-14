@@ -1,6 +1,7 @@
 $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-options-list;
 
 .#{$C} {
+  box-sizing: border-box;
   border-radius: 0.75rem;
   box-shadow: var(--wxc-options-list--normal--box-shadow);
   background: var(--wxc-options-list--normal--background);
