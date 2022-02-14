@@ -28,11 +28,8 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-dropdown;
   }
 
   .#{$C}__options-list {
-    position: absolute;
+    position: fixed;
     z-index: 1;
-    min-width: 100%;
-    top: calc(100% + 0.25rem);
-    left: 0;
   }
 
 
