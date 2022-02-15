@@ -3,7 +3,7 @@
 exports[`Storyshots Meetings/Webex Media Access Camera 1`] = `
 Array [
   <div
-    className="wxc-media-access"
+    className="wxc wxc-media-access"
     style={
       Object {
         "height": "100%",
@@ -13,7 +13,7 @@ Array [
   >
     <svg
       aria-label="Camera icon"
-      className="wxc-icon wxc-camera-bold-icon"
+      className="wxc-icon wxc wxc-camera-bold-icon"
       height={48}
       style={Object {}}
       viewBox="0 0 48 48"
@@ -45,7 +45,7 @@ Array [
     <button
       aria-label="Proceed without camera. This setting cannot be changed once the meeting starts."
       autoFocus={false}
-      className="wxc-button wxc-button--default"
+      className="wxc wxc-button wxc-button--default"
       disabled={false}
       onClick={[Function]}
       style={
@@ -85,7 +85,7 @@ Array [
 exports[`Storyshots Meetings/Webex Media Access Microphone 1`] = `
 Array [
   <div
-    className="wxc-media-access"
+    className="wxc wxc-media-access"
     style={
       Object {
         "height": "100%",
@@ -95,7 +95,7 @@ Array [
   >
     <svg
       aria-label="Microphone icon"
-      className="wxc-icon wxc-microphone-bold-icon"
+      className="wxc-icon wxc wxc-microphone-bold-icon"
       height={48}
       style={Object {}}
       viewBox="0 0 48 48"
@@ -127,7 +127,7 @@ Array [
     <button
       aria-label="Proceed without audio. This setting cannot be changed once the meeting starts."
       autoFocus={false}
-      className="wxc-button wxc-button--default"
+      className="wxc wxc-button wxc-button--default"
       disabled={false}
       onClick={[Function]}
       style={

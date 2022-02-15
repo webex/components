@@ -96,7 +96,7 @@ export default function WebexRemoteMedia({
   } else {
     remoteDisplay = (
       <Badge className={sc('connecting-badge')}>
-        <Spinner size={14} className={sc('connecting-spinner')} />
+        <Spinner size={16} className={sc('connecting-spinner')} />
         <span>Connecting</span>
       </Badge>
     );

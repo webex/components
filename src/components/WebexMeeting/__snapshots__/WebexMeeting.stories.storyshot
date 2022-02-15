@@ -3,7 +3,7 @@
 exports[`Storyshots Meetings/Webex Meeting Creating 1`] = `
 Array [
   <div
-    className="wxc-meeting"
+    className="wxc wxc-meeting"
     style={
       Object {
         "height": "100%",
@@ -41,7 +41,7 @@ Array [
 exports[`Storyshots Meetings/Webex Meeting In Meeting 1`] = `
 Array [
   <div
-    className="wxc-meeting"
+    className="wxc wxc-meeting"
     style={
       Object {
         "height": "100%",
@@ -53,7 +53,7 @@ Array [
       className="wxc-meeting__body"
     >
       <div
-        className="wxc-in-meeting wxc-meeting__inner-meeting"
+        className="wxc wxc-in-meeting wxc-meeting__inner-meeting"
       >
         <div
           className="wxc-in-meeting__media-container"
@@ -64,7 +64,7 @@ Array [
           }
         >
           <div
-            className="wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
+            className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
           >
             <video
               autoPlay={true}
@@ -77,10 +77,10 @@ Array [
             />
           </div>
           <div
-            className="wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
+            className="wxc wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
           >
             <div
-              className="wxc-avatar"
+              className="wxc wxc-avatar"
             >
               <div
                 className="wxc-avatar__content"
@@ -108,14 +108,14 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-badge wxc-meeting__media-state-toast"
+        className="wxc wxc-badge wxc-meeting__media-state-toast"
         style={Object {}}
       >
         Muted, Camera off
       </div>
     </div>
     <div
-      className="wxc-meeting-control-bar wxc-meeting__control-bar"
+      className="wxc wxc-meeting-control-bar wxc-meeting__control-bar"
     >
       <div
         aria-hidden="true"
@@ -123,12 +123,12 @@ Array [
       >
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Unmute"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -140,7 +140,7 @@ Array [
               type="button"
             >
               <svg
-                className="wxc-icon wxc-audio-microphone-muted-icon"
+                className="wxc-icon wxc wxc-audio-microphone-muted-icon"
                 height={24}
                 style={Object {}}
                 viewBox="0 0 24 24"
@@ -159,12 +159,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Unmute"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -176,7 +176,7 @@ Array [
               type="button"
             >
               <svg
-                className="wxc-icon wxc-audio-microphone-muted-icon"
+                className="wxc-icon wxc wxc-audio-microphone-muted-icon"
                 height={24}
                 style={Object {}}
                 viewBox="0 0 24 24"
@@ -200,12 +200,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Start video"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -217,7 +217,7 @@ Array [
               type="button"
             >
               <svg
-                className="wxc-icon wxc-camera-muted-icon"
+                className="wxc-icon wxc wxc-camera-muted-icon"
                 height={24}
                 style={Object {}}
                 viewBox="0 0 24 24"
@@ -236,12 +236,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Start video"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -253,7 +253,7 @@ Array [
               type="button"
             >
               <svg
-                className="wxc-icon wxc-camera-muted-icon"
+                className="wxc-icon wxc wxc-camera-muted-icon"
                 height={24}
                 style={Object {}}
                 viewBox="0 0 24 24"
@@ -277,12 +277,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Start sharing"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--toggle"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--toggle"
               disabled={false}
               onClick={[Function]}
               style={
@@ -315,12 +315,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Start sharing"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--toggle"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--toggle"
               disabled={false}
               onClick={[Function]}
               style={
@@ -358,12 +358,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Show participants"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--toggle"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--toggle"
               disabled={false}
               onClick={[Function]}
               style={
@@ -404,12 +404,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Show participants"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--toggle"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--toggle"
               disabled={false}
               onClick={[Function]}
               style={
@@ -455,12 +455,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Settings"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -493,12 +493,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Settings"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -536,12 +536,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Leave meeting"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--cancel"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--cancel"
               disabled={false}
               onClick={[Function]}
               style={
@@ -570,12 +570,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Leave meeting"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--cancel"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--cancel"
               disabled={false}
               onClick={[Function]}
               style={
@@ -608,7 +608,7 @@ Array [
           <button
             aria-label="Expand additional controls"
             autoFocus={false}
-            className="wxc-button wxc-button--toggle"
+            className="wxc wxc-button wxc-button--toggle"
             disabled={false}
             onClick={[Function]}
             style={
@@ -671,7 +671,7 @@ Array [
 exports[`Storyshots Meetings/Webex Meeting Interstitial 1`] = `
 Array [
   <div
-    className="wxc-meeting"
+    className="wxc wxc-meeting"
     style={
       Object {
         "height": "100%",
@@ -683,7 +683,7 @@ Array [
       className="wxc-meeting__body"
     >
       <div
-        className="wxc-interstitial-meeting wxc-meeting__inner-meeting"
+        className="wxc wxc-interstitial-meeting wxc-meeting__inner-meeting"
       >
         <div
           className="wxc-interstitial-meeting__media-container"
@@ -694,7 +694,7 @@ Array [
           }
         >
           <div
-            className="wxc-meeting-info wxc-interstitial-meeting__info"
+            className="wxc wxc-meeting-info wxc-interstitial-meeting__info"
           >
             <h2
               className="wxc-meeting-info__title"
@@ -706,10 +706,10 @@ Array [
             className="wxc-interstitial-meeting__interstitial-media-container"
           >
             <div
-              className="wxc-local-media wxc-interstitial-meeting__media wxc-local-media--no-media"
+              className="wxc wxc-local-media wxc-interstitial-meeting__media wxc-local-media--no-media"
             >
               <div
-                className="wxc-avatar"
+                className="wxc wxc-avatar"
               >
                 <div
                   className="wxc-avatar__content"
@@ -738,14 +738,14 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-badge wxc-meeting__media-state-toast"
+        className="wxc wxc-badge wxc-meeting__media-state-toast"
         style={Object {}}
       >
         Muted, Camera off
       </div>
     </div>
     <div
-      className="wxc-meeting-control-bar wxc-meeting__control-bar"
+      className="wxc wxc-meeting-control-bar wxc-meeting__control-bar"
     >
       <div
         aria-hidden="true"
@@ -753,12 +753,12 @@ Array [
       >
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Unmute"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -770,7 +770,7 @@ Array [
               type="button"
             >
               <svg
-                className="wxc-icon wxc-audio-microphone-muted-icon"
+                className="wxc-icon wxc wxc-audio-microphone-muted-icon"
                 height={24}
                 style={Object {}}
                 viewBox="0 0 24 24"
@@ -789,12 +789,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Unmute"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -806,7 +806,7 @@ Array [
               type="button"
             >
               <svg
-                className="wxc-icon wxc-audio-microphone-muted-icon"
+                className="wxc-icon wxc wxc-audio-microphone-muted-icon"
                 height={24}
                 style={Object {}}
                 viewBox="0 0 24 24"
@@ -830,12 +830,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Start video"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -847,7 +847,7 @@ Array [
               type="button"
             >
               <svg
-                className="wxc-icon wxc-camera-muted-icon"
+                className="wxc-icon wxc wxc-camera-muted-icon"
                 height={24}
                 style={Object {}}
                 viewBox="0 0 24 24"
@@ -866,12 +866,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Start video"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -883,7 +883,7 @@ Array [
               type="button"
             >
               <svg
-                className="wxc-icon wxc-camera-muted-icon"
+                className="wxc-icon wxc wxc-camera-muted-icon"
                 height={24}
                 style={Object {}}
                 viewBox="0 0 24 24"
@@ -907,12 +907,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Settings"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -945,12 +945,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Settings"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -988,12 +988,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Join meeting. Muted, video off"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--join"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--join"
               disabled={false}
               onClick={[Function]}
               style={
@@ -1014,12 +1014,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Join meeting. Muted, video off"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--join"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--join"
               disabled={false}
               onClick={[Function]}
               style={
@@ -1044,7 +1044,7 @@ Array [
           <button
             aria-label="Expand additional controls"
             autoFocus={false}
-            className="wxc-button wxc-button--toggle"
+            className="wxc wxc-button wxc-button--toggle"
             disabled={false}
             onClick={[Function]}
             style={
@@ -1107,7 +1107,7 @@ Array [
 exports[`Storyshots Meetings/Webex Meeting Left Meeting 1`] = `
 Array [
   <div
-    className="wxc-meeting"
+    className="wxc wxc-meeting"
     style={
       Object {
         "height": "100%",
@@ -1116,7 +1116,7 @@ Array [
     }
   >
     <h5
-      className="wxc-title wxc-meeting__centered wxc-title--subsection"
+      className="wxc wxc-title wxc-meeting__centered wxc-title--subsection"
       style={Object {}}
     >
       You've successfully left the meeting
@@ -1148,7 +1148,7 @@ Array [
 exports[`Storyshots Meetings/Webex Meeting Loading 1`] = `
 Array [
   <div
-    className="wxc-meeting"
+    className="wxc wxc-meeting"
     style={
       Object {
         "height": "100%",
@@ -1186,7 +1186,7 @@ Array [
 exports[`Storyshots Meetings/Webex Meeting Password Required 1`] = `
 Array [
   <div
-    className="wxc-meeting"
+    className="wxc wxc-meeting"
     style={
       Object {
         "height": "100%",
@@ -1198,7 +1198,7 @@ Array [
       className="wxc-meeting__body"
     >
       <div
-        className="wxc-interstitial-meeting wxc-meeting__inner-meeting"
+        className="wxc wxc-interstitial-meeting wxc-meeting__inner-meeting"
       >
         <div
           className="wxc-interstitial-meeting__media-container"
@@ -1209,7 +1209,7 @@ Array [
           }
         >
           <div
-            className="wxc-meeting-info wxc-interstitial-meeting__info"
+            className="wxc wxc-meeting-info wxc-interstitial-meeting__info"
           >
             <h2
               className="wxc-meeting-info__title"
@@ -1221,10 +1221,10 @@ Array [
             className="wxc-interstitial-meeting__interstitial-media-container"
           >
             <div
-              className="wxc-local-media wxc-interstitial-meeting__media wxc-local-media--no-media"
+              className="wxc wxc-local-media wxc-interstitial-meeting__media wxc-local-media--no-media"
             >
               <div
-                className="wxc-avatar"
+                className="wxc wxc-avatar"
               >
                 <div
                   className="wxc-avatar__content"
@@ -1253,14 +1253,14 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-badge wxc-meeting__media-state-toast"
+        className="wxc wxc-badge wxc-meeting__media-state-toast"
         style={Object {}}
       >
         Muted, Camera off
       </div>
     </div>
     <div
-      className="wxc-meeting-control-bar wxc-meeting__control-bar"
+      className="wxc wxc-meeting-control-bar wxc-meeting__control-bar"
     >
       <div
         aria-hidden="true"
@@ -1268,12 +1268,12 @@ Array [
       >
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Unmute"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -1285,7 +1285,7 @@ Array [
               type="button"
             >
               <svg
-                className="wxc-icon wxc-audio-microphone-muted-icon"
+                className="wxc-icon wxc wxc-audio-microphone-muted-icon"
                 height={24}
                 style={Object {}}
                 viewBox="0 0 24 24"
@@ -1304,12 +1304,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Unmute"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -1321,7 +1321,7 @@ Array [
               type="button"
             >
               <svg
-                className="wxc-icon wxc-audio-microphone-muted-icon"
+                className="wxc-icon wxc wxc-audio-microphone-muted-icon"
                 height={24}
                 style={Object {}}
                 viewBox="0 0 24 24"
@@ -1345,12 +1345,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Start video"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -1362,7 +1362,7 @@ Array [
               type="button"
             >
               <svg
-                className="wxc-icon wxc-camera-muted-icon"
+                className="wxc-icon wxc wxc-camera-muted-icon"
                 height={24}
                 style={Object {}}
                 viewBox="0 0 24 24"
@@ -1381,12 +1381,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Start video"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -1398,7 +1398,7 @@ Array [
               type="button"
             >
               <svg
-                className="wxc-icon wxc-camera-muted-icon"
+                className="wxc-icon wxc wxc-camera-muted-icon"
                 height={24}
                 style={Object {}}
                 viewBox="0 0 24 24"
@@ -1422,12 +1422,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Settings"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -1460,12 +1460,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Settings"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -1503,12 +1503,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Join meeting. Muted, video off"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--join"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--join"
               disabled={false}
               onClick={[Function]}
               style={
@@ -1529,12 +1529,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Join meeting. Muted, video off"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--join"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--join"
               disabled={false}
               onClick={[Function]}
               style={
@@ -1559,7 +1559,7 @@ Array [
           <button
             aria-label="Expand additional controls"
             autoFocus={false}
-            className="wxc-button wxc-button--toggle"
+            className="wxc wxc-button wxc-button--toggle"
             disabled={false}
             onClick={[Function]}
             style={
@@ -1622,7 +1622,7 @@ Array [
 exports[`Storyshots Meetings/Webex Meeting Waiting For Host 1`] = `
 Array [
   <div
-    className="wxc-meeting"
+    className="wxc wxc-meeting"
     style={
       Object {
         "height": "100%",
@@ -1634,10 +1634,10 @@ Array [
       className="wxc-meeting__body"
     >
       <div
-        className="wxc-waiting-for-host wxc-meeting__inner-meeting"
+        className="wxc wxc-waiting-for-host wxc-meeting__inner-meeting"
       >
         <div
-          className="wxc-meeting-info wxc-waiting-for-host__info"
+          className="wxc wxc-meeting-info wxc-waiting-for-host__info"
         >
           <h2
             className="wxc-meeting-info__title"
@@ -1653,7 +1653,7 @@ Array [
           >
             <svg
               aria-label="Waiting for meeting rocket illustration"
-              className="wxc-waiting-for-host-icon"
+              className="wxc wxc-waiting-for-host-icon"
               fill="none"
               height={120}
               style={Object {}}
@@ -1702,7 +1702,7 @@ Array [
           <button
             aria-label="Leave the meeting to stop waiting for the host. To return to the meeting after leaving, refresh the web browser and join again."
             autoFocus={false}
-            className="wxc-button wxc-button--default"
+            className="wxc wxc-button wxc-button--default"
             disabled={false}
             onClick={[Function]}
             style={
@@ -1717,10 +1717,10 @@ Array [
           </button>
         </div>
         <div
-          className="wxc-local-media wxc-waiting-for-host__local-media wxc-local-media--no-media"
+          className="wxc wxc-local-media wxc-waiting-for-host__local-media wxc-local-media--no-media"
         >
           <div
-            className="wxc-avatar"
+            className="wxc wxc-avatar"
           >
             <div
               className="wxc-avatar__content"
@@ -1747,14 +1747,14 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-badge wxc-meeting__media-state-toast"
+        className="wxc wxc-badge wxc-meeting__media-state-toast"
         style={Object {}}
       >
         Muted, Camera off
       </div>
     </div>
     <div
-      className="wxc-meeting-control-bar wxc-meeting__control-bar"
+      className="wxc wxc-meeting-control-bar wxc-meeting__control-bar"
     >
       <div
         aria-hidden="true"
@@ -1762,12 +1762,12 @@ Array [
       >
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Unmute"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -1779,7 +1779,7 @@ Array [
               type="button"
             >
               <svg
-                className="wxc-icon wxc-audio-microphone-muted-icon"
+                className="wxc-icon wxc wxc-audio-microphone-muted-icon"
                 height={24}
                 style={Object {}}
                 viewBox="0 0 24 24"
@@ -1798,12 +1798,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Unmute"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -1815,7 +1815,7 @@ Array [
               type="button"
             >
               <svg
-                className="wxc-icon wxc-audio-microphone-muted-icon"
+                className="wxc-icon wxc wxc-audio-microphone-muted-icon"
                 height={24}
                 style={Object {}}
                 viewBox="0 0 24 24"
@@ -1839,12 +1839,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Start video"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -1856,7 +1856,7 @@ Array [
               type="button"
             >
               <svg
-                className="wxc-icon wxc-camera-muted-icon"
+                className="wxc-icon wxc wxc-camera-muted-icon"
                 height={24}
                 style={Object {}}
                 viewBox="0 0 24 24"
@@ -1875,12 +1875,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Start video"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -1892,7 +1892,7 @@ Array [
               type="button"
             >
               <svg
-                className="wxc-icon wxc-camera-muted-icon"
+                className="wxc-icon wxc wxc-camera-muted-icon"
                 height={24}
                 style={Object {}}
                 viewBox="0 0 24 24"
@@ -1916,12 +1916,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Settings"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -1954,12 +1954,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Settings"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -1997,12 +1997,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Join meeting. Muted, video off"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--join"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--join"
               disabled={true}
               onClick={[Function]}
               style={
@@ -2023,12 +2023,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Join meeting. Muted, video off"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--join"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--join"
               disabled={true}
               onClick={[Function]}
               style={
@@ -2053,7 +2053,7 @@ Array [
           <button
             aria-label="Expand additional controls"
             autoFocus={false}
-            className="wxc-button wxc-button--toggle"
+            className="wxc wxc-button wxc-button--toggle"
             disabled={false}
             onClick={[Function]}
             style={
@@ -2116,7 +2116,7 @@ Array [
 exports[`Storyshots Meetings/Webex Meeting Waiting For Others 1`] = `
 Array [
   <div
-    className="wxc-meeting"
+    className="wxc wxc-meeting"
     style={
       Object {
         "height": "100%",
@@ -2128,7 +2128,7 @@ Array [
       className="wxc-meeting__body"
     >
       <div
-        className="wxc-in-meeting wxc-meeting__inner-meeting"
+        className="wxc wxc-in-meeting wxc-meeting__inner-meeting"
       >
         <div
           className="wxc-in-meeting__media-container"
@@ -2139,20 +2139,20 @@ Array [
           }
         >
           <div
-            className="wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
+            className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
           >
             <h5
-              className="wxc-title wxc-title--subsection"
+              className="wxc wxc-title wxc-title--subsection"
               style={Object {}}
             >
               Waiting for others to join...
             </h5>
           </div>
           <div
-            className="wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
+            className="wxc wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
           >
             <div
-              className="wxc-avatar"
+              className="wxc wxc-avatar"
             >
               <div
                 className="wxc-avatar__content"
@@ -2180,14 +2180,14 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-badge wxc-meeting__media-state-toast"
+        className="wxc wxc-badge wxc-meeting__media-state-toast"
         style={Object {}}
       >
         Muted, Camera off
       </div>
     </div>
     <div
-      className="wxc-meeting-control-bar wxc-meeting__control-bar"
+      className="wxc wxc-meeting-control-bar wxc-meeting__control-bar"
     >
       <div
         aria-hidden="true"
@@ -2195,12 +2195,12 @@ Array [
       >
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Unmute"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -2212,7 +2212,7 @@ Array [
               type="button"
             >
               <svg
-                className="wxc-icon wxc-audio-microphone-muted-icon"
+                className="wxc-icon wxc wxc-audio-microphone-muted-icon"
                 height={24}
                 style={Object {}}
                 viewBox="0 0 24 24"
@@ -2231,12 +2231,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Unmute"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -2248,7 +2248,7 @@ Array [
               type="button"
             >
               <svg
-                className="wxc-icon wxc-audio-microphone-muted-icon"
+                className="wxc-icon wxc wxc-audio-microphone-muted-icon"
                 height={24}
                 style={Object {}}
                 viewBox="0 0 24 24"
@@ -2272,12 +2272,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Start video"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -2289,7 +2289,7 @@ Array [
               type="button"
             >
               <svg
-                className="wxc-icon wxc-camera-muted-icon"
+                className="wxc-icon wxc wxc-camera-muted-icon"
                 height={24}
                 style={Object {}}
                 viewBox="0 0 24 24"
@@ -2308,12 +2308,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Start video"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -2325,7 +2325,7 @@ Array [
               type="button"
             >
               <svg
-                className="wxc-icon wxc-camera-muted-icon"
+                className="wxc-icon wxc wxc-camera-muted-icon"
                 height={24}
                 style={Object {}}
                 viewBox="0 0 24 24"
@@ -2349,12 +2349,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Start sharing"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--toggle"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--toggle"
               disabled={false}
               onClick={[Function]}
               style={
@@ -2387,12 +2387,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Start sharing"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--toggle"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--toggle"
               disabled={false}
               onClick={[Function]}
               style={
@@ -2430,12 +2430,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Show participants"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--toggle"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--toggle"
               disabled={false}
               onClick={[Function]}
               style={
@@ -2476,12 +2476,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Show participants"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--toggle"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--toggle"
               disabled={false}
               onClick={[Function]}
               style={
@@ -2527,12 +2527,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Settings"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -2565,12 +2565,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Settings"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--default"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
               disabled={false}
               onClick={[Function]}
               style={
@@ -2608,12 +2608,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Leave meeting"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--cancel"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--cancel"
               disabled={false}
               onClick={[Function]}
               style={
@@ -2642,12 +2642,12 @@ Array [
         </div>
         <div>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <button
               aria-label="Leave meeting"
               autoFocus={false}
-              className="wxc-button wxc-meeting-control__control-button wxc-button--cancel"
+              className="wxc wxc-button wxc-meeting-control__control-button wxc-button--cancel"
               disabled={false}
               onClick={[Function]}
               style={
@@ -2680,7 +2680,7 @@ Array [
           <button
             aria-label="Expand additional controls"
             autoFocus={false}
-            className="wxc-button wxc-button--toggle"
+            className="wxc wxc-button wxc-button--toggle"
             disabled={false}
             onClick={[Function]}
             style={

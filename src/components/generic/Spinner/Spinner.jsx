@@ -33,6 +33,6 @@ Spinner.propTypes = {
 
 Spinner.defaultProps = {
   className: '',
-  size: 28,
+  size: 30,
   style: {},
 };

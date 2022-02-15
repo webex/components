@@ -64,7 +64,7 @@ export default function WebexMember({
       <WebexAvatar personID={personID} displayStatus={displayStatus} className={sc('avatar')} />
       <div className={sc('details')}>
         <div className={sc('name')}>
-          {(displayName ?? <Spinner size={16} />) || <i>Name not available</i>}
+          {(displayName ?? <Spinner size={18} />) || <i>Name not available</i>}
           {isGuest && <span className={sc('guest')}> (Guest)</span>}
         </div>
         {roles.length > 0 && <div className={sc('roles')}>{roles.join(', ')}</div>}

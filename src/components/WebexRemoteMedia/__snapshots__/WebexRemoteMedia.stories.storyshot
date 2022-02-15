@@ -3,7 +3,7 @@
 exports[`Storyshots Meetings/Webex Remote Media All Remote Media 1`] = `
 Array [
   <div
-    className="wxc-remote-media wxc-remote-media--remote-video-n-share"
+    className="wxc wxc-remote-media wxc-remote-media--remote-video-n-share"
     style={
       Object {
         "height": "100%",
@@ -53,7 +53,7 @@ Array [
 exports[`Storyshots Meetings/Webex Remote Media Error 1`] = `
 Array [
   <div
-    className="wxc-remote-media"
+    className="wxc wxc-remote-media"
     style={
       Object {
         "height": "100%",
@@ -132,7 +132,7 @@ Array [
 exports[`Storyshots Meetings/Webex Remote Media Loading 1`] = `
 Array [
   <div
-    className="wxc-remote-media"
+    className="wxc wxc-remote-media"
     style={
       Object {
         "height": "100%",
@@ -141,15 +141,15 @@ Array [
     }
   >
     <div
-      className="wxc-badge wxc-remote-media__connecting-badge"
+      className="wxc wxc-badge wxc-remote-media__connecting-badge"
       style={Object {}}
     >
       <div
-        className="wxc-spinner wxc-remote-media__connecting-spinner"
+        className="wxc wxc-spinner wxc-remote-media__connecting-spinner"
         style={
           Object {
-            "height": 14,
-            "width": 14,
+            "height": 16,
+            "width": 16,
           }
         }
       />
@@ -184,7 +184,7 @@ Array [
 exports[`Storyshots Meetings/Webex Remote Media Remote Audio Only 1`] = `
 Array [
   <div
-    className="wxc-remote-media"
+    className="wxc wxc-remote-media"
     style={
       Object {
         "height": "100%",
@@ -222,7 +222,7 @@ Array [
 exports[`Storyshots Meetings/Webex Remote Media Remote Video Only 1`] = `
 Array [
   <div
-    className="wxc-remote-media"
+    className="wxc wxc-remote-media"
     style={
       Object {
         "height": "100%",
@@ -263,7 +263,7 @@ Array [
 exports[`Storyshots Meetings/Webex Remote Media Waiting For Others 1`] = `
 Array [
   <div
-    className="wxc-remote-media"
+    className="wxc wxc-remote-media"
     style={
       Object {
         "height": "100%",
@@ -272,7 +272,7 @@ Array [
     }
   >
     <h5
-      className="wxc-title wxc-title--subsection"
+      className="wxc wxc-title wxc-title--subsection"
       style={Object {}}
     >
       Waiting for others to join...

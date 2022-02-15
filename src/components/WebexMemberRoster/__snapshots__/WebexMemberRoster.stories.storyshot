@@ -3,11 +3,11 @@
 exports[`Storyshots Platform/Webex Member Roster External Member 1`] = `
 Array [
   <div
-    className="wxc-member-roster"
+    className="wxc wxc-member-roster"
     style={
       Object {
         "maxHeight": "100%",
-        "width": "22.5rem",
+        "width": "23.25rem",
       }
     }
   >
@@ -15,7 +15,7 @@ Array [
       className="wxc-member-roster__header"
     >
       <h5
-        className="wxc-title wxc-member-roster__title wxc-title--section"
+        className="wxc wxc-title wxc-member-roster__title wxc-title--section"
         style={Object {}}
       >
         Participants (
@@ -25,7 +25,7 @@ Array [
       <button
         aria-label="Close participants panel"
         autoFocus={false}
-        className="wxc-button wxc-button--ghost"
+        className="wxc wxc-button wxc-button--ghost"
         disabled={false}
         style={
           Object {
@@ -85,10 +85,10 @@ Array [
       className="wxc-member-roster__members"
     >
       <div
-        className="wxc-member"
+        className="wxc wxc-member"
       >
         <div
-          className="wxc-avatar wxc-member__avatar"
+          className="wxc wxc-avatar wxc-member__avatar"
         >
           <div
             className="wxc-avatar__content"
@@ -123,10 +123,10 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-member"
+        className="wxc wxc-member"
       >
         <div
-          className="wxc-avatar wxc-member__avatar"
+          className="wxc wxc-avatar wxc-member__avatar"
         >
           <div
             className="wxc-avatar__content"
@@ -166,10 +166,10 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-member"
+        className="wxc wxc-member"
       >
         <div
-          className="wxc-avatar wxc-member__avatar"
+          className="wxc wxc-avatar wxc-member__avatar"
         >
           <div
             className="wxc-avatar__content"
@@ -236,11 +236,11 @@ Array [
 exports[`Storyshots Platform/Webex Member Roster Meeting 1`] = `
 Array [
   <div
-    className="wxc-member-roster"
+    className="wxc wxc-member-roster"
     style={
       Object {
         "maxHeight": "100%",
-        "width": "22.5rem",
+        "width": "23.25rem",
       }
     }
   >
@@ -248,7 +248,7 @@ Array [
       className="wxc-member-roster__header"
     >
       <h5
-        className="wxc-title wxc-member-roster__title wxc-title--section"
+        className="wxc wxc-title wxc-member-roster__title wxc-title--section"
         style={Object {}}
       >
         Participants (
@@ -258,7 +258,7 @@ Array [
       <button
         aria-label="Close participants panel"
         autoFocus={false}
-        className="wxc-button wxc-button--ghost"
+        className="wxc wxc-button wxc-button--ghost"
         disabled={false}
         style={
           Object {
@@ -323,10 +323,10 @@ Array [
         In the meeting
       </h5>
       <div
-        className="wxc-member"
+        className="wxc wxc-member"
       >
         <div
-          className="wxc-avatar wxc-member__avatar"
+          className="wxc wxc-avatar wxc-member__avatar"
         >
           <div
             className="wxc-avatar__content"
@@ -365,7 +365,7 @@ Array [
           </div>
         </div>
         <svg
-          className="wxc-icon wxc-audio-microphone-muted-icon wxc-member__muted"
+          className="wxc-icon wxc wxc-audio-microphone-muted-icon wxc-member__muted"
           height={16}
           style={Object {}}
           viewBox="0 0 24 24"
@@ -381,10 +381,10 @@ Array [
         </svg>
       </div>
       <div
-        className="wxc-member"
+        className="wxc wxc-member"
       >
         <div
-          className="wxc-avatar wxc-member__avatar"
+          className="wxc wxc-avatar wxc-member__avatar"
         >
           <div
             className="wxc-avatar__content"
@@ -418,7 +418,7 @@ Array [
           </div>
         </div>
         <svg
-          className="wxc-icon wxc-audio-microphone-icon wxc-member__speaking"
+          className="wxc-icon wxc wxc-audio-microphone-icon wxc-member__speaking"
           height={16}
           style={Object {}}
           viewBox="0 0 24 24"
@@ -442,10 +442,10 @@ Array [
         </svg>
       </div>
       <div
-        className="wxc-member"
+        className="wxc wxc-member"
       >
         <div
-          className="wxc-avatar wxc-member__avatar"
+          className="wxc wxc-avatar wxc-member__avatar"
         >
           <div
             className="wxc-avatar__content"
@@ -501,7 +501,7 @@ Array [
           />
         </svg>
         <svg
-          className="wxc-icon wxc-audio-microphone-icon wxc-member__speaking"
+          className="wxc-icon wxc wxc-audio-microphone-icon wxc-member__speaking"
           height={16}
           style={Object {}}
           viewBox="0 0 24 24"
@@ -525,10 +525,10 @@ Array [
         </svg>
       </div>
       <div
-        className="wxc-member"
+        className="wxc wxc-member"
       >
         <div
-          className="wxc-avatar wxc-member__avatar"
+          className="wxc wxc-avatar wxc-member__avatar"
         >
           <div
             className="wxc-avatar__content"
@@ -567,7 +567,7 @@ Array [
           </div>
         </div>
         <svg
-          className="wxc-icon wxc-audio-microphone-muted-icon wxc-member__muted"
+          className="wxc-icon wxc wxc-audio-microphone-muted-icon wxc-member__muted"
           height={16}
           style={Object {}}
           viewBox="0 0 24 24"
@@ -583,10 +583,10 @@ Array [
         </svg>
       </div>
       <div
-        className="wxc-member"
+        className="wxc wxc-member"
       >
         <div
-          className="wxc-avatar wxc-member__avatar"
+          className="wxc wxc-avatar wxc-member__avatar"
         >
           <div
             className="wxc-avatar__content"
@@ -636,10 +636,10 @@ Array [
         Not in the meeting
       </h5>
       <div
-        className="wxc-member"
+        className="wxc wxc-member"
       >
         <div
-          className="wxc-avatar wxc-member__avatar"
+          className="wxc wxc-avatar wxc-member__avatar"
         >
           <div
             className="wxc-avatar__content"
@@ -711,11 +711,11 @@ Array [
 exports[`Storyshots Platform/Webex Member Roster Space 1`] = `
 Array [
   <div
-    className="wxc-member-roster"
+    className="wxc wxc-member-roster"
     style={
       Object {
         "maxHeight": "100%",
-        "width": "22.5rem",
+        "width": "23.25rem",
       }
     }
   >
@@ -723,7 +723,7 @@ Array [
       className="wxc-member-roster__header"
     >
       <h5
-        className="wxc-title wxc-member-roster__title wxc-title--section"
+        className="wxc wxc-title wxc-member-roster__title wxc-title--section"
         style={Object {}}
       >
         Participants (
@@ -733,7 +733,7 @@ Array [
       <button
         aria-label="Close participants panel"
         autoFocus={false}
-        className="wxc-button wxc-button--ghost"
+        className="wxc wxc-button wxc-button--ghost"
         disabled={false}
         style={
           Object {
@@ -763,10 +763,10 @@ Array [
       className="wxc-member-roster__members"
     >
       <div
-        className="wxc-member"
+        className="wxc wxc-member"
       >
         <div
-          className="wxc-avatar wxc-member__avatar"
+          className="wxc wxc-avatar wxc-member__avatar"
         >
           <div
             className="wxc-avatar__content"
@@ -801,10 +801,10 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-member"
+        className="wxc wxc-member"
       >
         <div
-          className="wxc-avatar wxc-member__avatar"
+          className="wxc wxc-avatar wxc-member__avatar"
         >
           <div
             className="wxc-avatar__content"
@@ -839,10 +839,10 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-member"
+        className="wxc wxc-member"
       >
         <div
-          className="wxc-avatar wxc-member__avatar"
+          className="wxc wxc-avatar wxc-member__avatar"
         >
           <div
             className="wxc-avatar__content"
@@ -877,10 +877,10 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-member"
+        className="wxc wxc-member"
       >
         <div
-          className="wxc-avatar wxc-member__avatar"
+          className="wxc wxc-avatar wxc-member__avatar"
         >
           <div
             className="wxc-avatar__content"

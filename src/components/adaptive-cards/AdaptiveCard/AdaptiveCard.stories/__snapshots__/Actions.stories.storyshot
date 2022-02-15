@@ -3,11 +3,11 @@
 exports[`Storyshots Messaging/AdaptiveCard/Actions Action Open URL 1`] = `
 Array [
   <div
-    className="wxc-adaptive-card wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
+    className="wxc wxc-adaptive-card wxc wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
     style={Object {}}
   >
     <div
-      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
         Object {
           "style": undefined,
@@ -15,7 +15,7 @@ Array [
       }
     />
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      className="wxc wxc-adaptive-cards-text-block wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
       style={
         Object {
           "WebkitLineClamp": undefined,
@@ -23,7 +23,7 @@ Array [
       }
     >
       <div
-        className="wxc-markdown"
+        className="wxc wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
             "__html": "The action of these cards will open a URL",
@@ -32,7 +32,7 @@ Array [
       />
     </div>
     <div
-      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
         Object {
           "style": undefined,
@@ -40,12 +40,12 @@ Array [
       }
     />
     <div
-      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
+      className="wxc wxc-adaptive-cards-action-set wxc wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac wxc-ac-action-style--default wxc-button--primary"
+        className="wxc wxc-button wxc wxc-ac-action wxc wxc-ac-action-open-url wxc wxc-ac wxc-ac-action-style--default wxc-button--primary"
         disabled={false}
         onClick={[Function]}
         style={
@@ -63,7 +63,7 @@ Array [
       
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac wxc-ac-action-style--positive wxc-button--join"
+        className="wxc wxc-button wxc wxc-ac-action wxc wxc-ac-action-open-url wxc wxc-ac wxc-ac-action-style--positive wxc-button--join"
         disabled={false}
         onClick={[Function]}
         style={
@@ -86,7 +86,7 @@ Array [
       
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac wxc-ac-action-style--destructive wxc-button--cancel"
+        className="wxc wxc-button wxc wxc-ac-action wxc wxc-ac-action-open-url wxc wxc-ac wxc-ac-action-style--destructive wxc-button--cancel"
         disabled={false}
         onClick={[Function]}
         style={
@@ -104,7 +104,7 @@ Array [
       
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-open-url wxc-ac wxc-ac-action-style--default wxc-ac-is-enabled--false wxc-ac-action--disabled wxc-button--primary"
+        className="wxc wxc-button wxc wxc-ac-action wxc wxc-ac-action-open-url wxc wxc-ac wxc-ac-action-style--default wxc-ac-is-enabled--false wxc-ac-action--disabled wxc-button--primary"
         disabled={true}
         onClick={[Function]}
         style={
@@ -149,11 +149,11 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard/Actions Action Show Card 1`] = `
 Array [
   <div
-    className="wxc-adaptive-card wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
+    className="wxc wxc-adaptive-card wxc wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
     style={Object {}}
   >
     <div
-      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
         Object {
           "style": undefined,
@@ -161,7 +161,7 @@ Array [
       }
     />
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      className="wxc wxc-adaptive-cards-text-block wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
       style={
         Object {
           "WebkitLineClamp": undefined,
@@ -169,7 +169,7 @@ Array [
       }
     >
       <div
-        className="wxc-markdown"
+        className="wxc wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
             "__html": "This card's action will show another card",
@@ -178,7 +178,7 @@ Array [
       />
     </div>
     <div
-      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
         Object {
           "style": undefined,
@@ -186,12 +186,12 @@ Array [
       }
     />
     <div
-      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
+      className="wxc wxc-adaptive-cards-action-set wxc wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-show-card wxc-ac wxc-ac-action-style--default wxc-ac-container--horizontal wxc-button--primary"
+        className="wxc wxc-button wxc wxc-ac-action wxc wxc-ac-action-show-card wxc wxc-ac wxc-ac-action-style--default wxc-ac-container--horizontal wxc-button--primary"
         disabled={false}
         onClick={[Function]}
         style={
@@ -221,7 +221,7 @@ Array [
       
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-show-card wxc-ac wxc-ac-action-style--default wxc-ac-container--horizontal wxc-button--primary"
+        className="wxc wxc-button wxc wxc-ac-action wxc wxc-ac-action-show-card wxc wxc-ac wxc-ac-action-style--default wxc-ac-container--horizontal wxc-button--primary"
         disabled={false}
         onClick={[Function]}
         style={
@@ -278,11 +278,11 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard/Actions Action Submit 1`] = `
 Array [
   <div
-    className="wxc-adaptive-card wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
+    className="wxc wxc-adaptive-card wxc wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
     style={Object {}}
   >
     <div
-      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
         Object {
           "style": undefined,
@@ -290,7 +290,7 @@ Array [
       }
     />
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      className="wxc wxc-adaptive-cards-text-block wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
       style={
         Object {
           "WebkitLineClamp": undefined,
@@ -298,7 +298,7 @@ Array [
       }
     >
       <div
-        className="wxc-markdown"
+        className="wxc wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
             "__html": "Present a form and submit it back to the originator",
@@ -307,7 +307,7 @@ Array [
       />
     </div>
     <div
-      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
         Object {
           "style": undefined,
@@ -315,7 +315,7 @@ Array [
       }
     />
     <label
-      className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-is-visible--true"
+      className="wxc wxc-label wxc wxc-input-field wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true"
       style={Object {}}
     >
       <div
@@ -337,7 +337,7 @@ Array [
           />
           <button
             autoFocus={false}
-            className="wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
+            className="wxc wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
             disabled={false}
             onClick={[Function]}
             style={
@@ -367,7 +367,7 @@ Array [
       </div>
     </label>
     <div
-      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
         Object {
           "style": undefined,
@@ -375,7 +375,7 @@ Array [
       }
     />
     <label
-      className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-is-visible--true"
+      className="wxc wxc-label wxc wxc-input-field wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true"
       style={Object {}}
     >
       <div
@@ -397,7 +397,7 @@ Array [
           />
           <button
             autoFocus={false}
-            className="wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
+            className="wxc wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
             disabled={false}
             onClick={[Function]}
             style={
@@ -427,7 +427,7 @@ Array [
       </div>
     </label>
     <div
-      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
         Object {
           "style": undefined,
@@ -435,7 +435,7 @@ Array [
       }
     />
     <label
-      className="wxc-label wxc-input-field wxc-adaptive-cards-input-number wxc-ac wxc-ac-is-visible--true"
+      className="wxc wxc-label wxc wxc-input-field wxc wxc-adaptive-cards-input-number wxc wxc-ac wxc-ac-is-visible--true"
       style={Object {}}
     >
       <div
@@ -459,7 +459,7 @@ Array [
           />
           <button
             autoFocus={false}
-            className="wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
+            className="wxc wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
             disabled={false}
             onClick={[Function]}
             style={
@@ -490,7 +490,7 @@ Array [
           >
             <button
               autoFocus={false}
-              className="wxc-button wxc-input-field__input-increment-button wxc-button--ghost"
+              className="wxc wxc-button wxc-input-field__input-increment-button wxc-button--ghost"
               disabled={false}
               onClick={[Function]}
               style={
@@ -517,7 +517,7 @@ Array [
             
             <button
               autoFocus={false}
-              className="wxc-button wxc-input-field__input-decrement-button wxc-button--ghost"
+              className="wxc wxc-button wxc-input-field__input-decrement-button wxc-button--ghost"
               disabled={false}
               onClick={[Function]}
               style={
@@ -547,7 +547,7 @@ Array [
       </div>
     </label>
     <div
-      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
         Object {
           "style": undefined,
@@ -555,12 +555,12 @@ Array [
       }
     />
     <div
-      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
+      className="wxc wxc-adaptive-cards-action-set wxc wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-submit wxc-ac wxc-ac-action-style--default wxc-button--primary"
+        className="wxc wxc-button wxc wxc-ac-action wxc wxc-ac-action-submit wxc wxc-ac wxc-ac-action-style--default wxc-button--primary"
         disabled={false}
         onClick={[Function]}
         style={
@@ -605,11 +605,11 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard/Actions Action Toggle Visibility 1`] = `
 Array [
   <div
-    className="wxc-adaptive-card wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
+    className="wxc wxc-adaptive-card wxc wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
     style={Object {}}
   >
     <div
-      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
         Object {
           "style": undefined,
@@ -617,7 +617,7 @@ Array [
       }
     />
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
+      className="wxc wxc-adaptive-cards-text-block wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
       style={
         Object {
           "WebkitLineClamp": undefined,
@@ -625,7 +625,7 @@ Array [
       }
     >
       <div
-        className="wxc-markdown"
+        className="wxc wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
             "__html": "Press the buttons to toggle the images!",
@@ -634,7 +634,7 @@ Array [
       />
     </div>
     <div
-      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
         Object {
           "style": undefined,
@@ -642,7 +642,7 @@ Array [
       }
     />
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--false"
+      className="wxc wxc-adaptive-cards-text-block wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--false"
       style={
         Object {
           "WebkitLineClamp": undefined,
@@ -650,7 +650,7 @@ Array [
       }
     >
       <div
-        className="wxc-markdown"
+        className="wxc wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
             "__html": "Here are some images:",
@@ -659,7 +659,7 @@ Array [
       />
     </div>
     <div
-      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
         Object {
           "style": undefined,
@@ -667,11 +667,11 @@ Array [
       }
     />
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
+      className="wxc wxc-adaptive-cards-column-set wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
-        className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+        className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
         style={
           Object {
             "style": undefined,
@@ -679,11 +679,11 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc wxc-adaptive-cards-column wxc wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+          className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
           style={
             Object {
               "style": undefined,
@@ -692,7 +692,7 @@ Array [
         />
         <img
           alt="sample image 1"
-          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--false wxc-ac-image-size--medium wxc-ac-image-style--person"
+          className="wxc wxc-adaptive-cards-image wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--false wxc-ac-image-size--medium wxc-ac-image-style--person"
           src="https://picsum.photos/100/100?image=112"
           style={
             Object {
@@ -703,7 +703,7 @@ Array [
         />
       </div>
       <div
-        className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+        className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
         style={
           Object {
             "style": undefined,
@@ -711,11 +711,11 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc wxc-adaptive-cards-column wxc wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+          className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
           style={
             Object {
               "style": undefined,
@@ -724,7 +724,7 @@ Array [
         />
         <img
           alt="sample image 2"
-          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--false wxc-ac-image-size--medium"
+          className="wxc wxc-adaptive-cards-image wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--false wxc-ac-image-size--medium"
           src="https://picsum.photos/100/100?image=123"
           style={
             Object {
@@ -736,7 +736,7 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
         Object {
           "style": undefined,
@@ -744,12 +744,12 @@ Array [
       }
     />
     <div
-      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
+      className="wxc wxc-adaptive-cards-action-set wxc wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-toggle-visibility wxc-ac wxc-ac-action-style--default wxc-button--primary"
+        className="wxc wxc-button wxc wxc-ac-action wxc wxc-ac-action-toggle-visibility wxc wxc-ac wxc-ac-action-style--default wxc-button--primary"
         disabled={false}
         onClick={[Function]}
         style={
@@ -767,7 +767,7 @@ Array [
       
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-toggle-visibility wxc-ac wxc-ac-action-style--default wxc-button--primary"
+        className="wxc wxc-button wxc wxc-ac-action wxc wxc-ac-action-toggle-visibility wxc wxc-ac wxc-ac-action-style--default wxc-button--primary"
         disabled={false}
         onClick={[Function]}
         style={
@@ -785,7 +785,7 @@ Array [
       
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-toggle-visibility wxc-ac wxc-ac-action-style--default wxc-button--primary"
+        className="wxc wxc-button wxc wxc-ac-action wxc wxc-ac-action-toggle-visibility wxc wxc-ac wxc-ac-action-style--default wxc-button--primary"
         disabled={false}
         onClick={[Function]}
         style={

@@ -3,7 +3,7 @@
 exports[`Storyshots Meetings/Webex Interstitial Meeting Loading 1`] = `
 Array [
   <div
-    className="wxc-interstitial-meeting"
+    className="wxc wxc-interstitial-meeting"
     style={
       Object {
         "height": "100%",
@@ -12,11 +12,11 @@ Array [
     }
   >
     <div
-      className="wxc-spinner"
+      className="wxc wxc-spinner"
       style={
         Object {
-          "height": 28,
-          "width": 28,
+          "height": 30,
+          "width": 30,
         }
       }
     />
@@ -47,7 +47,7 @@ Array [
 exports[`Storyshots Meetings/Webex Interstitial Meeting Video Disabled 1`] = `
 Array [
   <div
-    className="wxc-interstitial-meeting"
+    className="wxc wxc-interstitial-meeting"
     style={
       Object {
         "height": "100%",
@@ -64,7 +64,7 @@ Array [
       }
     >
       <div
-        className="wxc-meeting-info wxc-interstitial-meeting__info"
+        className="wxc wxc-meeting-info wxc-interstitial-meeting__info"
       >
         <h2
           className="wxc-meeting-info__title"
@@ -76,10 +76,10 @@ Array [
         className="wxc-interstitial-meeting__interstitial-media-container"
       >
         <div
-          className="wxc-local-media wxc-interstitial-meeting__media wxc-local-media--no-media"
+          className="wxc wxc-local-media wxc-interstitial-meeting__media wxc-local-media--no-media"
         >
           <div
-            className="wxc-avatar"
+            className="wxc wxc-avatar"
           >
             <div
               className="wxc-avatar__content"
@@ -133,7 +133,7 @@ Array [
 exports[`Storyshots Meetings/Webex Interstitial Meeting Video Enabled 1`] = `
 Array [
   <div
-    className="wxc-interstitial-meeting"
+    className="wxc wxc-interstitial-meeting"
     style={
       Object {
         "height": "100%",
@@ -150,7 +150,7 @@ Array [
       }
     >
       <div
-        className="wxc-meeting-info wxc-interstitial-meeting__info"
+        className="wxc wxc-meeting-info wxc-interstitial-meeting__info"
       >
         <h2
           className="wxc-meeting-info__title"
@@ -162,10 +162,10 @@ Array [
         className="wxc-interstitial-meeting__interstitial-media-container"
       >
         <div
-          className="wxc-local-media wxc-interstitial-meeting__media wxc-local-media--no-media"
+          className="wxc wxc-local-media wxc-interstitial-meeting__media wxc-local-media--no-media"
         >
           <div
-            className="wxc-avatar"
+            className="wxc wxc-avatar"
           >
             <div
               className="wxc-avatar__content"

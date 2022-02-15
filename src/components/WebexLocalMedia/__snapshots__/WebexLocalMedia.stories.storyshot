@@ -3,10 +3,10 @@
 exports[`Storyshots Meetings/Webex Local Media No Media 1`] = `
 Array [
   <div
-    className="wxc-local-media wxc-local-media--no-media"
+    className="wxc wxc-local-media wxc-local-media--no-media"
   >
     <div
-      className="wxc-avatar"
+      className="wxc wxc-avatar"
     >
       <div
         className="wxc-avatar__content"
@@ -57,7 +57,7 @@ Array [
 exports[`Storyshots Meetings/Webex Local Media Screen Share 1`] = `
 Array [
   <div
-    className="wxc-local-media"
+    className="wxc wxc-local-media"
   >
     <video
       autoPlay={true}
@@ -91,10 +91,10 @@ Array [
 exports[`Storyshots Meetings/Webex Local Media Video 1`] = `
 Array [
   <div
-    className="wxc-local-media wxc-local-media--no-media"
+    className="wxc wxc-local-media wxc-local-media--no-media"
   >
     <div
-      className="wxc-avatar"
+      className="wxc wxc-avatar"
     >
       <div
         className="wxc-avatar__content"

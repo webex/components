@@ -8,7 +8,7 @@ export default {
 
 const Template = (args) => {
   const style = {
-    width: '22.5rem',
+    width: '23.25rem',
     maxHeight: '100%',
     ...args.style,
   };

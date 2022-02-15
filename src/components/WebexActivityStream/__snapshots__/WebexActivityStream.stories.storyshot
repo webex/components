@@ -3,16 +3,16 @@
 exports[`Storyshots Messaging/Webex Activity Stream Conversation 1`] = `
 Array [
   <div
-    className="wxc-activity-stream"
+    className="wxc wxc-activity-stream"
   >
     <div
-      className="wxc-activity"
+      className="wxc wxc-activity"
     >
       <div
-        className="wxc-activity-header"
+        className="wxc wxc-activity-header"
       >
         <div
-          className="wxc-avatar wxc-activity-header__avatar"
+          className="wxc wxc-avatar wxc-activity-header__avatar"
         >
           <div
             className="wxc-avatar__content"
@@ -56,7 +56,7 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-activity"
+      className="wxc wxc-activity"
     >
       <div
         className="wxc-activity__content"
@@ -65,13 +65,13 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-activity"
+      className="wxc wxc-activity"
     >
       <div
-        className="wxc-activity-header"
+        className="wxc wxc-activity-header"
       >
         <div
-          className="wxc-avatar wxc-activity-header__avatar"
+          className="wxc wxc-avatar wxc-activity-header__avatar"
         >
           <div
             className="wxc-avatar__content"
@@ -117,13 +117,13 @@ Let me know if you need more help! Maybe we can talk about it during standup
       </div>
     </div>
     <div
-      className="wxc-activity"
+      className="wxc wxc-activity"
     >
       <div
-        className="wxc-activity-header"
+        className="wxc wxc-activity-header"
       >
         <div
-          className="wxc-avatar wxc-activity-header__avatar"
+          className="wxc wxc-avatar wxc-activity-header__avatar"
         >
           <div
             className="wxc-avatar__content"
@@ -167,13 +167,13 @@ Let me know if you need more help! Maybe we can talk about it during standup
       </div>
     </div>
     <div
-      className="wxc-activity"
+      className="wxc wxc-activity"
     >
       <div
-        className="wxc-activity-header"
+        className="wxc wxc-activity-header"
       >
         <div
-          className="wxc-avatar wxc-activity-header__avatar"
+          className="wxc wxc-avatar wxc-activity-header__avatar"
         >
           <div
             className="wxc-avatar__content"
@@ -246,10 +246,10 @@ Let me know if you need more help! Maybe we can talk about it during standup
 exports[`Storyshots Messaging/Webex Activity Stream New Direct 1`] = `
 Array [
   <div
-    className="wxc-activity-stream"
+    className="wxc wxc-activity-stream"
   >
     <div
-      className="wxc-greeting"
+      className="wxc wxc-greeting"
     >
       <div
         className="wxc-greeting__header"
@@ -341,10 +341,10 @@ Array [
 exports[`Storyshots Messaging/Webex Activity Stream New Space 1`] = `
 Array [
   <div
-    className="wxc-activity-stream"
+    className="wxc wxc-activity-stream"
   >
     <div
-      className="wxc-greeting"
+      className="wxc wxc-greeting"
     >
       <div
         className="wxc-greeting__header"
@@ -466,16 +466,16 @@ Array [
 exports[`Storyshots Messaging/Webex Activity Stream Time Rulers 1`] = `
 Array [
   <div
-    className="wxc-activity-stream"
+    className="wxc wxc-activity-stream"
   >
     <div
-      className="wxc-activity"
+      className="wxc wxc-activity"
     >
       <div
-        className="wxc-activity-header"
+        className="wxc wxc-activity-header"
       >
         <div
-          className="wxc-avatar wxc-activity-header__avatar"
+          className="wxc wxc-avatar wxc-activity-header__avatar"
         >
           <div
             className="wxc-avatar__content"
@@ -538,20 +538,20 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-time-ruler"
+      className="wxc wxc-time-ruler"
     >
       <span>
         Yesterday
       </span>
     </div>
     <div
-      className="wxc-activity"
+      className="wxc wxc-activity"
     >
       <div
-        className="wxc-activity-header"
+        className="wxc wxc-activity-header"
       >
         <div
-          className="wxc-avatar wxc-activity-header__avatar"
+          className="wxc wxc-avatar wxc-activity-header__avatar"
         >
           <div
             className="wxc-avatar__content"
@@ -595,20 +595,20 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-time-ruler"
+      className="wxc wxc-time-ruler"
     >
       <span>
         Today
       </span>
     </div>
     <div
-      className="wxc-activity"
+      className="wxc wxc-activity"
     >
       <div
-        className="wxc-activity-header"
+        className="wxc wxc-activity-header"
       >
         <div
-          className="wxc-avatar wxc-activity-header__avatar"
+          className="wxc wxc-avatar wxc-activity-header__avatar"
         >
           <div
             className="wxc-avatar__content"

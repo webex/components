@@ -80,7 +80,7 @@ export default function WebexMeetingHostAuthentication({
           ariaLabel={HINTS.buttonHint}
           tabIndex={102}
         >
-          {isJoining && <Spinner className={sc('start-button-spinner')} size={16} />}
+          {isJoining && <Spinner className={sc('start-button-spinner')} size={18} />}
           {isJoining ? 'Starting meeting...' : 'Start meeting'}
         </Button>
       </form>
