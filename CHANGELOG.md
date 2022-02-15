@@ -1,3 +1,10 @@
+## [1.248.1](https://github.com/webex/components/compare/v1.248.0...v1.248.1) (2022-02-15)
+
+
+### Bug Fixes
+
+* **WebexMeetingControl:** send pressed prop only if the control is of the toggle type ([be663ef](https://github.com/webex/components/commit/be663efc41f746f9c591e108566675a0d63d61e7))
+
 # [1.248.0](https://github.com/webex/components/compare/v1.247.0...v1.248.0) (2022-02-14)
 
 
