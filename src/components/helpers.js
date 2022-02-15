@@ -18,6 +18,7 @@ export default function webexComponentClasses(
   const userClassNames = Array.isArray(userClassName) ? userClassName : [userClassName];
 
   const cssClasses = classNames(
+    'wxc',
     `${WEBEX_COMPONENTS_CLASS_PREFIX}-${classBaseName}`,
     ...userClassNames,
     {

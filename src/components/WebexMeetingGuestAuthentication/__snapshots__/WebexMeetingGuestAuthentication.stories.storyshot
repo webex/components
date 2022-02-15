@@ -3,7 +3,7 @@
 exports[`Storyshots Meetings/Webex Guest Authentication Authentication 1`] = `
 Array [
   <div
-    className="wxc-meeting-guest-authentication"
+    className="wxc wxc-meeting-guest-authentication"
     style={
       Object {
         "height": "25rem",
@@ -29,7 +29,7 @@ Array [
       className="wxc-meeting-guest-authentication__form-content"
     >
       <label
-        className="wxc-label wxc-input-field wxc-meeting-guest-authentication__input"
+        className="wxc wxc-label wxc wxc-input-field wxc-meeting-guest-authentication__input"
       >
         <div
           className="wxc-label__label-text"
@@ -57,7 +57,7 @@ Array [
         </div>
       </label>
       <label
-        className="wxc-label wxc-input-field wxc-meeting-guest-authentication__input"
+        className="wxc wxc-label wxc wxc-input-field wxc-meeting-guest-authentication__input"
       >
         <div
           className="wxc-label__label-text"
@@ -90,7 +90,7 @@ Array [
       <button
         aria-label="Start meeting. Start the meeting after entering the required information."
         autoFocus={false}
-        className="wxc-button wxc-meeting-guest-authentication__start-button wxc-button--primary"
+        className="wxc wxc-button wxc-meeting-guest-authentication__start-button wxc-button--primary"
         disabled={true}
         onClick={[Function]}
         style={

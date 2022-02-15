@@ -3,7 +3,7 @@
 exports[`Storyshots Meetings/Webex Meeting Info Direct 1`] = `
 Array [
   <div
-    className="wxc-meeting-info"
+    className="wxc wxc-meeting-info"
   >
     <h2
       className="wxc-meeting-info__title"
@@ -37,7 +37,7 @@ Array [
 exports[`Storyshots Meetings/Webex Meeting Info Error 1`] = `
 Array [
   <div
-    className="wxc-meeting-info"
+    className="wxc wxc-meeting-info"
   >
     <h2
       className="wxc-meeting-info__title"
@@ -71,14 +71,14 @@ Array [
 exports[`Storyshots Meetings/Webex Meeting Info Loading 1`] = `
 Array [
   <div
-    className="wxc-meeting-info"
+    className="wxc wxc-meeting-info"
   >
     <div
-      className="wxc-spinner"
+      className="wxc wxc-spinner"
       style={
         Object {
-          "height": 36,
-          "width": 36,
+          "height": 38,
+          "width": 38,
         }
       }
     />
@@ -109,7 +109,7 @@ Array [
 exports[`Storyshots Meetings/Webex Meeting Info Space 1`] = `
 Array [
   <div
-    className="wxc-meeting-info"
+    className="wxc wxc-meeting-info"
   >
     <h2
       className="wxc-meeting-info__title"

@@ -3,7 +3,7 @@
 exports[`Storyshots Meetings/Webex Settings Settings 1`] = `
 Array [
   <div
-    className="wxc-settings"
+    className="wxc wxc-settings"
     style={
       Object {
         "alignSelf": "stretch",
@@ -12,7 +12,7 @@ Array [
     }
   >
     <div
-      className="wxc-tabs"
+      className="wxc wxc-tabs"
     >
       <ul
         aria-label="Use left and right arrow keys to navigate."
@@ -52,19 +52,19 @@ Array [
         className="wxc-tabs__content"
       >
         <div
-          className="wxc-audio-settings"
+          className="wxc wxc-audio-settings"
         >
           <h5
-            className="wxc-title wxc-title--subsection"
+            className="wxc wxc-title wxc-title--subsection"
             style={Object {}}
           >
             Speaker
           </h5>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <label
-              className="wxc-label wxc-select wxc-meeting-control__control-select"
+              className="wxc wxc-label wxc wxc-select wxc-meeting-control__control-select"
             >
               <div
                 className="wxc-label__control"
@@ -105,16 +105,16 @@ Array [
             </label>
           </div>
           <h5
-            className="wxc-title wxc-title--subsection"
+            className="wxc wxc-title wxc-title--subsection"
             style={Object {}}
           >
             Microphone
           </h5>
           <div
-            className="wxc-meeting-control"
+            className="wxc wxc-meeting-control"
           >
             <label
-              className="wxc-label wxc-select wxc-meeting-control__control-select wxc-select--disabled"
+              className="wxc wxc-label wxc wxc-select wxc-meeting-control__control-select wxc-select--disabled"
             >
               <div
                 className="wxc-label__control"

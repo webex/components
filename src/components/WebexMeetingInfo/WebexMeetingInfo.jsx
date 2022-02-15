@@ -50,7 +50,7 @@ export default function WebexMeetingInfo({className, meetingID, style}) {
     desktop: width >= DESKTOP,
   });
 
-  let infoComponent = <Spinner size={36} />;
+  let infoComponent = <Spinner size={38} />;
 
   if (ID) {
     const displayTitle = title || 'No Meeting Information';

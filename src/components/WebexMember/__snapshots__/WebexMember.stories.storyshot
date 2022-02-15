@@ -10,10 +10,10 @@ Array [
     }
   >
     <div
-      className="wxc-member"
+      className="wxc wxc-member"
     >
       <div
-        className="wxc-avatar wxc-member__avatar"
+        className="wxc wxc-avatar wxc-member__avatar"
       >
         <div
           className="wxc-avatar__content"
@@ -86,10 +86,10 @@ Array [
     }
   >
     <div
-      className="wxc-member"
+      className="wxc wxc-member"
     >
       <div
-        className="wxc-avatar wxc-member__avatar"
+        className="wxc wxc-avatar wxc-member__avatar"
       >
         <div
           className="wxc-avatar__content"
@@ -167,10 +167,10 @@ Array [
     }
   >
     <div
-      className="wxc-member"
+      className="wxc wxc-member"
     >
       <div
-        className="wxc-avatar wxc-member__avatar"
+        className="wxc wxc-avatar wxc-member__avatar"
       >
         <div
           className="wxc-avatar__content"
@@ -209,7 +209,7 @@ Array [
         </div>
       </div>
       <svg
-        className="wxc-icon wxc-audio-microphone-muted-icon wxc-member__muted"
+        className="wxc-icon wxc wxc-audio-microphone-muted-icon wxc-member__muted"
         height={16}
         style={Object {}}
         viewBox="0 0 24 24"
@@ -258,10 +258,10 @@ Array [
     }
   >
     <div
-      className="wxc-member"
+      className="wxc wxc-member"
     >
       <div
-        className="wxc-avatar wxc-member__avatar"
+        className="wxc wxc-avatar wxc-member__avatar"
       >
         <div
           className="wxc-avatar__content"
@@ -295,7 +295,7 @@ Array [
         </div>
       </div>
       <svg
-        className="wxc-icon wxc-audio-microphone-icon wxc-member__speaking"
+        className="wxc-icon wxc wxc-audio-microphone-icon wxc-member__speaking"
         height={16}
         style={Object {}}
         viewBox="0 0 24 24"
@@ -352,10 +352,10 @@ Array [
     }
   >
     <div
-      className="wxc-member"
+      className="wxc wxc-member"
     >
       <div
-        className="wxc-avatar wxc-member__avatar"
+        className="wxc wxc-avatar wxc-member__avatar"
       >
         <div
           className="wxc-avatar__content"
@@ -411,7 +411,7 @@ Array [
         />
       </svg>
       <svg
-        className="wxc-icon wxc-audio-microphone-icon wxc-member__speaking"
+        className="wxc-icon wxc wxc-audio-microphone-icon wxc-member__speaking"
         height={16}
         style={Object {}}
         viewBox="0 0 24 24"
@@ -468,10 +468,10 @@ Array [
     }
   >
     <div
-      className="wxc-member"
+      className="wxc wxc-member"
     >
       <div
-        className="wxc-avatar wxc-member__avatar"
+        className="wxc wxc-avatar wxc-member__avatar"
       >
         <div
           className="wxc-avatar__content"
@@ -539,10 +539,10 @@ Array [
     }
   >
     <div
-      className="wxc-member"
+      className="wxc wxc-member"
     >
       <div
-        className="wxc-avatar wxc-member__avatar"
+        className="wxc wxc-avatar wxc-member__avatar"
       >
         <div
           className="wxc-avatar__content"

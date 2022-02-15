@@ -3,11 +3,11 @@
 exports[`Storyshots Messaging/AdaptiveCard Card 1`] = `
 Array [
   <div
-    className="wxc-adaptive-card wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
+    className="wxc wxc-adaptive-card wxc wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
     style={Object {}}
   >
     <div
-      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
         Object {
           "style": undefined,
@@ -15,11 +15,11 @@ Array [
       }
     />
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
+      className="wxc wxc-adaptive-cards-column-set wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
-        className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+        className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
         style={
           Object {
             "style": undefined,
@@ -27,11 +27,11 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-container--vertical"
+        className="wxc wxc-adaptive-cards-column wxc wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+          className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
           style={
             Object {
               "style": undefined,
@@ -39,7 +39,7 @@ Array [
           }
         />
         <img
-          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--medium wxc-ac-image-style--person"
+          className="wxc wxc-adaptive-cards-image wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--medium wxc-ac-image-style--person"
           src="https://developer.webex.com/images/webex-teams-logo.png"
           style={
             Object {
@@ -51,7 +51,7 @@ Array [
         />
       </div>
       <div
-        className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+        className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
         style={
           Object {
             "style": undefined,
@@ -59,11 +59,11 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-width--stretch wxc-ac-container--vertical"
+        className="wxc wxc-adaptive-cards-column wxc wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-width--stretch wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+          className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
           style={
             Object {
               "style": undefined,
@@ -71,7 +71,7 @@ Array [
           }
         />
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--lighter wxc-ac-color--accent"
+          className="wxc wxc-adaptive-cards-text-block wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--lighter wxc-ac-color--accent"
           style={
             Object {
               "WebkitLineClamp": undefined,
@@ -79,7 +79,7 @@ Array [
           }
         >
           <div
-            className="wxc-markdown"
+            className="wxc wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "Cisco Webex Teams",
@@ -88,7 +88,7 @@ Array [
           />
         </div>
         <div
-          className="wxc-ac-spacer wxc-ac-spacer--spacing--small"
+          className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--small"
           style={
             Object {
               "style": undefined,
@@ -96,7 +96,7 @@ Array [
           }
         />
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--bolder wxc-ac-wrap--true wxc-ac-color--light wxc-ac-size--large"
+          className="wxc wxc-adaptive-cards-text-block wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--bolder wxc-ac-wrap--true wxc-ac-color--light wxc-ac-size--large"
           style={
             Object {
               "WebkitLineClamp": undefined,
@@ -104,7 +104,7 @@ Array [
           }
         >
           <div
-            className="wxc-markdown"
+            className="wxc wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "Buttons and Cards Release",
@@ -115,7 +115,7 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-ac-spacer wxc-ac-spacer--spacing--padding"
+      className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--padding"
       style={
         Object {
           "style": undefined,
@@ -123,11 +123,11 @@ Array [
       }
     />
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-is-visible--true wxc-ac-container--horizontal"
+      className="wxc wxc-adaptive-cards-column-set wxc wxc-ac wxc-ac-horizontal-alignment--center wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
-        className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+        className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
         style={
           Object {
             "style": undefined,
@@ -135,7 +135,7 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc wxc-adaptive-cards-column wxc wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
         style={
           Object {
             "flex": 35,
@@ -143,7 +143,7 @@ Array [
         }
       >
         <div
-          className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+          className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
           style={
             Object {
               "style": undefined,
@@ -151,7 +151,7 @@ Array [
           }
         />
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--light"
+          className="wxc wxc-adaptive-cards-text-block wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--light"
           style={
             Object {
               "WebkitLineClamp": undefined,
@@ -159,7 +159,7 @@ Array [
           }
         >
           <div
-            className="wxc-markdown"
+            className="wxc wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "Release Date:",
@@ -168,7 +168,7 @@ Array [
           />
         </div>
         <div
-          className="wxc-ac-spacer wxc-ac-spacer--spacing--small"
+          className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--small"
           style={
             Object {
               "style": undefined,
@@ -176,7 +176,7 @@ Array [
           }
         />
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--lighter wxc-ac-color--light"
+          className="wxc wxc-adaptive-cards-text-block wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--lighter wxc-ac-color--light"
           style={
             Object {
               "WebkitLineClamp": undefined,
@@ -184,7 +184,7 @@ Array [
           }
         >
           <div
-            className="wxc-markdown"
+            className="wxc wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "Product:",
@@ -193,7 +193,7 @@ Array [
           />
         </div>
         <div
-          className="wxc-ac-spacer wxc-ac-spacer--spacing--small"
+          className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--small"
           style={
             Object {
               "style": undefined,
@@ -201,7 +201,7 @@ Array [
           }
         />
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--lighter wxc-ac-color--light"
+          className="wxc wxc-adaptive-cards-text-block wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--lighter wxc-ac-color--light"
           style={
             Object {
               "WebkitLineClamp": undefined,
@@ -209,7 +209,7 @@ Array [
           }
         >
           <div
-            className="wxc-markdown"
+            className="wxc wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "OS:",
@@ -219,7 +219,7 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+        className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
         style={
           Object {
             "style": undefined,
@@ -227,7 +227,7 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+        className="wxc wxc-adaptive-cards-column wxc wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
         style={
           Object {
             "flex": 65,
@@ -235,7 +235,7 @@ Array [
         }
       >
         <div
-          className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+          className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
           style={
             Object {
               "style": undefined,
@@ -243,7 +243,7 @@ Array [
           }
         />
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--light"
+          className="wxc wxc-adaptive-cards-text-block wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--light"
           style={
             Object {
               "WebkitLineClamp": undefined,
@@ -251,7 +251,7 @@ Array [
           }
         >
           <div
-            className="wxc-markdown"
+            className="wxc wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "Aug 6, 2019",
@@ -260,7 +260,7 @@ Array [
           />
         </div>
         <div
-          className="wxc-ac-spacer wxc-ac-spacer--spacing--small"
+          className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--small"
           style={
             Object {
               "style": undefined,
@@ -268,7 +268,7 @@ Array [
           }
         />
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--light wxc-ac-weight--lighter"
+          className="wxc wxc-adaptive-cards-text-block wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-color--light wxc-ac-weight--lighter"
           style={
             Object {
               "WebkitLineClamp": undefined,
@@ -276,7 +276,7 @@ Array [
           }
         >
           <div
-            className="wxc-markdown"
+            className="wxc wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "Webex Teams",
@@ -285,7 +285,7 @@ Array [
           />
         </div>
         <div
-          className="wxc-ac-spacer wxc-ac-spacer--spacing--small"
+          className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--small"
           style={
             Object {
               "style": undefined,
@@ -293,7 +293,7 @@ Array [
           }
         />
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--lighter wxc-ac-color--light"
+          className="wxc wxc-adaptive-cards-text-block wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-weight--lighter wxc-ac-color--light"
           style={
             Object {
               "WebkitLineClamp": undefined,
@@ -301,7 +301,7 @@ Array [
           }
         >
           <div
-            className="wxc-markdown"
+            className="wxc wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "Mac, Windows, Web",
@@ -312,7 +312,7 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
         Object {
           "style": undefined,
@@ -320,7 +320,7 @@ Array [
       }
     />
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
+      className="wxc wxc-adaptive-cards-text-block wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-wrap--true"
       style={
         Object {
           "WebkitLineClamp": undefined,
@@ -328,7 +328,7 @@ Array [
       }
     >
       <div
-        className="wxc-markdown"
+        className="wxc wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
             "__html": "We're making it easier for you to interact with bots and integrations in Webex Teams. When your bot sends information in a space that includes a card with buttons, you can now easily interact with it.",
@@ -337,7 +337,7 @@ Array [
       />
     </div>
     <div
-      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
         Object {
           "style": undefined,
@@ -345,7 +345,7 @@ Array [
       }
     />
     <div
-      className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      className="wxc wxc-adaptive-cards-text-block wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
       style={
         Object {
           "WebkitLineClamp": undefined,
@@ -353,7 +353,7 @@ Array [
       }
     >
       <div
-        className="wxc-markdown"
+        className="wxc wxc-markdown"
         dangerouslySetInnerHTML={
           Object {
             "__html": "Buttons and Cards Resources:",
@@ -362,7 +362,7 @@ Array [
       />
     </div>
     <div
-      className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
         Object {
           "style": undefined,
@@ -370,11 +370,11 @@ Array [
       }
     />
     <div
-      className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
+      className="wxc wxc-adaptive-cards-column-set wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <div
-        className="wxc-ac-spacer wxc-ac-spacer--spacing--small"
+        className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--small"
         style={
           Object {
             "style": undefined,
@@ -382,11 +382,11 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-container--vertical"
+        className="wxc wxc-adaptive-cards-column wxc wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-width--auto wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+          className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
           style={
             Object {
               "style": undefined,
@@ -395,7 +395,7 @@ Array [
         />
         <img
           alt=""
-          className="wxc-adaptive-cards-image wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--small"
+          className="wxc wxc-adaptive-cards-image wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-image-size--small"
           src="https://developer.webex.com/images/link-icon.png"
           style={
             Object {
@@ -406,7 +406,7 @@ Array [
         />
       </div>
       <div
-        className="wxc-ac-spacer wxc-ac-spacer--spacing--small"
+        className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--small"
         style={
           Object {
             "style": undefined,
@@ -414,11 +414,11 @@ Array [
         }
       />
       <div
-        className="wxc-adaptive-cards-column wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--center wxc-ac-width--auto wxc-ac-container--vertical"
+        className="wxc wxc-adaptive-cards-column wxc wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--center wxc-ac-width--auto wxc-ac-container--vertical"
         style={Object {}}
       >
         <div
-          className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+          className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
           style={
             Object {
               "style": undefined,
@@ -426,7 +426,7 @@ Array [
           }
         />
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-size--medium"
+          className="wxc wxc-adaptive-cards-text-block wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-size--medium"
           style={
             Object {
               "WebkitLineClamp": undefined,
@@ -434,7 +434,7 @@ Array [
           }
         >
           <div
-            className="wxc-markdown"
+            className="wxc wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "<a href=\\"\\">Developer Portal Buttons and Cards Guide</a>",
@@ -445,7 +445,7 @@ Array [
       </div>
     </div>
     <div
-      className="wxc-ac-spacer wxc-ac-spacer--spacing--none"
+      className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--none"
       style={
         Object {
           "style": undefined,
@@ -453,12 +453,12 @@ Array [
       }
     />
     <div
-      className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
+      className="wxc wxc-adaptive-cards-action-set wxc wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
       style={Object {}}
     >
       <button
         autoFocus={false}
-        className="wxc-button wxc-ac-action wxc-ac-action-submit wxc-ac wxc-ac-action-style--default wxc-button--primary"
+        className="wxc wxc-button wxc wxc-ac-action wxc wxc-ac-action-submit wxc wxc-ac wxc-ac-action-style--default wxc-button--primary"
         disabled={false}
         onClick={[Function]}
         style={

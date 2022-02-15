@@ -3,13 +3,13 @@
 exports[`Storyshots Messaging/Webex Activity Adaptive Card 1`] = `
 Array [
   <div
-    className="wxc-activity"
+    className="wxc wxc-activity"
   >
     <div
-      className="wxc-activity-header"
+      className="wxc wxc-activity-header"
     >
       <div
-        className="wxc-avatar wxc-activity-header__avatar"
+        className="wxc wxc-avatar wxc-activity-header__avatar"
       >
         <div
           className="wxc-avatar__content"
@@ -51,11 +51,11 @@ Array [
     >
       Adaptive card activity
       <div
-        className="wxc-adaptive-card wxc-ac wxc-adaptive-card wxc-ac-container--vertical wxc-ac-container--has-padding"
+        className="wxc wxc-adaptive-card wxc wxc-ac wxc wxc-adaptive-card wxc-ac-container--vertical wxc-ac-container--has-padding"
         style={Object {}}
       >
         <div
-          className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+          className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
           style={
             Object {
               "style": undefined,
@@ -63,7 +63,7 @@ Array [
           }
         />
         <div
-          className="wxc-adaptive-cards-text-block wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-size--large"
+          className="wxc wxc-adaptive-cards-text-block wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-size--large"
           style={
             Object {
               "WebkitLineClamp": undefined,
@@ -71,7 +71,7 @@ Array [
           }
         >
           <div
-            className="wxc-markdown"
+            className="wxc wxc-markdown"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "Hotel Booking",
@@ -80,7 +80,7 @@ Array [
           />
         </div>
         <div
-          className="wxc-ac-spacer wxc-ac-spacer--spacing--medium"
+          className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--medium"
           style={
             Object {
               "style": undefined,
@@ -90,11 +90,11 @@ Array [
           <div />
         </div>
         <div
-          className="wxc-container wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+          className="wxc wxc-container wxc wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
           style={Object {}}
         >
           <div
-            className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+            className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
             style={
               Object {
                 "style": undefined,
@@ -102,11 +102,11 @@ Array [
             }
           />
           <div
-            className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
+            className="wxc wxc-adaptive-cards-column-set wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
             style={Object {}}
           >
             <div
-              className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+              className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
               style={
                 Object {
                   "style": undefined,
@@ -114,7 +114,7 @@ Array [
               }
             />
             <label
-              className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--text wxc-ac-height--auto"
+              className="wxc wxc-label wxc wxc-input-field wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--text wxc-ac-height--auto"
               style={Object {}}
             >
               <div
@@ -145,7 +145,7 @@ Array [
                   />
                   <button
                     autoFocus={false}
-                    className="wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
+                    className="wxc wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
                     disabled={false}
                     onClick={[Function]}
                     style={
@@ -175,7 +175,7 @@ Array [
               </div>
             </label>
             <div
-              className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+              className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
               style={
                 Object {
                   "style": undefined,
@@ -183,7 +183,7 @@ Array [
               }
             />
             <label
-              className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--text wxc-ac-height--auto"
+              className="wxc wxc-label wxc wxc-input-field wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--text wxc-ac-height--auto"
               style={Object {}}
             >
               <div
@@ -214,7 +214,7 @@ Array [
                   />
                   <button
                     autoFocus={false}
-                    className="wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
+                    className="wxc wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
                     disabled={false}
                     onClick={[Function]}
                     style={
@@ -245,7 +245,7 @@ Array [
             </label>
           </div>
           <div
-            className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+            className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
             style={
               Object {
                 "style": undefined,
@@ -253,7 +253,7 @@ Array [
             }
           />
           <label
-            className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--email wxc-ac-height--auto"
+            className="wxc wxc-label wxc wxc-input-field wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--email wxc-ac-height--auto"
             style={Object {}}
           >
             <div
@@ -284,7 +284,7 @@ Array [
                 />
                 <button
                   autoFocus={false}
-                  className="wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
+                  className="wxc wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
                   disabled={false}
                   onClick={[Function]}
                   style={
@@ -315,7 +315,7 @@ Array [
           </label>
         </div>
         <div
-          className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+          className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
           style={
             Object {
               "style": undefined,
@@ -323,7 +323,7 @@ Array [
           }
         />
         <label
-          className="wxc-label wxc-adaptive-cards-input-choice-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
+          className="wxc wxc-label wxc wxc-adaptive-cards-input-choice-set wxc wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
           style={Object {}}
         >
           <div
@@ -340,7 +340,7 @@ Array [
             className="wxc-label__control"
           >
             <label
-              className="wxc-label wxc-select"
+              className="wxc wxc-label wxc wxc-select"
             >
               <div
                 className="wxc-label__control"
@@ -381,7 +381,7 @@ Array [
           </div>
         </label>
         <div
-          className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+          className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
           style={
             Object {
               "style": undefined,
@@ -389,7 +389,7 @@ Array [
           }
         />
         <label
-          className="wxc-label wxc-input-field wxc-adaptive-cards-input-number wxc-ac wxc-ac-is-visible--true"
+          className="wxc wxc-label wxc wxc-input-field wxc wxc-adaptive-cards-input-number wxc wxc-ac wxc-ac-is-visible--true"
           style={Object {}}
         >
           <div
@@ -423,7 +423,7 @@ Array [
               />
               <button
                 autoFocus={false}
-                className="wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
+                className="wxc wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
                 disabled={false}
                 onClick={[Function]}
                 style={
@@ -454,7 +454,7 @@ Array [
               >
                 <button
                   autoFocus={false}
-                  className="wxc-button wxc-input-field__input-increment-button wxc-button--ghost"
+                  className="wxc wxc-button wxc-input-field__input-increment-button wxc-button--ghost"
                   disabled={false}
                   onClick={[Function]}
                   style={
@@ -481,7 +481,7 @@ Array [
                 
                 <button
                   autoFocus={false}
-                  className="wxc-button wxc-input-field__input-decrement-button wxc-button--ghost"
+                  className="wxc wxc-button wxc-input-field__input-decrement-button wxc-button--ghost"
                   disabled={false}
                   onClick={[Function]}
                   style={
@@ -511,7 +511,7 @@ Array [
           </div>
         </label>
         <div
-          className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+          className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
           style={
             Object {
               "style": undefined,
@@ -519,11 +519,11 @@ Array [
           }
         />
         <div
-          className="wxc-adaptive-cards-column-set wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
+          className="wxc wxc-adaptive-cards-column-set wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
           style={Object {}}
         >
           <div
-            className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+            className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
             style={
               Object {
                 "style": undefined,
@@ -531,7 +531,7 @@ Array [
             }
           />
           <label
-            className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--text wxc-ac-height--auto"
+            className="wxc wxc-label wxc wxc-input-field wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--text wxc-ac-height--auto"
             style={Object {}}
           >
             <div
@@ -562,7 +562,7 @@ Array [
                 />
                 <button
                   autoFocus={false}
-                  className="wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
+                  className="wxc wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
                   disabled={false}
                   onClick={[Function]}
                   style={
@@ -592,7 +592,7 @@ Array [
             </div>
           </label>
           <div
-            className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+            className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
             style={
               Object {
                 "style": undefined,
@@ -600,7 +600,7 @@ Array [
             }
           />
           <label
-            className="wxc-label wxc-input-field wxc-time-input wxc-adaptive-cards-input-time wxc-ac wxc-ac-is-visible--true"
+            className="wxc wxc-label wxc wxc-input-field wxc wxc-time-input wxc wxc-adaptive-cards-input-time wxc wxc-ac wxc-ac-is-visible--true"
             style={Object {}}
           >
             <div
@@ -631,7 +631,7 @@ Array [
                 />
                 <button
                   autoFocus={false}
-                  className="wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
+                  className="wxc wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
                   disabled={false}
                   onClick={[Function]}
                   style={
@@ -662,7 +662,7 @@ Array [
           </label>
         </div>
         <div
-          className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+          className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
           style={
             Object {
               "style": undefined,
@@ -670,7 +670,7 @@ Array [
           }
         />
         <label
-          className="wxc-label wxc-input-field wxc-adaptive-cards-input-text wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--text wxc-ac-height--auto"
+          className="wxc wxc-label wxc wxc-input-field wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--text wxc-ac-height--auto"
           style={Object {}}
         >
           <div
@@ -701,7 +701,7 @@ Array [
               />
               <button
                 autoFocus={false}
-                className="wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
+                className="wxc wxc-button wxc-input-field__input-field-right-icon wxc-button--ghost"
                 disabled={false}
                 onClick={[Function]}
                 style={
@@ -731,7 +731,7 @@ Array [
           </div>
         </label>
         <div
-          className="wxc-ac-spacer wxc-ac-spacer--spacing--medium"
+          className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--medium"
           style={
             Object {
               "style": undefined,
@@ -739,7 +739,7 @@ Array [
           }
         />
         <label
-          className="wxc-label wxc-adaptive-cards-input-choice-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
+          className="wxc wxc-label wxc wxc-adaptive-cards-input-choice-set wxc wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
           style={Object {}}
         >
           <div
@@ -758,7 +758,7 @@ Array [
             <div
               aria-checked={false}
               aria-disabled={false}
-              className="wxc-radio-button wxc-radio-button--enabled"
+              className="wxc wxc-radio-button wxc-radio-button--enabled"
               onClick={[Function]}
               onKeyDown={[Function]}
               required={false}
@@ -777,7 +777,7 @@ Array [
             <div
               aria-checked={false}
               aria-disabled={false}
-              className="wxc-radio-button wxc-radio-button--enabled"
+              className="wxc wxc-radio-button wxc-radio-button--enabled"
               onClick={[Function]}
               onKeyDown={[Function]}
               required={false}
@@ -796,7 +796,7 @@ Array [
           </div>
         </label>
         <div
-          className="wxc-ac-spacer wxc-ac-spacer--spacing--default"
+          className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
           style={
             Object {
               "style": undefined,
@@ -804,12 +804,12 @@ Array [
           }
         />
         <div
-          className="wxc-adaptive-cards-action-set wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
+          className="wxc wxc-adaptive-cards-action-set wxc wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
           style={Object {}}
         >
           <button
             autoFocus={false}
-            className="wxc-button wxc-ac-action wxc-ac-action-submit wxc-ac wxc-ac-action-style--default wxc-button--primary"
+            className="wxc wxc-button wxc wxc-ac-action wxc wxc-ac-action-submit wxc wxc-ac wxc-ac-action-style--default wxc-button--primary"
             disabled={false}
             onClick={[Function]}
             style={
@@ -856,13 +856,13 @@ Array [
 exports[`Storyshots Messaging/Webex Activity Created Long Back 1`] = `
 Array [
   <div
-    className="wxc-activity"
+    className="wxc wxc-activity"
   >
     <div
-      className="wxc-activity-header"
+      className="wxc wxc-activity-header"
     >
       <div
-        className="wxc-avatar wxc-activity-header__avatar"
+        className="wxc wxc-avatar wxc-activity-header__avatar"
       >
         <div
           className="wxc-avatar__content"
@@ -950,13 +950,13 @@ Array [
 exports[`Storyshots Messaging/Webex Activity Created This Week 1`] = `
 Array [
   <div
-    className="wxc-activity"
+    className="wxc wxc-activity"
   >
     <div
-      className="wxc-activity-header"
+      className="wxc wxc-activity-header"
     >
       <div
-        className="wxc-avatar wxc-activity-header__avatar"
+        className="wxc wxc-avatar wxc-activity-header__avatar"
       >
         <div
           className="wxc-avatar__content"
@@ -1044,13 +1044,13 @@ Array [
 exports[`Storyshots Messaging/Webex Activity Created Today 1`] = `
 Array [
   <div
-    className="wxc-activity"
+    className="wxc wxc-activity"
   >
     <div
-      className="wxc-activity-header"
+      className="wxc wxc-activity-header"
     >
       <div
-        className="wxc-avatar wxc-activity-header__avatar"
+        className="wxc wxc-avatar wxc-activity-header__avatar"
       >
         <div
           className="wxc-avatar__content"
@@ -1119,13 +1119,13 @@ Array [
 exports[`Storyshots Messaging/Webex Activity Created Yesterday 1`] = `
 Array [
   <div
-    className="wxc-activity"
+    className="wxc wxc-activity"
   >
     <div
-      className="wxc-activity-header"
+      className="wxc wxc-activity-header"
     >
       <div
-        className="wxc-avatar wxc-activity-header__avatar"
+        className="wxc wxc-avatar wxc-activity-header__avatar"
       >
         <div
           className="wxc-avatar__content"
@@ -1194,13 +1194,13 @@ Array [
 exports[`Storyshots Messaging/Webex Activity Multi Line 1`] = `
 Array [
   <div
-    className="wxc-activity"
+    className="wxc wxc-activity"
   >
     <div
-      className="wxc-activity-header"
+      className="wxc wxc-activity-header"
     >
       <div
-        className="wxc-avatar wxc-activity-header__avatar"
+        className="wxc wxc-avatar wxc-activity-header__avatar"
       >
         <div
           className="wxc-avatar__content"
@@ -1271,7 +1271,7 @@ Let me know if you need more help! Maybe we can talk about it during standup
 exports[`Storyshots Messaging/Webex Activity No Header 1`] = `
 Array [
   <div
-    className="wxc-activity"
+    className="wxc wxc-activity"
   >
     <div
       className="wxc-activity__content"

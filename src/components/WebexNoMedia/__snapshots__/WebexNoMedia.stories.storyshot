@@ -3,10 +3,10 @@
 exports[`Storyshots Meetings/Webex No Media Camera 1`] = `
 Array [
   <div
-    className="wxc-no-media"
+    className="wxc wxc-no-media"
   >
     <svg
-      className="wxc-icon wxc-camera-issue-icon wxc-no-media__icon-media-issue"
+      className="wxc-icon wxc wxc-camera-issue-icon wxc-no-media__icon-media-issue"
       height="88"
       style={Object {}}
       viewBox="0 0 96 88"
@@ -41,7 +41,7 @@ Array [
       </defs>
     </svg>
     <h5
-      className="wxc-title wxc-no-media__title wxc-title--subsection"
+      className="wxc wxc-title wxc-no-media__title wxc-title--subsection"
       style={Object {}}
     >
       Can't access camera
@@ -112,10 +112,10 @@ Array [
 exports[`Storyshots Meetings/Webex No Media Microphone 1`] = `
 Array [
   <div
-    className="wxc-no-media"
+    className="wxc wxc-no-media"
   >
     <svg
-      className="wxc-icon wxc-microphone-issue-icon wxc-no-media__icon-media-issue"
+      className="wxc-icon wxc wxc-microphone-issue-icon wxc-no-media__icon-media-issue"
       height="91"
       style={Object {}}
       viewBox="0 0 62 91"
@@ -150,7 +150,7 @@ Array [
       </defs>
     </svg>
     <h5
-      className="wxc-title wxc-no-media__title wxc-title--subsection"
+      className="wxc wxc-title wxc-no-media__title wxc-title--subsection"
       style={Object {}}
     >
       Can't access microphone

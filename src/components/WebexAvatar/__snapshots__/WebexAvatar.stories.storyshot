@@ -3,7 +3,7 @@
 exports[`Storyshots Platform/Webex Avatar Active 1`] = `
 Array [
   <div
-    className="wxc-avatar"
+    className="wxc wxc-avatar"
   >
     <div
       className="wxc-avatar__content"
@@ -70,7 +70,7 @@ Array [
 exports[`Storyshots Platform/Webex Avatar Bot 1`] = `
 Array [
   <div
-    className="wxc-avatar"
+    className="wxc wxc-avatar"
   >
     <div
       className="wxc-avatar__content"
@@ -131,7 +131,7 @@ Array [
 exports[`Storyshots Platform/Webex Avatar Call 1`] = `
 Array [
   <div
-    className="wxc-avatar"
+    className="wxc wxc-avatar"
   >
     <div
       className="wxc-avatar__content"
@@ -198,7 +198,7 @@ Array [
 exports[`Storyshots Platform/Webex Avatar Do Not Disturb 1`] = `
 Array [
   <div
-    className="wxc-avatar"
+    className="wxc wxc-avatar"
   >
     <div
       className="wxc-avatar__content"
@@ -267,7 +267,7 @@ Array [
 exports[`Storyshots Platform/Webex Avatar Inactive 1`] = `
 Array [
   <div
-    className="wxc-avatar"
+    className="wxc wxc-avatar"
   >
     <div
       className="wxc-avatar__content"
@@ -334,7 +334,7 @@ Array [
 exports[`Storyshots Platform/Webex Avatar Invalid 1`] = `
 Array [
   <div
-    className="wxc-avatar"
+    className="wxc wxc-avatar"
   >
     <div
       className="wxc-avatar__content"
@@ -378,7 +378,7 @@ Array [
 exports[`Storyshots Platform/Webex Avatar Meeting 1`] = `
 Array [
   <div
-    className="wxc-avatar"
+    className="wxc wxc-avatar"
   >
     <div
       className="wxc-avatar__content"
@@ -448,7 +448,7 @@ Array [
 exports[`Storyshots Platform/Webex Avatar No Status 1`] = `
 Array [
   <div
-    className="wxc-avatar"
+    className="wxc wxc-avatar"
   >
     <div
       className="wxc-avatar__content"
@@ -498,7 +498,7 @@ Array [
 exports[`Storyshots Platform/Webex Avatar Out Of Office 1`] = `
 Array [
   <div
-    className="wxc-avatar"
+    className="wxc wxc-avatar"
   >
     <div
       className="wxc-avatar__content"
@@ -565,7 +565,7 @@ Array [
 exports[`Storyshots Platform/Webex Avatar Presenting 1`] = `
 Array [
   <div
-    className="wxc-avatar"
+    className="wxc wxc-avatar"
   >
     <div
       className="wxc-avatar__content"
@@ -632,7 +632,7 @@ Array [
 exports[`Storyshots Platform/Webex Avatar Self 1`] = `
 Array [
   <div
-    className="wxc-avatar wxc-avatar--avatar-self"
+    className="wxc wxc-avatar wxc-avatar--avatar-self"
   >
     <div
       className="wxc-avatar__content"
@@ -677,13 +677,13 @@ Array [
 exports[`Storyshots Platform/Webex Avatar Typing 1`] = `
 Array [
   <div
-    className="wxc-avatar"
+    className="wxc wxc-avatar"
   >
     <div
       className="wxc-avatar__content"
     >
       <div
-        className="wxc-loader"
+        className="wxc wxc-loader"
       >
         <div
           className="wxc-loader__bullet"
@@ -734,7 +734,7 @@ Array [
 exports[`Storyshots Platform/Webex Avatar Without Image 1`] = `
 Array [
   <div
-    className="wxc-avatar"
+    className="wxc wxc-avatar"
   >
     <div
       className="wxc-avatar__content"

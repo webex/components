@@ -3,7 +3,7 @@
 exports[`Storyshots Meetings/Webex In-Meeting All Media 1`] = `
 Array [
   <div
-    className="wxc-in-meeting wxc-in-meeting--remote-sharing"
+    className="wxc wxc-in-meeting wxc-in-meeting--remote-sharing"
     style={
       Object {
         "height": "100%",
@@ -20,7 +20,7 @@ Array [
       }
     >
       <div
-        className="wxc-remote-media wxc-in-meeting__remote-media-in-meeting wxc-remote-media--remote-video-n-share"
+        className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting wxc-remote-media--remote-video-n-share"
       >
         <video
           autoPlay={true}
@@ -39,10 +39,10 @@ Array [
         />
       </div>
       <div
-        className="wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
+        className="wxc wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
       >
         <div
-          className="wxc-avatar"
+          className="wxc wxc-avatar"
         >
           <div
             className="wxc-avatar__content"
@@ -95,7 +95,7 @@ Array [
 exports[`Storyshots Meetings/Webex In-Meeting Audio Only 1`] = `
 Array [
   <div
-    className="wxc-in-meeting"
+    className="wxc wxc-in-meeting"
     style={
       Object {
         "height": "100%",
@@ -112,17 +112,17 @@ Array [
       }
     >
       <div
-        className="wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
+        className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
       >
         <audio
           autoPlay={true}
         />
       </div>
       <div
-        className="wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
+        className="wxc wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
       >
         <div
-          className="wxc-avatar"
+          className="wxc wxc-avatar"
         >
           <div
             className="wxc-avatar__content"
@@ -175,7 +175,7 @@ Array [
 exports[`Storyshots Meetings/Webex In-Meeting Connecting 1`] = `
 Array [
   <div
-    className="wxc-in-meeting"
+    className="wxc wxc-in-meeting"
     style={
       Object {
         "height": "100%",
@@ -192,18 +192,18 @@ Array [
       }
     >
       <div
-        className="wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
+        className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
       >
         <div
-          className="wxc-badge wxc-remote-media__connecting-badge"
+          className="wxc wxc-badge wxc-remote-media__connecting-badge"
           style={Object {}}
         >
           <div
-            className="wxc-spinner wxc-remote-media__connecting-spinner"
+            className="wxc wxc-spinner wxc-remote-media__connecting-spinner"
             style={
               Object {
-                "height": 14,
-                "width": 14,
+                "height": 16,
+                "width": 16,
               }
             }
           />
@@ -213,10 +213,10 @@ Array [
         </div>
       </div>
       <div
-        className="wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
+        className="wxc wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
       >
         <div
-          className="wxc-avatar"
+          className="wxc wxc-avatar"
         >
           <div
             className="wxc-avatar__content"
@@ -269,7 +269,7 @@ Array [
 exports[`Storyshots Meetings/Webex In-Meeting Local Share 1`] = `
 Array [
   <div
-    className="wxc-in-meeting"
+    className="wxc wxc-in-meeting"
     style={
       Object {
         "height": "100%",
@@ -286,7 +286,7 @@ Array [
       }
     >
       <div
-        className="wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
+        className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
       >
         <video
           autoPlay={true}
@@ -299,10 +299,10 @@ Array [
         />
       </div>
       <div
-        className="wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
+        className="wxc wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
       >
         <div
-          className="wxc-avatar"
+          className="wxc wxc-avatar"
         >
           <div
             className="wxc-avatar__content"
@@ -355,7 +355,7 @@ Array [
 exports[`Storyshots Meetings/Webex In-Meeting Remote Share 1`] = `
 Array [
   <div
-    className="wxc-in-meeting wxc-in-meeting--remote-sharing"
+    className="wxc wxc-in-meeting wxc-in-meeting--remote-sharing"
     style={
       Object {
         "height": "100%",
@@ -372,7 +372,7 @@ Array [
       }
     >
       <div
-        className="wxc-remote-media wxc-in-meeting__remote-media-in-meeting wxc-remote-media--remote-video-n-share"
+        className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting wxc-remote-media--remote-video-n-share"
       >
         <video
           autoPlay={true}
@@ -391,10 +391,10 @@ Array [
         />
       </div>
       <div
-        className="wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
+        className="wxc wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
       >
         <div
-          className="wxc-avatar"
+          className="wxc wxc-avatar"
         >
           <div
             className="wxc-avatar__content"
@@ -447,7 +447,7 @@ Array [
 exports[`Storyshots Meetings/Webex In-Meeting Video Only 1`] = `
 Array [
   <div
-    className="wxc-in-meeting"
+    className="wxc wxc-in-meeting"
     style={
       Object {
         "height": "100%",
@@ -464,7 +464,7 @@ Array [
       }
     >
       <div
-        className="wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
+        className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
       >
         <video
           autoPlay={true}
@@ -474,10 +474,10 @@ Array [
         />
       </div>
       <div
-        className="wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
+        className="wxc wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
       >
         <div
-          className="wxc-avatar"
+          className="wxc wxc-avatar"
         >
           <div
             className="wxc-avatar__content"
