@@ -8,7 +8,7 @@ Array [
     <button
       aria-label="Unmute"
       autoFocus={false}
-      className="wxc-button wxc-meeting-control__control-button wxc-button--default wxc-button--pressed"
+      className="wxc-button wxc-meeting-control__control-button wxc-button--default"
       disabled={false}
       onClick={[Function]}
       style={
@@ -258,7 +258,7 @@ Array [
     <button
       aria-label="Unmute"
       autoFocus={false}
-      className="wxc-button wxc-meeting-control__control-button wxc-button--default wxc-button--pressed"
+      className="wxc-button wxc-meeting-control__control-button wxc-button--default"
       disabled={false}
       onClick={[Function]}
       style={
@@ -322,7 +322,7 @@ Array [
     <button
       aria-label="Join meeting. Muted, video off"
       autoFocus={false}
-      className="wxc-button wxc-meeting-control__control-button wxc-button--join wxc-button--pressed"
+      className="wxc-button wxc-meeting-control__control-button wxc-button--join"
       disabled={false}
       onClick={[Function]}
       style={
