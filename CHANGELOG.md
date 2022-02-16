@@ -1,3 +1,10 @@
+## [1.248.2](https://github.com/webex/components/compare/v1.248.1...v1.248.2) (2022-02-16)
+
+
+### Bug Fixes
+
+* **themes:** change color variables for InputField ([8115c01](https://github.com/webex/components/commit/8115c017f1ac3caca52c360f69adb804764fa352))
+
 ## [1.248.1](https://github.com/webex/components/compare/v1.248.0...v1.248.1) (2022-02-15)
 
 
