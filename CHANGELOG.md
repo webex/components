@@ -1,3 +1,10 @@
+## [1.248.4](https://github.com/webex/components/compare/v1.248.3...v1.248.4) (2022-02-16)
+
+
+### Bug Fixes
+
+* **components:** reset some css properties for webex components ([744b6ea](https://github.com/webex/components/commit/744b6eabfc2cfec5c815e99f438b3dccc5bea8ed))
+
 ## [1.248.3](https://github.com/webex/components/compare/v1.248.2...v1.248.3) (2022-02-16)
 
 
