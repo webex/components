@@ -1,3 +1,10 @@
+## [1.248.3](https://github.com/webex/components/compare/v1.248.2...v1.248.3) (2022-02-16)
+
+
+### Bug Fixes
+
+* **themes:** add color-scheme property to change theme for native components ([958ee41](https://github.com/webex/components/commit/958ee4194d046b934d60467ebe1ced25f61ff0e6))
+
 ## [1.248.2](https://github.com/webex/components/compare/v1.248.1...v1.248.2) (2022-02-16)
 
 
