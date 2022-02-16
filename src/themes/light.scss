@@ -157,30 +157,30 @@
   --wxc-tab--hover--color: #{$wxc-black-alpha-95};
   --wxc-tab--hover--border: none;
 
-  --wxc-select--normal--background: #{$wxc-white-alpha-100};
-  --wxc-select--normal--color: #{$wxc-black-alpha-95};
-  --wxc-select--normal--box-shadow: none;
-  --wxc-select--normal--border: 1px solid #{$wxc-black-alpha-50};
+  --wxc-dropdown--normal--background: #{$wxc-white-alpha-100};
+  --wxc-dropdown--normal--color: #{$wxc-black-alpha-95};
+  --wxc-dropdown--normal--box-shadow: none;
+  --wxc-dropdown--normal--border: 1px solid #{$wxc-black-alpha-50};
 
-  --wxc-select--hover--background: #{$wxc-black-alpha-04};
-  --wxc-select--hover--color: #{$wxc-black-alpha-95};
-  --wxc-select--hover--box-shadow: none;
-  --wxc-select--hover--border: 1px solid #{$wxc-black-alpha-50};
+  --wxc-dropdown--hover--background: #{$wxc-black-alpha-04};
+  --wxc-dropdown--hover--color: #{$wxc-black-alpha-95};
+  --wxc-dropdown--hover--box-shadow: none;
+  --wxc-dropdown--hover--border: 1px solid #{$wxc-black-alpha-50};
 
-  --wxc-select--active--background: #{$wxc-black-alpha-11};
-  --wxc-select--active--color: #{$wxc-black-alpha-95};
-  --wxc-select--active--box-shadow: 0 0 0 2px #{$wxc-blue-60}, 0px 0px 0px 4px #{$wxc-blue-40};
-  --wxc-select--active--border: 1px solid #{$wxc-black-alpha-50};
+  --wxc-dropdown--active--background: #{$wxc-black-alpha-11};
+  --wxc-dropdown--active--color: #{$wxc-black-alpha-95};
+  --wxc-dropdown--active--box-shadow: 0 0 0 2px #{$wxc-blue-60}, 0px 0px 0px 4px #{$wxc-blue-40};
+  --wxc-dropdown--active--border: 1px solid #{$wxc-black-alpha-50};
 
-  --wxc-select--disabled--background: #{$wxc-black-alpha-11};
-  --wxc-select--disabled--color: #{$wxc-black-alpha-40};
-  --wxc-select--disabled--box-shadow: 0 0 0 2px #{$wxc-blue-60}, 0px 0px 0px 4px #{$wxc-blue-40};
-  --wxc-select--disabled--border: 1px solid #{$wxc-black-alpha-11};
+  --wxc-dropdown--disabled--background: #{$wxc-black-alpha-11};
+  --wxc-dropdown--disabled--color: #{$wxc-black-alpha-40};
+  --wxc-dropdown--disabled--box-shadow: 0 0 0 2px #{$wxc-blue-60}, 0px 0px 0px 4px #{$wxc-blue-40};
+  --wxc-dropdown--disabled--border: 1px solid #{$wxc-black-alpha-11};
 
-  --wxc-select--focus--background: #{$wxc-black-alpha-11};
-  --wxc-select--focus--color: #{$wxc-black-alpha-95};
-  --wxc-select--focus--box-shadow: 0 0 0 2px #{$wxc-blue-60}, 0px 0px 0px 4px #{$wxc-blue-40};
-  --wxc-select--focus--border: 1px solid #{$wxc-black-alpha-90};
+  --wxc-dropdown--focus--background: #{$wxc-black-alpha-11};
+  --wxc-dropdown--focus--color: #{$wxc-black-alpha-95};
+  --wxc-dropdown--focus--box-shadow: 0 0 0 2px #{$wxc-blue-60}, 0px 0px 0px 4px #{$wxc-blue-40};
+  --wxc-dropdown--focus--border: 1px solid #{$wxc-black-alpha-90};
 
   --wxc-input-field--normal--background: #{$wxc-white-alpha-100};
   --wxc-input-field--normal--color: #{$wxc-black-alpha-95};

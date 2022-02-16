@@ -6,6 +6,5 @@ export {default as InputField} from './InputField/InputField';
 export {default as Modal} from './Modal/Modal';
 export {default as Option} from './OptionsList/Option';
 export {default as OptionsList} from './OptionsList/OptionsList';
-export {default as Select} from './Select/Select';
 export {default as Spinner} from './Spinner/Spinner';
 export {default as Title} from './Title/Title';

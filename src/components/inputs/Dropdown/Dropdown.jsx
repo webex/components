@@ -1,14 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 
-import Icon from '../Icon/Icon';
-import OptionsList from '../OptionsList/OptionsList';
+import Icon from '../../generic/Icon/Icon';
+import OptionsList from '../../generic/OptionsList/OptionsList';
 import webexComponentClasses from '../../helpers';
 import {useRef} from '../../hooks';
-import Label from '../../inputs/Label/Label';
+import Label from '../Label/Label';
 
 /**
- * Select Component
+ * Dropdown Component
  *
  * @param {object} props  Data passed to the component
  * @param {string} [props.ariaLabel]  String that labels the current element
@@ -26,7 +26,7 @@ import Label from '../../inputs/Label/Label';
  * @param {string} [props.value]  Selected option
  * @returns {object}  JSX of the element
  */
-export default function Select({
+export default function Dropdown({
   ariaLabel,
   className,
   disabled,
@@ -42,7 +42,7 @@ export default function Select({
   value,
 }) {
   const [expanded, setExpanded] = useState(undefined);
-  const [cssClasses, sc] = webexComponentClasses('select', className, {disabled});
+  const [cssClasses, sc] = webexComponentClasses('dropdown', className, {disabled});
   const label = options?.find((option) => option.value === value)?.label;
   const ref = useRef();
 
@@ -120,7 +120,7 @@ export default function Select({
   );
 }
 
-Select.propTypes = {
+Dropdown.propTypes = {
   ariaLabel: PropTypes.string,
   className: PropTypes.string,
   disabled: PropTypes.bool,
@@ -139,7 +139,7 @@ Select.propTypes = {
   value: PropTypes.string,
 };
 
-Select.defaultProps = {
+Dropdown.defaultProps = {
   ariaLabel: undefined,
   className: undefined,
   disabled: false,

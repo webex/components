@@ -27,25 +27,25 @@ Array [
         className="wxc-label__control"
       >
         <label
-          className="wxc wxc-label wxc wxc-select"
+          className="wxc wxc-label wxc wxc-dropdown"
         >
           <div
             className="wxc-label__control"
           >
             <div
-              className="wxc-select__control"
+              className="wxc-dropdown__control"
               disabled={false}
             >
               <div
                 aria-label="undefined"
-                className="wxc-select__selected-option "
+                className="wxc-dropdown__selected-option "
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="button"
                 tabIndex={0}
               >
                 <span
-                  className="wxc-select__label"
+                  className="wxc-dropdown__label"
                 >
                   Please make a selection
                 </span>
@@ -93,25 +93,25 @@ Array [
         className="wxc-label__control"
       >
         <label
-          className="wxc wxc-label wxc wxc-select"
+          className="wxc wxc-label wxc wxc-dropdown"
         >
           <div
             className="wxc-label__control"
           >
             <div
-              className="wxc-select__control"
+              className="wxc-dropdown__control"
               disabled={false}
             >
               <div
                 aria-label="Option 1. undefined"
-                className="wxc-select__selected-option "
+                className="wxc-dropdown__selected-option "
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="button"
                 tabIndex={0}
               >
                 <span
-                  className="wxc-select__label"
+                  className="wxc-dropdown__label"
                 >
                   Option 1
                 </span>

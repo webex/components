@@ -6,7 +6,7 @@ import webexComponentClasses from '../helpers';
 import {useMeetingControl} from '../hooks';
 import Button from '../generic/Button/Button';
 import Icon from '../generic/Icon/Icon';
-import Select from '../generic/Select/Select';
+import Dropdown from '../inputs/Dropdown/Dropdown';
 
 const controlTypeToButtonType = {
   JOIN: 'join',
@@ -95,7 +95,7 @@ function renderDropdown(sc, action, display, style, tabIndex) {
   } = display;
 
   return (
-    <Select
+    <Dropdown
       className={sc('control-select')}
       style={style}
       value={selected || ''}
