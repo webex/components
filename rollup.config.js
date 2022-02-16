@@ -14,6 +14,8 @@ const UMDModulePath = `dist/umd/${moduleName}`;
 
 const plugins = [
   nodeResolve({
+    browser: true,
+    preferBuiltins: false,
     extensions: [
       '.mjs',
       '.js',
