@@ -1,3 +1,10 @@
+# [1.249.0](https://github.com/webex/components/compare/v1.248.4...v1.249.0) (2022-02-16)
+
+
+### Features
+
+* **AdaptiveCard:** display fallback text if the version of the adaptive card is not supported ([dc7e135](https://github.com/webex/components/commit/dc7e135f930b9d9203db577b79ea17e92b04f955))
+
 ## [1.248.4](https://github.com/webex/components/compare/v1.248.3...v1.248.4) (2022-02-16)
 
 
