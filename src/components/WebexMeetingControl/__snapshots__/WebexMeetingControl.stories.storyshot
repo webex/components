@@ -187,18 +187,18 @@ Array [
     className="wxc wxc-meeting-control"
   >
     <label
-      className="wxc wxc-label wxc wxc-select wxc-meeting-control__control-select wxc-select--disabled"
+      className="wxc wxc-label wxc wxc-dropdown wxc-meeting-control__control-select wxc-dropdown--disabled"
     >
       <div
         className="wxc-label__control"
       >
         <div
-          className="wxc-select__control"
+          className="wxc-dropdown__control"
           disabled={true}
         >
           <div
             aria-label="No available cameras. Use arrow keys to navigate between camera options and hit \\"Enter\\" to select."
-            className="wxc-select__selected-option "
+            className="wxc-dropdown__selected-option "
             onClick={[Function]}
             onKeyDown={[Function]}
             role="button"
@@ -206,7 +206,7 @@ Array [
             title="Video Devices"
           >
             <span
-              className="wxc-select__label"
+              className="wxc-dropdown__label"
             >
               No available cameras
             </span>

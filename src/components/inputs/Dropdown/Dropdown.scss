@@ -1,0 +1,78 @@
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-dropdown;
+
+.#{$C} {
+  &__control {
+    position: relative;
+  }
+
+  .#{$C}__selected-option {
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    padding: 0.375rem 0.75rem;
+
+    &.#{$C}__expanded {
+      background: var(--wxc-dropdown--active--background);
+      color: var(--wxc-dropdown--active--color);
+    }
+
+    .#{$C}__label {
+      flex: 1;
+      display: block;
+      margin-right: 0.25rem;
+      font-size: 1rem;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  .#{$C}__options-list {
+    position: absolute;
+    z-index: 1;
+    min-width: 100%;
+    top: calc(100% + 0.25rem);
+    left: 0;
+  }
+
+
+  &:not(.#{$C}--disabled) {
+    .#{$C}__selected-option {
+      background: var(--wxc-dropdown--normal--background);
+      border: var(--wxc-dropdown--normal--border);
+      box-shadow: var(--wxc-dropdown--normal--box-shadow);
+      color: var(--wxc-dropdown--normal--color);
+      cursor: pointer;
+
+      &:hover {
+        background: var(--wxc-dropdown--hover--background);
+        border: var(--wxc-dropdown--hover--border);
+        box-shadow: var(--wxc-dropdown--hover--box-shadow);
+        color: var(--wxc-dropdown--hover--color);
+      }
+
+      &:active {
+        background: var(--wxc-dropdown--active--background);
+        border: var(--wxc-dropdown--active--border);
+        box-shadow: var(--wxc-dropdown--active--box-shadow);
+        color: var(--wxc-dropdown--active--color);
+      }
+
+      &:focus {
+        background: var(--wxc-dropdown--focus--background);
+        border: var(--wxc-dropdown--focus--border);
+        box-shadow: var(--wxc-dropdown--focus--box-shadow);
+        color: var(--wxc-dropdown--focus--color);
+      }
+    }
+  }
+
+  &--disabled {
+    .#{$C}__selected-option {
+      background: var(--wxc-dropdown--disabled--background);
+      border: var(--wxc-dropdown--disabled--border);
+      color: var(--wxc-dropdown--disabled--color);
+      cursor: default;
+    }
+  }
+}

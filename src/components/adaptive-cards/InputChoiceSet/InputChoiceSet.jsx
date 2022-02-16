@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 import {acPropTypes, registerComponent} from '../Component/Component';
 import AdaptiveCardContext from '../context/adaptive-card-context';
-import {Select} from '../../generic';
+import {Dropdown} from '../../inputs';
 import Checkbox from '../../inputs/Checkbox/Checkbox';
 import Label from '../../inputs/Label/Label';
 import RadioButton from '../../inputs/RadioButton/RadioButton';
@@ -50,7 +50,7 @@ export default function InputChoiceSet({
     ));
   } else if (String(data.style).toLowerCase() === 'compact') {
     input = (
-      <Select
+      <Dropdown
         onChange={(option) => onSingleChange(option)}
         options={data.choices.map((choice) => ({label: choice.title, value: choice.value}))}
         placeholder={data.placeholder}
