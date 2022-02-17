@@ -30,7 +30,7 @@ Array [
       onSubmit={[Function]}
     >
       <label
-        className="wxc wxc-label wxc wxc-input-field wxc-meeting-host-authentication__input"
+        className="wxc wxc-label wxc wxc-input-field wxc wxc-password-input wxc-meeting-host-authentication__input wxc-input-field--has-right-icon"
       >
         <div
           className="wxc-label__label-text"
@@ -55,7 +55,6 @@ Array [
               type="password"
               value=""
             />
-            
           </div>
         </div>
         
