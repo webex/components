@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 import AdaptiveCardContext from '../context/adaptive-card-context';
 import {acPropTypes, registerComponent} from '../Component/Component';
-import InputField from '../../generic/InputField/InputField';
 import {formatDateTime} from '../util';
+import NumberInput from '../../inputs/NumberInput/NumberInput';
 
 /**
  * Adaptive Cards Input.Number component
@@ -45,18 +45,17 @@ export default function InputNumber({data, className, style}) {
   ]);
 
   return (
-    <InputField
+    <NumberInput
       className={cssClasses}
-      style={style}
-      type="number"
+      error={getError(data.id)}
+      label={formatDateTime(data.label)}
       max={data.max}
       min={data.min}
-      placeholder={data.placeholder}
-      value={getValue(data.id)}
-      error={getError(data.id)}
-      required={data.isRequired}
-      label={formatDateTime(data.label)}
       onChange={(value) => setValue(data.id, value)}
+      placeholder={data.placeholder}
+      required={data.isRequired}
+      style={style}
+      value={getValue(data.id)}
     />
   );
 }

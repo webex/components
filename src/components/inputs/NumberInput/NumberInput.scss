@@ -1,0 +1,48 @@
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-number-input;
+
+.#{$C} {
+  .#{$C}__controls {
+    height: 100%;
+    width: 1.9375rem;
+    display: flex;
+    flex-direction: column;
+    border-left: var(--wxc-input-field--normal--border);
+    right: 0.0625rem;
+  }
+
+  .#{$C}__increment-button {
+    border: var(--wxc-input-field--normal--border);
+    border-radius: 0 0.5rem 0 0;
+    border-left-color: transparent;
+    position: relative;
+    left: -1px;
+  }
+
+  .#{$C}__decrement-button {
+    border: var(--wxc-input-field--normal--border);
+    border-radius: 0 0 0.5rem 0;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    position: relative;
+    left: -1px;
+  }
+
+  .#{$C}__increment-button,
+  .#{$C}__decrement-button {
+    flex-basis: 50%;
+
+    &:active {
+      background: var(--wxc-input-field--active--background);
+      border: var(--wxc-input-field--active--border);
+      color: var(--wxc-input-field--active--color);
+      box-shadow: var(--wxc-input-field--active--box-shadow);
+    }
+
+    &:disabled {
+      background: var(--wxc-input-field--disabled--background);
+      border: var(--wxc-input-field--disabled--border);
+      color: var(--wxc-input-field--disabled--color);
+      box-shadow: var(--wxc-input-field--disabled--box-shadow);
+    }
+  }
+}

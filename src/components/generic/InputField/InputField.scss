@@ -7,6 +7,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field;
 
   .#{$C}__form-control {
     position: relative;
+    display: flex;
   }
 
   .#{$C}__input {
@@ -17,18 +18,17 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field;
     border: var(--wxc-input-field--normal--border);
     color: var(--wxc-input-field--normal--color);
     border-radius: 0.5rem;
-    padding: 0.1875rem 0.75rem 0.1875rem 0.75rem;
+    padding: 0.313rem 0.75rem 0.063rem 0.75rem;
     width: 100%;
 
     &[type="number"] {
-      padding: 0.25rem 3.85rem 0.125rem 0.75rem;
       -moz-appearance: textfield;
 
       &::-webkit-inner-spin-button,
       &::-webkit-outer-spin-button {
         -moz-appearance: none;
         -webkit-appearance: none;
-        appearance:none;
+        appearance: none;
         margin: 0;
       }
 
@@ -36,7 +36,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field;
       &:hover::-webkit-outer-spin-button {
         -moz-appearance: none;
         -webkit-appearance: none;
-        appearance:none;
+        appearance: none;
         margin: 0;
       }
     }
@@ -110,43 +110,10 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field;
     }
   }
 
-  .#{$C}__input-controls {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    border-left: var(--wxc-input-field--normal--border);
-    right: 0.0625rem;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 2rem;
-    height: calc(100% - 0.125rem);
-
-  }
-
-  .#{$C}__input-increment-button {
-    border-radius: 0 0.5rem 0 0;
-  }
-
-  .#{$C}__input-decrement-button {
-    border-radius: 0 0 0.5rem 0;
-  }
-
-  .#{$C}__input-increment-button,
-  .#{$C}__input-decrement-button {
-    flex-basis: 50%;
-
-    &:active {
-      background: var(--wxc-input-field--active--background);
-      border: var(--wxc-input-field--active--border);
-      color: var(--wxc-input-field--active--color);
-      box-shadow: var(--wxc-input-field--active--box-shadow);
-    }
-
-    &:disabled {
-      background: var(--wxc-input-field--disabled--background);
-      border: var(--wxc-input-field--disabled--border);
-      color: var(--wxc-input-field--disabled--color);
-      box-shadow: var(--wxc-input-field--disabled--box-shadow);
+  &--has-right-controls {
+    .#{$C}__input{
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
     }
   }
 }
