@@ -178,7 +178,7 @@ const exampleInputNumber = {
       type: 'Input.Number',
       id: 'number',
       placeholder: 'Enter a number',
-      label: 'Test',
+      label: 'Enter a number between 1 and 10',
       min: 1,
       max: 10,
       value: 3,
