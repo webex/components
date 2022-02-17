@@ -1,3 +1,10 @@
+# [1.250.0](https://github.com/webex/components/compare/v1.249.0...v1.250.0) (2022-02-17)
+
+
+### Features
+
+* **Dropdown:** [BREAKING CHANGE] rename Select component and move it in 'inputs' folder ([13d46f2](https://github.com/webex/components/commit/13d46f2e7f508b260f63e75bcce29e767566f7ca))
+
 # [1.249.0](https://github.com/webex/components/compare/v1.248.4...v1.249.0) (2022-02-16)
 
 
