@@ -1,6 +1,6 @@
 {
   "name": "@webex/components",
-  "version": "1.250.0",
+  "version": "1.250.1",
   "browser": "dist/umd/webex-components.umd.min.js",
   "unpkg": "dist/umd/webex-components.umd.min.js",
   "module": "dist/es/webex-components.es.min.js",

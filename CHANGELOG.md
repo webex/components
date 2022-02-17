@@ -1,3 +1,10 @@
+## [1.250.1](https://github.com/webex/components/compare/v1.250.0...v1.250.1) (2022-02-17)
+
+
+### Bug Fixes
+
+* **AdaptiveCard:** validate time around midnight ([548d79d](https://github.com/webex/components/commit/548d79d79dd87e3f7dfba2f8343a0fc6bca40ab1))
+
 # [1.250.0](https://github.com/webex/components/compare/v1.249.0...v1.250.0) (2022-02-17)
 
 
