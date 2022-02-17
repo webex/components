@@ -976,7 +976,7 @@ Array [
       }
     />
     <label
-      className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--password wxc-input-field--has-right-icon"
+      className="wxc wxc-label wxc wxc-input-field wxc wxc-password-input wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--password wxc-input-field--has-right-icon"
       style={Object {}}
     >
       <div
@@ -1000,7 +1000,6 @@ Array [
             type="password"
             value=""
           />
-          
         </div>
       </div>
     </label>

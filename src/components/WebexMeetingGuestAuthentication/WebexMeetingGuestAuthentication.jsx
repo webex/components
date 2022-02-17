@@ -1,8 +1,8 @@
 import React, {useState, useContext} from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../helpers';
-import {Button, InputField} from '../generic';
-import TextInput from '../inputs/TextInput/TextInput';
+import {Button} from '../generic';
+import {PasswordInput, TextInput} from '../inputs';
 import {PHONE_LARGE} from '../breakpoints';
 import {useElementDimensions, useMeeting, useRef} from '../hooks';
 import {AdapterContext} from '../hooks/contexts';
@@ -101,7 +101,7 @@ export default function WebexMeetingGuestAuthentication({
           tabIndex={101}
           value={name}
         />
-        <InputField
+        <PasswordInput
           className={sc('input')}
           type="password"
           name="password"

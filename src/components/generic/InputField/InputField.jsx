@@ -1,15 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 import {useRef, useAutoFocus} from '../../hooks';
-import Button from '../Button/Button';
-import Icon from '../Icon/Icon';
 import Label from '../../inputs/Label/Label';
-
-const HINTS = {
-  hiddenPasswordButton: 'Show password',
-  showedPasswordButton: 'Hide password',
-};
 
 /**
  * Generic input field component for building more specific components (text, date, number, etc.).
@@ -65,13 +58,8 @@ export default function InputField({
     'has-right-icon': rightIcon !== undefined,
     'has-right-controls': rightControls,
   });
-  const [isPwdRevealed, setIsPwdRevealed] = useState(false);
   const inputRef = useRef();
   const handleChange = (event) => onChange(event.target.value);
-
-  const toggleIsPwdRevealed = () => {
-    setIsPwdRevealed((revealed) => !revealed);
-  };
 
   useAutoFocus(inputRef, autoFocus);
 
@@ -101,21 +89,9 @@ export default function InputField({
           ref={inputRef}
           required={required}
           tabIndex={tabIndex}
-          type={isPwdRevealed ? 'text' : type}
+          type={type}
           value={value}
         />
-        {type === 'password' && value && (
-          <Button
-            type="ghost"
-            className={sc('right-icon')}
-            size={28}
-            onClick={toggleIsPwdRevealed}
-            tabIndex={tabIndex}
-            ariaLabel={isPwdRevealed ? HINTS.showedPasswordButton : HINTS.hiddenPasswordButton}
-          >
-            <Icon name={isPwdRevealed ? 'hide-password' : 'show-password'} />
-          </Button>
-        )}
         {!!rightIcon && (
           <span className={sc('right-icon')}>
             {rightIcon}

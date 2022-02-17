@@ -1,7 +1,8 @@
 import React, {useContext, useState} from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../helpers';
-import {Button, InputField} from '../generic';
+import {Button} from '../generic';
+import {PasswordInput} from '../inputs';
 import {PHONE_LARGE} from '../breakpoints';
 import {useElementDimensions, useMeeting, useRef} from '../hooks';
 import {AdapterContext} from '../hooks/contexts';
@@ -58,7 +59,7 @@ export default function WebexMeetingHostAuthentication({
       </div>
       <form className={sc('form-content')} onSubmit={(e) => { e.preventDefault(); }}>
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-        <InputField
+        <PasswordInput
           className={sc('input')}
           type="password"
           name="password"
