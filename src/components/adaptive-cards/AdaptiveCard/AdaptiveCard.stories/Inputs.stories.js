@@ -288,6 +288,13 @@ const exampleInputTime = {
       isRequired: true,
       errorMessage: 'This input is required',
     },
+    {
+      type: 'Input.Time',
+      id: 'timeValueMidnight',
+      label: 'Night time',
+      min: '23:00',
+      max: '02:00',
+    },
   ],
   actions: [
     {
