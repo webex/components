@@ -248,9 +248,8 @@ describe('Activities JSON Adapter', () => {
             type: 'ColumnSet',
             columns: [
               {
-                type: 'Input.Text',
+                type: 'Input.Date',
                 id: 'arrivalDate',
-                style: 'text',
                 height: 'auto',
                 isRequired: true,
                 errorMessage: 'Arrival Date is required',
@@ -268,9 +267,8 @@ describe('Activities JSON Adapter', () => {
             ],
           },
           {
-            type: 'Input.Text',
+            type: 'Input.Date',
             id: 'departureDate',
-            style: 'text',
             height: 'auto',
             isRequired: true,
             errorMessage: 'This is a required input',

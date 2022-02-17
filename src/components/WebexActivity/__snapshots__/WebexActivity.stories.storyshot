@@ -419,7 +419,7 @@ Array [
             }
           />
           <label
-            className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--text wxc-ac-height--auto wxc-input-field--has-right-icon"
+            className="wxc wxc-label wxc wxc-input-field wxc wxc-date-input wxc wxc-adaptive-cards-input-date wxc wxc-ac wxc-ac-is-visible--true wxc-ac-height--auto"
             style={Object {}}
           >
             <div
@@ -445,7 +445,7 @@ Array [
                   onChange={[Function]}
                   required={true}
                   tabIndex={0}
-                  type="text"
+                  type="date"
                   value=""
                 />
               </div>
@@ -502,7 +502,7 @@ Array [
           }
         />
         <label
-          className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--text wxc-ac-height--auto wxc-input-field--has-right-icon"
+          className="wxc wxc-label wxc wxc-input-field wxc wxc-date-input wxc wxc-adaptive-cards-input-date wxc wxc-ac wxc-ac-is-visible--true wxc-ac-height--auto"
           style={Object {}}
         >
           <div
@@ -528,7 +528,7 @@ Array [
                 onChange={[Function]}
                 required={true}
                 tabIndex={0}
-                type="text"
+                type="date"
                 value=""
               />
             </div>
