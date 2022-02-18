@@ -195,6 +195,7 @@ Array [
         <div
           className="wxc-dropdown__control"
           disabled={true}
+          onKeyDown={[Function]}
         >
           <div
             aria-label="No available cameras. Use arrow keys to navigate between camera options and hit \\"Enter\\" to select."

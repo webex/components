@@ -264,6 +264,7 @@ Array [
                 <div
                   className="wxc-dropdown__control"
                   disabled={false}
+                  onKeyDown={[Function]}
                 >
                   <div
                     aria-label="undefined"

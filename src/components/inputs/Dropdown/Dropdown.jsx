@@ -61,7 +61,15 @@ export default function Dropdown({
   };
 
   const handleKeyDown = (event) => {
-    if ((event.key === 'Enter' || event.key === ' ') && event.target === event.currentTarget) {
+    if (event.key === 'Escape' || event.key === 'Esc') {
+      event.stopPropagation();
+      collapse();
+    }
+  };
+
+  const handleSelectedOptionKeyDown = (event) => {
+    if ((event.key === 'Enter' || event.key === ' ')) {
+      event.preventDefault(); // prevent page scrolling
       expand(true);
     } else if (event.key === 'Tab') {
       collapse();
@@ -90,15 +98,17 @@ export default function Dropdown({
       label={controlLabel}
       required={required}
     >
-      <div className={sc('control')} disabled={disabled}>
+      {/* This element handles delegated keyboard events from its descendants (Esc key) */}
+      {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
+      <div className={sc('control')} disabled={disabled} onKeyDown={handleKeyDown}>
         <div
           className={`${sc('selected-option')} ${expanded ? sc('expanded') : ''}`}
           onClick={() => toggleExpanded(false)}
           role="button"
           tabIndex={disabled ? -1 : tabIndex}
           title={tooltip}
+          onKeyDown={handleSelectedOptionKeyDown}
           aria-label={`${label ? `${label}. ` : ''}${ariaLabel}`}
-          onKeyDown={handleKeyDown}
           ref={ref}
         >
           <span className={sc('label')}>{options === null ? 'Loading...' : (label || value || placeholder)}</span>
