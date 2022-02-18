@@ -1,3 +1,10 @@
+# [1.251.0](https://github.com/webex/components/compare/v1.250.1...v1.251.0) (2022-02-18)
+
+
+### Features
+
+* **inputs:** create TextInput component ([6955c5c](https://github.com/webex/components/commit/6955c5cf436e04a3ef35583694d16df33d942d62))
+
 ## [1.250.1](https://github.com/webex/components/compare/v1.250.0...v1.250.1) (2022-02-17)
 
 
