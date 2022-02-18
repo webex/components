@@ -1,3 +1,10 @@
+# [1.253.0](https://github.com/webex/components/compare/v1.252.0...v1.253.0) (2022-02-18)
+
+
+### Features
+
+* **inputs:** create PasswordInput component ([c2e2bdf](https://github.com/webex/components/commit/c2e2bdf9541ce9d2178a984a080b9b08f458a811))
+
 # [1.252.0](https://github.com/webex/components/compare/v1.251.0...v1.252.0) (2022-02-18)
 
 
