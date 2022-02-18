@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {format} from 'date-fns';
 import Spinner from '../generic/Spinner/Spinner';
+import {Title} from '../generic';
 
 import webexComponentClasses from '../helpers';
 import {TABLET, DESKTOP} from '../breakpoints';
@@ -57,7 +58,7 @@ export default function WebexMeetingInfo({className, meetingID, style}) {
 
     infoComponent = (
       <>
-        <h2 className={sc('title')}>{displayTitle}</h2>
+        <Title type="subsection" className={sc('title')}>{displayTitle}</Title>
         {
           startTime
           && endTime

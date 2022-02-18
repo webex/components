@@ -19,7 +19,6 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-member;
   }
 
   .#{$C}__name {
-    @include body-fonts;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

@@ -11,9 +11,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-member-roster;
 
 
   .#{$C}__section-title {
-    @include body-fonts;
     color: var(--wxc-secondary-text-color);
-    font-family: $brand-font-regular;
     font-size: 0.875rem;
     line-height: 1.375rem;
     margin: 0;
@@ -25,7 +23,6 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-member-roster;
     color: var(--wxc-warning-color);
     display: flex;
     align-items: flex-start;
-    font-family: $brand-font-regular;
     font-size: 0.875rem;
     line-height: 1.375rem;
     margin-top: 0.75rem;
@@ -46,8 +43,6 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-member-roster;
 
     .#{$C}__title {
       font-family: $brand-font-bold;
-      font-size: 1rem;
-      line-height: 1.5rem;
       margin: 0;
       flex: 1;
     }

@@ -5,11 +5,12 @@ Array [
   <div
     className="wxc wxc-meeting-info"
   >
-    <h2
-      className="wxc-meeting-info__title"
+    <h5
+      className="wxc wxc-title wxc-meeting-info__title wxc-title--subsection"
+      style={Object {}}
     >
       Barbara German
-    </h2>
+    </h5>
   </div>,
   <video
     autoPlay={true}
@@ -39,11 +40,12 @@ Array [
   <div
     className="wxc wxc-meeting-info"
   >
-    <h2
-      className="wxc-meeting-info__title"
+    <h5
+      className="wxc wxc-title wxc-meeting-info__title wxc-title--subsection"
+      style={Object {}}
     >
       No Meeting Information
-    </h2>
+    </h5>
   </div>,
   <video
     autoPlay={true}
@@ -111,11 +113,12 @@ Array [
   <div
     className="wxc wxc-meeting-info"
   >
-    <h2
-      className="wxc-meeting-info__title"
+    <h5
+      className="wxc wxc-title wxc-meeting-info__title wxc-title--subsection"
+      style={Object {}}
     >
       In meeting
-    </h2>
+    </h5>
   </div>,
   <video
     autoPlay={true}

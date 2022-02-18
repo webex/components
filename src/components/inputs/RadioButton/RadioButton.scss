@@ -6,7 +6,6 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-radio-button;
 
   &__title {
     color: var(--wxc-input--title--normal);
-    @include body-fonts;
     margin-left: 0.5rem;
   }
 

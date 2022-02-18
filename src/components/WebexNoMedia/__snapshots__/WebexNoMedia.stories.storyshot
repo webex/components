@@ -41,7 +41,7 @@ Array [
       </defs>
     </svg>
     <h5
-      className="wxc wxc-title wxc-no-media__title wxc-title--subsection"
+      className="wxc wxc-title wxc-no-media__title wxc-title--section"
       style={Object {}}
     >
       Can't access camera
@@ -150,7 +150,7 @@ Array [
       </defs>
     </svg>
     <h5
-      className="wxc wxc-title wxc-no-media__title wxc-title--subsection"
+      className="wxc wxc-title wxc-no-media__title wxc-title--section"
       style={Object {}}
     >
       Can't access microphone

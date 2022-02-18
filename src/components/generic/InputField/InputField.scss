@@ -11,9 +11,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field;
   }
 
   .#{$C}__input {
-    font-family: #{$brand-font-regular};
-    font-size: 1rem;
-    line-height: 1.5rem;
+    @include body-font;
     background: var(--wxc-input-field--normal--background);
     border: var(--wxc-input-field--normal--border);
     color: var(--wxc-input-field--normal--color);

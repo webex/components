@@ -13,15 +13,8 @@ $shadow-color: rgba(0, 0, 0, 0.2);
   cursor: auto;
 }
 
-@mixin header-fonts {
-  font-family: $brand-font-extra-light;
-  font-size: 1.625rem;
-  line-height: 2rem;
-  letter-spacing: 0.0125rem;
-}
-
-@mixin body-fonts {
-  font-family: $brand-font-light;
+@mixin body-font {
+  font-family: $brand-font-regular;
   font-size: 1rem;
   line-height: 1.5rem;
   letter-spacing: 0.01875rem;

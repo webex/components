@@ -62,7 +62,7 @@ export default function WebexNoMedia({className, style, media}) {
   return (
     <div className={cssClasses} style={style}>
       <Icon className={sc('icon-media-issue')} name={screen.icon} />
-      <Title type="subsection" className={sc('title')}>{screen.title}</Title>
+      <Title type="section" className={sc('title')}>{screen.title}</Title>
       <div className={sc('body')}>
         {screen.message}
       </div>
