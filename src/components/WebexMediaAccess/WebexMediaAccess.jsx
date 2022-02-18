@@ -1,7 +1,7 @@
 import React, {JSX, useContext} from 'react';
 import PropTypes from 'prop-types';
 import Icon from '../generic/Icon/Icon';
-import {Button} from '../generic';
+import {Button, Title} from '../generic';
 import webexComponentClasses from '../helpers';
 import {useMeeting} from '../hooks';
 import {AdapterContext} from '../hooks/contexts';
@@ -57,7 +57,7 @@ export default function WebexMediaAccess({
     <div className={cssClasses} style={style}>
       {logo && <div className={sc('logo-container')}>{logo}</div>}
       <Icon name={screen.icon} size={48} ariaLabel={screen.iconLabel} />
-      <h2 className={sc('title')}>{screen.title}</h2>
+      <Title type="subsection" className={sc('title')}>{screen.title}</Title>
       <p className={sc('body')}>
         Select
         {' '}

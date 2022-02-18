@@ -27,6 +27,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-host-authentication;
   }
 
   .#{$C}__title {
+    font-family: $brand-font-medium;
     font-size: 1.25rem;
     line-height: 1.875rem;
     max-width: 100%;

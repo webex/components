@@ -9,12 +9,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-greeting;
   text-align: center;
   color: var(--wxc-text-color);
 
-  .#{$C}__header {
-    @include header-fonts;
-  }
-
   .#{$C}__description {
-    @include body-fonts;
     padding: 0 3.125rem;
   }
 }

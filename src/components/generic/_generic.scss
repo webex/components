@@ -9,19 +9,3 @@
 @import 'Spinner/Spinner';
 @import 'Title/Title';
 @import 'Tooltip/Tooltip';
-
-html, body {
-  height: 100%;
-}
-
-body {
-  @include body-fonts;
-  position: relative;
-  padding: 0;
-  margin: 0;
-  cursor: auto;
-}
-
-img {
-  width: 100%;
-}

@@ -7,7 +7,6 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-media-access;
   justify-content: center;
   background: var(--wxc-primary-background);
   color: var(--wxc-text-color);
-  font-family: $brand-font-regular;
 
   .#{$C}__logo-container {
     position: absolute;
@@ -15,10 +14,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-media-access;
     left: 0;
   }
   .#{$C}__title {
-    margin-top: 0.688rem;
-    font-size: 1rem;
-    font-weight: normal;
-    font-family: #{$brand-font-medium};
+    margin-top: 0.5rem;
   }
 
   .#{$C}__body {

@@ -6,10 +6,8 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-info;
   justify-content: center;
   flex-direction: column;
   color: var(--wxc-text-color);
-  font-family: $brand-font-regular;
 
   .#{$C}__title {
-    font-size: 1rem;
     text-align: center;
     margin: 0;
   }

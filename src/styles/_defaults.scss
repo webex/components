@@ -1,0 +1,16 @@
+.wxc {
+  @include body-font;
+}
+
+.wxc, .wxc * {
+  box-sizing: border-box;
+
+  ::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--wxc-scrollbar--background);
+    border-radius: 0.125rem;
+  }
+}

@@ -3,7 +3,6 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-control;
 .#{$C} {
   display: inline-block;
   color: var(--wxc-text-color);
-  font-family: $brand-font-regular;
 
   &--as-item {
     display: flex;
@@ -17,7 +16,6 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-control;
     .#{$C}__item-button-text {
       flex: 1;
       margin-left: 0.75rem;
-      font-size: 1rem;
       line-height: 150%;
     }
   }

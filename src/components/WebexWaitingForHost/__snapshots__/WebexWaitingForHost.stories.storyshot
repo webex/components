@@ -14,11 +14,12 @@ Array [
     <div
       className="wxc wxc-meeting-info wxc-waiting-for-host__info"
     >
-      <h2
-        className="wxc-meeting-info__title"
+      <h5
+        className="wxc wxc-title wxc-meeting-info__title wxc-title--subsection"
+        style={Object {}}
       >
         Waiting for host
-      </h2>
+      </h5>
     </div>
     <div
       className="wxc-waiting-for-host__content"
