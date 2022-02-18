@@ -1,3 +1,15 @@
+# [1.252.0](https://github.com/webex/components/compare/v1.251.0...v1.252.0) (2022-02-18)
+
+
+### Bug Fixes
+
+* **InputField:** eliminate extra outline for input field ([51e111a](https://github.com/webex/components/commit/51e111a5492f7494b339522af49ca055cdc77146))
+
+
+### Features
+
+* **inputs:** create NumberInput component ([578c095](https://github.com/webex/components/commit/578c095e2928647cb6133073953b82160845c62d))
+
 # [1.251.0](https://github.com/webex/components/compare/v1.250.1...v1.251.0) (2022-02-18)
 
 
