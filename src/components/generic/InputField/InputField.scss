@@ -56,6 +56,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field;
       border: var(--wxc-input-field--focus--border);
       color: var(--wxc-input-field--focus--color);
       box-shadow: var(--wxc-input-field--focus--box-shadow);
+      outline: none;
     }
 
     &:disabled {
@@ -88,6 +89,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field;
         background: var(--wxc-input-field--focus--background);
         border: var(--wxc-error-input-field--normal--border);
         box-shadow: none;
+        outline: none;
       }
     }
   }
