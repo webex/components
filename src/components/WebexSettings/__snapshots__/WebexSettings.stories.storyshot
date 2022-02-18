@@ -72,6 +72,7 @@ Array [
                 <div
                   className="wxc-dropdown__control"
                   disabled={false}
+                  onKeyDown={[Function]}
                 >
                   <div
                     aria-label="Browser Default. Use arrow keys to navigate between speaker options and hit \\"Enter\\" to select."
@@ -122,6 +123,7 @@ Array [
                 <div
                   className="wxc-dropdown__control"
                   disabled={true}
+                  onKeyDown={[Function]}
                 >
                   <div
                     aria-label="No available microphones. Use arrow keys to navigate between microphone options and hit \\"Enter\\" to select."

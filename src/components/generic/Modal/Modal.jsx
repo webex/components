@@ -34,7 +34,7 @@ export default function Modal({
     'centered-modal': width > TABLET,
   });
 
-  const handleKeyUp = (event) => {
+  const handleKeyDown = (event) => {
     if (event.key === 'Escape' || event.key === 'Esc') {
       onClose();
     }
@@ -42,7 +42,7 @@ export default function Modal({
 
   return (
     // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
-    <div ref={ref} className={cssClasses} onKeyUp={handleKeyUp} role="dialog" aria-label={ariaLabel || title}>
+    <div ref={ref} className={cssClasses} onKeyDown={handleKeyDown} role="dialog" aria-label={ariaLabel || title}>
       <div className={`${sc('content')} ${otherClassName}`}>
         <div className={sc('header')}>
           {onBack && (
