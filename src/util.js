@@ -130,6 +130,19 @@ export function mapValues(object, mapper) {
   )));
 }
 
+let lastId = 0;
+
+/**
+ * Generates a unique id to be used in DOM by the components
+ *
+ * @returns {string} Returns an unique id
+ */
+export function uniqueId() {
+  lastId += 1;
+
+  return `wxc-${lastId}`;
+}
+
 export default {
   deepMerge,
   chainWith,
@@ -138,4 +151,5 @@ export default {
   range,
   pad2Zeros,
   mapValues,
+  uniqueId,
 };

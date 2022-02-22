@@ -51,7 +51,6 @@ export default function Option({
 
   return (
     <li
-      aria-label={typeof option.label !== 'object' ? option.label : option.value}
       aria-selected={selected === option.value}
       className={cssClasses}
       key={option.value}

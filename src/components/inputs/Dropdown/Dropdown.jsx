@@ -6,6 +6,7 @@ import {useElementPosition, useRef} from '../../hooks';
 import Icon from '../../generic/Icon/Icon';
 import OptionsList from '../../generic/OptionsList/OptionsList';
 import Label from '../Label/Label';
+import {uniqueId} from '../../../util';
 
 /**
  * Dropdown Component
@@ -48,6 +49,8 @@ export default function Dropdown({
   const controlRef = useRef();
   const selectedOptionRef = useRef();
   const position = useElementPosition(controlRef);
+  const labelId = uniqueId();
+  const optionsId = uniqueId();
 
   const collapse = () => setExpanded(undefined);
   const expand = (withKey) => setExpanded({withKey});
@@ -126,6 +129,7 @@ export default function Dropdown({
       className={cssClasses}
       style={style}
       error={error}
+      labelId={labelId}
       label={controlLabel}
       required={required}
     >
@@ -133,13 +137,17 @@ export default function Dropdown({
       {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
       <div className={sc('control')} ref={controlRef} disabled={disabled} onKeyDown={handleKeyDown}>
         <div
+          aria-controls={optionsId}
+          aria-expanded={expanded}
+          aria-haspopup="listbox"
+          aria-label={ariaLabel}
+          aria-labelledby={labelId}
           className={`${sc('selected-option')} ${expanded ? sc('expanded') : ''}`}
           onClick={() => toggleExpanded(false)}
-          role="button"
+          role="combobox"
           tabIndex={disabled ? -1 : tabIndex}
           title={tooltip}
           onKeyDown={handleSelectedOptionKeyDown}
-          aria-label={`${label ? `${label}. ` : ''}${ariaLabel}`}
           ref={selectedOptionRef}
         >
           <span className={sc('label')}>{options === null ? 'Loading...' : (label || value || placeholder)}</span>
@@ -155,6 +163,8 @@ export default function Dropdown({
             style={layout}
             tabIndex={tabIndex}
             onBlur={collapse}
+            id={optionsId}
+            labelId={labelId}
           />
         )}
       </div>
