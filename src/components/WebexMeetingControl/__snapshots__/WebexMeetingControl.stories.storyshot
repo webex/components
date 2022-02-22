@@ -188,6 +188,7 @@ Array [
   >
     <label
       className="wxc wxc-label wxc wxc-dropdown wxc-meeting-control__control-select wxc-dropdown--disabled"
+      id="wxc-0"
     >
       <div
         className="wxc-label__control"
@@ -198,11 +199,14 @@ Array [
           onKeyDown={[Function]}
         >
           <div
-            aria-label="No available cameras. Use arrow keys to navigate between camera options and hit \\"Enter\\" to select."
+            aria-controls="wxc-0"
+            aria-haspopup="listbox"
+            aria-label="Use arrow keys to navigate between camera options and hit \\"Enter\\" to select."
+            aria-labelledby="wxc-0"
             className="wxc-dropdown__selected-option "
             onClick={[Function]}
             onKeyDown={[Function]}
-            role="button"
+            role="combobox"
             tabIndex={-1}
             title="Video Devices"
           >

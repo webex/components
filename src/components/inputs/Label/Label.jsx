@@ -11,6 +11,7 @@ import Icon from '../../generic/Icon/Icon';
  * @param {object} [props.style]  Custom style to apply
  * @param {React.ReactNode[]}  props.children  List of children
  * @param {string} [props.label]  Label text
+ * @param {string} [props.labelId]  Label id
  * @param {string} [props.error]  Error text
  * @param {boolean} [props.required=false]  Flag indicating whether the control is required
  * @returns {object} JSX of the component
@@ -20,6 +21,7 @@ export default function Label({
   style,
   children,
   label,
+  labelId,
   error,
   required,
 }) {
@@ -28,7 +30,7 @@ export default function Label({
   return (
     // disabling label-has-associated-control as eslint does not see role attribute as a nested control
     // eslint-disable-next-line jsx-a11y/label-has-associated-control
-    <label className={cssClasses} style={style}>
+    <label className={cssClasses} style={style} id={labelId}>
       {
         label && (
           <div className={sc('label-text')}>
@@ -56,6 +58,7 @@ Label.propTypes = {
   style: PropTypes.shape(),
   children: PropTypes.node.isRequired,
   label: PropTypes.string,
+  labelId: PropTypes.string,
   error: PropTypes.string,
   required: PropTypes.bool,
 };
@@ -64,6 +67,7 @@ Label.defaultProps = {
   className: undefined,
   style: undefined,
   label: undefined,
+  labelId: undefined,
   error: undefined,
   required: false,
 };

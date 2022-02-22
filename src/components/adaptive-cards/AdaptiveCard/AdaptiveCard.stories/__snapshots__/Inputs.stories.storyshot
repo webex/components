@@ -28,6 +28,7 @@ Array [
       >
         <label
           className="wxc wxc-label wxc wxc-dropdown"
+          id="wxc-0"
         >
           <div
             className="wxc-label__control"
@@ -38,11 +39,13 @@ Array [
               onKeyDown={[Function]}
             >
               <div
-                aria-label="undefined"
+                aria-controls="wxc-0"
+                aria-haspopup="listbox"
+                aria-labelledby="wxc-0"
                 className="wxc-dropdown__selected-option "
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                role="button"
+                role="combobox"
                 tabIndex={0}
               >
                 <span
@@ -95,6 +98,7 @@ Array [
       >
         <label
           className="wxc wxc-label wxc wxc-dropdown"
+          id="wxc-0"
         >
           <div
             className="wxc-label__control"
@@ -105,11 +109,13 @@ Array [
               onKeyDown={[Function]}
             >
               <div
-                aria-label="Option 1. undefined"
+                aria-controls="wxc-0"
+                aria-haspopup="listbox"
+                aria-labelledby="wxc-0"
                 className="wxc-dropdown__selected-option "
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                role="button"
+                role="combobox"
                 tabIndex={0}
               >
                 <span

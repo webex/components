@@ -65,6 +65,7 @@ Array [
           >
             <label
               className="wxc wxc-label wxc wxc-dropdown wxc-meeting-control__control-select"
+              id="wxc-0"
             >
               <div
                 className="wxc-label__control"
@@ -75,11 +76,14 @@ Array [
                   onKeyDown={[Function]}
                 >
                   <div
-                    aria-label="Browser Default. Use arrow keys to navigate between speaker options and hit \\"Enter\\" to select."
+                    aria-controls="wxc-0"
+                    aria-haspopup="listbox"
+                    aria-label="Use arrow keys to navigate between speaker options and hit \\"Enter\\" to select."
+                    aria-labelledby="wxc-0"
                     className="wxc-dropdown__selected-option "
                     onClick={[Function]}
                     onKeyDown={[Function]}
-                    role="button"
+                    role="combobox"
                     tabIndex={102}
                     title="The current browser does not support changing speakers"
                   >
@@ -116,6 +120,7 @@ Array [
           >
             <label
               className="wxc wxc-label wxc wxc-dropdown wxc-meeting-control__control-select wxc-dropdown--disabled"
+              id="wxc-0"
             >
               <div
                 className="wxc-label__control"
@@ -126,11 +131,14 @@ Array [
                   onKeyDown={[Function]}
                 >
                   <div
-                    aria-label="No available microphones. Use arrow keys to navigate between microphone options and hit \\"Enter\\" to select."
+                    aria-controls="wxc-0"
+                    aria-haspopup="listbox"
+                    aria-label="Use arrow keys to navigate between microphone options and hit \\"Enter\\" to select."
+                    aria-labelledby="wxc-0"
                     className="wxc-dropdown__selected-option "
                     onClick={[Function]}
                     onKeyDown={[Function]}
-                    role="button"
+                    role="combobox"
                     tabIndex={-1}
                     title="Microphone Devices"
                   >

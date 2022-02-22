@@ -17,6 +17,11 @@ jest.mock('react-dom', () => {
   };
 });
 
+jest.mock('./util', () => ({
+  ...jest.requireActual('./util'),
+  uniqueId: () => 'wxc-0',
+}));
+
 /**
  * Returns a mock DOM ref object for use of snapshot tests.
  *

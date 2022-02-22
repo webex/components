@@ -9,6 +9,8 @@ import Option from './Option';
  *
  * @param {object} props  Data passed to the component
  * @param {string} props.className  Custom CSS class to apply
+ * @param {string} [props.id]  Options list id
+ * @param {string} [props.labelId]  Label id
  * @param {Function} props.onBlur  Called when this component loses focus
  * @param {Function} props.onSelect  A function which will be triggered on option selection
  * @param {object[]} props.options  Array of options
@@ -20,6 +22,8 @@ import Option from './Option';
  */
 export default function OptionsList({
   className,
+  id,
+  labelId,
   onBlur,
   onSelect,
   options,
@@ -38,7 +42,14 @@ export default function OptionsList({
 
   return (
     <div style={style} className={cssClasses}>
-      <ul role="menu" className={sc('list')} tabIndex={tabIndex} onKeyDown={onKeyDown}>
+      <ul
+        aria-labelledby={labelId}
+        className={sc('list')}
+        id={id}
+        onKeyDown={onKeyDown}
+        role="listbox"
+        tabIndex={tabIndex}
+      >
         {options.map((option, index) => (
           <Option
             key={option.value}
@@ -56,6 +67,8 @@ export default function OptionsList({
 
 OptionsList.propTypes = {
   className: PropTypes.string,
+  id: PropTypes.string,
+  labelId: PropTypes.string,
   onBlur: PropTypes.func,
   onSelect: PropTypes.func.isRequired,
   options: PropTypes.arrayOf(PropTypes.shape({
@@ -71,6 +84,8 @@ OptionsList.propTypes = {
 
 OptionsList.defaultProps = {
   className: '',
+  id: undefined,
+  labelId: undefined,
   onBlur: undefined,
   options: [],
   selected: '',
