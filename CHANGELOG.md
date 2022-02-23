@@ -1,3 +1,11 @@
+## [1.253.3](https://github.com/webex/components/compare/v1.253.2...v1.253.3) (2022-02-23)
+
+
+### Bug Fixes
+
+* **components:** fix and standardize typography ([eb73d21](https://github.com/webex/components/commit/eb73d21fe30ac67450ac29bfda08269a116a7cf5))
+* **Dropdown:** keep options inside the viewport and hide them on outside scroll ([34b3eda](https://github.com/webex/components/commit/34b3eda12cc881177cb8ea73cc9804a55401d095))
+
 ## [1.253.2](https://github.com/webex/components/compare/v1.253.1...v1.253.2) (2022-02-23)
 
 
