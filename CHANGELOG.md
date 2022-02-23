@@ -1,3 +1,10 @@
+## [1.253.4](https://github.com/webex/components/compare/v1.253.3...v1.253.4) (2022-02-23)
+
+
+### Bug Fixes
+
+* **components:** prevent vertical shrinking ([ff521c5](https://github.com/webex/components/commit/ff521c5a71d4241c348146393082e11520e48689))
+
 ## [1.253.3](https://github.com/webex/components/compare/v1.253.2...v1.253.3) (2022-02-23)
 
 
