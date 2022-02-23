@@ -1,3 +1,10 @@
+## [1.253.1](https://github.com/webex/components/compare/v1.253.0...v1.253.1) (2022-02-23)
+
+
+### Bug Fixes
+
+* **themes:** change some color variables for dropdown ([6f38f63](https://github.com/webex/components/commit/6f38f63086bda78d03df575c0d7e9839da340c2d))
+
 # [1.253.0](https://github.com/webex/components/compare/v1.252.0...v1.253.0) (2022-02-18)
 
 
