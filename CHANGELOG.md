@@ -1,3 +1,10 @@
+## [1.253.2](https://github.com/webex/components/compare/v1.253.1...v1.253.2) (2022-02-23)
+
+
+### Bug Fixes
+
+* **Dropdown:**  collapse dropdown when pressing esc key on the keyboard ([9983999](https://github.com/webex/components/commit/998399957da0dddcdd24dd7bf2f220b858d163af))
+
 ## [1.253.1](https://github.com/webex/components/compare/v1.253.0...v1.253.1) (2022-02-23)
 
 
