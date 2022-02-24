@@ -1,3 +1,10 @@
+## [1.253.5](https://github.com/webex/components/compare/v1.253.4...v1.253.5) (2022-02-24)
+
+
+### Bug Fixes
+
+* **Dropdown:** improve accessibility for the dropdown component ([71c56e9](https://github.com/webex/components/commit/71c56e98ab4540da444c5f3e325e2be390f804fe))
+
 ## [1.253.4](https://github.com/webex/components/compare/v1.253.3...v1.253.4) (2022-02-23)
 
 
