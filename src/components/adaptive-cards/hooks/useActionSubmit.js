@@ -28,7 +28,7 @@ export default function useActionSubmit(data) {
 
   let handleAction;
 
-  if (data?.type === 'Action.Submit') {
+  if (data?.type === 'Action.Submit' || data?.type === 'Action.Execute') {
     handleAction = () => {
       if (data.associatedInputs?.toLowerCase() !== 'none') {
         if (validate()) {

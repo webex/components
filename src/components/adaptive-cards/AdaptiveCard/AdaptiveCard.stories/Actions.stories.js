@@ -14,6 +14,38 @@ const Template = (args) => (
   />
 );
 
+const exampleActionExecute = {
+  $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
+  type: 'AdaptiveCard',
+  version: '1.4',
+  body: [
+    {
+      type: 'TextBlock',
+      text: 'Present a form and submit it back to the originator',
+    },
+    {
+      type: 'Input.Text',
+      id: 'firstName',
+      label: 'What is your first name?',
+    },
+    {
+      type: 'Input.Text',
+      id: 'lastName',
+      label: 'What is your last name?',
+    },
+  ],
+  actions: [
+    {
+      type: 'Action.Execute',
+      title: 'Action.Execute',
+      verb: 'doStuff',
+      data: {
+        x: 13,
+      },
+    },
+  ],
+};
+
 const exampleActionOpenUrl = {
   $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
   type: 'AdaptiveCard',
@@ -241,6 +273,11 @@ const exampleActionToggleVisibility = {
       ],
     },
   ],
+};
+
+export const ActionExecute = Template.bind({});
+ActionExecute.args = {
+  template: exampleActionExecute,
 };
 
 export const ActionOpenURL = Template.bind({});

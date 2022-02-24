@@ -58,3 +58,4 @@ ActionSubmit.acDefaultProps = {
 };
 
 registerComponent('Action.Submit', ActionSubmit);
+registerComponent('Action.Execute', ActionSubmit);// make Action.Execute an alias of Action.Submit
