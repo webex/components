@@ -1,5 +1,172 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Messaging/AdaptiveCard/Actions Action Execute 1`] = `
+Array [
+  <div
+    className="wxc wxc-adaptive-card wxc wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
+    style={Object {}}
+  >
+    <div
+      className="wxc wxc-markdown"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+    />
+    <div
+      className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      style={
+        Object {
+          "style": undefined,
+        }
+      }
+    />
+    <div
+      className="wxc wxc-adaptive-cards-text-block wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true"
+      style={
+        Object {
+          "WebkitLineClamp": undefined,
+        }
+      }
+    >
+      <div
+        className="wxc wxc-markdown"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Present a form and submit it back to the originator",
+          }
+        }
+      />
+    </div>
+    <div
+      className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      style={
+        Object {
+          "style": undefined,
+        }
+      }
+    />
+    <label
+      className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-input-field--has-right-icon"
+      style={Object {}}
+    >
+      <div
+        className="wxc-label__label-text"
+      >
+        What is your first name?
+      </div>
+      <div
+        className="wxc-label__control"
+      >
+        <div
+          className="wxc-input-field__form-control"
+        >
+          <input
+            autoFocus={false}
+            className="wxc-input-field__input"
+            disabled={false}
+            onChange={[Function]}
+            required={false}
+            tabIndex={0}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </label>
+    <div
+      className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      style={
+        Object {
+          "style": undefined,
+        }
+      }
+    />
+    <label
+      className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-input-field--has-right-icon"
+      style={Object {}}
+    >
+      <div
+        className="wxc-label__label-text"
+      >
+        What is your last name?
+      </div>
+      <div
+        className="wxc-label__control"
+      >
+        <div
+          className="wxc-input-field__form-control"
+        >
+          <input
+            autoFocus={false}
+            className="wxc-input-field__input"
+            disabled={false}
+            onChange={[Function]}
+            required={false}
+            tabIndex={0}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </label>
+    <div
+      className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      style={
+        Object {
+          "style": undefined,
+        }
+      }
+    />
+    <div
+      className="wxc wxc-adaptive-cards-action-set wxc wxc-ac wxc-ac-is-visible--true wxc-ac-container--horizontal"
+      style={Object {}}
+    >
+      <button
+        autoFocus={false}
+        className="wxc wxc-button wxc wxc-ac-action wxc wxc-ac-action-submit wxc wxc-ac wxc-ac-action-style--default wxc-button--primary"
+        disabled={false}
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 32,
+          }
+        }
+        tabIndex={0}
+        type="button"
+      >
+        <span>
+          Action.Execute
+        </span>
+      </button>
+      
+    </div>
+    <div />
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
 exports[`Storyshots Messaging/AdaptiveCard/Actions Action Open URL 1`] = `
 Array [
   <div
