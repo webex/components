@@ -185,30 +185,50 @@
   --wxc-input-field--normal--background: #{$wxc-white-alpha-100};
   --wxc-input-field--normal--color: #{$wxc-black-alpha-95};
   --wxc-input-field--normal--border: 1px solid #{$wxc-black-alpha-50};
-  --wxc-input-field--normal--box-shadow: 0 0 0 0.25rem #{$wxc-blue-60-alpha-30}, 0 0 0 0.125rem #{$wxc-blue-60};
+  --wxc-input-field--normal--box-shadow: none;
+  --wxc-input-field--normal--outline: none;
 
   --wxc-input-field--hover--background: #{$wxc-black-alpha-04};
   --wxc-input-field--hover--color: #{$wxc-black-alpha-95};
   --wxc-input-field--hover--border: 1px solid #{$wxc-black-alpha-50};
-  --wxc-input-field--hover--box-shadow: 0 0 0 0.25rem #{$wxc-blue-60-alpha-30}, 0 0 0 0.125rem #{$wxc-blue-60};
+  --wxc-input-field--hover--box-shadow: none;
+  --wxc-input-field--hover--outline: none;
 
   --wxc-input-field--active--background: #{$wxc-black-alpha-11};
   --wxc-input-field--active--color: #{$wxc-black-alpha-95};
   --wxc-input-field--active--border: 1px solid #{$wxc-black-alpha-90};
   --wxc-input-field--active--box-shadow: 0 0 0 0.25rem #{$wxc-blue-60-alpha-30}, 0 0 0 0.125rem #{$wxc-blue-60};
+  --wxc-input-field--active--outline: none;
 
   --wxc-input-field--focus--background: #{$wxc-black-alpha-11};
   --wxc-input-field--focus--color: #{$wxc-black-alpha-95};
   --wxc-input-field--focus--border: 1px solid #{$wxc-black-alpha-90};
   --wxc-input-field--focus--box-shadow: 0 0 0 0.25rem #{$wxc-blue-60-alpha-30}, 0 0 0 0.125rem #{$wxc-blue-60};
+  --wxc-input-field--focus--outline: none;
 
   --wxc-input-field--disabled--background: #{$wxc-black-alpha-11};
   --wxc-input-field--disabled--color: #{$wxc-black-alpha-40};
   --wxc-input-field--disabled--border: 1px solid transparent;
-  --wxc-input-field--disabled--box-shadow: 0 0 0 0.25rem #{$wxc-blue-60-alpha-30}, 0 0 0 0.125rem #{$wxc-blue-60};
+  --wxc-input-field--disabled--box-shadow: none;
+  --wxc-input-field--disabled--outline: none;
 
-  --wxc-error-input-field--normal--background: #{$wxc-red-10};
-  --wxc-error-input-field--normal--border: 1px solid #{$wxc-red-70};
+  --wxc-input-field--error-static--background: #{$wxc-red-10};
+  --wxc-input-field--error-static--color: #{$wxc-black-alpha-95};
+  --wxc-input-field--error-static--border: 1px solid #{$wxc-red-70};
+  --wxc-input-field--error-static--box-shadow: none;
+  --wxc-input-field--error-static--outline: none;
+
+  --wxc-input-field--error-hover--background: #{$wxc-black-alpha-04};
+  --wxc-input-field--error-hover--color: #{$wxc-black-alpha-95};
+  --wxc-input-field--error-hover--border: 1px solid #{$wxc-red-70};
+  --wxc-input-field--error-hover--box-shadow: none;
+  --wxc-input-field--error-hover--outline: none;
+
+  --wxc-input-field--error-focus--background: #{$wxc-black-alpha-11};
+  --wxc-input-field--error-focus--color: #{$wxc-black-alpha-95};
+  --wxc-input-field--error-focus--border: 1px solid #{$wxc-red-70};
+  --wxc-input-field--error-focus--box-shadow: none;
+  --wxc-input-field--error-focus--outline: none;
 
   --wxc-input-icon-color: #{$wxc-black-alpha-60};
 

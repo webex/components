@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import webexComponentClasses from '../../helpers';
 import {useRef, useAutoFocus} from '../../hooks';
 import Label from '../../inputs/Label/Label';
@@ -77,7 +78,7 @@ export default function InputField({
           // disabling no-autofocus because otherwise this element cannot be autofocused depending on the autoFocus prop
           // eslint-disable-next-line jsx-a11y/no-autofocus
           autoFocus={autoFocus}
-          className={sc('input')}
+          className={classNames(sc('input'), {[sc('error')]: error})}
           disabled={disabled}
           max={max}
           maxLength={maxLength}
