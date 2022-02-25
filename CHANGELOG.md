@@ -1,3 +1,10 @@
+# [1.254.0](https://github.com/webex/components/compare/v1.253.5...v1.254.0) (2022-02-25)
+
+
+### Features
+
+* **AdaptiveCardsActionExecute:** make Action.Execute an alias of Action.Submit ([f1c9eaa](https://github.com/webex/components/commit/f1c9eaa9b0d4ebc731ebbc158fd711ab971fdb92))
+
 ## [1.253.5](https://github.com/webex/components/compare/v1.253.4...v1.253.5) (2022-02-24)
 
 
