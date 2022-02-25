@@ -39,55 +39,97 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field;
       }
     }
 
-    &:hover {
+    @mixin disabled {
+      background: var(--wxc-input-field--disabled--background);
+      border: var(--wxc-input-field--disabled--border);
+      color: var(--wxc-input-field--disabled--color);
+      box-shadow: var(--wxc-input-field--disabled--box-shadow);
+      outline: var(--wxc-input-field--disabled--outline);
+    }
+
+    @mixin static {
+      background: var(--wxc-input-field--normal--background);
+      border: var(--wxc-input-field--normal--border);
+      color: var(--wxc-input-field--normal--color);
+      box-shadow: (--wxc-input-field--normal--box-shadow);
+      outline: var(--wxc-input-field--normal--outline);
+    }
+
+    @mixin hover {
       background: var(--wxc-input-field--hover--background);
+      border: var(--wxc-input-field--hover--border);
+      color: var(--wxc-input-field--hover--color);
+      box-shadow: var(--wxc-input-field--hover--box-shadow);
+      outline: var(--wxc-input-field--hover--outline);
     }
 
-    &:active {
-      background: var(--wxc-input-field--active--background);
-      border: var(--wxc-input-field--active--border);
-      box-shadow: var(--wxc-input-field--active--box-shadow);
-    }
-
-    &:focus {
+    @mixin focus {
       background: var(--wxc-input-field--focus--background);
       border: var(--wxc-input-field--focus--border);
       color: var(--wxc-input-field--focus--color);
       box-shadow: var(--wxc-input-field--focus--box-shadow);
-      outline: none;
+      outline: var(--wxc-input-field--focus--outline);
+    }
+
+    @mixin error-static {
+      background: var(--wxc-input-field--error-static--background);
+      border: var(--wxc-input-field--error-static--border);
+      color: var(--wxc-input-field--error-static--color);
+      box-shadow: var(--wxc-input-field--error-static--box-shadow);
+      outline: var(--wxc-input-field--error-static--outline);
+    }
+
+    @mixin error-hover {
+      background: var(--wxc-input-field--error-hover--background);
+      border: var(--wxc-input-field--error-hover--border);
+      color: var(--wxc-input-field--error-hover--color);
+      box-shadow: var(--wxc-input-field--error-hover--box-shadow);
+      outline: var(--wxc-input-field--error-hover--outline);
+    }
+
+    @mixin error-focus {
+      background: var(--wxc-input-field--error-focus--background);
+      border: var(--wxc-input-field--error-focus--border);
+      color: var(--wxc-input-field--error-focus--color);
+      box-shadow: var(--wxc-input-field--error-focus--box-shadow);
+      outline: var(--wxc-input-field--error-focus--outline);
     }
 
     &:disabled {
-      background: var(--wxc-input-field--disabled--background);
-      border: var(--wxc-input-field--disabled--border);
-      color: var(--wxc-input-field--disabled--color);
+      @include disabled;
     }
-  }
 
-  &--error {
-    .#{$C}__input {
-      background: var(--wxc-error-input-field--normal--background);
-      border: var(--wxc-error-input-field--normal--border);
-      box-shadow: none;
-      color: var(--wxc-text-color);
+    &:not(:disabled) {
+      &:not(&.#{$C}__error) {
+        &:not(:focus) {
+          &:not(:hover) {
+            @include static;
+          }
 
-      &:hover {
-        background: var(--wxc-input-field--hover--background);
-        border: var(--wxc-error-input-field--normal--border);
-        box-shadow: none;
+          &:hover {
+            @include hover;
+          }
+        }
+
+        &:focus {
+          @include focus;
+        }
       }
 
-      &:active {
-        background: var(--wxc-input-field--active--background);
-        border: var(--wxc-error-input-field--normal--border);
-        box-shadow: none;
-      }
+      &.#{$C}__error {
+        &:not(:focus) {
+          &:not(:hover) {
+            @include error-static;
+          }
 
-      &:focus {
-        background: var(--wxc-input-field--focus--background);
-        border: var(--wxc-error-input-field--normal--border);
-        box-shadow: none;
-        outline: none;
+          &:hover {
+            @include error-hover;
+          }
+        }
+
+        &:focus {
+          @include error-focus;
+        }
       }
     }
   }
