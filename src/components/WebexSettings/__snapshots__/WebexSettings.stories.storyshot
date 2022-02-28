@@ -63,9 +63,8 @@ Array [
           <div
             className="wxc wxc-meeting-control"
           >
-            <label
+            <div
               className="wxc wxc-label wxc wxc-dropdown wxc-meeting-control__control-select"
-              id="wxc-0"
             >
               <div
                 className="wxc-label__control"
@@ -76,11 +75,12 @@ Array [
                   onKeyDown={[Function]}
                 >
                   <div
-                    aria-controls="wxc-0"
+                    aria-controls="wxc-0-options"
                     aria-haspopup="listbox"
                     aria-label="Use arrow keys to navigate between speaker options and hit \\"Enter\\" to select."
-                    aria-labelledby="wxc-0"
+                    aria-labelledby="wxc-0-label"
                     className="wxc-dropdown__selected-option "
+                    id="wxc-0-control"
                     onClick={[Function]}
                     onKeyDown={[Function]}
                     role="combobox"
@@ -107,7 +107,7 @@ Array [
                   </div>
                 </div>
               </div>
-            </label>
+            </div>
           </div>
           <h5
             className="wxc wxc-title wxc-title--subsection"
@@ -118,9 +118,8 @@ Array [
           <div
             className="wxc wxc-meeting-control"
           >
-            <label
+            <div
               className="wxc wxc-label wxc wxc-dropdown wxc-meeting-control__control-select wxc-dropdown--disabled"
-              id="wxc-0"
             >
               <div
                 className="wxc-label__control"
@@ -131,11 +130,12 @@ Array [
                   onKeyDown={[Function]}
                 >
                   <div
-                    aria-controls="wxc-0"
+                    aria-controls="wxc-0-options"
                     aria-haspopup="listbox"
                     aria-label="Use arrow keys to navigate between microphone options and hit \\"Enter\\" to select."
-                    aria-labelledby="wxc-0"
+                    aria-labelledby="wxc-0-label"
                     className="wxc-dropdown__selected-option "
+                    id="wxc-0-control"
                     onClick={[Function]}
                     onKeyDown={[Function]}
                     role="combobox"
@@ -162,7 +162,7 @@ Array [
                   </div>
                 </div>
               </div>
-            </label>
+            </div>
           </div>
         </div>
       </div>

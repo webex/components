@@ -14,63 +14,58 @@ Array [
         }
       }
     />
-    <label
-      className="wxc wxc-label wxc wxc-adaptive-cards-input-choice-set wxc wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
-      style={Object {}}
+    <div
+      className="wxc wxc-label wxc wxc-dropdown wxc wxc-adaptive-cards-input-choice-set wxc wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
     >
-      <div
+      <label
         className="wxc-label__label-text"
+        htmlFor="wxc-0-control"
+        id="wxc-0-label"
       >
-        Default Input.ChoiceSet label (compact)
-      </div>
+        <span>
+          Default Input.ChoiceSet label (compact)
+        </span>
+      </label>
       <div
         className="wxc-label__control"
       >
-        <label
-          className="wxc wxc-label wxc wxc-dropdown"
-          id="wxc-0"
+        <div
+          className="wxc-dropdown__control"
+          disabled={false}
+          onKeyDown={[Function]}
         >
           <div
-            className="wxc-label__control"
+            aria-controls="wxc-0-options"
+            aria-haspopup="listbox"
+            aria-labelledby="wxc-0-label"
+            className="wxc-dropdown__selected-option "
+            id="wxc-0-control"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="combobox"
+            tabIndex={0}
           >
-            <div
-              className="wxc-dropdown__control"
-              disabled={false}
-              onKeyDown={[Function]}
+            <span
+              className="wxc-dropdown__label"
             >
-              <div
-                aria-controls="wxc-0"
-                aria-haspopup="listbox"
-                aria-labelledby="wxc-0"
-                className="wxc-dropdown__selected-option "
-                onClick={[Function]}
-                onKeyDown={[Function]}
-                role="combobox"
-                tabIndex={0}
-              >
-                <span
-                  className="wxc-dropdown__label"
-                >
-                  Please make a selection
-                </span>
-                <svg
-                  className="wxc-icon "
-                  height={13}
-                  style={Object {}}
-                  viewBox="0 0 26 14"
-                  width={13}
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M25.7075 0.293202C25.52 0.105701 25.2656 0.000366211 25.0004 0.000366211C24.7353 0.000366211 24.4809 0.105701 24.2934 0.293202L13 11.5862L1.70699 0.293202C1.51851 0.110381 1.26568 0.00902984 1.0031 0.0110359C0.740528 0.013042 0.489278 0.118244 0.303611 0.303925C0.117943 0.489605 0.0127584 0.740862 0.0107709 1.00344C0.00878336 1.26601 0.110153 1.51883 0.292988 1.7073L12.293 13.7073C12.4805 13.8948 12.7348 14.0001 13 14.0001C13.2652 14.0001 13.5195 13.8948 13.707 13.7073L25.707 1.7073C25.8946 1.51984 26 1.26555 26.0001 1.00036C26.0002 0.735168 25.8949 0.4808 25.7075 0.293202Z"
-                  />
-                </svg>
-              </div>
-            </div>
+              Please make a selection
+            </span>
+            <svg
+              className="wxc-icon "
+              height={13}
+              style={Object {}}
+              viewBox="0 0 26 14"
+              width={13}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M25.7075 0.293202C25.52 0.105701 25.2656 0.000366211 25.0004 0.000366211C24.7353 0.000366211 24.4809 0.105701 24.2934 0.293202L13 11.5862L1.70699 0.293202C1.51851 0.110381 1.26568 0.00902984 1.0031 0.0110359C0.740528 0.013042 0.489278 0.118244 0.303611 0.303925C0.117943 0.489605 0.0127584 0.740862 0.0107709 1.00344C0.00878336 1.26601 0.110153 1.51883 0.292988 1.7073L12.293 13.7073C12.4805 13.8948 12.7348 14.0001 13 14.0001C13.2652 14.0001 13.5195 13.8948 13.707 13.7073L25.707 1.7073C25.8946 1.51984 26 1.26555 26.0001 1.00036C26.0002 0.735168 25.8949 0.4808 25.7075 0.293202Z"
+              />
+            </svg>
           </div>
-        </label>
+        </div>
       </div>
-    </label>
+    </div>
     <div
       className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
@@ -79,68 +74,63 @@ Array [
         }
       }
     />
-    <label
-      className="wxc wxc-label wxc wxc-adaptive-cards-input-choice-set wxc wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
-      style={Object {}}
+    <div
+      className="wxc wxc-label wxc wxc-dropdown wxc wxc-adaptive-cards-input-choice-set wxc wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
     >
-      <div
+      <label
         className="wxc-label__label-text"
+        htmlFor="wxc-0-control"
+        id="wxc-0-label"
       >
-        Required Input.ChoiceSet label (compact)
+        <span>
+          Required Input.ChoiceSet label (compact)
+        </span>
         <span
           className="wxc-label__required"
         >
            *
         </span>
-      </div>
+      </label>
       <div
         className="wxc-label__control"
       >
-        <label
-          className="wxc wxc-label wxc wxc-dropdown"
-          id="wxc-0"
+        <div
+          className="wxc-dropdown__control"
+          disabled={false}
+          onKeyDown={[Function]}
         >
           <div
-            className="wxc-label__control"
+            aria-controls="wxc-0-options"
+            aria-haspopup="listbox"
+            aria-labelledby="wxc-0-label"
+            className="wxc-dropdown__selected-option "
+            id="wxc-0-control"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="combobox"
+            tabIndex={0}
           >
-            <div
-              className="wxc-dropdown__control"
-              disabled={false}
-              onKeyDown={[Function]}
+            <span
+              className="wxc-dropdown__label"
             >
-              <div
-                aria-controls="wxc-0"
-                aria-haspopup="listbox"
-                aria-labelledby="wxc-0"
-                className="wxc-dropdown__selected-option "
-                onClick={[Function]}
-                onKeyDown={[Function]}
-                role="combobox"
-                tabIndex={0}
-              >
-                <span
-                  className="wxc-dropdown__label"
-                >
-                  Option 1
-                </span>
-                <svg
-                  className="wxc-icon "
-                  height={13}
-                  style={Object {}}
-                  viewBox="0 0 26 14"
-                  width={13}
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M25.7075 0.293202C25.52 0.105701 25.2656 0.000366211 25.0004 0.000366211C24.7353 0.000366211 24.4809 0.105701 24.2934 0.293202L13 11.5862L1.70699 0.293202C1.51851 0.110381 1.26568 0.00902984 1.0031 0.0110359C0.740528 0.013042 0.489278 0.118244 0.303611 0.303925C0.117943 0.489605 0.0127584 0.740862 0.0107709 1.00344C0.00878336 1.26601 0.110153 1.51883 0.292988 1.7073L12.293 13.7073C12.4805 13.8948 12.7348 14.0001 13 14.0001C13.2652 14.0001 13.5195 13.8948 13.707 13.7073L25.707 1.7073C25.8946 1.51984 26 1.26555 26.0001 1.00036C26.0002 0.735168 25.8949 0.4808 25.7075 0.293202Z"
-                  />
-                </svg>
-              </div>
-            </div>
+              Option 1
+            </span>
+            <svg
+              className="wxc-icon "
+              height={13}
+              style={Object {}}
+              viewBox="0 0 26 14"
+              width={13}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M25.7075 0.293202C25.52 0.105701 25.2656 0.000366211 25.0004 0.000366211C24.7353 0.000366211 24.4809 0.105701 24.2934 0.293202L13 11.5862L1.70699 0.293202C1.51851 0.110381 1.26568 0.00902984 1.0031 0.0110359C0.740528 0.013042 0.489278 0.118244 0.303611 0.303925C0.117943 0.489605 0.0127584 0.740862 0.0107709 1.00344C0.00878336 1.26601 0.110153 1.51883 0.292988 1.7073L12.293 13.7073C12.4805 13.8948 12.7348 14.0001 13 14.0001C13.2652 14.0001 13.5195 13.8948 13.707 13.7073L25.707 1.7073C25.8946 1.51984 26 1.26555 26.0001 1.00036C26.0002 0.735168 25.8949 0.4808 25.7075 0.293202Z"
+              />
+            </svg>
           </div>
-        </label>
+        </div>
       </div>
-    </label>
+    </div>
     <div
       className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
@@ -149,15 +139,19 @@ Array [
         }
       }
     />
-    <label
+    <div
       className="wxc wxc-label wxc wxc-adaptive-cards-input-choice-set wxc wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
       style={Object {}}
     >
-      <div
+      <label
         className="wxc-label__label-text"
+        htmlFor="wxc-0-control"
+        id="wxc-0-label"
       >
-        Default Input.ChoiceSet label (expanded)
-      </div>
+        <span>
+          Default Input.ChoiceSet label (expanded)
+        </span>
+      </label>
       <div
         className="wxc-label__control"
       >
@@ -204,7 +198,7 @@ Array [
           </span>
         </div>
       </div>
-    </label>
+    </div>
     <div
       className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
@@ -213,20 +207,24 @@ Array [
         }
       }
     />
-    <label
+    <div
       className="wxc wxc-label wxc wxc-adaptive-cards-input-choice-set wxc wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
       style={Object {}}
     >
-      <div
+      <label
         className="wxc-label__label-text"
+        htmlFor="wxc-0-control"
+        id="wxc-0-label"
       >
-        Required Input.ChoiceSet label (expanded)
+        <span>
+          Required Input.ChoiceSet label (expanded)
+        </span>
         <span
           className="wxc-label__required"
         >
            *
         </span>
-      </div>
+      </label>
       <div
         className="wxc-label__control"
       >
@@ -269,7 +267,7 @@ Array [
           </span>
         </div>
       </div>
-    </label>
+    </div>
     <div
       className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
@@ -278,15 +276,19 @@ Array [
         }
       }
     />
-    <label
+    <div
       className="wxc wxc-label wxc wxc-adaptive-cards-input-choice-set wxc wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
       style={Object {}}
     >
-      <div
+      <label
         className="wxc-label__label-text"
+        htmlFor="wxc-0-control"
+        id="wxc-0-label"
       >
-        Default Input.ChoiceSet label (expanded, multiselect)
-      </div>
+        <span>
+          Default Input.ChoiceSet label (expanded, multiselect)
+        </span>
+      </label>
       <div
         className="wxc-label__control"
       >
@@ -327,7 +329,7 @@ Array [
           </span>
         </label>
       </div>
-    </label>
+    </div>
     <div
       className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
@@ -336,20 +338,24 @@ Array [
         }
       }
     />
-    <label
+    <div
       className="wxc wxc-label wxc wxc-adaptive-cards-input-choice-set wxc wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
       style={Object {}}
     >
-      <div
+      <label
         className="wxc-label__label-text"
+        htmlFor="wxc-0-control"
+        id="wxc-0-label"
       >
-        Required Input.ChoiceSet label (compact, multiselect)
+        <span>
+          Required Input.ChoiceSet label (compact, multiselect)
+        </span>
         <span
           className="wxc-label__required"
         >
            *
         </span>
-      </div>
+      </label>
       <div
         className="wxc-label__control"
       >
@@ -434,7 +440,7 @@ Array [
           </span>
         </label>
       </div>
-    </label>
+    </div>
     <div
       className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
@@ -530,7 +536,7 @@ Array [
         }
       }
     />
-    <label
+    <div
       className="wxc wxc-label wxc wxc-input-field wxc wxc-date-input wxc wxc-adaptive-cards-input-date wxc wxc-ac wxc-ac-is-visible--true"
       style={Object {}}
     >
@@ -541,9 +547,11 @@ Array [
           className="wxc-input-field__form-control"
         >
           <input
+            aria-labelledby="wxc-0-label"
             autoFocus={false}
             className="wxc-input-field__input"
             disabled={false}
+            id="wxc-0-control"
             onChange={[Function]}
             required={false}
             tabIndex={0}
@@ -552,7 +560,7 @@ Array [
           />
         </div>
       </div>
-    </label>
+    </div>
     <div
       className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
@@ -623,15 +631,19 @@ Array [
         }
       }
     />
-    <label
+    <div
       className="wxc wxc-label wxc wxc-input-field wxc wxc-number-input wxc wxc-adaptive-cards-input-number wxc wxc-ac wxc-ac-is-visible--true wxc-input-field--has-right-icon wxc-input-field--has-right-controls"
       style={Object {}}
     >
-      <div
+      <label
         className="wxc-label__label-text"
+        htmlFor="wxc-0-control"
+        id="wxc-0-label"
       >
-        Enter a number between 1 and 10
-      </div>
+        <span>
+          Enter a number between 1 and 10
+        </span>
+      </label>
       <div
         className="wxc-label__control"
       >
@@ -639,9 +651,11 @@ Array [
           className="wxc-input-field__form-control"
         >
           <input
+            aria-labelledby="wxc-0-label"
             autoFocus={false}
             className="wxc-input-field__input"
             disabled={false}
+            id="wxc-0-control"
             max={10}
             min={1}
             onChange={[Function]}
@@ -747,7 +761,7 @@ Array [
           </div>
         </div>
       </div>
-    </label>
+    </div>
     <div
       className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
@@ -844,7 +858,7 @@ Array [
         }
       }
     />
-    <label
+    <div
       className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--text wxc-ac-height--auto wxc-input-field--has-right-icon"
       style={Object {}}
     >
@@ -855,9 +869,11 @@ Array [
           className="wxc-input-field__form-control"
         >
           <input
+            aria-labelledby="wxc-0-label"
             autoFocus={false}
             className="wxc-input-field__input"
             disabled={false}
+            id="wxc-0-control"
             onChange={[Function]}
             required={true}
             tabIndex={0}
@@ -866,7 +882,7 @@ Array [
           />
         </div>
       </div>
-    </label>
+    </div>
     <div
       className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
@@ -875,15 +891,19 @@ Array [
         }
       }
     />
-    <label
+    <div
       className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--email wxc-input-field--has-right-icon"
       style={Object {}}
     >
-      <div
+      <label
         className="wxc-label__label-text"
+        htmlFor="wxc-0-control"
+        id="wxc-0-label"
       >
-        style: email
-      </div>
+        <span>
+          style: email
+        </span>
+      </label>
       <div
         className="wxc-label__control"
       >
@@ -891,9 +911,11 @@ Array [
           className="wxc-input-field__form-control"
         >
           <input
+            aria-labelledby="wxc-0-label"
             autoFocus={false}
             className="wxc-input-field__input"
             disabled={false}
+            id="wxc-0-control"
             onChange={[Function]}
             required={false}
             tabIndex={0}
@@ -902,7 +924,7 @@ Array [
           />
         </div>
       </div>
-    </label>
+    </div>
     <div
       className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
@@ -911,15 +933,19 @@ Array [
         }
       }
     />
-    <label
+    <div
       className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--tel wxc-ac-height--stretch wxc-input-field--has-right-icon"
       style={Object {}}
     >
-      <div
+      <label
         className="wxc-label__label-text"
+        htmlFor="wxc-0-control"
+        id="wxc-0-label"
       >
-        style: tel
-      </div>
+        <span>
+          style: tel
+        </span>
+      </label>
       <div
         className="wxc-label__control"
       >
@@ -927,9 +953,11 @@ Array [
           className="wxc-input-field__form-control"
         >
           <input
+            aria-labelledby="wxc-0-label"
             autoFocus={false}
             className="wxc-input-field__input"
             disabled={false}
+            id="wxc-0-control"
             onChange={[Function]}
             required={false}
             tabIndex={0}
@@ -938,7 +966,7 @@ Array [
           />
         </div>
       </div>
-    </label>
+    </div>
     <div
       className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
@@ -947,15 +975,19 @@ Array [
         }
       }
     />
-    <label
+    <div
       className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--url wxc-input-field--has-right-icon"
       style={Object {}}
     >
-      <div
+      <label
         className="wxc-label__label-text"
+        htmlFor="wxc-0-control"
+        id="wxc-0-label"
       >
-        style: url
-      </div>
+        <span>
+          style: url
+        </span>
+      </label>
       <div
         className="wxc-label__control"
       >
@@ -963,9 +995,11 @@ Array [
           className="wxc-input-field__form-control"
         >
           <input
+            aria-labelledby="wxc-0-label"
             autoFocus={false}
             className="wxc-input-field__input"
             disabled={false}
+            id="wxc-0-control"
             onChange={[Function]}
             required={false}
             tabIndex={0}
@@ -974,7 +1008,7 @@ Array [
           />
         </div>
       </div>
-    </label>
+    </div>
     <div
       className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
@@ -983,15 +1017,19 @@ Array [
         }
       }
     />
-    <label
+    <div
       className="wxc wxc-label wxc wxc-input-field wxc wxc-password-input wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--password wxc-input-field--has-right-icon"
       style={Object {}}
     >
-      <div
+      <label
         className="wxc-label__label-text"
+        htmlFor="wxc-0-control"
+        id="wxc-0-label"
       >
-        style: password
-      </div>
+        <span>
+          style: password
+        </span>
+      </label>
       <div
         className="wxc-label__control"
       >
@@ -999,9 +1037,11 @@ Array [
           className="wxc-input-field__form-control"
         >
           <input
+            aria-labelledby="wxc-0-label"
             autoFocus={false}
             className="wxc-input-field__input"
             disabled={false}
+            id="wxc-0-control"
             onChange={[Function]}
             required={false}
             tabIndex={0}
@@ -1010,7 +1050,7 @@ Array [
           />
         </div>
       </div>
-    </label>
+    </div>
     <div
       className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
@@ -1044,7 +1084,7 @@ Array [
         }
       }
     />
-    <label
+    <div
       className="wxc wxc-label wxc wxc-textbox wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true"
       style={Object {}}
     >
@@ -1053,8 +1093,10 @@ Array [
       >
         <textarea
           aria-label=""
+          aria-labelledby="wxc-0-label"
           className="wxc-textbox__control"
           disabled={false}
+          id="wxc-0-control"
           maxLength={500}
           onChange={[Function]}
           placeholder="enter comment"
@@ -1062,7 +1104,7 @@ Array [
           value=""
         />
       </div>
-    </label>
+    </div>
     <div
       className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
@@ -1096,7 +1138,7 @@ Array [
         }
       }
     />
-    <label
+    <div
       className="wxc wxc-label wxc wxc-textbox wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true"
       style={Object {}}
     >
@@ -1105,8 +1147,10 @@ Array [
       >
         <textarea
           aria-label=""
+          aria-labelledby="wxc-0-label"
           className="wxc-textbox__control"
           disabled={false}
+          id="wxc-0-control"
           maxLength={500}
           onChange={[Function]}
           placeholder="enter comment"
@@ -1114,7 +1158,7 @@ Array [
           value="This value was pre-filled"
         />
       </div>
-    </label>
+    </div>
     <div
       className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
@@ -1185,15 +1229,19 @@ Array [
         }
       }
     />
-    <label
+    <div
       className="wxc wxc-label wxc wxc-input-field wxc wxc-time-input wxc wxc-adaptive-cards-input-time wxc wxc-ac wxc-ac-is-visible--true"
       style={Object {}}
     >
-      <div
+      <label
         className="wxc-label__label-text"
+        htmlFor="wxc-0-control"
+        id="wxc-0-label"
       >
-        Start time
-      </div>
+        <span>
+          Start time
+        </span>
+      </label>
       <div
         className="wxc-label__control"
       >
@@ -1201,9 +1249,11 @@ Array [
           className="wxc-input-field__form-control"
         >
           <input
+            aria-labelledby="wxc-0-label"
             autoFocus={false}
             className="wxc-input-field__input"
             disabled={false}
+            id="wxc-0-control"
             onChange={[Function]}
             required={false}
             tabIndex={0}
@@ -1212,7 +1262,7 @@ Array [
           />
         </div>
       </div>
-    </label>
+    </div>
     <div
       className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
@@ -1221,20 +1271,24 @@ Array [
         }
       }
     />
-    <label
+    <div
       className="wxc wxc-label wxc wxc-input-field wxc wxc-time-input wxc wxc-adaptive-cards-input-time wxc wxc-ac wxc-ac-is-visible--true"
       style={Object {}}
     >
-      <div
+      <label
         className="wxc-label__label-text"
+        htmlFor="wxc-0-control"
+        id="wxc-0-label"
       >
-        End time
+        <span>
+          End time
+        </span>
         <span
           className="wxc-label__required"
         >
            *
         </span>
-      </div>
+      </label>
       <div
         className="wxc-label__control"
       >
@@ -1242,9 +1296,11 @@ Array [
           className="wxc-input-field__form-control"
         >
           <input
+            aria-labelledby="wxc-0-label"
             autoFocus={false}
             className="wxc-input-field__input"
             disabled={false}
+            id="wxc-0-control"
             onChange={[Function]}
             required={true}
             tabIndex={0}
@@ -1253,7 +1309,7 @@ Array [
           />
         </div>
       </div>
-    </label>
+    </div>
     <div
       className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
@@ -1262,15 +1318,19 @@ Array [
         }
       }
     />
-    <label
+    <div
       className="wxc wxc-label wxc wxc-input-field wxc wxc-time-input wxc wxc-adaptive-cards-input-time wxc wxc-ac wxc-ac-is-visible--true"
       style={Object {}}
     >
-      <div
+      <label
         className="wxc-label__label-text"
+        htmlFor="wxc-0-control"
+        id="wxc-0-label"
       >
-        Night time
-      </div>
+        <span>
+          Night time
+        </span>
+      </label>
       <div
         className="wxc-label__control"
       >
@@ -1278,9 +1338,11 @@ Array [
           className="wxc-input-field__form-control"
         >
           <input
+            aria-labelledby="wxc-0-label"
             autoFocus={false}
             className="wxc-input-field__input"
             disabled={false}
+            id="wxc-0-control"
             onChange={[Function]}
             required={false}
             tabIndex={0}
@@ -1289,7 +1351,7 @@ Array [
           />
         </div>
       </div>
-    </label>
+    </div>
     <div
       className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={

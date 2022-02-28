@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 import {useRef, useAutoFocus} from '../../hooks';
+import {uniqueId} from '../../../util';
 import Label from '../../inputs/Label/Label';
 
 /**
@@ -14,6 +15,7 @@ import Label from '../../inputs/Label/Label';
  * @param {string} [props.className]  Custom CSS class to apply
  * @param {boolean} [props.disabled=false]  Flag indicating input disabled
  * @param {string} [props.error]  Error text
+ * @param {string} [props.id]  DOM id
  * @param {string} [props.label]  Label text
  * @param {number} [props.max]  Maximum value for the input element
  * @param {number} [props.maxLength]  Maximum number of characters allowed
@@ -37,6 +39,7 @@ export default function InputField({
   className,
   disabled,
   error,
+  id: domId,
   label,
   max,
   maxLength,
@@ -60,6 +63,7 @@ export default function InputField({
   });
   const inputRef = useRef();
   const handleChange = (event) => onChange(event.target.value);
+  const id = domId || uniqueId();
 
   useAutoFocus(inputRef, autoFocus);
 
@@ -67,6 +71,7 @@ export default function InputField({
     <Label
       className={cssClasses}
       error={error}
+      id={id}
       label={label}
       required={required}
       style={style}
@@ -74,11 +79,13 @@ export default function InputField({
       <div className={sc('form-control')}>
         <input
           aria-label={ariaLabel}
+          aria-labelledby={`${id}-label`}
           // disabling no-autofocus because otherwise this element cannot be autofocused depending on the autoFocus prop
           // eslint-disable-next-line jsx-a11y/no-autofocus
           autoFocus={autoFocus}
           className={sc('input')}
           disabled={disabled}
+          id={`${id}-control`}
           max={max}
           maxLength={maxLength}
           min={min}
@@ -113,6 +120,7 @@ InputField.propTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
   error: PropTypes.string,
+  id: PropTypes.string,
   label: PropTypes.string,
   max: PropTypes.number,
   maxLength: PropTypes.number,
@@ -142,6 +150,7 @@ InputField.defaultProps = {
   className: undefined,
   disabled: false,
   error: undefined,
+  id: undefined,
   label: undefined,
   max: undefined,
   maxLength: undefined,

@@ -47,15 +47,19 @@ Array [
         }
       }
     />
-    <label
+    <div
       className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-input-field--has-right-icon"
       style={Object {}}
     >
-      <div
+      <label
         className="wxc-label__label-text"
+        htmlFor="wxc-0-control"
+        id="wxc-0-label"
       >
-        What is your first name?
-      </div>
+        <span>
+          What is your first name?
+        </span>
+      </label>
       <div
         className="wxc-label__control"
       >
@@ -63,9 +67,11 @@ Array [
           className="wxc-input-field__form-control"
         >
           <input
+            aria-labelledby="wxc-0-label"
             autoFocus={false}
             className="wxc-input-field__input"
             disabled={false}
+            id="wxc-0-control"
             onChange={[Function]}
             required={false}
             tabIndex={0}
@@ -74,7 +80,7 @@ Array [
           />
         </div>
       </div>
-    </label>
+    </div>
     <div
       className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
@@ -83,15 +89,19 @@ Array [
         }
       }
     />
-    <label
+    <div
       className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-input-field--has-right-icon"
       style={Object {}}
     >
-      <div
+      <label
         className="wxc-label__label-text"
+        htmlFor="wxc-0-control"
+        id="wxc-0-label"
       >
-        What is your last name?
-      </div>
+        <span>
+          What is your last name?
+        </span>
+      </label>
       <div
         className="wxc-label__control"
       >
@@ -99,9 +109,11 @@ Array [
           className="wxc-input-field__form-control"
         >
           <input
+            aria-labelledby="wxc-0-label"
             autoFocus={false}
             className="wxc-input-field__input"
             disabled={false}
+            id="wxc-0-control"
             onChange={[Function]}
             required={false}
             tabIndex={0}
@@ -110,7 +122,7 @@ Array [
           />
         </div>
       </div>
-    </label>
+    </div>
     <div
       className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
@@ -481,7 +493,7 @@ Array [
         }
       }
     />
-    <label
+    <div
       className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-input-field--has-right-icon"
       style={Object {}}
     >
@@ -492,9 +504,11 @@ Array [
           className="wxc-input-field__form-control"
         >
           <input
+            aria-labelledby="wxc-0-label"
             autoFocus={false}
             className="wxc-input-field__input"
             disabled={false}
+            id="wxc-0-control"
             onChange={[Function]}
             placeholder="What is your first name?"
             required={true}
@@ -504,7 +518,7 @@ Array [
           />
         </div>
       </div>
-    </label>
+    </div>
     <div
       className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
@@ -513,7 +527,7 @@ Array [
         }
       }
     />
-    <label
+    <div
       className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-input-field--has-right-icon"
       style={Object {}}
     >
@@ -524,9 +538,11 @@ Array [
           className="wxc-input-field__form-control"
         >
           <input
+            aria-labelledby="wxc-0-label"
             autoFocus={false}
             className="wxc-input-field__input"
             disabled={false}
+            id="wxc-0-control"
             onChange={[Function]}
             placeholder="What is your last name?"
             required={false}
@@ -536,7 +552,7 @@ Array [
           />
         </div>
       </div>
-    </label>
+    </div>
     <div
       className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
@@ -545,7 +561,7 @@ Array [
         }
       }
     />
-    <label
+    <div
       className="wxc wxc-label wxc wxc-input-field wxc wxc-number-input wxc wxc-adaptive-cards-input-number wxc wxc-ac wxc-ac-is-visible--true wxc-input-field--has-right-icon wxc-input-field--has-right-controls"
       style={Object {}}
     >
@@ -556,9 +572,11 @@ Array [
           className="wxc-input-field__form-control"
         >
           <input
+            aria-labelledby="wxc-0-label"
             autoFocus={false}
             className="wxc-input-field__input"
             disabled={false}
+            id="wxc-0-control"
             max={10}
             min={1}
             onChange={[Function]}
@@ -664,7 +682,7 @@ Array [
           </div>
         </div>
       </div>
-    </label>
+    </div>
     <div
       className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
