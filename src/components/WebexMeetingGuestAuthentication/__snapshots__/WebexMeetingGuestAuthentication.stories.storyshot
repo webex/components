@@ -28,14 +28,18 @@ Array [
     <form
       className="wxc-meeting-guest-authentication__form-content"
     >
-      <label
+      <div
         className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc-meeting-guest-authentication__input wxc-input-field--has-right-icon"
       >
-        <div
+        <label
           className="wxc-label__label-text"
+          htmlFor="wxc-0-control"
+          id="wxc-0-label"
         >
-          Your name
-        </div>
+          <span>
+            Your name
+          </span>
+        </label>
         <div
           className="wxc-label__control"
         >
@@ -44,9 +48,11 @@ Array [
           >
             <input
               aria-label="Your name appears in the participant list. Skip this optional field to use the name provided by the system."
+              aria-labelledby="wxc-0-label"
               autoFocus={true}
               className="wxc-input-field__input"
               disabled={false}
+              id="wxc-0-control"
               name="name"
               onChange={[Function]}
               required={false}
@@ -55,15 +61,19 @@ Array [
             />
           </div>
         </div>
-      </label>
-      <label
+      </div>
+      <div
         className="wxc wxc-label wxc wxc-input-field wxc wxc-password-input wxc-meeting-guest-authentication__input wxc-input-field--has-right-icon"
       >
-        <div
+        <label
           className="wxc-label__label-text"
+          htmlFor="wxc-0-control"
+          id="wxc-0-label"
         >
-          Meeting password (required)
-        </div>
+          <span>
+            Meeting password (required)
+          </span>
+        </label>
         <div
           className="wxc-label__control"
         >
@@ -72,9 +82,11 @@ Array [
           >
             <input
               aria-label="The password is provided in the invitation for a scheduled  meeting, or from the host."
+              aria-labelledby="wxc-0-label"
               autoFocus={false}
               className="wxc-input-field__input"
               disabled={false}
+              id="wxc-0-control"
               name="password"
               onChange={[Function]}
               required={false}
@@ -85,7 +97,7 @@ Array [
           </div>
         </div>
         
-      </label>
+      </div>
       <button
         aria-label="Start meeting. Start the meeting after entering the required information."
         autoFocus={false}

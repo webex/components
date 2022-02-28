@@ -7,67 +7,66 @@ import Icon from '../../generic/Icon/Icon';
  * Label wraps a form input and displays label text and error message
  *
  * @param {object} props  React props passed to the component
- * @param {string} [props.className]  Custom CSS class to apply
- * @param {object} [props.style]  Custom style to apply
  * @param {React.ReactNode[]}  props.children  List of children
- * @param {string} [props.label]  Label text
- * @param {string} [props.labelId]  Label id
+ * @param {string} [props.className]  Custom CSS class to apply
  * @param {string} [props.error]  Error text
+ * @param {string} props.id  Label id
+ * @param {string} [props.label]  Label text
  * @param {boolean} [props.required=false]  Flag indicating whether the control is required
+ * @param {object} [props.style]  Custom style to apply
  * @returns {object} JSX of the component
  */
 export default function Label({
-  className,
-  style,
   children,
-  label,
-  labelId,
+  className,
   error,
+  id,
+  label,
   required,
+  style,
 }) {
   const [cssClasses, sc] = webexComponentClasses('label', className);
 
   return (
-    // disabling label-has-associated-control as eslint does not see role attribute as a nested control
-    // eslint-disable-next-line jsx-a11y/label-has-associated-control
-    <label className={cssClasses} style={style} id={labelId}>
+    <div className={cssClasses} style={style}>
       {
         label && (
-          <div className={sc('label-text')}>
-            {label}
+          // disabling label-has-associated-control as eslint does not see role attribute as a nested control
+          // eslint-disable-next-line jsx-a11y/label-has-associated-control
+          <label className={sc('label-text')} htmlFor={`${id}-control`} id={`${id}-label`}>
+            <span>{label}</span>
             {required && <span className={sc('required')}> *</span>}
-          </div>
+          </label>
         )
       }
       <div className={sc('control')}>{children}</div>
       {
         error
         && (
-          <div className={sc('error')}>
+          <div className={sc('error')} id={`${id}-error`}>
             <Icon name="warning" size={16} className={sc('error-icon')} />
             <span className={sc('error-text')}>{error}</span>
           </div>
         )
       }
-    </label>
+    </div>
   );
 }
 
 Label.propTypes = {
-  className: PropTypes.string,
-  style: PropTypes.shape(),
   children: PropTypes.node.isRequired,
-  label: PropTypes.string,
-  labelId: PropTypes.string,
+  className: PropTypes.string,
   error: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string,
   required: PropTypes.bool,
+  style: PropTypes.shape(),
 };
 
 Label.defaultProps = {
   className: undefined,
-  style: undefined,
-  label: undefined,
-  labelId: undefined,
   error: undefined,
+  label: undefined,
   required: false,
+  style: undefined,
 };
