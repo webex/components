@@ -61,6 +61,9 @@ const EMPTY_MEETING = {
   speakerID: null,
 };
 
+const ON_IOS_15_1 = typeof navigator !== 'undefined'
+  && navigator.userAgent.includes('iPhone OS 15_1');
+
 // Adapter Events
 const EVENT_MEETING_UPDATE = 'meeting:update';
 
@@ -394,6 +397,13 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
     let deviceId;
     let perm;
 
+    if (constraints.video && ON_IOS_15_1) {
+      return {
+        stream: null,
+        perm: 'ERROR',
+      };
+    }
+
     try {
       const mediaStream = await navigator.mediaDevices.getUserMedia(constraints);
       const availableDevices = await this.getAvailableDevices();
@@ -411,20 +421,20 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       }
 
       perm = 'ALLOWED';
-    } catch (error) {
+    } catch (err) {
       // eslint-disable-next-line no-console
-      console.error('Meetings JSON adapter can not display the local user stream', error);
+      console.error('Meetings JSON adapter can not display the local user stream', err);
 
-      if (error instanceof DOMException) {
-        if (error.name === 'NotAllowedError') {
-          if (error.message === 'Permission dismissed') {
+      if (err instanceof DOMException) {
+        if (err.name === 'NotAllowedError') {
+          if (err.message === 'Permission dismissed') {
             perm = 'DISMISSED';
-          } else if (error.message === 'Permission denied by system') {
+          } else if (err.message === 'Permission denied by system') {
             perm = 'DISABLED';
           } else {
             perm = 'DENIED';
           }
-        } else if (error.name === 'NotReadableError') {
+        } else if (err.name === 'NotReadableError') {
           perm = 'DISABLED';
         } else {
           perm = 'ERROR';
