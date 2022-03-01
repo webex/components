@@ -24,6 +24,7 @@ const HINTS = {
  * @param {number} [props.max]  Maximum value for the input element
  * @param {number} [props.min]  Minimum value for the input element
  * @param {string} [props.name]  Input name
+ * @param {Function} [props.nativeRef]  Action to perform to obtain the native input ref
  * @param {Function} props.onChange  Action to perform on input change
  * @param {string} [props.placeholder]  Input placeholder
  * @param {boolean} [props.required=false]  Flag indicating input required
@@ -41,6 +42,7 @@ export default function NumberInput({
   max,
   min,
   name,
+  nativeRef,
   onChange,
   placeholder,
   required,
@@ -92,6 +94,7 @@ export default function NumberInput({
       min={min}
       max={max}
       name={name}
+      nativeRef={nativeRef}
       onChange={onChange}
       placeholder={placeholder}
       required={required}
@@ -114,6 +117,7 @@ NumberInput.propTypes = {
   max: PropTypes.number,
   min: PropTypes.number,
   name: PropTypes.string,
+  nativeRef: PropTypes.func,
   onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
   required: PropTypes.bool,
@@ -134,6 +138,7 @@ NumberInput.defaultProps = {
   max: undefined,
   min: undefined,
   name: undefined,
+  nativeRef: undefined,
   placeholder: undefined,
   required: false,
   style: undefined,
