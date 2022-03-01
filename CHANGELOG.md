@@ -1,3 +1,10 @@
+## [1.254.1](https://github.com/webex/components/compare/v1.254.0...v1.254.1) (2022-03-01)
+
+
+### Bug Fixes
+
+* **Dropdown:** fix background color in focus state ([bf88170](https://github.com/webex/components/commit/bf88170a454d6263ecbf75755c445ebe01849fcc))
+
 # [1.254.0](https://github.com/webex/components/compare/v1.253.5...v1.254.0) (2022-02-25)
 
 
