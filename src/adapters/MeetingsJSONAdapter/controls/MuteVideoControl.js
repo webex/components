@@ -1,4 +1,4 @@
-import {Observable} from 'rxjs';
+import {Observable, of} from 'rxjs';
 import {map, distinctUntilChanged} from 'rxjs/operators';
 import {MeetingControlState} from '@webex/component-adapter-interfaces';
 import MeetingControl from './MeetingControl';
@@ -45,7 +45,19 @@ export default class MuteVideoControl extends MeetingControl {
       text: 'Stop video',
     };
 
-    return this.adapter.getMeeting(meetingID).pipe(
+    const notSupported = {
+      ID: this.ID,
+      type: 'BUTTON',
+      icon: 'camera-muted',
+      tooltip: 'Video not supported on iOS 15.1',
+      state: MeetingControlState.DISABLED,
+      text: 'No camera',
+    };
+
+    const ON_IOS_15_1 = typeof navigator !== 'undefined'
+      && navigator.userAgent.includes('iPhone OS 15_1');
+
+    return ON_IOS_15_1 ? of(notSupported) : this.adapter.getMeeting(meetingID).pipe(
       map((meeting) => !!meeting.localVideo.stream),
       distinctUntilChanged(),
       map((localVideoExists) => (localVideoExists ? unmuted : muted)),
