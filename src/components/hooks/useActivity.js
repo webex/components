@@ -18,19 +18,29 @@ import {AdapterContext} from './contexts';
  */
 export default function useActivity(activityID) {
   const [activity, setActivity] = useState({});
-  const {activitiesAdapter} = useContext(AdapterContext);
+  const adapter = useContext(AdapterContext);
+  const activitiesAdapter = adapter && adapter.activitiesAdapter;
 
   useEffect(() => {
-    const onError = (error) => {
-      throw error;
-    };
-    const subscription = activitiesAdapter.getActivity(activityID).subscribe(setActivity, onError);
+    let cleanup;
 
-    return () => {
-      subscription.unsubscribe();
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    if (!activitiesAdapter || !activityID) {
+      setActivity({});
+      cleanup = undefined;
+    } else {
+      const onError = (error) => {
+        throw error;
+      };
+      const subscription = activitiesAdapter
+        .getActivity(activityID).subscribe(setActivity, onError);
+
+      cleanup = () => {
+        subscription.unsubscribe();
+      };
+    }
+
+    return cleanup;
+  }, [activitiesAdapter, activityID]);
 
   return activity;
 }

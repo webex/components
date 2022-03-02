@@ -17,7 +17,8 @@ import {AdapterContext} from './contexts';
  */
 export default function useAdaptiveCard(activityID) {
   const [card, setCard] = useState({});
-  const {activitiesAdapter} = useContext(AdapterContext);
+  const adapter = useContext(AdapterContext);
+  const activitiesAdapter = adapter && adapter.activitiesAdapter;
 
   useEffect(() => {
     let cleanup;
