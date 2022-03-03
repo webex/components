@@ -1,3 +1,10 @@
+## [1.254.2](https://github.com/webex/components/compare/v1.254.1...v1.254.2) (2022-03-03)
+
+
+### Bug Fixes
+
+* **hooks:** make useActivity and useAdaptiveCard work if an adapter isn't yet present on the context ([5bb40d0](https://github.com/webex/components/commit/5bb40d0bfd7c4a81657907908825fb75f645b434))
+
 ## [1.254.1](https://github.com/webex/components/compare/v1.254.0...v1.254.1) (2022-03-01)
 
 
