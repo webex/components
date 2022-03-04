@@ -20,7 +20,7 @@ import WebexAdaptiveCard from '../WebexAdaptiveCard/WebexAdaptiveCard';
 export default function WebexActivity({activityID, className, style}) {
   const activity = useActivity(activityID);
   const adapter = useContext(AdapterContext);
-  const hasCard = adapter.activitiesAdapter.hasAdaptiveCard(activity);
+  const hasCard = adapter?.activitiesAdapter?.hasAdaptiveCard(activity);
 
   const [cssClasses, sc] = webexComponentClasses('activity', className);
 
