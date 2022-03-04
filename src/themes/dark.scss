@@ -1,4 +1,4 @@
-.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-theme-dark, :root {
+.#{$WEBEX_COMPONENTS_CLASS_PREFIX}-theme-dark, .md-theme-darkWebex, :root {
   color-scheme: dark;
 
   --wxc-loading-logo--url: url(../themes/dark/loading.gif);
