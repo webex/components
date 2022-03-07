@@ -1,3 +1,15 @@
+# [1.255.0](https://github.com/webex/components/compare/v1.254.2...v1.255.0) (2022-03-07)
+
+
+### Bug Fixes
+
+* **components:** link label and input control in a more accessible way ([1e9e2da](https://github.com/webex/components/commit/1e9e2da710c4755e3a361196f05b0fbbbec30f2a))
+
+
+### Features
+
+* **themes:** add new classname to theme files for integration in web-client ([43500e2](https://github.com/webex/components/commit/43500e20f7256fa42be4fbbcf416e00e909e613c))
+
 ## [1.254.2](https://github.com/webex/components/compare/v1.254.1...v1.254.2) (2022-03-03)
 
 
