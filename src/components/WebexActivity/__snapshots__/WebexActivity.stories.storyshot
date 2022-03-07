@@ -478,41 +478,58 @@ Array [
             }
           />
           <div
-            className="wxc wxc-label wxc wxc-input-field wxc wxc-date-input wxc wxc-adaptive-cards-input-date wxc wxc-ac wxc-ac-is-visible--true wxc-ac-height--auto"
-            style={Object {}}
+            className="wxc wxc-adaptive-cards-column wxc wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
           >
-            <label
-              className="wxc-label__label-text"
-              htmlFor="wxc-0-control"
-              id="wxc-0-label"
-            >
-              <span>
-                Arrival Date
-              </span>
-              <span
-                className="wxc-label__required"
-              >
-                 *
-              </span>
-            </label>
             <div
-              className="wxc-label__control"
+              className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
+              style={
+                Object {
+                  "style": undefined,
+                }
+              }
+            />
+            <div
+              className="wxc wxc-label wxc wxc-input-field wxc wxc-date-input wxc wxc-adaptive-cards-input-date wxc wxc-ac wxc-ac-is-visible--true wxc-ac-height--auto"
+              style={Object {}}
             >
-              <div
-                className="wxc-input-field__form-control"
+              <label
+                className="wxc-label__label-text"
+                htmlFor="wxc-0-control"
+                id="wxc-0-label"
               >
-                <input
-                  aria-labelledby="wxc-0-label"
-                  autoFocus={false}
-                  className="wxc-input-field__input"
-                  disabled={false}
-                  id="wxc-0-control"
-                  onChange={[Function]}
-                  required={true}
-                  tabIndex={0}
-                  type="date"
-                  value=""
-                />
+                <span>
+                  Arrival Date
+                </span>
+                <span
+                  className="wxc-label__required"
+                >
+                   *
+                </span>
+              </label>
+              <div
+                className="wxc-label__control"
+              >
+                <div
+                  className="wxc-input-field__form-control"
+                >
+                  <input
+                    aria-labelledby="wxc-0-label"
+                    autoFocus={false}
+                    className="wxc-input-field__input"
+                    disabled={false}
+                    id="wxc-0-control"
+                    onChange={[Function]}
+                    required={true}
+                    tabIndex={0}
+                    type="date"
+                    value=""
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -525,41 +542,58 @@ Array [
             }
           />
           <div
-            className="wxc wxc-label wxc wxc-input-field wxc wxc-time-input wxc wxc-adaptive-cards-input-time wxc wxc-ac wxc-ac-is-visible--true"
-            style={Object {}}
+            className="wxc wxc-adaptive-cards-column wxc wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
           >
-            <label
-              className="wxc-label__label-text"
-              htmlFor="wxc-0-control"
-              id="wxc-0-label"
-            >
-              <span>
-                Arrival Time
-              </span>
-              <span
-                className="wxc-label__required"
-              >
-                 *
-              </span>
-            </label>
             <div
-              className="wxc-label__control"
+              className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
+              style={
+                Object {
+                  "style": undefined,
+                }
+              }
+            />
+            <div
+              className="wxc wxc-label wxc wxc-input-field wxc wxc-time-input wxc wxc-adaptive-cards-input-time wxc wxc-ac wxc-ac-is-visible--true"
+              style={Object {}}
             >
-              <div
-                className="wxc-input-field__form-control"
+              <label
+                className="wxc-label__label-text"
+                htmlFor="wxc-0-control"
+                id="wxc-0-label"
               >
-                <input
-                  aria-labelledby="wxc-0-label"
-                  autoFocus={false}
-                  className="wxc-input-field__input"
-                  disabled={false}
-                  id="wxc-0-control"
-                  onChange={[Function]}
-                  required={true}
-                  tabIndex={0}
-                  type="time"
-                  value="10:00"
-                />
+                <span>
+                  Arrival Time
+                </span>
+                <span
+                  className="wxc-label__required"
+                >
+                   *
+                </span>
+              </label>
+              <div
+                className="wxc-label__control"
+              >
+                <div
+                  className="wxc-input-field__form-control"
+                >
+                  <input
+                    aria-labelledby="wxc-0-label"
+                    autoFocus={false}
+                    className="wxc-input-field__input"
+                    disabled={false}
+                    id="wxc-0-control"
+                    onChange={[Function]}
+                    required={true}
+                    tabIndex={0}
+                    type="time"
+                    value="10:00"
+                  />
+                </div>
               </div>
             </div>
           </div>
