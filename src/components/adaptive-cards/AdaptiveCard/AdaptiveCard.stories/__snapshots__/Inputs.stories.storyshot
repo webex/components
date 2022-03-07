@@ -873,27 +873,102 @@ Array [
       }
     />
     <div
-      className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--text wxc-ac-height--auto wxc-input-field--has-right-icon"
+      className="wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--text wxc-ac-height--auto"
       style={Object {}}
     >
       <div
-        className="wxc-label__control"
+        className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc-adaptive-cards-input-text__input wxc-input-field--has-right-icon"
       >
         <div
-          className="wxc-input-field__form-control"
+          className="wxc-label__control"
         >
-          <input
-            aria-labelledby="wxc-0-label"
-            autoFocus={false}
-            className="wxc-input-field__input"
-            disabled={false}
-            id="wxc-0-control"
-            onChange={[Function]}
-            required={true}
-            tabIndex={0}
-            type="text"
-            value=""
-          />
+          <div
+            className="wxc-input-field__form-control"
+          >
+            <input
+              aria-labelledby="wxc-0-label"
+              autoFocus={false}
+              className="wxc-input-field__input"
+              disabled={false}
+              id="wxc-0-control"
+              onChange={[Function]}
+              required={true}
+              tabIndex={0}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="wxc wxc-adaptive-cards-action-set wxc-adaptive-cards-input-text__inline-action"
+      >
+        <button
+          autoFocus={false}
+          className="wxc wxc-button wxc wxc-ac-action wxc wxc-ac-action-open-url wxc wxc-ac wxc-ac-action-style--default wxc-button--primary"
+          disabled={false}
+          onClick={[Function]}
+          style={
+            Object {
+              "height": 32,
+            }
+          }
+          tabIndex={0}
+          type="button"
+        >
+          <span>
+            Reply
+          </span>
+        </button>
+        
+      </div>
+      <div />
+    </div>
+    <div
+      className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
+      style={
+        Object {
+          "style": undefined,
+        }
+      }
+    />
+    <div
+      className="wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--email"
+      style={Object {}}
+    >
+      <div
+        className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc-adaptive-cards-input-text__input wxc-input-field--has-right-icon"
+      >
+        <label
+          className="wxc-label__label-text"
+          htmlFor="wxc-0-control"
+          id="wxc-0-label"
+        >
+          <span
+            className="wxc-label__text"
+          >
+            style: email
+          </span>
+        </label>
+        <div
+          className="wxc-label__control"
+        >
+          <div
+            className="wxc-input-field__form-control"
+          >
+            <input
+              aria-labelledby="wxc-0-label"
+              autoFocus={false}
+              className="wxc-input-field__input"
+              disabled={false}
+              id="wxc-0-control"
+              onChange={[Function]}
+              required={false}
+              tabIndex={0}
+              type="email"
+              value=""
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -906,38 +981,42 @@ Array [
       }
     />
     <div
-      className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--email wxc-input-field--has-right-icon"
+      className="wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--tel wxc-ac-height--stretch"
       style={Object {}}
     >
-      <label
-        className="wxc-label__label-text"
-        htmlFor="wxc-0-control"
-        id="wxc-0-label"
-      >
-        <span
-          className="wxc-label__text"
-        >
-          style: email
-        </span>
-      </label>
       <div
-        className="wxc-label__control"
+        className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc-adaptive-cards-input-text__input wxc-input-field--has-right-icon"
       >
-        <div
-          className="wxc-input-field__form-control"
+        <label
+          className="wxc-label__label-text"
+          htmlFor="wxc-0-control"
+          id="wxc-0-label"
         >
-          <input
-            aria-labelledby="wxc-0-label"
-            autoFocus={false}
-            className="wxc-input-field__input"
-            disabled={false}
-            id="wxc-0-control"
-            onChange={[Function]}
-            required={false}
-            tabIndex={0}
-            type="email"
-            value=""
-          />
+          <span
+            className="wxc-label__text"
+          >
+            style: tel
+          </span>
+        </label>
+        <div
+          className="wxc-label__control"
+        >
+          <div
+            className="wxc-input-field__form-control"
+          >
+            <input
+              aria-labelledby="wxc-0-label"
+              autoFocus={false}
+              className="wxc-input-field__input"
+              disabled={false}
+              id="wxc-0-control"
+              onChange={[Function]}
+              required={false}
+              tabIndex={0}
+              type="tel"
+              value=""
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -950,38 +1029,42 @@ Array [
       }
     />
     <div
-      className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--tel wxc-ac-height--stretch wxc-input-field--has-right-icon"
+      className="wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--url"
       style={Object {}}
     >
-      <label
-        className="wxc-label__label-text"
-        htmlFor="wxc-0-control"
-        id="wxc-0-label"
-      >
-        <span
-          className="wxc-label__text"
-        >
-          style: tel
-        </span>
-      </label>
       <div
-        className="wxc-label__control"
+        className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc-adaptive-cards-input-text__input wxc-input-field--has-right-icon"
       >
-        <div
-          className="wxc-input-field__form-control"
+        <label
+          className="wxc-label__label-text"
+          htmlFor="wxc-0-control"
+          id="wxc-0-label"
         >
-          <input
-            aria-labelledby="wxc-0-label"
-            autoFocus={false}
-            className="wxc-input-field__input"
-            disabled={false}
-            id="wxc-0-control"
-            onChange={[Function]}
-            required={false}
-            tabIndex={0}
-            type="tel"
-            value=""
-          />
+          <span
+            className="wxc-label__text"
+          >
+            style: url
+          </span>
+        </label>
+        <div
+          className="wxc-label__control"
+        >
+          <div
+            className="wxc-input-field__form-control"
+          >
+            <input
+              aria-labelledby="wxc-0-label"
+              autoFocus={false}
+              className="wxc-input-field__input"
+              disabled={false}
+              id="wxc-0-control"
+              onChange={[Function]}
+              required={false}
+              tabIndex={0}
+              type="url"
+              value=""
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -994,82 +1077,42 @@ Array [
       }
     />
     <div
-      className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--url wxc-input-field--has-right-icon"
+      className="wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--password"
       style={Object {}}
     >
-      <label
-        className="wxc-label__label-text"
-        htmlFor="wxc-0-control"
-        id="wxc-0-label"
-      >
-        <span
-          className="wxc-label__text"
-        >
-          style: url
-        </span>
-      </label>
       <div
-        className="wxc-label__control"
+        className="wxc wxc-label wxc wxc-input-field wxc wxc-password-input wxc-adaptive-cards-input-text__input wxc-input-field--has-right-icon"
       >
+        <label
+          className="wxc-label__label-text"
+          htmlFor="wxc-0-control"
+          id="wxc-0-label"
+        >
+          <span
+            className="wxc-label__text"
+          >
+            style: password
+          </span>
+        </label>
         <div
-          className="wxc-input-field__form-control"
+          className="wxc-label__control"
         >
-          <input
-            aria-labelledby="wxc-0-label"
-            autoFocus={false}
-            className="wxc-input-field__input"
-            disabled={false}
-            id="wxc-0-control"
-            onChange={[Function]}
-            required={false}
-            tabIndex={0}
-            type="url"
-            value=""
-          />
-        </div>
-      </div>
-    </div>
-    <div
-      className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
-      style={
-        Object {
-          "style": undefined,
-        }
-      }
-    />
-    <div
-      className="wxc wxc-label wxc wxc-input-field wxc wxc-password-input wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--password wxc-input-field--has-right-icon"
-      style={Object {}}
-    >
-      <label
-        className="wxc-label__label-text"
-        htmlFor="wxc-0-control"
-        id="wxc-0-label"
-      >
-        <span
-          className="wxc-label__text"
-        >
-          style: password
-        </span>
-      </label>
-      <div
-        className="wxc-label__control"
-      >
-        <div
-          className="wxc-input-field__form-control"
-        >
-          <input
-            aria-labelledby="wxc-0-label"
-            autoFocus={false}
-            className="wxc-input-field__input"
-            disabled={false}
-            id="wxc-0-control"
-            onChange={[Function]}
-            required={false}
-            tabIndex={0}
-            type="password"
-            value=""
-          />
+          <div
+            className="wxc-input-field__form-control"
+          >
+            <input
+              aria-labelledby="wxc-0-label"
+              autoFocus={false}
+              className="wxc-input-field__input"
+              disabled={false}
+              id="wxc-0-control"
+              onChange={[Function]}
+              required={false}
+              tabIndex={0}
+              type="password"
+              value=""
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -1107,24 +1150,28 @@ Array [
       }
     />
     <div
-      className="wxc wxc-label wxc wxc-textbox wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true"
+      className="wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true"
       style={Object {}}
     >
       <div
-        className="wxc-label__control"
+        className="wxc wxc-label wxc wxc-textbox wxc-adaptive-cards-input-text__textbox"
       >
-        <textarea
-          aria-label=""
-          aria-labelledby="wxc-0-label"
-          className="wxc-textbox__control"
-          disabled={false}
-          id="wxc-0-control"
-          maxLength={500}
-          onChange={[Function]}
-          placeholder="enter comment"
-          rows={5}
-          value=""
-        />
+        <div
+          className="wxc-label__control"
+        >
+          <textarea
+            aria-label=""
+            aria-labelledby="wxc-0-label"
+            className="wxc-textbox__control"
+            disabled={false}
+            id="wxc-0-control"
+            maxLength={500}
+            onChange={[Function]}
+            placeholder="enter comment"
+            rows={5}
+            value=""
+          />
+        </div>
       </div>
     </div>
     <div
@@ -1161,24 +1208,28 @@ Array [
       }
     />
     <div
-      className="wxc wxc-label wxc wxc-textbox wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true"
+      className="wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true"
       style={Object {}}
     >
       <div
-        className="wxc-label__control"
+        className="wxc wxc-label wxc wxc-textbox wxc-adaptive-cards-input-text__textbox"
       >
-        <textarea
-          aria-label=""
-          aria-labelledby="wxc-0-label"
-          className="wxc-textbox__control"
-          disabled={false}
-          id="wxc-0-control"
-          maxLength={500}
-          onChange={[Function]}
-          placeholder="enter comment"
-          rows={5}
-          value="This value was pre-filled"
-        />
+        <div
+          className="wxc-label__control"
+        >
+          <textarea
+            aria-label=""
+            aria-labelledby="wxc-0-label"
+            className="wxc-textbox__control"
+            disabled={false}
+            id="wxc-0-control"
+            maxLength={500}
+            onChange={[Function]}
+            placeholder="enter comment"
+            rows={5}
+            value="This value was pre-filled"
+          />
+        </div>
       </div>
     </div>
     <div

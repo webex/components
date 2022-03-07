@@ -208,6 +208,12 @@ const exampleInputText = {
       style: 'text',
       height: 'auto',
       isRequired: true,
+      inlineAction: {
+        type: 'Action.OpenUrl',
+        title: 'Reply',
+        tooltip: 'Reply to this message',
+        url: 'https://adaptivecards.io',
+      },
       errorMessage: 'This is a required input',
     },
     {

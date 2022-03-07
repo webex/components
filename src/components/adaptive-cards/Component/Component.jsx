@@ -23,12 +23,14 @@ export const acPropTypes = {
   data: 'data',
   defaultImageSize: 'default-image-size',
   errorMessage: 'error-message',
+  fallback: 'fallback',
   fontType: 'font-type',
   height: 'height',
   highlight: 'highlight',
   horizontalAlignment: 'horizontal-alignment',
   iconUrl: 'icon-url',
   id: 'id',
+  inlineAction: 'inline-action',
   imageSize: 'image-size',
   imageStyle: 'image-style',
   inputStyle: 'input-style',
@@ -181,8 +183,10 @@ export default function Component({
       case acPropTypes.data:
       case acPropTypes.defaultImageSize:
       case acPropTypes.errorMessage:
+      case acPropTypes.fallback:
       case acPropTypes.iconUrl:
       case acPropTypes.id:
+      case acPropTypes.inlineAction:
       case acPropTypes.label:
       case acPropTypes.maxLength:
       case acPropTypes.maxLines:
