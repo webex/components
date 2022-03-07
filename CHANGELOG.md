@@ -1,3 +1,10 @@
+## [1.255.1](https://github.com/webex/components/compare/v1.255.0...v1.255.1) (2022-03-07)
+
+
+### Bug Fixes
+
+* **WebexActivity:** make WebexActivity work if an adapter isn't yet present on the context ([04f2971](https://github.com/webex/components/commit/04f29711017cd66cbd18e1f45d3ef6cfb9b84d9d))
+
 # [1.255.0](https://github.com/webex/components/compare/v1.254.2...v1.255.0) (2022-03-07)
 
 
