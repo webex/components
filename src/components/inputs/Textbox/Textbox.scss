@@ -8,6 +8,8 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-textbox;
     background: var(--wxc-input-field--normal--background);
     color: var(--wxc-input-field--normal--color);
     border: var(--wxc-input-field--normal--border);
+    box-shadow: var(--wxc-input-field--normal--box-shadow);
+    outline: var(--wxc-input-field--normal--outline);
     border-radius: 0.5rem;
     font-size: 0.875rem;
     padding: 0.25rem 0.75rem;
@@ -18,6 +20,8 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-textbox;
       background: var(--wxc-input-field--hover--background);
       color: var(--wxc-input-field--hover--color);
       border: var(--wxc-input-field--hover--border);
+      box-shadow: var(--wxc-input-field--hover--box-shadow);
+      outline: var(--wxc-input-field--hover--outline);
     }
 
     &:active {
@@ -25,6 +29,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-textbox;
       color: var(--wxc-input-field--active--color);
       border: var(--wxc-input-field--active--border);
       box-shadow: var(--wxc-input-field--active--box-shadow);
+      outline: var(--wxc-input-field--active--outline);
     }
 
     &:focus {
@@ -32,12 +37,15 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-textbox;
       color: var(--wxc-input-field--focus--color);
       border: var(--wxc-input-field--focus--border);
       box-shadow: var(--wxc-input-field--focus--box-shadow);
+      outline: var(--wxc-input-field--focus--outline);
     }
 
     &:disabled {
       background: var(--wxc-input-field--disabled--background);
       border: var(--wxc-input-field--disabled--border);
       color: var(--wxc-input-field--disabled--color);
+      box-shadow: var(--wxc-input-field--disabled--box-shadow);
+      outline: var(--wxc-input-field--disabled--outline);
     }
   }
 }

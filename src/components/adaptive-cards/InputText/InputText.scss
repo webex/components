@@ -1,0 +1,14 @@
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-adaptive-cards-input-text;
+
+.#{$C} {
+  display: flex;
+
+  .#{$C}__inline-action {
+    margin-left: 0.5rem;
+  }
+
+  .#{$C}__input,
+  .#{$C}__textbox {
+    flex: 1;
+  }
+}

@@ -5,7 +5,9 @@ import AdaptiveCardContext from '../context/adaptive-card-context';
 import {acPropTypes, registerComponent} from '../Component/Component';
 import {TextInput, PasswordInput} from '../../inputs';
 import Textbox from '../../inputs/Textbox/Textbox';
+import ActionSet from '../ActionSet/ActionSet';
 import {formatDateTime} from '../util';
+import useAction from '../hooks/useAction';
 
 /**
  * Adaptive Cards Input.Text component
@@ -24,8 +26,9 @@ export default function InputText({data, className, style}) {
     setInput,
     getError,
   } = useContext(AdaptiveCardContext);
-  const [cssClasses] = webexComponentClasses('adaptive-cards-input-text', className);
+  const [cssClasses, sc] = webexComponentClasses('adaptive-cards-input-text', className);
   const Input = data.style === 'password' ? PasswordInput : TextInput;
+  const inlineAction = useAction(data.inlineAction);
 
   useEffect(() => {
     setInput({
@@ -47,33 +50,34 @@ export default function InputText({data, className, style}) {
   ]);
 
   return (
-    !data.isMultiline ? (
-      <Input
-        className={cssClasses}
-        error={getError(data.id)}
-        label={formatDateTime(data.label)}
-        maxLength={data.maxLength}
-        onChange={(value) => setValue(data.id, value)}
-        pattern={data.regex}
-        placeholder={data.placeholder}
-        required={data.isRequired}
-        style={style}
-        type={data.style}
-        value={getValue(data.id)}
-      />
-    ) : (
-      <Textbox
-        className={cssClasses}
-        error={getError(data.id)}
-        label={formatDateTime(data.label)}
-        maxLength={data.maxLength}
-        onChange={(value) => setValue(data.id, value)}
-        placeholder={data.placeholder}
-        required={data.isRequired}
-        style={style}
-        value={getValue(data.id)}
-      />
-    )
+    <div className={cssClasses} style={style}>
+      {!data.isMultiline ? (
+        <Input
+          className={sc('input')}
+          error={getError(data.id)}
+          label={formatDateTime(data.label)}
+          maxLength={data.maxLength}
+          onChange={(value) => setValue(data.id, value)}
+          pattern={data.regex}
+          placeholder={data.placeholder}
+          required={data.isRequired}
+          type={data.style}
+          value={getValue(data.id)}
+        />
+      ) : (
+        <Textbox
+          className={sc('textbox')}
+          error={getError(data.id)}
+          label={formatDateTime(data.label)}
+          maxLength={data.maxLength}
+          onChange={(value) => setValue(data.id, value)}
+          placeholder={data.placeholder}
+          required={data.isRequired}
+          value={getValue(data.id)}
+        />
+      )}
+      {inlineAction && <ActionSet className={sc('inline-action')} data={{actions: [data.inlineAction]}} inherited={{}} />}
+    </div>
   );
 }
 
@@ -93,6 +97,7 @@ InputText.acPropTypes = {
   fallback: acPropTypes.fallback,
   height: acPropTypes.height,
   id: acPropTypes.id,
+  inlineAction: acPropTypes.inlineAction,
   isMultiline: acPropTypes.isMultiline,
   isRequired: acPropTypes.isRequired,
   isVisible: acPropTypes.isVisible,

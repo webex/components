@@ -48,38 +48,42 @@ Array [
       }
     />
     <div
-      className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-input-field--has-right-icon"
+      className="wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true"
       style={Object {}}
     >
-      <label
-        className="wxc-label__label-text"
-        htmlFor="wxc-0-control"
-        id="wxc-0-label"
-      >
-        <span
-          className="wxc-label__text"
-        >
-          What is your first name?
-        </span>
-      </label>
       <div
-        className="wxc-label__control"
+        className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc-adaptive-cards-input-text__input wxc-input-field--has-right-icon"
       >
-        <div
-          className="wxc-input-field__form-control"
+        <label
+          className="wxc-label__label-text"
+          htmlFor="wxc-0-control"
+          id="wxc-0-label"
         >
-          <input
-            aria-labelledby="wxc-0-label"
-            autoFocus={false}
-            className="wxc-input-field__input"
-            disabled={false}
-            id="wxc-0-control"
-            onChange={[Function]}
-            required={false}
-            tabIndex={0}
-            type="text"
-            value=""
-          />
+          <span
+            className="wxc-label__text"
+          >
+            What is your first name?
+          </span>
+        </label>
+        <div
+          className="wxc-label__control"
+        >
+          <div
+            className="wxc-input-field__form-control"
+          >
+            <input
+              aria-labelledby="wxc-0-label"
+              autoFocus={false}
+              className="wxc-input-field__input"
+              disabled={false}
+              id="wxc-0-control"
+              onChange={[Function]}
+              required={false}
+              tabIndex={0}
+              type="text"
+              value=""
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -92,38 +96,42 @@ Array [
       }
     />
     <div
-      className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-input-field--has-right-icon"
+      className="wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true"
       style={Object {}}
     >
-      <label
-        className="wxc-label__label-text"
-        htmlFor="wxc-0-control"
-        id="wxc-0-label"
-      >
-        <span
-          className="wxc-label__text"
-        >
-          What is your last name?
-        </span>
-      </label>
       <div
-        className="wxc-label__control"
+        className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc-adaptive-cards-input-text__input wxc-input-field--has-right-icon"
       >
-        <div
-          className="wxc-input-field__form-control"
+        <label
+          className="wxc-label__label-text"
+          htmlFor="wxc-0-control"
+          id="wxc-0-label"
         >
-          <input
-            aria-labelledby="wxc-0-label"
-            autoFocus={false}
-            className="wxc-input-field__input"
-            disabled={false}
-            id="wxc-0-control"
-            onChange={[Function]}
-            required={false}
-            tabIndex={0}
-            type="text"
-            value=""
-          />
+          <span
+            className="wxc-label__text"
+          >
+            What is your last name?
+          </span>
+        </label>
+        <div
+          className="wxc-label__control"
+        >
+          <div
+            className="wxc-input-field__form-control"
+          >
+            <input
+              aria-labelledby="wxc-0-label"
+              autoFocus={false}
+              className="wxc-input-field__input"
+              disabled={false}
+              id="wxc-0-control"
+              onChange={[Function]}
+              required={false}
+              tabIndex={0}
+              type="text"
+              value=""
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -498,28 +506,32 @@ Array [
       }
     />
     <div
-      className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-input-field--has-right-icon"
+      className="wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true"
       style={Object {}}
     >
       <div
-        className="wxc-label__control"
+        className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc-adaptive-cards-input-text__input wxc-input-field--has-right-icon"
       >
         <div
-          className="wxc-input-field__form-control"
+          className="wxc-label__control"
         >
-          <input
-            aria-labelledby="wxc-0-label"
-            autoFocus={false}
-            className="wxc-input-field__input"
-            disabled={false}
-            id="wxc-0-control"
-            onChange={[Function]}
-            placeholder="What is your first name?"
-            required={true}
-            tabIndex={0}
-            type="text"
-            value=""
-          />
+          <div
+            className="wxc-input-field__form-control"
+          >
+            <input
+              aria-labelledby="wxc-0-label"
+              autoFocus={false}
+              className="wxc-input-field__input"
+              disabled={false}
+              id="wxc-0-control"
+              onChange={[Function]}
+              placeholder="What is your first name?"
+              required={true}
+              tabIndex={0}
+              type="text"
+              value=""
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -532,28 +544,32 @@ Array [
       }
     />
     <div
-      className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-input-field--has-right-icon"
+      className="wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true"
       style={Object {}}
     >
       <div
-        className="wxc-label__control"
+        className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc-adaptive-cards-input-text__input wxc-input-field--has-right-icon"
       >
         <div
-          className="wxc-input-field__form-control"
+          className="wxc-label__control"
         >
-          <input
-            aria-labelledby="wxc-0-label"
-            autoFocus={false}
-            className="wxc-input-field__input"
-            disabled={false}
-            id="wxc-0-control"
-            onChange={[Function]}
-            placeholder="What is your last name?"
-            required={false}
-            tabIndex={0}
-            type="text"
-            value=""
-          />
+          <div
+            className="wxc-input-field__form-control"
+          >
+            <input
+              aria-labelledby="wxc-0-label"
+              autoFocus={false}
+              className="wxc-input-field__input"
+              disabled={false}
+              id="wxc-0-control"
+              onChange={[Function]}
+              placeholder="What is your last name?"
+              required={false}
+              tabIndex={0}
+              type="text"
+              value=""
+            />
+          </div>
         </div>
       </div>
     </div>
