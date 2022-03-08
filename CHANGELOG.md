@@ -1,3 +1,10 @@
+# [1.256.0](https://github.com/webex/components/compare/v1.255.2...v1.256.0) (2022-03-08)
+
+
+### Features
+
+* **AdaptiveCardsInputText:** implement inlineAction property ([dece811](https://github.com/webex/components/commit/dece811a538410821fc047bdb7607301748eb54d))
+
 ## [1.255.2](https://github.com/webex/components/compare/v1.255.1...v1.255.2) (2022-03-08)
 
 
