@@ -50,37 +50,37 @@ describe('Rooms JSON Adapter Interface', () => {
     );
   });
 
-  test('getRoomActivities() returns an observable', () => {
-    expect(isObservable(roomsJSONAdapter.getRoomActivities())).toBeTruthy();
+  test('getActivitiesInRealTime() returns an observable', () => {
+    expect(isObservable(roomsJSONAdapter.getActivitiesInRealTime())).toBeTruthy();
   });
 
-  test('getRoomActivities() returns an array of previous activity IDs', (done) => {
-    roomsJSONAdapter.getRoomActivities(roomID).subscribe((data) => {
+  test('getActivitiesInRealTime() returns an array of previous activity IDs', (done) => {
+    roomsJSONAdapter.getActivitiesInRealTime(roomID).subscribe((data) => {
       expect(data).toEqual(rooms[`${roomID}-activities`]);
       done();
     });
   });
 
-  test('getRoomActivities() returns an observable to an empty array for a given wrong room ID', (done) => {
+  test('getActivitiesInRealTime() returns an observable to an empty array for a given wrong room ID', (done) => {
     const wrongRoomActivitiesID = 'wrongRoomActivitiesID';
 
-    roomsJSONAdapter.getRoomActivities(wrongRoomActivitiesID).subscribe((data) => {
+    roomsJSONAdapter.getActivitiesInRealTime(wrongRoomActivitiesID).subscribe((data) => {
       expect(data).toEqual([]);
       done();
     });
   });
 
-  test('getRoomActivities() returns objects with a date parameter for time rulers', (done) => {
+  test('getActivitiesInRealTime() returns objects with a date parameter for time rulers', (done) => {
     const timeRulerRoomID = 'room2';
 
-    roomsJSONAdapter.getRoomActivities(timeRulerRoomID).subscribe((data) => {
+    roomsJSONAdapter.getActivitiesInRealTime(timeRulerRoomID).subscribe((data) => {
       expect(data[1].date).toBeDefined();
       done();
     });
   });
 
-  test('getRoomActivities() completes the observable', (done) => {
-    roomsJSONAdapter.getRoomActivities(roomID).subscribe(
+  test('getActivitiesInRealTime() completes the observable', (done) => {
+    roomsJSONAdapter.getActivitiesInRealTime(roomID).subscribe(
       () => {},
       () => {},
       () => {
@@ -90,18 +90,18 @@ describe('Rooms JSON Adapter Interface', () => {
     );
   });
 
-  test('getPreviousRoomActivities() returns an array of previous activity IDs', (done) => {
-    roomsJSONAdapter.getPreviousRoomActivities(roomID).subscribe((data) => {
+  test('getPastActivities() returns an array of previous activity IDs', (done) => {
+    roomsJSONAdapter.getPastActivities(roomID).subscribe((data) => {
       expect(data).toEqual(rooms[`${roomID}-previous-activities`]);
       done();
     });
   });
 
-  test('getPreviousRoomActivities() returns error on wrong room ID', (done) => {
+  test('getPastActivities() returns error on wrong room ID', (done) => {
     const wrongRoomActivitiesID = 'wrongRoomActivitiesID';
     const message = 'Could not find activities for room wrongRoomActivitiesID. Make sure room ID is valid!';
 
-    roomsJSONAdapter.getPreviousRoomActivities(wrongRoomActivitiesID).subscribe(
+    roomsJSONAdapter.getPastActivities(wrongRoomActivitiesID).subscribe(
       () => {},
       (error) => {
         expect(error.message).toEqual(message);
@@ -110,11 +110,11 @@ describe('Rooms JSON Adapter Interface', () => {
     );
   });
 
-  test('getPreviousRoomActivities() completes the observable when there is no more data', (done) => {
+  test('getPastActivities() completes the observable when there is no more data', (done) => {
     // Set last searched index to last element in data
     roomsJSONAdapter.lastDataIndex[roomID] = rooms[`${roomID}-previous-activities`].length;
 
-    roomsJSONAdapter.getPreviousRoomActivities(roomID).subscribe(
+    roomsJSONAdapter.getPastActivities(roomID).subscribe(
       () => {},
       () => {},
       () => {

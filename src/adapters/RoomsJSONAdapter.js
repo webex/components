@@ -72,7 +72,7 @@ export default class RoomsJSONAdapter extends RoomsAdapter {
    * @param {string} ID  ID of the room for which to get activities
    * @returns {Observable.<Array.<string|ActivityDate>>} Observable that emits an array of activities
    */
-  getRoomActivities(ID) {
+  getActivitiesInRealTime(ID) {
     return Observable.create((observer) => {
       const data = !this.datasource[`${ID}-activities`] ? [] : this.datasource[`${ID}-activities`];
 
@@ -82,21 +82,21 @@ export default class RoomsJSONAdapter extends RoomsAdapter {
   }
 
   /**
-   * Returns an observable that emits an array of previous activity data of the given roomID.
+   * Returns an observable that emits an array of past activity data of the given roomID.
    * If `hasMoreActivities` returns false, the observable will complete.
    * **Previous activity data must be sorted newest-to-oldest.**
    *
-   * In a real-world scenario, "previous" means any moment before the observable subscription.
-   * For this implementation, activities considered "previous" are stored in a separate attribute
+   * In a real-world scenario, "past" means any moment before the observable subscription.
+   * For this implementation, activities considered "past" are stored in a separate attribute
    * than the activities considered "current".
    *
-   * Previous activities are emitted by chunks.
+   * Past activities are emitted by chunks.
    * The next chunk is based on the adapter's `dataChunkSize`.
    *
    * @param {string} ID  ID of the room for which to get activities
-   * @returns {Observable.<Array.<string|ActivityDate>>} Observable that emits an array of previous activities of the room
+   * @returns {Observable.<Array.<string|ActivityDate>>} Observable that emits an array of past activities of the room
    */
-  getPreviousRoomActivities(ID) {
+  getPastActivities(ID) {
     return Observable.create((observer) => {
       if (`${ID}-previous-activities` in this.datasource) {
         if (this.hasMoreActivities(ID)) {

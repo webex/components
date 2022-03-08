@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "@juggle/resize-observer": "^3.2.0",
-    "@webex/component-adapter-interfaces": "^1.22.0",
+    "@webex/component-adapter-interfaces": "^1.23.0",
     "adaptive-expressions": "^4.15.0",
     "adaptivecards-templating": "^2.2.0",
     "classnames": "^2.2.6",
