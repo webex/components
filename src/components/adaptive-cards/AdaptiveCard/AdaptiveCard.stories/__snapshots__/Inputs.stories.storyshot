@@ -22,7 +22,9 @@ Array [
         htmlFor="wxc-0-control"
         id="wxc-0-label"
       >
-        <span>
+        <span
+          className="wxc-label__text"
+        >
           Default Input.ChoiceSet label (compact)
         </span>
       </label>
@@ -82,7 +84,9 @@ Array [
         htmlFor="wxc-0-control"
         id="wxc-0-label"
       >
-        <span>
+        <span
+          className="wxc-label__text"
+        >
           Required Input.ChoiceSet label (compact)
         </span>
         <span
@@ -148,7 +152,9 @@ Array [
         htmlFor="wxc-0-control"
         id="wxc-0-label"
       >
-        <span>
+        <span
+          className="wxc-label__text"
+        >
           Default Input.ChoiceSet label (expanded)
         </span>
       </label>
@@ -216,7 +222,9 @@ Array [
         htmlFor="wxc-0-control"
         id="wxc-0-label"
       >
-        <span>
+        <span
+          className="wxc-label__text"
+        >
           Required Input.ChoiceSet label (expanded)
         </span>
         <span
@@ -285,7 +293,9 @@ Array [
         htmlFor="wxc-0-control"
         id="wxc-0-label"
       >
-        <span>
+        <span
+          className="wxc-label__text"
+        >
           Default Input.ChoiceSet label (expanded, multiselect)
         </span>
       </label>
@@ -347,7 +357,9 @@ Array [
         htmlFor="wxc-0-control"
         id="wxc-0-label"
       >
-        <span>
+        <span
+          className="wxc-label__text"
+        >
           Required Input.ChoiceSet label (compact, multiselect)
         </span>
         <span
@@ -640,7 +652,9 @@ Array [
         htmlFor="wxc-0-control"
         id="wxc-0-label"
       >
-        <span>
+        <span
+          className="wxc-label__text"
+        >
           Enter a number between 1 and 10
         </span>
       </label>
@@ -900,7 +914,9 @@ Array [
         htmlFor="wxc-0-control"
         id="wxc-0-label"
       >
-        <span>
+        <span
+          className="wxc-label__text"
+        >
           style: email
         </span>
       </label>
@@ -942,7 +958,9 @@ Array [
         htmlFor="wxc-0-control"
         id="wxc-0-label"
       >
-        <span>
+        <span
+          className="wxc-label__text"
+        >
           style: tel
         </span>
       </label>
@@ -984,7 +1002,9 @@ Array [
         htmlFor="wxc-0-control"
         id="wxc-0-label"
       >
-        <span>
+        <span
+          className="wxc-label__text"
+        >
           style: url
         </span>
       </label>
@@ -1026,7 +1046,9 @@ Array [
         htmlFor="wxc-0-control"
         id="wxc-0-label"
       >
-        <span>
+        <span
+          className="wxc-label__text"
+        >
           style: password
         </span>
       </label>
@@ -1238,7 +1260,9 @@ Array [
         htmlFor="wxc-0-control"
         id="wxc-0-label"
       >
-        <span>
+        <span
+          className="wxc-label__text"
+        >
           Start time
         </span>
       </label>
@@ -1280,7 +1304,9 @@ Array [
         htmlFor="wxc-0-control"
         id="wxc-0-label"
       >
-        <span>
+        <span
+          className="wxc-label__text"
+        >
           End time
         </span>
         <span
@@ -1327,7 +1353,9 @@ Array [
         htmlFor="wxc-0-control"
         id="wxc-0-label"
       >
-        <span>
+        <span
+          className="wxc-label__text"
+        >
           Night time
         </span>
       </label>

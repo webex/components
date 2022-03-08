@@ -9,6 +9,11 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-label;
     color: var(--wxc-text-color);
     font-size: 0.875rem;
     margin: 0 0 0.25rem 0.8125rem;
+    white-space: nowrap;
+  }
+
+  &__text {
+    white-space: normal;
   }
 
   &__required {

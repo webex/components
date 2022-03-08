@@ -122,7 +122,9 @@ Array [
                 htmlFor="wxc-0-control"
                 id="wxc-0-label"
               >
-                <span>
+                <span
+                  className="wxc-label__text"
+                >
                   First Name
                 </span>
                 <span
@@ -169,7 +171,9 @@ Array [
                 htmlFor="wxc-0-control"
                 id="wxc-0-label"
               >
-                <span>
+                <span
+                  className="wxc-label__text"
+                >
                   Last Name
                 </span>
                 <span
@@ -217,7 +221,9 @@ Array [
               htmlFor="wxc-0-control"
               id="wxc-0-label"
             >
-              <span>
+              <span
+                className="wxc-label__text"
+              >
                 Email
               </span>
               <span
@@ -264,7 +270,9 @@ Array [
             htmlFor="wxc-0-control"
             id="wxc-0-label"
           >
-            <span>
+            <span
+              className="wxc-label__text"
+            >
               Room type
             </span>
             <span
@@ -330,7 +338,9 @@ Array [
             htmlFor="wxc-0-control"
             id="wxc-0-label"
           >
-            <span>
+            <span
+              className="wxc-label__text"
+            >
               Number of Guests
             </span>
             <span
@@ -502,7 +512,9 @@ Array [
                 htmlFor="wxc-0-control"
                 id="wxc-0-label"
               >
-                <span>
+                <span
+                  className="wxc-label__text"
+                >
                   Arrival Date
                 </span>
                 <span
@@ -566,7 +578,9 @@ Array [
                 htmlFor="wxc-0-control"
                 id="wxc-0-label"
               >
-                <span>
+                <span
+                  className="wxc-label__text"
+                >
                   Arrival Time
                 </span>
                 <span
@@ -615,7 +629,9 @@ Array [
             htmlFor="wxc-0-control"
             id="wxc-0-label"
           >
-            <span>
+            <span
+              className="wxc-label__text"
+            >
               Departure Date
             </span>
             <span
@@ -662,7 +678,9 @@ Array [
             htmlFor="wxc-0-control"
             id="wxc-0-label"
           >
-            <span>
+            <span
+              className="wxc-label__text"
+            >
               Free pickup?
             </span>
             <span

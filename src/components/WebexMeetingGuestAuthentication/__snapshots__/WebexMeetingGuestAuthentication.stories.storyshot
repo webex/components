@@ -36,7 +36,9 @@ Array [
           htmlFor="wxc-0-control"
           id="wxc-0-label"
         >
-          <span>
+          <span
+            className="wxc-label__text"
+          >
             Your name
           </span>
         </label>
@@ -70,7 +72,9 @@ Array [
           htmlFor="wxc-0-control"
           id="wxc-0-label"
         >
-          <span>
+          <span
+            className="wxc-label__text"
+          >
             Meeting password (required)
           </span>
         </label>
