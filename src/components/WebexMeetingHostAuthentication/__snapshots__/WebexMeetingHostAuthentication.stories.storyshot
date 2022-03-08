@@ -37,7 +37,9 @@ Array [
           htmlFor="wxc-0-control"
           id="wxc-0-label"
         >
-          <span>
+          <span
+            className="wxc-label__text"
+          >
             Host key (required)
           </span>
         </label>

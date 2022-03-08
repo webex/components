@@ -34,7 +34,7 @@ export default function Label({
           // disabling label-has-associated-control as eslint does not see role attribute as a nested control
           // eslint-disable-next-line jsx-a11y/label-has-associated-control
           <label className={sc('label-text')} htmlFor={`${id}-control`} id={`${id}-label`}>
-            <span>{label}</span>
+            <span className={sc('text')}>{label}</span>
             {required && <span className={sc('required')}> *</span>}
           </label>
         )

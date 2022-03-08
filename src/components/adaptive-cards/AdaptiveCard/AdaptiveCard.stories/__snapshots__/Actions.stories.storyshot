@@ -56,7 +56,9 @@ Array [
         htmlFor="wxc-0-control"
         id="wxc-0-label"
       >
-        <span>
+        <span
+          className="wxc-label__text"
+        >
           What is your first name?
         </span>
       </label>
@@ -98,7 +100,9 @@ Array [
         htmlFor="wxc-0-control"
         id="wxc-0-label"
       >
-        <span>
+        <span
+          className="wxc-label__text"
+        >
           What is your last name?
         </span>
       </label>
