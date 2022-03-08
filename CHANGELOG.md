@@ -1,3 +1,10 @@
+## [1.255.2](https://github.com/webex/components/compare/v1.255.1...v1.255.2) (2022-03-08)
+
+
+### Bug Fixes
+
+* **Label:** prevent line break between text and required asterisk in Label component ([c4b7279](https://github.com/webex/components/commit/c4b72795fc6f87aaa0315db234dbee03ac15f5f3))
+
 ## [1.255.1](https://github.com/webex/components/compare/v1.255.0...v1.255.1) (2022-03-07)
 
 
