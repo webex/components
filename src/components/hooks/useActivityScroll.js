@@ -51,7 +51,7 @@ export default function useActivityScroll(roomID, elementRef, callback) {
 
             return loadMoreItems;
           }),
-          flatMap(() => roomsAdapter.getPreviousRoomActivities(roomID)),
+          flatMap(() => roomsAdapter.getPastActivities(roomID)),
         )
         .subscribe((previousActivities) => {
           // Show loader for half second

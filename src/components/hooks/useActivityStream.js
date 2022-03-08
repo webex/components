@@ -52,9 +52,11 @@ export default function useActivityStream(roomID) {
 
   // Subscribe to future updates on load
   useEffect(() => {
-    const activityUpdates = roomsAdapter.getRoomActivities(roomID).subscribe((activityData) => {
-      dispatch({type: APPEND_ACTIVITIES, payload: activityData});
-    });
+    const activityUpdates = roomsAdapter
+      .getActivitiesInRealTime(roomID)
+      .subscribe((activityData) => {
+        dispatch({type: APPEND_ACTIVITIES, payload: activityData});
+      });
 
     return () => {
       activityUpdates.unsubscribe();

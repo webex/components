@@ -64,7 +64,7 @@ export default function useOverflowActivities(roomID, elementRef, callback) {
         observer.complete();
       }
     })
-      .pipe(flatMap(() => roomsAdapter.getPreviousRoomActivities(roomID)))
+      .pipe(flatMap(() => roomsAdapter.getPastActivities(roomID)))
       .subscribe((previousActivities) => {
         callback(previousActivities);
         setLastActivityBottom(lastActivityBoundaries.bottom);
