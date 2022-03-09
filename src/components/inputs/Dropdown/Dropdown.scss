@@ -21,12 +21,6 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-dropdown;
     }
   }
 
-  .#{$C}__options-list {
-    position: fixed;
-    z-index: 1;
-  }
-
-
   &:not(.#{$C}--disabled) {
     .#{$C}__selected-option {
       background: var(--wxc-dropdown--normal--background);

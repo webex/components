@@ -239,10 +239,7 @@
 
   --wxc-input--label--color: #{$wxc-white-alpha-95};
 
-  --wxc-options-list--normal--box-shadow: none;
-  --wxc-options-list--normal--background: #{$wxc-gray-95};
-  --wxc-options-list--normal--color: #{$wxc-white-alpha-95};
-  --wxc-options-list--normal--border: none;
+  --wxc-options-list--background: #{$wxc-gray-95};
 
   --wxc-options-list--item--focus--box-shadow: 0 0 0 2px #{$wxc-blue-40} inset;
   --wxc-options-list--item--focus--outline: 2px solid #{$wxc-blue-40-alpha-30};
@@ -260,6 +257,9 @@
   --wxc-options-list--item--selected--border: none;
 
   --wxc-options-list--checked-icon--color: #{$wxc-blue-40};
+
+  --wxc-popup--box-shadow: none;
+  --wxc-popup--border: none;
 
   --wxc-scrollbar--thumb: #{$wxc-white-alpha-11};
   --wxc-scrollbar--background: #{$wxc-white-alpha-20};

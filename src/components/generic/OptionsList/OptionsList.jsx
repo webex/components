@@ -32,7 +32,7 @@ export default function OptionsList({
   tabIndex,
   withKey,
 }) {
-  const [cssClasses, sc] = webexComponentClasses('options-list', className);
+  const [cssClasses] = webexComponentClasses('options-list', className);
 
   const onKeyDown = (event) => {
     if (event.key === 'Tab') {
@@ -41,27 +41,26 @@ export default function OptionsList({
   };
 
   return (
-    <div style={style} className={cssClasses}>
-      <ul
-        aria-labelledby={labelId}
-        className={sc('list')}
-        id={id}
-        onKeyDown={onKeyDown}
-        role="listbox"
-        tabIndex={tabIndex}
-      >
-        {options.map((option, index) => (
-          <Option
-            key={option.value}
-            autoFocus={withKey && (option.value === selected || index === 0)}
-            onSelect={onSelect}
-            option={option}
-            selected={selected}
-            tabIndex={tabIndex}
-          />
-        ))}
-      </ul>
-    </div>
+    <ul
+      className={cssClasses}
+      style={style}
+      aria-labelledby={labelId}
+      id={id}
+      onKeyDown={onKeyDown}
+      role="listbox"
+      tabIndex={tabIndex}
+    >
+      {options.map((option, index) => (
+        <Option
+          key={option.value}
+          autoFocus={withKey && (option.value === selected || index === 0)}
+          onSelect={onSelect}
+          option={option}
+          selected={selected}
+          tabIndex={tabIndex}
+        />
+      ))}
+    </ul>
   );
 }
 

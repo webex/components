@@ -1,18 +1,8 @@
 $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-options-list;
 
 .#{$C} {
-  border-radius: 0.75rem;
-  box-shadow: var(--wxc-options-list--normal--box-shadow);
-  background: var(--wxc-options-list--normal--background);
-  color: var(--wxc-options-list--normal--color);
-  border: var(--wxc-options-list--normal--border);
+  list-style: none;
+  background: var(--wxc-options-list--background);
+  margin: 0;
   padding: 0.5rem;
-  overflow: auto;
-  min-height: 1.5rem;
-
-  .#{$C}__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
 }

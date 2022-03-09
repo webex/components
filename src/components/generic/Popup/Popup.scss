@@ -1,0 +1,10 @@
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-popup;
+
+.#{$C} {
+  position: fixed;
+  z-index: 1;
+  border: var(--wxc-popup--border);
+  border-radius: 0.75rem;
+  box-shadow: var(--wxc-popup--box-shadow);
+  overflow: auto;
+}
