@@ -1,3 +1,10 @@
+## [1.256.1](https://github.com/webex/components/compare/v1.256.0...v1.256.1) (2022-03-09)
+
+
+### Bug Fixes
+
+* **InputField:** set fixed height ([3dd3a42](https://github.com/webex/components/commit/3dd3a42d44e26532057fb6111895afb92a7e78e4))
+
 # [1.256.0](https://github.com/webex/components/compare/v1.255.2...v1.256.0) (2022-03-08)
 
 
