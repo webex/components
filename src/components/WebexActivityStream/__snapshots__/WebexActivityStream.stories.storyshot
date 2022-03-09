@@ -52,7 +52,11 @@ Array [
       <div
         className="wxc-activity__content"
       >
-        I'm having some issues setting up my environment 💻
+        <div
+          className="wxc-activity__message"
+        >
+          I'm having some issues setting up my environment 💻
+        </div>
       </div>
     </div>
     <div
@@ -61,7 +65,11 @@ Array [
       <div
         className="wxc-activity__content"
       >
-        Can someone help me troubleshoot?
+        <div
+          className="wxc-activity__message"
+        >
+          Can someone help me troubleshoot?
+        </div>
       </div>
     </div>
     <div
@@ -111,9 +119,13 @@ Array [
       <div
         className="wxc-activity__content"
       >
-        I ran into the same issue before! Have you checked your OS permissions?
+        <div
+          className="wxc-activity__message"
+        >
+          I ran into the same issue before! Have you checked your OS permissions?
 Sometimes that is disabled for the browser and causes the app to not load properly.
 Let me know if you need more help! Maybe we can talk about it during standup
+        </div>
       </div>
     </div>
     <div
@@ -163,7 +175,11 @@ Let me know if you need more help! Maybe we can talk about it during standup
       <div
         className="wxc-activity__content"
       >
-        Thanks, Gio! Let's talk about it then 👍🏼
+        <div
+          className="wxc-activity__message"
+        >
+          Thanks, Gio! Let's talk about it then 👍🏼
+        </div>
       </div>
     </div>
     <div
@@ -213,7 +229,11 @@ Let me know if you need more help! Maybe we can talk about it during standup
       <div
         className="wxc-activity__content"
       >
-        Hey guys! I'm going to skip standup today, not feeling great 🤢
+        <div
+          className="wxc-activity__message"
+        >
+          Hey guys! I'm going to skip standup today, not feeling great 🤢
+        </div>
       </div>
     </div>
     <div
@@ -534,7 +554,11 @@ Array [
       <div
         className="wxc-activity__content"
       >
-        The login page seems to be confusing a lot of people! Let's brainstorm some new designs
+        <div
+          className="wxc-activity__message"
+        >
+          The login page seems to be confusing a lot of people! Let's brainstorm some new designs
+        </div>
       </div>
     </div>
     <div
@@ -591,7 +615,11 @@ Array [
       <div
         className="wxc-activity__content"
       >
-        Got some of the new designs for the login page, will send the Figma links tomorrow
+        <div
+          className="wxc-activity__message"
+        >
+          Got some of the new designs for the login page, will send the Figma links tomorrow
+        </div>
       </div>
     </div>
     <div
@@ -667,7 +695,11 @@ Array [
       <div
         className="wxc-activity__content"
       >
-        Following up on our last task. Seems like we need more time?
+        <div
+          className="wxc-activity__message"
+        >
+          Following up on our last task. Seems like we need more time?
+        </div>
       </div>
     </div>
     <div
