@@ -8,8 +8,20 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-greeting;
   max-width: 37.5rem;
   text-align: center;
   color: var(--wxc-text-color);
+  margin: 0 auto;
+  margin-top: 6.25rem;
+
+  &--desktop {
+    margin-top: 11.25rem;
+  }
+
+  .#{$C}__title {
+    font-size: 1.252rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
 
   .#{$C}__description {
-    padding: 0 3.125rem;
+    color: var(--wxc-greeting--description--text-color)
   }
 }
