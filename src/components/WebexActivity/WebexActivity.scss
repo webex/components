@@ -18,7 +18,10 @@ $content-left-margin: 3.5rem; //avatar width + margin
     margin-left: $content-left-margin;
     color: var(--wxc-text-color);
     word-wrap: break-word;
-    white-space: pre-wrap;
+
+    .#{$C}__message {
+      white-space: pre-wrap;
+    }
   }
 }
 
