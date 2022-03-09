@@ -47,12 +47,7 @@ TimeRulers.parameters = {
   },
 };
 
-export const NewSpace = Template.bind({});
-NewSpace.args = {
+export const EmptySpace = Template.bind({});
+EmptySpace.args = {
   roomID: 'room3',
-};
-
-export const NewDirect = Template.bind({});
-NewDirect.args = {
-  roomID: 'room4',
 };

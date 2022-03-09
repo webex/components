@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {RoomType} from '@webex/component-adapter-interfaces';
 
 import WebexActivity from '../WebexActivity/WebexActivity';
 import webexComponentClasses from '../helpers';
@@ -11,7 +10,6 @@ import {
   useActivityScroll,
   useOverflowActivities,
   useRef,
-  useRoom,
 } from '../hooks';
 
 import Greeting from './Greeting';
@@ -35,14 +33,12 @@ export default function WebexActivityStream({className, roomID, style}) {
     dispatch({type: PREPEND_ACTIVITIES, payload: previousActivities});
   };
 
-  const {title, roomType} = useRoom(roomID);
   const activityStreamRef = useRef();
   const showLoader = useActivityScroll(roomID, activityStreamRef, loadPreviousActivities);
   const lastActivityRef = useOverflowActivities(roomID, activityStreamRef, loadPreviousActivities);
 
   const [cssClasses, sc] = webexComponentClasses('activity-stream', className);
 
-  const personName = roomType === RoomType.DIRECT ? title : '';
   const activities = activitiesData.map((activity) => {
     // If the activity is an object with a date property, it is a time ruler
     const activityComponent = activity.date ? (
@@ -57,7 +53,7 @@ export default function WebexActivityStream({className, roomID, style}) {
   return (
     <div className={cssClasses} ref={activityStreamRef} style={style}>
       {showLoader && <Loader />}
-      {activities.length ? <>{activities}</> : <Greeting personName={personName} />}
+      {activities.length ? <>{activities}</> : <Greeting />}
       <div className={sc('last-activity')} ref={lastActivityRef} />
     </div>
   );
