@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
-import {useElementPosition, useRef} from '../../hooks';
+import {useRef} from '../../hooks';
 
 import Icon from '../../generic/Icon/Icon';
 import OptionsList from '../../generic/OptionsList/OptionsList';
+import Popup from '../../generic/Popup/Popup';
 import Label from '../Label/Label';
 import {uniqueId} from '../../../util';
 
@@ -45,12 +46,10 @@ export default function Dropdown({
   value,
 }) {
   const [expanded, setExpanded] = useState(undefined);
-  const [layout, setLayout] = useState(undefined);
   const [cssClasses, sc] = webexComponentClasses('dropdown', className, {disabled});
   const label = options?.find((option) => option.value === value)?.label;
   const controlRef = useRef();
   const selectedOptionRef = useRef();
-  const position = useElementPosition(controlRef);
   const id = domId || uniqueId();
 
   const collapse = () => setExpanded(undefined);
@@ -96,16 +95,6 @@ export default function Dropdown({
 
     return cleanup;
   }, [expanded]);
-
-  useEffect(() => {
-    if (position) {
-      setLayout({
-        maxHeight: window.innerHeight - position.bottom - window.scrollY - 24,
-        minWidth: position.width,
-        top: position.bottom + 4,
-      });
-    }
-  }, [position]);
 
   useEffect(() => {
     let cleanup;
@@ -156,18 +145,19 @@ export default function Dropdown({
           <Icon name={expanded ? 'arrow-up' : 'arrow-down'} size={13} />
         </div>
         {expanded && (
-          <OptionsList
-            className={sc('options-list')}
-            id={`${id}-options`}
-            labelId={`${id}-label`}
-            onBlur={collapse}
-            onSelect={handleOptionSelect}
-            options={options}
-            selected={value}
-            style={layout}
-            tabIndex={tabIndex}
-            withKey={expanded.withKey}
-          />
+          <Popup>
+            <OptionsList
+              className={sc('options-list')}
+              id={`${id}-options`}
+              labelId={`${id}-label`}
+              onBlur={collapse}
+              onSelect={handleOptionSelect}
+              options={options}
+              selected={value}
+              tabIndex={tabIndex}
+              withKey={expanded.withKey}
+            />
+          </Popup>
         )}
       </div>
     </Label>
