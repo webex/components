@@ -1,3 +1,10 @@
+## [1.256.3](https://github.com/webex/components/compare/v1.256.2...v1.256.3) (2022-03-11)
+
+
+### Bug Fixes
+
+* **WebexActivity:** set white-space just for message text ([d69fa57](https://github.com/webex/components/commit/d69fa57b4abfc1d1c3615fc8f37bfebc415700cd))
+
 ## [1.256.2](https://github.com/webex/components/compare/v1.256.1...v1.256.2) (2022-03-11)
 
 
