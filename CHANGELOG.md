@@ -1,3 +1,10 @@
+## [1.256.2](https://github.com/webex/components/compare/v1.256.1...v1.256.2) (2022-03-11)
+
+
+### Bug Fixes
+
+* **AdaptiveCardsUtil:** change the replaceAll method for compatibility with older browsers ([adf0329](https://github.com/webex/components/commit/adf0329e523f269501b6f12a40f93bb7381e3898))
+
 ## [1.256.1](https://github.com/webex/components/compare/v1.256.0...v1.256.1) (2022-03-09)
 
 
