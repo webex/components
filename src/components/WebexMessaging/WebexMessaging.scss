@@ -1,0 +1,10 @@
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-messaging;
+
+.#{$C}__loading-logo {
+  background: var(--wxc-loading-logo--url) no-repeat center / var(--wxc-loading-logo--size);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
