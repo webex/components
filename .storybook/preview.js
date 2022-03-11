@@ -46,6 +46,7 @@ export const parameters = {
         ],
         'Messaging',
         [
+          'Webex Messaging',
           'Webex Activity Stream',
           'Webex Activity',
         ],
