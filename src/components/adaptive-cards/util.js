@@ -28,7 +28,7 @@ export function formatDateTime(text) {
 
   const formatTime = (_, date) => new Date(date).toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
 
-  return text && text.replaceAll(dateRegex, formatDate).replaceAll(timeRegex, formatTime);
+  return text && text.replace(dateRegex, formatDate).replace(timeRegex, formatTime);
 }
 
 export default {formatDateTime};
