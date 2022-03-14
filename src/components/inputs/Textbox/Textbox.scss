@@ -15,6 +15,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-textbox;
     padding: 0.25rem 0.75rem;
     text-align: left;
     resize: none;
+    -webkit-appearance: none; // to be able to display box-shadow on iOS mobile
 
     &:hover {
       background: var(--wxc-input-field--hover--background);

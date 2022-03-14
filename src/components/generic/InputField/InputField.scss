@@ -19,6 +19,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field;
     padding: 0.313rem 0.75rem 0.063rem 0.75rem;
     width: 100%;
     height: 2rem; // prevent height collapse on iOS
+    -webkit-appearance: none; // to be able to display box-shadow on iOS mobile
 
     &[type="number"] {
       -moz-appearance: textfield;
