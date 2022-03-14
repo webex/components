@@ -1,3 +1,10 @@
+## [1.256.4](https://github.com/webex/components/compare/v1.256.3...v1.256.4) (2022-03-14)
+
+
+### Bug Fixes
+
+* **logger:** remove Winston configuration from components ([9c8b056](https://github.com/webex/components/commit/9c8b056501bca69de7e828dbf3d050e319289ba7))
+
 ## [1.256.3](https://github.com/webex/components/compare/v1.256.2...v1.256.3) (2022-03-11)
 
 
