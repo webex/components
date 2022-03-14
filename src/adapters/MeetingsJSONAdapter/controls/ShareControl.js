@@ -1,4 +1,4 @@
-import {Observable} from 'rxjs';
+import {Observable, of} from 'rxjs';
 import {map, distinctUntilChanged} from 'rxjs/operators';
 import {MeetingControlState} from '@webex/component-adapter-interfaces';
 import MeetingControl from './MeetingControl';
@@ -43,8 +43,18 @@ export default class ShareControl extends MeetingControl {
       text: 'Stop sharing',
       tooltip: 'Stop sharing content',
     };
+    const notSupported = {
+      ID: this.ID,
+      type: 'TOGGLE',
+      state: MeetingControlState.DISABLED,
+      icon: 'share-screen-presence-stroke',
+      text: 'Start sharing',
+      tooltip: 'Share screen not supported',
+    };
 
-    return this.adapter.getMeeting(meetingID).pipe(
+    const browserSupport = navigator.mediaDevices && navigator.mediaDevices.getDisplayMedia;
+
+    return !browserSupport ? of(notSupported) : this.adapter.getMeeting(meetingID).pipe(
       map((meeting) => !!meeting.localShare.stream),
       distinctUntilChanged(),
       map((localShareExists) => (localShareExists ? active : inactive)),
