@@ -1,3 +1,10 @@
+# [1.257.0](https://github.com/webex/components/compare/v1.256.5...v1.257.0) (2022-03-15)
+
+
+### Features
+
+* **WebexMessaging:** add loading state to WebexMessaging ([9a749ed](https://github.com/webex/components/commit/9a749ed971c27308f2a8dc42d45ccf98b385447e))
+
 ## [1.256.5](https://github.com/webex/components/compare/v1.256.4...v1.256.5) (2022-03-15)
 
 
