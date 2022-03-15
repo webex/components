@@ -683,6 +683,7 @@ Array [
             className="wxc-input-field__right-icon"
           >
             <button
+              aria-label="Clear input"
               autoFocus={false}
               className="wxc wxc-button wxc-button--ghost"
               disabled={false}

@@ -6,6 +6,10 @@ import {InputField} from '../../generic';
 import Button from '../../generic/Button/Button';
 import Icon from '../../generic/Icon/Icon';
 
+const HINTS = {
+  clearButton: 'Clear input',
+};
+
 /**
  * NumberInput component
  *
@@ -48,7 +52,7 @@ export default function NumberInput({
   const clearInput = () => onChange('');
 
   const clearButton = (
-    <Button type="ghost" size={28} onClick={clearInput} tabIndex={tabIndex}>
+    <Button ariaLabel={HINTS.clearButton} type="ghost" size={28} onClick={clearInput} tabIndex={tabIndex}>
       <Icon name="cancel" size={16} />
     </Button>
   );

@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 import {Button, Icon, InputField} from '../../generic';
 
+const HINTS = {
+  clearButton: 'Clear input',
+};
+
 /**
  * TextInput component
  *
@@ -45,7 +49,7 @@ export default function TextInput({
   const clearInput = () => onChange('');
 
   const clearButton = (
-    <Button type="ghost" size={28} onClick={clearInput} tabIndex={tabIndex}>
+    <Button ariaLabel={HINTS.clearButton} type="ghost" size={28} onClick={clearInput} tabIndex={tabIndex}>
       <Icon name="cancel" size={16} />
     </Button>
   );
