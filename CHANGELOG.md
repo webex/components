@@ -1,3 +1,10 @@
+## [1.256.5](https://github.com/webex/components/compare/v1.256.4...v1.256.5) (2022-03-15)
+
+
+### Bug Fixes
+
+* **components:** show box-shadow on input on iOS ([331c49f](https://github.com/webex/components/commit/331c49f07b58ec5bb36b58b61c88a6078e8b03d2))
+
 ## [1.256.4](https://github.com/webex/components/compare/v1.256.3...v1.256.4) (2022-03-14)
 
 
