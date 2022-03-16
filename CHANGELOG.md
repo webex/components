@@ -1,3 +1,16 @@
+# [1.258.0](https://github.com/webex/components/compare/v1.257.1...v1.258.0) (2022-03-16)
+
+
+### Bug Fixes
+
+* **ActivitiesJsonAdapter:** use only ac Column components as children of ac ColumnSet component ([1d64874](https://github.com/webex/components/commit/1d64874f07b19c6cf0d7cc8b3d28f8cbbdf6be98))
+* **WebexActivity:** do not display the message text if the message contains a card ([9b33781](https://github.com/webex/components/commit/9b33781b1f6b0692457202e0cdad51ec3c3ecf1d))
+
+
+### Features
+
+* **Popup:** implement Popup component ([4e6610f](https://github.com/webex/components/commit/4e6610fe215f2a183bde688a6768aec8070c7871))
+
 ## [1.257.1](https://github.com/webex/components/compare/v1.257.0...v1.257.1) (2022-03-16)
 
 
