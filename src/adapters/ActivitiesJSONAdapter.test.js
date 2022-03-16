@@ -178,24 +178,37 @@ describe('Activities JSON Adapter', () => {
             items: [
               {
                 type: 'ColumnSet',
+                separator: true,
                 columns: [
                   {
-                    type: 'Input.Text',
-                    id: 'firstName',
-                    style: 'text',
-                    height: 'auto',
-                    isRequired: true,
-                    errorMessage: 'First Name is required',
-                    label: 'First Name',
+                    type: 'Column',
+                    width: 1,
+                    items: [
+                      {
+                        type: 'Input.Text',
+                        id: 'firstName',
+                        style: 'text',
+                        height: 'auto',
+                        isRequired: true,
+                        errorMessage: 'First Name is required',
+                        label: 'First Name',
+                      },
+                    ],
                   },
                   {
-                    type: 'Input.Text',
-                    id: 'lastName',
-                    style: 'text',
-                    height: 'auto',
-                    isRequired: true,
-                    errorMessage: 'Last Name is required',
-                    label: 'Last Name',
+                    type: 'Column',
+                    width: 1,
+                    items: [
+                      {
+                        type: 'Input.Text',
+                        id: 'lastName',
+                        style: 'text',
+                        height: 'auto',
+                        isRequired: true,
+                        errorMessage: 'Last Name is required',
+                        label: 'Last Name',
+                      },
+                    ],
                   },
                 ],
               },
