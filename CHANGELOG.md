@@ -1,3 +1,10 @@
+## [1.257.1](https://github.com/webex/components/compare/v1.257.0...v1.257.1) (2022-03-16)
+
+
+### Bug Fixes
+
+* **contexts:** export AdapterContext and MeetingContext ([c38f7fe](https://github.com/webex/components/commit/c38f7fe18055137be62e0ba4615e7d0f7cb7efb6))
+
 # [1.257.0](https://github.com/webex/components/compare/v1.256.5...v1.257.0) (2022-03-15)
 
 
