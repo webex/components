@@ -3,10 +3,7 @@ import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 import {acPropTypes, registerComponent} from '../Component/Component';
 import AdaptiveCardContext from '../context/adaptive-card-context';
-import {Dropdown} from '../../inputs';
-import Checkbox from '../../inputs/Checkbox/Checkbox';
-import Label from '../../inputs/Label/Label';
-import RadioButton from '../../inputs/RadioButton/RadioButton';
+import {Dropdown, CheckboxSet, RadioSet} from '../../inputs';
 import {formatDateTime} from '../util';
 import {uniqueId} from '../../../util';
 
@@ -31,7 +28,6 @@ export default function InputChoiceSet({
   const value = getValue(data.id);
   const values = value ? Object.fromEntries(String(value).split(',').map((v) => [v, true])) : {};
   const id = domId || uniqueId();
-  let input;
   let comp;
 
   useEffect(() => {
@@ -72,38 +68,33 @@ export default function InputChoiceSet({
         value={value}
       />
     );
-  } else {
-    if (data.isMultiSelect === true || data.choices.length === 1) {
-      input = data.choices.map((choice, index) => (
-        <Checkbox
-          key={index}
-          onChange={(isSelected) => onMultiChange(choice.value, isSelected)}
-          selected={values[choice.value]}
-          title={choice.title}
-        />
-      ));
-    } else {
-      input = data.choices.map((choice, index) => (
-        <RadioButton
-          key={index}
-          onChange={() => onSingleChange(choice.value)}
-          selected={choice.value === value}
-          title={choice.title}
-        />
-      ));
-    }
-
+  } else if (data.isMultiSelect === true || data.choices.length === 1) {
     comp = (
-      <Label
+      <CheckboxSet
         className={cssClasses}
         error={getError(data.id)}
         id={id}
         label={formatDateTime(data.label)}
+        onChange={onMultiChange}
+        options={data.choices.map((choice) => ({label: choice.title, value: choice.value}))}
         required={data.isRequired}
+        selected={values}
         style={style}
-      >
-        {input}
-      </Label>
+      />
+    );
+  } else {
+    comp = (
+      <RadioSet
+        className={cssClasses}
+        error={getError(data.id)}
+        id={id}
+        label={formatDateTime(data.label)}
+        onChange={onSingleChange}
+        options={data.choices.map((choice) => ({label: choice.title, value: choice.value}))}
+        required={data.isRequired}
+        selected={value}
+        style={style}
+      />
     );
   }
 

@@ -10,9 +10,10 @@ import webexComponentClasses from '../../helpers';
  * @param {string} [props.ariaLabel]  Aria-label for toggle
  * @param {string} [props.className]  Custom CSS class to apply
  * @param {boolean} [props.disabled]  Flag indicating whether toggle is disabled
- * @param {Function} [props.onChange]  Action to perform on toggle change
- * @param {boolean} props.selected  Flag indicating whether toggle is selected
+ * @param {Function} props.onChange  Action to perform on toggle change
+ * @param {boolean} [props.selected=false]  Flag indicating whether toggle is selected
  * @param {object} [props.style]  Custom style to apply
+ * @param {number} [props.tabIndex]  Value of the tabIndex
  * @param {string} [props.title]  Title for toggle
  * @returns {object} JSX of the element
  */
@@ -23,6 +24,7 @@ export default function Toggle({
   onChange,
   selected,
   style,
+  tabIndex,
   title,
 }) {
   const enabled = !disabled;
@@ -41,32 +43,29 @@ export default function Toggle({
   };
 
   return (
-    // disabling label-has-associated-control as eslint does not see role="switch" as a nested control
-    // disabling no-noninteractive-element-interactions because otherwise clicking the label does not activate the control
-    // eslint-disable-next-line jsx-a11y/label-has-associated-control,jsx-a11y/no-noninteractive-element-interactions
-    <label
+    <div
+      aria-checked={safeSelected ? 'true' : 'false'}
+      aria-disabled={disabled ? 'true' : 'false'}
+      aria-label={ariaLabel}
       className={cssClasses}
       onClick={handleClick}
       onKeyDown={handleKeyDown}
+      role="switch"
       style={style}
+      tabIndex={tabIndex}
     >
       <div
-        aria-checked={safeSelected ? 'true' : 'false'}
-        aria-disabled={disabled ? 'true' : 'false'}
-        aria-label={ariaLabel}
         className={classNames(sc('switch'), {
           [sc('switch--enabled')]: enabled,
           [sc('switch--disabled')]: disabled,
           [sc('switch--on')]: safeSelected,
           [sc('switch--off')]: !safeSelected,
         })}
-        role="switch"
-        tabIndex={0}
       >
         <span className={sc('slider')} />
       </div>
       <span className={sc('title')}>{title}</span>
-    </label>
+    </div>
   );
 }
 
@@ -74,9 +73,10 @@ Toggle.propTypes = {
   ariaLabel: PropTypes.string,
   className: PropTypes.string,
   disabled: PropTypes.bool,
-  onChange: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
   selected: PropTypes.bool,
   style: PropTypes.shape(),
+  tabIndex: PropTypes.number,
   title: PropTypes.string,
 };
 
@@ -84,8 +84,8 @@ Toggle.defaultProps = {
   ariaLabel: undefined,
   className: undefined,
   disabled: false,
-  onChange: null,
   selected: false,
   style: undefined,
+  tabIndex: 0,
   title: undefined,
 };
