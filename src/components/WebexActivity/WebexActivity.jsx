@@ -30,7 +30,7 @@ export default function WebexActivity({activityID, className, style}) {
         <ActivityHeader personID={activity.personID} timestamp={activity.created} />
       )}
       <div className={sc('content')}>
-        {activity.text && <div className={sc('message')}>{activity.text}</div>}
+        {!hasCard && activity.text && <div className={sc('message')}>{activity.text}</div>}
         {hasCard && <WebexAdaptiveCard activityID={activity.ID} />}
       </div>
     </div>

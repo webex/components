@@ -50,11 +50,6 @@ Array [
       className="wxc-activity__content"
     >
       <div
-        className="wxc-activity__message"
-      >
-        Adaptive card activity
-      </div>
-      <div
         className="wxc wxc-adaptive-card wxc wxc-ac wxc wxc-adaptive-card wxc-ac-container--vertical wxc-ac-container--has-padding"
         style={Object {}}
       >
