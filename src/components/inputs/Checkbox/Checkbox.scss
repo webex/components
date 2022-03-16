@@ -4,13 +4,13 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-checkbox;
   display: flex;
   align-items: center;
   cursor: pointer;
+  @include focusable;
 
   .#{$C}__title {
     color: var(--wxc-text-color);
     margin-left: 0.5rem;
   }
   .#{$C}__box {
-    @include focusable;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -2,7 +2,10 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-radio-button;
 
 .#{$C} {
   display: flex;
+  align-items: center;
   position: relative;
+  cursor: pointer;
+  @include focusable;
 
   &__title {
     color: var(--wxc-input--title--normal);

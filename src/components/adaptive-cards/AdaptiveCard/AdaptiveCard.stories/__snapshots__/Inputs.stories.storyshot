@@ -144,7 +144,7 @@ Array [
       }
     />
     <div
-      className="wxc wxc-label wxc wxc-adaptive-cards-input-choice-set wxc wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
+      className="wxc wxc-label wxc wxc-radio-set wxc wxc-adaptive-cards-input-choice-set wxc wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
       style={Object {}}
     >
       <label
@@ -162,46 +162,49 @@ Array [
         className="wxc-label__control"
       >
         <div
-          aria-checked={false}
-          aria-disabled={false}
-          className="wxc wxc-radio-button wxc-radio-button--enabled"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          required={false}
-          role="radio"
-          tabIndex={0}
+          aria-labelledby="wxc-0-label"
+          role="radiogroup"
         >
           <div
-            className="wxc-radio-button__background"
-          />
-          <span
-            className="wxc-radio-button__title"
-          >
-            Option 1
-          </span>
-        </div>
-        <div
-          aria-checked={true}
-          aria-disabled={false}
-          className="wxc wxc-radio-button wxc-radio-button--enabled"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          required={false}
-          role="radio"
-          tabIndex={0}
-        >
-          <div
-            className="wxc-radio-button__background"
+            aria-checked={false}
+            aria-disabled={false}
+            className="wxc wxc-radio-button wxc-radio-button--enabled"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="radio"
+            tabIndex={-1}
           >
             <div
-              className="wxc-radio-button__foreground"
+              className="wxc-radio-button__background"
             />
+            <span
+              className="wxc-radio-button__title"
+            >
+              Option 1
+            </span>
           </div>
-          <span
-            className="wxc-radio-button__title"
+          <div
+            aria-checked={true}
+            aria-disabled={false}
+            className="wxc wxc-radio-button wxc-radio-button--enabled"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="radio"
+            tabIndex={0}
           >
-            Option 2
-          </span>
+            <div
+              className="wxc-radio-button__background"
+            >
+              <div
+                className="wxc-radio-button__foreground"
+              />
+            </div>
+            <span
+              className="wxc-radio-button__title"
+            >
+              Option 2
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -214,7 +217,7 @@ Array [
       }
     />
     <div
-      className="wxc wxc-label wxc wxc-adaptive-cards-input-choice-set wxc wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
+      className="wxc wxc-label wxc wxc-radio-set wxc wxc-adaptive-cards-input-choice-set wxc wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
       style={Object {}}
     >
       <label
@@ -237,42 +240,45 @@ Array [
         className="wxc-label__control"
       >
         <div
-          aria-checked={false}
-          aria-disabled={false}
-          className="wxc wxc-radio-button wxc-radio-button--enabled"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          required={false}
-          role="radio"
-          tabIndex={0}
+          aria-labelledby="wxc-0-label"
+          role="radiogroup"
         >
           <div
-            className="wxc-radio-button__background"
-          />
-          <span
-            className="wxc-radio-button__title"
+            aria-checked={false}
+            aria-disabled={false}
+            className="wxc wxc-radio-button wxc-radio-button--enabled"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="radio"
+            tabIndex={0}
           >
-            Option 1
-          </span>
-        </div>
-        <div
-          aria-checked={false}
-          aria-disabled={false}
-          className="wxc wxc-radio-button wxc-radio-button--enabled"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          required={false}
-          role="radio"
-          tabIndex={0}
-        >
+            <div
+              className="wxc-radio-button__background"
+            />
+            <span
+              className="wxc-radio-button__title"
+            >
+              Option 1
+            </span>
+          </div>
           <div
-            className="wxc-radio-button__background"
-          />
-          <span
-            className="wxc-radio-button__title"
+            aria-checked={false}
+            aria-disabled={false}
+            className="wxc wxc-radio-button wxc-radio-button--enabled"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="radio"
+            tabIndex={-1}
           >
-            Option 2
-          </span>
+            <div
+              className="wxc-radio-button__background"
+            />
+            <span
+              className="wxc-radio-button__title"
+            >
+              Option 2
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -285,7 +291,7 @@ Array [
       }
     />
     <div
-      className="wxc wxc-label wxc wxc-adaptive-cards-input-choice-set wxc wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
+      className="wxc wxc-label wxc wxc-checkbox-set wxc wxc-adaptive-cards-input-choice-set wxc wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
       style={Object {}}
     >
       <label
@@ -302,42 +308,47 @@ Array [
       <div
         className="wxc-label__control"
       >
-        <label
-          className="wxc wxc-checkbox"
-          onClick={[Function]}
-          onKeyDown={[Function]}
+        <div
+          aria-labelledby="wxc-0-label"
+          role="group"
         >
           <div
             aria-checked={false}
             aria-disabled={false}
-            className="wxc-checkbox__box wxc-checkbox__box--enabled wxc-checkbox__box--unchecked"
+            className="wxc wxc-checkbox"
+            onClick={[Function]}
+            onKeyDown={[Function]}
             role="checkbox"
             tabIndex={0}
-          />
-          <span
-            className="wxc-checkbox__title"
           >
-            Option 1
-          </span>
-        </label>
-        <label
-          className="wxc wxc-checkbox"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-        >
+            <div
+              className="wxc-checkbox__box wxc-checkbox__box--enabled wxc-checkbox__box--unchecked"
+            />
+            <span
+              className="wxc-checkbox__title"
+            >
+              Option 1
+            </span>
+          </div>
           <div
             aria-checked={false}
             aria-disabled={false}
-            className="wxc-checkbox__box wxc-checkbox__box--enabled wxc-checkbox__box--unchecked"
+            className="wxc wxc-checkbox"
+            onClick={[Function]}
+            onKeyDown={[Function]}
             role="checkbox"
             tabIndex={0}
-          />
-          <span
-            className="wxc-checkbox__title"
           >
-            Option 2
-          </span>
-        </label>
+            <div
+              className="wxc-checkbox__box wxc-checkbox__box--enabled wxc-checkbox__box--unchecked"
+            />
+            <span
+              className="wxc-checkbox__title"
+            >
+              Option 2
+            </span>
+          </div>
+        </div>
       </div>
     </div>
     <div
@@ -349,7 +360,7 @@ Array [
       }
     />
     <div
-      className="wxc wxc-label wxc wxc-adaptive-cards-input-choice-set wxc wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
+      className="wxc wxc-label wxc wxc-checkbox-set wxc wxc-adaptive-cards-input-choice-set wxc wxc-ac wxc-ac-is-visible--true wxc-ac-container--vertical"
       style={Object {}}
     >
       <label
@@ -371,86 +382,91 @@ Array [
       <div
         className="wxc-label__control"
       >
-        <label
-          className="wxc wxc-checkbox"
-          onClick={[Function]}
-          onKeyDown={[Function]}
+        <div
+          aria-labelledby="wxc-0-label"
+          role="group"
         >
           <div
             aria-checked={true}
             aria-disabled={false}
-            className="wxc-checkbox__box wxc-checkbox__box--enabled wxc-checkbox__box--checked"
+            className="wxc wxc-checkbox"
+            onClick={[Function]}
+            onKeyDown={[Function]}
             role="checkbox"
             tabIndex={0}
           >
-            <svg
-              className="wxc-icon wxc-checkbox__checkmark"
-              height={26}
-              style={Object {}}
-              viewBox="0 0 26 18"
-              width={26}
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              className="wxc-checkbox__box wxc-checkbox__box--enabled wxc-checkbox__box--checked"
             >
-              <path
-                d="M8.20046 17.1999C8.06863 17.2002 7.93805 17.1743 7.81633 17.1236C7.69461 17.073 7.58418 16.9987 7.49146 16.905L0.291276 9.66962C0.198683 9.57651 0.125336 9.46608 0.0754228 9.34463C0.0255091 9.22317 6.0504e-06 9.09308 0.000370053 8.96177C0.000734056 8.83046 0.026958 8.70051 0.0775442 8.57933C0.12813 8.45816 0.202088 8.34813 0.295196 8.25554C0.388303 8.16295 0.498736 8.0896 0.620189 8.03969C0.741643 7.98977 0.871738 7.96427 1.00305 7.96463C1.13436 7.965 1.26431 7.99122 1.38548 8.04181C1.50666 8.09239 1.61668 8.16635 1.70928 8.25946L8.2542 14.8366L24.3499 1.04169C24.5511 0.869196 24.8126 0.783711 25.0769 0.80404C25.3412 0.824369 25.5866 0.948847 25.759 1.15009C25.9315 1.35133 26.017 1.61286 25.9967 1.87713C25.9764 2.1414 25.8519 2.38678 25.6506 2.55927L8.85085 16.9587C8.67 17.1145 8.43917 17.2001 8.20046 17.1999Z"
-              />
-            </svg>
+              <svg
+                className="wxc-icon wxc-checkbox__checkmark"
+                height={26}
+                style={Object {}}
+                viewBox="0 0 26 18"
+                width={26}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.20046 17.1999C8.06863 17.2002 7.93805 17.1743 7.81633 17.1236C7.69461 17.073 7.58418 16.9987 7.49146 16.905L0.291276 9.66962C0.198683 9.57651 0.125336 9.46608 0.0754228 9.34463C0.0255091 9.22317 6.0504e-06 9.09308 0.000370053 8.96177C0.000734056 8.83046 0.026958 8.70051 0.0775442 8.57933C0.12813 8.45816 0.202088 8.34813 0.295196 8.25554C0.388303 8.16295 0.498736 8.0896 0.620189 8.03969C0.741643 7.98977 0.871738 7.96427 1.00305 7.96463C1.13436 7.965 1.26431 7.99122 1.38548 8.04181C1.50666 8.09239 1.61668 8.16635 1.70928 8.25946L8.2542 14.8366L24.3499 1.04169C24.5511 0.869196 24.8126 0.783711 25.0769 0.80404C25.3412 0.824369 25.5866 0.948847 25.759 1.15009C25.9315 1.35133 26.017 1.61286 25.9967 1.87713C25.9764 2.1414 25.8519 2.38678 25.6506 2.55927L8.85085 16.9587C8.67 17.1145 8.43917 17.2001 8.20046 17.1999Z"
+                />
+              </svg>
+            </div>
+            <span
+              className="wxc-checkbox__title"
+            >
+              Option 1
+            </span>
           </div>
-          <span
-            className="wxc-checkbox__title"
-          >
-            Option 1
-          </span>
-        </label>
-        <label
-          className="wxc wxc-checkbox"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-        >
           <div
             aria-checked={false}
             aria-disabled={false}
-            className="wxc-checkbox__box wxc-checkbox__box--enabled wxc-checkbox__box--unchecked"
+            className="wxc wxc-checkbox"
+            onClick={[Function]}
+            onKeyDown={[Function]}
             role="checkbox"
             tabIndex={0}
-          />
-          <span
-            className="wxc-checkbox__title"
           >
-            Option 2
-          </span>
-        </label>
-        <label
-          className="wxc wxc-checkbox"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-        >
+            <div
+              className="wxc-checkbox__box wxc-checkbox__box--enabled wxc-checkbox__box--unchecked"
+            />
+            <span
+              className="wxc-checkbox__title"
+            >
+              Option 2
+            </span>
+          </div>
           <div
             aria-checked={true}
             aria-disabled={false}
-            className="wxc-checkbox__box wxc-checkbox__box--enabled wxc-checkbox__box--checked"
+            className="wxc wxc-checkbox"
+            onClick={[Function]}
+            onKeyDown={[Function]}
             role="checkbox"
             tabIndex={0}
           >
-            <svg
-              className="wxc-icon wxc-checkbox__checkmark"
-              height={26}
-              style={Object {}}
-              viewBox="0 0 26 18"
-              width={26}
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              className="wxc-checkbox__box wxc-checkbox__box--enabled wxc-checkbox__box--checked"
             >
-              <path
-                d="M8.20046 17.1999C8.06863 17.2002 7.93805 17.1743 7.81633 17.1236C7.69461 17.073 7.58418 16.9987 7.49146 16.905L0.291276 9.66962C0.198683 9.57651 0.125336 9.46608 0.0754228 9.34463C0.0255091 9.22317 6.0504e-06 9.09308 0.000370053 8.96177C0.000734056 8.83046 0.026958 8.70051 0.0775442 8.57933C0.12813 8.45816 0.202088 8.34813 0.295196 8.25554C0.388303 8.16295 0.498736 8.0896 0.620189 8.03969C0.741643 7.98977 0.871738 7.96427 1.00305 7.96463C1.13436 7.965 1.26431 7.99122 1.38548 8.04181C1.50666 8.09239 1.61668 8.16635 1.70928 8.25946L8.2542 14.8366L24.3499 1.04169C24.5511 0.869196 24.8126 0.783711 25.0769 0.80404C25.3412 0.824369 25.5866 0.948847 25.759 1.15009C25.9315 1.35133 26.017 1.61286 25.9967 1.87713C25.9764 2.1414 25.8519 2.38678 25.6506 2.55927L8.85085 16.9587C8.67 17.1145 8.43917 17.2001 8.20046 17.1999Z"
-              />
-            </svg>
+              <svg
+                className="wxc-icon wxc-checkbox__checkmark"
+                height={26}
+                style={Object {}}
+                viewBox="0 0 26 18"
+                width={26}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.20046 17.1999C8.06863 17.2002 7.93805 17.1743 7.81633 17.1236C7.69461 17.073 7.58418 16.9987 7.49146 16.905L0.291276 9.66962C0.198683 9.57651 0.125336 9.46608 0.0754228 9.34463C0.0255091 9.22317 6.0504e-06 9.09308 0.000370053 8.96177C0.000734056 8.83046 0.026958 8.70051 0.0775442 8.57933C0.12813 8.45816 0.202088 8.34813 0.295196 8.25554C0.388303 8.16295 0.498736 8.0896 0.620189 8.03969C0.741643 7.98977 0.871738 7.96427 1.00305 7.96463C1.13436 7.965 1.26431 7.99122 1.38548 8.04181C1.50666 8.09239 1.61668 8.16635 1.70928 8.25946L8.2542 14.8366L24.3499 1.04169C24.5511 0.869196 24.8126 0.783711 25.0769 0.80404C25.3412 0.824369 25.5866 0.948847 25.759 1.15009C25.9315 1.35133 26.017 1.61286 25.9967 1.87713C25.9764 2.1414 25.8519 2.38678 25.6506 2.55927L8.85085 16.9587C8.67 17.1145 8.43917 17.2001 8.20046 17.1999Z"
+                />
+              </svg>
+            </div>
+            <span
+              className="wxc-checkbox__title"
+            >
+              Option 3
+            </span>
           </div>
-          <span
-            className="wxc-checkbox__title"
-          >
-            Option 3
-          </span>
-        </label>
+        </div>
       </div>
     </div>
     <div
@@ -1501,18 +1517,18 @@ Array [
         }
       }
     />
-    <label
+    <div
+      aria-checked="false"
+      aria-disabled="false"
       className="wxc wxc-toggle wxc wxc-adaptive-cards-input-toggle wxc wxc-ac wxc-ac-is-visible--true"
       onClick={[Function]}
       onKeyDown={[Function]}
+      role="switch"
       style={Object {}}
+      tabIndex={0}
     >
       <div
-        aria-checked="false"
-        aria-disabled="false"
         className="wxc-toggle__switch wxc-toggle__switch--enabled wxc-toggle__switch--off"
-        role="switch"
-        tabIndex={0}
       >
         <span
           className="wxc-toggle__slider"
@@ -1523,7 +1539,7 @@ Array [
       >
         I accept the terms and agreements
       </span>
-    </label>
+    </div>
     <div
       className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
       style={
