@@ -99,7 +99,9 @@ Array [
                 "style": undefined,
               }
             }
-          />
+          >
+            <div />
+          </div>
           <div
             className="wxc wxc-adaptive-cards-column-set wxc wxc-ac wxc-ac-horizontal-alignment--left wxc-ac-is-visible--true wxc-ac-container--horizontal"
             style={Object {}}
@@ -113,46 +115,63 @@ Array [
               }
             />
             <div
-              className="wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--text wxc-ac-height--auto"
-              style={Object {}}
+              className="wxc wxc-adaptive-cards-column wxc wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+              style={
+                Object {
+                  "flex": 1,
+                }
+              }
             >
               <div
-                className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc-adaptive-cards-input-text__input wxc-input-field--has-right-icon"
+                className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
+                style={
+                  Object {
+                    "style": undefined,
+                  }
+                }
+              />
+              <div
+                className="wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--text wxc-ac-height--auto"
+                style={Object {}}
               >
-                <label
-                  className="wxc-label__label-text"
-                  htmlFor="wxc-0-control"
-                  id="wxc-0-label"
-                >
-                  <span
-                    className="wxc-label__text"
-                  >
-                    First Name
-                  </span>
-                  <span
-                    className="wxc-label__required"
-                  >
-                     *
-                  </span>
-                </label>
                 <div
-                  className="wxc-label__control"
+                  className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc-adaptive-cards-input-text__input wxc-input-field--has-right-icon"
                 >
-                  <div
-                    className="wxc-input-field__form-control"
+                  <label
+                    className="wxc-label__label-text"
+                    htmlFor="wxc-0-control"
+                    id="wxc-0-label"
                   >
-                    <input
-                      aria-labelledby="wxc-0-label"
-                      autoFocus={false}
-                      className="wxc-input-field__input"
-                      disabled={false}
-                      id="wxc-0-control"
-                      onChange={[Function]}
-                      required={true}
-                      tabIndex={0}
-                      type="text"
-                      value=""
-                    />
+                    <span
+                      className="wxc-label__text"
+                    >
+                      First Name
+                    </span>
+                    <span
+                      className="wxc-label__required"
+                    >
+                       *
+                    </span>
+                  </label>
+                  <div
+                    className="wxc-label__control"
+                  >
+                    <div
+                      className="wxc-input-field__form-control"
+                    >
+                      <input
+                        aria-labelledby="wxc-0-label"
+                        autoFocus={false}
+                        className="wxc-input-field__input"
+                        disabled={false}
+                        id="wxc-0-control"
+                        onChange={[Function]}
+                        required={true}
+                        tabIndex={0}
+                        type="text"
+                        value=""
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -166,46 +185,63 @@ Array [
               }
             />
             <div
-              className="wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--text wxc-ac-height--auto"
-              style={Object {}}
+              className="wxc wxc-adaptive-cards-column wxc wxc-ac wxc-ac-is-visible--true wxc-ac-vertical-content-alignment--top wxc-ac-container--vertical"
+              style={
+                Object {
+                  "flex": 1,
+                }
+              }
             >
               <div
-                className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc-adaptive-cards-input-text__input wxc-input-field--has-right-icon"
+                className="wxc wxc-ac-spacer wxc-ac-spacer--spacing--default"
+                style={
+                  Object {
+                    "style": undefined,
+                  }
+                }
+              />
+              <div
+                className="wxc wxc-adaptive-cards-input-text wxc wxc-ac wxc-ac-is-visible--true wxc-ac-input-style--text wxc-ac-height--auto"
+                style={Object {}}
               >
-                <label
-                  className="wxc-label__label-text"
-                  htmlFor="wxc-0-control"
-                  id="wxc-0-label"
-                >
-                  <span
-                    className="wxc-label__text"
-                  >
-                    Last Name
-                  </span>
-                  <span
-                    className="wxc-label__required"
-                  >
-                     *
-                  </span>
-                </label>
                 <div
-                  className="wxc-label__control"
+                  className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc-adaptive-cards-input-text__input wxc-input-field--has-right-icon"
                 >
-                  <div
-                    className="wxc-input-field__form-control"
+                  <label
+                    className="wxc-label__label-text"
+                    htmlFor="wxc-0-control"
+                    id="wxc-0-label"
                   >
-                    <input
-                      aria-labelledby="wxc-0-label"
-                      autoFocus={false}
-                      className="wxc-input-field__input"
-                      disabled={false}
-                      id="wxc-0-control"
-                      onChange={[Function]}
-                      required={true}
-                      tabIndex={0}
-                      type="text"
-                      value=""
-                    />
+                    <span
+                      className="wxc-label__text"
+                    >
+                      Last Name
+                    </span>
+                    <span
+                      className="wxc-label__required"
+                    >
+                       *
+                    </span>
+                  </label>
+                  <div
+                    className="wxc-label__control"
+                  >
+                    <div
+                      className="wxc-input-field__form-control"
+                    >
+                      <input
+                        aria-labelledby="wxc-0-label"
+                        autoFocus={false}
+                        className="wxc-input-field__input"
+                        disabled={false}
+                        id="wxc-0-control"
+                        onChange={[Function]}
+                        required={true}
+                        tabIndex={0}
+                        type="text"
+                        value=""
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
