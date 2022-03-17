@@ -1,3 +1,10 @@
+## [1.258.1](https://github.com/webex/components/compare/v1.258.0...v1.258.1) (2022-03-17)
+
+
+### Bug Fixes
+
+* **inputs:** add aria-label on clear button ([1fdc9b1](https://github.com/webex/components/commit/1fdc9b1488821209ee1608057bc8fd073d671c0d))
+
 # [1.258.0](https://github.com/webex/components/compare/v1.257.1...v1.258.0) (2022-03-16)
 
 
