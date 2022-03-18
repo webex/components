@@ -1,3 +1,10 @@
+# [1.261.0](https://github.com/webex/components/compare/v1.260.0...v1.261.0) (2022-03-18)
+
+
+### Features
+
+* **Greeting:** implement new empty state for initial activity ([1a15cfa](https://github.com/webex/components/commit/1a15cfacb24ef79de7cc551703f40dd3f803869e))
+
 # [1.260.0](https://github.com/webex/components/compare/v1.259.1...v1.260.0) (2022-03-18)
 
 
