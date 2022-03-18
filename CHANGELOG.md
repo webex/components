@@ -1,3 +1,10 @@
+# [1.260.0](https://github.com/webex/components/compare/v1.259.1...v1.260.0) (2022-03-18)
+
+
+### Features
+
+* **inputs:** add aria-errormessage and aria-invalid on inputs ([380c5d1](https://github.com/webex/components/commit/380c5d1fc5b09d2a6d09398849829b03ff9b0b75))
+
 ## [1.259.1](https://github.com/webex/components/compare/v1.259.0...v1.259.1) (2022-03-18)
 
 
