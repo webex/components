@@ -457,6 +457,7 @@ Array [
                   className="wxc-number-input__controls"
                 >
                   <button
+                    aria-label="Increase value"
                     autoFocus={false}
                     className="wxc wxc-button wxc-number-input__increment-button wxc-button--ghost"
                     disabled={false}
@@ -484,6 +485,7 @@ Array [
                   </button>
                   
                   <button
+                    aria-label="Decrease value"
                     autoFocus={false}
                     className="wxc wxc-button wxc-number-input__decrement-button wxc-button--ghost"
                     disabled={false}

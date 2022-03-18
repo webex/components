@@ -8,6 +8,8 @@ import Icon from '../../generic/Icon/Icon';
 
 const HINTS = {
   clearButton: 'Clear input',
+  increaseButton: 'Increase value',
+  decreaseButton: 'Decrease value',
 };
 
 /**
@@ -59,10 +61,22 @@ export default function NumberInput({
 
   const rightControls = (
     <div className={sc('controls')}>
-      <Button type="ghost" className={sc('increment-button')} onClick={handleIncrement} onMouseDown={(event) => event.stopPropagation()}>
+      <Button
+        ariaLabel={HINTS.increaseButton}
+        className={sc('increment-button')}
+        onClick={handleIncrement}
+        onMouseDown={(event) => event.stopPropagation()}
+        type="ghost"
+      >
         <Icon name="control-up" size={13} />
       </Button>
-      <Button type="ghost" className={sc('decrement-button')} onClick={handleDecrement} onMouseDown={(event) => event.stopPropagation()}>
+      <Button
+        ariaLabel={HINTS.decreaseButton}
+        className={sc('decrement-button')}
+        onClick={handleDecrement}
+        onMouseDown={(event) => event.stopPropagation()}
+        type="ghost"
+      >
         <Icon name="control-down" size={13} />
       </Button>
     </div>
