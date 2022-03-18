@@ -1,3 +1,10 @@
+## [1.259.1](https://github.com/webex/components/compare/v1.259.0...v1.259.1) (2022-03-18)
+
+
+### Bug Fixes
+
+* **NumberInput:** add aria-label on increase and decrease buttons ([6c5af2e](https://github.com/webex/components/commit/6c5af2e63aaf2982bbede8ee2c37b143e5661aea))
+
 # [1.259.0](https://github.com/webex/components/compare/v1.258.1...v1.259.0) (2022-03-18)
 
 
