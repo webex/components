@@ -77,6 +77,7 @@ Array [
                   <div
                     aria-controls="wxc-0-options"
                     aria-haspopup="listbox"
+                    aria-invalid="false"
                     aria-label="Use arrow keys to navigate between speaker options and hit \\"Enter\\" to select."
                     aria-labelledby="wxc-0-label"
                     className="wxc-dropdown__selected-option "
@@ -132,6 +133,7 @@ Array [
                   <div
                     aria-controls="wxc-0-options"
                     aria-haspopup="listbox"
+                    aria-invalid="false"
                     aria-label="Use arrow keys to navigate between microphone options and hit \\"Enter\\" to select."
                     aria-labelledby="wxc-0-label"
                     className="wxc-dropdown__selected-option "

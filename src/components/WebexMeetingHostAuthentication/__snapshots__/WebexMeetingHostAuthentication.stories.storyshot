@@ -50,6 +50,8 @@ Array [
             className="wxc-input-field__form-control"
           >
             <input
+              aria-errormessage=""
+              aria-invalid="false"
               aria-label="The host key is generated when a meeting is scheduled."
               aria-labelledby="wxc-0-label"
               autoFocus={true}

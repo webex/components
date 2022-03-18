@@ -200,6 +200,7 @@ Array [
           <div
             aria-controls="wxc-0-options"
             aria-haspopup="listbox"
+            aria-invalid="false"
             aria-label="Use arrow keys to navigate between camera options and hit \\"Enter\\" to select."
             aria-labelledby="wxc-0-label"
             className="wxc-dropdown__selected-option "

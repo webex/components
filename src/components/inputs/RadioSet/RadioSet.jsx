@@ -46,6 +46,8 @@ export default function RadioSet({
       style={style}
     >
       <div
+        aria-describedby={error && `${id}-error`}
+        aria-invalid={error ? 'true' : 'false'}
         aria-labelledby={`${id}-label`}
         role="radiogroup"
       >

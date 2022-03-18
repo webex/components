@@ -72,6 +72,7 @@ Array [
             className="wxc-input-field__form-control"
           >
             <input
+              aria-invalid="false"
               aria-labelledby="wxc-0-label"
               autoFocus={false}
               className="wxc-input-field__input"
@@ -120,6 +121,7 @@ Array [
             className="wxc-input-field__form-control"
           >
             <input
+              aria-invalid="false"
               aria-labelledby="wxc-0-label"
               autoFocus={false}
               className="wxc-input-field__input"
@@ -519,6 +521,7 @@ Array [
             className="wxc-input-field__form-control"
           >
             <input
+              aria-invalid="false"
               aria-labelledby="wxc-0-label"
               autoFocus={false}
               className="wxc-input-field__input"
@@ -557,6 +560,7 @@ Array [
             className="wxc-input-field__form-control"
           >
             <input
+              aria-invalid="false"
               aria-labelledby="wxc-0-label"
               autoFocus={false}
               className="wxc-input-field__input"
@@ -592,6 +596,7 @@ Array [
           className="wxc-input-field__form-control"
         >
           <input
+            aria-invalid="false"
             aria-labelledby="wxc-0-label"
             autoFocus={false}
             className="wxc-input-field__input"

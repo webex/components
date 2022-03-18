@@ -79,6 +79,8 @@ export default function InputField({
     >
       <div className={sc('form-control')}>
         <input
+          aria-errormessage={error && `${id}-error`}
+          aria-invalid={error ? 'true' : 'false'}
           aria-label={ariaLabel}
           aria-labelledby={`${id}-label`}
           // disabling no-autofocus because otherwise this element cannot be autofocused depending on the autoFocus prop

@@ -45,7 +45,10 @@ export default function CheckboxSet({
       required={required}
       style={style}
     >
+      {/* eslint-disable-next-line jsx-a11y/role-supports-aria-props */}
       <div
+        aria-describedby={error && `${id}-error`}
+        aria-invalid={error ? 'true' : 'false'}
         aria-labelledby={`${id}-label`}
         role="group"
       >
