@@ -127,6 +127,8 @@ export default function Dropdown({
       {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
       <div className={sc('control')} ref={controlRef} disabled={disabled} onKeyDown={handleKeyDown}>
         <div
+          aria-errormessage={error && `${id}-error`}
+          aria-invalid={error ? 'true' : 'false'}
           aria-controls={`${id}-options`}
           aria-expanded={expanded}
           aria-haspopup="listbox"

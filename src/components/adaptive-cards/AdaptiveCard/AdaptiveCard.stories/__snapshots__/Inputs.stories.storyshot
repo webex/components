@@ -39,6 +39,7 @@ Array [
           <div
             aria-controls="wxc-0-options"
             aria-haspopup="listbox"
+            aria-invalid="false"
             aria-labelledby="wxc-0-label"
             className="wxc-dropdown__selected-option "
             id="wxc-0-control"
@@ -106,6 +107,7 @@ Array [
           <div
             aria-controls="wxc-0-options"
             aria-haspopup="listbox"
+            aria-invalid="false"
             aria-labelledby="wxc-0-label"
             className="wxc-dropdown__selected-option "
             id="wxc-0-control"
@@ -162,6 +164,7 @@ Array [
         className="wxc-label__control"
       >
         <div
+          aria-invalid="false"
           aria-labelledby="wxc-0-label"
           role="radiogroup"
         >
@@ -240,6 +243,7 @@ Array [
         className="wxc-label__control"
       >
         <div
+          aria-invalid="false"
           aria-labelledby="wxc-0-label"
           role="radiogroup"
         >
@@ -309,6 +313,7 @@ Array [
         className="wxc-label__control"
       >
         <div
+          aria-invalid="false"
           aria-labelledby="wxc-0-label"
           role="group"
         >
@@ -383,6 +388,7 @@ Array [
         className="wxc-label__control"
       >
         <div
+          aria-invalid="false"
           aria-labelledby="wxc-0-label"
           role="group"
         >
@@ -575,6 +581,7 @@ Array [
           className="wxc-input-field__form-control"
         >
           <input
+            aria-invalid="false"
             aria-labelledby="wxc-0-label"
             autoFocus={false}
             className="wxc-input-field__input"
@@ -681,6 +688,7 @@ Array [
           className="wxc-input-field__form-control"
         >
           <input
+            aria-invalid="false"
             aria-labelledby="wxc-0-label"
             autoFocus={false}
             className="wxc-input-field__input"
@@ -905,6 +913,7 @@ Array [
             className="wxc-input-field__form-control"
           >
             <input
+              aria-invalid="false"
               aria-labelledby="wxc-0-label"
               autoFocus={false}
               className="wxc-input-field__input"
@@ -976,6 +985,7 @@ Array [
             className="wxc-input-field__form-control"
           >
             <input
+              aria-invalid="false"
               aria-labelledby="wxc-0-label"
               autoFocus={false}
               className="wxc-input-field__input"
@@ -1024,6 +1034,7 @@ Array [
             className="wxc-input-field__form-control"
           >
             <input
+              aria-invalid="false"
               aria-labelledby="wxc-0-label"
               autoFocus={false}
               className="wxc-input-field__input"
@@ -1072,6 +1083,7 @@ Array [
             className="wxc-input-field__form-control"
           >
             <input
+              aria-invalid="false"
               aria-labelledby="wxc-0-label"
               autoFocus={false}
               className="wxc-input-field__input"
@@ -1120,6 +1132,7 @@ Array [
             className="wxc-input-field__form-control"
           >
             <input
+              aria-invalid="false"
               aria-labelledby="wxc-0-label"
               autoFocus={false}
               className="wxc-input-field__input"
@@ -1343,6 +1356,7 @@ Array [
           className="wxc-input-field__form-control"
         >
           <input
+            aria-invalid="false"
             aria-labelledby="wxc-0-label"
             autoFocus={false}
             className="wxc-input-field__input"
@@ -1392,6 +1406,7 @@ Array [
           className="wxc-input-field__form-control"
         >
           <input
+            aria-invalid="false"
             aria-labelledby="wxc-0-label"
             autoFocus={false}
             className="wxc-input-field__input"
@@ -1436,6 +1451,7 @@ Array [
           className="wxc-input-field__form-control"
         >
           <input
+            aria-invalid="false"
             aria-labelledby="wxc-0-label"
             autoFocus={false}
             className="wxc-input-field__input"

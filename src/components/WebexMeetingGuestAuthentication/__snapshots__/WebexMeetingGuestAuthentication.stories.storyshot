@@ -49,6 +49,7 @@ Array [
             className="wxc-input-field__form-control"
           >
             <input
+              aria-invalid="false"
               aria-label="Your name appears in the participant list. Skip this optional field to use the name provided by the system."
               aria-labelledby="wxc-0-label"
               autoFocus={true}
@@ -85,6 +86,8 @@ Array [
             className="wxc-input-field__form-control"
           >
             <input
+              aria-errormessage=""
+              aria-invalid="false"
               aria-label="The password is provided in the invitation for a scheduled  meeting, or from the host."
               aria-labelledby="wxc-0-label"
               autoFocus={false}
