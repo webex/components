@@ -1,3 +1,10 @@
+# [1.259.0](https://github.com/webex/components/compare/v1.258.1...v1.259.0) (2022-03-18)
+
+
+### Features
+
+* **components:** improve accessibility for Checkbox, Radio button and Toggle components ([4120fbb](https://github.com/webex/components/commit/4120fbb3fdc07617605969856dfa3d4abec56273))
+
 ## [1.258.1](https://github.com/webex/components/compare/v1.258.0...v1.258.1) (2022-03-17)
 
 
