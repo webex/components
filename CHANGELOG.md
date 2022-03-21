@@ -1,3 +1,10 @@
+# [1.262.0](https://github.com/webex/components/compare/v1.261.0...v1.262.0) (2022-03-21)
+
+
+### Features
+
+* **WebexAdaptiveCard:** add onSubmit prop to notify when submit starts and ends ([bf68b7a](https://github.com/webex/components/commit/bf68b7ae5cd1d534ba96b93a29fe13d885224065))
+
 # [1.261.0](https://github.com/webex/components/compare/v1.260.0...v1.261.0) (2022-03-18)
 
 
