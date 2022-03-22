@@ -1,3 +1,10 @@
+## [1.262.1](https://github.com/webex/components/compare/v1.262.0...v1.262.1) (2022-03-22)
+
+
+### Bug Fixes
+
+* **components:** stop bubbling for processed a11y arrow key events ([85c5738](https://github.com/webex/components/commit/85c5738e5f6374c92de92e8591f65a346f40197e))
+
 # [1.262.0](https://github.com/webex/components/compare/v1.261.0...v1.262.0) (2022-03-21)
 
 
