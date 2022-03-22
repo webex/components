@@ -1,3 +1,10 @@
+# [1.263.0](https://github.com/webex/components/compare/v1.262.1...v1.263.0) (2022-03-22)
+
+
+### Features
+
+* **Button:** make tooltip appear even if button is disabled ([5d7a0ba](https://github.com/webex/components/commit/5d7a0baf65c85ef6e60f1e2526ff083ce6be3e9e))
+
 ## [1.262.1](https://github.com/webex/components/compare/v1.262.0...v1.262.1) (2022-03-22)
 
 
