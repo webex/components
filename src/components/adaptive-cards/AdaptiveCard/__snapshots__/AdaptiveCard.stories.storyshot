@@ -467,7 +467,6 @@ Array [
       <button
         autoFocus={false}
         className="wxc wxc-button wxc wxc-ac-action wxc wxc-ac-action-submit wxc wxc-ac wxc-ac-action-style--default wxc-button--primary"
-        disabled={false}
         onClick={[Function]}
         style={
           Object {

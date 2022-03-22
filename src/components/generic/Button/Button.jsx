@@ -36,7 +36,7 @@ export default function Button({
   tooltip,
   type,
 }) {
-  const [cssClasses] = webexComponentClasses('button', className, {[`${type}`]: true, pressed});
+  const [cssClasses] = webexComponentClasses('button', className, {[`${type}`]: true, pressed, disabled: isDisabled});
   const buttonRef = useRef();
 
   useAutoFocus(buttonRef, autoFocus);
@@ -45,9 +45,8 @@ export default function Button({
     <>
       <button
         className={cssClasses}
-        disabled={isDisabled}
         type="button"
-        onClick={onClick}
+        onClick={!isDisabled ? onClick : undefined}
         aria-label={ariaLabel}
         // disabling no-autofocus because otherwise this element cannot be autofocused depending on the autoFocus prop
         // eslint-disable-next-line jsx-a11y/no-autofocus

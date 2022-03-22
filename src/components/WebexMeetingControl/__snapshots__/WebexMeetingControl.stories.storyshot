@@ -9,7 +9,6 @@ Array [
       aria-label="Unmute"
       autoFocus={false}
       className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
-      disabled={false}
       onClick={[Function]}
       style={
         Object {
@@ -71,9 +70,7 @@ Array [
   >
     <button
       autoFocus={false}
-      className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
-      disabled={true}
-      onClick={[Function]}
+      className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default wxc-button--disabled"
       style={
         Object {
           "height": 48,
@@ -139,9 +136,7 @@ Array [
     <button
       aria-label="Join meeting"
       autoFocus={false}
-      className="wxc wxc-button wxc-meeting-control__control-button wxc-button--join"
-      disabled={true}
-      onClick={[Function]}
+      className="wxc wxc-button wxc-meeting-control__control-button wxc-button--join wxc-button--disabled"
       style={
         Object {
           "height": 48,
@@ -265,7 +260,6 @@ Array [
       aria-label="Unmute"
       autoFocus={false}
       className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
-      disabled={false}
       onClick={[Function]}
       style={
         Object {
@@ -329,7 +323,6 @@ Array [
       aria-label="Join meeting. Muted, video off"
       autoFocus={false}
       className="wxc wxc-button wxc-meeting-control__control-button wxc-button--join"
-      disabled={false}
       onClick={[Function]}
       style={
         Object {

@@ -47,7 +47,6 @@ Array [
       aria-label="Proceed without camera. This setting cannot be changed once the meeting starts."
       autoFocus={false}
       className="wxc wxc-button wxc-button--default"
-      disabled={false}
       onClick={[Function]}
       style={
         Object {
@@ -130,7 +129,6 @@ Array [
       aria-label="Proceed without audio. This setting cannot be changed once the meeting starts."
       autoFocus={false}
       className="wxc wxc-button wxc-button--default"
-      disabled={false}
       onClick={[Function]}
       style={
         Object {
