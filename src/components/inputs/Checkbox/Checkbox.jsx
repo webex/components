@@ -48,9 +48,11 @@ export default function Checkbox({
       onChange(!selected);
     } else if (event.key === 'ArrowUp') {
       event.preventDefault(); // prevent page scrolling
+      event.stopPropagation(); // prevent other navigation
       toFocus = ref.current.previousElementSibling;
     } else if (event.key === 'ArrowDown') {
       event.preventDefault(); // prevent page scrolling
+      event.stopPropagation(); // prevent other navigation
       toFocus = ref.current.nextElementSibling;
     }
 

@@ -42,11 +42,13 @@ export default function Tabs({
 
   const handleKeyUp = (event) => {
     if (event.key === 'ArrowLeft') {
+      event.stopPropagation(); // prevent other navigation
       const prevTabIndex = (selectedTabIndex + tabs.length - 1) % tabs.length;
 
       setTabChangedWithKey(true);
       onSelect(tabs[prevTabIndex].key);
     } else if (event.key === 'ArrowRight') {
+      event.stopPropagation(); // prevent other navigation
       const nextTabIndex = (selectedTabIndex + 1) % tabs.length;
 
       setTabChangedWithKey(true);

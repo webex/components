@@ -81,6 +81,7 @@ export default function Dropdown({
       collapse();
     } else if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
       event.preventDefault(); // prevent page scrolling
+      event.stopPropagation(); // prevent other navigation
       expand(true);
     }
   };
