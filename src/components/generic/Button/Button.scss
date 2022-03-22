@@ -11,7 +11,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-button;
   line-height: 1;
   padding: 0 0.75rem;
 
-  &:not(:disabled) {
+  &:not(.#{$C}--disabled) {
     cursor: pointer;
   }
 }
@@ -33,7 +33,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-button;
     border: var(--wxc-button--join--active--border);
   }
 
-  &:disabled {
+  &.#{$C}--disabled {
     background: var(--wxc-button--join--disabled--background);
     color: var(--wxc-button--join--disabled--color);
     border: var(--wxc-button--join--disabled--border);
@@ -58,7 +58,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-button;
     border: var(--wxc-button--default--active--border);
   }
 
-  &:disabled {
+  &.#{$C}--disabled {
     background: var(--wxc-button--default--disabled--background);
     color: var(--wxc-button--default--disabled--color);
     border: var(--wxc-button--default--disabled--border);
@@ -82,7 +82,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-button;
     border: var(--wxc-button--cancel--active--border);
   }
 
-  &:disabled {
+  &.#{$C}--disabled {
     background: var(--wxc-button--cancel--disabled--background);
     color: var(--wxc-button--cancel--disabled--color);
     border: var(--wxc-button--cancel--disabled--border);
@@ -108,7 +108,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-button;
     border: var(--wxc-button--ghost--active--border);
   }
 
-  &:disabled {
+  &.#{$C}--disabled {
     background: var(--wxc-button--ghost--disabled--background);
     color: var(--wxc-button--ghost--disabled--color);
     border: var(--wxc-button--ghost--disabled--border);
@@ -136,7 +136,7 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-button;
     border: var(--wxc-button--primary--active--border);
   }
 
-  &:disabled {
+  &.#{$C}--disabled {
     background: var(--wxc-button--primary--disabled--background);
     color: var(--wxc-button--primary--disabled--color);
     border: var(--wxc-button--primary--disabled--border);

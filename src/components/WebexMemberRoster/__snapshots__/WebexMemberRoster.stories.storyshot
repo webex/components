@@ -26,7 +26,6 @@ Array [
         aria-label="Close participants panel"
         autoFocus={false}
         className="wxc wxc-button wxc-button--ghost"
-        disabled={false}
         style={
           Object {
             "height": 28,
@@ -259,7 +258,6 @@ Array [
         aria-label="Close participants panel"
         autoFocus={false}
         className="wxc wxc-button wxc-button--ghost"
-        disabled={false}
         style={
           Object {
             "height": 28,
@@ -734,7 +732,6 @@ Array [
         aria-label="Close participants panel"
         autoFocus={false}
         className="wxc wxc-button wxc-button--ghost"
-        disabled={false}
         style={
           Object {
             "height": 28,

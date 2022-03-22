@@ -490,7 +490,6 @@ Array [
       <button
         autoFocus={false}
         className="wxc wxc-button wxc wxc-ac-action wxc wxc-ac-action-submit wxc wxc-ac wxc-ac-action-style--default wxc-button--primary"
-        disabled={false}
         onClick={[Function]}
         style={
           Object {
@@ -611,7 +610,6 @@ Array [
       <button
         autoFocus={false}
         className="wxc wxc-button wxc wxc-ac-action wxc wxc-ac-action-submit wxc wxc-ac wxc-ac-action-style--default wxc-button--primary"
-        disabled={false}
         onClick={[Function]}
         style={
           Object {
@@ -710,7 +708,6 @@ Array [
               aria-label="Clear input"
               autoFocus={false}
               className="wxc wxc-button wxc-button--ghost"
-              disabled={false}
               onClick={[Function]}
               style={
                 Object {
@@ -746,7 +743,6 @@ Array [
                 aria-label="Increase value"
                 autoFocus={false}
                 className="wxc wxc-button wxc-number-input__increment-button wxc-button--ghost"
-                disabled={false}
                 onClick={[Function]}
                 style={
                   Object {
@@ -774,7 +770,6 @@ Array [
                 aria-label="Decrease value"
                 autoFocus={false}
                 className="wxc wxc-button wxc-number-input__decrement-button wxc-button--ghost"
-                disabled={false}
                 onClick={[Function]}
                 style={
                   Object {
@@ -818,7 +813,6 @@ Array [
       <button
         autoFocus={false}
         className="wxc wxc-button wxc wxc-ac-action wxc wxc-ac-action-submit wxc wxc-ac wxc-ac-action-style--default wxc-button--primary"
-        disabled={false}
         onClick={[Function]}
         style={
           Object {
@@ -934,7 +928,6 @@ Array [
         <button
           autoFocus={false}
           className="wxc wxc-button wxc wxc-ac-action wxc wxc-ac-action-open-url wxc wxc-ac wxc-ac-action-style--default wxc-button--primary"
-          disabled={false}
           onClick={[Function]}
           style={
             Object {
@@ -1279,7 +1272,6 @@ Array [
       <button
         autoFocus={false}
         className="wxc wxc-button wxc wxc-ac-action wxc wxc-ac-action-submit wxc wxc-ac wxc-ac-action-style--default wxc-button--primary"
-        disabled={false}
         onClick={[Function]}
         style={
           Object {
@@ -1481,7 +1473,6 @@ Array [
       <button
         autoFocus={false}
         className="wxc wxc-button wxc wxc-ac-action wxc wxc-ac-action-submit wxc wxc-ac wxc-ac-action-style--default wxc-button--primary"
-        disabled={false}
         onClick={[Function]}
         style={
           Object {
@@ -1574,7 +1565,6 @@ Array [
       <button
         autoFocus={false}
         className="wxc wxc-button wxc wxc-ac-action wxc wxc-ac-action-submit wxc wxc-ac wxc-ac-action-style--default wxc-button--primary"
-        disabled={false}
         onClick={[Function]}
         style={
           Object {

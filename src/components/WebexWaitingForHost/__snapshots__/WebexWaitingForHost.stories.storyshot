@@ -79,7 +79,6 @@ Array [
         aria-label="Leave the meeting to stop waiting for the host. To return to the meeting after leaving, refresh the web browser and join again."
         autoFocus={false}
         className="wxc wxc-button wxc-button--default"
-        disabled={false}
         onClick={[Function]}
         style={
           Object {
