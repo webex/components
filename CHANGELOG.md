@@ -1,3 +1,10 @@
+# [1.264.0](https://github.com/webex/components/compare/v1.263.0...v1.264.0) (2022-03-22)
+
+
+### Features
+
+* **ShareControl:** disable share screen on mobile browsers and Internet Explorer browser ([f9bda11](https://github.com/webex/components/commit/f9bda11a1af1041292055dd17e04de2b5b640f1a))
+
 # [1.263.0](https://github.com/webex/components/compare/v1.262.1...v1.263.0) (2022-03-22)
 
 
