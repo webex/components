@@ -293,7 +293,7 @@ Array [
       
       <button
         autoFocus={false}
-        className="wxc wxc-button wxc wxc-ac-action wxc wxc-ac-action-open-url wxc wxc-ac wxc-ac-action-style--default wxc-ac-is-enabled--false wxc-ac-action--disabled wxc-button--primary wxc-button--disabled"
+        className="wxc wxc-button wxc wxc-ac-action wxc wxc-ac-action-open-url wxc wxc-ac wxc-ac-action-style--default wxc-ac-is-enabled--false wxc-ac-action--disabled wxc-button--primary"
         style={
           Object {
             "height": 32,
@@ -301,6 +301,7 @@ Array [
         }
         tabIndex={0}
         type="button"
+        wxc-disabled="true"
       >
         <span>
           Open url

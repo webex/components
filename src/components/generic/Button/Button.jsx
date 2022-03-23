@@ -36,7 +36,7 @@ export default function Button({
   tooltip,
   type,
 }) {
-  const [cssClasses] = webexComponentClasses('button', className, {[`${type}`]: true, pressed, disabled: isDisabled});
+  const [cssClasses] = webexComponentClasses('button', className, {[`${type}`]: true, pressed});
   const buttonRef = useRef();
 
   useAutoFocus(buttonRef, autoFocus);
@@ -54,6 +54,7 @@ export default function Button({
         tabIndex={tabIndex}
         ref={buttonRef}
         style={{height: size, ...style}}
+        wxc-disabled={isDisabled ? 'true' : undefined}
       >
         {children}
       </button>

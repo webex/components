@@ -70,7 +70,7 @@ Array [
   >
     <button
       autoFocus={false}
-      className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default wxc-button--disabled"
+      className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
       style={
         Object {
           "height": 48,
@@ -78,6 +78,7 @@ Array [
       }
       tabIndex={0}
       type="button"
+      wxc-disabled="true"
     >
       <svg
         className="wxc-icon wxc wxc-audio-microphone-icon"
@@ -136,7 +137,7 @@ Array [
     <button
       aria-label="Join meeting"
       autoFocus={false}
-      className="wxc wxc-button wxc-meeting-control__control-button wxc-button--join wxc-button--disabled"
+      className="wxc wxc-button wxc-meeting-control__control-button wxc-button--join"
       style={
         Object {
           "height": 48,
@@ -144,6 +145,7 @@ Array [
       }
       tabIndex={0}
       type="button"
+      wxc-disabled="true"
     >
       <span
         className="wxc-meeting-control__button-text"
