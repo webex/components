@@ -1,3 +1,10 @@
+## [1.264.2](https://github.com/webex/components/compare/v1.264.1...v1.264.2) (2022-03-23)
+
+
+### Bug Fixes
+
+* **icons:** correct the color of icon for a button in disabled state ([6da117e](https://github.com/webex/components/commit/6da117e8f15f98630db70c313d2bc619f585b2d0))
+
 ## [1.264.1](https://github.com/webex/components/compare/v1.264.0...v1.264.1) (2022-03-23)
 
 
