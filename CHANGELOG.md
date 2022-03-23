@@ -1,3 +1,10 @@
+## [1.264.1](https://github.com/webex/components/compare/v1.264.0...v1.264.1) (2022-03-23)
+
+
+### Bug Fixes
+
+* **themes:** remove color-scheme property from :root element ([e831a6d](https://github.com/webex/components/commit/e831a6d902710afd0adcf8d86d33b684c739eb9f))
+
 # [1.264.0](https://github.com/webex/components/compare/v1.263.0...v1.264.0) (2022-03-22)
 
 
