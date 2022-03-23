@@ -1,5 +1,5 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-theme-light, .md-theme-lightWebex {
-  color-scheme: light;
+  --wxc-browser-color-scheme: light;
 
   --wxc-loading-logo--url: url(../themes/light/loading.gif);
   --wxc-loading-logo--size: 11.6875rem;
