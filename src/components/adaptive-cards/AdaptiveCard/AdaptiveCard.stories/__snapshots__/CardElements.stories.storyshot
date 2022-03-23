@@ -3,7 +3,7 @@
 exports[`Storyshots Messaging/AdaptiveCard/CardElements Image 1`] = `
 Array [
   <div
-    className="wxc wxc-adaptive-card wxc wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
+    className="wxc wxc-ac-adaptive-card wxc wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
     style={Object {}}
   >
     <div
@@ -106,7 +106,7 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard/CardElements Rich Text Block 1`] = `
 Array [
   <div
-    className="wxc wxc-adaptive-card wxc wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
+    className="wxc wxc-ac-adaptive-card wxc wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
     style={Object {}}
   >
     <div
@@ -334,7 +334,7 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard/CardElements Text Block 1`] = `
 Array [
   <div
-    className="wxc wxc-adaptive-card wxc wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
+    className="wxc wxc-ac-adaptive-card wxc wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
     style={Object {}}
   >
     <div
