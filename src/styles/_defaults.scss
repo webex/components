@@ -1,5 +1,6 @@
 .wxc {
   @include body-font;
+  color-scheme: var(--wxc-browser-color-scheme);
 }
 
 .wxc, .wxc * {
