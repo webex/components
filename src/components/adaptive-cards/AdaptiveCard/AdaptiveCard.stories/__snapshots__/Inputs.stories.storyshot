@@ -3,7 +3,7 @@
 exports[`Storyshots Messaging/AdaptiveCard/Inputs Input Choice Set 1`] = `
 Array [
   <div
-    className="wxc wxc-adaptive-card wxc wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
+    className="wxc wxc-ac-adaptive-card wxc wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
     style={Object {}}
   >
     <div
@@ -533,7 +533,7 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard/Inputs Input Date 1`] = `
 Array [
   <div
-    className="wxc wxc-adaptive-card wxc wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
+    className="wxc wxc-ac-adaptive-card wxc wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
     style={Object {}}
   >
     <div
@@ -653,7 +653,7 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard/Inputs Input Number 1`] = `
 Array [
   <div
-    className="wxc wxc-adaptive-card wxc wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
+    className="wxc wxc-ac-adaptive-card wxc wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
     style={Object {}}
   >
     <div
@@ -856,7 +856,7 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard/Inputs Input Text 1`] = `
 Array [
   <div
-    className="wxc wxc-adaptive-card wxc wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
+    className="wxc wxc-ac-adaptive-card wxc wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
     style={Object {}}
   >
     <div
@@ -1315,7 +1315,7 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard/Inputs Input Time 1`] = `
 Array [
   <div
-    className="wxc wxc-adaptive-card wxc wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
+    className="wxc wxc-ac-adaptive-card wxc wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
     style={Object {}}
   >
     <div
@@ -1516,7 +1516,7 @@ Array [
 exports[`Storyshots Messaging/AdaptiveCard/Inputs Input Toggle 1`] = `
 Array [
   <div
-    className="wxc wxc-adaptive-card wxc wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
+    className="wxc wxc-ac-adaptive-card wxc wxc-ac wxc-ac-container--vertical wxc-ac-container--has-padding"
     style={Object {}}
   >
     <div

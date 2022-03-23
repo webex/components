@@ -1,0 +1,26 @@
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-adaptive-card;
+
+.#{$C} {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  .#{$C}__card {
+    flex: 1;
+  }
+
+  .#{$C}__status {
+    display: flex;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    padding-left: 1rem;
+    color: var(--wxc-adaptive-cards--color--light);
+
+    &--error {
+      color: var(--wxc-adaptive-cards--color--attention);
+      background-color: var(--wxc-adaptive-cards--background--attention);
+      border-radius: 0.5rem;
+    }
+  }
+}

@@ -43,7 +43,7 @@ import '../TextRun/TextRun';
 function AdaptiveCardInternal({
   action, data, className, inherited, style,
 }) {
-  const [cssClasses] = webexComponentClasses('adaptive-card', [className, 'wxc-ac-container--has-padding']);
+  const [cssClasses] = webexComponentClasses('ac-adaptive-card', [className, 'wxc-ac-container--has-padding']);
   let showFallbackText = false;
 
   if (data.$schema && data.$schema !== 'http://adaptivecards.io/schemas/adaptive-card.json') {
