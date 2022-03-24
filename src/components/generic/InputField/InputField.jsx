@@ -66,6 +66,14 @@ export default function InputField({
   const handleChange = (event) => onChange(event.target.value);
   const id = domId || uniqueId();
 
+  const onKeyDown = (event) => {
+    const keys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
+
+    if (keys.includes(event.key)) {
+      event.stopPropagation(); // prevent other navigation
+    }
+  };
+
   useAutoFocus(inputRef, autoFocus);
 
   return (
@@ -94,6 +102,7 @@ export default function InputField({
           min={min}
           name={name}
           onChange={handleChange}
+          onKeyDown={onKeyDown}
           pattern={pattern}
           placeholder={placeholder}
           ref={inputRef}

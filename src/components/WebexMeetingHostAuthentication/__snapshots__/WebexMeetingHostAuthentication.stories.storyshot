@@ -60,6 +60,7 @@ Array [
               id="wxc-0-control"
               name="password"
               onChange={[Function]}
+              onKeyDown={[Function]}
               required={false}
               tabIndex={101}
               type="password"

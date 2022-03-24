@@ -79,6 +79,7 @@ Array [
               disabled={false}
               id="wxc-0-control"
               onChange={[Function]}
+              onKeyDown={[Function]}
               required={false}
               tabIndex={0}
               type="text"
@@ -128,6 +129,7 @@ Array [
               disabled={false}
               id="wxc-0-control"
               onChange={[Function]}
+              onKeyDown={[Function]}
               required={false}
               tabIndex={0}
               type="text"
@@ -521,6 +523,7 @@ Array [
               disabled={false}
               id="wxc-0-control"
               onChange={[Function]}
+              onKeyDown={[Function]}
               placeholder="What is your first name?"
               required={true}
               tabIndex={0}
@@ -560,6 +563,7 @@ Array [
               disabled={false}
               id="wxc-0-control"
               onChange={[Function]}
+              onKeyDown={[Function]}
               placeholder="What is your last name?"
               required={false}
               tabIndex={0}
@@ -598,6 +602,7 @@ Array [
             max={10}
             min={1}
             onChange={[Function]}
+            onKeyDown={[Function]}
             placeholder="Enter a number between 1 and 10"
             required={false}
             tabIndex={0}
