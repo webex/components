@@ -34,27 +34,20 @@ const Tooltip = ({
 
   useEffect(() => {
     let cleanup;
+    const isTouchDevice = ('ontouchstart' in window) ||
+         (navigator.maxTouchPoints > 0) ||
+         (navigator.msMaxTouchPoints > 0);
 
-    if (target) {
+    if (target && !isTouchDevice) {
       const show = () => setTooltipVisible(true);
       const hide = () => setTooltipVisible(false);
-
-      target.addEventListener('touchstart', show);
-      target.addEventListener('touchend', hide);
 
       target.addEventListener('mouseenter', show);
       target.addEventListener('mouseleave', hide);
 
-      target.addEventListener('click', hide);
-
       cleanup = () => {
-        target.removeEventListener('touchstart', show);
-        target.removeEventListener('touchend', hide);
-
         target.removeEventListener('mouseenter', show);
         target.removeEventListener('mouseleave', hide);
-
-        target.removeEventListener('click', hide);
       };
     }
 
