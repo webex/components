@@ -58,6 +58,7 @@ Array [
               id="wxc-0-control"
               name="name"
               onChange={[Function]}
+              onKeyDown={[Function]}
               required={false}
               tabIndex={101}
               type="text"
@@ -96,6 +97,7 @@ Array [
               id="wxc-0-control"
               name="password"
               onChange={[Function]}
+              onKeyDown={[Function]}
               required={false}
               tabIndex={102}
               type="password"

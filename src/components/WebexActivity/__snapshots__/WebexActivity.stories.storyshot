@@ -173,6 +173,7 @@ Array [
                             disabled={false}
                             id="wxc-0-control"
                             onChange={[Function]}
+                            onKeyDown={[Function]}
                             required={true}
                             tabIndex={0}
                             type="text"
@@ -244,6 +245,7 @@ Array [
                             disabled={false}
                             id="wxc-0-control"
                             onChange={[Function]}
+                            onKeyDown={[Function]}
                             required={true}
                             tabIndex={0}
                             type="text"
@@ -300,6 +302,7 @@ Array [
                         disabled={false}
                         id="wxc-0-control"
                         onChange={[Function]}
+                        onKeyDown={[Function]}
                         required={true}
                         tabIndex={0}
                         type="email"
@@ -422,6 +425,7 @@ Array [
                     max={10}
                     min={1}
                     onChange={[Function]}
+                    onKeyDown={[Function]}
                     placeholder="Please select the number of guests"
                     required={true}
                     tabIndex={0}
@@ -595,6 +599,7 @@ Array [
                         disabled={false}
                         id="wxc-0-control"
                         onChange={[Function]}
+                        onKeyDown={[Function]}
                         required={true}
                         tabIndex={0}
                         type="date"
@@ -662,6 +667,7 @@ Array [
                         disabled={false}
                         id="wxc-0-control"
                         onChange={[Function]}
+                        onKeyDown={[Function]}
                         required={true}
                         tabIndex={0}
                         type="time"
@@ -714,6 +720,7 @@ Array [
                     disabled={false}
                     id="wxc-0-control"
                     onChange={[Function]}
+                    onKeyDown={[Function]}
                     required={true}
                     tabIndex={0}
                     type="date"

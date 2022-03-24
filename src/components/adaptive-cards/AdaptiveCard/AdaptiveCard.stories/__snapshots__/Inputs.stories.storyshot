@@ -587,6 +587,7 @@ Array [
             disabled={false}
             id="wxc-0-control"
             onChange={[Function]}
+            onKeyDown={[Function]}
             required={false}
             tabIndex={0}
             type="date"
@@ -695,6 +696,7 @@ Array [
             max={10}
             min={1}
             onChange={[Function]}
+            onKeyDown={[Function]}
             placeholder="Enter a number"
             required={false}
             tabIndex={0}
@@ -914,6 +916,7 @@ Array [
               disabled={false}
               id="wxc-0-control"
               onChange={[Function]}
+              onKeyDown={[Function]}
               required={true}
               tabIndex={0}
               type="text"
@@ -985,6 +988,7 @@ Array [
               disabled={false}
               id="wxc-0-control"
               onChange={[Function]}
+              onKeyDown={[Function]}
               required={false}
               tabIndex={0}
               type="email"
@@ -1034,6 +1038,7 @@ Array [
               disabled={false}
               id="wxc-0-control"
               onChange={[Function]}
+              onKeyDown={[Function]}
               required={false}
               tabIndex={0}
               type="tel"
@@ -1083,6 +1088,7 @@ Array [
               disabled={false}
               id="wxc-0-control"
               onChange={[Function]}
+              onKeyDown={[Function]}
               required={false}
               tabIndex={0}
               type="url"
@@ -1132,6 +1138,7 @@ Array [
               disabled={false}
               id="wxc-0-control"
               onChange={[Function]}
+              onKeyDown={[Function]}
               required={false}
               tabIndex={0}
               type="password"
@@ -1192,6 +1199,7 @@ Array [
             id="wxc-0-control"
             maxLength={500}
             onChange={[Function]}
+            onKeyDown={[Function]}
             placeholder="enter comment"
             rows={5}
             value=""
@@ -1250,6 +1258,7 @@ Array [
             id="wxc-0-control"
             maxLength={500}
             onChange={[Function]}
+            onKeyDown={[Function]}
             placeholder="enter comment"
             rows={5}
             value="This value was pre-filled"
@@ -1355,6 +1364,7 @@ Array [
             disabled={false}
             id="wxc-0-control"
             onChange={[Function]}
+            onKeyDown={[Function]}
             required={false}
             tabIndex={0}
             type="time"
@@ -1405,6 +1415,7 @@ Array [
             disabled={false}
             id="wxc-0-control"
             onChange={[Function]}
+            onKeyDown={[Function]}
             required={true}
             tabIndex={0}
             type="time"
@@ -1450,6 +1461,7 @@ Array [
             disabled={false}
             id="wxc-0-control"
             onChange={[Function]}
+            onKeyDown={[Function]}
             required={false}
             tabIndex={0}
             type="time"

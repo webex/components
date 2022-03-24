@@ -119,7 +119,7 @@ NumberInput.propTypes = {
   required: PropTypes.bool,
   style: PropTypes.shape(),
   tabIndex: PropTypes.number,
-  value: PropTypes.oneOf([
+  value: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.string,
   ]),

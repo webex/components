@@ -41,6 +41,14 @@ export default function Textbox({
   const [cssClasses, sc] = webexComponentClasses('textbox', className);
   const id = domId || uniqueId();
 
+  const onKeyDown = (event) => {
+    const keys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
+
+    if (keys.includes(event.key)) {
+      event.stopPropagation(); // prevent other navigation
+    }
+  };
+
   return (
     <Label
       className={cssClasses}
@@ -59,6 +67,7 @@ export default function Textbox({
         maxLength={maxLength}
         name={name}
         onChange={(event) => onChange(event.target.value)}
+        onKeyDown={onKeyDown}
         placeholder={placeholder}
         rows={5}
         value={value}
