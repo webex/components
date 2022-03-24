@@ -1,9 +1,10 @@
 {
   "name": "@webex/components",
   "version": "1.264.2",
-  "browser": "dist/es/webex-components.es.min.js",
+  "browser": "dist/umd/webex-components.umd.min.js",
   "unpkg": "dist/umd/webex-components.umd.min.js",
   "module": "dist/es/webex-components.es.min.js",
+  "main": "dist/es/webex-components.es.min.js",
   "scripts": {
     "build": "rollup -c",
     "linter": "eslint src/ --ext .js,.jsx",
