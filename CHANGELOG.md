@@ -1,3 +1,10 @@
+# [1.265.0](https://github.com/webex/components/compare/v1.264.2...v1.265.0) (2022-03-24)
+
+
+### Features
+
+* **WebexAdaptiveCard:** add submit status message ([38c64a5](https://github.com/webex/components/commit/38c64a5f3a4fc2c38d8f3aed063ae0236382517a))
+
 ## [1.264.2](https://github.com/webex/components/compare/v1.264.1...v1.264.2) (2022-03-23)
 
 
