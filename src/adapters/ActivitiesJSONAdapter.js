@@ -120,6 +120,7 @@ export default class ActivitiesJSONAdapter extends ActivitiesAdapter {
         const newActivity = {
           attachments: [],
           actions: [],
+          cards: [],
           ...activity,
           ID,
           personID: 'user1',
@@ -139,42 +140,25 @@ export default class ActivitiesJSONAdapter extends ActivitiesAdapter {
   }
 
   /**
-   * A function that checks whether or not an Activity object contains a card attachment.
+   * A function that checks whether or not an Activity object contains at least one adaptive card.
    *
    * @param {Activity} activity  Activity object
-   * @returns {boolean} True if received Activity object contains a card attachment
+   * @returns {boolean} True if received Activity object contains at least one adaptive card
    */
   // eslint-disable-next-line class-methods-use-this
-  hasAdaptiveCard(activity) {
-    return !!(activity.attachments && activity.attachments[0] && activity.attachments[0].contentType === 'application/vnd.microsoft.card.adaptive');
+  hasAdaptiveCards(activity) {
+    return activity.cards.length > 0;
   }
 
   /**
    * A function that returns adaptive card data of an Activity object.
    *
    * @param {Activity} activity  Activity object
+   * @param {number} cardIndex  Index of the adaptive card to get
    * @returns {object|undefined} Adaptive card data object
    */
   // eslint-disable-next-line class-methods-use-this
-  getAdaptiveCard(activity) {
-    const hasCard = this.hasAdaptiveCard(activity);
-
-    return hasCard ? activity.attachments[0].content : undefined;
-  }
-
-  /**
-   * A function that attaches an adaptive card to an Activity object.
-   *
-   * @param {Activity} activity  The activity to post
-   * @param {object} card  The card attachment
-   */
-  // eslint-disable-next-line class-methods-use-this
-  attachAdaptiveCard(activity, card) {
-    const mutableActivity = activity;
-
-    mutableActivity.attachments = [{
-      contenType: 'application/vnd.microsoft.card.adaptive',
-      content: card,
-    }];
+  getAdaptiveCard(activity, cardIndex) {
+    return activity.cards[cardIndex];
   }
 }

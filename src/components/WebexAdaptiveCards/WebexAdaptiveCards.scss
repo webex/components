@@ -1,0 +1,12 @@
+$C: wxc-adaptive-cards;
+
+.#{$C} {
+  display: flex;
+  flex-direction: column;
+
+  .#{$C}__card {
+    flex: 1;
+    align-self: stretch;
+    margin-bottom: 0.5rem;
+  }
+}

@@ -17,7 +17,7 @@ import {AdapterContext} from './contexts';
  * @returns {Activity} Data of the activity
  */
 export default function useActivity(activityID) {
-  const [activity, setActivity] = useState({});
+  const [activity, setActivity] = useState({cards: []});
   const adapter = useContext(AdapterContext);
   const activitiesAdapter = adapter && adapter.activitiesAdapter;
 
@@ -25,7 +25,7 @@ export default function useActivity(activityID) {
     let cleanup;
 
     if (!activitiesAdapter || !activityID) {
-      setActivity({});
+      setActivity({cards: []});
       cleanup = undefined;
     } else {
       const onError = (error) => {
