@@ -20,6 +20,7 @@ import AdaptiveCard from '../adaptive-cards/AdaptiveCard/AdaptiveCard';
  * @param {object} props  Data passed to the component
  * @param {string} props.activityID  ID of the activity corresponding to this card
  * @param {string} [props.className]  Custom CSS class to apply
+ * @param {number} props.cardIndex  Index of the card to display
  * @param {string} [props.msgSubmitStarted]  Message to display while submitting user input
  * @param {string} [props.msgSubmitSuccess]  Message to display when submit finished with success
  * @param {string} [props.msgSubmitFail]  Message to display when submit failed
@@ -30,13 +31,14 @@ import AdaptiveCard from '../adaptive-cards/AdaptiveCard/AdaptiveCard';
 export default function WebexAdaptiveCard({
   activityID,
   className,
+  cardIndex,
   msgSubmitFail,
   msgSubmitStarted,
   msgSubmitSuccess,
   onSubmit,
   style,
 }) {
-  const [card, submit] = useAdaptiveCard(activityID);
+  const [card, submit] = useAdaptiveCard(activityID, cardIndex);
   const [cssClasses, sc] = webexComponentClasses('adaptive-card', className);
   const [submitStatus, setSubmitStatus] = useState({});
 
@@ -74,6 +76,7 @@ export default function WebexAdaptiveCard({
 WebexAdaptiveCard.propTypes = {
   activityID: PropTypes.string.isRequired,
   className: PropTypes.string,
+  cardIndex: PropTypes.number.isRequired,
   msgSubmitFail: PropTypes.string,
   msgSubmitStarted: PropTypes.string,
   msgSubmitSuccess: PropTypes.string,

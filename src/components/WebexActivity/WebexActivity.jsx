@@ -6,7 +6,7 @@ import {useActivity} from '../hooks';
 import {AdapterContext} from '../hooks/contexts';
 
 import ActivityHeader from './ActivityHeader';
-import WebexAdaptiveCard from '../WebexAdaptiveCard/WebexAdaptiveCard';
+import WebexAdaptiveCards from '../WebexAdaptiveCards/WebexAdaptiveCards';
 
 /**
  * WebexActivity component displays activity content.
@@ -20,7 +20,7 @@ import WebexAdaptiveCard from '../WebexAdaptiveCard/WebexAdaptiveCard';
 export default function WebexActivity({activityID, className, style}) {
   const activity = useActivity(activityID);
   const adapter = useContext(AdapterContext);
-  const hasCard = adapter?.activitiesAdapter?.hasAdaptiveCard(activity);
+  const hasCards = adapter?.activitiesAdapter?.hasAdaptiveCards(activity);
 
   const [cssClasses, sc] = webexComponentClasses('activity', className);
 
@@ -30,8 +30,8 @@ export default function WebexActivity({activityID, className, style}) {
         <ActivityHeader personID={activity.personID} timestamp={activity.created} />
       )}
       <div className={sc('content')}>
-        {!hasCard && activity.text && <div className={sc('message')}>{activity.text}</div>}
-        {hasCard && <WebexAdaptiveCard activityID={activity.ID} />}
+        {!hasCards && activity.text && <div className={sc('message')}>{activity.text}</div>}
+        {hasCards && <WebexAdaptiveCards activityID={activity.ID} />}
       </div>
     </div>
   );
