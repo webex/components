@@ -21,8 +21,10 @@ export default class DisabledMuteAudioControl extends MeetingControl {
       observer.next({
         ID: this.ID,
         type: 'BUTTON',
-        icon: 'microphone',
+        icon: 'microphone-muted',
         state: MeetingControlState.DISABLED,
+        text: 'No microphone',
+        tooltip: 'No microphone available',
       });
 
       observer.complete();

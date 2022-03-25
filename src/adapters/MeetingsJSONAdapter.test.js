@@ -828,7 +828,6 @@ describe('Meetings JSON Adapter', () => {
       const availableControls = meetingsJSONAdapter.supportedControls();
 
       expect(availableControls.sort()).toEqual([
-        'disabled-join-meeting',
         'disabled-mute-audio',
         'join-meeting',
         'leave-meeting',

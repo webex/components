@@ -1,4 +1,3 @@
-export {default as DisabledJoinControl} from './DisabledJoinControl';
 export {default as DisabledMuteAudioControl} from './DisabledMuteAudioControl';
 export {default as JoinControl} from './JoinControl';
 export {default as LeaveControl} from './LeaveControl';

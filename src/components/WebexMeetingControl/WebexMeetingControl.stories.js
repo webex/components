@@ -35,7 +35,7 @@ Text.args = {
 
 export const DisabledText = Template.bind({});
 DisabledText.args = {
-  type: 'disabled-join-meeting',
+  type: 'join-meeting',
   meetingID: 'meeting1',
 };
 

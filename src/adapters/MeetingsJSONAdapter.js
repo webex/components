@@ -4,7 +4,6 @@ import {MeetingsAdapter, MeetingState} from '@webex/component-adapter-interfaces
 
 import {deepMerge} from '../util';
 
-import DisabledJoinControl from './MeetingsJSONAdapter/controls/DisabledJoinControl';
 import DisabledMuteAudioControl from './MeetingsJSONAdapter/controls/DisabledMuteAudioControl';
 import JoinControl from './MeetingsJSONAdapter/controls/JoinControl';
 import LeaveControl from './MeetingsJSONAdapter/controls/LeaveControl';
@@ -165,7 +164,6 @@ export default class MeetingsJSONAdapter extends MeetingsAdapter {
       [LEAVE_CONTROL]: new LeaveControl(this, LEAVE_CONTROL),
       [DISABLED_MUTE_AUDIO_CONTROL]:
         new DisabledMuteAudioControl(this, DISABLED_MUTE_AUDIO_CONTROL),
-      [DISABLED_JOIN_CONTROL]: new DisabledJoinControl(this, DISABLED_JOIN_CONTROL),
       [ROSTER_CONTROL]: new RosterControl(this, ROSTER_CONTROL),
       [SETTINGS_CONTROL]: new SettingsControl(this, SETTINGS_CONTROL),
       [SWITCH_CAMERA_CONTROL]: new SwitchCameraControl(this, SWITCH_CAMERA_CONTROL),
