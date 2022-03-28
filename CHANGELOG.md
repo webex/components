@@ -1,3 +1,10 @@
+# [1.266.0](https://github.com/webex/components/compare/v1.265.0...v1.266.0) (2022-03-28)
+
+
+### Features
+
+* **WebexAdaptiveCard:** allow rendering of more than one adaptive card for an activity ([076cc53](https://github.com/webex/components/commit/076cc530110b753fd48b9e8ed4d861dcd0d5b79c))
+
 # [1.265.0](https://github.com/webex/components/compare/v1.264.2...v1.265.0) (2022-03-24)
 
 
