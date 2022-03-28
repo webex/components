@@ -1,3 +1,10 @@
+## [1.266.1](https://github.com/webex/components/compare/v1.266.0...v1.266.1) (2022-03-28)
+
+
+### Bug Fixes
+
+* **InputField,Textarea:** stop bubbling for processed arrow key events ([0c46a27](https://github.com/webex/components/commit/0c46a279781d46c7c101b23dd0402fe9bc417a85))
+
 # [1.266.0](https://github.com/webex/components/compare/v1.265.0...v1.266.0) (2022-03-28)
 
 
