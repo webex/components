@@ -1,4 +1,6 @@
+import {useContext} from 'react';
 import {isValidUrl} from '../../../util';
+import AdaptiveCardContext from '../context/adaptive-card-context';
 
 /**
  * HTML attributes for the action target element.
@@ -17,14 +19,19 @@ import {isValidUrl} from '../../../util';
  * @param {object} data  Action properties
  * @returns {ActionAttributes|undefined} Action attributes
  */
-export default function useActionSubmit(data) {
+export default function useActionOpenUrl(data) {
+  const {onOpenUrl} = useContext(AdaptiveCardContext);
+
   let handleAction;
 
   if (data?.type === 'Action.OpenUrl') {
     const isValidHttpUrl = isValidUrl(data.url, ['https:', 'http:']);
 
     if (isValidHttpUrl) {
-      handleAction = () => window.open(data.url, '_blank');
+      handleAction = () => {
+        window.open(data.url, '_blank');
+        onOpenUrl(data.url);
+      };
     }
   }
 
