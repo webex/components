@@ -7,11 +7,26 @@ import {useAdaptiveCard} from '../hooks';
 import AdaptiveCard from '../adaptive-cards/AdaptiveCard/AdaptiveCard';
 
 /**
- * Action to perform when submitting a card
+ * Called when an open url action was performed
+ *
+ * @callback openUrlCallback
+ * @param {string} url  Opened url
+ */
+
+/**
+ * Called when a show card action was performed
+ *
+ * @callback showCardCallback
+ * @param {boolean} shown  Flag to indicate whether the card is shown or hidden
+ * @param {object} card  Card
+ */
+
+/**
+ * Called when a submit action was performed
  *
  * @callback submitCallback
- * @param {object} inputs  Data to submit
  * @param {Promise<object>} submitPromise  Promise that resolves to the submitted action
+ * @param {object} inputs  Data to submit
  */
 
 /**
@@ -24,7 +39,9 @@ import AdaptiveCard from '../adaptive-cards/AdaptiveCard/AdaptiveCard';
  * @param {string} [props.msgSubmitStarted]  Message to display while submitting user input
  * @param {string} [props.msgSubmitSuccess]  Message to display when submit finished with success
  * @param {string} [props.msgSubmitFail]  Message to display when submit failed
- * @param {submitCallback} [props.onSubmit]  Action to perform when submitting a card
+ * @param {openUrlCallback} [props.onOpenUrl]  Called when an open url action was performed
+ * @param {showCardCallback} [props.onShowCard]  Called when a show card action was performed
+ * @param {submitCallback} [props.onSubmit]  Called when a submit action was performed
  * @param {object} [props.style]  Custom style to apply
  * @returns {object} JSX of the component
  */
@@ -35,6 +52,8 @@ export default function WebexAdaptiveCard({
   msgSubmitFail,
   msgSubmitStarted,
   msgSubmitSuccess,
+  onOpenUrl,
+  onShowCard,
   onSubmit,
   style,
 }) {
@@ -64,6 +83,8 @@ export default function WebexAdaptiveCard({
       <AdaptiveCard
         className={sc('card')}
         template={card}
+        onOpenUrl={onOpenUrl}
+        onShowCard={onShowCard}
         onSubmit={handleSubmit}
       />
       {submitStatus.message && (
@@ -80,6 +101,8 @@ WebexAdaptiveCard.propTypes = {
   msgSubmitFail: PropTypes.string,
   msgSubmitStarted: PropTypes.string,
   msgSubmitSuccess: PropTypes.string,
+  onOpenUrl: PropTypes.func,
+  onShowCard: PropTypes.func,
   onSubmit: PropTypes.func,
   style: PropTypes.shape(),
 };
@@ -89,6 +112,8 @@ WebexAdaptiveCard.defaultProps = {
   msgSubmitFail: 'Error',
   msgSubmitStarted: 'Sending...',
   msgSubmitSuccess: 'Sent',
+  onOpenUrl: () => {},
+  onShowCard: () => {},
   onSubmit: () => {},
   style: undefined,
 };

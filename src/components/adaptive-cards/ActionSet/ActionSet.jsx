@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 import Component, {acPropTypes, registerComponent} from '../Component/Component';
+import AdaptiveCardContext from '../context/adaptive-card-context';
 
 /**
  * Adaptive Cards ActionSet component
@@ -17,11 +18,15 @@ import Component, {acPropTypes, registerComponent} from '../Component/Component'
 export default function ActionSet({
   data, className, inherited, style,
 }) {
+  const {onShowCard} = useContext(AdaptiveCardContext);
   const [cssClasses] = webexComponentClasses('adaptive-cards-action-set', className);
   const [shownCards, setShownCards] = useState({});
 
   const toggleCard = (index) => {
-    setShownCards({...shownCards, [index]: !shownCards[index]});
+    const shown = !shownCards[index];
+
+    setShownCards({...shownCards, [index]: shown});
+    onShowCard(shown, data.actions[index]?.card);
   };
 
   return (

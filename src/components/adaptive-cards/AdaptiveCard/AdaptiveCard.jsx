@@ -107,6 +107,8 @@ registerComponent('AdaptiveCard', AdaptiveCardInternal, 'vertical');
  * @param {object} [props.context]  Provided data for binding to Adaptive Card
  * @param {string} [props.className]  Custom CSS class to apply
  * @param {object} [props.style]  Custom style to apply
+ * @param {Function} [props.onOpenUrl]  Called when an open url action was performed
+ * @param {Function} [props.onShowCard]  Called when a show card action was performed
  * @param {Function} [props.onSubmit]  Action to perform on submit
  * @param {Function} [props.onInvalidSubmit]  Action to perform on invalid submit
  * @returns {object} JSX of the component
@@ -116,6 +118,8 @@ export default function AdaptiveCard({
   context,
   className,
   style,
+  onOpenUrl,
+  onShowCard,
   onSubmit,
   onInvalidSubmit,
 }) {
@@ -220,6 +224,8 @@ export default function AdaptiveCard({
         setElement,
         setIsVisible,
         getIsVisible,
+        onOpenUrl,
+        onShowCard,
       }}
     >
       <Component data={data} className={className} inherited={inherited} style={style} />
@@ -232,6 +238,8 @@ AdaptiveCard.propTypes = {
   context: PropTypes.shape(),
   className: PropTypes.string,
   style: PropTypes.shape(),
+  onOpenUrl: PropTypes.func,
+  onShowCard: PropTypes.func,
   onSubmit: PropTypes.func,
   onInvalidSubmit: PropTypes.func,
 };
@@ -240,6 +248,8 @@ AdaptiveCard.defaultProps = {
   className: undefined,
   context: undefined,
   style: undefined,
+  onOpenUrl: undefined,
+  onShowCard: undefined,
   onSubmit: undefined,
   onInvalidSubmit: undefined,
 };
