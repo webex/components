@@ -1,3 +1,10 @@
+# [1.267.0](https://github.com/webex/components/compare/v1.266.1...v1.267.0) (2022-03-29)
+
+
+### Features
+
+* **AdaptiveCards:** notify when a show card or open url action was performed ([3998ba3](https://github.com/webex/components/commit/3998ba39edb1459d3c80b7759c410d24c0455243))
+
 ## [1.266.1](https://github.com/webex/components/compare/v1.266.0...v1.266.1) (2022-03-28)
 
 
