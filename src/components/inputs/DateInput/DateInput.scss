@@ -3,11 +3,13 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-date-input;
 .#{$C} {
   input[type="date"] {
     position: relative;
-    padding-left: 2.5rem;
+    padding-left: 2rem;
 
     &::-webkit-calendar-picker-indicator {
       position: absolute;
-      left: -1rem;
+      margin: 0 0 0.25rem 0;
+      padding: 0;
+      left: 0.75rem;
       filter: var(--wxc-date-input--calendar-picker-indicator--filter);
     }
   }
