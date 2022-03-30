@@ -1,3 +1,10 @@
+## [1.267.1](https://github.com/webex/components/compare/v1.267.0...v1.267.1) (2022-03-30)
+
+
+### Bug Fixes
+
+* **Tooltip:** don't display tooltip if on devices with touch ([b74a1ac](https://github.com/webex/components/commit/b74a1ac71cf02931b180bbe8323d38481e5005ed))
+
 # [1.267.0](https://github.com/webex/components/compare/v1.266.1...v1.267.0) (2022-03-29)
 
 
