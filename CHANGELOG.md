@@ -1,3 +1,10 @@
+## [1.267.2](https://github.com/webex/components/compare/v1.267.1...v1.267.2) (2022-03-30)
+
+
+### Bug Fixes
+
+* **MeetingsJsonAdapter:** prevent camera usage on iOS 15.1 due to iOS bug ([beb3ef0](https://github.com/webex/components/commit/beb3ef0c08afdde9504ae7609c0747ccff7a25a9))
+
 ## [1.267.1](https://github.com/webex/components/compare/v1.267.0...v1.267.1) (2022-03-30)
 
 
