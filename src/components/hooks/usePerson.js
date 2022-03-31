@@ -21,13 +21,10 @@ export default function usePerson(personID) {
   const {peopleAdapter} = useContext(AdapterContext);
 
   useEffect(() => {
-    const onError = (error) => {
+    const onError = () => {
       setPerson({
         displayName: ' ',
       });
-
-      // eslint-disable-next-line no-console
-      console.error(error.message);
     };
     const onPerson = (data) => {
       const newPerson = {...data};

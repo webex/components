@@ -1,27 +1,3 @@
 @import 'ActivityHeader';
-
-$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-activity;
-$content-left-margin: 3.5rem; //avatar width + margin
-
-.#{$C} {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 100%;
-  margin: 0.5rem 0;
-
-  .#{$C}__content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    min-width: 15.625rem !important;
-    margin-left: $content-left-margin;
-    color: var(--wxc-text-color);
-    word-wrap: break-word;
-
-    .#{$C}__message {
-      white-space: pre-wrap;
-    }
-  }
-}
-
+@import 'Attachment';
+@import 'Activity';

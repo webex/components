@@ -1,0 +1,103 @@
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-activity-attachment;
+
+$attachment-background: rgba(0, 0, 0, 0.11);
+$attachment-focus-background: rgba(0, 0, 0, 0.11);
+$attachment-press-background: rgba(0, 0, 0, 0.3);
+$attachment-hover-background: rgba(0, 0, 0, 0.2);
+$attachment-border: 2px solid rgba(255, 255, 255, 0.2);
+
+$attachment-toolbar-background: rgba(0, 0, 0, 0.4);
+
+$attachment-icon-background: #1170cf;
+
+$attachment-label-background:  var(--wxc-text-color);
+$attachment-label-border: 1px solid var(--wxc-secondary-text-color);
+
+.#{$C} {
+    background: $attachment-background;
+    border: $attachment-border;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: flex;
+    min-width: 330px;
+    overflow: hidden;
+    margin: .5rem 0;
+    &:hover {
+      background: $attachment-hover-background;
+   }
+    &:active {
+      background: $attachment-press-background;
+   }
+   &__icon {
+      background: #1170cf;
+      border-radius: 8px;
+      width: 60px;
+      padding: 1rem;
+   }
+   &__content {
+      display: flex;
+      flex-direction: column;
+      padding: 0.5rem;
+      flex: 1;
+   }
+   &__action {
+      cursor: pointer;
+      display: flex;
+      align-content: center;
+      align-items: center;
+      width: 40px;
+   }
+
+   &__label {
+      background: $attachment-label-background;
+      text-transform: uppercase;
+      padding: 0.2rem 0.5rem;
+      position: absolute;
+      color: black;
+      font-size: 0.8rem;
+      top: 5px;
+      right: 5px;
+      border: $attachment-label-border;
+      box-sizing: border-box;
+      border-radius: 4px;
+   }
+
+   &__toolbar {
+      min-height: 50px;
+      background: $attachment-toolbar-background;
+      border-radius: 0px 0px 8px 8px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      padding: 4px 12px;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.2s linear;
+      flex-direction: column;
+      
+      > span {
+         padding: 0.2rem 0;
+         &:first-child {
+            font-weight: bold;
+         }
+      }
+   }
+
+   &:hover {
+      .#{$C}__toolbar {
+         opacity: 1;
+      }
+   }
+
+   &--images {
+      .#{$C}__content {
+         padding: 0;
+      }
+      img {
+         max-height: 220px;
+      }
+   }
+ }
+ 

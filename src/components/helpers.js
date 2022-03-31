@@ -1,4 +1,11 @@
 import classNames from 'classnames';
+import {
+  format,
+  isToday,
+  isSameWeek,
+  isYesterday,
+} from 'date-fns';
+
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../constants';
 
 /**
@@ -36,3 +43,29 @@ export default function webexComponentClasses(
 
 //  checks for support for setSinkId https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/setSinkId
 export const isSpeakerSupported = !!document.createElement('audio').setSinkId;
+
+/**
+ * Returns a formatted timestamp based on the given date's offset from the current time.
+ *
+ * @param {Date} timestamp Date instance to format
+ * @returns {string} formattedDate
+ */
+ export function formatMessageDate(timestamp) {
+  let formattedDate;
+
+  if (isToday(timestamp)) {
+    // 12:00 PM
+    formattedDate = format(timestamp, 'p');
+  } else if (isYesterday(timestamp)) {
+    // Yesterday, 12:00 PM
+    formattedDate = `Yesterday, ${format(timestamp, 'p')}`;
+  } else if (isSameWeek(timestamp, new Date())) {
+    // Monday, 12:00 PM
+    formattedDate = format(timestamp, 'iiii, p');
+  } else {
+    // 1/1/2020, 12:00 PM
+    formattedDate = format(timestamp, 'P, p');
+  }
+
+  return formattedDate;
+}

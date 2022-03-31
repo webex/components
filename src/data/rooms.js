@@ -5,13 +5,11 @@ export default {
     roomType: 'group',
   },
   'room1-activities': [
-    'activity1',
-    'activity2',
     'activity3',
     'activity4',
     'activity5',
   ],
-  'room1-previous-activities': ['default', 'no-header', 'long', 'multi-line'],
+  'room1-previous-activities': ['activity1', 'activity2'],
   room2: {
     ID: 'room2',
     title: 'UI/UX Design',

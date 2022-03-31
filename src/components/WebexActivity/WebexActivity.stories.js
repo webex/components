@@ -2,6 +2,7 @@ import React from 'react';
 import {addDays, getDay, subDays} from 'date-fns';
 import activities from '../../data/activities';
 import WebexActivity from './WebexActivity';
+import Activity from './Activity';
 
 export default {
   title: 'Messaging/Webex Activity',
@@ -9,6 +10,17 @@ export default {
 };
 
 const Template = (args) => <WebexActivity {...args} />;
+
+const ActivityTemplate = (args) => <Activity {...args} />;
+
+export const ActivityComponent = ActivityTemplate.bind({});
+ActivityComponent.args = {
+  ...activities.activity3,
+  displayHeader: true,
+  isUnread: false,
+  isReply: false,
+  isSelected: false,
+};
 
 export const CreatedLongBack = Template.bind({});
 CreatedLongBack.args = {
@@ -84,6 +96,17 @@ CreatedToday.parameters = {
 export const NoHeader = Template.bind({});
 NoHeader.args = {
   activityID: 'activity2',
+};
+// Modify time data on the fly
+NoHeader.parameters = {
+  mockData: {
+    activities: {
+      activity2: {
+        ...activities.activity2,
+        displayHeader: false,
+      },
+    },
+  },
 };
 
 export const MultiLine = Template.bind({});

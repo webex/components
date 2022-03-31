@@ -6,7 +6,7 @@ export default {
     personID: 'user3',
     created: 'August 1, 2020 10:00:00',
     displayHeader: true,
-    cards: [],
+    cards: null,
     attachments: [],
   },
   activity2: {
@@ -15,8 +15,8 @@ export default {
     text: 'Can someone help me troubleshoot?',
     personID: 'user3',
     created: 'August 1, 2020 10:00:00',
-    displayHeader: false,
-    cards: [],
+    displayHeader: true,
+    cards: null,
     attachments: [],
   },
   activity3: {
@@ -26,7 +26,18 @@ export default {
     personID: 'user2',
     created: 'August 1, 2020 10:05:00',
     displayHeader: true,
-    cards: [],
+    cards: null,
+    replyIDs: ['activity3a'],
+  },
+  activity3a: {
+    ID: 'activity3a',
+    roomID: 'room1',
+    text: 'Thats awesome',
+    personID: 'user2',
+    created: 'August 1, 2020 12:05:00',
+    displayHeader: true,
+    cards: null,
+    parentID: 'activity3',
   },
   activity4: {
     ID: 'activity4',
@@ -35,7 +46,7 @@ export default {
     personID: 'user3',
     created: 'August 1, 2020 10:05:00',
     displayHeader: true,
-    cards: [],
+    cards: null,
     attachments: [],
   },
   activity5: {
@@ -45,7 +56,7 @@ export default {
     personID: 'user4',
     created: 'August 1, 2020 10:08:00',
     displayHeader: true,
-    cards: [],
+    cards: null,
     attachments: [],
   },
   activity6: {
@@ -55,7 +66,7 @@ export default {
     personID: 'user1',
     created: 'August 3, 2020 13:24:00',
     displayHeader: true,
-    cards: [],
+    cards: null,
     attachments: [],
   },
   activity7: {
@@ -65,7 +76,7 @@ export default {
     personID: 'user5',
     created: 'August 4, 2020 10:19:00',
     displayHeader: true,
-    cards: [],
+    cards: null,
     attachments: [],
   },
   activity8: {
@@ -75,7 +86,39 @@ export default {
     personID: 'user1',
     created: 'August 5, 2020 11:08:00',
     displayHeader: true,
-    cards: [],
+    cards: null,
+    attachments: [],
+  },
+  activity10: {
+    ID: 'activity10',
+    roomID: 'room1',
+    text: 'Following up on our last task. Seems like we need more time?',
+    personID: 'user1',
+    created: 'August 5, 2020 11:08:00',
+    displayHeader: true,
+    cards: [
+      {
+        contentType: 'application/vnd.microsoft.card.adaptive',
+        content: {
+          $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
+          type: 'AdaptiveCard',
+          version: '1.2',
+          body: [
+            {
+              type: 'TextBlock',
+              text: 'Card Header',
+              weight: 'Bolder',
+              size: 'Medium',
+            },
+            {
+              type: 'TextBlock',
+              text: 'Example of simple card',
+              wrap: true,
+            },
+          ],
+        },
+      },
+    ],
     attachments: [],
   },
   activity9: {
