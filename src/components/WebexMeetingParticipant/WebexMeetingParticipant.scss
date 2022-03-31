@@ -1,4 +1,4 @@
-$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-member;
+$C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-participant;
 
 .#{$C} {
   display: flex;
@@ -29,9 +29,27 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-member;
     }
   }
 
+  .#{$C}__roles {
+    font-size: 0.875rem;
+    line-height: 1rem;
+    color: var(--wxc-secondary-text-color);
+  }
+
   .#{$C}__organization {
     font-size: 0.875rem;
     line-height: 1rem;
     color: var(--wxc-warning-color);
+  }
+
+  .#{$C}__sharing {
+    margin-right: 2.5rem;
+  }
+
+  .#{$C}__speaking {
+    color: var(--wxc-speaking-color);
+  }
+
+  .#{$C}__muted {
+    color: var(--wxc-muted-color);
   }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import WebexMemberRoster from './WebexMemberRoster';
 
 export default {
-  title: 'Platform/Webex Member Roster',
+  title: 'Messaging/Webex Member Roster',
   component: WebexMemberRoster,
 };
 
@@ -19,18 +19,10 @@ const Template = (args) => {
 
 export const Space = Template.bind({});
 Space.args = {
-  destinationID: 'room1',
-  destinationType: 'room',
-};
-
-export const Meeting = Template.bind({});
-Meeting.args = {
-  destinationID: 'meeting2',
-  destinationType: 'meeting',
+  roomID: 'room1',
 };
 
 export const ExternalMember = Template.bind({});
 ExternalMember.args = {
-  destinationID: 'room2',
-  destinationType: 'room',
+  roomID: 'room2',
 };

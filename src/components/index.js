@@ -13,6 +13,8 @@ export {default as WebexMeetingHostAuthentication} from './WebexMeetingHostAuthe
 export {default as WebexMeetingControl} from './WebexMeetingControl/WebexMeetingControl';
 export {default as WebexMeetingControlBar} from './WebexMeetingControlBar/WebexMeetingControlBar';
 export {default as WebexMeetingInfo} from './WebexMeetingInfo/WebexMeetingInfo';
+export {default as WebexMeetingParticipant} from './WebexMeetingParticipant/WebexMeetingParticipant';
+export {default as WebexMeetingRoster} from './WebexMeetingRoster/WebexMeetingRoster';
 export {default as WebexMember} from './WebexMember/WebexMember';
 export {default as WebexMemberRoster} from './WebexMemberRoster/WebexMemberRoster';
 export {default as WebexMessaging} from './WebexMessaging/WebexMessaging';

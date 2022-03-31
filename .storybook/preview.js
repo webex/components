@@ -41,14 +41,14 @@ export const parameters = {
         'Platform',
         [
           'Webex Avatar',
-          'Webex Member Roster',
-          'Webex Member',
         ],
         'Messaging',
         [
           'Webex Messaging',
           'Webex Activity Stream',
           'Webex Activity',
+          'Webex Member',
+          'Webex Member Roster',
         ],
         'Meetings',
         [
@@ -58,7 +58,9 @@ export const parameters = {
           'Webex In-Meeting',
           'Webex Local Media',
           'Webex Remote Media',
-          'Webex Meeting Control'
+          'Webex Meeting Control',
+          'Webex Meeting Participant',
+          'Webex Meeting Roster',
         ],
       ],
     },

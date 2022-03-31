@@ -8,7 +8,7 @@ import Icon from '../generic/Icon/Icon';
 import Title from '../generic/Title/Title';
 import useMembers from '../hooks/useMembers';
 import {useMe} from '../hooks';
-import WebexMember from '../WebexMember/WebexMember';
+import WebexMeetingParticipant from '../WebexMeetingParticipant/WebexMeetingParticipant';
 
 // TODO: Figure out how to import JS Doc definitions and remove duplication.
 /**
@@ -19,35 +19,42 @@ import WebexMember from '../WebexMember/WebexMember';
  */
 
 /**
- * Displays the roster of Webex meeting or room members.
+ * Displays the roster of Webex meeting.
  *
  * @param {object} props  Data passed to the component
  * @param {string} props.className  Custom CSS class to apply
- * @param {string} props.roomID  ID of the room for which to get members
+ * @param {string} props.meetingID  ID of the meeting for which to get members
  * @param {object} props.style  Custom style to apply
  * @param {Function} props.onClose  Action to close the roster
  * @returns {object} JSX of the component
  *
  */
-export default function WebexMemberRoster({
+export default function WebexMeetingRoster({
   className,
-  roomID,
+  meetingID,
   style,
   onClose,
 }) {
-  const members = useMembers(roomID, DestinationType.ROOM);
+  const members = useMembers(meetingID, DestinationType.MEETING);
   const {orgID} = useMe();
 
-  const [cssClasses, sc] = webexComponentClasses('member-roster', className);
+  const [cssClasses, sc] = webexComponentClasses('meeting-roster', className);
 
   const renderMembers = (data) => data.map(
     ({ID}) => (
-      <WebexMember
-        roomID={roomID}
+      <WebexMeetingParticipant
+        meetingID={meetingID}
         personID={ID}
         key={ID}
       />
     ),
+  );
+
+  const renderSection = (data, title) => data.length > 0 && (
+    <>
+      <h5 className={sc('section-title')}>{title}</h5>
+      {renderMembers(data)}
+    </>
   );
 
   const warningExternalMembers = members.some(
@@ -79,20 +86,21 @@ export default function WebexMemberRoster({
       </div>
       {warningExternalMembers}
       <div className={sc('members')}>
-        {renderMembers(members)}
+        {renderSection(members.filter((member) => member.inMeeting), 'In the meeting')}
+        {renderSection(members.filter((member) => !member.inMeeting), 'Not in the meeting')}
       </div>
     </div>
   );
 }
 
-WebexMemberRoster.propTypes = {
+WebexMeetingRoster.propTypes = {
   className: PropTypes.string,
-  roomID: PropTypes.string.isRequired,
+  meetingID: PropTypes.string.isRequired,
   style: PropTypes.shape(),
   onClose: PropTypes.func,
 };
 
-WebexMemberRoster.defaultProps = {
+WebexMeetingRoster.defaultProps = {
   className: '',
   style: undefined,
   onClose: undefined,
