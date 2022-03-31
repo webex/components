@@ -1,3 +1,10 @@
+## [1.267.3](https://github.com/webex/components/compare/v1.267.2...v1.267.3) (2022-03-31)
+
+
+### Bug Fixes
+
+* **DateInput,TimeInput:** adjust native browser controls icon position ([b140129](https://github.com/webex/components/commit/b1401294eb67870660328508632874d8fed4a826))
+
 ## [1.267.2](https://github.com/webex/components/compare/v1.267.1...v1.267.2) (2022-03-30)
 
 
