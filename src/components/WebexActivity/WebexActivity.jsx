@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import {useActivity} from '../hooks';
 
-import Activity from './Activity';
+import Activity from '../generic/Activity/Activity';
 import WebexAdaptiveCards from '../WebexAdaptiveCards/WebexAdaptiveCards';
 
 /**
@@ -20,7 +20,12 @@ export default function WebexActivity({activityID, className, style}) {
 
   return (
     <>
-      <Activity {...activity} className={className} style={style} isReply={!!activity.parentID}>
+      <Activity
+        {...activity}
+        className={className}
+        style={style}
+        isReply={!!activity.parentID}
+      >
         {activity.cards && <WebexAdaptiveCards activityID={activityID} />}
       </Activity>
       {activity.replyIDs && activity.replyIDs.map((id) => (

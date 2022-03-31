@@ -7,7 +7,7 @@ import {
   subDays,
 } from 'date-fns';
 
-import {formatMessageDate} from './ActivityHeader';
+import {formatMessageDate} from '../helpers';
 
 describe('Activity Header', () => {
   let today;

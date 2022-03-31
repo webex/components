@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {memo} from 'react';
 import {RoomType} from '@webex/component-adapter-interfaces';
 
 import WebexActivity from '../WebexActivity/WebexActivity';
@@ -18,6 +18,29 @@ import Greeting from './Greeting';
 import TimeRuler from './TimeRuler';
 
 /**
+ * Memoize WebexActivity component to prevent re-rendering.
+ *
+ * @param {string} activity The activity ID
+ * @returns {JSX} Comeponent
+ */
+const MemoWebexActivity = memo(({activity}) => {
+  if (activity.date) {
+    return <TimeRuler key={activity.date} date={activity.date} />;
+  }
+
+  return <WebexActivity activityID={activity} />;
+});
+
+MemoWebexActivity.defaultProps = {
+  activity: undefined,
+};
+MemoWebexActivity.propTypes = {
+  activity: PropTypes.string,
+};
+
+MemoWebexActivity.displayName = 'MemoWebexActivity';
+
+/**
  * Webex Activity Stream component displays all activities that
  * happened on the given room ID. While mounted, the component
  * listens for activity updates to the room and also displays
@@ -31,28 +54,22 @@ import TimeRuler from './TimeRuler';
  */
 export default function WebexActivityStream({className, roomID, style}) {
   const [activitiesData, dispatch] = useActivityStream(roomID);
+  const {title, roomType} = useRoom(roomID);
+  const activityStreamRef = useRef();
+
   const loadPreviousActivities = (previousActivities) => {
     dispatch({type: PREPEND_ACTIVITIES, payload: previousActivities});
   };
 
-  const {title, roomType} = useRoom(roomID);
-  const activityStreamRef = useRef();
   const showLoader = useActivityScroll(roomID, activityStreamRef, loadPreviousActivities);
   const lastActivityRef = useOverflowActivities(roomID, activityStreamRef, loadPreviousActivities);
 
   const [cssClasses, sc] = webexComponentClasses('activity-stream', className);
 
   const personName = roomType === RoomType.DIRECT ? title : '';
-  const activities = activitiesData.map((activity) => {
-    // If the activity is an object with a date property, it is a time ruler
-    const activityComponent = activity.date ? (
-      <TimeRuler key={activity.date} date={activity.date} />
-    ) : (
-      <WebexActivity key={activity} activityID={activity} />
-    );
-
-    return activityComponent;
-  });
+  const activities = activitiesData.map(
+    (activity) => <MemoWebexActivity key={activity} activity={activity} />,
+  );
 
   return (
     <div className={cssClasses} ref={activityStreamRef} style={style}>

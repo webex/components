@@ -18,6 +18,7 @@ export const decorators = [
       ...parameters.mockData,
     };
     const webexAdapter = new WebexJSONAdapter(data);
+    window.webexAdapter = webexAdapter;
 
     return (
     <>

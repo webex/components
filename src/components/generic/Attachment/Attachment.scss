@@ -1,17 +1,25 @@
 $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-activity-attachment;
 
-$attachment-background: rgba(0, 0, 0, 0.11);
+// Light theme colors
+$attachment-background: var(--wxc-input-field--active--background);
 $attachment-focus-background: rgba(0, 0, 0, 0.11);
 $attachment-press-background: rgba(0, 0, 0, 0.3);
 $attachment-hover-background: rgba(0, 0, 0, 0.2);
-$attachment-border: 2px solid rgba(255, 255, 255, 0.2);
+$attachment-border: 2px solid var(--wxc-button--ghost--active--background);
 
-$attachment-toolbar-background: rgba(0, 0, 0, 0.4);
+// Dark theme colors
+$attachment-border-dark: 4px solid rgba(255, 255, 255, 0.2);
+
+$attachment-toolbar-background: rgba(0, 0, 0, 0.8);
 
 $attachment-icon-background: #1170cf;
 
-$attachment-label-background:  var(--wxc-text-color);
+$attachment-label-color:  var(--wxc-badge-text-color);
+$attachment-label-background:  var(--wxc-secondary-video-background);
 $attachment-label-border: 1px solid var(--wxc-secondary-text-color);
+
+$image-max-height: 180px;
+$image-max-width: 320px;
 
 .#{$C} {
     background: $attachment-background;
@@ -19,27 +27,66 @@ $attachment-label-border: 1px solid var(--wxc-secondary-text-color);
     box-sizing: border-box;
     border-radius: 8px;
     display: flex;
-    min-width: 330px;
     overflow: hidden;
     margin: .5rem 0;
+    position: relative;
     &:hover {
       background: $attachment-hover-background;
    }
     &:active {
       background: $attachment-press-background;
    }
+
+   &__error {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--wxc-secondary-text-color);
+      .wxc-icon {
+         margin-bottom: .5rem;
+      }
+   }
+
+   &__spinner {
+      position: absolute !important;
+   }
+
    &__icon {
       background: #1170cf;
-      border-radius: 8px;
-      width: 60px;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      width: 64px;
       padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;;
    }
+
    &__content {
       display: flex;
       flex-direction: column;
-      padding: 0.5rem;
+      //padding: 0.3rem;
       flex: 1;
+      width: $image-max-width;
+      
+      align-items: center;
+      justify-content: center;
+      height: $image-max-height;
+
+      img {
+         width: 100%;
+      }
+
+      &-name {
+         color: var(--wxc-text-color);
+      }
+      &-size {
+         color: var(--wxc-secondary-text-color);
+      }
    }
+
    &__action {
       cursor: pointer;
       display: flex;
@@ -51,9 +98,10 @@ $attachment-label-border: 1px solid var(--wxc-secondary-text-color);
    &__label {
       background: $attachment-label-background;
       text-transform: uppercase;
-      padding: 0.2rem 0.5rem;
+      padding: 0.2rem 0.4rem;
+      line-height: 14px;
       position: absolute;
-      color: black;
+      color: $attachment-label-color;
       font-size: 0.8rem;
       top: 5px;
       right: 5px;
@@ -65,7 +113,7 @@ $attachment-label-border: 1px solid var(--wxc-secondary-text-color);
    &__toolbar {
       min-height: 50px;
       background: $attachment-toolbar-background;
-      border-radius: 0px 0px 8px 8px;
+      //border-radius: 0px 0px 8px 8px;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -75,7 +123,8 @@ $attachment-label-border: 1px solid var(--wxc-secondary-text-color);
       justify-content: center;
       opacity: 0;
       transition: opacity 0.2s linear;
-      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
       
       > span {
          padding: 0.2rem 0;
@@ -98,6 +147,21 @@ $attachment-label-border: 1px solid var(--wxc-secondary-text-color);
       img {
          max-height: 220px;
       }
+   }
+
+   &--video {
+      video {
+         width: 100%;
+      }
+   }
+
+   &--file {
+      .#{$C}__content {
+         height: auto;
+         align-items: flex-start;
+         padding-left: 1rem;
+      }
+      
    }
  }
  

@@ -37,7 +37,7 @@ function reducer(activities, action) {
       break;
   }
 
-  return newActivities;
+  return [...new Set(newActivities)];
 }
 
 /**

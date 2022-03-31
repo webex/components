@@ -44,6 +44,16 @@ import {Observable} from 'rxjs';
  */
 
 /**
+ * Helper to simulate network requests.
+ *
+ * @param {number} min Min number
+ * @param {number} max Max number
+ * @returns {number} A random number
+ */
+export function randomIntFromInterval(min, max) { // min and max included
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+/**
  * `PersonJSONAdapter` is an implementation of the `PeopleAdapter` interface.
  * This implementation utilizes a JSON object as its source of people data.
  *
@@ -78,12 +88,13 @@ export default class PeopleJSONAdapter extends PeopleAdapter {
   getPerson(ID) {
     return Observable.create((observer) => {
       if (this.datasource[ID]) {
-        observer.next(this.datasource[ID]);
+        setTimeout(() => {
+          observer.next(this.datasource[ID]);
+          observer.complete();
+        }, randomIntFromInterval(500, 1000));
       } else {
         observer.error(new Error(`Could not find person with ID "${ID}"`));
       }
-
-      observer.complete();
     });
   }
 }

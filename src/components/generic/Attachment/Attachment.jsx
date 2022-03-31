@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import webexComponentClasses from '../helpers';
+import File from './File';
+import Image from './Image';
+import Video from './Video';
 
 /**
  * Component displays an attachment.
@@ -12,23 +14,49 @@ import webexComponentClasses from '../helpers';
  * @param {string} props.displayName Name of attachment
  * @param {string} props.url URL of attachment
  * @param {string} props.mimeType Mime type of attachment
- * @param {string} props.type Type of attachment
  * @param {string} props.className Custom CSS class to apply
  * @returns {object} JSX of the component
  */
 export default function Attachment({
-  id, fileSize, displayName, url, mimeType, type, className,
+  fileSize, displayName, url, mimeType, className,
 }) {
-  const [cssClasses, sc] = webexComponentClasses('activity-attachment', className);
+  const isVideo = mimeType.includes('video');
+  const isImage = mimeType.includes('image');
+  const isFile = (!isImage && !isVideo);
 
-  return (
-    <div className={cssClasses} data-id={id} data-size={fileSize} data-mime={mimeType}>
-      <div className={sc('content')}>
-        {type === 'file' && <div className={sc('name')}>{displayName}</div>}
-        {type === 'images' && <img className={sc('image')} src={url} alt={displayName} />}
-      </div>
-    </div>
-  );
+  if (isFile) {
+    return (
+      <File
+        displayName={displayName}
+        mimeType={mimeType}
+        url={url}
+        fileSize={fileSize}
+        className={className}
+      />
+    );
+  }
+
+  if (isImage) {
+    return (
+      <Image
+        displayName={displayName}
+        url={url}
+        mimeType={mimeType}
+        className={className}
+      />
+    );
+  }
+
+  if (isVideo) {
+    return (
+      <Video
+        displayName={displayName}
+        url={url}
+        mimeType={mimeType}
+        className={className}
+      />
+    );
+  }
 }
 
 Attachment.propTypes = {
@@ -37,7 +65,6 @@ Attachment.propTypes = {
   displayName: PropTypes.string,
   url: PropTypes.string,
   mimeType: PropTypes.string,
-  type: PropTypes.string,
   className: PropTypes.string,
 };
 
@@ -47,7 +74,6 @@ Attachment.defaultProps = {
   displayName: undefined,
   url: undefined,
   mimeType: undefined,
-  type: undefined,
   className: undefined,
 };
 

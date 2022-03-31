@@ -1,0 +1,32 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+/**
+ * Play SVG Icon
+ *
+ * @param {object} props  Data passed to the component
+ * @param {number} props.size  Width and height of the icon
+ * @param {string} props.className  Additional className for the component
+ * @param {object} props.style  Inline style object for the component
+ * @returns {object} JSX of the icon
+ *
+ */
+export default function PlayIcon({size, className, style}) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className={`wxc-icon ${className}`} style={style}>
+      <path d="M1.99048 11.9984C1.59394 11.9967 1.21424 11.8379 0.934457 11.5569C0.654674 11.2759 0.497585 10.8955 0.497559 10.4989V1.50088C0.497523 1.24518 0.562866 0.993715 0.687382 0.77038C0.811897 0.547045 0.991448 0.359256 1.20898 0.224854C1.4265 0.0904526 1.67479 0.0139018 1.93023 0.002475C2.18567 -0.00895178 2.4398 0.045125 2.66846 0.159568L10.6846 4.66396C10.9316 4.79027 11.1388 4.98261 11.2831 5.21961C11.4274 5.4566 11.5031 5.72897 11.5019 6.00643C11.5007 6.2839 11.4226 6.55559 11.2762 6.79131C11.1299 7.02704 10.921 7.21756 10.6729 7.3417L2.6897 11.8295C2.47297 11.9395 2.23353 11.9974 1.99048 11.9984ZM2.00464 0.996483C1.90908 0.998007 1.81574 1.02552 1.73464 1.07607C1.66169 1.12026 1.60148 1.18265 1.55992 1.25712C1.51836 1.33159 1.49687 1.41559 1.49757 1.50088V10.4989C1.49759 10.5842 1.51939 10.668 1.56092 10.7425C1.60244 10.8169 1.66231 10.8795 1.73484 10.9243C1.80736 10.9692 1.89014 10.9947 1.97531 10.9985C2.06047 11.0023 2.1452 10.9843 2.22145 10.9462L10.2041 6.4584C10.2927 6.41891 10.368 6.35459 10.4209 6.27323C10.4738 6.19186 10.5019 6.09692 10.502 5.9999C10.5031 5.90681 10.4777 5.81532 10.4288 5.73612C10.3798 5.65692 10.3094 5.59328 10.2256 5.55263L10.2041 5.5414L2.19995 1.04287C2.13935 1.0124 2.07247 0.996512 2.00464 0.996483Z" fill="white" fillOpacity="0.95" />
+    </svg>
+  );
+}
+
+PlayIcon.propTypes = {
+  size: PropTypes.number,
+  className: PropTypes.string,
+  style: PropTypes.shape(),
+};
+
+PlayIcon.defaultProps = {
+  size: 24,
+  className: '',
+  style: {},
+};

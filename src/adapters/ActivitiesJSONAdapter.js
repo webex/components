@@ -1,5 +1,6 @@
 import {ActivitiesAdapter} from '@webex/component-adapter-interfaces';
-import {Observable} from 'rxjs';
+import {BehaviorSubject, Observable} from 'rxjs';
+import {cache} from './cache';
 
 const EMPTY_ACTION = {
   actionID: null,
@@ -51,6 +52,35 @@ const EMPTY_ACTION = {
  * @implements {ActivitiesAdapter}
  */
 export default class ActivitiesJSONAdapter extends ActivitiesAdapter {
+  constructor(datasource) {
+    super(datasource);
+
+    this.activityObservables = {};
+
+    Object.values(datasource).forEach((val) => {
+      const items = cache.get(`${val.roomID}-activities`) || [];
+
+      cache.set(`${val.roomID}-activities`, items.concat(val.ID));
+      cache.set(val.ID, val);
+    });
+  }
+
+  async fetchActivity(ID) {
+    const defaultAct = this.datasource.activity1;
+
+    const act = {...defaultAct};
+
+    // Simulate fetching from server if not in datasource
+    if (!this.datasource[ID]) {
+      console.log('Fetch new activity');
+      act.ID = ID;
+      act.text = 'Velit officiis asperiores facere error facilis omnis fuga est sed. Ut autem alias. Dolore ullam asperiores sed dolores impedit. Perspiciatis dolorum incidunt porro quo odit dolorem. Tempore rerum sed voluptatibus incidunt nulla maxime nihil mollitia.';
+      act.created = new Date().toISOString();
+    }
+
+    return act;
+  }
+
   /**
    * Returns an observable that emits activity data of the given ID.
    * For this implementation, once the data is emitted, the observable completes.
@@ -59,15 +89,16 @@ export default class ActivitiesJSONAdapter extends ActivitiesAdapter {
    * @returns {Observable.<Activity>} Observable that emits data of the given ID
    */
   getActivity(ID) {
-    return Observable.create((observer) => {
+    if (!(ID in this.activityObservables)) {
+      this.activityObservables[ID] = new BehaviorSubject();
       if (this.datasource[ID]) {
-        observer.next(this.datasource[ID]);
+        this.activityObservables[ID].next(this.datasource[ID]);
       } else {
-        observer.error(new Error(`Could not find activity with ID "${ID}"`));
+        this.activityObservables[ID].error(new Error(`Could not find activity with ID "${ID}"`));
       }
+    }
 
-      observer.complete();
-    });
+    return this.activityObservables[ID];
   }
 
   /**
@@ -147,7 +178,11 @@ export default class ActivitiesJSONAdapter extends ActivitiesAdapter {
    */
   // eslint-disable-next-line class-methods-use-this
   hasAdaptiveCards(activity) {
-    return activity.cards.length > 0;
+    if (!activity.cards) {
+      return false;
+    }
+
+    return activity.cards?.length > 0;
   }
 
   /**
@@ -159,6 +194,10 @@ export default class ActivitiesJSONAdapter extends ActivitiesAdapter {
    */
   // eslint-disable-next-line class-methods-use-this
   getAdaptiveCard(activity, cardIndex) {
+    if (!activity.cards) {
+      return undefined;
+    }
+
     return activity.cards[cardIndex];
   }
 }

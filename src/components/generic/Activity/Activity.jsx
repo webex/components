@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import WebexAvatar from '../WebexAvatar/WebexAvatar';
-import usePerson from '../hooks/usePerson';
-import webexComponentClasses, {formatMessageDate} from '../helpers';
-import Attachment from './Attachment';
+import WebexAvatar from '../../WebexAvatar/WebexAvatar';
+import usePerson from '../../hooks/usePerson';
+import webexComponentClasses, {formatMessageDate} from '../../helpers';
+import Attachment from '../Attachment/Attachment';
 
 /**
  * Activity component displays activity content.
@@ -26,7 +26,7 @@ import Attachment from './Attachment';
  * @param {boolean} props.isUnread Activity read state
  * @returns {object} JSX of the component
  */
-export default function Activity({
+function Activity({
   ID,
   personID,
   text,
@@ -73,7 +73,7 @@ export default function Activity({
 
 Activity.propTypes = {
   ID: PropTypes.string,
-  personID: PropTypes.string,
+  personID: PropTypes.string.isRequired,
   text: PropTypes.string,
   created: PropTypes.string,
   displayHeader: PropTypes.bool,
@@ -99,7 +99,6 @@ Activity.defaultProps = {
   ID: undefined,
   created: '',
   text: undefined,
-  personID: undefined,
   displayHeader: true,
   isSelected: false,
   isUnread: false,
@@ -111,3 +110,5 @@ Activity.defaultProps = {
 };
 
 Activity.displayName = 'Activity';
+
+export default Activity;

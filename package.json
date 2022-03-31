@@ -4,7 +4,7 @@
   "browser": "dist/umd/webex-components.umd.min.js",
   "unpkg": "dist/umd/webex-components.umd.min.js",
   "module": "dist/es/webex-components.es.min.js",
-  "main": "dist/umd/webex-components.umd.min.js",
+  "_source": "src/index.js",
   "scripts": {
     "build": "rollup -c",
     "linter": "eslint src/ --ext .js,.jsx",
@@ -55,6 +55,7 @@
     "@babel/preset-react": "^7.10.4",
     "@commitlint/cli": "^9.1.1",
     "@commitlint/config-conventional": "^9.1.1",
+    "@faker-js/faker": "^6.1.1",
     "@rollup/plugin-babel": "^5.2.0",
     "@rollup/plugin-commonjs": "^15.0.0",
     "@rollup/plugin-json": "^4.1.0",

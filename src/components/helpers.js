@@ -50,7 +50,7 @@ export const isSpeakerSupported = !!document.createElement('audio').setSinkId;
  * @param {Date} timestamp Date instance to format
  * @returns {string} formattedDate
  */
- export function formatMessageDate(timestamp) {
+export function formatMessageDate(timestamp) {
   let formattedDate;
 
   if (isToday(timestamp)) {

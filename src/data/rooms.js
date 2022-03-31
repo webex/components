@@ -1,3 +1,5 @@
+import {mockActivities} from './utils';
+
 export default {
   room1: {
     ID: 'room1',
@@ -34,4 +36,15 @@ export default {
     roomType: 'direct',
   },
   'room4-activities': [],
+  room5: {
+    ID: 'room5',
+    title: 'Full Space',
+    roomType: 'space',
+  },
+  'room5-activities': [
+    ...mockActivities.slice(0, 10).map((o) => o.ID),
+  ],
+  'room5-previous-activities': [
+    ...mockActivities.splice(10, 50).map((o) => o.ID),
+  ],
 };

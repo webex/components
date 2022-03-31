@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Meetings/Webex Meeting Info Direct 1`] = `
+Array [
+  <div
+    className="wxc wxc-meeting-info"
+  >
+    <h5
+      className="wxc wxc-title wxc-meeting-info__title wxc-title--subsection"
+      style={Object {}}
+    >
+      Barbara German
+    </h5>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex Meeting Info Error 1`] = `
+Array [
+  <div
+    className="wxc wxc-meeting-info"
+  >
+    <h5
+      className="wxc wxc-title wxc-meeting-info__title wxc-title--subsection"
+      style={Object {}}
+    >
+      No Meeting Information
+    </h5>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex Meeting Info Loading 1`] = `
+Array [
+  <div
+    className="wxc wxc-meeting-info"
+  >
+    <div
+      className="wxc wxc-spinner"
+      style={
+        Object {
+          "height": 38,
+          "width": 38,
+        }
+      }
+    />
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex Meeting Info Space 1`] = `
+Array [
+  <div
+    className="wxc wxc-meeting-info"
+  >
+    <h5
+      className="wxc wxc-title wxc-meeting-info__title wxc-title--subsection"
+      style={Object {}}
+    >
+      In meeting
+    </h5>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;

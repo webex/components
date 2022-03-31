@@ -18,6 +18,7 @@ import {
   ControlUp,
   DndPresenceIcon,
   ExternalUserIcon,
+  FileCodeIcon,
   HidePwdIcon,
   IndeterminateIcon,
   MeetingsPresenceIcon,
@@ -38,6 +39,8 @@ import {
   UnreadIcon,
   WaitingForHostIcon,
   WarningIcon,
+  DownloadIcon,
+  PlayIcon,
 } from '../../icons';
 
 const icons = {
@@ -56,8 +59,10 @@ const icons = {
   'control-down': ControlDown,
   'control-up': ControlUp,
   'dnd-presence': DndPresenceIcon,
+  download: DownloadIcon,
   error: RemoteMediaErrorIcon,
   'external-user': ExternalUserIcon,
+  'file-code': FileCodeIcon,
   'hide-password': HidePwdIcon,
   indeterminate: IndeterminateIcon,
   'meetings-presence': MeetingsPresenceIcon,
@@ -67,6 +72,7 @@ const icons = {
   'microphone-bold': MicrophoneBoldIcon,
   more: MoreIcon,
   'more-adr': MoreAdrIcon,
+  play: PlayIcon,
   'participant-list': ParticipantListIcon,
   'participant-list-filled': ParticipantListFilledIcon,
   'pto-presence': PtoPresenceIcon,

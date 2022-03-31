@@ -1,4 +1,72 @@
-export default {
+import {activityMap} from './utils';
+
+const ActivityWithGiff = {
+  ID: 'ActivityWithGiff',
+  text: 'Lorem ipsum dolor site ate aetns ctetuer',
+  created: '2022-01-01 08:12:00',
+  roomID: 'room1',
+  personID: 'user1',
+  type: 'content',
+  attachments: [
+    {
+      id: '0000-0000-0001',
+      fileSize: 840691,
+      displayName: 'Some GIF',
+      mimeType: 'image/gif',
+      url: 'https://media0.giphy.com/media/13FrpeVH09Zrb2/giphy_s.gif',
+      type: 'images',
+    },
+  ],
+};
+
+const ActivityWithFile = {
+  ...ActivityWithGiff,
+  ID: 'ActivityWithFile',
+  attachments: [
+    {
+      id: 'file1', fileSize: 750, displayName: 'Normal.doc', mimeType: '', url: '', type: 'file',
+    },
+  ],
+};
+
+const ActivityWithImage = {
+  ...ActivityWithGiff,
+  ID: 'ActivityWithImage',
+  attachments: [
+    {
+      id: '0000-0000-0001',
+      fileSize: 840691,
+      displayName: 'Some JPEG',
+      mimeType: 'image/jpeg',
+      url: 'http://loremflickr.com/800/800/city?36439',
+      type: 'images',
+    },
+  ],
+};
+
+const ActivityWithInvalidImage = {
+  ...ActivityWithGiff,
+  ID: 'ActivityWithInvalidImage',
+  attachments: [
+    {
+      id: '0000-0000-0001',
+      fileSize: 840691,
+      displayName: 'Some JPEG',
+      mimeType: 'image/jpeg',
+      url: 'http://loremflickr.com/800/',
+      type: 'images',
+    },
+  ],
+};
+
+const ActivityWithReplys = {
+  ...ActivityWithGiff,
+  attachments: [],
+  ID: 'ActivityWithReplys',
+  replyIDs: ['activity1', 'activity2'],
+};
+
+const moreActivities = {
   activity1: {
     ID: 'activity1',
     roomID: 'room1',
@@ -325,3 +393,15 @@ export default {
     ],
   },
 };
+
+const allActivities = {
+  ...activityMap,
+  ...moreActivities,
+  ActivityWithReplys,
+  ActivityWithFile,
+  ActivityWithGiff,
+  ActivityWithImage,
+  ActivityWithInvalidImage,
+};
+
+export default allActivities;

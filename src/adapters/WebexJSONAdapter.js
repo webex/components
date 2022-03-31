@@ -5,7 +5,7 @@ import MembershipJSONAdapter from './MembershipJSONAdapter';
 import OrganizationsJSONAdapter from './OrganizationsJSONAdapter';
 import PeopleJSONAdapter from './PeopleJSONAdapter';
 import RoomsJSONAdapter from './RoomsJSONAdapter';
-
+import {cache} from './cache';
 /**
  * Entry point for the JSON component adapter.
  *
@@ -14,7 +14,7 @@ import RoomsJSONAdapter from './RoomsJSONAdapter';
 export default class WebexJSONAdapter extends WebexAdapter {
   constructor(datasource) {
     super(datasource);
-
+    this.cache = cache;
     this.activitiesAdapter = new ActivitiesJSONAdapter(datasource.activities);
     this.meetingsAdapter = new MeetingsJSONAdapter(datasource.meetings);
     this.membershipsAdapter = new MembershipJSONAdapter(datasource.memberships);

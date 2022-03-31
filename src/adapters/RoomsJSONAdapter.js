@@ -1,5 +1,7 @@
 import {RoomsAdapter} from '@webex/component-adapter-interfaces';
-import {Observable} from 'rxjs';
+import {Observable, ReplaySubject} from 'rxjs';
+
+import {cache} from './cache';
 
 // TODO: Figure out how to import JS Doc definitions and remove duplication.
 /**
@@ -8,7 +10,7 @@ import {Observable} from 'rxjs';
  * @external Room
  * @see {@link https://github.com/webex/component-adapter-interfaces/blob/master/src/RoomsAdapter.js#L7}
  */
-
+// const sortByPublished = (arr) => arr.sort((a, b) => new Date(a.created) - new Date(b.created));
 // TODO: Figure out how to import JS Doc definitions and remove duplication.
 /**
  * An activity that should be displayed as a time ruler.
@@ -44,10 +46,14 @@ export default class RoomsJSONAdapter extends RoomsAdapter {
 
     this.dataChunkSize = 4; // Arbitrary chunk size
     this.lastDataIndex = {}; // Keeps track of last index returned for each room
+    this.getActivitiesInRealTimeCache = {};
+    this.roomActivities = new Map();
+
+    this.cache = cache;
   }
 
   /**
-   * Returns an observable that emits room data of the given ID.
+   * Returns an observable that  emits room data of the given ID.
    * For this implementation, once the data is emitted, the observable completes.
    *
    * @param {string} ID ID of room to get
@@ -73,12 +79,23 @@ export default class RoomsJSONAdapter extends RoomsAdapter {
    * @returns {Observable.<Array.<string|ActivityDate>>} Observable that emits an array of activities
    */
   getActivitiesInRealTime(ID) {
-    return Observable.create((observer) => {
-      const data = !this.datasource[`${ID}-activities`] ? [] : this.datasource[`${ID}-activities`];
+    const data = !this.datasource[`${ID}-activities`] ? [] : this.datasource[`${ID}-activities`];
 
-      observer.next(data);
-      observer.complete();
-    });
+    if (!(ID in this.getActivitiesInRealTimeCache)) {
+      const getActivitiesInRealTime$ = new ReplaySubject();
+
+      getActivitiesInRealTime$.next(data);
+
+      // TODO - Simulate listening to event -
+      // window.dispatchEvent(new CustomEvent('event:conversation.activity', {detail: {ID: 'activity-5'}}))
+      window.addEventListener('event:conversation.activity', (e) => {
+        getActivitiesInRealTime$.next(e.detail.ID);
+      });
+
+      this.getActivitiesInRealTimeCache[ID] = getActivitiesInRealTime$;
+    }
+
+    return this.getActivitiesInRealTimeCache[ID];
   }
 
   /**
