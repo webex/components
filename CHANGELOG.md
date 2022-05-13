@@ -1,3 +1,10 @@
+# [1.268.0](https://github.com/webex/components/compare/v1.267.3...v1.268.0) (2022-05-13)
+
+
+### Features
+
+* **SignIn:** add sign in component ([6cf57d7](https://github.com/webex/components/commit/6cf57d76bd13106ae8843823c30e37558dcf8f94))
+
 ## [1.267.3](https://github.com/webex/components/compare/v1.267.2...v1.267.3) (2022-03-31)
 
 
