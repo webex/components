@@ -19,3 +19,4 @@ export {default as useRef} from './useRef';
 export {default as useRoom} from './useRoom';
 export {default as useStream} from './useStream';
 export {default as useSpeakers} from './useSpeakers';
+export {default as useMetrics} from './useMetrics';

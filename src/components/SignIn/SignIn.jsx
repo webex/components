@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {Button} from '../generic';
 import Spinner from '../generic/Spinner/Spinner';
 import webexComponentClasses from '../helpers';
+import {useMetrics} from '../hooks';
 
 /**
  * Performs OAuth 2.0 Authorization
@@ -36,12 +37,13 @@ export default function SignIn({
 }) {
   const [isAuthenticating, setIsAuthenticating] = useState(false);
   const [cssClasses] = webexComponentClasses('sign-in', className);
+  const [emitMetrics] = useMetrics();
 
   const openAuthUrl = () => {
     const arr = new Uint8Array(4);
     const state = window.crypto.getRandomValues(arr);
     const fullAuthUrl = `${authUrl}?client_id=${clientID}&response_type=code&redirect_uri=${encodeURI(redirectUri)}${scope !== '' ? `&scope=${encodeURI(scope)}` : ''}&state=${state}`;
-
+    const startTime = window.performance.now();
     const newWindow = window.open(fullAuthUrl, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=400,height=700');
 
     setIsAuthenticating(true);
@@ -50,6 +52,18 @@ export default function SignIn({
       const timer = setInterval(() => {
         if (newWindow.closed) {
           clearInterval(timer);
+          let endTime = window.performance.now();
+
+          emitMetrics({
+            fields: {
+              startTime,
+              endTime,
+              totalTime: endTime - startTime,
+            },
+            metricName: 'windowTime',
+            type: 'operational',
+          }, 'loginId');
+
           getAccessToken().then((accessToken) => {
             if (accessToken) {
               if (Object.keys(tokenStoragePolicy).length !== 0) {
@@ -80,6 +94,16 @@ export default function SignIn({
               signInResponse(clientID, Error('Failed to fetch access token: ', err));
             });
           setIsAuthenticating(false);
+          endTime = window.performance.now();
+          emitMetrics({
+            fields: {
+              startTime,
+              endTime,
+              totalTime: endTime - startTime,
+            },
+            metricName: 'authenticationTime',
+            type: 'operational',
+          }, 'loginId');
         }
       }, 500);
     }
