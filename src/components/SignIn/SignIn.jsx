@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {Button} from '../generic';
 import Spinner from '../generic/Spinner/Spinner';
+import webexComponentClasses from '../helpers';
 
 /**
  * Performs OAuth 2.0 Authorization
@@ -15,6 +16,9 @@ import Spinner from '../generic/Spinner/Spinner';
  * @param {Function} props.getAccessToken  Function called to fetch access token from backend server
  * @param {object} props.tokenStoragePolicy  Store token in cookie, local or session storage
  * @param {string} props.authType  Authorization server type
+ * @param {string} props.children  Text for this button
+ * @param {string} props.className  Custom CSS class to apply
+ * @param {object} props.style  Custom style to apply
  * @returns {object} JSX of the component
  */
 export default function SignIn({
@@ -26,8 +30,12 @@ export default function SignIn({
   signInResponse,
   getAccessToken,
   tokenStoragePolicy,
+  children,
+  className,
+  style,
 }) {
   const [isAuthenticating, setIsAuthenticating] = useState(false);
+  const [cssClasses] = webexComponentClasses('sign-in', className);
 
   const openAuthUrl = () => {
     const arr = new Uint8Array(4);
@@ -78,14 +86,14 @@ export default function SignIn({
   };
 
   return (
-    <div className="sign-in-wrapper">
+    <div className={cssClasses} style={style}>
       {isAuthenticating ? <Spinner /> : (
         <Button
           type="join"
           size={40}
           onClick={openAuthUrl}
         >
-          Sign In
+          {children || 'Sign In'}
         </Button>
       )}
     </div>
@@ -103,6 +111,9 @@ SignIn.propTypes = {
   tokenStoragePolicy: PropTypes.shape(
     {place: PropTypes.string, name: PropTypes.string, ttl: PropTypes.number},
   ),
+  children: PropTypes.string,
+  className: PropTypes.string,
+  style: PropTypes.shape(),
 };
 
 SignIn.defaultProps = {
@@ -110,4 +121,7 @@ SignIn.defaultProps = {
   signInResponse: () => {},
   getAccessToken: () => {},
   tokenStoragePolicy: {},
+  children: undefined,
+  className: '',
+  style: undefined,
 };
