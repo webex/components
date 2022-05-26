@@ -25,4 +25,5 @@ WebexAuth.args = {
     throw Error('Failed to fetch access token');
   }),
   tokenStoragePolicy: {place: 'cookie', name: 'integ_cookie', ttl: 1209600},
+  children: '',
 };

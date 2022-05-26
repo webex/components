@@ -3,7 +3,7 @@
 exports[`Storyshots Platform/Sign In Webex Auth 1`] = `
 Array [
   <div
-    className="sign-in-wrapper"
+    className="wxc wxc-sign-in"
   >
     <button
       autoFocus={false}
