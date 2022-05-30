@@ -52,10 +52,12 @@ $C:#{$WEBEX_COMPONENTS_CLASS_PREFIX}-search-people;
             .#{$C}__avatar {
                 width: 2.5rem;
                 height: auto;
+                border-radius: 20px;
             }
 
             .#{$C}__data {
                 padding-left: 10px;
+                text-align: left;
             }
 
             .#{$C}__list-selected {
