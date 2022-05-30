@@ -44,6 +44,7 @@ export const parameters = {
           'Webex Member Roster',
           'Webex Member',
           'Sign In',
+          'Webex Create Space',
           'Webex Search People',
         ],
         'Messaging',

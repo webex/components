@@ -68,4 +68,23 @@ export default class MembershipJSONAdapter extends MembershipsAdapter {
       observer.complete();
     });
   }
+
+  /**
+   * Returns an observable that emits the membership with a member added to the room.
+   *
+   * @param {string} personID ID of the person to add to a room
+   * @param {string} roomID ID of the room to add the person into
+   * @returns {external:Observable.<Member>} Observable stream that emits the membership with the added member
+   * @memberof MembershipAdapter
+   */
+  addRoomMember(personID, roomID) {
+    return new Observable((observer) => {
+      if (this.datasource[roomID]) {
+        observer.next({...this.datasource[roomID], personID});
+      } else {
+        observer.error(new Error('Could not add members to room'));
+      }
+      observer.complete();
+    });
+  }
 }

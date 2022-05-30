@@ -286,4 +286,16 @@ export default {
     destinationType: 'meeting',
     members: [],
   },
+  1: {
+    ID: '1',
+    roomID: '1',
+    roomType: 'group',
+    isModerator: false,
+  },
+  2: {
+    ID: '2',
+    roomID: '2',
+    roomType: 'group',
+    isModerator: false,
+  },
 };
