@@ -1,0 +1,23 @@
+$C:#{$WEBEX_COMPONENTS_CLASS_PREFIX}-create-space;
+
+.#{$C} {
+    min-width: 300px;
+    width:450px;
+
+    .#{$C}__buttons {
+        display: flex;
+        flex: 1 1 auto;
+        gap: 20px;
+        margin-top:15px;
+    }
+
+    .#{$C}__error {
+        display: flex;
+        color: var(--wxc-error-color);
+    }
+
+    .#{$C}__success {
+        display: flex;
+        color: var(--wxc-speaking-color);
+    }
+}

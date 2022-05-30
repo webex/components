@@ -9,6 +9,8 @@ describe('Membership JSON Adapter', () => {
   const membershipID = 'membership1';
   let membershipJSONAdapter;
   let testMembership;
+  let roomID = '1';
+  const personID = 'user1';
 
   beforeEach(() => {
     membershipJSONAdapter = new MembershipJSONAdapter(JSONData);
@@ -38,6 +40,36 @@ describe('Membership JSON Adapter', () => {
         () => { },
         (error) => {
           expect(error.message).toBe('Could not find members for destination "invalid"');
+          done();
+        },
+      );
+    });
+  });
+
+  describe('addRoomMember()', () => {
+    test('returns an observable', () => {
+      expect(isObservable(membershipJSONAdapter.addRoomMember())).toBeTruthy();
+    });
+
+    test('add members to room', (done) => {
+      membershipJSONAdapter.addRoomMember(personID, roomID).subscribe((data) => {
+        expect(data).toMatchObject({
+          ID: '1',
+          roomID: '1',
+          roomType: 'group',
+          isModerator: false,
+          personID,
+        });
+        done();
+      });
+    });
+
+    test('throw an error when invalid room ID', (done) => {
+      roomID = 'invalid';
+      membershipJSONAdapter.addRoomMember(personID, roomID).subscribe(
+        () => {},
+        (error) => {
+          expect(error.message).toBe('Could not add members to room');
           done();
         },
       );

@@ -21,6 +21,7 @@ export {default as WebexSettings} from './WebexSettings/WebexSettings';
 export {default as WebexWaitingForHost} from './WebexWaitingForHost/WebexWaitingForHost';
 export {default as SignIn} from './SignIn/SignIn';
 export {default as WebexSearchPeople} from './WebexSearchPeople/WebexSearchPeople';
+export {default as WebexCreateSpace} from './WebexCreateSpace/WebexCreateSpace';
 export {default as useMeetingDestination} from './hooks/useMeetingDestination';
 export {default as withMeeting} from './hoc/withMeeting';
 export {default as withAdapter} from './hoc/withAdapter';
