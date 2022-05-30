@@ -1,4 +1,5 @@
 $C:#{$WEBEX_COMPONENTS_CLASS_PREFIX}-create-space;
+$B:#{$WEBEX_COMPONENTS_CLASS_PREFIX}-button;
 
 .#{$C} {
     min-width: 300px;
@@ -29,4 +30,13 @@ $C:#{$WEBEX_COMPONENTS_CLASS_PREFIX}-create-space;
     .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-options-list {
         border-radius: 0;
     }
+}
+@media only screen and (max-width: 450px) {
+   .#{$B}{
+       font-size: 0.700rem;
+   }
+   .#{$C} {
+    width: 250px;
+    min-width: 0px;
+   }
 }

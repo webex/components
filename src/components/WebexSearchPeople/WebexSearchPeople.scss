@@ -93,3 +93,14 @@ $C:#{$WEBEX_COMPONENTS_CLASS_PREFIX}-search-people;
         border-radius: 0;
     }
 }
+
+@media only screen and (max-width: 450px)
+{
+    .#{$C} {
+        width: 250px;
+            min-width: 0px;
+             color: var(--wxc-text-color);
+            margin-top: 20px;
+        }
+        
+}
