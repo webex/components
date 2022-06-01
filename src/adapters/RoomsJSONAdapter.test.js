@@ -136,4 +136,36 @@ describe('Rooms JSON Adapter Interface', () => {
 
     expect(roomsJSONAdapter.hasMoreActivities(roomID)).toBeFalsy();
   });
+
+  describe('create Room()', () => {
+    const title = 'widgets';
+
+    test('create a room', (done) => {
+      roomsJSONAdapter.createRoom({title}).subscribe((data) => {
+        expect(data).toEqual(rooms[title]);
+        done();
+      });
+    });
+
+    test('throw an error when title not defined', (done) => {
+      roomsJSONAdapter.createRoom({title: ''}).subscribe(
+        () => {},
+        (error) => {
+          expect(error.message).toBe('error in creating room');
+          done();
+        },
+      );
+    });
+
+    test('completes the observable', (done) => {
+      roomsJSONAdapter.createRoom({title}).subscribe(
+        () => {},
+        () => {},
+        () => {
+          expect(true).toBeTruthy();
+          done();
+        },
+      );
+    });
+  });
 });

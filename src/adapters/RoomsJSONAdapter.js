@@ -138,4 +138,21 @@ export default class RoomsJSONAdapter extends RoomsAdapter {
 
     return result;
   }
+
+  /**
+   * Creates a room and returns room ID
+   *
+   * @param {object} room Information about the room to create.
+   * @returns {Observable.<Room>} Observable that emits created room data
+   */
+  createRoom(room) {
+    return new Observable((observer) => {
+      if (room.title && this.datasource[room.title]) {
+        observer.next(this.datasource[room.title]);
+      } else {
+        observer.error(new Error('error in creating room'));
+      }
+      observer.complete();
+    });
+  }
 }
