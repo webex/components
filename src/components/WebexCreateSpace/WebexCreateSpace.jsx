@@ -5,6 +5,7 @@ import {InputField, Button} from '../generic';
 import webexComponentClasses from '../helpers';
 import WebexSearchPeople from '../WebexSearchPeople/WebexSearchPeople';
 import {AdapterContext} from '../hooks/contexts';
+import {useMetrics} from '../hooks';
 
 /**
  * Webex Create Space Component
@@ -34,6 +35,8 @@ export default function WebexCreateSpace({
   const [alertMsg, setAlertMsg] = useState('');
   const adapter = useContext(AdapterContext);
   const addCollaboratorsRef = useRef();
+  const [emitMetrics] = useMetrics();
+  let startTime = window.performance.now();
 
   const handleCancel = () => {
     setSpaceTitle('');
@@ -62,17 +65,53 @@ export default function WebexCreateSpace({
   };
 
   const onError = (error) => {
+    const endTime = window.performance.now();
+
+    emitMetrics({
+      fields: {
+        startTime,
+        endTime,
+        totalTime: endTime - startTime,
+      },
+      metricName: 'createSpaceError',
+      tag: 'webex_widgets',
+      type: 'operational',
+    }, 'loginId');
     showBanner(true, error.message);
     isCreateSpaceResponse({error: error.message});
   };
 
   const addMembersSuccess = () => {
+    const endTime = window.performance.now();
+
+    emitMetrics({
+      fields: {
+        startTime,
+        endTime,
+        totalTime: endTime - startTime,
+      },
+      metricName: 'addMembersSuccess',
+      tag: 'webex_widgets',
+      type: 'operational',
+    }, 'loginId');
     showBanner(false, 'space created successfully');
     isCreateSpaceResponse(null, {data: {spaceTitle, addedSpaceMembers}, msg: 'space created successfully'});
   };
 
   const createRoomSuccess = (data) => {
     const membership = [];
+    const endTime = window.performance.now();
+
+    emitMetrics({
+      fields: {
+        startTime,
+        endTime,
+        totalTime: endTime - startTime,
+      },
+      metricName: 'createSpaceSuccess',
+      tag: 'webex_widgets',
+      type: 'operational',
+    }, 'loginId');
 
     addedSpaceMembers.forEach((personId) => {
       membership.push(adapter.membershipsAdapter.addRoomMember(personId, data.ID));
@@ -83,6 +122,7 @@ export default function WebexCreateSpace({
   };
 
   const handleCreateSpace = () => {
+    startTime = window.performance.now();
     if (createSpace) {
       if (spaceTitle) {
         adapter.roomsAdapter.createRoom({title: spaceTitle}).subscribe(createRoomSuccess, onError);
