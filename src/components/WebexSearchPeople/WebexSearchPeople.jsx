@@ -1,5 +1,5 @@
 import React, {
-  useState, forwardRef, useImperativeHandle, useContext,
+  useState, forwardRef, useImperativeHandle, useContext, useCallback,
 } from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -8,11 +8,14 @@ import {
 import webexComponentClasses from '../helpers';
 import Label from '../inputs/Label/Label';
 import {AdapterContext} from '../hooks/contexts';
+import {debounce} from '../../util';
 
 /**
  * Webex Search People component is used to search people based on
  * search query
  *
+ * @param {object} props Data passed to the component
+ * @param {string} [props.className]  Custom CSS class to apply
  * @param {Function} props.addedSpaceMembers Callback function to return the people to be added
  * in the space
  * @param {boolean} props.webexLookAhead Boolean to search people in webex sdk
@@ -22,7 +25,7 @@ import {AdapterContext} from '../hooks/contexts';
  */
 
 const WebexSearchPeople = forwardRef(({
-  addedSpaceMembers, webexLookAhead, memberLookAhead, style,
+  addedSpaceMembers, webexLookAhead, memberLookAhead, style, className,
 }, ref) => {
   const [inputValue, setInputValue] = useState('');
   const [peopleSelected, setPeopleSelected] = useState([]);
@@ -31,7 +34,7 @@ const WebexSearchPeople = forwardRef(({
   const [contacts, setContacts] = useState([]);
   const [collaborators, setCollaborators] = useState([]);
   const [showCollaborators, setShowCollaborators] = useState(false);
-  const [cssClasses, sc] = webexComponentClasses('search-people');
+  const [cssClasses, sc] = webexComponentClasses('search-people', className);
   const adapter = useContext(AdapterContext);
 
   const searchPeopleSuccess = (list) => {
@@ -60,6 +63,8 @@ const WebexSearchPeople = forwardRef(({
     setInputValue('');
     setPersonIdSelected([]);
     setPeopleSelected([]);
+    setContacts([]);
+    setCollaborators([]);
     setShowCollaborators(false);
     setShowContacts(false);
   };
@@ -80,12 +85,18 @@ const WebexSearchPeople = forwardRef(({
     }
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const debouncedChangeHandler = useCallback(debounce(handleSearchPeople, 500), []);
+
   const handleOnChange = (value) => {
     setInputValue(value);
 
     if (value !== '') {
-      handleSearchPeople(value);
+      debouncedChangeHandler(value);
     } else {
+      debouncedChangeHandler.cancel();
+      setContacts([]);
+      setCollaborators([]);
       setShowCollaborators(false);
       setShowContacts(false);
     }
@@ -229,6 +240,7 @@ WebexSearchPeople.propTypes = {
   webexLookAhead: PropTypes.bool,
   memberLookAhead: PropTypes.func,
   style: PropTypes.shape(),
+  className: PropTypes.string,
 };
 
 WebexSearchPeople.defaultProps = {
@@ -236,6 +248,7 @@ WebexSearchPeople.defaultProps = {
   webexLookAhead: true,
   memberLookAhead: undefined,
   style: undefined,
+  className: '',
 };
 
 export default WebexSearchPeople;

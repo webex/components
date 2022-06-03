@@ -34,4 +34,5 @@ searchPeople.args = {
 
     return [];
   },
+  className: '',
 };
