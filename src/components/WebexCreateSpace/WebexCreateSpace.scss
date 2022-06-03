@@ -20,4 +20,13 @@ $C:#{$WEBEX_COMPONENTS_CLASS_PREFIX}-create-space;
         display: flex;
         color: var(--wxc-speaking-color);
     }
+
+    .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-input-field__input { 
+        outline: none !important;
+        box-shadow: none !important;
+    } 
+
+    .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-options-list {
+        border-radius: 0;
+    }
 }
