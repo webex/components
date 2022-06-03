@@ -10,6 +10,7 @@ import {AdapterContext} from '../hooks/contexts';
  * Webex Create Space Component
  *
  * @param {object} props Data passed to the component
+ * @param {string} [props.className]  Custom CSS class to apply
  * @param {string} props.spaceName Name of space to be created
  * @param {boolean} props.createSpace Boolean to call the webex create space api
  * @param {Function} props.createSpaceResponse Callback function to return response
@@ -27,9 +28,10 @@ export default function WebexCreateSpace({
   webexLookAhead,
   memberLookAhead,
   style,
+  className,
 }) {
   const [spaceTitle, setSpaceTitle] = useState(spaceName);
-  const [cssClasses, sc] = webexComponentClasses('create-space');
+  const [cssClasses, sc] = webexComponentClasses('create-space', className);
   const [addedSpaceMembers, setAddedSpaceMembers] = useState([]);
   const [alertMsg, setAlertMsg] = useState('');
   const adapter = useContext(AdapterContext);
@@ -139,6 +141,7 @@ WebexCreateSpace.propTypes = {
   webexLookAhead: PropTypes.bool,
   memberLookAhead: PropTypes.func,
   style: PropTypes.shape(),
+  className: PropTypes.string,
 };
 
 WebexCreateSpace.defaultProps = {
@@ -148,4 +151,5 @@ WebexCreateSpace.defaultProps = {
   webexLookAhead: true,
   memberLookAhead: undefined,
   style: undefined,
+  className: '',
 };
