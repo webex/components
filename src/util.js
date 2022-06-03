@@ -143,6 +143,34 @@ export function uniqueId() {
   return `wxc-${lastId}`;
 }
 
+/**
+ * Returns a debounce function for the given function
+ *
+ * @param {Function} func function to be called after given time
+ * @returns {Function} returns a debounced function
+ */
+export function debounce(func) {
+  let timer;
+
+  const debounced = (...args) => {
+    const context = this;
+
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(() => {
+      timer = null;
+      func.apply(context, args);
+    }, 500);
+  };
+
+  const cancel = () => {
+    if (timer) clearTimeout(timer);
+  };
+
+  debounced.cancel = cancel;
+
+  return debounced;
+}
+
 export default {
   deepMerge,
   chainWith,
@@ -152,4 +180,5 @@ export default {
   pad2Zeros,
   mapValues,
   uniqueId,
+  debounce,
 };
