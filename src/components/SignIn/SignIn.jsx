@@ -11,15 +11,16 @@ import {useMetrics} from '../hooks';
  * @param {object} props  Data passed to the component
  * @param {string} props.authUrl  Authorization url
  * @param {string} props.clientID  Client ID of the app
- * @param {string} props.redirectUri  Redirect Url registered to capture the code
- * @param {string} props.scope  Scope required for the app
- * @param {Function} props.signInResponse  Function called on successfull sign in
- * @param {Function} props.getAccessToken  Function called to fetch access token from backend server
- * @param {object} props.tokenStoragePolicy  Store token in cookie, local or session storage
  * @param {string} props.authType  Authorization server type
- * @param {string} props.children  Text for this button
- * @param {string} props.className  Custom CSS class to apply
- * @param {object} props.style  Custom style to apply
+ * @param {string} props.redirectUri  Redirect Url registered to capture the code
+ * @param {string} [props.scope]  Scope required for the app
+ * @param {string} [props.state]  State parameter to be sent to authorisation server
+ * @param {Function} [props.signInResponse]  Function called on successfull sign in
+ * @param {Function} [props.getAccessToken]  Function called to fetch access token from backend server
+ * @param {object} [props.tokenStoragePolicy]  Store token in cookie, local or session storage
+ * @param {string} [props.children]  Text for this button
+ * @param {string} [props.className]  Custom CSS class to apply
+ * @param {object} [props.style]  Custom style to apply
  * @returns {object} JSX of the component
  */
 export default function SignIn({
@@ -28,6 +29,7 @@ export default function SignIn({
   redirectUri,
   authType,
   scope,
+  state,
   signInResponse,
   getAccessToken,
   tokenStoragePolicy,
@@ -41,8 +43,8 @@ export default function SignIn({
 
   const openAuthUrl = () => {
     const arr = new Uint8Array(4);
-    const state = window.crypto.getRandomValues(arr);
-    const fullAuthUrl = `${authUrl}?client_id=${clientID}&response_type=code&redirect_uri=${encodeURI(redirectUri)}${scope !== '' ? `&scope=${encodeURI(scope)}` : ''}&state=${state}`;
+    const newState = state || window.crypto.getRandomValues(arr);
+    const fullAuthUrl = `${authUrl}?client_id=${clientID}&response_type=code&redirect_uri=${encodeURI(redirectUri)}${scope !== '' ? `&scope=${encodeURI(scope)}` : ''}&state=${newState}`;
     const startTime = window.performance.now();
     const newWindow = window.open(fullAuthUrl, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=400,height=700');
 
@@ -130,6 +132,7 @@ SignIn.propTypes = {
   redirectUri: PropTypes.string.isRequired,
   authType: PropTypes.string.isRequired,
   scope: PropTypes.string,
+  state: PropTypes.string,
   signInResponse: PropTypes.func,
   getAccessToken: PropTypes.func,
   tokenStoragePolicy: PropTypes.shape(
@@ -142,6 +145,7 @@ SignIn.propTypes = {
 
 SignIn.defaultProps = {
   scope: '',
+  state: undefined,
   signInResponse: () => {},
   getAccessToken: () => {},
   tokenStoragePolicy: {},
