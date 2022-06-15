@@ -2,22 +2,22 @@ $C:#{$WEBEX_COMPONENTS_CLASS_PREFIX}-search-people;
 
 .#{$C} {
     min-width: 300px;
-    max-width: 560px;
-    width: 460px;
+    max-width: 450px;
+    width: 450px;
     color: var(--wxc-text-color);
     margin-top: 20px;
 
     .#{$C}__people-list-box {
         background: var(--wxc-options-list--normal--background);
         width: auto;
-        padding: 1.2rem 0 0 0;
         max-height: 105px;
         overflow-y: auto;
         border: 0.0625rem solid #CCCCCC;
-        border-radius: 4px;
+        border-radius: 0.5rem;
         margin-top: 8px;
         stroke-width: 1px;
         transition: box-shadow 0.15s ease-out;
+        text-align: left;
 
         .#{$C}__people-added {
             background: var(--wxc-primary-background);
@@ -29,7 +29,7 @@ $C:#{$WEBEX_COMPONENTS_CLASS_PREFIX}-search-people;
             padding: 0 4px 0 1rem;
             display: inline-flex;
             align-items: center;
-            margin: 0 0.3rem 0.3rem 0;
+            margin: 0.3rem;
 
             .#{$C}__people-added-content {
                 padding-right: 5px;
@@ -52,10 +52,12 @@ $C:#{$WEBEX_COMPONENTS_CLASS_PREFIX}-search-people;
             .#{$C}__avatar {
                 width: 2.5rem;
                 height: auto;
+                border-radius: 20px;
             }
 
             .#{$C}__data {
                 padding-left: 10px;
+                text-align: left;
             }
 
             .#{$C}__list-selected {
@@ -69,6 +71,7 @@ $C:#{$WEBEX_COMPONENTS_CLASS_PREFIX}-search-people;
             padding: 5px;
             border-bottom: 1px solid grey;
             background: var(--wxc-options-list--normal--background);
+            text-align: left;
         }
 
         .#{$C}__search-error {
