@@ -85,6 +85,18 @@ export default function WebexCreateSpace({
   };
 
   const handleCreateSpace = () => {
+     
+    let Id = adapter.peopleAdapter.getMe().ID;
+    let orgID = adapter.peopleAdapter.getMe().orgID;
+    emitMetrics({
+      fields: {
+        orgId,
+         userId
+      },
+      metricName: 'businessMetrics',
+      type: 'business',
+    }, '');
+    
     if (createSpace) {
       if (spaceTitle) {
         adapter.roomsAdapter.createRoom({title: spaceTitle}).subscribe(createRoomSuccess, onError);
