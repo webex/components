@@ -1,3 +1,10 @@
+# [1.270.0](https://github.com/webex/components/compare/v1.269.0...v1.270.0) (2022-08-17)
+
+
+### Features
+
+* **SignIn:** update classname ([e84b6c6](https://github.com/webex/components/commit/e84b6c6749231e1f0d54c54e6d023e65d223e16c))
+
 # [1.269.0](https://github.com/webex/components/compare/v1.268.0...v1.269.0) (2022-07-28)
 
 
