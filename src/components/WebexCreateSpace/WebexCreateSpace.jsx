@@ -86,7 +86,6 @@ export default function WebexCreateSpace({
 
   const handleCreateSpace = () => {
       
-  
     if (createSpace) {
       if (spaceTitle) {
         adapter.roomsAdapter.createRoom({title: spaceTitle}).subscribe(createRoomSuccess, onError);
