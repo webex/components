@@ -1,3 +1,10 @@
+# [1.271.0](https://github.com/webex/components/compare/v1.270.0...v1.271.0) (2022-09-07)
+
+
+### Features
+
+* **SignIn:** add state parameter ([144ca7a](https://github.com/webex/components/commit/144ca7aeb53703838ab5c345f850350da2ffa47d))
+
 # [1.270.0](https://github.com/webex/components/compare/v1.269.0...v1.270.0) (2022-08-17)
 
 
