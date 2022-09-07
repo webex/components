@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-unresolved
 import React, {useState, useContext, useRef} from 'react';
 import PropTypes from 'prop-types';
 import {forkJoin} from 'rxjs';
@@ -39,6 +40,8 @@ export default function WebexCreateSpace({
   const addCollaboratorsRef = useRef();
   const [emitMetrics] = useMetrics();
   let startTime = window.performance.now();
+  const Id = adapter.peopleAdapter.getMe().ID;
+  const {orgID} = adapter.peopleAdapter.getMe();
 
   const handleCancel = () => {
     setSpaceTitle('');
@@ -81,6 +84,14 @@ export default function WebexCreateSpace({
     }, 'loginId');
     showBanner(true, error.message);
     isCreateSpaceResponse({error: error.message});
+    emitMetrics({
+      fields: {
+        orgID,
+        Id,
+      },
+      metricName: 'businessMetrics',
+      type: 'business',
+    }, '');
   };
 
   const addMembersSuccess = () => {
@@ -98,6 +109,15 @@ export default function WebexCreateSpace({
     }, 'loginId');
     showBanner(false, 'space created successfully');
     isCreateSpaceResponse(null, {data: {spaceTitle, addedSpaceMembers}, msg: 'space created successfully'});
+
+    emitMetrics({
+      fields: {
+        orgID,
+        Id,
+      },
+      metricName: 'businessMetrics',
+      type: 'business',
+    }, '');
   };
 
   const createRoomSuccess = (data) => {
@@ -118,6 +138,15 @@ export default function WebexCreateSpace({
     addedSpaceMembers.forEach((personId) => {
       membership.push(adapter.membershipsAdapter.addRoomMember(personId, data.ID));
     });
+
+    emitMetrics({
+      fields: {
+        orgID,
+        Id,
+      },
+      metricName: 'businessMetrics',
+      type: 'business',
+    }, '');
 
     return forkJoin(membership)
       .subscribe(addMembersSuccess, onError);
