@@ -1,3 +1,27 @@
+# [1.270.0](https://github.com/webex/components/compare/v1.269.0...v1.270.0) (2022-08-17)
+
+
+### Features
+
+* **SignIn:** update classname ([e84b6c6](https://github.com/webex/components/commit/e84b6c6749231e1f0d54c54e6d023e65d223e16c))
+
+# [1.269.0](https://github.com/webex/components/compare/v1.268.0...v1.269.0) (2022-07-28)
+
+
+### Bug Fixes
+
+* **WebexCreateSpace:** css fix webex search avatar ([78550c1](https://github.com/webex/components/commit/78550c182795051d5478439c32fa2abef6d072ca))
+* **WebexCreateSpace:** remove extra space on top of search field and text alignment issue fixes ([770f619](https://github.com/webex/components/commit/770f619970756c587c1185203ee2d31e182535d2))
+
+
+### Features
+
+* **SignIn:** add style and children parameters ([774c9e1](https://github.com/webex/components/commit/774c9e1d873a777871f447e2926d779720e82935))
+* **SignIn:** emit operational metrics ([7db12ed](https://github.com/webex/components/commit/7db12ed6fc2866bb8cd99d2a2105824142b80e5a))
+* **WebexCreateSpace:** add create space component ([a45533a](https://github.com/webex/components/commit/a45533a1d8dbf6c5a05df0fc0e50d2da81cddecf))
+* **WebexSearchPeople:** add debounce method on the onChange event ([b235fa6](https://github.com/webex/components/commit/b235fa6e34ccd2cca9708e30edb3b09d98d3f119))
+* **WebexSearchPeople:** add search people component ([70100bd](https://github.com/webex/components/commit/70100bd0d585663cb0f8035963bde720e45bbed8))
+
 # [1.268.0](https://github.com/webex/components/compare/v1.267.3...v1.268.0) (2022-05-13)
 
 

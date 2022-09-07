@@ -36,7 +36,7 @@ export default function SignIn({
   style,
 }) {
   const [isAuthenticating, setIsAuthenticating] = useState(false);
-  const [cssClasses] = webexComponentClasses('sign-in', className);
+  const [cssClasses] = webexComponentClasses('oauth-sign-in', className);
   const [emitMetrics] = useMetrics();
 
   const openAuthUrl = () => {
