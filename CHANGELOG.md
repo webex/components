@@ -1,3 +1,10 @@
+# [1.272.0](https://github.com/webex/components/compare/v1.271.0...v1.272.0) (2022-09-07)
+
+
+### Features
+
+* **WebexCreateSpace:** emit operational metrics in create space component ([ca2d8b4](https://github.com/webex/components/commit/ca2d8b4fbbd87445637bd988a300c104bf70bef8))
+
 # [1.271.0](https://github.com/webex/components/compare/v1.270.0...v1.271.0) (2022-09-07)
 
 
