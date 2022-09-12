@@ -7,7 +7,7 @@ Webex Create Space component creates a new room with the list of added people.
 To see the create space component,
 you can view our [storybook](https://webex.github.io/components/storybook/?path=/story/platform-webex-create-space--create-space)
 
-or run the following **NPM** command:
+or run the following **NPM** command for local setup:
 
 ```shell
   npm start
