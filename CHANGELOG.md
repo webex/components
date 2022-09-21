@@ -1,3 +1,10 @@
+## [1.272.1](https://github.com/webex/components/compare/v1.272.0...v1.272.1) (2022-09-21)
+
+
+### Bug Fixes
+
+* **WebexCreateSpace:** fixing responsiveness for diffrent devices ([853d576](https://github.com/webex/components/commit/853d576364ab969771786b70b33ac62e9206f2cb))
+
 # [1.272.0](https://github.com/webex/components/compare/v1.271.0...v1.272.0) (2022-09-07)
 
 
