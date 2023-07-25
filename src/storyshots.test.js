@@ -22,6 +22,8 @@ jest.mock('./util', () => ({
   uniqueId: () => 'wxc-0',
 }));
 
+jest.mock('react-draggable', () => 'Draggable');
+
 /**
  * Returns a mock DOM ref object for use of snapshot tests.
  *

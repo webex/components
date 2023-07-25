@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/media-has-caption */
 import React, {useContext, useEffect} from 'react';
+import Draggable from 'react-draggable';
 import PropTypes from 'prop-types';
 import Badge from '../generic/Badge/Badge';
 import Icon from '../generic/Icon/Icon';
@@ -84,10 +85,12 @@ export default function WebexRemoteMedia({
   } else if (hasMedia && hasOtherMembers) {
     remoteDisplay = (
       <>
-        {remoteVideo
-          && <video className={`${sc('video')} ${sc('remote-video')}`} ref={videoRef} muted playsInline autoPlay />}
-        {remoteShare
-          && <video className={`${sc('video')} ${sc('remote-share')}`} ref={shareRef} muted playsInline autoPlay />}
+        {remoteVideo && (
+          <Draggable bounds="parent">
+            <video className={`${sc('video')} ${sc('remote-video')}`} ref={videoRef} muted playsInline autoPlay />
+          </Draggable>
+        )}
+        {remoteShare && <video className={`${sc('video')} ${sc('remote-share')}`} ref={shareRef} muted playsInline autoPlay />}
         {remoteAudio && <audio ref={audioRef} autoPlay />}
       </>
     );

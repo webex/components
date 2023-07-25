@@ -22,12 +22,16 @@ Array [
       <div
         className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting wxc-remote-media--remote-video-n-share"
       >
-        <video
-          autoPlay={true}
-          className="wxc-remote-media__video wxc-remote-media__remote-video"
-          muted={true}
-          playsInline={true}
-        />
+        <Draggable
+          bounds="parent"
+        >
+          <video
+            autoPlay={true}
+            className="wxc-remote-media__video wxc-remote-media__remote-video"
+            muted={true}
+            playsInline={true}
+          />
+        </Draggable>
         <video
           autoPlay={true}
           className="wxc-remote-media__video wxc-remote-media__remote-share"
@@ -288,12 +292,16 @@ Array [
       <div
         className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
       >
-        <video
-          autoPlay={true}
-          className="wxc-remote-media__video wxc-remote-media__remote-video"
-          muted={true}
-          playsInline={true}
-        />
+        <Draggable
+          bounds="parent"
+        >
+          <video
+            autoPlay={true}
+            className="wxc-remote-media__video wxc-remote-media__remote-video"
+            muted={true}
+            playsInline={true}
+          />
+        </Draggable>
         <audio
           autoPlay={true}
         />
@@ -374,12 +382,16 @@ Array [
       <div
         className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting wxc-remote-media--remote-video-n-share"
       >
-        <video
-          autoPlay={true}
-          className="wxc-remote-media__video wxc-remote-media__remote-video"
-          muted={true}
-          playsInline={true}
-        />
+        <Draggable
+          bounds="parent"
+        >
+          <video
+            autoPlay={true}
+            className="wxc-remote-media__video wxc-remote-media__remote-video"
+            muted={true}
+            playsInline={true}
+          />
+        </Draggable>
         <video
           autoPlay={true}
           className="wxc-remote-media__video wxc-remote-media__remote-share"
@@ -466,12 +478,16 @@ Array [
       <div
         className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
       >
-        <video
-          autoPlay={true}
-          className="wxc-remote-media__video wxc-remote-media__remote-video"
-          muted={true}
-          playsInline={true}
-        />
+        <Draggable
+          bounds="parent"
+        >
+          <video
+            autoPlay={true}
+            className="wxc-remote-media__video wxc-remote-media__remote-video"
+            muted={true}
+            playsInline={true}
+          />
+        </Draggable>
       </div>
       <div
         className="wxc wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"

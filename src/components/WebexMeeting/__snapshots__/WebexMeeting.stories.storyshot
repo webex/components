@@ -66,12 +66,16 @@ Array [
           <div
             className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
           >
-            <video
-              autoPlay={true}
-              className="wxc-remote-media__video wxc-remote-media__remote-video"
-              muted={true}
-              playsInline={true}
-            />
+            <Draggable
+              bounds="parent"
+            >
+              <video
+                autoPlay={true}
+                className="wxc-remote-media__video wxc-remote-media__remote-video"
+                muted={true}
+                playsInline={true}
+              />
+            </Draggable>
             <audio
               autoPlay={true}
             />
