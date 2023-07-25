@@ -11,12 +11,16 @@ Array [
       }
     }
   >
-    <video
-      autoPlay={true}
-      className="wxc-remote-media__video wxc-remote-media__remote-video"
-      muted={true}
-      playsInline={true}
-    />
+    <Draggable
+      bounds="parent"
+    >
+      <video
+        autoPlay={true}
+        className="wxc-remote-media__video wxc-remote-media__remote-video"
+        muted={true}
+        playsInline={true}
+      />
+    </Draggable>
     <video
       autoPlay={true}
       className="wxc-remote-media__video wxc-remote-media__remote-share"
@@ -230,12 +234,16 @@ Array [
       }
     }
   >
-    <video
-      autoPlay={true}
-      className="wxc-remote-media__video wxc-remote-media__remote-video"
-      muted={true}
-      playsInline={true}
-    />
+    <Draggable
+      bounds="parent"
+    >
+      <video
+        autoPlay={true}
+        className="wxc-remote-media__video wxc-remote-media__remote-video"
+        muted={true}
+        playsInline={true}
+      />
+    </Draggable>
   </div>,
   <video
     autoPlay={true}
