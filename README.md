@@ -21,7 +21,7 @@ aimed at react developers that want to embed the components into their applicati
 ## Project Status
 
 The Webex Component System is considered to be in beta stage and it's not a generally available product from Webex at this time.
-This means that the Webex Component System is available for everyone to use but breaking changes may occur as we develop it.
+This means that the Webex Component System is available for everyone to use but breaking changes,  may occur as we develop it.
 We try our best to minimize any breaking changes but they may occur.
 
 While the Webex Component System is not a GA product, we still offer support through all regular channels.
@@ -30,11 +30,19 @@ We would love for you to use the Webex Component System and be part of the feedb
 
 ## Table of Contents
 
+- [Project Status](#project-status)
+- [Table of Contents](#table-of-contents)
 - [Demo](#demo)
 - [Install](#install)
 - [Webex Components vs Webex Widgets](#webex-components-vs-webex-widgets)
 - [Usage](#usage)
+    - [Webex Components Styles](#webex-components-styles)
+      - [JavaScript](#javascript)
+      - [HTML](#html)
+  - [Adapters](#adapters)
+  - [Components](#components)
 - [Contributing](#contributing)
+  - [Issues](#issues)
 - [License](#license)
 - [Support](#support)
 
