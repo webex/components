@@ -1,3 +1,13 @@
+## [1.272.2](https://github.com/webex/components/compare/v1.272.1...v1.272.2) (2023-07-31)
+
+
+### Bug Fixes
+
+* update the npm version ([55f0d90](https://github.com/webex/components/commit/55f0d907ff845a8ab57616b8e11603599778b6ff))
+* update the release script to use workflow ([974175c](https://github.com/webex/components/commit/974175c089618c80e74be9fdcf0090161210f79f))
+* update the release script to use workflow ([de192c6](https://github.com/webex/components/commit/de192c6345209ffbab8757fbc57a33ef6f9eff9e))
+* **WebexRemoteMedia:** make remote video draggable ([e67ce56](https://github.com/webex/components/commit/e67ce56da47d63cc78a1c3551302878311a3fb28))
+
 ## [1.272.1](https://github.com/webex/components/compare/v1.272.0...v1.272.1) (2022-09-21)
 
 
