@@ -67,42 +67,8 @@ jobs:
             - dist
             - docs/bundle-analysis-*
 
-  release:
-    executor: node-fermium-executor
-    steps:
-      - attach_workspace:
-          at: .
-      - run:
-          name: Release
-          command: npm run release
-
-  storybook:
-    executor: node-fermium-executor
-    steps:
-      - attach_workspace:
-          at: .
-      - add_ssh_keys:
-          fingerprints:
-            - $RW_FINGERPRINT
-      - checkout
-      - run:
-          name: Build Storybook
-          command: |
-            rm -rf docs/storybook
-            npm run storybook:build
-      - run:
-          name: Push Storybook updates to Github
-          command: |
-            # Check if there's anything to commit
-            if [ -n "$(git status --porcelain)" ]; then
-              git pull
-              git add docs/storybook
-              git commit -m "docs: build Storybook [skip ci]"
-              git push origin master
-            fi
-
 workflows:
-  test_and_release:
+  test_and_storybook:
     jobs:
       - install
       - lint:
@@ -121,22 +87,6 @@ workflows:
           requires:
             - lint
             - unit_test
-          filters:
-            branches:
-              only: master
-      - release:
-          context:
-            - webex-embed
-          requires:
-            - build
-          filters:
-            branches:
-              only: master
-      - storybook:
-          context:
-            - webex-embed
-          requires:
-            - release
           filters:
             branches:
               only: master
