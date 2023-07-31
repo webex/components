@@ -22,14 +22,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - run:
-          name: Build Storybook
-          command: |
+      - name: Build Storybook
+        run: |
             rm -rf docs/storybook
             npm run storybook:build
-      - run:
-          name: Push Storybook updates to Github
-          command: |
+      - name: Push Storybook updates to Github
+        run: |
             # Check if there's anything to commit
             if [ -n "$(git status --porcelain)" ]; then
               git pull
