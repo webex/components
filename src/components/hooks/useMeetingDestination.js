@@ -1,4 +1,5 @@
 import {useEffect, useContext, useState} from 'react';
+import {MeetingState} from '@webex/component-adapter-interfaces';
 
 import {AdapterContext} from './contexts';
 import {chainWith} from '../../util';
@@ -66,17 +67,17 @@ export default function useMeetingDestination(meetingDestination) {
         chainWith(({ID}) => meetingsAdapter.getMeeting(ID)),
       ).subscribe(onMeeting, onError);
 
-      let beforePageUnload = () => {
-        if (lastMeeting?.ID) {
-          meetingsAdapter.leavemeeting(lastMeeting.ID);
+      let beforePageUnload = async () => {
+        if (lastMeeting?.ID && lastMeeting.state === MeetingState.JOINED) {
+          await meetingsAdapter.leavemeeting(lastMeeting.ID);
         }
       };
 
       window.addEventListener('beforeunload', beforePageUnload);
 
-      cleanup = () => {
-        if (lastMeeting?.ID) {
-          meetingsAdapter.leaveMeeting(lastMeeting.ID);
+      cleanup = async () => {
+        if (lastMeeting?.ID && lastMeeting.state === MeetingState.JOINED) {
+          await meetingsAdapter.leaveMeeting(lastMeeting.ID);
         }
 
         if (beforePageUnload) {
