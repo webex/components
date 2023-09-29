@@ -68,6 +68,7 @@ export default function useMeetingDestination(meetingDestination) {
       ).subscribe(onMeeting, onError);
 
       let beforePageUnload = async () => {
+        // Call leave only if meeting was joined
         if (lastMeeting?.ID && lastMeeting.state === MeetingState.JOINED) {
           await meetingsAdapter.leavemeeting(lastMeeting.ID);
         }
