@@ -1,3 +1,11 @@
+## [1.272.3](https://github.com/webex/components/compare/v1.272.2...v1.272.3) (2023-10-04)
+
+
+### Bug Fixes
+
+* **meeting:** do not call leave if not joined - release ([a3fb369](https://github.com/webex/components/commit/a3fb369c8468b6070d7f7fc5cbc6a6cf0a4bfde6))
+* **meeting:** do not call leavemeeting if not joined ([877a7d1](https://github.com/webex/components/commit/877a7d1e9a0f93507d58e46b415d8a6a8b45ee3e))
+
 ## [1.272.2](https://github.com/webex/components/compare/v1.272.1...v1.272.2) (2023-07-31)
 
 
