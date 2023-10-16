@@ -93,7 +93,7 @@
     "rollup-plugin-terser": "^7.0.0",
     "rollup-plugin-visualizer": "^4.1.0",
     "sass-loader": "^10.0.1",
-    "semantic-release": "^18.0.0",
+    "semantic-release": "^19.0.3",
     "storybook-addon-themes": "^6.1.0",
     "style-loader": "^1.2.1",
     "wait-for-expect": "^3.0.2"
