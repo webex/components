@@ -15,6 +15,7 @@ import {InputField} from '../../generic';
  * @param {boolean} [props.required=false]  Flag indicating input required
  * @param {string} [props.error]  Error text
  * @param {string} [props.label]  Label text
+ * @param {Function} [props.nativeRef]  Action to perform to obtain the native input ref
  * @param {Function} props.onChange  Action to perform on input change
  * @returns {object} JSX of the component
  */
@@ -27,6 +28,7 @@ export default function TimeInput({
   required,
   error,
   label,
+  nativeRef,
   onChange,
 }) {
   const [cssClasses] = webexComponentClasses('time-input', className);
@@ -41,6 +43,7 @@ export default function TimeInput({
       required={required}
       error={error}
       onChange={onChange}
+      nativeRef={nativeRef}
       value={value}
       label={label}
     />
@@ -56,6 +59,7 @@ TimeInput.propTypes = {
   required: PropTypes.bool,
   error: PropTypes.string,
   label: PropTypes.string,
+  nativeRef: PropTypes.func,
   onChange: PropTypes.func.isRequired,
 };
 
@@ -68,4 +72,5 @@ TimeInput.defaultProps = {
   required: false,
   error: undefined,
   label: undefined,
+  nativeRef: undefined,
 };

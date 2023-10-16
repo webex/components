@@ -18,6 +18,7 @@ const HINTS = {
  * @param {string} [props.label]  Label text
  * @param {number} [props.maxLength]  Maximum number of characters allowed
  * @param {string} [props.name]  Input name
+ * @param {Function} [props.nativeRef]  Action to perform to obtain the native input ref
  * @param {Function} props.onChange  Action to perform on input change
  * @param {string} [props.pattern]  Specifies a regular expression that the element's value is checked against
  * @param {string} [props.placeholder]  Input placeholder
@@ -37,6 +38,7 @@ export default function TextInput({
   maxLength,
   name,
   onChange,
+  nativeRef,
   pattern,
   placeholder,
   required,
@@ -63,6 +65,7 @@ export default function TextInput({
       label={label}
       maxLength={maxLength}
       name={name}
+      nativeRef={nativeRef}
       onChange={onChange}
       pattern={pattern}
       placeholder={placeholder}
@@ -84,6 +87,7 @@ TextInput.propTypes = {
   label: PropTypes.string,
   maxLength: PropTypes.number,
   name: PropTypes.string,
+  nativeRef: PropTypes.func,
   onChange: PropTypes.func.isRequired,
   pattern: PropTypes.string,
   placeholder: PropTypes.string,
@@ -102,6 +106,7 @@ TextInput.defaultProps = {
   label: undefined,
   maxLength: undefined,
   name: undefined,
+  nativeRef: undefined,
   pattern: undefined,
   placeholder: undefined,
   required: false,

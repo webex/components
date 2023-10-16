@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useCallback, useContext, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 import {formatDateTime} from '../util';
@@ -22,6 +22,7 @@ export default function InputDate({data, className, style}) {
     setValue,
     getValue,
     setInput,
+    setNativeInputRef,
     getError,
   } = useContext(AdaptiveCardContext);
 
@@ -44,6 +45,10 @@ export default function InputDate({data, className, style}) {
     setInput,
   ]);
 
+  const nativeRefCallback = useCallback((nativeRef) => {
+    setNativeInputRef(data.id, nativeRef);
+  }, [data.id, setNativeInputRef]);
+
   return (
     <DateInput
       className={cssClasses}
@@ -54,6 +59,7 @@ export default function InputDate({data, className, style}) {
       error={getError(data.id)}
       required={data.isRequired}
       label={formatDateTime(data.label)}
+      nativeRef={nativeRefCallback}
       onChange={(value) => setValue(data.id, value)}
     />
   );

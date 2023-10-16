@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useCallback, useContext, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 import AdaptiveCardContext from '../context/adaptive-card-context';
@@ -22,6 +22,7 @@ export default function InputNumber({data, className, style}) {
     setValue,
     getValue,
     setInput,
+    setNativeInputRef,
     getError,
   } = useContext(AdaptiveCardContext);
 
@@ -44,6 +45,10 @@ export default function InputNumber({data, className, style}) {
     setInput,
   ]);
 
+  const nativeRefCallback = useCallback((nativeRef) => {
+    setNativeInputRef(data.id, nativeRef);
+  }, [data.id, setNativeInputRef]);
+
   return (
     <NumberInput
       className={cssClasses}
@@ -51,6 +56,7 @@ export default function InputNumber({data, className, style}) {
       label={formatDateTime(data.label)}
       max={data.max}
       min={data.min}
+      nativeRef={nativeRefCallback}
       onChange={(value) => setValue(data.id, value)}
       placeholder={data.placeholder}
       required={data.isRequired}

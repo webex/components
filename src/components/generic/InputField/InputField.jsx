@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import webexComponentClasses from '../../helpers';
@@ -22,6 +22,7 @@ import Label from '../../inputs/Label/Label';
  * @param {number} [props.maxLength]  Maximum number of characters allowed
  * @param {number} [props.min]  Minimum value for the input element
  * @param {string} [props.name]  Input name
+ * @param {Function} [props.nativeRef]  Action to perform to obtain the native input ref
  * @param {Function} [props.onChange]  Action to perform on input change
  * @param {string} [props.pattern]  Specifies a regular expression that the element's value is checked against
  * @param {string} [props.placeholder]  Input placeholder
@@ -46,6 +47,7 @@ export default function InputField({
   maxLength,
   min,
   name,
+  nativeRef,
   onChange,
   pattern,
   placeholder,
@@ -73,6 +75,11 @@ export default function InputField({
       event.stopPropagation(); // prevent other navigation
     }
   };
+
+  const ref2 = useCallback((node) => {
+    inputRef(node);
+    nativeRef(node);
+  }, [nativeRef]);
 
   useAutoFocus(inputRef, autoFocus);
 
@@ -105,7 +112,7 @@ export default function InputField({
           onKeyDown={onKeyDown}
           pattern={pattern}
           placeholder={placeholder}
-          ref={inputRef}
+          ref={ref2}
           required={required}
           tabIndex={tabIndex}
           type={type}
@@ -138,6 +145,7 @@ InputField.propTypes = {
   maxLength: PropTypes.number,
   min: PropTypes.number,
   name: PropTypes.string,
+  nativeRef: PropTypes.func,
   onChange: PropTypes.func,
   pattern: PropTypes.string,
   placeholder: PropTypes.string,
@@ -168,6 +176,7 @@ InputField.defaultProps = {
   maxLength: undefined,
   min: undefined,
   name: undefined,
+  nativeRef: () => {},
   onChange: undefined,
   pattern: undefined,
   placeholder: undefined,
