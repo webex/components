@@ -112,6 +112,15 @@
       "rules": {
        "jsdoc/require-jsdoc": "off"
       }
+    },
+    {
+      "files": [
+        "*.js", "*.jsx"
+      ],
+      "rules": {
+        "import/no-unresolved": "off",
+        "react/destructuring-assignment": "off"
+      }
     }
   ]
 }

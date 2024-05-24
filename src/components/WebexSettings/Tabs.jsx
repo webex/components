@@ -97,6 +97,7 @@ Tabs.propTypes = {
   onSelect: PropTypes.func.isRequired,
   selected: PropTypes.string.isRequired,
   style: PropTypes.shape(),
+  // eslint-disable-next-line react/forbid-prop-types
   tabs: PropTypes.arrayOf(PropTypes.object).isRequired,
   tabIndex: PropTypes.number,
 };
