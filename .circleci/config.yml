@@ -4,7 +4,7 @@ executors:
   node-iron-executor:
     working_directory: ~/webex-components
     docker:
-      - image: circleci/node:iron
+      - image: cimg/node:20.13.1
 
 jobs:
   install:
