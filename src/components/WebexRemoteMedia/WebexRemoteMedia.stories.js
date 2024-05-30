@@ -6,7 +6,7 @@ export default {
   component: WebexRemoteMedia,
 };
 
-const Template = (args) => {
+const Template = (...args) => {
   const style = {
     width: '100%',
     height: '100%',

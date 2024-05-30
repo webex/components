@@ -6,7 +6,7 @@ export default {
   component: WebexMeetingGuestAuthentication,
 };
 
-const Template = (args) => {
+const Template = (...args) => {
   const style = {
     width: '31.25rem',
     height: '25rem',

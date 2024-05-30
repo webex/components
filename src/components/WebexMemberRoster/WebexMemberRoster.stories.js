@@ -6,7 +6,7 @@ export default {
   component: WebexMemberRoster,
 };
 
-const Template = (args) => {
+const Template = (...args) => {
   const style = {
     width: '23.25rem',
     maxHeight: '100%',
