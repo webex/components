@@ -40,7 +40,7 @@ jobs:
           at: .
       - run:
           name: Unit Test Coverage
-          command: npm run test:coverage
+          command: npm run test:coverage -- -u
       - store_test_results:
           path: test_results
 
