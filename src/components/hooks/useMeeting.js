@@ -77,5 +77,7 @@ export default function useMeeting(meetingID) {
     return cleanup;
   }, [meetingsAdapter, meetingID]);
 
+  console.log('pkesari_meeting object being returned from useMeeting hooks: ', meeting);
+
   return meeting;
 }

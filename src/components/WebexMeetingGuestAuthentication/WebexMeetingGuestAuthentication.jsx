@@ -7,11 +7,14 @@ import {PHONE_LARGE} from '../breakpoints';
 import {useElementDimensions, useMeeting, useRef} from '../hooks';
 import {AdapterContext} from '../hooks/contexts';
 import Spinner from '../generic/Spinner/Spinner';
+import CaptchaInput from '../inputs/CaptchaInput/CaptchaInput';
 
 const HINTS = {
   logo: 'Webex by Cisco logo',
   name: 'Your name appears in the participant list. Skip this optional field to use the name provided by the system.',
   password: 'The password is provided in the invitation for a scheduled  meeting, or from the host.',
+  captcha: 'The captcha is required',
+  captchaImage: 'Captcha Image',
   buttonHint: 'Start meeting. Start the meeting after entering the required information.',
   hostLink: 'Click to go to a new screen where the meeting host can enter the host key.',
 };
@@ -47,8 +50,9 @@ export default function WebexMeetingGuestAuthentication({
 }) {
   const [name, setName] = useState();
   const [password, setPassword] = useState('');
+  const [captcha, setCaptcha] = useState('');
   const [nameError, setNameError] = useState();
-  const {ID, invalidPassword} = useMeeting(meetingID);
+  const {ID, invalidPassword, requiredCaptcha} = useMeeting(meetingID);
   const [isJoining, setIsJoining] = useState(false);
   const adapter = useContext(AdapterContext);
   const ref = useRef();
@@ -58,11 +62,19 @@ export default function WebexMeetingGuestAuthentication({
     phone: width <= PHONE_LARGE,
   });
 
+  console.log('pkesari_fetching captcha, invalidPassword from meeting :', requiredCaptcha, invalidPassword);
+
   const isStartButtonDisabled = nameError || !password || invalidPassword || isJoining;
 
   const joinMeeting = () => {
     setIsJoining(true);
-    adapter.meetingsAdapter.joinMeeting(ID, {name, password}).finally(() => setIsJoining(false));
+    if (requiredCaptcha) {
+      console.log('pkesari_joining meeting with password and captcha');
+      adapter.meetingsAdapter.joinMeeting(ID, {name, password, captcha}).finally(() => setIsJoining(false));
+    } else {
+      console.log('pkesari_joining meeting with just password');
+      adapter.meetingsAdapter.joinMeeting(ID, {name, password}).finally(() => setIsJoining(false));
+    }
   };
 
   const handleNameChange = (value) => {
@@ -74,6 +86,14 @@ export default function WebexMeetingGuestAuthentication({
     setPassword(value);
     adapter.meetingsAdapter.clearInvalidPasswordFlag(ID);
   };
+
+  const handleCaptchaChange = (value) => {
+    setCaptcha(value);
+  };
+
+  const refreshCaptcha = () => {
+    adapter.meetingsAdapter.refreshCaptcha();
+  }
 
   const handleHostClick = (event) => {
     event.preventDefault();
@@ -113,6 +133,20 @@ export default function WebexMeetingGuestAuthentication({
           ariaLabel={HINTS.password}
           tabIndex={102}
         />
+        {requiredCaptcha && requiredCaptcha.verificationImageURL && (<div className={sc('captcha-image')} ariaLabel={HINTS.captchaImage}>
+          <img src={requiredCaptcha.verificationImageURL} alt="captcha" style="width: 150px; height: 70px;" hidden/>
+          <CaptchaInput
+            className={sc('input')}
+            type="captcha"
+            name="captcha"
+            value={captcha}
+            onChange={handleCaptchaChange}
+            label="Input Captcha"
+            ariaLabel={HINTS.captcha}
+            tabIndex={103}
+          />
+        </div>
+        )}
         <Button
           type="primary"
           className={sc('start-button')}
@@ -120,7 +154,7 @@ export default function WebexMeetingGuestAuthentication({
           onClick={joinMeeting}
           isDisabled={isStartButtonDisabled}
           ariaLabel={HINTS.buttonHint}
-          tabIndex={103}
+          tabIndex={104}
         >
           {isJoining && <Spinner className={sc('start-button-spinner')} size={18} />}
           {isJoining ? 'Starting meeting...' : 'Start meeting'}
@@ -130,7 +164,7 @@ export default function WebexMeetingGuestAuthentication({
         Hosting the meeting?
         {' '}
         {/* eslint-disable-next-line */}
-        <a href="#" tabIndex={104} className={sc('host-hyperlink')} onClick={handleHostClick} aria-label={HINTS.hostLink}>Enter host key.</a>
+        <a href="#" tabIndex={105} className={sc('host-hyperlink')} onClick={handleHostClick} aria-label={HINTS.hostLink}>Enter host key.</a>
       </div>
     </div>
   );
