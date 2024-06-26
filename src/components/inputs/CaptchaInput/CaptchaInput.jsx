@@ -34,7 +34,6 @@ export default function CaptchaInput({
       pattern={pattern}
       placeholder={placeholder}
       required={required}
-      rightIcon={value ? showCaptcha : false}
       style={style}
       tabIndex={tabIndex}
       value={value}
