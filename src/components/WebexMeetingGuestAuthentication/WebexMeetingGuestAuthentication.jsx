@@ -52,7 +52,7 @@ export default function WebexMeetingGuestAuthentication({
   const [password, setPassword] = useState('');
   const [nameError, setNameError] = useState();
   const [captcha, setCaptcha] = useState('');
-  const {ID, invalidPassword, requiredCaptcha} = useMeeting(meetingID);
+  const {ID, failureReason, invalidPassword, requiredCaptcha} = useMeeting(meetingID);
   const [isJoining, setIsJoining] = useState(false);
   const adapter = useContext(AdapterContext);
   const ref = useRef();
@@ -62,18 +62,19 @@ export default function WebexMeetingGuestAuthentication({
     phone: width <= PHONE_LARGE,
   });
 
+  const passwordError = invalidPassword && failureReason === 'WRONG_PASSWORD' && !requiredCaptcha.captchaId ? 'Incorrect password. Try again.' : '';
+  let captchaError = '';
+  if (invalidPassword && failureReason === 'WRONG_PASSWORD' && requiredCaptcha.captchaId) {
+    captchaError = 'Incorrect password entered too many times. Enter captcha code'
+  } else if (failureReason === 'WRONG_CAPTCHA' && requiredCaptcha.captchaId) {
+    captchaError = 'Invalid Captcha. Try again.'
+  } 
+
   const isStartButtonDisabled = nameError || !password || invalidPassword || isJoining;
 
   const joinMeeting = () => {
     setIsJoining(true);
-    if (requiredCaptcha) {
-      console.log('pkesari_joining meeting with password and captcha');
-      adapter.meetingsAdapter.joinMeeting(ID, {name, password, captcha})
-        .finally(() => setIsJoining(false));
-    } else {
-      console.log('pkesari_joining meeting with just password');
-      adapter.meetingsAdapter.joinMeeting(ID, {name, password}).finally(() => setIsJoining(false));
-    }
+      adapter.meetingsAdapter.joinMeeting(ID, {name, password, captcha}).finally(() => setIsJoining(false));
   };
 
   const handleNameChange = (value) => {
@@ -88,11 +89,12 @@ export default function WebexMeetingGuestAuthentication({
 
   const handleCaptchaChange = (value) => {
     setCaptcha(value);
+    adapter.meetingsAdapter.clearInvalidPasswordFlag(ID);
   };
 
-  // const refreshCaptcha = () => {
-  //   adapter.meetingsAdapter.refreshCaptcha();
-  // };
+  const refreshCaptcha = () => {
+    adapter.meetingsAdapter.refreshCaptcha();
+  };
 
   const handleHostClick = (event) => {
     event.preventDefault();
@@ -127,21 +129,22 @@ export default function WebexMeetingGuestAuthentication({
           value={password}
           onChange={handlePasswordChange}
           disabled={isJoining}
-          error={invalidPassword ? 'Incorrect password. Try again.' : ''}
+          error={passwordError}
           label="Meeting password (required)"
           ariaLabel={HINTS.password}
           tabIndex={102}
         />
         {requiredCaptcha && requiredCaptcha.verificationImageURL && (
-          <div className={sc('captcha-image')} ariaLabel={HINTS.captchaImage}>
-            <img src={requiredCaptcha.verificationImageURL} alt="captcha" hidden />
+          <div className={sc('captcha-image')} aria-label={HINTS.captchaImage}>
+            <img src={requiredCaptcha.verificationImageURL} alt="captcha" />
             <CaptchaInput
               className={sc('input')}
               type="captcha"
               name="captcha"
               value={captcha}
               onChange={handleCaptchaChange}
-              label="Input Captcha"
+              error={captchaError}
+              label="Enter Captcha"
               ariaLabel={HINTS.captcha}
               tabIndex={103}
             />
