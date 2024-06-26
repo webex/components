@@ -116,7 +116,7 @@ Array [
             "height": 28,
           }
         }
-        tabIndex={103}
+        tabIndex={104}
         type="button"
         wxc-disabled="true"
       >
@@ -134,7 +134,7 @@ Array [
         className="wxc-meeting-guest-authentication__host-hyperlink"
         href="#"
         onClick={[Function]}
-        tabIndex={104}
+        tabIndex={105}
       >
         Enter host key.
       </a>
