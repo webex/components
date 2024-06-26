@@ -62,13 +62,18 @@ export default function WebexMeetingGuestAuthentication({
     phone: width <= PHONE_LARGE,
   });
 
-  const passwordError = invalidPassword && failureReason === 'WRONG_PASSWORD' && !requiredCaptcha.captchaId ? 'Incorrect password. Try again.' : '';
+  let passwordError = '';
   let captchaError = '';
-  if (invalidPassword && failureReason === 'WRONG_PASSWORD' && requiredCaptcha.captchaId) {
-    captchaError = 'Incorrect password entered too many times. Enter captcha code'
+
+  if (invalidPassword && failureReason === 'WRONG_PASSWORD') {
+    if (!requiredCaptcha.captchaId) {
+      passwordError = 'Incorrect password. Try again.';
+    } else {
+      captchaError = 'Incorrect password entered too many times. Enter captcha code';
+    }
   } else if (failureReason === 'WRONG_CAPTCHA' && requiredCaptcha.captchaId) {
-    captchaError = 'Invalid Captcha. Try again.'
-  } 
+    captchaError = 'Invalid Captcha. Try again.';
+  }
 
   const isStartButtonDisabled = nameError || !password || invalidPassword || isJoining;
 
