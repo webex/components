@@ -56,6 +56,12 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-guest-authentication;
     .#{$C}__captcha-buttons {
       display: flex;
       flex-direction: row;
+      align-items: center;
+    }
+
+    .#{$C}__captcha-image {
+      margin-left: 0.8rem;
+      padding-right: 0.5rem;
     }
 
     .#{$C}__start-button-spinner {
