@@ -145,9 +145,9 @@ export default function WebexMeetingGuestAuthentication({
           tabIndex={102}
         />
         {requiredCaptcha && requiredCaptcha.verificationImageURL && (
-          <div className={sc('captcha-image')} aria-label={HINTS.captchaImage}>
+          <div aria-label={HINTS.captchaImage}>
             <div className={sc('captcha-buttons')}>
-              <img src={requiredCaptcha.verificationImageURL} alt="captcha" />
+              <img src={requiredCaptcha.verificationImageURL} className={sc('captcha-image')} alt="captcha" />
               <Button
                 type="primary"
                 className={sc('captcha-refresh-button')}
@@ -156,7 +156,7 @@ export default function WebexMeetingGuestAuthentication({
                 ariaLabel={HINTS.captchaRefresh}
                 tabIndex={103}
               >
-                <Icon name="refresh" />
+                <Icon name="refresh" style={style} />
               </Button>
             </div>
             <CaptchaInput

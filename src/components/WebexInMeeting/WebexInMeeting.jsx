@@ -77,6 +77,7 @@ export default function WebexInMeeting({
                 meetingID={meetingID}
                 className={sc('authentication-guest')}
                 switchToHostModal={() => setAuthModal('host')}
+                style={style}
               />
             )
             : <WebexMeetingHostAuthentication meetingID={meetingID} className={sc('authentication-host')} />
