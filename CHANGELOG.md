@@ -1,20 +1,3 @@
-# [1.273.0](https://github.com/webex/components/compare/v1.272.3...v1.273.0) (2024-07-04)
-
-
-### Bug Fixes
-
-* **meetings:** add-bottom-padding-to-captcha-div ([793a865](https://github.com/webex/components/commit/793a865bc9191c873392fd6a60cb399a7b375523))
-* **meetings:** add-styles-to-refresh-button ([7d648ae](https://github.com/webex/components/commit/7d648ae4f518397b2a1cea52622272dc8d3fb626))
-* **meetings:** added CapctchaInput element ([9ac78e8](https://github.com/webex/components/commit/9ac78e8f747791f7b607bdd7ebbc3797d36641bf))
-* **meetings:** correction ([b354ab4](https://github.com/webex/components/commit/b354ab4d311fba63331292e9b0512b632403ab59))
-* **meetings:** more additions, tested captcha flow with different scenarios ([2124d13](https://github.com/webex/components/commit/2124d132899d2f21d78482ba0375a2a81db5119e))
-* **meetings:** test fix ([80a4531](https://github.com/webex/components/commit/80a4531b35c471622220db3ce4091fec86839828))
-
-
-### Features
-
-* **meetings:** add-refresh-captcha-flow ([f673183](https://github.com/webex/components/commit/f6731838e9144362f8e737b192c3a3d3d3694fd9))
-
 ## [1.272.3](https://github.com/webex/components/compare/v1.272.2...v1.272.3) (2023-10-04)
 
 
