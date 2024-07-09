@@ -1,3 +1,10 @@
+# [1.274.0](https://github.com/webex/components/compare/v1.273.0...v1.274.0) (2024-07-05)
+
+
+### Features
+
+* **meetings:** release new minor npm version with captcha support ([#837](https://github.com/webex/components/issues/837)) ([76d006d](https://github.com/webex/components/commit/76d006d0c389a70d6fad4cdba9d434312af560d1))
+
 ## [1.272.3](https://github.com/webex/components/compare/v1.272.2...v1.272.3) (2023-10-04)
 
 

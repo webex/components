@@ -27,6 +27,7 @@ export {default as ParticipantListFilledIcon} from './ParticipantListFilledIcon'
 export {default as PtoPresenceIcon} from './PtoPresenceIcon';
 export {default as QuietHoursPresenceIcon} from './QuietHoursPresenceIcon';
 export {default as RecentsPresenceIcon} from './RecentsPresenceIcon';
+export {default as RefreshIcon} from './RefreshIcon';
 export {default as RemoteMediaErrorIcon} from './RemoteMediaErrorIcon';
 export {default as SettingsIcon} from './SettingsIcon';
 export {default as ShareScreenFilledIcon} from './ShareScreenFilledIcon';

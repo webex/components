@@ -49,6 +49,22 @@ $C: #{$WEBEX_COMPONENTS_CLASS_PREFIX}-meeting-guest-authentication;
       align-items: center;
     }
 
+    .#{$C}__captcha-refresh-button {
+      align-items: center;
+    }
+
+    .#{$C}__captcha-buttons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-bottom: 0.5rem;
+    }
+
+    .#{$C}__captcha-image {
+      margin-left: 0.8rem;
+      padding-right: 0.5rem;
+    }
+
     .#{$C}__start-button-spinner {
       margin-right: 0.5rem;
     }

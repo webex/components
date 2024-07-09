@@ -49,6 +49,7 @@ Array [
             className="wxc-input-field__form-control"
           >
             <input
+              aria-errormessage=""
               aria-invalid="false"
               aria-label="Your name appears in the participant list. Skip this optional field to use the name provided by the system."
               aria-labelledby="wxc-0-label"
@@ -62,9 +63,11 @@ Array [
               required={false}
               tabIndex={101}
               type="text"
+              value=""
             />
           </div>
         </div>
+        
       </div>
       <div
         className="wxc wxc-label wxc wxc-input-field wxc wxc-password-input wxc-meeting-guest-authentication__input wxc-input-field--has-right-icon"
@@ -89,7 +92,7 @@ Array [
             <input
               aria-errormessage=""
               aria-invalid="false"
-              aria-label="The password is provided in the invitation for a scheduled  meeting, or from the host."
+              aria-label="The password is provided in the invitation for a scheduled meeting, or from the host."
               aria-labelledby="wxc-0-label"
               autoFocus={false}
               className="wxc-input-field__input"
@@ -116,7 +119,7 @@ Array [
             "height": 28,
           }
         }
-        tabIndex={103}
+        tabIndex={105}
         type="button"
         wxc-disabled="true"
       >
@@ -134,7 +137,7 @@ Array [
         className="wxc-meeting-guest-authentication__host-hyperlink"
         href="#"
         onClick={[Function]}
-        tabIndex={104}
+        tabIndex={106}
       >
         Enter host key.
       </a>
