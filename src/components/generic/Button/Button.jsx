@@ -54,7 +54,6 @@ export default function Button({
         tabIndex={tabIndex}
         ref={buttonRef}
         style={{height: size, ...style}}
-        // eslint-disable-next-line react/no-unknown-property
         wxc-disabled={isDisabled ? 'true' : undefined}
       >
         {children}
