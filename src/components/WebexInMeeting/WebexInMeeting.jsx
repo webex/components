@@ -19,7 +19,7 @@ import WebexMeetingHostAuthentication from '../WebexMeetingHostAuthentication/We
 
 /**
  * Webex In-Meeting component displays the remote stream plus
- * the local stream at the bottom right corner
+ * the local stream at the bottom right corner.
  *
  * @param {object} props  Data passed to the component
  * @param {string} props.className  Custom CSS class to apply
