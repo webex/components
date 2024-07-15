@@ -1,3 +1,10 @@
+## [1.274.1](https://github.com/webex/components/compare/v1.274.0...v1.274.1) (2024-07-15)
+
+
+### Bug Fixes
+
+* **release:** minor change to trigger semantic release to publish new version ([#838](https://github.com/webex/components/issues/838)) ([1ffe150](https://github.com/webex/components/commit/1ffe1506b8c26f75832359417f1acf20ae522a53))
+
 # [1.274.0](https://github.com/webex/components/compare/v1.273.0...v1.274.0) (2024-07-05)
 
 
