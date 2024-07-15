@@ -7,7 +7,7 @@ export default {
   component: WebexInMeeting,
 };
 
-const Template = (args) => {
+const Template = (...args) => {
   const style = {
     width: '100%',
     height: '100%',

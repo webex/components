@@ -23,6 +23,16 @@
     "plugin:jsdoc/recommended",
     "plugin:jsx-a11y/recommended"
   ],
+  "settings": {
+      "import/resolver": {
+          "alias": {
+              "map": [
+                  ["@webex/component-adapter-interfaces", "./node_modules/@webex/component-adapter-interfaces/dist/webex-component-adapter-interfaces.es"]
+              ],
+              "extensions": [".js", ".jsx", ".ts", ".tsx"]
+          }
+      }
+  },
   "globals": {
     "rxjs": "readonly",
     "shallow": "readonly"

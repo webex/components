@@ -1,14 +1,14 @@
 version: 2.1
 
 executors:
-  node-fermium-executor:
+  node-iron-executor:
     working_directory: ~/webex-components
     docker:
-      - image: circleci/node:fermium
+      - image: cimg/node:20.13.1
 
 jobs:
   install:
-    executor: node-fermium-executor
+    executor: node-iron-executor
     steps:
       - checkout
       - restore_cache:
@@ -16,7 +16,7 @@ jobs:
             - dependency-cache-{{ checksum "package-lock.json" }}
       - run:
           name: Install dependencies & peer dependencies
-          command: npx npm-install-peers
+          command: npm install
       - save_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
           paths: node_modules
@@ -25,7 +25,7 @@ jobs:
           paths: .
 
   lint:
-    executor: node-fermium-executor
+    executor: node-iron-executor
     steps:
       - attach_workspace:
           at: .
@@ -34,18 +34,18 @@ jobs:
           command: npm run linter
 
   unit_test:
-    executor: node-fermium-executor
+    executor: node-iron-executor
     steps:
       - attach_workspace:
           at: .
       - run:
           name: Unit Test Coverage
-          command: npm run test:coverage
+          command: npm run test:coverage -- -u
       - store_test_results:
           path: test_results
 
   storybook_preview:
-    executor: node-fermium-executor
+    executor: node-iron-executor
     steps:
       - attach_workspace:
           at: .
@@ -54,7 +54,7 @@ jobs:
           command: npm run chromatic -- --project-token=$CHROMATIC_PROJECT_TOKEN --exit-zero-on-changes
 
   build:
-    executor: node-fermium-executor
+    executor: node-iron-executor
     steps:
       - attach_workspace:
           at: .

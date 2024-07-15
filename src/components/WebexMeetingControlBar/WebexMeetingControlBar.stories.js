@@ -6,7 +6,7 @@ export default {
   component: WebexMeetingControlBar,
 };
 
-const Template = (args) => {
+const Template = (...args) => {
   const style = {
     width: '100%',
     ...args.style,

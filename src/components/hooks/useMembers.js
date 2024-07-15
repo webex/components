@@ -35,7 +35,11 @@ export default function useMembers(destinationID, destinationType) {
       console.error(error.message);
     };
     const onMembers = (memberList) => {
-      setMembers([...memberList]);
+      if (Array.isArray(memberList)) {
+        setMembers([...memberList]);
+      } else {
+        setMembers([]);
+      }
     };
 
     const subscription = membershipsAdapter

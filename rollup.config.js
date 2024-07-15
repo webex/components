@@ -7,12 +7,19 @@ import visualizer from 'rollup-plugin-visualizer';
 import {nodeResolve} from '@rollup/plugin-node-resolve';
 import {terser} from 'rollup-plugin-terser';
 import json from '@rollup/plugin-json';
+import alias from '@rollup/plugin-alias';
+import path from 'path';
 
 const moduleName = 'webex-components';
 const ESModulePath = `dist/es/${moduleName}`;
 const UMDModulePath = `dist/umd/${moduleName}`;
 
 const plugins = [
+  alias({
+    entries: [
+      { find: '@webex/component-adapter-interfaces', replacement: path.resolve(__dirname, 'node_modules/@webex/component-adapter-interfaces/dist/webex-component-adapter-interfaces.es')}
+    ]
+  }),
   nodeResolve({
     browser: true,
     preferBuiltins: false,
