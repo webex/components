@@ -1,3 +1,10 @@
+## [1.274.2](https://github.com/webex/components/compare/v1.274.1...v1.274.2) (2024-07-17)
+
+
+### Bug Fixes
+
+* **tooling:** downgraded rollup plugin scss package ([#839](https://github.com/webex/components/issues/839)) ([81addd0](https://github.com/webex/components/commit/81addd066c4905960f11a52a46ece16d7112ccae))
+
 ## [1.274.1](https://github.com/webex/components/compare/v1.274.0...v1.274.1) (2024-07-15)
 
 
