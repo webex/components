@@ -1,3 +1,10 @@
+## [1.274.3](https://github.com/webex/components/compare/v1.274.2...v1.274.3) (2024-07-26)
+
+
+### Bug Fixes
+
+* **tooling:** upgraded webpack version to be used for storybook ([#841](https://github.com/webex/components/issues/841)) ([9eef570](https://github.com/webex/components/commit/9eef5707a1cd96ca481093e3f46e3c1e0cc4521b))
+
 ## [1.274.2](https://github.com/webex/components/compare/v1.274.1...v1.274.2) (2024-07-17)
 
 
