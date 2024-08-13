@@ -1,3 +1,10 @@
+# [1.275.0](https://github.com/webex/components/compare/v1.274.3...v1.275.0) (2024-08-13)
+
+
+### Features
+
+* **react:** update react version to 18.3.1 ([#842](https://github.com/webex/components/issues/842)) ([f520e65](https://github.com/webex/components/commit/f520e6562aa6a6b31dabe90b7a0475c95108202f))
+
 ## [1.274.3](https://github.com/webex/components/compare/v1.274.2...v1.274.3) (2024-07-26)
 
 
