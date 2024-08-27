@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+  release:
+    types: [ published ]
 jobs:
   dispatch-new-version-event:
     runs-on: ubuntu-latest
@@ -16,6 +18,9 @@ jobs:
           CURRENT_VERSION=$(node -p -e "require('./package.json').version")
           git checkout HEAD~1
           PREVIOUS_VERSION=$(node -p -e "require('./package.json').version")
+
+          echo "Previous version: $PREVIOUS_VERSION"
+          echo "Current version: $CURRENT_VERSION"
 
           if [ "$CURRENT_VERSION" != "$PREVIOUS_VERSION" ]; then
             curl -X POST https://api.github.com/repos/webex/widgets/dispatches \
