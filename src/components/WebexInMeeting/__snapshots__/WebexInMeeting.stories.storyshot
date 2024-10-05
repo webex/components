@@ -3,7 +3,7 @@
 exports[`Storyshots Meetings/Webex In-Meeting All Media 1`] = `
 Array [
   <div
-    className="wxc wxc-in-meeting wxc-in-meeting--remote-sharing"
+    className="wxc wxc-in-meeting"
     style={
       Object {
         "height": "100%",
@@ -20,27 +20,38 @@ Array [
       }
     >
       <div
-        className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting wxc-remote-media--remote-video-n-share"
+        className="wxc wxc-meeting-info wxc-in-meeting__info"
       >
-        <Draggable
-          bounds="parent"
+        <div
+          className="wxc wxc-spinner"
+          style={
+            Object {
+              "height": 38,
+              "width": 38,
+            }
+          }
+        />
+      </div>
+      <div
+        className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
+      >
+        <div
+          className="wxc wxc-badge wxc-remote-media__connecting-badge"
+          style={Object {}}
         >
-          <video
-            autoPlay={true}
-            className="wxc-remote-media__video wxc-remote-media__remote-video"
-            muted={true}
-            playsInline={true}
+          <div
+            className="wxc wxc-spinner wxc-remote-media__connecting-spinner"
+            style={
+              Object {
+                "height": 16,
+                "width": 16,
+              }
+            }
           />
-        </Draggable>
-        <video
-          autoPlay={true}
-          className="wxc-remote-media__video wxc-remote-media__remote-share"
-          muted={true}
-          playsInline={true}
-        />
-        <audio
-          autoPlay={true}
-        />
+          <span>
+            Connecting
+          </span>
+        </div>
       </div>
       <div
         className="wxc wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
@@ -116,11 +127,38 @@ Array [
       }
     >
       <div
+        className="wxc wxc-meeting-info wxc-in-meeting__info"
+      >
+        <div
+          className="wxc wxc-spinner"
+          style={
+            Object {
+              "height": 38,
+              "width": 38,
+            }
+          }
+        />
+      </div>
+      <div
         className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
       >
-        <audio
-          autoPlay={true}
-        />
+        <div
+          className="wxc wxc-badge wxc-remote-media__connecting-badge"
+          style={Object {}}
+        >
+          <div
+            className="wxc wxc-spinner wxc-remote-media__connecting-spinner"
+            style={
+              Object {
+                "height": 16,
+                "width": 16,
+              }
+            }
+          />
+          <span>
+            Connecting
+          </span>
+        </div>
       </div>
       <div
         className="wxc wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
@@ -195,6 +233,19 @@ Array [
         }
       }
     >
+      <div
+        className="wxc wxc-meeting-info wxc-in-meeting__info"
+      >
+        <div
+          className="wxc wxc-spinner"
+          style={
+            Object {
+              "height": 38,
+              "width": 38,
+            }
+          }
+        />
+      </div>
       <div
         className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
       >
@@ -290,21 +341,38 @@ Array [
       }
     >
       <div
+        className="wxc wxc-meeting-info wxc-in-meeting__info"
+      >
+        <div
+          className="wxc wxc-spinner"
+          style={
+            Object {
+              "height": 38,
+              "width": 38,
+            }
+          }
+        />
+      </div>
+      <div
         className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
       >
-        <Draggable
-          bounds="parent"
+        <div
+          className="wxc wxc-badge wxc-remote-media__connecting-badge"
+          style={Object {}}
         >
-          <video
-            autoPlay={true}
-            className="wxc-remote-media__video wxc-remote-media__remote-video"
-            muted={true}
-            playsInline={true}
+          <div
+            className="wxc wxc-spinner wxc-remote-media__connecting-spinner"
+            style={
+              Object {
+                "height": 16,
+                "width": 16,
+              }
+            }
           />
-        </Draggable>
-        <audio
-          autoPlay={true}
-        />
+          <span>
+            Connecting
+          </span>
+        </div>
       </div>
       <div
         className="wxc wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
@@ -363,7 +431,7 @@ Array [
 exports[`Storyshots Meetings/Webex In-Meeting Remote Share 1`] = `
 Array [
   <div
-    className="wxc wxc-in-meeting wxc-in-meeting--remote-sharing"
+    className="wxc wxc-in-meeting"
     style={
       Object {
         "height": "100%",
@@ -380,27 +448,38 @@ Array [
       }
     >
       <div
-        className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting wxc-remote-media--remote-video-n-share"
+        className="wxc wxc-meeting-info wxc-in-meeting__info"
       >
-        <Draggable
-          bounds="parent"
+        <div
+          className="wxc wxc-spinner"
+          style={
+            Object {
+              "height": 38,
+              "width": 38,
+            }
+          }
+        />
+      </div>
+      <div
+        className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
+      >
+        <div
+          className="wxc wxc-badge wxc-remote-media__connecting-badge"
+          style={Object {}}
         >
-          <video
-            autoPlay={true}
-            className="wxc-remote-media__video wxc-remote-media__remote-video"
-            muted={true}
-            playsInline={true}
+          <div
+            className="wxc wxc-spinner wxc-remote-media__connecting-spinner"
+            style={
+              Object {
+                "height": 16,
+                "width": 16,
+              }
+            }
           />
-        </Draggable>
-        <video
-          autoPlay={true}
-          className="wxc-remote-media__video wxc-remote-media__remote-share"
-          muted={true}
-          playsInline={true}
-        />
-        <audio
-          autoPlay={true}
-        />
+          <span>
+            Connecting
+          </span>
+        </div>
       </div>
       <div
         className="wxc wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
@@ -476,18 +555,38 @@ Array [
       }
     >
       <div
+        className="wxc wxc-meeting-info wxc-in-meeting__info"
+      >
+        <div
+          className="wxc wxc-spinner"
+          style={
+            Object {
+              "height": 38,
+              "width": 38,
+            }
+          }
+        />
+      </div>
+      <div
         className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
       >
-        <Draggable
-          bounds="parent"
+        <div
+          className="wxc wxc-badge wxc-remote-media__connecting-badge"
+          style={Object {}}
         >
-          <video
-            autoPlay={true}
-            className="wxc-remote-media__video wxc-remote-media__remote-video"
-            muted={true}
-            playsInline={true}
+          <div
+            className="wxc wxc-spinner wxc-remote-media__connecting-spinner"
+            style={
+              Object {
+                "height": 16,
+                "width": 16,
+              }
+            }
           />
-        </Draggable>
+          <span>
+            Connecting
+          </span>
+        </div>
       </div>
       <div
         className="wxc wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
