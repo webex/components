@@ -1,3 +1,10 @@
+## [1.275.1](https://github.com/webex/components/compare/v1.275.0...v1.275.1) (2024-10-10)
+
+
+### Bug Fixes
+
+* added WebexMeetingInfo to inmeeting component ([#843](https://github.com/webex/components/issues/843)) ([5bed35c](https://github.com/webex/components/commit/5bed35c0b49fc31a36e74aa9de28df1b3b0358af))
+
 # [1.275.0](https://github.com/webex/components/compare/v1.274.3...v1.275.0) (2024-08-13)
 
 
