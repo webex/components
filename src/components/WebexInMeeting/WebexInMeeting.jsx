@@ -16,7 +16,7 @@ import {TABLET, DESKTOP, DESKTOP_LARGE} from '../breakpoints';
 import {Modal} from '../generic';
 import WebexMeetingGuestAuthentication from '../WebexMeetingGuestAuthentication/WebexMeetingGuestAuthentication';
 import WebexMeetingHostAuthentication from '../WebexMeetingHostAuthentication/WebexMeetingHostAuthentication';
-
+import WebexMeetingInfo from '../WebexMeetingInfo/WebexMeetingInfo';
 /**
  * Webex In-Meeting component displays the remote stream plus
  * the local stream at the bottom right corner.
@@ -85,6 +85,7 @@ export default function WebexInMeeting({
       </Modal>
       )}
       <div style={{maxWidth}} className={sc('media-container')}>
+        <WebexMeetingInfo className={sc('info')} meetingID={meetingID} />
         <WebexRemoteMedia className={sc('remote-media-in-meeting')} layout={layout} meetingID={meetingID} />
         <WebexLocalMedia className={sc('local-media-in-meeting')} meetingID={meetingID} mediaType={localMediaType} />
         {localShare?.stream && <Banner className={sc('share-banner')}>You&apos;re sharing your screen</Banner>}
