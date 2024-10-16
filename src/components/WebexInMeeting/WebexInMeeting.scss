@@ -46,7 +46,10 @@ $shadow-color: rgba(0, 0, 0, 0.2);
     min-height: auto;
     background: var(--wxc-secondary-video-background);
   }
-
+  .#{$C}__info {
+    margin-bottom: 1rem;
+  }
+  
   &--tablet {
     .#{$C}__local-media-in-meeting {
       @include media-preview-tablet();
