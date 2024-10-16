@@ -1,3 +1,10 @@
+## [1.275.2](https://github.com/webex/components/compare/v1.275.1...v1.275.2) (2024-10-16)
+
+
+### Bug Fixes
+
+* Meeting Title margin issue in in-meeting component ([#844](https://github.com/webex/components/issues/844)) ([46cbb99](https://github.com/webex/components/commit/46cbb99dbdaf1878d6e62171b132894424312c51))
+
 ## [1.275.1](https://github.com/webex/components/compare/v1.275.0...v1.275.1) (2024-10-10)
 
 
