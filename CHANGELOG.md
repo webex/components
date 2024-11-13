@@ -1,3 +1,10 @@
+## [1.275.3](https://github.com/webex/components/compare/v1.275.2...v1.275.3) (2024-11-13)
+
+
+### Bug Fixes
+
+* **webexMember:** updated member name handling ([#845](https://github.com/webex/components/issues/845)) ([881ddae](https://github.com/webex/components/commit/881ddae283cc0e0e03b95c3121841e15f999fb7e))
+
 ## [1.275.2](https://github.com/webex/components/compare/v1.275.1...v1.275.2) (2024-10-16)
 
 
