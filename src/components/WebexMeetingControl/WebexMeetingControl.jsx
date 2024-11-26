@@ -64,7 +64,7 @@ function renderButton(sc, action, display, style, showText, asItem, autoFocus, t
         size={48}
         isDisabled={isDisabled}
         onClick={action}
-        ariaLabel={hint || text}
+        ariaLabel={text}
         pressed={isActive && type === 'TOGGLE'}
         tooltip={tooltip}
         autoFocus={autoFocus}
