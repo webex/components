@@ -1,3 +1,10 @@
+# [1.276.0](https://github.com/webex/components/compare/v1.275.3...v1.276.0) (2024-11-27)
+
+
+### Features
+
+* **meetings-widgets:** fixed-join-meeting-acc ([#846](https://github.com/webex/components/issues/846)) ([a1e9183](https://github.com/webex/components/commit/a1e918386eb66809b7968285956270e3a77aa2c2))
+
 ## [1.275.3](https://github.com/webex/components/compare/v1.275.2...v1.275.3) (2024-11-13)
 
 
