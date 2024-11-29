@@ -39,6 +39,7 @@ function renderButton(sc, action, display, style, showText, asItem, autoFocus, t
   } = display;
   const isDisabled = display.state === MeetingControlState.DISABLED;
   const isActive = display.state === MeetingControlState.ACTIVE;
+  let ariaLabelText = text;
 
   let output;
 
@@ -57,6 +58,11 @@ function renderButton(sc, action, display, style, showText, asItem, autoFocus, t
       </Button>
     );
   } else {
+    if (display.ID === 'mute-audio' && display.state === 'disabled' && text === 'No microphone') {
+      ariaLabelText = 'No Microphone, disabled';
+    } else if (display.ID === 'mute-video' && display.state === 'disabled' && text === 'No camera') {
+      ariaLabelText = 'No Camera, disabled';
+    }
     output = (
       <Button
         className={sc('control-button')}
@@ -64,7 +70,7 @@ function renderButton(sc, action, display, style, showText, asItem, autoFocus, t
         size={48}
         isDisabled={isDisabled}
         onClick={action}
-        ariaLabel={text || tooltip}
+        ariaLabel={ariaLabelText || tooltip}
         pressed={isActive && type === 'TOGGLE'}
         tooltip={tooltip}
         autoFocus={autoFocus}
