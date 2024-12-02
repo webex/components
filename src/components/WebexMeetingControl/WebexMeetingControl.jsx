@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {MeetingControlState} from '@webex/component-adapter-interfaces';
-
+import {MUTE_AUDIO_CONTROL, MUTE_VIDEO_CONTROL} from '../../adapters/MeetingsJSONAdapter';
 import webexComponentClasses from '../helpers';
 import {useMeetingControl} from '../hooks';
 import Button from '../generic/Button/Button';
 import Icon from '../generic/Icon/Icon';
 import Dropdown from '../inputs/Dropdown/Dropdown';
+import {NO_MIC_ARIA_LABEL_TEXT, NO_CAMERA_ARIA_LABEL_TEXT} from '../../constants';
 
 const controlTypeToButtonType = {
   JOIN: 'join',
@@ -63,10 +64,12 @@ function renderButton(sc, action, display, style, showText, asItem, autoFocus, t
       </Button>
     );
   } else {
-    if (display.ID === 'mute-audio' && display.state === 'disabled' && text === NO_MIC_CAMERA_ARIA_LABEL.NO_MIC_ARIA_LABEL) {
-      ariaLabelText = 'No Microphone, disabled';
-    } else if (display.ID === 'mute-video' && display.state === 'disabled' && text === NO_MIC_CAMERA_ARIA_LABEL.NO_CAMERA_ARIA_LABEL) {
-      ariaLabelText = 'No Camera, disabled';
+    if (display.ID === MUTE_AUDIO_CONTROL && display.state === MeetingControlState.DISABLED
+      && text === NO_MIC_CAMERA_ARIA_LABEL.NO_MIC_ARIA_LABEL) {
+      ariaLabelText = NO_MIC_ARIA_LABEL_TEXT;
+    } else if (display.ID === MUTE_VIDEO_CONTROL && display.state === MeetingControlState.DISABLED
+      && text === NO_MIC_CAMERA_ARIA_LABEL.NO_CAMERA_ARIA_LABEL) {
+      ariaLabelText = NO_CAMERA_ARIA_LABEL_TEXT;
     }
     output = (
       <Button
