@@ -41,6 +41,11 @@ function renderButton(sc, action, display, style, showText, asItem, autoFocus, t
   const isActive = display.state === MeetingControlState.ACTIVE;
   let ariaLabelText = text;
 
+  const NO_AUDIO_VIDEO_ARIA_LABEL = {
+    NO_AUDIO_ARIA_LABEL: 'No microphone',
+    NO_CAMERA_ARIA_LABEL: 'No camera',
+  };
+
   let output;
 
   if (asItem) {
@@ -58,9 +63,9 @@ function renderButton(sc, action, display, style, showText, asItem, autoFocus, t
       </Button>
     );
   } else {
-    if (display.ID === 'mute-audio' && display.state === 'disabled' && text === 'No microphone') {
+    if (display.ID === 'mute-audio' && display.state === 'disabled' && text === NO_AUDIO_VIDEO_ARIA_LABEL.NO_AUDIO_ARIA_LABEL) {
       ariaLabelText = 'No Microphone, disabled';
-    } else if (display.ID === 'mute-video' && display.state === 'disabled' && text === 'No camera') {
+    } else if (display.ID === 'mute-video' && display.state === 'disabled' && text === NO_AUDIO_VIDEO_ARIA_LABEL.NO_CAMERA_ARIA_LABEL) {
       ariaLabelText = 'No Camera, disabled';
     }
     output = (
