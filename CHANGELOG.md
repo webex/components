@@ -1,3 +1,10 @@
+## [1.276.1](https://github.com/webex/components/compare/v1.276.0...v1.276.1) (2024-12-03)
+
+
+### Bug Fixes
+
+* **fcc:** Leave meeting button accessibility issue. ([#847](https://github.com/webex/components/issues/847)) ([1cdf594](https://github.com/webex/components/commit/1cdf594077317e6156ea7449fd136291eee3b101))
+
 # [1.276.0](https://github.com/webex/components/compare/v1.275.3...v1.276.0) (2024-11-27)
 
 
