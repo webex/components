@@ -1,3 +1,10 @@
+## [1.276.2](https://github.com/webex/components/compare/v1.276.1...v1.276.2) (2024-12-03)
+
+
+### Bug Fixes
+
+* **fcc:** accessibility issue fix for disabled audio and video button. ([#848](https://github.com/webex/components/issues/848)) ([c94e224](https://github.com/webex/components/commit/c94e224456a8cadeb160b726d531474e0258751a))
+
 ## [1.276.1](https://github.com/webex/components/compare/v1.276.0...v1.276.1) (2024-12-03)
 
 
