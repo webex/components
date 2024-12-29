@@ -21,7 +21,7 @@ import WebexSettings from '../WebexSettings/WebexSettings';
 import WebexWaitingForHost from '../WebexWaitingForHost/WebexWaitingForHost';
 import webexComponentClasses from '../helpers';
 import {useElementDimensions, useMeeting, useRef} from '../hooks';
-import {AdapterContext} from '../hooks/contexts';
+import {AdapterContext, MeetingContext} from '../hooks/contexts';
 
 /**
  * Webex Meeting component displays the default Webex meeting experience.
@@ -35,6 +35,8 @@ import {AdapterContext} from '../hooks/contexts';
  * @param {string} props.layout  Layout to apply on remote video
  * @param {JSX.Element} [props.logo]  Logo
  * @param {string} [props.meetingID]  ID of the meeting
+ * @param {string} [props.meetingPasswordOrPin] Password or pin to join the meeting
+ * @param {string} [props.participantName] Name of the participant joining the meeting
  * @param {object} [props.style]  Custom style to apply
  * @returns {object} JSX of the component
  */
@@ -47,6 +49,8 @@ export default function WebexMeeting({
   layout,
   logo,
   meetingID,
+  meetingPasswordOrPin,
+  participantName,
   style,
 }) {
   const {
@@ -67,6 +71,15 @@ export default function WebexMeeting({
   const [showToast, setShowToast] = useState(false);
   const toastTimeoutRef = useRef();
   const [authModal, setAuthModal] = useState('guest');
+  const {setParticipantName, setMeetingPinPasswd} = useContext(MeetingContext);
+
+  if (meetingPasswordOrPin) {
+    setMeetingPinPasswd(meetingPasswordOrPin);
+  }
+
+  if (participantName) {
+    setParticipantName(participantName);
+  }
 
   useEffect(() => {
     if (state && state !== LEFT) {
@@ -130,7 +143,7 @@ export default function WebexMeeting({
             <WebexSettings meetingID={ID} />
           </Modal>
         )}
-        {passwordRequired && state === NOT_JOINED && (
+        {passwordRequired && !meetingPasswordOrPin && state === NOT_JOINED && (
           <Modal
             onClose={() => adapter.meetingsAdapter.clearPasswordRequiredFlag(ID)}
             otherClassName={[sc('authentication')]}
@@ -172,6 +185,8 @@ WebexMeeting.propTypes = {
   layout: PropTypes.string,
   logo: PropTypes.node,
   meetingID: PropTypes.string,
+  meetingPasswordOrPin: PropTypes.string,
+  participantName: PropTypes.string,
   style: PropTypes.shape(),
 };
 
@@ -192,5 +207,7 @@ WebexMeeting.defaultProps = {
   layout: undefined,
   logo: undefined,
   meetingID: undefined,
+  meetingPasswordOrPin: '',
+  participantName: '',
   style: undefined,
 };

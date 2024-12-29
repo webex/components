@@ -1,6 +1,6 @@
 import {useContext, useEffect, useState} from 'react';
 
-import {AdapterContext} from './contexts';
+import {AdapterContext, MeetingContext} from './contexts';
 
 // TODO: Figure out how to import JS Doc definitions and remove duplication.
 /**
@@ -19,6 +19,7 @@ import {AdapterContext} from './contexts';
  */
 export default function useMeetingControl(type, meetingID) {
   const [display, setDisplay] = useState({});
+  const {meetingPinPasswd, participantName} = useContext(MeetingContext);
   const {meetingsAdapter} = useContext(AdapterContext);
   const controls = meetingsAdapter.meetingControls;
   const control = controls[type];
@@ -45,6 +46,10 @@ export default function useMeetingControl(type, meetingID) {
   }, [meetingID, control]);
 
   return control
-    ? [(value) => control.action(meetingID, value), display]
+    ? [(value) => control.action({
+      meetingID,
+      meetingPasswordOrPin: meetingPinPasswd,
+      participantName,
+    }, value), display]
     : [() => {}, {}];
 }

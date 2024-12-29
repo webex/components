@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {useMeetingDestination} from '../hooks';
+import WebexMeetingProvider from '../WebexMeetingProvider/WebexMeetingProvider';
 
 /**
  * withMeeting is a higher-order component that takes a component (WrappedComponent)
@@ -32,7 +33,9 @@ export default function withMeeting(WrappedComponent) {
     const {meetingDestination} = props;
     const meeting = useMeetingDestination(meetingDestination);
 
-    return <WrappedComponent meeting={meeting} {...props} />;
+    return <WebexMeetingProvider>
+      <WrappedComponent meeting={meeting} {...props} />;
+    </WebexMeetingProvider>    
   }
 
   WithMeeting.propTypes = {
