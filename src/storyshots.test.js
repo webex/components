@@ -1,5 +1,7 @@
 import initStoryshots, {Stories2SnapsConverter} from '@storybook/addon-storyshots';
 import TestRenderer from 'react-test-renderer';
+import React from 'react';
+import {MeetingContext} from './components/hooks';
 
 // useActivityScroll hook has a half second timeout
 // Mocking as it does not allow tests to complete on time
@@ -24,6 +26,25 @@ jest.mock('./util', () => ({
 
 jest.mock('react-draggable', () => 'Draggable');
 
+// Mock context value
+const mockContextValue = {
+  meetingPinPasswd: '123456',
+  participantName: 'Alice',
+  setMeetingPinPasswd: (value) => {
+    mockContextValue.meetingPinPasswd = value;
+  },
+  setParticipantName: (value) => {
+    mockContextValue.participantName = value;
+  },
+};
+
+// Wrap story rendering with context
+const wrapWithContext = (story) => (
+  <MeetingContext.Provider value={mockContextValue}>
+    {story()}
+  </MeetingContext.Provider>
+);
+
 /**
  * Returns a mock DOM ref object for use of snapshot tests.
  *
@@ -45,6 +66,7 @@ function createNodeMock(element) {
 initStoryshots({
   asyncJest: true,
   test: ({story, context, done}) => {
+    const {render} = story;
     const converter = new Stories2SnapsConverter();
     const snapshotFilename = converter.getSnapshotFileName(context);
 
@@ -57,7 +79,7 @@ initStoryshots({
     global.testRendererAct = TestRenderer.act;
 
     TestRenderer.act(() => {
-      tree = TestRenderer.create(story.render(), {createNodeMock});
+      tree = TestRenderer.create(wrapWithContext(render), {createNodeMock});
 
       // Because observables are async, execute snapshot tests on next event loop cycle
       setTimeout(() => {

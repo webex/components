@@ -131,7 +131,7 @@ function renderDropdown(sc, action, display, style, tabIndex) {
  * @param {boolean} [props.asItem=false]  Render control as an itemin a list
  * @param {boolean} [props.autoFocus=false]  Flag indicating if the control should have autoFocus
  * @param {string} [props.className]  Custom CSS class to apply
- * @param {string} props.meetingID  ID of the meeting
+ * @param {string} [props.meetingID]  ID of the meeting
  * @param {boolean} [props.showText=true]  Flag that indicates whether to display text on control buttons
  * @param {object} [props.style]  Custom style to apply
  * @param {number} props.tabIndex  Value of the tabIndex attribute
