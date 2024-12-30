@@ -33,7 +33,9 @@ const mockContextValue = {
   setMeetingPinPasswd: (value) => {
     mockContextValue.meetingPinPasswd = value;
   },
-  setParticipantName: () => mockContextValue.participantName,
+  setParticipantName: (value) => {
+    mockContextValue.participantName = value;
+  },
 };
 
 // Wrap story rendering with context
