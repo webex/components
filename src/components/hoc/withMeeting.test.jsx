@@ -11,10 +11,6 @@ describe('withMeeting', () => {
     const mockUseMeetingDestination = jest.fn();
     const propFunc = jest.fn();
     jest.spyOn(meetingDest, 'default').mockImplementation(mockUseMeetingDestination);
-    // jest.mock('../hooks/useMeetingDestination', () => ({
-    //     __esModule: true,
-    //     default: mockUseMeetingDestination,
-    // }));
 
     function TestComponent({meetingDestination, prop1, prop2}) {
         propFunc(meetingDestination, prop1, prop2);
@@ -43,4 +39,4 @@ describe('withMeeting', () => {
     it('checks for useMeetingDestination call', () => {
         expect(mockUseMeetingDestination).toBeCalledWith('test');
     });
-})
+});

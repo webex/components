@@ -34,7 +34,7 @@ export default function withMeeting(WrappedComponent) {
     const meeting = useMeetingDestination(meetingDestination);
 
     return <WebexMeetingProvider>
-      <WrappedComponent meeting={meeting} {...props} />;
+      <WrappedComponent meeting={meeting} {...props} />
     </WebexMeetingProvider>    
   }
 

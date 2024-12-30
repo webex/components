@@ -66,7 +66,6 @@ function createNodeMock(element) {
 initStoryshots({
   asyncJest: true,
   test: ({story, context, done}) => {
-    // console.log('sreenara story', story);
     const {render} = story;
     const converter = new Stories2SnapsConverter();
     const snapshotFilename = converter.getSnapshotFileName(context);
