@@ -1,3 +1,10 @@
+# [1.277.0](https://github.com/webex/components/compare/v1.276.2...v1.277.0) (2024-12-30)
+
+
+### Features
+
+* **meeting:** enable password and name input for widget init ([#849](https://github.com/webex/components/issues/849)) ([553f328](https://github.com/webex/components/commit/553f328f039f1846b213d9f4572baad98eb004f3))
+
 ## [1.276.2](https://github.com/webex/components/compare/v1.276.1...v1.276.2) (2024-12-03)
 
 
