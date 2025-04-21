@@ -47,7 +47,9 @@
     "classnames": "^2.2.6",
     "date-fns": "^2.15.0",
     "markdown-it": "^12.3.2",
-    "react-draggable": "^4.4.5"
+    "react-draggable": "^4.4.5",
+    "sass": "^1.86.0",
+    "storybook": "^8.6.12"
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",
@@ -89,7 +91,6 @@
     "jest": "^26.1.0",
     "jest-junit": "^11.0.1",
     "mockdate": "^3.0.2",
-    "node-sass": "^8.0.0",
     "react-test-renderer": "18.3.1",
     "rollup": "^2.26.4",
     "rollup-plugin-copy": "^3.3.0",

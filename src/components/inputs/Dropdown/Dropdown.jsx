@@ -29,8 +29,8 @@ import {uniqueId} from '../../../util';
  * @param {string} [props.value]  Selected option
  * @returns {object}  JSX of the element
  */
+
 export default function Dropdown({
-  ariaLabel,
   className,
   disabled,
   error,
@@ -45,18 +45,29 @@ export default function Dropdown({
   tooltip,
   value,
 }) {
-  const [expanded, setExpanded] = useState(undefined);
-  const [cssClasses, sc] = webexComponentClasses('dropdown', className, {disabled});
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [announceText, setAnnounceText] = useState('');
+  const [cssClasses, sc] = webexComponentClasses('dropdown', className, { disabled });
   const label = options?.find((option) => option.value === value)?.label;
   const controlRef = useRef();
   const selectedOptionRef = useRef();
   const id = domId || uniqueId();
 
-  const collapse = () => setExpanded(undefined);
-  const expand = (withKey) => setExpanded({withKey});
-  const toggleExpanded = (withKey) => {
+  const collapse = () => {
+    setIsExpanded(false);
+    setAnnounceText('Listbox collapsed');
+  };
+
+  const expand = () => {
+    setIsExpanded(true);
+    setAnnounceText('Listbox expanded');
+  };
+
+  const toggleExpanded = () => {
     if (!disabled) {
-      setExpanded(expanded ? undefined : {withKey});
+      const next = !isExpanded;
+      setIsExpanded(next);
+      setAnnounceText(next ? 'Listbox expanded' : 'Listbox collapsed');
     }
   };
 
@@ -75,32 +86,32 @@ export default function Dropdown({
 
   const handleSelectedOptionKeyDown = (event) => {
     if ((event.key === 'Enter' || event.key === ' ')) {
-      event.preventDefault(); // prevent page scrolling
-      expand(true);
+      event.preventDefault();
+      expand();
     } else if (event.key === 'Tab') {
       collapse();
     } else if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-      event.preventDefault(); // prevent page scrolling
-      event.stopPropagation(); // prevent other navigation
-      expand(true);
+      event.preventDefault();
+      event.stopPropagation();
+      expand();
     }
   };
 
   useEffect(() => {
     let cleanup;
 
-    if (expanded) {
+    if (isExpanded) {
       setTimeout(() => document.addEventListener('click', collapse));
       cleanup = () => document.removeEventListener('click', collapse);
     }
 
     return cleanup;
-  }, [expanded]);
+  }, [isExpanded]);
 
   useEffect(() => {
     let cleanup;
 
-    if (expanded) {
+    if (isExpanded) {
       const handleScroll = (event) => {
         if (controlRef.current && !controlRef.current.contains(event.target)) {
           collapse();
@@ -108,12 +119,11 @@ export default function Dropdown({
       };
 
       window.addEventListener('scroll', handleScroll, true);
-
       cleanup = () => window.removeEventListener('scroll', handleScroll, true);
     }
 
     return cleanup;
-  }, [expanded, controlRef]);
+  }, [isExpanded, controlRef]);
 
   return (
     <Label
@@ -124,30 +134,48 @@ export default function Dropdown({
       label={controlLabel}
       required={required}
     >
-      {/* This element handles delegated keyboard events from its descendants (Esc key) */}
-      {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
       <div className={sc('control')} ref={controlRef} disabled={disabled} onKeyDown={handleKeyDown}>
         <div
           aria-errormessage={error && `${id}-error`}
           aria-invalid={error ? 'true' : 'false'}
           aria-controls={`${id}-options`}
-          aria-expanded={expanded}
+          aria-expanded={isExpanded}
           aria-haspopup="listbox"
-          aria-label={ariaLabel}
           aria-labelledby={`${id}-label`}
-          className={`${sc('selected-option')} ${expanded ? sc('expanded') : ''}`}
+          className={`${sc('selected-option')} ${isExpanded ? sc('expanded') : ''}`}
           id={`${id}-control`}
-          onClick={() => toggleExpanded(false)}
+          onClick={() => toggleExpanded()}
           onKeyDown={handleSelectedOptionKeyDown}
           role="combobox"
           tabIndex={disabled ? -1 : tabIndex}
           title={tooltip}
           ref={selectedOptionRef}
         >
-          <span className={sc('label')}>{options === null ? 'Loading...' : (label || value || placeholder)}</span>
-          <Icon name={expanded ? 'arrow-up' : 'arrow-down'} size={13} />
+          <span className={sc('label')}>
+            {options === null ? 'Loading...' : (label || value || placeholder)}
+          </span>
+          <Icon name={isExpanded ? 'arrow-up' : 'arrow-down'} size={13} />
         </div>
-        {expanded && (
+
+        {/* Accessible live region for screen reader */}
+        <span
+          aria-live="polite"
+          aria-atomic="true"
+          style={{
+            position: 'absolute',
+            width: '1px',
+            height: '1px',
+            padding: 0,
+            overflow: 'hidden',
+            clip: 'rect(0 0 0 0)',
+            whiteSpace: 'nowrap',
+            border: 0,
+          }}
+        >
+          {announceText}
+        </span>
+
+        {isExpanded && (
           <Popup>
             <OptionsList
               className={sc('options-list')}
@@ -158,7 +186,7 @@ export default function Dropdown({
               options={options}
               selected={value}
               tabIndex={tabIndex}
-              withKey={expanded.withKey}
+              withKey={true}
             />
           </Popup>
         )}
@@ -168,7 +196,6 @@ export default function Dropdown({
 }
 
 Dropdown.propTypes = {
-  ariaLabel: PropTypes.string,
   className: PropTypes.string,
   disabled: PropTypes.bool,
   error: PropTypes.string,
@@ -188,7 +215,6 @@ Dropdown.propTypes = {
 };
 
 Dropdown.defaultProps = {
-  ariaLabel: undefined,
   className: undefined,
   disabled: false,
   error: undefined,

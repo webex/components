@@ -1,0 +1,313 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Meetings/Webex Remote Media All Remote Media 1`] = `
+Array [
+  <div
+    className="wxc wxc-remote-media"
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      className="wxc wxc-badge wxc-remote-media__connecting-badge"
+      style={Object {}}
+    >
+      <div
+        className="wxc wxc-spinner wxc-remote-media__connecting-spinner"
+        style={
+          Object {
+            "height": 16,
+            "width": 16,
+          }
+        }
+      />
+      <span>
+        Connecting
+      </span>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex Remote Media Error 1`] = `
+Array [
+  <div
+    className="wxc wxc-remote-media"
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      className="wxc wxc-badge wxc-remote-media__connecting-badge"
+      style={Object {}}
+    >
+      <div
+        className="wxc wxc-spinner wxc-remote-media__connecting-spinner"
+        style={
+          Object {
+            "height": 16,
+            "width": 16,
+          }
+        }
+      />
+      <span>
+        Connecting
+      </span>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex Remote Media Loading 1`] = `
+Array [
+  <div
+    className="wxc wxc-remote-media"
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      className="wxc wxc-badge wxc-remote-media__connecting-badge"
+      style={Object {}}
+    >
+      <div
+        className="wxc wxc-spinner wxc-remote-media__connecting-spinner"
+        style={
+          Object {
+            "height": 16,
+            "width": 16,
+          }
+        }
+      />
+      <span>
+        Connecting
+      </span>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex Remote Media Remote Audio Only 1`] = `
+Array [
+  <div
+    className="wxc wxc-remote-media"
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      className="wxc wxc-badge wxc-remote-media__connecting-badge"
+      style={Object {}}
+    >
+      <div
+        className="wxc wxc-spinner wxc-remote-media__connecting-spinner"
+        style={
+          Object {
+            "height": 16,
+            "width": 16,
+          }
+        }
+      />
+      <span>
+        Connecting
+      </span>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex Remote Media Remote Video Only 1`] = `
+Array [
+  <div
+    className="wxc wxc-remote-media"
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      className="wxc wxc-badge wxc-remote-media__connecting-badge"
+      style={Object {}}
+    >
+      <div
+        className="wxc wxc-spinner wxc-remote-media__connecting-spinner"
+        style={
+          Object {
+            "height": 16,
+            "width": 16,
+          }
+        }
+      />
+      <span>
+        Connecting
+      </span>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex Remote Media Waiting For Others 1`] = `
+Array [
+  <div
+    className="wxc wxc-remote-media"
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      className="wxc wxc-badge wxc-remote-media__connecting-badge"
+      style={Object {}}
+    >
+      <div
+        className="wxc wxc-spinner wxc-remote-media__connecting-spinner"
+        style={
+          Object {
+            "height": 16,
+            "width": 16,
+          }
+        }
+      />
+      <span>
+        Connecting
+      </span>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;

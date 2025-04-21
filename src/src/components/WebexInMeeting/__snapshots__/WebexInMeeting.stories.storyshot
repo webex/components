@@ -1,0 +1,643 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Meetings/Webex In-Meeting All Media 1`] = `
+Array [
+  <div
+    className="wxc wxc-in-meeting"
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      className="wxc-in-meeting__media-container"
+      style={
+        Object {
+          "maxWidth": "none",
+        }
+      }
+    >
+      <div
+        className="wxc wxc-meeting-info wxc-in-meeting__info"
+      >
+        <div
+          className="wxc wxc-spinner"
+          style={
+            Object {
+              "height": 38,
+              "width": 38,
+            }
+          }
+        />
+      </div>
+      <div
+        className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
+      >
+        <div
+          className="wxc wxc-badge wxc-remote-media__connecting-badge"
+          style={Object {}}
+        >
+          <div
+            className="wxc wxc-spinner wxc-remote-media__connecting-spinner"
+            style={
+              Object {
+                "height": 16,
+                "width": 16,
+              }
+            }
+          />
+          <span>
+            Connecting
+          </span>
+        </div>
+      </div>
+      <div
+        className="wxc wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
+      >
+        <div
+          className="wxc wxc-avatar"
+        >
+          <div
+            className="wxc-avatar__content"
+          >
+            <svg
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                BG
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className="wxc-avatar__image"
+              onError={[Function]}
+              src="./images/barbara.png"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex In-Meeting Audio Only 1`] = `
+Array [
+  <div
+    className="wxc wxc-in-meeting"
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      className="wxc-in-meeting__media-container"
+      style={
+        Object {
+          "maxWidth": "none",
+        }
+      }
+    >
+      <div
+        className="wxc wxc-meeting-info wxc-in-meeting__info"
+      >
+        <div
+          className="wxc wxc-spinner"
+          style={
+            Object {
+              "height": 38,
+              "width": 38,
+            }
+          }
+        />
+      </div>
+      <div
+        className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
+      >
+        <div
+          className="wxc wxc-badge wxc-remote-media__connecting-badge"
+          style={Object {}}
+        >
+          <div
+            className="wxc wxc-spinner wxc-remote-media__connecting-spinner"
+            style={
+              Object {
+                "height": 16,
+                "width": 16,
+              }
+            }
+          />
+          <span>
+            Connecting
+          </span>
+        </div>
+      </div>
+      <div
+        className="wxc wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
+      >
+        <div
+          className="wxc wxc-avatar"
+        >
+          <div
+            className="wxc-avatar__content"
+          >
+            <svg
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                BG
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className="wxc-avatar__image"
+              onError={[Function]}
+              src="./images/barbara.png"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex In-Meeting Connecting 1`] = `
+Array [
+  <div
+    className="wxc wxc-in-meeting"
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      className="wxc-in-meeting__media-container"
+      style={
+        Object {
+          "maxWidth": "none",
+        }
+      }
+    >
+      <div
+        className="wxc wxc-meeting-info wxc-in-meeting__info"
+      >
+        <div
+          className="wxc wxc-spinner"
+          style={
+            Object {
+              "height": 38,
+              "width": 38,
+            }
+          }
+        />
+      </div>
+      <div
+        className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
+      >
+        <div
+          className="wxc wxc-badge wxc-remote-media__connecting-badge"
+          style={Object {}}
+        >
+          <div
+            className="wxc wxc-spinner wxc-remote-media__connecting-spinner"
+            style={
+              Object {
+                "height": 16,
+                "width": 16,
+              }
+            }
+          />
+          <span>
+            Connecting
+          </span>
+        </div>
+      </div>
+      <div
+        className="wxc wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
+      >
+        <div
+          className="wxc wxc-avatar"
+        >
+          <div
+            className="wxc-avatar__content"
+          >
+            <svg
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                BG
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className="wxc-avatar__image"
+              onError={[Function]}
+              src="./images/barbara.png"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex In-Meeting Local Share 1`] = `
+Array [
+  <div
+    className="wxc wxc-in-meeting"
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      className="wxc-in-meeting__media-container"
+      style={
+        Object {
+          "maxWidth": "none",
+        }
+      }
+    >
+      <div
+        className="wxc wxc-meeting-info wxc-in-meeting__info"
+      >
+        <div
+          className="wxc wxc-spinner"
+          style={
+            Object {
+              "height": 38,
+              "width": 38,
+            }
+          }
+        />
+      </div>
+      <div
+        className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
+      >
+        <div
+          className="wxc wxc-badge wxc-remote-media__connecting-badge"
+          style={Object {}}
+        >
+          <div
+            className="wxc wxc-spinner wxc-remote-media__connecting-spinner"
+            style={
+              Object {
+                "height": 16,
+                "width": 16,
+              }
+            }
+          />
+          <span>
+            Connecting
+          </span>
+        </div>
+      </div>
+      <div
+        className="wxc wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
+      >
+        <div
+          className="wxc wxc-avatar"
+        >
+          <div
+            className="wxc-avatar__content"
+          >
+            <svg
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                BG
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className="wxc-avatar__image"
+              onError={[Function]}
+              src="./images/barbara.png"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex In-Meeting Remote Share 1`] = `
+Array [
+  <div
+    className="wxc wxc-in-meeting"
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      className="wxc-in-meeting__media-container"
+      style={
+        Object {
+          "maxWidth": "none",
+        }
+      }
+    >
+      <div
+        className="wxc wxc-meeting-info wxc-in-meeting__info"
+      >
+        <div
+          className="wxc wxc-spinner"
+          style={
+            Object {
+              "height": 38,
+              "width": 38,
+            }
+          }
+        />
+      </div>
+      <div
+        className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
+      >
+        <div
+          className="wxc wxc-badge wxc-remote-media__connecting-badge"
+          style={Object {}}
+        >
+          <div
+            className="wxc wxc-spinner wxc-remote-media__connecting-spinner"
+            style={
+              Object {
+                "height": 16,
+                "width": 16,
+              }
+            }
+          />
+          <span>
+            Connecting
+          </span>
+        </div>
+      </div>
+      <div
+        className="wxc wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
+      >
+        <div
+          className="wxc wxc-avatar"
+        >
+          <div
+            className="wxc-avatar__content"
+          >
+            <svg
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                BG
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className="wxc-avatar__image"
+              onError={[Function]}
+              src="./images/barbara.png"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex In-Meeting Video Only 1`] = `
+Array [
+  <div
+    className="wxc wxc-in-meeting"
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      className="wxc-in-meeting__media-container"
+      style={
+        Object {
+          "maxWidth": "none",
+        }
+      }
+    >
+      <div
+        className="wxc wxc-meeting-info wxc-in-meeting__info"
+      >
+        <div
+          className="wxc wxc-spinner"
+          style={
+            Object {
+              "height": 38,
+              "width": 38,
+            }
+          }
+        />
+      </div>
+      <div
+        className="wxc wxc-remote-media wxc-in-meeting__remote-media-in-meeting"
+      >
+        <div
+          className="wxc wxc-badge wxc-remote-media__connecting-badge"
+          style={Object {}}
+        >
+          <div
+            className="wxc wxc-spinner wxc-remote-media__connecting-spinner"
+            style={
+              Object {
+                "height": 16,
+                "width": 16,
+              }
+            }
+          />
+          <span>
+            Connecting
+          </span>
+        </div>
+      </div>
+      <div
+        className="wxc wxc-local-media wxc-in-meeting__local-media-in-meeting wxc-local-media--no-media"
+      >
+        <div
+          className="wxc wxc-avatar"
+        >
+          <div
+            className="wxc-avatar__content"
+          >
+            <svg
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                BG
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className="wxc-avatar__image"
+              onError={[Function]}
+              src="./images/barbara.png"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;

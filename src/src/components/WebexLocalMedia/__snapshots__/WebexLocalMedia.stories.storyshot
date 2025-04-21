@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Meetings/Webex Local Media No Media 1`] = `
+Array [
+  <div
+    className="wxc wxc-local-media wxc-local-media--no-media"
+  >
+    <div
+      className="wxc wxc-avatar"
+    >
+      <div
+        className="wxc-avatar__content"
+      >
+        <svg
+          className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
+          viewBox="0 0 40 40"
+        >
+          <text
+            x="50%"
+            y="50%"
+          >
+            BG
+          </text>
+        </svg>
+        <img
+          alt="avatar"
+          className="wxc-avatar__image"
+          onError={[Function]}
+          src="./images/barbara.png"
+        />
+      </div>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex Local Media Screen Share 1`] = `
+Array [
+  <div
+    className="wxc wxc-local-media"
+  >
+    <video
+      autoPlay={true}
+      className="wxc-local-media__video"
+      playsInline={true}
+    />
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex Local Media Video 1`] = `
+Array [
+  <div
+    className="wxc wxc-local-media wxc-local-media--no-media"
+  >
+    <div
+      className="wxc wxc-avatar"
+    >
+      <div
+        className="wxc-avatar__content"
+      >
+        <svg
+          className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
+          viewBox="0 0 40 40"
+        >
+          <text
+            x="50%"
+            y="50%"
+          >
+            BG
+          </text>
+        </svg>
+        <img
+          alt="avatar"
+          className="wxc-avatar__image"
+          onError={[Function]}
+          src="./images/barbara.png"
+        />
+      </div>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;

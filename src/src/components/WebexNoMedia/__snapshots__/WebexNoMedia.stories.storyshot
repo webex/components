@@ -1,0 +1,219 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Meetings/Webex No Media Camera 1`] = `
+Array [
+  <div
+    className="wxc wxc-no-media"
+  >
+    <svg
+      className="wxc-icon wxc wxc-camera-issue-icon wxc-no-media__icon-media-issue"
+      height="88"
+      style={Object {}}
+      viewBox="0 0 96 88"
+      width="96"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M21.8643 54.3002V64.2002M5.86426 51.2002V10.2002C5.86426 5.8002 9.46426 2.2002 13.8643 2.2002H61.8643C66.2643 2.2002 69.8643 5.8002 69.8643 10.2002V21.3002C69.8643 22.1002 70.7643 22.6002 71.4643 22.1002L90.6643 9.3002C91.9643 8.4002 93.7643 9.4002 93.7643 11.0002V57.5002C93.7643 59.1002 91.9643 60.1002 90.6643 59.2002L71.3643 46.3002C70.6643 45.9002 69.7643 46.3002 69.7643 47.1002V58.2002C69.7643 62.6002 66.1643 66.2002 61.7643 66.2002H39.0643C38.3643 66.2002 37.6643 65.8002 37.2643 65.1002L27.0643 45.9002C24.7643 41.7002 18.7643 41.7002 16.5643 45.9002L2.66426 71.4002C0.46426 75.4002 3.36426 80.3002 7.96426 80.3002H36.8643C39.0643 80.3002 40.8643 78.5002 40.8643 76.3002C40.8643 74.1002 39.0643 72.3002 36.8643 72.3002C28.8643 72.3002 21.8643 86.3002 21.8643 86.3002"
+        stroke="url(#wxc-icon--camera-issue)"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeMiterlimit="10"
+        strokeWidth="2.5"
+      />
+      <defs>
+        <linearGradient
+          gradientUnits="userSpaceOnUse"
+          id="wxc-icon--camera-issue"
+          x1="47.8392"
+          x2="47.8392"
+          y1="2.2002"
+          y2="86.3002"
+        >
+          <stop
+            stopColor="var(--wxc-icon--error--gradient-start-color)"
+          />
+          <stop
+            offset="1"
+            stopColor="var(--wxc-icon--error--gradient-stop-color)"
+          />
+        </linearGradient>
+      </defs>
+    </svg>
+    <h5
+      className="wxc wxc-title wxc-no-media__title wxc-title--section"
+      style={Object {}}
+    >
+      Can't access camera
+    </h5>
+    <div
+      className="wxc-no-media__body"
+    >
+      <p
+        className="wxc-no-media__indications"
+      >
+        Reload this page and select 
+        <b
+          className="wxc-no-media__accent"
+        >
+          Allow
+        </b>
+         when your browser asks.
+      </p>
+      <p
+        className="wxc-no-media__indications"
+      >
+        <div>
+          <b
+            className="wxc-no-media__accent"
+          >
+            Still not working?
+          </b>
+        </div>
+        You may need to update your webpage permissions. Go to your 
+        <b
+          className="wxc-no-media__accent"
+        >
+          browser settings
+        </b>
+        , look for website settings, select 
+        <b
+          className="wxc-no-media__accent"
+        >
+          Allow for Camera
+        </b>
+        , then reload this page.
+      </p>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex No Media Microphone 1`] = `
+Array [
+  <div
+    className="wxc wxc-no-media"
+  >
+    <svg
+      className="wxc-icon wxc wxc-microphone-issue-icon wxc-no-media__icon-media-issue"
+      height="91"
+      style={Object {}}
+      viewBox="0 0 62 91"
+      width="62"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M25.8672 65.2V69.2001C25.8672 80.2001 34.8672 89.2001 45.8672 89.2001M25.8672 65.2C32.4336 65.2 38.1092 61.1912 40.5672 55.5M25.8672 65.2C13.0672 65.2 9.86719 55.5 9.86719 49.3V17.3C9.86719 8.50005 17.0672 1.30005 25.8672 1.30005C34.2297 1.30005 41.1473 7.80188 41.8145 16M49.8672 89.2001H1.86719M40.9514 28.55V38.45M56.3514 39.35L46.1514 20.15C43.8514 15.95 37.8514 15.95 35.6514 20.15L21.7514 45.6501C19.5514 49.65 22.4514 54.5501 27.0514 54.5501H40.7456M40.7456 54.5501H55.9514C58.1514 54.5501 59.9514 52.7501 59.9514 50.5501C59.9514 48.3501 58.1514 46.5501 55.9514 46.5501C46.1033 46.5501 41.7664 52.8008 40.7456 54.5501ZM40.7456 54.5501C40.5795 54.8346 40.5012 55 40.5012 55"
+        stroke="url(#wxc-icon--microphone-issue)"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeMiterlimit="10"
+        strokeWidth="2.5"
+      />
+      <defs>
+        <linearGradient
+          gradientUnits="userSpaceOnUse"
+          id="wxc-icon--microphone-issue"
+          x1="30.9093"
+          x2="30.9093"
+          y1="1.30005"
+          y2="89.2001"
+        >
+          <stop
+            stopColor="var(--wxc-icon--error--gradient-start-color)"
+          />
+          <stop
+            offset="1"
+            stopColor="var(--wxc-icon--error--gradient-stop-color)"
+          />
+        </linearGradient>
+      </defs>
+    </svg>
+    <h5
+      className="wxc wxc-title wxc-no-media__title wxc-title--section"
+      style={Object {}}
+    >
+      Can't access microphone
+    </h5>
+    <div
+      className="wxc-no-media__body"
+    >
+      <p
+        className="wxc-no-media__indications"
+      >
+        Reload this page and select 
+        <b
+          className="wxc-no-media__accent"
+        >
+          Allow
+        </b>
+         when your browser asks.
+      </p>
+      <p
+        className="wxc-no-media__indications"
+      >
+        <div>
+          <b
+            className="wxc-no-media__accent"
+          >
+            Still not working?
+          </b>
+        </div>
+        You may need to update your webpage permissions. Go to your 
+        <b
+          className="wxc-no-media__accent"
+        >
+          browser settings
+        </b>
+        , look for website settings, select 
+        <b
+          className="wxc-no-media__accent"
+        >
+          Allow for Microphone
+        </b>
+        , then reload this page.
+      </p>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;

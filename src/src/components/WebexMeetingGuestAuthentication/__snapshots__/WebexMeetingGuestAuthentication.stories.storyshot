@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Meetings/Webex Guest Authentication Authentication 1`] = `
+Array [
+  <div
+    className="wxc wxc-meeting-guest-authentication"
+    style={
+      Object {
+        "height": "25rem",
+        "width": "31.25rem",
+      }
+    }
+  >
+    <div
+      className="wxc-meeting-guest-authentication__header"
+    >
+      <div
+        aria-label="Webex by Cisco logo"
+        className="wxc-meeting-guest-authentication__logo"
+      />
+      <div
+        className="wxc-meeting-guest-authentication__title"
+        title="Enter meeting information to join"
+      >
+        Enter meeting information to join
+      </div>
+    </div>
+    <form
+      className="wxc-meeting-guest-authentication__form-content"
+    >
+      <div
+        className="wxc wxc-label wxc wxc-input-field wxc wxc-text-input wxc-meeting-guest-authentication__input wxc-input-field--has-right-icon"
+      >
+        <label
+          className="wxc-label__label-text"
+          htmlFor="wxc-0-control"
+          id="wxc-0-label"
+        >
+          <span
+            className="wxc-label__text"
+          >
+            Your name
+          </span>
+        </label>
+        <div
+          className="wxc-label__control"
+        >
+          <div
+            className="wxc-input-field__form-control"
+          >
+            <input
+              aria-errormessage=""
+              aria-invalid="false"
+              aria-label="Your name appears in the participant list. Skip this optional field to use the name provided by the system."
+              aria-labelledby="wxc-0-label"
+              autoFocus={true}
+              className="wxc-input-field__input"
+              disabled={false}
+              id="wxc-0-control"
+              name="name"
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              required={false}
+              tabIndex={101}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="wxc wxc-label wxc wxc-input-field wxc wxc-password-input wxc-meeting-guest-authentication__input wxc-input-field--has-right-icon"
+      >
+        <label
+          className="wxc-label__label-text"
+          htmlFor="wxc-0-control"
+          id="wxc-0-label"
+        >
+          <span
+            className="wxc-label__text"
+          >
+            Meeting password (required)
+          </span>
+        </label>
+        <div
+          className="wxc-label__control"
+        >
+          <div
+            className="wxc-input-field__form-control"
+          >
+            <input
+              aria-errormessage=""
+              aria-invalid="false"
+              aria-label="The password is provided in the invitation for a scheduled meeting, or from the host."
+              aria-labelledby="wxc-0-label"
+              autoFocus={false}
+              className="wxc-input-field__input"
+              disabled={false}
+              id="wxc-0-control"
+              name="password"
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              required={false}
+              tabIndex={102}
+              type="password"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <button
+        aria-label="Start meeting. Start the meeting after entering the required information."
+        autoFocus={false}
+        className="wxc wxc-button wxc-meeting-guest-authentication__start-button wxc-button--primary"
+        style={
+          Object {
+            "height": 28,
+          }
+        }
+        tabIndex={105}
+        type="button"
+        wxc-disabled="true"
+      >
+        Start meeting
+      </button>
+    </form>
+    <div
+      className="wxc-meeting-guest-authentication__host-text"
+    >
+      Hosting the meeting?
+       
+      <a
+        aria-label="Click to go to a new screen where the meeting host can enter the host key."
+        className="wxc-meeting-guest-authentication__host-hyperlink"
+        href="#"
+        onClick={[Function]}
+        tabIndex={106}
+      >
+        Enter host key.
+      </a>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;

@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Platform/Sign In Webex Auth 1`] = `
+Array [
+  <div
+    className="wxc wxc-oauth-sign-in"
+  >
+    <button
+      autoFocus={false}
+      className="wxc wxc-button wxc-button--join"
+      onClick={[Function]}
+      style={
+        Object {
+          "height": 40,
+        }
+      }
+      tabIndex={0}
+      type="button"
+    >
+      Sign In
+    </button>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;

@@ -1,0 +1,361 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Meetings/Webex Meeting Control Active Icon 1`] = `
+Array [
+  <div
+    className="wxc wxc-meeting-control"
+  >
+    <button
+      aria-label="Unmute"
+      autoFocus={false}
+      className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
+      onClick={[Function]}
+      style={
+        Object {
+          "height": 48,
+        }
+      }
+      tabIndex={0}
+      type="button"
+    >
+      <svg
+        className="wxc-icon wxc wxc-audio-microphone-muted-icon"
+        height={24}
+        style={Object {}}
+        viewBox="0 0 24 24"
+        width={24}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M18.0017 20.9998H16.5171C15.6321 21.0217 14.7693 20.7218 14.0886 20.1558C13.4079 19.5898 12.9556 18.7961 12.8157 17.922C13.3101 17.8295 13.7854 17.6542 14.2214 17.4035L13.1019 16.2839C12.6475 16.4667 12.1552 16.5351 11.6682 16.4828C11.1813 16.4306 10.7146 16.2595 10.3094 15.9844C9.90415 15.7094 9.57276 15.3389 9.34441 14.9057C9.11606 14.4724 8.99775 13.9896 8.99992 13.4999V12.1817L7.49992 10.6816V13.4998C7.50176 14.5709 7.88538 15.6063 8.58188 16.4201C9.27839 17.2338 10.2422 17.7726 11.3002 17.9397C11.4415 19.0996 11.9702 20.1779 12.8007 20.9998H6.00175C5.80283 20.9998 5.61207 21.0788 5.47142 21.2195C5.33076 21.3601 5.25175 21.5509 5.25175 21.7498C5.25175 21.9487 5.33076 22.1395 5.47142 22.2801C5.61207 22.4208 5.80283 22.4998 6.00175 22.4998H18.0017C18.2007 22.4998 18.3914 22.4208 18.5321 22.2801C18.6727 22.1395 18.7517 21.9487 18.7517 21.7498C18.7517 21.5509 18.6727 21.3601 18.5321 21.2195C18.3914 21.0788 18.2007 20.9998 18.0017 20.9998Z"
+        />
+        <path
+          d="M21.5306 20.4695L16.1892 15.1284C16.3945 14.6099 16.5 14.0574 16.5003 13.4998V5.99981C16.4987 4.80729 16.0239 3.66415 15.1802 2.82145C14.3364 1.97876 13.1926 1.50543 12.0001 1.50543C10.8076 1.50543 9.66382 1.97876 8.82004 2.82145C7.97626 3.66415 7.50145 4.80729 7.49992 5.99981V6.43918L3.53021 2.46954C3.38957 2.3289 3.19883 2.24989 2.99993 2.24988C2.80104 2.24988 2.61029 2.32889 2.46965 2.46953C2.32901 2.61016 2.25 2.80091 2.25 2.9998C2.25 3.19869 2.32901 3.38944 2.46964 3.53008L20.47 21.5301C20.5396 21.5997 20.6223 21.655 20.7133 21.6926C20.8043 21.7303 20.9018 21.7497 21.0003 21.7497C21.0988 21.7497 21.1963 21.7303 21.2873 21.6926C21.3782 21.655 21.4609 21.5997 21.5306 21.5301C21.6002 21.4604 21.6554 21.3778 21.6931 21.2868C21.7308 21.1958 21.7502 21.0983 21.7502 20.9998C21.7502 20.9013 21.7308 20.8038 21.6931 20.7128C21.6554 20.6218 21.6002 20.5392 21.5306 20.4695ZM15.0003 13.4998C14.9976 13.6348 14.9854 13.7695 14.9637 13.9028L8.99994 7.93915V5.99981C9.00119 5.20493 9.31784 4.44304 9.88035 3.88142C10.4429 3.31981 11.2052 3.00437 12.0001 3.00437C12.795 3.00437 13.5574 3.31981 14.1199 3.88142C14.6824 4.44304 14.999 5.20493 15.0003 5.99981V13.4998Z"
+        />
+      </svg>
+      <span
+        className="wxc-meeting-control__button-text"
+      >
+        Unmute
+      </span>
+    </button>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex Meeting Control Disabled Icon 1`] = `
+Array [
+  <div
+    className="wxc wxc-meeting-control"
+  >
+    <button
+      aria-label="No microphone"
+      autoFocus={false}
+      className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
+      style={
+        Object {
+          "height": 48,
+        }
+      }
+      tabIndex={0}
+      type="button"
+      wxc-disabled="true"
+    >
+      <svg
+        className="wxc-icon wxc wxc-audio-microphone-muted-icon"
+        height={24}
+        style={Object {}}
+        viewBox="0 0 24 24"
+        width={24}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M18.0017 20.9998H16.5171C15.6321 21.0217 14.7693 20.7218 14.0886 20.1558C13.4079 19.5898 12.9556 18.7961 12.8157 17.922C13.3101 17.8295 13.7854 17.6542 14.2214 17.4035L13.1019 16.2839C12.6475 16.4667 12.1552 16.5351 11.6682 16.4828C11.1813 16.4306 10.7146 16.2595 10.3094 15.9844C9.90415 15.7094 9.57276 15.3389 9.34441 14.9057C9.11606 14.4724 8.99775 13.9896 8.99992 13.4999V12.1817L7.49992 10.6816V13.4998C7.50176 14.5709 7.88538 15.6063 8.58188 16.4201C9.27839 17.2338 10.2422 17.7726 11.3002 17.9397C11.4415 19.0996 11.9702 20.1779 12.8007 20.9998H6.00175C5.80283 20.9998 5.61207 21.0788 5.47142 21.2195C5.33076 21.3601 5.25175 21.5509 5.25175 21.7498C5.25175 21.9487 5.33076 22.1395 5.47142 22.2801C5.61207 22.4208 5.80283 22.4998 6.00175 22.4998H18.0017C18.2007 22.4998 18.3914 22.4208 18.5321 22.2801C18.6727 22.1395 18.7517 21.9487 18.7517 21.7498C18.7517 21.5509 18.6727 21.3601 18.5321 21.2195C18.3914 21.0788 18.2007 20.9998 18.0017 20.9998Z"
+        />
+        <path
+          d="M21.5306 20.4695L16.1892 15.1284C16.3945 14.6099 16.5 14.0574 16.5003 13.4998V5.99981C16.4987 4.80729 16.0239 3.66415 15.1802 2.82145C14.3364 1.97876 13.1926 1.50543 12.0001 1.50543C10.8076 1.50543 9.66382 1.97876 8.82004 2.82145C7.97626 3.66415 7.50145 4.80729 7.49992 5.99981V6.43918L3.53021 2.46954C3.38957 2.3289 3.19883 2.24989 2.99993 2.24988C2.80104 2.24988 2.61029 2.32889 2.46965 2.46953C2.32901 2.61016 2.25 2.80091 2.25 2.9998C2.25 3.19869 2.32901 3.38944 2.46964 3.53008L20.47 21.5301C20.5396 21.5997 20.6223 21.655 20.7133 21.6926C20.8043 21.7303 20.9018 21.7497 21.0003 21.7497C21.0988 21.7497 21.1963 21.7303 21.2873 21.6926C21.3782 21.655 21.4609 21.5997 21.5306 21.5301C21.6002 21.4604 21.6554 21.3778 21.6931 21.2868C21.7308 21.1958 21.7502 21.0983 21.7502 20.9998C21.7502 20.9013 21.7308 20.8038 21.6931 20.7128C21.6554 20.6218 21.6002 20.5392 21.5306 20.4695ZM15.0003 13.4998C14.9976 13.6348 14.9854 13.7695 14.9637 13.9028L8.99994 7.93915V5.99981C9.00119 5.20493 9.31784 4.44304 9.88035 3.88142C10.4429 3.31981 11.2052 3.00437 12.0001 3.00437C12.795 3.00437 13.5574 3.31981 14.1199 3.88142C14.6824 4.44304 14.999 5.20493 15.0003 5.99981V13.4998Z"
+        />
+      </svg>
+      <span
+        className="wxc-meeting-control__button-text"
+      >
+        No microphone
+      </span>
+    </button>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex Meeting Control Disabled Text 1`] = `
+Array [
+  <div
+    className="wxc wxc-meeting-control"
+  >
+    <button
+      aria-label="Join meeting"
+      autoFocus={false}
+      className="wxc wxc-button wxc-meeting-control__control-button wxc-button--join"
+      style={
+        Object {
+          "height": 48,
+        }
+      }
+      tabIndex={0}
+      type="button"
+      wxc-disabled="true"
+    >
+      <span
+        className="wxc-meeting-control__button-text"
+      >
+        Join meeting
+      </span>
+    </button>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex Meeting Control Dropdown 1`] = `
+Array [
+  <div
+    className="wxc wxc-meeting-control"
+  >
+    <div
+      className="wxc wxc-label wxc wxc-dropdown wxc-meeting-control__control-select wxc-dropdown--disabled"
+    >
+      <div
+        className="wxc-label__control"
+      >
+        <div
+          className="wxc-dropdown__control"
+          disabled={true}
+          onKeyDown={[Function]}
+        >
+          <div
+            aria-controls="wxc-0-options"
+            aria-haspopup="listbox"
+            aria-invalid="false"
+            aria-label="Use arrow keys to navigate between camera options and hit \\"Enter\\" to select."
+            aria-labelledby="wxc-0-label"
+            className="wxc-dropdown__selected-option "
+            id="wxc-0-control"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="combobox"
+            tabIndex={-1}
+            title="Video Devices"
+          >
+            <span
+              className="wxc-dropdown__label"
+            >
+              No available cameras
+            </span>
+            <svg
+              className="wxc-icon "
+              height={13}
+              style={Object {}}
+              viewBox="0 0 26 14"
+              width={13}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M25.7075 0.293202C25.52 0.105701 25.2656 0.000366211 25.0004 0.000366211C24.7353 0.000366211 24.4809 0.105701 24.2934 0.293202L13 11.5862L1.70699 0.293202C1.51851 0.110381 1.26568 0.00902984 1.0031 0.0110359C0.740528 0.013042 0.489278 0.118244 0.303611 0.303925C0.117943 0.489605 0.0127584 0.740862 0.0107709 1.00344C0.00878336 1.26601 0.110153 1.51883 0.292988 1.7073L12.293 13.7073C12.4805 13.8948 12.7348 14.0001 13 14.0001C13.2652 14.0001 13.5195 13.8948 13.707 13.7073L25.707 1.7073C25.8946 1.51984 26 1.26555 26.0001 1.00036C26.0002 0.735168 25.8949 0.4808 25.7075 0.293202Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex Meeting Control Inactive Icon 1`] = `
+Array [
+  <div
+    className="wxc wxc-meeting-control"
+  >
+    <button
+      aria-label="Unmute"
+      autoFocus={false}
+      className="wxc wxc-button wxc-meeting-control__control-button wxc-button--default"
+      onClick={[Function]}
+      style={
+        Object {
+          "height": 48,
+        }
+      }
+      tabIndex={0}
+      type="button"
+    >
+      <svg
+        className="wxc-icon wxc wxc-audio-microphone-muted-icon"
+        height={24}
+        style={Object {}}
+        viewBox="0 0 24 24"
+        width={24}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M18.0017 20.9998H16.5171C15.6321 21.0217 14.7693 20.7218 14.0886 20.1558C13.4079 19.5898 12.9556 18.7961 12.8157 17.922C13.3101 17.8295 13.7854 17.6542 14.2214 17.4035L13.1019 16.2839C12.6475 16.4667 12.1552 16.5351 11.6682 16.4828C11.1813 16.4306 10.7146 16.2595 10.3094 15.9844C9.90415 15.7094 9.57276 15.3389 9.34441 14.9057C9.11606 14.4724 8.99775 13.9896 8.99992 13.4999V12.1817L7.49992 10.6816V13.4998C7.50176 14.5709 7.88538 15.6063 8.58188 16.4201C9.27839 17.2338 10.2422 17.7726 11.3002 17.9397C11.4415 19.0996 11.9702 20.1779 12.8007 20.9998H6.00175C5.80283 20.9998 5.61207 21.0788 5.47142 21.2195C5.33076 21.3601 5.25175 21.5509 5.25175 21.7498C5.25175 21.9487 5.33076 22.1395 5.47142 22.2801C5.61207 22.4208 5.80283 22.4998 6.00175 22.4998H18.0017C18.2007 22.4998 18.3914 22.4208 18.5321 22.2801C18.6727 22.1395 18.7517 21.9487 18.7517 21.7498C18.7517 21.5509 18.6727 21.3601 18.5321 21.2195C18.3914 21.0788 18.2007 20.9998 18.0017 20.9998Z"
+        />
+        <path
+          d="M21.5306 20.4695L16.1892 15.1284C16.3945 14.6099 16.5 14.0574 16.5003 13.4998V5.99981C16.4987 4.80729 16.0239 3.66415 15.1802 2.82145C14.3364 1.97876 13.1926 1.50543 12.0001 1.50543C10.8076 1.50543 9.66382 1.97876 8.82004 2.82145C7.97626 3.66415 7.50145 4.80729 7.49992 5.99981V6.43918L3.53021 2.46954C3.38957 2.3289 3.19883 2.24989 2.99993 2.24988C2.80104 2.24988 2.61029 2.32889 2.46965 2.46953C2.32901 2.61016 2.25 2.80091 2.25 2.9998C2.25 3.19869 2.32901 3.38944 2.46964 3.53008L20.47 21.5301C20.5396 21.5997 20.6223 21.655 20.7133 21.6926C20.8043 21.7303 20.9018 21.7497 21.0003 21.7497C21.0988 21.7497 21.1963 21.7303 21.2873 21.6926C21.3782 21.655 21.4609 21.5997 21.5306 21.5301C21.6002 21.4604 21.6554 21.3778 21.6931 21.2868C21.7308 21.1958 21.7502 21.0983 21.7502 20.9998C21.7502 20.9013 21.7308 20.8038 21.6931 20.7128C21.6554 20.6218 21.6002 20.5392 21.5306 20.4695ZM15.0003 13.4998C14.9976 13.6348 14.9854 13.7695 14.9637 13.9028L8.99994 7.93915V5.99981C9.00119 5.20493 9.31784 4.44304 9.88035 3.88142C10.4429 3.31981 11.2052 3.00437 12.0001 3.00437C12.795 3.00437 13.5574 3.31981 14.1199 3.88142C14.6824 4.44304 14.999 5.20493 15.0003 5.99981V13.4998Z"
+        />
+      </svg>
+      <span
+        className="wxc-meeting-control__button-text"
+      >
+        Unmute
+      </span>
+    </button>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Meetings/Webex Meeting Control Text 1`] = `
+Array [
+  <div
+    className="wxc wxc-meeting-control"
+  >
+    <button
+      aria-label="Join meeting"
+      autoFocus={false}
+      className="wxc wxc-button wxc-meeting-control__control-button wxc-button--join"
+      onClick={[Function]}
+      style={
+        Object {
+          "height": 48,
+        }
+      }
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="wxc-meeting-control__button-text"
+      >
+        Join meeting
+      </span>
+    </button>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;

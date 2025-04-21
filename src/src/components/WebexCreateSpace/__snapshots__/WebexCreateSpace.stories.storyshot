@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Platform/Webex Create Space Create Space 1`] = `
+Array [
+  <div
+    className="wxc wxc-create-space"
+  >
+    <div
+      className="wxc wxc-label wxc wxc-input-field"
+    >
+      <label
+        className="wxc-label__label-text"
+        htmlFor="wxc-0-control"
+        id="wxc-0-label"
+      >
+        <span
+          className="wxc-label__text"
+        >
+          Space name
+        </span>
+      </label>
+      <div
+        className="wxc-label__control"
+      >
+        <div
+          className="wxc-input-field__form-control"
+        >
+          <input
+            aria-invalid="false"
+            aria-labelledby="wxc-0-label"
+            autoFocus={false}
+            className="wxc-input-field__input"
+            disabled={false}
+            id="wxc-0-control"
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            placeholder="Enter space name"
+            required={false}
+            tabIndex={0}
+            type="text"
+            value="test-widgets"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="wxc wxc-search-people"
+    >
+      <div
+        className="wxc wxc-label"
+      >
+        <label
+          className="wxc-label__label-text"
+          htmlFor="undefined-control"
+          id="undefined-label"
+        >
+          <span
+            className="wxc-label__text"
+          >
+            People
+          </span>
+        </label>
+        <div
+          className="wxc-label__control"
+        />
+      </div>
+      <div
+        className="wxc-search-people__people-list-box"
+      >
+        <div
+          className="wxc wxc-label wxc wxc-input-field"
+        >
+          <div
+            className="wxc-label__control"
+          >
+            <div
+              className="wxc-input-field__form-control"
+            >
+              <input
+                aria-invalid="false"
+                aria-labelledby="wxc-0-label"
+                autoFocus={false}
+                className="wxc-input-field__input"
+                disabled={false}
+                id="wxc-0-control"
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder="Add people"
+                required={false}
+                tabIndex={0}
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="wxc-search-people__suggestions"
+      />
+    </div>
+    <div
+      className="wxc-create-space__buttons"
+    >
+      <button
+        autoFocus={false}
+        className="wxc wxc-button wxc-button--primary"
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 32,
+          }
+        }
+        tabIndex={0}
+        type="button"
+      >
+        Cancel
+      </button>
+      <button
+        autoFocus={false}
+        className="wxc wxc-button wxc-button--join"
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 32,
+          }
+        }
+        tabIndex={0}
+        type="button"
+      >
+        Create new Space
+      </button>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;

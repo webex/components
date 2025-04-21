@@ -1,0 +1,629 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Messaging/Webex Activity Stream Conversation 1`] = `
+Array [
+  <div
+    className="wxc wxc-activity-stream"
+  >
+    <div
+      className="wxc wxc-activity"
+    >
+      <div
+        className="wxc wxc-activity-header"
+      >
+        <div
+          className="wxc wxc-avatar wxc-activity-header__avatar"
+        >
+          <div
+            className="wxc-avatar__content"
+          >
+            <svg
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                BS
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className="wxc-avatar__image"
+              onError={[Function]}
+              src="./images/brenda.png"
+            />
+          </div>
+        </div>
+        <div
+          className="wxc-activity-header__author"
+        >
+          <span>
+            Brenda Song
+          </span>
+          <span
+            className="wxc-activity-header__timestamp"
+          >
+            10:00 AM
+          </span>
+        </div>
+      </div>
+      <div
+        className="wxc-activity__content"
+      >
+        <div
+          className="wxc-activity__message"
+        >
+          I'm having some issues setting up my environment 💻
+        </div>
+      </div>
+    </div>
+    <div
+      className="wxc wxc-activity"
+    >
+      <div
+        className="wxc-activity__content"
+      >
+        <div
+          className="wxc-activity__message"
+        >
+          Can someone help me troubleshoot?
+        </div>
+      </div>
+    </div>
+    <div
+      className="wxc wxc-activity"
+    >
+      <div
+        className="wxc wxc-activity-header"
+      >
+        <div
+          className="wxc wxc-avatar wxc-activity-header__avatar"
+        >
+          <div
+            className="wxc-avatar__content"
+          >
+            <svg
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                GE
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className="wxc-avatar__image"
+              onError={[Function]}
+              src="./images/giacomo.png"
+            />
+          </div>
+        </div>
+        <div
+          className="wxc-activity-header__author"
+        >
+          <span>
+            Giacomo Edwards
+          </span>
+          <span
+            className="wxc-activity-header__timestamp"
+          >
+            10:05 AM
+          </span>
+        </div>
+      </div>
+      <div
+        className="wxc-activity__content"
+      >
+        <div
+          className="wxc-activity__message"
+        >
+          I ran into the same issue before! Have you checked your OS permissions?
+Sometimes that is disabled for the browser and causes the app to not load properly.
+Let me know if you need more help! Maybe we can talk about it during standup
+        </div>
+      </div>
+    </div>
+    <div
+      className="wxc wxc-activity"
+    >
+      <div
+        className="wxc wxc-activity-header"
+      >
+        <div
+          className="wxc wxc-avatar wxc-activity-header__avatar"
+        >
+          <div
+            className="wxc-avatar__content"
+          >
+            <svg
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                BS
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className="wxc-avatar__image"
+              onError={[Function]}
+              src="./images/brenda.png"
+            />
+          </div>
+        </div>
+        <div
+          className="wxc-activity-header__author"
+        >
+          <span>
+            Brenda Song
+          </span>
+          <span
+            className="wxc-activity-header__timestamp"
+          >
+            10:05 AM
+          </span>
+        </div>
+      </div>
+      <div
+        className="wxc-activity__content"
+      >
+        <div
+          className="wxc-activity__message"
+        >
+          Thanks, Gio! Let's talk about it then 👍🏼
+        </div>
+      </div>
+    </div>
+    <div
+      className="wxc wxc-activity"
+    >
+      <div
+        className="wxc wxc-activity-header"
+      >
+        <div
+          className="wxc wxc-avatar wxc-activity-header__avatar"
+        >
+          <div
+            className="wxc-avatar__content"
+          >
+            <svg
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                SD
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className="wxc-avatar__image"
+              onError={[Function]}
+              src="./images/simon.png"
+            />
+          </div>
+        </div>
+        <div
+          className="wxc-activity-header__author"
+        >
+          <span>
+            Simon Damiano
+          </span>
+          <span
+            className="wxc-activity-header__timestamp"
+          >
+            10:08 AM
+          </span>
+        </div>
+      </div>
+      <div
+        className="wxc-activity__content"
+      >
+        <div
+          className="wxc-activity__message"
+        >
+          Hey guys! I'm going to skip standup today, not feeling great 🤢
+        </div>
+      </div>
+    </div>
+    <div
+      className="wxc-activity-stream__last-activity"
+    />
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Messaging/Webex Activity Stream New Direct 1`] = `
+Array [
+  <div
+    className="wxc wxc-activity-stream"
+  >
+    <div
+      className="wxc wxc-greeting"
+    >
+      <div
+        className="wxc-greeting__header"
+      >
+        <div
+          className="wxc-greeting__title"
+        >
+          Let’s start chatting
+           
+          <span
+            aria-label="Wave"
+            role="img"
+          >
+            👋
+          </span>
+        </div>
+        <div
+          className="wxc-greeting__description"
+        >
+          When you’re ready, start with a message
+        </div>
+      </div>
+    </div>
+    <div
+      className="wxc-activity-stream__last-activity"
+    />
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Messaging/Webex Activity Stream New Space 1`] = `
+Array [
+  <div
+    className="wxc wxc-activity-stream"
+  >
+    <div
+      className="wxc wxc-greeting"
+    >
+      <div
+        className="wxc-greeting__header"
+      >
+        <div
+          className="wxc-greeting__title"
+        >
+          Let’s start chatting
+           
+          <span
+            aria-label="Wave"
+            role="img"
+          >
+            👋
+          </span>
+        </div>
+        <div
+          className="wxc-greeting__description"
+        >
+          Add or invite more people to get things done together.
+        </div>
+        <div
+          className="wxc-greeting__description"
+        >
+          When you’re ready, start with a message
+        </div>
+      </div>
+    </div>
+    <div
+      className="wxc-activity-stream__last-activity"
+    />
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Messaging/Webex Activity Stream Time Rulers 1`] = `
+Array [
+  <div
+    className="wxc wxc-activity-stream"
+  >
+    <div
+      className="wxc wxc-activity"
+    >
+      <div
+        className="wxc wxc-activity-header"
+      >
+        <div
+          className="wxc wxc-avatar wxc-activity-header__avatar"
+        >
+          <div
+            className="wxc-avatar__content"
+          >
+            <svg
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                BG
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className="wxc-avatar__image"
+              onError={[Function]}
+              src="./images/barbara.png"
+            />
+            <div
+              className="wxc-avatar__status-icon-container"
+            >
+              <svg
+                className="wxc-icon wxc-avatar__status-icon wxc-avatar__status-dnd"
+                fill="none"
+                height={24}
+                style={Object {}}
+                viewBox="0 0 32 32"
+                width={24}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clipRule="evenodd"
+                  d="M16 29.5C23.4558 29.5 29.5 23.4558 29.5 16C29.5 8.54416 23.4558 2.5 16 2.5C8.54416 2.5 2.5 8.54416 2.5 16C2.5 23.4558 8.54416 29.5 16 29.5ZM10 15C9.44772 15 9 15.4477 9 16C9 16.5523 9.44772 17 10 17H22C22.5523 17 23 16.5523 23 16C23 15.4477 22.5523 15 22 15H10Z"
+                  fillRule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div
+          className="wxc-activity-header__author"
+        >
+          <span>
+            Barbara German
+          </span>
+          <span
+            className="wxc-activity-header__timestamp"
+          >
+            08/03/2020, 1:24 PM
+          </span>
+        </div>
+      </div>
+      <div
+        className="wxc-activity__content"
+      >
+        <div
+          className="wxc-activity__message"
+        >
+          The login page seems to be confusing a lot of people! Let's brainstorm some new designs
+        </div>
+      </div>
+    </div>
+    <div
+      className="wxc wxc-time-ruler"
+    >
+      <span>
+        Yesterday
+      </span>
+    </div>
+    <div
+      className="wxc wxc-activity"
+    >
+      <div
+        className="wxc wxc-activity-header"
+      >
+        <div
+          className="wxc wxc-avatar wxc-activity-header__avatar"
+        >
+          <div
+            className="wxc-avatar__content"
+          >
+            <svg
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                BS
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className="wxc-avatar__image"
+              onError={[Function]}
+              src="./images/brandon.png"
+            />
+          </div>
+        </div>
+        <div
+          className="wxc-activity-header__author"
+        >
+          <span>
+            Brandon Seeger
+          </span>
+          <span
+            className="wxc-activity-header__timestamp"
+          >
+            Yesterday, 10:00 AM
+          </span>
+        </div>
+      </div>
+      <div
+        className="wxc-activity__content"
+      >
+        <div
+          className="wxc-activity__message"
+        >
+          Got some of the new designs for the login page, will send the Figma links tomorrow
+        </div>
+      </div>
+    </div>
+    <div
+      className="wxc wxc-time-ruler"
+    >
+      <span>
+        Today
+      </span>
+    </div>
+    <div
+      className="wxc wxc-activity"
+    >
+      <div
+        className="wxc wxc-activity-header"
+      >
+        <div
+          className="wxc wxc-avatar wxc-activity-header__avatar"
+        >
+          <div
+            className="wxc-avatar__content"
+          >
+            <svg
+              className="wxc-avatar__placeholder wxc-avatar__placeholder-6"
+              viewBox="0 0 40 40"
+            >
+              <text
+                x="50%"
+                y="50%"
+              >
+                BG
+              </text>
+            </svg>
+            <img
+              alt="avatar"
+              className="wxc-avatar__image"
+              onError={[Function]}
+              src="./images/barbara.png"
+            />
+            <div
+              className="wxc-avatar__status-icon-container"
+            >
+              <svg
+                className="wxc-icon wxc-avatar__status-icon wxc-avatar__status-dnd"
+                fill="none"
+                height={24}
+                style={Object {}}
+                viewBox="0 0 32 32"
+                width={24}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clipRule="evenodd"
+                  d="M16 29.5C23.4558 29.5 29.5 23.4558 29.5 16C29.5 8.54416 23.4558 2.5 16 2.5C8.54416 2.5 2.5 8.54416 2.5 16C2.5 23.4558 8.54416 29.5 16 29.5ZM10 15C9.44772 15 9 15.4477 9 16C9 16.5523 9.44772 17 10 17H22C22.5523 17 23 16.5523 23 16C23 15.4477 22.5523 15 22 15H10Z"
+                  fillRule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div
+          className="wxc-activity-header__author"
+        >
+          <span>
+            Barbara German
+          </span>
+          <span
+            className="wxc-activity-header__timestamp"
+          >
+            10:00 AM
+          </span>
+        </div>
+      </div>
+      <div
+        className="wxc-activity__content"
+      >
+        <div
+          className="wxc-activity__message"
+        >
+          Following up on our last task. Seems like we need more time?
+        </div>
+      </div>
+    </div>
+    <div
+      className="wxc-activity-stream__last-activity"
+    />
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
