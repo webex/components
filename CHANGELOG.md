@@ -1,3 +1,10 @@
+## [1.277.1](https://github.com/webex/components/compare/v1.277.0...v1.277.1) (2025-05-07)
+
+
+### Bug Fixes
+
+* **accessibility:** use expand function in toggleExpanded and remove misleading hint function ([#852](https://github.com/webex/components/issues/852)) ([ab0c6ab](https://github.com/webex/components/commit/ab0c6abe2fccbebd37ab921cd3c3f0b3e09ca1a7))
+
 # [1.277.0](https://github.com/webex/components/compare/v1.276.2...v1.277.0) (2024-12-30)
 
 
