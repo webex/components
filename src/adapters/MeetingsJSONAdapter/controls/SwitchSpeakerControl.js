@@ -55,7 +55,6 @@ export default class SwitchSpeakerControl extends MeetingControl {
           noOptionsMessage: 'No available speakers',
           options: null,
           selected: null,
-          hint: 'Use arrow keys to navigate between speaker options and hit "Enter" to select.',
         });
         observer.complete();
       } else {

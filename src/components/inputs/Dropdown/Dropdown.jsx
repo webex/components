@@ -56,7 +56,11 @@ export default function Dropdown({
   const expand = (withKey) => setExpanded({withKey});
   const toggleExpanded = (withKey) => {
     if (!disabled) {
-      setExpanded(expanded ? undefined : {withKey});
+      if (expanded) {
+        collapse();
+      } else {
+        expand(withKey);
+      }
     }
   };
 
