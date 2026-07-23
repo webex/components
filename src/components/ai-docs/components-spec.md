@@ -98,6 +98,7 @@ Full export list: `src/components/index.js`.
 | COMP-R-002 | `withAdapter` MUST call `adapter.connect()` before wrapping with `WebexDataProvider` | Prevents hooks reading disconnected adapter | `src/components/hoc/withAdapter.jsx` | `src/components/hoc/withAdapter.test.jsx` | none | PRESENT |
 | COMP-R-003 | `WebexDataProvider` MUST require adapter shape with five domain adapters | Matches adapter interface contract | `src/components/WebexDataProvider/WebexDataProvider.jsx` | `src/components/WebexDataProvider/WebexDataProvider.test.js` | organizations adapter optional in propTypes | PRESENT |
 | COMP-R-004 | DOM class prefix MUST use `wxc` constant | Consistent theming/CSS | `src/constants.js` | `src/styles/_variables.scss` | none | PRESENT |
+| COMP-R-005 | Exported component folders SHOULD follow co-located test and Storybook pattern | Regression safety for public API | `CONTRIBUTING.md` | `src/components/**/*.test.js`, `*.stories.js` | not every export has stories | PRESENT |
 | COMP-R-006 | All exported symbols MUST match `src/components/index.js` barrel | npm public API contract | `src/components/index.js` | build/export tests | none | PRESENT |
 | COMP-R-007 | Internal hooks under `hooks/` MUST subscribe/unsubscribe adapter observables safely | Prevents memory leaks on unmount | `src/components/hooks/useMeeting.js` | hook tests | none | PRESENT |
 | COMP-R-008 | `WebexDataProvider` PropTypes require five domain adapters (activities, meetings, memberships, people, rooms) | Documents minimum adapter shape for context | `src/components/WebexDataProvider/WebexDataProvider.jsx` | WebexDataProvider.test.js | organizationsAdapter on WebexJSONAdapter but not in PropTypes — host/SDK may still supply | PRESENT |
@@ -107,6 +108,8 @@ Full export list: `src/components/index.js`.
 Components follow a **container/presentation** split where data arrives exclusively through adapter hooks. `withAdapter` owns adapter instantiation and async connect/disconnect; presentational components remain testable with mock adapters in JSON form.
 
 Hooks encapsulate RxJS subscription lifecycle for meeting, person, room, and activity streams. Generic components (`Button`, `Modal`) provide shared UX primitives with Webex styling.
+
+Supporting folders (`icons/`, `inputs/`, `generic/`, `adaptive-cards/`) implement internal UI pieces. Only `Button` and `Modal` from `generic/` are npm-exported; other support components are consumed internally (see Class / Component Relationships).
 
 ## Data Flow
 
@@ -134,6 +137,12 @@ flowchart TB
 Data flows one way from adapter observables into hooks, then into React render output. User actions invoke adapter control objects (defined in adapter module).
 
 ## Sequence Diagram(s)
+
+Sequence coverage:
+
+| Operation group | Diagram | Failure / recovery coverage |
+|---|---|---|
+| Adapter connect + meeting subscribe | below | `withAdapter` defers provider until connect completes |
 
 ```mermaid
 sequenceDiagram
@@ -180,6 +189,34 @@ classDiagram
 
 Relationship: HOC → Provider → feature components → hooks → adapter interfaces (external package).
 
+**Internal components (not in public barrel):**
+
+| Component folder | Role | Used by |
+|---|---|---|
+| `WebexAdaptiveCard/` | Renders single adaptive card | `WebexAdaptiveCards` |
+| `WebexAudioSettings/` | Audio device selection UI | `WebexSettings` |
+| `WebexVideoSettings/` | Video device selection UI | `WebexSettings` |
+| `WebexMeetingProvider/` | Provides meeting context | Meeting subtree |
+| `WebexNoMedia/` | Placeholder when no media | Media components |
+
+**Hooks catalog** (`src/components/hooks/` — only `useMeetingDestination` exported from package barrel):
+
+| Hook | Purpose | Evidence |
+|---|---|---|
+| `useMeeting` | Subscribe to current meeting observables | `src/components/hooks/useMeeting.js` |
+| `useMeetingControl` | Access meeting control instances | `src/components/hooks/useMeetingControl.js` |
+| `useMeetingDestination` | Resolve meeting destination (exported) | `src/components/hooks/useMeetingDestination.js` |
+| `usePerson` | Person data by ID | `src/components/hooks/usePerson.js` |
+| `useMe` | Current user person data | `src/components/hooks/useMe.js` |
+| `useRoom` | Room/space data | `src/components/hooks/useRoom.js` |
+| `useMembers` | Membership roster | `src/components/hooks/useMembers.js` |
+| `useActivity` | Single activity | `src/components/hooks/useActivity.js` |
+| `useActivityStream` | Activity stream | `src/components/hooks/useActivityStream.js` |
+
+Additional hooks: `useActivityScroll`, `useOverflowActivities`, `useAdaptiveCard`, `useOrganization`, `useStream`, `useSpeakers`, `useMetrics`, `useElementDimensions`, `useElementPosition`, `useAutoFocus`, `useRef` — see `src/components/hooks/index.js`.
+
+Evidence: `src/components/` directory listing, import graph from `WebexMeeting.jsx`.
+
 ## Use Cases
 
 | UC | Actor | Flow | Evidence |
@@ -218,92 +255,57 @@ Component hooks subscribe to RxJS observables from adapter methods. Subscription
 
 Evidence: `src/components/hooks/useMeeting.js`, `src/adapters/MeetingsJSONAdapter.js`, `rxjs` peer dependency.
 
-## Internal Components (supporting, not exported)
+## State Machine
 
-| Component folder | Role | Used by |
-|---|---|---|
-| `WebexAdaptiveCard/` | Renders single adaptive card | `WebexAdaptiveCards` |
-| `WebexAudioSettings/` | Audio device selection UI | `WebexSettings` |
-| `WebexVideoSettings/` | Video device selection UI | `WebexSettings` |
-| `WebexMeetingProvider/` | Provides meeting context | Meeting subtree |
-| `WebexNoMedia/` | Placeholder when no media | Media components |
-| `adaptive-cards/` | Adaptive card building blocks | Messaging/adaptive cards |
-| `icons/` | SVG icon components | Generic and Webex components |
-| `inputs/` | DateInput, Dropdown, TimeInput | Forms in components |
-| `generic/` | Button, Modal, Badge, Spinner, … | Exported: Button, Modal; rest internal |
+Meeting shell UI transitions follow adapter-reported `MeetingState` (from `@webex/component-adapter-interfaces`). `WebexMeeting` selects child components based on meeting status and auth requirements.
 
-Evidence: `src/components/` directory listing, import graph from `WebexMeeting.jsx`.
+```mermaid
+stateDiagram-v2
+  [*] --> AuthOrWaiting: render WebexMeeting
+  AuthOrWaiting --> Interstitial: authenticated / guest flow complete
+  Interstitial --> InMeeting: join success
+  InMeeting --> Interstitial: leave / end
+  InMeeting --> SettingsOverlay: open settings
+  SettingsOverlay --> InMeeting: close settings
+```
 
-## Hooks Catalog
-
-| Hook | Purpose | Evidence |
-|---|---|---|
-| `useMeeting` | Subscribe to current meeting observables | `src/components/hooks/useMeeting.js` |
-| `useMeetingControl` | Access meeting control instances | `src/components/hooks/useMeetingControl.js` |
-| `useMeetingDestination` | Resolve meeting destination (exported) | `src/components/hooks/useMeetingDestination.js` |
-| `usePerson` | Person data by ID | `src/components/hooks/usePerson.js` |
-| `useMe` | Current user person data | `src/components/hooks/useMe.js` |
-| `useRoom` | Room/space data | `src/components/hooks/useRoom.js` |
-| `useMembers` | Membership roster | `src/components/hooks/useMembers.js` |
-| `useActivity` | Single activity | `src/components/hooks/useActivity.js` |
-| `useActivityStream` | Activity stream | `src/components/hooks/useActivityStream.js` |
-| `useActivityScroll` | Scroll behavior for activities | `src/components/hooks/useActivityScroll.js` |
-| `useOverflowActivities` | Overflow activity handling | `src/components/hooks/useOverflowActivities.js` |
-| `useAdaptiveCard` | Adaptive card state | `src/components/hooks/useAdaptiveCard.js` |
-| `useOrganization` | Organization data | `src/components/hooks/useOrganization.js` |
-| `useStream` | Media stream helper | `src/components/hooks/useStream.js` |
-| `useSpeakers` | Speaker list | `src/components/hooks/useSpeakers.js` |
-| `useMetrics` | Metrics callback hook | `src/components/hooks/useMetrics.js` |
-| `useElementDimensions` | Element size measurement | `src/components/hooks/useElementDimensions.js` |
-| `useElementPosition` | Element position | `src/components/hooks/useElementPosition.js` |
-| `useAutoFocus` | Focus management | `src/components/hooks/useAutoFocus.js` |
-| `useRef` | Ref helper | `src/components/hooks/useRef.js` |
-
-Barrel: `src/components/hooks/index.js`. Only `useMeetingDestination` exported from package barrel.
-
-## Module Conventions
-
-- One folder per component: `ComponentName/ComponentName.jsx` + co-located `.scss`, `.test.js`, `.stories.js`.
-- Use `webexComponentClasses()` from `src/components/helpers.js` for BEM-style class names.
-- Responsive breakpoints from `src/components/breakpoints.js` (e.g. `PHONE_LARGE`).
-- JSDoc on all public props and adapter-facing methods per `CONTRIBUTING.md`.
-
-## Design Trade-offs
-
-- **Adapter injection vs bundled SDK:** Keeps package lightweight; hosts choose data source at cost of integration complexity.
-- **JSON adapters in-repo:** Enables Storybook/offline demo without mocking entire SDK.
-- **Side-effect style import:** `src/index.js` imports SCSS globally — simplifies consumer CSS at cost of bundler side-effect awareness.
-
-## Host Integration
-
-Hosts MUST:
-
-1. Install peer dependencies (`react`, `react-dom`, `rxjs`, `prop-types`).
-2. Import compiled CSS from package `dist/css/`.
-3. Provide adapter via `withAdapter` or manual `WebexDataProvider`.
-4. For production Webex data, use SDK adapter from `@webex/sdk-component-adapter` (external repo) — not bundled here.
-
-Evidence: `README.md`, `package.json` peerDependencies.
-
-## Export Stability
-
-Public exports are semver-managed via semantic-release. Beta status documented in README — consumers should pin versions.
-
-Evidence: `README.md` Project Status, `package.json` release scripts.
-
-## Error Handling & Failure Modes
-
-- Adapter not connected: `withAdapter` renders wrapped component without provider until connect completes.
-- Missing meeting ID: components rely on adapter/state; hosts must pass valid IDs.
-- Invalid URLs: use `isValidUrl` helper where links accepted.
-
-Evidence: `src/components/hoc/withAdapter.jsx`, `src/util.js`.
+Evidence: `src/components/WebexMeeting/WebexMeeting.jsx`, `@webex/component-adapter-interfaces` `MeetingState`.
 
 ## Pitfalls
 
 - Importing components without CSS yields unstyled UI — load `dist/css/webex-components.css`.
 - Assuming `organizationsAdapter` on provider when only five adapters validated in propTypes — verify host adapter shape.
 - Snapshot tests sensitive to class names — coordinate with styles module when changing prefix.
+- `withAdapter` renders without provider until connect completes — do not assume adapter context on first paint.
+
+Evidence: `src/components/hoc/withAdapter.jsx`, `src/util.js`.
+
+## Module Do's / Don'ts
+
+- DO: one folder per component with `ComponentName.jsx` + co-located `.scss`, `.test.js`, `.stories.js`.
+- DO: use `webexComponentClasses()` from `src/components/helpers.js` for BEM-style class names.
+- DO: use responsive breakpoints from `src/components/breakpoints.js` (e.g. `PHONE_LARGE`).
+- DON'T: fetch Webex cloud data directly from components — use adapter hooks only.
+- DON'T: export internal support components without updating `src/components/index.js` and `CONTRACTS.md`.
+
+Evidence: `CONTRIBUTING.md`, `src/components/helpers.js`.
+
+## Export Stability
+
+Public exports are semver-managed via semantic-release. Beta status documented in README — consumers should pin versions. Adding optional props is minor; removing exports or required props is major.
+
+Evidence: `README.md` Project Status, `package.json` release scripts.
+
+## Host Integration & Theming
+
+Hosts MUST:
+
+1. Install peer dependencies (`react`, `react-dom`, `rxjs`, `prop-types`).
+2. Import compiled CSS from package `dist/css/webex-components.css`.
+3. Provide adapter via `withAdapter` or manual `WebexDataProvider`.
+4. For production Webex data, use SDK adapter from `@webex/sdk-component-adapter` (external repo) — not bundled here.
+
+Evidence: `README.md`, `package.json` peerDependencies.
 
 ## Test-Case Strategy (module)
 
@@ -311,6 +313,12 @@ Evidence: `src/components/hoc/withAdapter.jsx`, `src/util.js`.
 - Snapshot tests for stable DOM structure where established.
 - Hook tests with mock adapter context.
 - Storybook for visual states; Chromatic in CI.
+
+| Behavior / Requirement | Existing test evidence | Gap |
+|---|---|---|
+| COMP-R-002 connect-before-provider | `src/components/hoc/withAdapter.test.jsx` | none |
+| COMP-R-005 co-located tests | `src/components/**/*.test.js` | not all exports have stories |
+| COMP-R-007 hook cleanup | hook tests under `src/components/hooks/` | none |
 
 Evidence: `src/components/**/*.test.js`, `.circleci/config.yml`.
 
@@ -322,7 +330,10 @@ Evidence: `src/components/**/*.test.js`, `.circleci/config.yml`.
 | COMP-R-002 | `src/components/hoc/withAdapter.jsx` | `src/components/hoc/withAdapter.test.jsx` |
 | COMP-R-003 | `src/components/WebexDataProvider/WebexDataProvider.jsx` | `src/components/WebexDataProvider/WebexDataProvider.test.js` |
 | COMP-R-004 | `src/constants.js` | style/component tests |
-| COMP-R-005 | `src/components/index.js` | export barrel tests / build |
+| COMP-R-005 | `src/components/` | `src/components/**/*.test.js` |
 | COMP-R-006 | `src/components/index.js` | build |
 | COMP-R-007 | `src/components/hooks/useMeeting.js` | hook tests |
 | COMP-R-008 | `src/components/WebexDataProvider/WebexDataProvider.jsx` | WebexDataProvider.test.js |
+
+- Repo architecture: [`ai-docs/ARCHITECTURE.md`](../../../ai-docs/ARCHITECTURE.md) · Registry: [`ai-docs/SPEC_INDEX.md`](../../../ai-docs/SPEC_INDEX.md)
+- Coverage state & contracts baseline: `.sdd/manifest.json`

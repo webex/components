@@ -94,41 +94,9 @@ Internal Surface — SCSS partials are build-time, not direct public API.
 | STY-R-002 | Class prefix in SCSS MUST match JS constant `wxc` | Prevents broken selectors | `src/styles/_variables.scss`, `src/constants.js` | component tests | none | PRESENT |
 | STY-R-003 | Rollup MUST emit compressed CSS to `dist/css/webex-components.css` | Consumer import path | `rollup.config.js` | CI build | none | PRESENT |
 | STY-R-004 | Build MUST copy theme folders to `dist/themes/` | Host theme switching | `rollup.config.js` copy plugin | build artifact | none | PRESENT |
+| STY-R-005 | Build MUST copy font files to `dist/assets/fonts/` | Hosts load bundled fonts | `rollup.config.js` copy plugin | CI build | none | PRESENT |
 | STY-R-006 | Theme SCSS files MUST be imported from `src/styles/index.scss` | Single CSS bundle | `src/styles/index.scss` | build | none | PRESENT |
 | STY-R-007 | Component styles aggregated via `src/components/_components.scss` | Component-level SCSS inclusion | `src/components/_components.scss` | build | none | PRESENT |
-
-## SCSS File Registry
-
-| File | Role |
-|---|---|
-| `src/styles/index.scss` | Entry import graph |
-| `src/styles/_variables.scss` | Prefix, fonts, meeting min dimensions |
-| `src/styles/_colors.scss` | Color tokens |
-| `src/styles/_mixins.scss` | Shared mixins |
-| `src/styles/_fonts.scss` | Font face declarations |
-| `src/styles/_defaults.scss` | Base element defaults |
-| `src/themes/dark.scss` | Dark theme tokens |
-| `src/themes/light.scss` | Light theme tokens |
-| `src/components/_components.scss` | Imports all component SCSS partials |
-
-## Theme & Asset Assets
-
-| Path | Role |
-|---|---|
-| `src/themes/dark/webex-logo.svg` | Dark theme logo |
-| `src/themes/light/webex-logo.svg` | Light theme logo |
-| `src/assets/fonts/` | CiscoSansTT font files copied to `dist/assets/fonts/` |
-
-## Module Conventions
-
-- SCSS partials prefixed with `_` under `src/styles/`.
-- Class prefix variable `$WEBEX_COMPONENTS_CLASS_PREFIX` must match `src/constants.js`.
-- Component SCSS lives beside component JSX; registered through `_components.scss`.
-
-## Design Trade-offs
-
-- **Single compressed CSS bundle:** Simple host integration vs inability to tree-shake unused component styles.
-- **Copy vs inline theme assets:** Theme folders copied verbatim for host static serving flexibility.
 
 ## Design Overview
 
@@ -156,6 +124,12 @@ flowchart LR
 ```
 
 ## Sequence Diagram(s)
+
+Sequence coverage:
+
+| Operation group | Diagram | Failure / recovery coverage |
+|---|---|---|
+| Production build CSS + assets | below | SCSS `failOnError: true` aborts build on compile failure |
 
 ```mermaid
 sequenceDiagram
@@ -187,23 +161,29 @@ Evidence: `src/components/helpers.js`, `src/styles/_variables.scss`.
 | UC-2 Theme assets | Host serves `dist/themes/dark` logos | `rollup.config.js` |
 | UC-3 Component author | Add SCSS beside new component; register in `_components.scss` | `src/components/` patterns |
 
-## Host Integration
+## SCSS File Registry
 
-Hosts load compiled CSS once globally. Theme selection may swap CSS variables or load theme-specific assets from `dist/themes/`. Class prefix `wxc` must not be overridden without updating both JS and SCSS.
+| File | Role |
+|---|---|
+| `src/styles/index.scss` | Entry import graph |
+| `src/styles/_variables.scss` | Prefix, fonts, meeting min dimensions |
+| `src/styles/_colors.scss` | Color tokens |
+| `src/styles/_mixins.scss` | Shared mixins |
+| `src/styles/_fonts.scss` | Font face declarations |
+| `src/styles/_defaults.scss` | Base element defaults |
+| `src/themes/dark.scss` | Dark theme tokens |
+| `src/themes/light.scss` | Light theme tokens |
+| `src/components/_components.scss` | Imports all component SCSS partials |
 
-## Error Handling & Failure Modes
+## Theme & Asset Assets
 
-- SCSS compilation failure aborts build (`failOnError: true` in Rollup scss plugin).
-- Missing theme/font copy targets fail at build time via Rollup copy plugin.
-- Host omitting CSS import results in unstyled components — see components spec pitfalls.
+| Path | Role |
+|---|---|
+| `src/themes/dark/webex-logo.svg` | Dark theme logo |
+| `src/themes/light/webex-logo.svg` | Light theme logo |
+| `src/assets/fonts/` | CiscoSansTT font files copied to `dist/assets/fonts/` |
 
-Evidence: `rollup.config.js`.
-
-## Export Stability
-
-Published npm assets (`dist/css/`, `dist/themes/`, `dist/assets/`) follow semver via semantic-release. Prefer additive CSS classes; renaming `wxc-` prefixed classes is breaking.
-
-Evidence: `package.json`, `README.md`.
+Evidence: `rollup.config.js`, `src/assets/fonts/`.
 
 ## Pitfalls
 
@@ -213,11 +193,40 @@ Evidence: `package.json`, `README.md`.
 
 Evidence: `rollup.config.js`, `src/constants.js`.
 
+## Module Do's / Don'ts
+
+- DO: prefix SCSS partials with `_` under `src/styles/`.
+- DO: keep `$WEBEX_COMPONENTS_CLASS_PREFIX` aligned with `src/constants.js`.
+- DO: register new component SCSS in `src/components/_components.scss`.
+- DON'T: change `wxc-` class prefix in only JS or only SCSS.
+- DON'T: expect per-component CSS tree-shaking from the single bundle model.
+
+Evidence: `src/styles/_variables.scss`, `src/constants.js`.
+
+## Export Stability
+
+Published npm assets (`dist/css/`, `dist/themes/`, `dist/assets/`) follow semver via semantic-release. Prefer additive CSS classes; renaming `wxc-` prefixed classes is breaking.
+
+Evidence: `package.json`, `README.md`.
+
+## Host Integration & Theming
+
+Hosts load compiled CSS once globally. Theme selection may swap CSS variables or load theme-specific assets from `dist/themes/`. Class prefix `wxc` must not be overridden without updating both JS and SCSS.
+
+Evidence: `README.md`, `dist/css/webex-components.css`.
+
 ## Test-Case Strategy (module)
 
 - Indirect: component snapshot tests assert expected `wxc-` classes.
 - Build verification: `npm run build` produces expected dist artifacts.
 - Visual: Storybook/Chromatic for theme regressions.
+
+| Behavior / Requirement | Existing test evidence | Gap |
+|---|---|---|
+| STY-R-003 CSS bundle | CI build | none |
+| STY-R-005 font copy | CI build / dist inspection | none |
+
+Evidence: `.circleci/config.yml`, `rollup.config.js`.
 
 ## Traceability
 
@@ -228,3 +237,8 @@ Evidence: `rollup.config.js`, `src/constants.js`.
 | STY-R-003 | `rollup.config.js` | CI build |
 | STY-R-004 | `rollup.config.js` | CI build |
 | STY-R-005 | `rollup.config.js` | CI build |
+| STY-R-006 | `src/styles/index.scss` | build |
+| STY-R-007 | `src/components/_components.scss` | build |
+
+- Repo architecture: [`ai-docs/ARCHITECTURE.md`](../../../ai-docs/ARCHITECTURE.md) · Registry: [`ai-docs/SPEC_INDEX.md`](../../../ai-docs/SPEC_INDEX.md)
+- Coverage state & contracts baseline: `.sdd/manifest.json`

@@ -23,7 +23,7 @@ Requirements cite adapter source and co-located `*.test.js` files. Observable be
 | Source material | Scope | Decision | Detail location |
 |---|---|---|---|
 | `@webex/component-adapter-interfaces` | adapter API | reference-only | Requires section; npm package |
-| JSON fixtures | demo data | verified | `src/data/*.json` if present |
+| Datasource modules | demo data | verified | `src/data/*.js` (`activities.js`, `meetings.js`, …) |
 
 ## Overview
 
@@ -76,9 +76,7 @@ Only `WebexJSONAdapter` is published from `@webex/components` (`src/index.js` �
 |---|---|---|---|---|---|---|
 | adapters.WebexJSONAdapter | npm package export | class | Entry JSON adapter façade | Semver | `src/adapters/WebexJSONAdapter.js` | `ai-docs/CONTRACTS.md` |
 
-### Internal adapter-barrel exports (not npm package API)
-
-Exported from `src/adapters/index.js` for module tests and Storybook; accessed in apps via `WebexJSONAdapter` domain properties (`meetingsAdapter`, `peopleAdapter`, …).
+**Internal adapter-barrel exports (not npm package API)** — exported from `src/adapters/index.js` for module tests and Storybook; accessed in apps via `WebexJSONAdapter` domain properties (`meetingsAdapter`, `peopleAdapter`, …):
 
 | Contract ID | Type | Surface | Purpose | Detail link |
 |---|---|---|---|---|
@@ -106,57 +104,9 @@ Evidence: `src/adapters/WebexJSONAdapter.js` constructor.
 | ADP-R-002 | `connect()` / `disconnect()` MUST resolve immediately for JSON adapters | No async network | `src/adapters/WebexJSONAdapter.js` | — | none | PRESENT |
 | ADP-R-003 | `MeetingsJSONAdapter` MUST expose meeting control constants (join, mute, share, …) | UI maps controls by ID | `src/adapters/MeetingsJSONAdapter.js` | `src/adapters/MeetingsJSONAdapter.test.js` | none | PRESENT |
 | ADP-R-004 | Meeting state updates MUST use RxJS observables | Components subscribe via hooks | `src/adapters/MeetingsJSONAdapter.js` | MeetingsJSONAdapter tests | none | PRESENT |
+| ADP-R-005 | Each registered meeting control MUST map to a control class instance in `meetingControls` | Components invoke controls by ID | `src/adapters/MeetingsJSONAdapter.js`, `src/adapters/MeetingsJSONAdapter/controls/` | `MeetingsJSONAdapter.test.js` | `DISABLED_JOIN_CONTROL` defined but not registered | PRESENT |
 | ADP-R-006 | Datasource MUST provide keys: activities, meetings, memberships, organizations, people, rooms | WebexJSONAdapter constructor contract | `src/adapters/WebexJSONAdapter.js` | adapter tests | none | PRESENT |
 | ADP-R-007 | Each domain adapter MUST extend matching interface adapter class | Interface compliance | `src/adapters/PeopleJSONAdapter.js` | PeopleJSONAdapter.test.js | none | PRESENT |
-
-## Meeting Controls Registry
-
-| Control constant | Control class | Purpose |
-|---|---|---|
-| `JOIN_CONTROL` | `JoinControl` | Join meeting |
-| `LEAVE_CONTROL` | `LeaveControl` | Leave meeting |
-| `MUTE_AUDIO_CONTROL` | `MuteAudioControl` | Toggle audio mute |
-| `MUTE_VIDEO_CONTROL` | `MuteVideoControl` | Toggle video mute |
-| `SHARE_CONTROL` | `ShareControl` | Screen share |
-| `ROSTER_CONTROL` | `RosterControl` | Toggle roster |
-| `SETTINGS_CONTROL` | `SettingsControl` | Open settings |
-| `SWITCH_CAMERA_CONTROL` | `SwitchCameraControl` | Switch camera device |
-| `SWITCH_MICROPHONE_CONTROL` | `SwitchMicrophoneControl` | Switch microphone |
-| `SWITCH_SPEAKER_CONTROL` | `SwitchSpeakerControl` | Switch speaker |
-| `DISABLED_MUTE_AUDIO_CONTROL` | `DisabledMuteAudioControl` | Disabled mute state |
-
-Evidence: `src/adapters/MeetingsJSONAdapter.js`, `src/adapters/MeetingsJSONAdapter/controls/`.
-
-### Defined control constants not registered in `meetingControls`
-
-| Constant | ID string | Status |
-|---|---|---|
-| `DISABLED_JOIN_CONTROL` | `disabled-join-meeting` | Exported constant only — no control class under `MeetingsJSONAdapter/controls/` and not instantiated in `meetingControls`; `supportedControls()` omits this ID |
-
-Evidence: `src/adapters/MeetingsJSONAdapter.js`, `src/adapters/MeetingsJSONAdapter.test.js`.
-
-## Domain Adapter Summary
-
-| Adapter | Source file | Test file |
-|---|---|---|
-| ActivitiesJSONAdapter | `src/adapters/ActivitiesJSONAdapter.js` | `ActivitiesJSONAdapter.test.js` |
-| MeetingsJSONAdapter | `src/adapters/MeetingsJSONAdapter.js` | `MeetingsJSONAdapter.test.js` |
-| MembershipJSONAdapter | `src/adapters/MembershipJSONAdapter.js` | `MembershipJSONAdapter.test.js` |
-| OrganizationsJSONAdapter | `src/adapters/OrganizationsJSONAdapter.js` | `OrganizationsJSONAdapter.test.js` |
-| PeopleJSONAdapter | `src/adapters/PeopleJSONAdapter.js` | `PeopleJSONAdapter.test.js` |
-| RoomsJSONAdapter | `src/adapters/RoomsJSONAdapter.js` | `RoomsJSONAdapter.test.js` |
-
-## Module Conventions
-
-- One adapter class per domain JSON file at `src/adapters/` root.
-- Meeting controls as separate classes under `MeetingsJSONAdapter/controls/`.
-- Use RxJS `Observable` for all adapter data streams.
-- Use `deepMerge` from `src/util.js` for immutable-style state updates in meetings adapter.
-
-## Design Trade-offs
-
-- **In-memory JSON vs live SDK:** Simplifies Storybook/tests; behavior may diverge from production SDK adapter edge cases — hosts must validate against SDK adapter for production.
-- **Synchronous connect/disconnect:** JSON adapter resolves immediately; SDK adapters may differ in timing — `withAdapter` handles async connect generically.
 
 ## Design Overview
 
@@ -185,6 +135,12 @@ flowchart LR
 ```
 
 ## Sequence Diagram(s)
+
+Sequence coverage:
+
+| Operation group | Diagram | Failure / recovery coverage |
+|---|---|---|
+| JSON adapter connect + join control | below | invalid meeting ID handled per control tests |
 
 ```mermaid
 sequenceDiagram
@@ -231,9 +187,21 @@ classDiagram
 
 | UC | Description | Evidence |
 |---|---|---|
-| UC-1 Storybook demo | Instantiate `WebexJSONAdapter` with static JSON | `.storybook/` stories |
+| UC-1 Storybook demo | Instantiate `WebexJSONAdapter` with static JSON from `src/data/*.js` | `.storybook/` stories |
 | UC-2 Unit test | Inject JSON adapter into `WebexDataProvider` | component tests |
 | UC-3 Control interaction | User clicks join → `JoinControl` updates state | `MeetingsJSONAdapter/controls/JoinControl.js` |
+
+## State Model
+
+In-memory meeting and domain records live on the JSON datasource object passed to `WebexJSONAdapter`. `MeetingsJSONAdapter` mutates meeting entries via `deepMerge` when controls fire; other domain adapters read/write their respective datasource slices.
+
+| State store | Owner | Notes |
+|---|---|---|
+| Datasource object | host/test/Storybook | Keys: activities, meetings, memberships, organizations, people, rooms |
+| Meeting entries | MeetingsJSONAdapter | Status, media flags, roster visibility updated by controls |
+| Observable caches | per adapter method | RxJS streams emit on mutation |
+
+Evidence: `src/adapters/WebexJSONAdapter.js`, `src/adapters/MeetingsJSONAdapter.js`, `src/util.js`.
 
 ## Concurrency & Reactive Flow
 
@@ -247,25 +215,74 @@ Meeting status transitions include `NOT_JOINED` and joined/in-meeting states ali
 
 Evidence: `src/adapters/MeetingsJSONAdapter.js` `EMPTY_MEETING`, status field.
 
-## Error Handling & Failure Modes
+## Meeting Controls Registry
 
-- JSON adapters resolve connect/disconnect without error paths for network.
-- Invalid datasource keys may yield undefined adapter data — hosts must supply complete datasource shape.
-- Control operations on invalid meeting IDs: behavior defined per control implementation; verify tests.
+Registered controls instantiated in `meetingControls`:
+
+| Control constant | Control class | Purpose |
+|---|---|---|
+| `JOIN_CONTROL` | `JoinControl` | Join meeting |
+| `LEAVE_CONTROL` | `LeaveControl` | Leave meeting |
+| `MUTE_AUDIO_CONTROL` | `MuteAudioControl` | Toggle audio mute |
+| `MUTE_VIDEO_CONTROL` | `MuteVideoControl` | Toggle video mute |
+| `SHARE_CONTROL` | `ShareControl` | Screen share |
+| `ROSTER_CONTROL` | `RosterControl` | Toggle roster |
+| `SETTINGS_CONTROL` | `SettingsControl` | Open settings |
+| `SWITCH_CAMERA_CONTROL` | `SwitchCameraControl` | Switch camera device |
+| `SWITCH_MICROPHONE_CONTROL` | `SwitchMicrophoneControl` | Switch microphone |
+| `SWITCH_SPEAKER_CONTROL` | `SwitchSpeakerControl` | Switch speaker |
+| `DISABLED_MUTE_AUDIO_CONTROL` | `DisabledMuteAudioControl` | Disabled mute state |
+
+**Defined constants not registered in `meetingControls`:**
+
+| Constant | ID string | Status |
+|---|---|---|
+| `DISABLED_JOIN_CONTROL` | `disabled-join-meeting` | Exported constant only — no control class and not in `supportedControls()` |
+
+Evidence: `src/adapters/MeetingsJSONAdapter.js`, `src/adapters/MeetingsJSONAdapter/controls/`, `src/adapters/MeetingsJSONAdapter.test.js`.
+
+## Domain Adapter Summary
+
+| Adapter | Source file | Test file |
+|---|---|---|
+| ActivitiesJSONAdapter | `src/adapters/ActivitiesJSONAdapter.js` | `ActivitiesJSONAdapter.test.js` |
+| MeetingsJSONAdapter | `src/adapters/MeetingsJSONAdapter.js` | `MeetingsJSONAdapter.test.js` |
+| MembershipJSONAdapter | `src/adapters/MembershipJSONAdapter.js` | `MembershipJSONAdapter.test.js` |
+| OrganizationsJSONAdapter | `src/adapters/OrganizationsJSONAdapter.js` | `OrganizationsJSONAdapter.test.js` |
+| PeopleJSONAdapter | `src/adapters/PeopleJSONAdapter.js` | `PeopleJSONAdapter.test.js` |
+| RoomsJSONAdapter | `src/adapters/RoomsJSONAdapter.js` | `RoomsJSONAdapter.test.js` |
 
 ## Pitfalls
 
 - Datasource must include all keys expected by `WebexJSONAdapter` constructor.
 - Meeting control IDs are string constants — must stay aligned with component control bar mapping.
 - `deepMerge` mutates destination objects — callers must pass clones if immutability required.
+- Do not treat domain adapter classes as npm public API — only `WebexJSONAdapter` is published from `src/index.js`.
 
-Evidence: `src/adapters/WebexJSONAdapter.js`, `src/util.js`.
+Evidence: `src/adapters/WebexJSONAdapter.js`, `src/util.js`, `src/index.js`.
+
+## Export Stability
+
+Only `WebexJSONAdapter` is a semver-managed npm export from `@webex/components`. Internal domain adapter classes may change without a major bump as long as the façade shape and `@webex/component-adapter-interfaces` compliance are preserved.
+
+Evidence: `src/index.js`, `ai-docs/CONTRACTS.md`.
+
+## Host Integration & Theming
+
+Hosts typically construct `WebexJSONAdapter` with a datasource object (often from `src/data/*.js` modules in demos) and pass the instance to `withAdapter` or `WebexDataProvider`. Production hosts should use `@webex/sdk-component-adapter` instead of JSON adapters.
+
+Evidence: `README.md`, `.storybook/`, `src/data/index.js`.
 
 ## Test-Case Strategy (module)
 
 - Domain tests: `MeetingsJSONAdapter.test.js`, `PeopleJSONAdapter.test.js`, etc.
 - Assert observable emissions and control side effects.
 - Mock datasource objects inline in tests.
+
+| Behavior / Requirement | Existing test evidence | Gap |
+|---|---|---|
+| ADP-R-005 control registry | `MeetingsJSONAdapter.test.js` | none for unregistered `DISABLED_JOIN_CONTROL` |
+| ADP-R-003 control constants | `MeetingsJSONAdapter.test.js` | none |
 
 Evidence: `src/adapters/*.test.js`.
 
@@ -277,4 +294,9 @@ Evidence: `src/adapters/*.test.js`.
 | ADP-R-002 | `src/adapters/WebexJSONAdapter.js` | — |
 | ADP-R-003 | `src/adapters/MeetingsJSONAdapter.js` | `MeetingsJSONAdapter.test.js` |
 | ADP-R-004 | `src/adapters/MeetingsJSONAdapter.js` | MeetingsJSONAdapter tests |
-| ADP-R-005 | `src/adapters/MeetingsJSONAdapter/controls/` | control tests |
+| ADP-R-005 | `src/adapters/MeetingsJSONAdapter/controls/` | `MeetingsJSONAdapter.test.js` |
+| ADP-R-006 | `src/adapters/WebexJSONAdapter.js` | adapter tests |
+| ADP-R-007 | `src/adapters/PeopleJSONAdapter.js` | PeopleJSONAdapter.test.js |
+
+- Repo architecture: [`ai-docs/ARCHITECTURE.md`](../../../ai-docs/ARCHITECTURE.md) · Registry: [`ai-docs/SPEC_INDEX.md`](../../../ai-docs/SPEC_INDEX.md)
+- Coverage state & contracts baseline: `.sdd/manifest.json`
