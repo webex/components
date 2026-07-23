@@ -41,4 +41,8 @@ reports/
 !package.json
 !package-lock.json
 !src/data/*.json
+!.sdd/manifest.json
 node_modules/
+
+# SDD temporary skill outputs
+.generated/

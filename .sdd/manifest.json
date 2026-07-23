@@ -1,0 +1,268 @@
+{
+  "manifest_version": 1,
+  "repository": {
+    "name": "webex/components",
+    "purpose": "Published React component library for embedding Webex-styled meeting, messaging, and people UI with adapter-injected data.",
+    "category": "cat1-legacy",
+    "primary_languages": ["javascript"]
+  },
+  "topology": "Single-repo",
+  "commands": {
+    "install": {
+      "command": "npx npm-install-peers",
+      "source_file": "CONTRIBUTING.md"
+    },
+    "build": {
+      "command": "npm run build",
+      "source_file": "package.json"
+    },
+    "test": {
+      "command": "npm run test",
+      "source_file": "package.json"
+    },
+    "lint": {
+      "command": "npm run linter",
+      "source_file": "package.json"
+    },
+    "coverage": {
+      "command": "npm run test:coverage",
+      "source_file": "package.json"
+    },
+    "dev": {
+      "command": "npm run storybook",
+      "source_file": "package.json"
+    }
+  },
+  "coverage_status_definitions": {
+    "specced": ">=80% public surface specced, drift <5% — spec is authoritative",
+    "partial": "40-80% specced — spec is a hint, cross-check code",
+    "untracked": "<40% specced — code is the source of truth"
+  },
+  "modules": [
+    {
+      "path": "src/components/",
+      "coverage_status": "Specced",
+      "coverage_evidence": "96% field score assessed 2026-07-23; all exports, hooks catalog, internal components, HOCs, and conventions documented",
+      "canonical_spec": "src/components/ai-docs/components-spec.md",
+      "contracts": {
+        "provides": [
+          "WebexMeeting, WebexMessaging, and other exported React components",
+          "withAdapter HOC and WebexDataProvider",
+          "AdapterContext and meeting hooks"
+        ],
+        "requires": [
+          "@webex/component-adapter-interfaces adapter instances",
+          "react, react-dom, prop-types, rxjs peer dependencies",
+          "compiled CSS from styles-themes module"
+        ]
+      },
+      "last_assessed": "2026-07-23",
+      "section_profile": {
+        "has_ui": true,
+        "crosses_service_boundaries": false,
+        "enforces_domain_rules": false,
+        "is_concurrent_async": true,
+        "owns_persistence": false,
+        "returns_caller_errors": false,
+        "has_design_tradeoff": false,
+        "stateful_transitions": true,
+        "exposes_wire_protocol": false,
+        "ui_multi_screen": true,
+        "large_data_model": false,
+        "has_tiers": false,
+        "module_specific_conventions": true,
+        "published_package": true,
+        "embedded_in_host": true,
+        "holds_client_state": true,
+        "resolved_by": "cursor-agent-session (bootstrap questionnaire)",
+        "resolved_at": "2026-07-23T12:45:00Z"
+      }
+    },
+    {
+      "path": "src/adapters/",
+      "coverage_status": "Specced",
+      "coverage_evidence": "97% field score assessed 2026-07-23; all domain adapters, meeting controls registry, and conventions documented",
+      "canonical_spec": "src/adapters/ai-docs/adapters-spec.md",
+      "contracts": {
+        "provides": [
+          "WebexJSONAdapter façade",
+          "Domain JSON adapters: meetings, people, rooms, activities, memberships, organizations"
+        ],
+        "requires": [
+          "@webex/component-adapter-interfaces",
+          "rxjs",
+          "JSON datasource with activities, meetings, memberships, organizations, people, rooms keys"
+        ]
+      },
+      "last_assessed": "2026-07-23",
+      "section_profile": {
+        "has_ui": false,
+        "crosses_service_boundaries": false,
+        "enforces_domain_rules": false,
+        "is_concurrent_async": true,
+        "owns_persistence": false,
+        "returns_caller_errors": false,
+        "has_design_tradeoff": false,
+        "stateful_transitions": true,
+        "exposes_wire_protocol": false,
+        "ui_multi_screen": false,
+        "large_data_model": false,
+        "has_tiers": false,
+        "module_specific_conventions": false,
+        "published_package": true,
+        "embedded_in_host": true,
+        "holds_client_state": true,
+        "resolved_by": "cursor-agent-session (bootstrap questionnaire)",
+        "resolved_at": "2026-07-23T12:45:00Z"
+      }
+    },
+    {
+      "path": "src/styles/",
+      "coverage_status": "Specced",
+      "coverage_evidence": "95% field score assessed 2026-07-23; SCSS registry, themes, fonts, build outputs, and conventions documented",
+      "canonical_spec": "src/styles/ai-docs/styles-themes-spec.md",
+      "contracts": {
+        "provides": [
+          "dist/css/webex-components.css",
+          "dist/themes/dark and dist/themes/light assets",
+          "dist/assets/fonts"
+        ],
+        "requires": [
+          "component SCSS partials",
+          "rollup-plugin-scss and rollup-plugin-copy"
+        ]
+      },
+      "last_assessed": "2026-07-23",
+      "section_profile": {
+        "has_ui": false,
+        "crosses_service_boundaries": false,
+        "enforces_domain_rules": false,
+        "is_concurrent_async": false,
+        "owns_persistence": false,
+        "returns_caller_errors": false,
+        "has_design_tradeoff": false,
+        "stateful_transitions": false,
+        "exposes_wire_protocol": false,
+        "ui_multi_screen": false,
+        "large_data_model": false,
+        "has_tiers": false,
+        "module_specific_conventions": true,
+        "published_package": true,
+        "embedded_in_host": true,
+        "holds_client_state": false,
+        "resolved_by": "cursor-agent-session (bootstrap questionnaire)",
+        "resolved_at": "2026-07-23T12:45:00Z"
+      }
+    }
+  ],
+  "spec_policy": {
+    "delta_grammar": {
+      "added": "## ADDED Requirements",
+      "modified": "## MODIFIED Requirements",
+      "removed": "## REMOVED Requirements"
+    },
+    "require_what_and_why": true,
+    "require_provenance": true,
+    "protected_specs": [],
+    "required_sections_by_change_class": {
+      "core_always": [
+        "Intent (WHAT)",
+        "Rationale (WHY)",
+        "Scope/Out-of-scope",
+        "Acceptance criteria",
+        "Contracts delta"
+      ],
+      "security_or_contract_or_perf_critical": [
+        "Data",
+        "Error Matrix",
+        "Resilience",
+        "Observability",
+        "Operations"
+      ]
+    }
+  },
+  "validation": {
+    "generator_runtime": "cursor-agent-session",
+    "generator_model": "composer",
+    "generator_runtime_source": "host-metadata",
+    "validator_runtime": null,
+    "validator_model": null,
+    "validator_runtime_source": null,
+    "minimum_independence": "different-runtime",
+    "runtime_fallback_tier": null,
+    "blocking_severities": ["Blocking"],
+    "generator_run_id": "bootstrap-2026-07-23T124500Z",
+    "validator_run_id": null,
+    "source_commit": null,
+    "base_ref": "master",
+    "head_ref": "SDLC_SKILLS_FOR_COMPONENTS",
+    "status": "not-run"
+  },
+  "layout": {
+    "sdd_root": ".sdd",
+    "docs_root": "ai-docs",
+    "standing_docs_root": "ai-docs",
+    "spec_index_path": "ai-docs/SPEC_INDEX.md",
+    "module_docs_strategy": "source-local",
+    "module_docs_folder_name": "ai-docs",
+    "template_roots": {
+      "canonical": ".sdd/templates",
+      "extensions": [".sdd/templates/extensions"]
+    },
+    "repo_skills_root": ".sdd/skills",
+    "contracts_strategy": "root-index-module-detail"
+  },
+  "tooling": {
+    "sdlc_skills": {
+      "source_repo": "git@sqbu-github.cisco.com:WebexDevPlatform/SDLC-Skills.git",
+      "source_ref": "d5ec17e136514addc76df19760f1f00b05ba9c70",
+      "install_mode": "copy",
+      "installed_at": "2026-07-23T12:45:00Z",
+      "plugins": ["sdd-bootstrap"]
+    }
+  },
+  "coverage_ratchet": {
+    "enabled": true,
+    "waivers": []
+  },
+  "substrate": {
+    "source": "repo-standards substrate",
+    "consumed": [
+      "ESLint config",
+      "husky pre-commit/pre-push hooks",
+      "commitlint",
+      "CircleCI pipeline",
+      "Storybook configuration",
+      "README.md",
+      "CONTRIBUTING.md",
+      "CODEOWNERS"
+    ],
+    "compliance_tier": "baseline"
+  },
+  "section_profiles": {
+    "repo": {
+      "owns_datastore": false,
+      "holds_client_state": true,
+      "components_interact": true,
+      "domain_data_across_components": true,
+      "caches_data": false,
+      "observability_convention": false,
+      "deploys_to_infra": false,
+      "shared_base_libs": true,
+      "is_monorepo": false,
+      "multi_platform": false,
+      "published_package": true,
+      "embedded_in_host": true,
+      "cross_repo_deps_material": true,
+      "security_arch_warranted": false
+    },
+    "resolved_by": "cursor-agent-session (bootstrap questionnaire)",
+    "resolved_at": "2026-07-23T12:45:00Z"
+  },
+  "bootstrap": {
+    "branch": "SDLC_SKILLS_FOR_COMPONENTS",
+    "jira": null,
+    "spec_source_policy_applied": false,
+    "spec_source_policy_skip_reason": "No existing intent/design specs or AI docs; README and per-component READMEs are reference-only"
+  }
+}

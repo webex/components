@@ -1,0 +1,83 @@
+# Contracts Catalog — webex/components
+
+> Machine source: `.sdd/manifest.json`. Full export barrels: `src/index.js`, `src/components/index.js`, `src/adapters/index.js`.
+
+### Exported API & Types
+
+| Contract ID | Owner | Symbol | Purpose | Stability | Defined at |
+|---|---|---|---|---|---|
+| pkg.WebexJSONAdapter | adapters | WebexJSONAdapter | JSON adapter façade | Semver beta | `src/adapters/index.js` |
+| pkg.ActivitiesJSONAdapter | adapters | ActivitiesJSONAdapter | Activities domain | Semver beta | `src/adapters/index.js` |
+| pkg.MeetingsJSONAdapter | adapters | MeetingsJSONAdapter | Meetings domain | Semver beta | `src/adapters/index.js` |
+| pkg.MembershipJSONAdapter | adapters | MembershipJSONAdapter | Memberships domain | Semver beta | `src/adapters/index.js` |
+| pkg.OrganizationsJSONAdapter | adapters | OrganizationsJSONAdapter | Organizations domain | Semver beta | `src/adapters/index.js` |
+| pkg.PeopleJSONAdapter | adapters | PeopleJSONAdapter | People domain | Semver beta | `src/adapters/index.js` |
+| pkg.RoomsJSONAdapter | adapters | RoomsJSONAdapter | Rooms domain | Semver beta | `src/adapters/index.js` |
+| pkg.WEBEX_COMPONENTS_CLASS_PREFIX | components | WEBEX_COMPONENTS_CLASS_PREFIX | CSS class prefix `'wxc'` | Stable | `src/index.js` |
+| pkg.WebexAvatar | components | WebexAvatar | Avatar display | Semver beta | `src/components/index.js` |
+| pkg.WebexActivity | components | WebexActivity | Single activity | Semver beta | `src/components/index.js` |
+| pkg.WebexActivityStream | components | WebexActivityStream | Activity stream | Semver beta | `src/components/index.js` |
+| pkg.WebexAdaptiveCards | components | WebexAdaptiveCards | Adaptive cards container | Semver beta | `src/components/index.js` |
+| pkg.WebexDataProvider | components | WebexDataProvider | Adapter context provider | Semver beta | `src/components/index.js` |
+| pkg.WebexInMeeting | components | WebexInMeeting | In-meeting layout | Semver beta | `src/components/index.js` |
+| pkg.WebexInterstitialMeeting | components | WebexInterstitialMeeting | Pre-join interstitial | Semver beta | `src/components/index.js` |
+| pkg.WebexLocalMedia | components | WebexLocalMedia | Local media display | Semver beta | `src/components/index.js` |
+| pkg.WebexMediaAccess | components | WebexMediaAccess | Media permission prompt | Semver beta | `src/components/index.js` |
+| pkg.WebexMeeting | components | WebexMeeting | Full meeting shell | Semver beta | `src/components/index.js` |
+| pkg.WebexMeetingGuestAuthentication | components | WebexMeetingGuestAuthentication | Guest auth UI | Semver beta | `src/components/index.js` |
+| pkg.WebexMeetingHostAuthentication | components | WebexMeetingHostAuthentication | Host auth UI | Semver beta | `src/components/index.js` |
+| pkg.WebexMeetingControl | components | WebexMeetingControl | Single meeting control | Semver beta | `src/components/index.js` |
+| pkg.WebexMeetingControlBar | components | WebexMeetingControlBar | Control bar | Semver beta | `src/components/index.js` |
+| pkg.WebexMeetingInfo | components | WebexMeetingInfo | Meeting info display | Semver beta | `src/components/index.js` |
+| pkg.WebexMember | components | WebexMember | Single member row | Semver beta | `src/components/index.js` |
+| pkg.WebexMemberRoster | components | WebexMemberRoster | Member roster | Semver beta | `src/components/index.js` |
+| pkg.WebexMessaging | components | WebexMessaging | Messaging UI | Semver beta | `src/components/index.js` |
+| pkg.WebexRemoteMedia | components | WebexRemoteMedia | Remote media tiles | Semver beta | `src/components/index.js` |
+| pkg.WebexSettings | components | WebexSettings | Settings panel | Semver beta | `src/components/index.js` |
+| pkg.WebexWaitingForHost | components | WebexWaitingForHost | Waiting state UI | Semver beta | `src/components/index.js` |
+| pkg.SignIn | components | SignIn | Sign-in UI | Semver beta | `src/components/index.js` |
+| pkg.WebexSearchPeople | components | WebexSearchPeople | People search UI | Semver beta | `src/components/index.js` |
+| pkg.WebexCreateSpace | components | WebexCreateSpace | Create space UI | Semver beta | `src/components/index.js` |
+| pkg.useMeetingDestination | components | useMeetingDestination | Meeting destination hook | Semver beta | `src/components/index.js` |
+| pkg.withMeeting | components | withMeeting | Meeting scope HOC | Semver beta | `src/components/index.js` |
+| pkg.withAdapter | components | withAdapter | Adapter lifecycle HOC | Semver beta | `src/components/index.js` |
+| pkg.Button | components | Button | Generic button | Semver beta | `src/components/index.js` |
+| pkg.Modal | components | Modal | Generic modal | Semver beta | `src/components/index.js` |
+| pkg.AdapterContext | components | AdapterContext | React context for adapter | Semver beta | `src/components/index.js` |
+| pkg.MeetingContext | components | MeetingContext | React context for meeting scope | Semver beta | `src/components/index.js` |
+| pkg.css.bundle | styles-themes | webex-components.css | Compiled stylesheet | Semver beta | `dist/css/webex-components.css` |
+| pkg.themes | styles-themes | dist/themes/* | Theme asset folders | Semver beta | `rollup.config.js` |
+
+### Internal-only components (not in public barrel)
+
+| Symbol | Purpose | Defined at |
+|---|---|---|
+| WebexAdaptiveCard | Single adaptive card renderer | `src/components/WebexAdaptiveCard/` |
+| WebexAudioSettings | Audio device settings | `src/components/WebexAudioSettings/` |
+| WebexVideoSettings | Video device settings | `src/components/WebexVideoSettings/` |
+| WebexMeetingProvider | Meeting context wrapper | `src/components/WebexMeetingProvider/` |
+| WebexNoMedia | No media placeholder | `src/components/WebexNoMedia/` |
+
+Evidence: folder listing under `src/components/` vs `src/components/index.js` exports.
+
+## Requires — what this repo depends on
+
+| Dependency | What is consumed | Availability | Version floor |
+|---|---|---|---|
+| `@webex/component-adapter-interfaces` | Adapter base classes, MeetingState | npm | ^1.28.0 |
+| `react` / `react-dom` | UI | peer | 18.3.1 |
+| `rxjs` | Observables | peer | ^6.6.2 |
+| `prop-types` | Runtime validation | peer | ^15.7.2 |
+| `@babel/runtime` | Transpiled helpers | peer | ^7.11.2 |
+| `adaptivecards-templating` | Adaptive card templates | bundled dep | ^2.2.0 |
+| `markdown-it` | Markdown in messaging | bundled dep | ^12.3.2 |
+
+## Compatibility & Deprecation Policy
+
+- **Breaking-change rule:** Beta product — breaking changes may occur; follow semantic-release and CHANGELOG.
+- **Deprecation:** Mark in JSDoc and CHANGELOG before removal; prefer additive props.
+
+## Detailed Interface Docs
+
+- Module specs: `src/components/ai-docs/components-spec.md`, `src/adapters/ai-docs/adapters-spec.md`
+- External adapter contracts: `@webex/component-adapter-interfaces` npm package
