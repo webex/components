@@ -85,8 +85,8 @@
       "canonical_spec": "src/adapters/ai-docs/adapters-spec.md",
       "contracts": {
         "provides": [
-          "WebexJSONAdapter façade",
-          "Domain JSON adapters: meetings, people, rooms, activities, memberships, organizations"
+          "WebexJSONAdapter façade (npm public export via src/index.js)",
+          "Internal domain JSON adapters composed by façade: meetings, people, rooms, activities, memberships, organizations"
         ],
         "requires": [
           "@webex/component-adapter-interfaces",

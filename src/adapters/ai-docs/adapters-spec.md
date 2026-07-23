@@ -54,7 +54,7 @@ src/adapters/
 ├── ActivitiesJSONAdapter.js
 ├── MembershipJSONAdapter.js
 ├── OrganizationsJSONAdapter.js
-├── index.js                      # Public exports
+├── index.js                      # Module barrel (internal; not package root)
 └── *.test.js                     # Domain adapter tests
 ```
 
@@ -65,20 +65,29 @@ src/adapters/
 | `src/adapters/WebexJSONAdapter.js` | Façade wiring datasource keys to domain adapters |
 | `src/adapters/MeetingsJSONAdapter.js` | Meeting state machine, observables, control registry |
 | `src/adapters/MeetingsJSONAdapter/controls/index.js` | Control exports |
-| `src/adapters/index.js` | Public adapter exports |
+| `src/adapters/index.js` | Adapter module barrel (internal); only `WebexJSONAdapter` is npm-exported via `src/index.js` |
 | `src/util.js` | `deepMerge` used by MeetingsJSONAdapter |
 
 ## Public Surface
 
+Only `WebexJSONAdapter` is published from `@webex/components` (`src/index.js` → Rollup package entry). Domain adapters are internal implementation composed by the façade.
+
 | Contract ID | Type | Surface | Purpose | Compatibility | Detail link | Root index |
 |---|---|---|---|---|---|---|
-| adapters.WebexJSONAdapter | SDK export | class | Entry JSON adapter | Semver | `src/adapters/WebexJSONAdapter.js` | `ai-docs/CONTRACTS.md` |
-| adapters.MeetingsJSONAdapter | SDK export | class | Meeting observables + controls | Semver | `src/adapters/MeetingsJSONAdapter.js` | `ai-docs/CONTRACTS.md` |
-| adapters.PeopleJSONAdapter | SDK export | class | People search/display data | Semver | `src/adapters/PeopleJSONAdapter.js` | `ai-docs/CONTRACTS.md` |
-| adapters.RoomsJSONAdapter | SDK export | class | Space/room data | Semver | `src/adapters/RoomsJSONAdapter.js` | `ai-docs/CONTRACTS.md` |
-| adapters.ActivitiesJSONAdapter | SDK export | class | Activity stream data | Semver | `src/adapters/ActivitiesJSONAdapter.js` | `ai-docs/CONTRACTS.md` |
-| adapters.MembershipJSONAdapter | SDK export | class | Membership/roster data | Semver | `src/adapters/MembershipJSONAdapter.js` | `ai-docs/CONTRACTS.md` |
-| adapters.OrganizationsJSONAdapter | SDK export | class | Organization data | Semver | `src/adapters/OrganizationsJSONAdapter.js` | `ai-docs/CONTRACTS.md` |
+| adapters.WebexJSONAdapter | npm package export | class | Entry JSON adapter façade | Semver | `src/adapters/WebexJSONAdapter.js` | `ai-docs/CONTRACTS.md` |
+
+### Internal adapter-barrel exports (not npm package API)
+
+Exported from `src/adapters/index.js` for module tests and Storybook; accessed in apps via `WebexJSONAdapter` domain properties (`meetingsAdapter`, `peopleAdapter`, …).
+
+| Contract ID | Type | Surface | Purpose | Detail link |
+|---|---|---|---|---|
+| adapters.MeetingsJSONAdapter | internal | class | Meeting observables + controls | `src/adapters/MeetingsJSONAdapter.js` |
+| adapters.PeopleJSONAdapter | internal | class | People search/display data | `src/adapters/PeopleJSONAdapter.js` |
+| adapters.RoomsJSONAdapter | internal | class | Space/room data | `src/adapters/RoomsJSONAdapter.js` |
+| adapters.ActivitiesJSONAdapter | internal | class | Activity stream data | `src/adapters/ActivitiesJSONAdapter.js` |
+| adapters.MembershipJSONAdapter | internal | class | Membership/roster data | `src/adapters/MembershipJSONAdapter.js` |
+| adapters.OrganizationsJSONAdapter | internal | class | Organization data | `src/adapters/OrganizationsJSONAdapter.js` |
 
 ## Requires (dependencies)
 
@@ -115,9 +124,16 @@ Evidence: `src/adapters/WebexJSONAdapter.js` constructor.
 | `SWITCH_MICROPHONE_CONTROL` | `SwitchMicrophoneControl` | Switch microphone |
 | `SWITCH_SPEAKER_CONTROL` | `SwitchSpeakerControl` | Switch speaker |
 | `DISABLED_MUTE_AUDIO_CONTROL` | `DisabledMuteAudioControl` | Disabled mute state |
-| `DISABLED_JOIN_CONTROL` | (disabled join) | Disabled join state |
 
 Evidence: `src/adapters/MeetingsJSONAdapter.js`, `src/adapters/MeetingsJSONAdapter/controls/`.
+
+### Defined control constants not registered in `meetingControls`
+
+| Constant | ID string | Status |
+|---|---|---|
+| `DISABLED_JOIN_CONTROL` | `disabled-join-meeting` | Exported constant only — no control class under `MeetingsJSONAdapter/controls/` and not instantiated in `meetingControls`; `supportedControls()` omits this ID |
+
+Evidence: `src/adapters/MeetingsJSONAdapter.js`, `src/adapters/MeetingsJSONAdapter.test.js`.
 
 ## Domain Adapter Summary
 

@@ -1,18 +1,12 @@
 # Contracts Catalog — webex/components
 
-> Machine source: `.sdd/manifest.json`. Full export barrels: `src/index.js`, `src/components/index.js`, `src/adapters/index.js`.
+> Machine source: `.sdd/manifest.json`. Package entry: `src/index.js` (Rollup input). Component barrel: `src/components/index.js`. Adapter module barrel: `src/adapters/index.js` (internal — only `WebexJSONAdapter` is re-exported from the package root).
 
 ### Exported API & Types
 
 | Contract ID | Owner | Symbol | Purpose | Stability | Defined at |
 |---|---|---|---|---|---|
-| pkg.WebexJSONAdapter | adapters | WebexJSONAdapter | JSON adapter façade | Semver beta | `src/adapters/index.js` |
-| pkg.ActivitiesJSONAdapter | adapters | ActivitiesJSONAdapter | Activities domain | Semver beta | `src/adapters/index.js` |
-| pkg.MeetingsJSONAdapter | adapters | MeetingsJSONAdapter | Meetings domain | Semver beta | `src/adapters/index.js` |
-| pkg.MembershipJSONAdapter | adapters | MembershipJSONAdapter | Memberships domain | Semver beta | `src/adapters/index.js` |
-| pkg.OrganizationsJSONAdapter | adapters | OrganizationsJSONAdapter | Organizations domain | Semver beta | `src/adapters/index.js` |
-| pkg.PeopleJSONAdapter | adapters | PeopleJSONAdapter | People domain | Semver beta | `src/adapters/index.js` |
-| pkg.RoomsJSONAdapter | adapters | RoomsJSONAdapter | Rooms domain | Semver beta | `src/adapters/index.js` |
+| pkg.WebexJSONAdapter | adapters | WebexJSONAdapter | JSON adapter façade (npm public API) | Semver beta | `src/index.js` |
 | pkg.WEBEX_COMPONENTS_CLASS_PREFIX | components | WEBEX_COMPONENTS_CLASS_PREFIX | CSS class prefix `'wxc'` | Stable | `src/index.js` |
 | pkg.WebexAvatar | components | WebexAvatar | Avatar display | Semver beta | `src/components/index.js` |
 | pkg.WebexActivity | components | WebexActivity | Single activity | Semver beta | `src/components/index.js` |
@@ -47,6 +41,21 @@
 | pkg.MeetingContext | components | MeetingContext | React context for meeting scope | Semver beta | `src/components/index.js` |
 | pkg.css.bundle | styles-themes | webex-components.css | Compiled stylesheet | Semver beta | `dist/css/webex-components.css` |
 | pkg.themes | styles-themes | dist/themes/* | Theme asset folders | Semver beta | `rollup.config.js` |
+
+### Internal adapter classes (not npm package exports)
+
+Composed by `WebexJSONAdapter` and exported from the adapter module barrel for tests/Storybook — **not** re-exported from `src/index.js`.
+
+| Symbol | Purpose | Defined at |
+|---|---|---|
+| ActivitiesJSONAdapter | Activities domain | `src/adapters/ActivitiesJSONAdapter.js` |
+| MeetingsJSONAdapter | Meetings domain + controls | `src/adapters/MeetingsJSONAdapter.js` |
+| MembershipJSONAdapter | Memberships domain | `src/adapters/MembershipJSONAdapter.js` |
+| OrganizationsJSONAdapter | Organizations domain | `src/adapters/OrganizationsJSONAdapter.js` |
+| PeopleJSONAdapter | People domain | `src/adapters/PeopleJSONAdapter.js` |
+| RoomsJSONAdapter | Rooms domain | `src/adapters/RoomsJSONAdapter.js` |
+
+Evidence: `src/adapters/index.js` vs `src/index.js` (only `WebexJSONAdapter` is published).
 
 ### Internal-only components (not in public barrel)
 
