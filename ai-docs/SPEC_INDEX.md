@@ -1,3 +1,12 @@
+<!-- ───────────────────────────────
+  Template:     Spec Index
+  Template-ID:  spec-index
+  Generates:    ai-docs/SPEC_INDEX.md
+  Description:  Router — which docs to load for which task and the canonical module registry.
+  Library ver:  0.2.1
+  Last updated: 2026-07-27
+─────────────────────────────── -->
+
 # Spec Index — webex/components
 
 > Start here → root [`AGENTS.md`](../AGENTS.md). **Source of truth:** `.sdd/manifest.json` (this file mirrors it).

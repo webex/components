@@ -1,3 +1,12 @@
+<!-- ───────────────────────────────
+  Template:     Getting Started
+  Template-ID:  getting-started
+  Generates:    ai-docs/GETTING_STARTED.md
+  Description:  Clone/build/run loop, config/secrets, and multi-repo workspace layout.
+  Library ver:  0.2.1
+  Last updated: 2026-07-27
+─────────────────────────────── -->
+
 # Getting Started — webex/components
 
 > Start here → root [`AGENTS.md`](../AGENTS.md) · router [`SPEC_INDEX.md`](SPEC_INDEX.md).

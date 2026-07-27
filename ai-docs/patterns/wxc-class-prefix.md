@@ -1,3 +1,12 @@
+<!-- ───────────────────────────────
+  Template:     Pattern (example)
+  Template-ID:  pattern
+  Generates:    ai-docs/patterns/wxc-class-prefix.md
+  Description:  A repo convention from real code — correct vs incorrect form, with where it appears.
+  Library ver:  0.2.1
+  Last updated: 2026-07-27
+─────────────────────────────── -->
+
 # Pattern: wxc class prefix
 
 > Router [`SPEC_INDEX.md`](../SPEC_INDEX.md) · [`GLOSSARY.md`](../GLOSSARY.md)

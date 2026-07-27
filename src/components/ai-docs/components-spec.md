@@ -1,3 +1,12 @@
+<!-- ───────────────────────────────
+  Template:     Module Spec
+  Template-ID:  module-spec
+  Generates:    src/components/ai-docs/components-spec.md
+  Description:  Per-module canonical spec — orientation plus requirements, design, invariants, flows, pitfalls, and tests.
+  Library ver:  0.2.1
+  Last updated: 2026-07-27
+─────────────────────────────── -->
+
 # components — SPEC
 
 > Start here → root [`AGENTS.md`](../../../AGENTS.md) · router [`SPEC_INDEX.md`](../../../ai-docs/SPEC_INDEX.md) · system [`ARCHITECTURE.md`](../../../ai-docs/ARCHITECTURE.md).
@@ -9,10 +18,10 @@
 | Module id | components |
 | Source path(s) | `src/components/`, `src/constants.js`, `src/util.js` |
 | Doc kind | Module spec |
-| Coverage score | 96% assessed 2026-07-23 — all exports, hooks, HOCs, and internal support folders documented |
+| Coverage score | 98% assessed 2026-07-27 — all 31 barrel exports documented in Public Surface; hooks, HOCs, contexts, and internal support folders documented |
 | Generated from | `module-spec` @ SDLC template library `0.2.1` |
 | generated_by / approved_by / updated_at | cursor-agent-session / pending PR approval / 2026-07-23 |
-| Validation status | not-run |
+| Validation status | pass-with-warnings, validator codex-agent-session, assessed 2026-07-23 (0 blocking) |
 
 ## Evidence Rules
 
@@ -76,12 +85,39 @@ src/components/
 
 | Contract ID | Type | Surface | Purpose | Compatibility | Schema / detail link | Root index |
 |---|---|---|---|---|---|---|
-| components.WebexMeeting | SDK export | `WebexMeeting` component | Default meeting UX | Semver beta | `src/components/WebexMeeting/WebexMeeting.jsx` | `ai-docs/CONTRACTS.md` |
-| components.withAdapter | SDK export | HOC factory | Inject adapter + connect lifecycle | Semver | `src/components/hoc/withAdapter.jsx` | `ai-docs/CONTRACTS.md` |
-| components.WebexDataProvider | SDK export | Context provider | Pass adapter to subtree | Semver | `src/components/WebexDataProvider/WebexDataProvider.jsx` | `ai-docs/CONTRACTS.md` |
-| components.useMeetingDestination | SDK export | Hook | Resolve meeting destination | Semver | `src/components/hooks/useMeetingDestination.js` | `ai-docs/CONTRACTS.md` |
+| components.WebexAvatar | SDK export | `WebexAvatar` component | Avatar display | Semver beta | `src/components/WebexAvatar/WebexAvatar.jsx` | `ai-docs/CONTRACTS.md` |
+| components.WebexActivity | SDK export | `WebexActivity` component | Single activity | Semver beta | `src/components/WebexActivity/WebexActivity.jsx` | `ai-docs/CONTRACTS.md` |
+| components.WebexActivityStream | SDK export | `WebexActivityStream` component | Activity stream | Semver beta | `src/components/WebexActivityStream/WebexActivityStream.jsx` | `ai-docs/CONTRACTS.md` |
+| components.WebexAdaptiveCards | SDK export | `WebexAdaptiveCards` component | Adaptive cards container | Semver beta | `src/components/WebexAdaptiveCards/WebexAdaptiveCards.jsx` | `ai-docs/CONTRACTS.md` |
+| components.WebexDataProvider | SDK export | `WebexDataProvider` component | Adapter context provider | Semver beta | `src/components/WebexDataProvider/WebexDataProvider.jsx` | `ai-docs/CONTRACTS.md` |
+| components.WebexInMeeting | SDK export | `WebexInMeeting` component | In-meeting layout | Semver beta | `src/components/WebexInMeeting/WebexInMeeting.jsx` | `ai-docs/CONTRACTS.md` |
+| components.WebexInterstitialMeeting | SDK export | `WebexInterstitialMeeting` component | Pre-join interstitial | Semver beta | `src/components/WebexInterstitialMeeting/WebexInterstitialMeeting.jsx` | `ai-docs/CONTRACTS.md` |
+| components.WebexLocalMedia | SDK export | `WebexLocalMedia` component | Local media display | Semver beta | `src/components/WebexLocalMedia/WebexLocalMedia.jsx` | `ai-docs/CONTRACTS.md` |
+| components.WebexMediaAccess | SDK export | `WebexMediaAccess` component | Media permission prompt | Semver beta | `src/components/WebexMediaAccess/WebexMediaAccess.jsx` | `ai-docs/CONTRACTS.md` |
+| components.WebexMeeting | SDK export | `WebexMeeting` component | Full meeting shell | Semver beta | `src/components/WebexMeeting/WebexMeeting.jsx` | `ai-docs/CONTRACTS.md` |
+| components.WebexMeetingGuestAuthentication | SDK export | `WebexMeetingGuestAuthentication` component | Guest auth UI | Semver beta | `src/components/WebexMeetingGuestAuthentication/WebexMeetingGuestAuthentication.jsx` | `ai-docs/CONTRACTS.md` |
+| components.WebexMeetingHostAuthentication | SDK export | `WebexMeetingHostAuthentication` component | Host auth UI | Semver beta | `src/components/WebexMeetingHostAuthentication/WebexMeetingHostAuthentication.jsx` | `ai-docs/CONTRACTS.md` |
+| components.WebexMeetingControl | SDK export | `WebexMeetingControl` component | Single meeting control | Semver beta | `src/components/WebexMeetingControl/WebexMeetingControl.jsx` | `ai-docs/CONTRACTS.md` |
+| components.WebexMeetingControlBar | SDK export | `WebexMeetingControlBar` component | Control bar | Semver beta | `src/components/WebexMeetingControlBar/WebexMeetingControlBar.jsx` | `ai-docs/CONTRACTS.md` |
+| components.WebexMeetingInfo | SDK export | `WebexMeetingInfo` component | Meeting info display | Semver beta | `src/components/WebexMeetingInfo/WebexMeetingInfo.jsx` | `ai-docs/CONTRACTS.md` |
+| components.WebexMember | SDK export | `WebexMember` component | Single member row | Semver beta | `src/components/WebexMember/WebexMember.jsx` | `ai-docs/CONTRACTS.md` |
+| components.WebexMemberRoster | SDK export | `WebexMemberRoster` component | Member roster | Semver beta | `src/components/WebexMemberRoster/WebexMemberRoster.jsx` | `ai-docs/CONTRACTS.md` |
+| components.WebexMessaging | SDK export | `WebexMessaging` component | Messaging UI | Semver beta | `src/components/WebexMessaging/WebexMessaging.jsx` | `ai-docs/CONTRACTS.md` |
+| components.WebexRemoteMedia | SDK export | `WebexRemoteMedia` component | Remote media tiles | Semver beta | `src/components/WebexRemoteMedia/WebexRemoteMedia.jsx` | `ai-docs/CONTRACTS.md` |
+| components.WebexSettings | SDK export | `WebexSettings` component | Settings panel | Semver beta | `src/components/WebexSettings/WebexSettings.jsx` | `ai-docs/CONTRACTS.md` |
+| components.WebexWaitingForHost | SDK export | `WebexWaitingForHost` component | Waiting state UI | Semver beta | `src/components/WebexWaitingForHost/WebexWaitingForHost.jsx` | `ai-docs/CONTRACTS.md` |
+| components.SignIn | SDK export | `SignIn` component | Sign-in UI | Semver beta | `src/components/SignIn/SignIn.jsx` | `ai-docs/CONTRACTS.md` |
+| components.WebexSearchPeople | SDK export | `WebexSearchPeople` component | People search UI | Semver beta | `src/components/WebexSearchPeople/WebexSearchPeople.jsx` | `ai-docs/CONTRACTS.md` |
+| components.WebexCreateSpace | SDK export | `WebexCreateSpace` component | Create space UI | Semver beta | `src/components/WebexCreateSpace/WebexCreateSpace.jsx` | `ai-docs/CONTRACTS.md` |
+| components.useMeetingDestination | SDK export | `useMeetingDestination` hook | Resolve meeting destination | Semver beta | `src/components/hooks/useMeetingDestination.js` | `ai-docs/CONTRACTS.md` |
+| components.withMeeting | SDK export | `withMeeting` HOC | Meeting scope wrapper | Semver beta | `src/components/hoc/withMeeting.jsx` | `ai-docs/CONTRACTS.md` |
+| components.withAdapter | SDK export | `withAdapter` HOC | Adapter lifecycle injection | Semver beta | `src/components/hoc/withAdapter.jsx` | `ai-docs/CONTRACTS.md` |
+| components.Button | SDK export | `Button` component | Generic button | Semver beta | `src/components/generic/Button/Button.jsx` | `ai-docs/CONTRACTS.md` |
+| components.Modal | SDK export | `Modal` component | Generic modal | Semver beta | `src/components/generic/Modal/Modal.jsx` | `ai-docs/CONTRACTS.md` |
+| components.AdapterContext | SDK export | `AdapterContext` context | React context for adapter | Semver beta | `src/components/hooks/contexts.js` | `ai-docs/CONTRACTS.md` |
+| components.MeetingContext | SDK export | `MeetingContext` context | React context for meeting scope | Semver beta | `src/components/hooks/contexts.js` | `ai-docs/CONTRACTS.md` |
 
-Full export list: `src/components/index.js`.
+Evidence: `src/components/index.js` (31 barrel exports).
 
 ## Requires (dependencies)
 
@@ -95,7 +131,7 @@ Full export list: `src/components/index.js`.
 | ID | WHAT | WHY | Source Evidence | Test / Example Evidence | Assumptions / Gaps | Confidence |
 |---|---|---|---|---|---|---|
 | COMP-R-001 | Exported components MUST be listed in `src/components/index.js` | Defines npm public API | `src/components/index.js` | `package.json` exports via Rollup entry | none | PRESENT |
-| COMP-R-002 | `withAdapter` MUST call `adapter.connect()` before wrapping with `WebexDataProvider` | Prevents hooks reading disconnected adapter | `src/components/hoc/withAdapter.jsx` | `src/components/hoc/withAdapter.test.jsx` | none | PRESENT |
+| COMP-R-002 | `withAdapter` MUST NOT wrap with `WebexDataProvider` until `adapter.connect()` resolves; wrapped component may render without context meanwhile | Prevents hooks from reading adapter before connect; allows loading UI via `adapterConnected` prop | `src/components/hoc/withAdapter.jsx` | `src/components/hoc/withAdapter.test.jsx` | none | PRESENT |
 | COMP-R-003 | `WebexDataProvider` MUST require adapter shape with five domain adapters | Matches adapter interface contract | `src/components/WebexDataProvider/WebexDataProvider.jsx` | `src/components/WebexDataProvider/WebexDataProvider.test.js` | organizations adapter optional in propTypes | PRESENT |
 | COMP-R-004 | DOM class prefix MUST use `wxc` constant | Consistent theming/CSS | `src/constants.js` | `src/styles/_variables.scss` | none | PRESENT |
 | COMP-R-005 | Exported component folders SHOULD follow co-located test and Storybook pattern | Regression safety for public API | `CONTRIBUTING.md` | `src/components/**/*.test.js`, `*.stories.js` | not every export has stories | PRESENT |
@@ -142,7 +178,7 @@ Sequence coverage:
 
 | Operation group | Diagram | Failure / recovery coverage |
 |---|---|---|
-| Adapter connect + meeting subscribe | below | `withAdapter` defers provider until connect completes |
+| Adapter connect + meeting subscribe | below | first paint without provider; provider added after connect |
 
 ```mermaid
 sequenceDiagram
@@ -154,10 +190,11 @@ sequenceDiagram
 
   Host->>WithAdapter: render with props
   WithAdapter->>Adapter: adapterFactory(props)
+  WithAdapter->>Comp: render without provider (adapterConnected=false)
   WithAdapter->>Adapter: connect()
   Adapter-->>WithAdapter: connected
   WithAdapter->>Provider: adapter
-  Provider->>Comp: AdapterContext available
+  Provider->>Comp: AdapterContext available (adapterConnected=true)
   Comp->>Adapter: subscribe meeting observables
   Adapter-->>Comp: meeting state updates
 ```
@@ -276,7 +313,7 @@ Evidence: `src/components/WebexMeeting/WebexMeeting.jsx`, `@webex/component-adap
 - Importing components without CSS yields unstyled UI — load `dist/css/webex-components.css`.
 - Assuming `organizationsAdapter` on provider when only five adapters validated in propTypes — verify host adapter shape.
 - Snapshot tests sensitive to class names — coordinate with styles module when changing prefix.
-- `withAdapter` renders without provider until connect completes — do not assume adapter context on first paint.
+- `withAdapter` renders the wrapped component immediately without `WebexDataProvider` while connect is pending — use `adapterConnected` prop for loading UI; do not assume `AdapterContext` on first paint.
 
 Evidence: `src/components/hoc/withAdapter.jsx`, `src/util.js`.
 

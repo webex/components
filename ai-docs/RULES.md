@@ -1,3 +1,12 @@
+<!-- ───────────────────────────────
+  Template:     RULES
+  Template-ID:  rules
+  Generates:    ai-docs/RULES.md
+  Description:  Enforceable do/don't beyond AGENTS — coverage, autonomy, naming, logging, errors, testing, security, drift, secrets.
+  Library ver:  0.2.1
+  Last updated: 2026-07-27
+─────────────────────────────── -->
+
 # Rules — webex/components
 
 > Start here → root [`AGENTS.md`](../AGENTS.md) · critical rules live in AGENTS.md.

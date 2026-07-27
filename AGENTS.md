@@ -1,3 +1,12 @@
+<!-- ───────────────────────────────
+  Template:     AGENTS.md
+  Template-ID:  agents
+  Generates:    AGENTS.md
+  Description:  Agent entry contract — first file every AI agent reads (commands, rules, boundaries, routing).
+  Library ver:  0.2.1
+  Last updated: 2026-07-27
+─────────────────────────────── -->
+
 # AGENTS.md — webex/components
 
 > You are the agent entry point — read first. Next: router [`SPEC_INDEX.md`](ai-docs/SPEC_INDEX.md) · system [`ARCHITECTURE.md`](ai-docs/ARCHITECTURE.md). Load this + `SPEC_INDEX.md` first; pull module/standing docs on demand.
@@ -71,7 +80,7 @@ src/
 ## Common Gotchas
 
 - **Styles side effect:** `src/index.js` imports `./styles/index.scss` — consumers must load compiled CSS from `dist/css/webex-components.css` or equivalent.
-- **Adapter connect lifecycle:** `withAdapter` renders children only after `adapter.connect()` resolves; components may briefly render without adapter context.
+- **Adapter connect lifecycle:** `withAdapter` renders the wrapped component immediately; while `adapter.connect()` is pending, it returns the component **without** `WebexDataProvider` and passes `adapterConnected={false}`. After connect resolves, it re-renders with `WebexDataProvider` and `adapterConnected={true}`. Do not assume `AdapterContext` is available on first paint.
 - **JSON adapter datasource shape:** `WebexJSONAdapter` expects top-level keys `activities`, `meetings`, `memberships`, `organizations`, `people`, `rooms`.
 - **Semantic release:** Version bumps are automated — do not manually edit version in `package.json` for releases.
 

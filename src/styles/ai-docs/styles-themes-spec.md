@@ -1,3 +1,12 @@
+<!-- ───────────────────────────────
+  Template:     Module Spec
+  Template-ID:  module-spec
+  Generates:    src/styles/ai-docs/styles-themes-spec.md
+  Description:  Per-module canonical spec — orientation plus requirements, design, invariants, flows, pitfalls, and tests.
+  Library ver:  0.2.1
+  Last updated: 2026-07-27
+─────────────────────────────── -->
+
 # styles-themes — SPEC
 
 > Start here → root [`AGENTS.md`](../../../AGENTS.md) · router [`SPEC_INDEX.md`](../../../ai-docs/SPEC_INDEX.md) · system [`ARCHITECTURE.md`](../../../ai-docs/ARCHITECTURE.md).
@@ -12,7 +21,7 @@
 | Coverage score | 95% assessed 2026-07-23 — SCSS graph, themes, fonts, and build outputs documented |
 | Generated from | `module-spec` @ SDLC template library `0.2.1` |
 | generated_by / approved_by / updated_at | cursor-agent-session / pending PR approval / 2026-07-23 |
-| Validation status | not-run |
+| Validation status | pass-with-warnings, validator codex-agent-session, assessed 2026-07-23 (0 blocking) |
 
 ## Evidence Rules
 

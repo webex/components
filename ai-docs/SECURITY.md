@@ -1,3 +1,12 @@
+<!-- ───────────────────────────────
+  Template:     Security Baseline
+  Template-ID:  security
+  Generates:    ai-docs/SECURITY.md
+  Description:  Standing security posture — trust boundaries, authn/authz, secret handling, data classification.
+  Library ver:  0.2.1
+  Last updated: 2026-07-27
+─────────────────────────────── -->
+
 # Security Baseline — webex/components
 
 > Client-side React library — hosts own authentication and token storage.

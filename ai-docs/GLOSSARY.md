@@ -1,3 +1,12 @@
+<!-- ───────────────────────────────
+  Template:     Glossary
+  Template-ID:  glossary
+  Generates:    ai-docs/GLOSSARY.md
+  Description:  Ubiquitous language — domain term → definition → authoritative code location.
+  Library ver:  0.2.1
+  Last updated: 2026-07-27
+─────────────────────────────── -->
+
 # Glossary — webex/components
 
 > Start here → root [`AGENTS.md`](../AGENTS.md) · router [`SPEC_INDEX.md`](SPEC_INDEX.md).

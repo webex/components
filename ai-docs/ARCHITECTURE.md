@@ -1,3 +1,12 @@
+<!-- ───────────────────────────────
+  Template:     ARCHITECTURE
+  Template-ID:  architecture
+  Generates:    ai-docs/ARCHITECTURE.md
+  Description:  Repo/component architecture — components, responsibilities, interactions, cross-cutting posture.
+  Library ver:  0.2.1
+  Last updated: 2026-07-27
+─────────────────────────────── -->
+
 # ARCHITECTURE — webex/components
 
 > Start here → root [`AGENTS.md`](../AGENTS.md) · router [`SPEC_INDEX.md`](SPEC_INDEX.md). Per-module detail in manifest-routed module specs.
@@ -133,13 +142,30 @@ Evidence: `README.md`, `src/components/hoc/withAdapter.jsx`, `package.json` peer
 - **Published artifact:** `@webex/components` npm package consumed by host applications and widgets.
 - **SDD tooling source:** `SDLC-Skills` plugin installed locally (not a runtime dependency).
 
-Evidence: `README.md`, `package.json`, `.sdd/metrics/source.env`.
+Evidence: `README.md`, `package.json`.
 
 ## Testing & Quality
 
 - Jest unit/snapshot tests co-located with components and adapters.
 - Storybook documents components at https://webex.github.io/components/storybook.
-- CircleCI: lint → test:coverage → chromatic → build.
+- CircleCI workflow `test_and_storybook` (see `.circleci/config.yml`):
+  - `install` → `lint` and `unit_test` run in parallel (both require install).
+  - `storybook_preview` (Chromatic via `npm run chromatic`) runs after `unit_test` on **non-master** branches only.
+  - `build` runs after both `lint` and `unit_test` on **master** only.
+
+```mermaid
+flowchart TB
+  install[install]
+  lint[lint]
+  unitTest[unit_test]
+  chromatic[storybook_preview]
+  build[build]
+  install --> lint
+  install --> unitTest
+  unitTest --> chromatic
+  lint --> build
+  unitTest --> build
+```
 
 Evidence: `.circleci/config.yml`, `package.json` scripts.
 

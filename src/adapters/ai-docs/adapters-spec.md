@@ -1,3 +1,12 @@
+<!-- ───────────────────────────────
+  Template:     Module Spec
+  Template-ID:  module-spec
+  Generates:    src/adapters/ai-docs/adapters-spec.md
+  Description:  Per-module canonical spec — orientation plus requirements, design, invariants, flows, pitfalls, and tests.
+  Library ver:  0.2.1
+  Last updated: 2026-07-27
+─────────────────────────────── -->
+
 # adapters — SPEC
 
 > Start here → root [`AGENTS.md`](../../../AGENTS.md) · router [`SPEC_INDEX.md`](../../../ai-docs/SPEC_INDEX.md) · system [`ARCHITECTURE.md`](../../../ai-docs/ARCHITECTURE.md).
@@ -12,7 +21,7 @@
 | Coverage score | 97% assessed 2026-07-23 — all domain adapters and meeting controls documented |
 | Generated from | `module-spec` @ SDLC template library `0.2.1` |
 | generated_by / approved_by / updated_at | cursor-agent-session / pending PR approval / 2026-07-23 |
-| Validation status | not-run |
+| Validation status | pass-with-warnings, validator codex-agent-session, assessed 2026-07-23 (0 blocking) |
 
 ## Evidence Rules
 
@@ -208,6 +217,24 @@ Evidence: `src/adapters/WebexJSONAdapter.js`, `src/adapters/MeetingsJSONAdapter.
 Meeting updates propagate via RxJS `Observable` streams. Multiple subscribers (hooks) share hot/cold patterns as implemented per adapter method — components must unsubscribe on unmount (handled in hooks).
 
 Evidence: `src/adapters/MeetingsJSONAdapter.js`, rxjs imports.
+
+## Error Handling & Failure Modes
+
+JSON adapters surface invalid inputs and missing records through RxJS `observer.error(...)` on subscribed observables. Callers (hooks, tests, Storybook) MUST handle error emissions — errors are not swallowed or converted to silent empty results.
+
+| Condition | Signal (error/code/result) | Caller recovery |
+|---|---|---|
+| Unknown meeting ID | `observer.error(Error('Could not find meeting with ID "…"'))` | Subscribe with error handler; show fallback UI | 
+| Unknown person ID or search miss | `observer.error(Error('Could not find person…'))` | Guard UI before subscribe; handle error in hook |
+| Unknown room ID | `observer.error(Error('Could not find room with ID "…"'))` | Show not-found state; avoid assuming room exists |
+| Unknown activity ID | `observer.error(Error('Could not find activity with ID "…"'))` | Handle in activity stream subscription |
+| Unknown organization ID | `observer.error(Error('Could not find any organization with ID "…"'))` | Handle in organization lookup |
+| Invalid membership destination | `observer.error(Error('Could not find members for destination "…"'))` | Validate destination before subscribe |
+| Room creation failure | `observer.error(Error('error in creating room'))` | Retry or surface error to host |
+| Control preconditions not met (switch camera/mic/speaker) | `observer.error(Error('Could not find meeting with ID "…" to add … control'))` | Guard control UI until meeting exists |
+| Activity attachment/post failure | `observer.error(Error('Unable to create/post…'))` | Show error toast; do not assume success |
+
+Evidence: `src/adapters/MeetingsJSONAdapter.js`, `src/adapters/PeopleJSONAdapter.js`, `src/adapters/RoomsJSONAdapter.js`, `src/adapters/ActivitiesJSONAdapter.js`, `src/adapters/MembershipJSONAdapter.js`, `src/adapters/OrganizationsJSONAdapter.js`, `src/adapters/MeetingsJSONAdapter/controls/*.js`.
 
 ## State Machine
 

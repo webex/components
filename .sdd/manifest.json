@@ -42,7 +42,7 @@
     {
       "path": "src/components/",
       "coverage_status": "Specced",
-      "coverage_evidence": "96% field score assessed 2026-07-23; all exports, hooks catalog, internal components, HOCs, and conventions documented",
+      "coverage_evidence": "98% field score assessed 2026-07-27; all 31 barrel exports in Public Surface, hooks, HOCs, internal components, and conventions documented",
       "canonical_spec": "src/components/ai-docs/components-spec.md",
       "contracts": {
         "provides": [
@@ -101,7 +101,7 @@
         "enforces_domain_rules": false,
         "is_concurrent_async": true,
         "owns_persistence": false,
-        "returns_caller_errors": false,
+        "returns_caller_errors": true,
         "has_design_tradeoff": false,
         "stateful_transitions": true,
         "exposes_wire_protocol": false,
@@ -185,18 +185,18 @@
     "generator_runtime": "cursor-agent-session",
     "generator_model": "composer",
     "generator_runtime_source": "host-metadata",
-    "validator_runtime": null,
-    "validator_model": null,
-    "validator_runtime_source": null,
+    "validator_runtime": "codex-agent-session",
+    "validator_model": "gpt-5",
+    "validator_runtime_source": "host-metadata",
     "minimum_independence": "different-runtime",
-    "runtime_fallback_tier": null,
+    "runtime_fallback_tier": "different-runtime",
     "blocking_severities": ["Blocking"],
     "generator_run_id": "bootstrap-2026-07-23T124500Z",
-    "validator_run_id": null,
-    "source_commit": null,
+    "validator_run_id": "validation-2026-07-23T085321Z",
+    "source_commit": "c0140453d4137b7b78bb5656bd13c3e13215d82b",
     "base_ref": "master",
     "head_ref": "SDLC_SKILLS_FOR_COMPONENTS",
-    "status": "not-run"
+    "status": "pass-with-warnings"
   },
   "layout": {
     "sdd_root": ".sdd",
