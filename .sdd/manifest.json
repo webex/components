@@ -12,8 +12,16 @@
       "command": "npx npm-install-peers",
       "source_file": "CONTRIBUTING.md"
     },
+    "compile": {
+      "command": "npm run build",
+      "source_file": "package.json"
+    },
     "build": {
       "command": "npm run build",
+      "source_file": "package.json"
+    },
+    "unit-test": {
+      "command": "NODE_ENV=test npm run test",
       "source_file": "package.json"
     },
     "test": {
@@ -118,6 +126,10 @@
     },
     {
       "path": "src/styles/",
+      "source_paths": [
+        "src/styles/",
+        "rollup.config.js"
+      ],
       "coverage_status": "Specced",
       "coverage_evidence": "95% field score assessed 2026-07-23; SCSS registry, themes, fonts, build outputs, and conventions documented",
       "canonical_spec": "src/styles/ai-docs/styles-themes-spec.md",
