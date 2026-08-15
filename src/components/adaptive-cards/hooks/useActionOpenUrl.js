@@ -29,7 +29,7 @@ export default function useActionOpenUrl(data) {
 
     if (isValidHttpUrl) {
       handleAction = () => {
-        window.open(data.url, '_blank');
+        window.open(data.url, '_blank', 'noopener,noreferrer');
         onOpenUrl(data.url);
       };
     }

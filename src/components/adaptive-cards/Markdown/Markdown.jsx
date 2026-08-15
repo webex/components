@@ -1,5 +1,6 @@
 import React, {useMemo} from 'react';
 import PropTypes from 'prop-types';
+import DOMPurify from 'dompurify';
 import MarkdownIt from 'markdown-it';
 import webexComponentClasses from '../../helpers';
 
@@ -26,7 +27,7 @@ export default function Markdown({children, className}) {
       'strikethrough',
     ],
   ), []);
-  let html = markdownIt.render(children);
+  let html = DOMPurify.sanitize(markdownIt.render(children));
 
   if (html.startsWith('<p>') && html.indexOf('</p>') === html.length - 5) {
     html = html.slice(3, -5);

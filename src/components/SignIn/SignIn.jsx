@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import PropTypes from 'prop-types';
 import {Button} from '../generic';
 import Spinner from '../generic/Spinner/Spinner';
@@ -40,10 +40,18 @@ export default function SignIn({
   const [isAuthenticating, setIsAuthenticating] = useState(false);
   const [cssClasses] = webexComponentClasses('oauth-sign-in', className);
   const [emitMetrics] = useMetrics();
+  const csrfStateRef = useRef(null);
 
   const openAuthUrl = () => {
-    const arr = new Uint8Array(4);
-    const newState = state || window.crypto.getRandomValues(arr);
+    let newState = state;
+
+    if (!newState) {
+      const arr = new Uint8Array(16);
+
+      window.crypto.getRandomValues(arr);
+      newState = Array.from(arr).map((b) => b.toString(16).padStart(2, '0')).join('');
+    }
+    csrfStateRef.current = newState;
     const fullAuthUrl = `${authUrl}?client_id=${clientID}&response_type=code&redirect_uri=${encodeURI(redirectUri)}${scope !== '' ? `&scope=${encodeURI(scope)}` : ''}&state=${newState}`;
     const startTime = window.performance.now();
     const newWindow = window.open(fullAuthUrl, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=400,height=700');
@@ -76,15 +84,23 @@ export default function SignIn({
                     const expiry = new Date();
 
                     expiry.setSeconds(ttl);
-                    document.cookie = `${name}=${accessToken}; secure; expires=${expiry.toUTCString()}`;
+                    document.cookie = `${name}=${accessToken}; secure; SameSite=Strict; expires=${expiry.toUTCString()}`;
                     break;
                   }
-                  case 'session':
-                    sessionStorage.setItem(name, accessToken);
+                  case 'session': {
+                    const sessionExpiry = Date.now() + ttl * 1000;
+                    const sessionData = JSON.stringify({token: accessToken, expiry: sessionExpiry});
+
+                    sessionStorage.setItem(name, sessionData);
                     break;
-                  case 'local':
-                    localStorage.setItem(name, accessToken);
+                  }
+                  case 'local': {
+                    const localExpiry = Date.now() + ttl * 1000;
+                    const localData = JSON.stringify({token: accessToken, expiry: localExpiry});
+
+                    localStorage.setItem(name, localData);
                     break;
+                  }
                   default:
                     break;
                 }
