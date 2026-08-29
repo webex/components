@@ -167,7 +167,25 @@ export default function AdaptiveCard({
   };
 
   const setInput = useCallback((input) => {
-    setInputs((prevInputs) => ({...prevInputs, [input.id]: input}));
+    setInputs((prevInputs) => {
+      const prevInput = prevInputs[input.id];
+
+      return {
+        ...prevInputs,
+        [input.id]: {...prevInput, ...input},
+      };
+    });
+  }, [setInputs]);
+
+  const setNativeInputRef = useCallback((id, nativeRef) => {
+    setInputs((prevInputs) => {
+      const input = prevInputs[id];
+
+      return {
+        ...prevInputs,
+        [id]: {...input, nativeRef},
+      };
+    });
   }, [setInputs]);
 
   const getValue = (id, defval = '') => ((id in inputs && inputs[id].value !== undefined) ? inputs[id].value : defval);
@@ -197,6 +215,8 @@ export default function AdaptiveCard({
         error = input.errorMessage || `The value you entered must match the pattern ${input.regex}`;
       } else if (String(input.value).length > input.maxLength) {
         error = `Maximum length is ${input.maxLength}`;
+      } else if (input.nativeRef && !input.nativeRef.checkValidity()) {
+        error = 'The value you entered is invalid.';
       }
 
       return {...input, error};
@@ -220,6 +240,7 @@ export default function AdaptiveCard({
         getError,
         validate,
         submit,
+        setNativeInputRef,
         invalidSubmit,
         setElement,
         setIsVisible,

@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useCallback, useContext, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import webexComponentClasses from '../../helpers';
 import AdaptiveCardContext from '../context/adaptive-card-context';
@@ -24,6 +24,7 @@ export default function InputText({data, className, style}) {
     setValue,
     getValue,
     setInput,
+    setNativeInputRef,
     getError,
   } = useContext(AdaptiveCardContext);
   const [cssClasses, sc] = webexComponentClasses('adaptive-cards-input-text', className);
@@ -49,6 +50,10 @@ export default function InputText({data, className, style}) {
     setInput,
   ]);
 
+  const nativeRefCallback = useCallback((nativeRef) => {
+    setNativeInputRef(data.id, nativeRef);
+  }, [data.id, setNativeInputRef]);
+
   return (
     <div className={cssClasses} style={style}>
       {!data.isMultiline ? (
@@ -57,6 +62,7 @@ export default function InputText({data, className, style}) {
           error={getError(data.id)}
           label={formatDateTime(data.label)}
           maxLength={data.maxLength}
+          nativeRef={nativeRefCallback}
           onChange={(value) => setValue(data.id, value)}
           pattern={data.regex}
           placeholder={data.placeholder}
