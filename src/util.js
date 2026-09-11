@@ -1,5 +1,7 @@
 import {Observable} from 'rxjs';
 
+const FORBIDDEN_MERGE_KEYS = new Set(['__proto__', 'constructor', 'prototype']);
+
 /**
  * Helper function for deep merge on objects.
  *
@@ -10,10 +12,12 @@ export function deepMerge(dest, src) {
   const result = dest;
 
   for (const [key, val] of Object.entries(src)) {
-    if (val?.constructor === Object) {
-      deepMerge(result[key], val);
-    } else {
-      result[key] = val;
+    if (!FORBIDDEN_MERGE_KEYS.has(key)) {
+      if (val?.constructor === Object) {
+        deepMerge(result[key], val);
+      } else {
+        result[key] = val;
+      }
     }
   }
 }
@@ -58,6 +62,53 @@ export function chainWith(createDependentObservable) {
   });
 }
 
+const NETWORK_PROTOCOLS = new Set(['http:', 'https:']);
+
+const IPV4_MAPPED_IPV6 = /^\[::ffff:([0-9a-f]{1,4}):([0-9a-f]{1,4})\]$/i;
+
+/**
+ * Converts an IPv4-mapped IPv6 address (e.g. [::ffff:7f00:1]) to dotted-decimal form.
+ *
+ * @param {string} hostname - The hostname to convert.
+ * @returns {string|null} The dotted-decimal IPv4 address, or null if not IPv4-mapped.
+ */
+function ipv4MappedToDotted(hostname) {
+  const match = IPV4_MAPPED_IPV6.exec(hostname);
+
+  if (!match) return null;
+
+  const high = parseInt(match[1], 16);
+  const low = parseInt(match[2], 16);
+
+  return `${Math.floor(high / 256)}.${high % 256}.${Math.floor(low / 256)}.${low % 256}`;
+}
+
+/**
+ * Returns true if the hostname is a blocked host (loopback, link-local, or private range).
+ *
+ * @param {string} hostname - The hostname to check.
+ * @returns {boolean} True if the hostname is blocked, otherwise false.
+ */
+function isBlockedHost(hostname) {
+  const host = hostname.replace(/\.$/, '');
+  const mappedIpv4 = ipv4MappedToDotted(host);
+
+  if (mappedIpv4) return isBlockedHost(mappedIpv4);
+  if (host === 'localhost' || host.endsWith('.localhost')) return true;
+  if (host === '0.0.0.0') return true;
+  if (/^127\.\d+\.\d+\.\d+$/.test(host)) return true;
+  if (/^10\.\d+\.\d+\.\d+$/.test(host)) return true;
+  if (/^172\.(1[6-9]|2\d|3[01])\.\d+\.\d+$/.test(host)) return true;
+  if (/^192\.168\.\d+\.\d+$/.test(host)) return true;
+  if (/^169\.254\.\d+\.\d+$/.test(host)) return true;
+  if (/^\[::\]$/.test(host)) return true;
+  if (/^\[::1\]$/.test(host)) return true;
+  if (/^\[fe[89ab][0-9a-f]:[0-9a-f:]*\]$/i.test(host)) return true;
+  if (/^\[f[cd][0-9a-f]{2}:[0-9a-f:]*\]$/i.test(host)) return true;
+
+  return false;
+}
+
 /**
  * @param {string} url  The Url
  * @param {string[]} acceptedProtocols  Specifies accepted protocols
@@ -72,7 +123,15 @@ export function isValidUrl(url, acceptedProtocols) {
     return false;
   }
 
-  return acceptedProtocols.includes(urlObject.protocol);
+  if (!acceptedProtocols.includes(urlObject.protocol)) {
+    return false;
+  }
+
+  if (NETWORK_PROTOCOLS.has(urlObject.protocol) && isBlockedHost(urlObject.hostname)) {
+    return false;
+  }
+
+  return true;
 }
 
 /**

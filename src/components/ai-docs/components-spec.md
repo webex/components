@@ -106,7 +106,7 @@ src/components/
 | components.WebexRemoteMedia | SDK export | `WebexRemoteMedia` component | Remote media tiles | Semver beta | `src/components/WebexRemoteMedia/WebexRemoteMedia.jsx` | `ai-docs/CONTRACTS.md` |
 | components.WebexSettings | SDK export | `WebexSettings` component | Settings panel | Semver beta | `src/components/WebexSettings/WebexSettings.jsx` | `ai-docs/CONTRACTS.md` |
 | components.WebexWaitingForHost | SDK export | `WebexWaitingForHost` component | Waiting state UI | Semver beta | `src/components/WebexWaitingForHost/WebexWaitingForHost.jsx` | `ai-docs/CONTRACTS.md` |
-| components.SignIn | SDK export | `SignIn` component | Sign-in UI | Semver beta | `src/components/SignIn/SignIn.jsx` | `ai-docs/CONTRACTS.md` |
+| components.SignIn | SDK export | `SignIn` component | Sign-in UI with hardened CSRF state generation (≥16 bytes via `window.crypto`, hex-serialized, stored in `csrfStateRef` before auth window opens); cookie storage uses `secure; SameSite=Strict`; session/local storage wraps token in `{token, expiry}` envelope for TTL eviction. Returned-state validation is host-owned (caller `redirectUri` / `getAccessToken`). | Semver beta | `src/components/SignIn/SignIn.jsx` | `ai-docs/CONTRACTS.md` |
 | components.WebexSearchPeople | SDK export | `WebexSearchPeople` component | People search UI | Semver beta | `src/components/WebexSearchPeople/WebexSearchPeople.jsx` | `ai-docs/CONTRACTS.md` |
 | components.WebexCreateSpace | SDK export | `WebexCreateSpace` component | Create space UI | Semver beta | `src/components/WebexCreateSpace/WebexCreateSpace.jsx` | `ai-docs/CONTRACTS.md` |
 | components.useMeetingDestination | SDK export | `useMeetingDestination` hook | Resolve meeting destination | Semver beta | `src/components/hooks/useMeetingDestination.js` | `ai-docs/CONTRACTS.md` |
@@ -138,6 +138,10 @@ Evidence: `src/components/index.js` (31 barrel exports).
 | COMP-R-006 | All exported symbols MUST match `src/components/index.js` barrel | npm public API contract | `src/components/index.js` | build/export tests | none | PRESENT |
 | COMP-R-007 | Internal hooks under `hooks/` MUST subscribe/unsubscribe adapter observables safely | Prevents memory leaks on unmount | `src/components/hooks/useMeeting.js` | hook tests | none | PRESENT |
 | COMP-R-008 | `WebexDataProvider` PropTypes require five domain adapters (activities, meetings, memberships, people, rooms) | Documents minimum adapter shape for context | `src/components/WebexDataProvider/WebexDataProvider.jsx` | WebexDataProvider.test.js | organizationsAdapter on WebexJSONAdapter but not in PropTypes — host/SDK may still supply | PRESENT |
+| COMP-R-009 | `isValidUrl(url, acceptedProtocols)` MUST reject URLs whose protocol is outside `acceptedProtocols` and, for network protocols (`http:`/`https:`), MUST additionally reject loopback, link-local, and private hosts while still accepting legitimate remote HTTPS hosts and non-network allow-listed schemes (e.g. caller-scoped `data:` icon URIs) | Prevents client-side SSRF-style navigation to internal/loopback hosts | `src/util.js` | `src/components/adaptive-cards/hooks/useActionOpenUrl.test.js` | Blocked-host set covers IPv4 private ranges and IPv6 `::1`/`fe80::/10`/`fc00::/7` | PRESENT |
+| COMP-R-010 | `Action.OpenUrl` MUST open URLs with `window.open(url, '_blank', 'noopener,noreferrer')` and only for URLs accepted by `isValidUrl(url, ['https:', 'http:'])` | Prevents reverse-tabnabbing (`window.opener`) and referrer leakage while enforcing the hardened URL allow-list | `src/components/adaptive-cards/hooks/useActionOpenUrl.js` | `src/components/adaptive-cards/hooks/useActionOpenUrl.test.js` | none | PRESENT |
+| COMP-R-011 | `deepMerge(dest, src)` MUST skip the `__proto__`, `constructor`, and `prototype` keys so a proto-bearing payload cannot mutate `Object.prototype` | Prevents prototype-pollution via merged untrusted objects | `src/util.js` | shared helper tests | none | PRESENT |
+| COMP-R-012 | `Markdown` output MUST be sanitized with `DOMPurify.sanitize` before assignment to `dangerouslySetInnerHTML` | Neutralizes HTML/script payloads while preserving supported markdown formatting | `src/components/adaptive-cards/Markdown/Markdown.jsx` | `src/components/adaptive-cards/Markdown/Markdown.test.jsx` | markdown-it zero preset already entity-encodes raw HTML; DOMPurify is defense-in-depth | PRESENT |
 
 ## Design Overview
 
@@ -146,6 +150,15 @@ Components follow a **container/presentation** split where data arrives exclusiv
 Hooks encapsulate RxJS subscription lifecycle for meeting, person, room, and activity streams. Generic components (`Button`, `Modal`) provide shared UX primitives with Webex styling.
 
 Supporting folders (`icons/`, `inputs/`, `generic/`, `adaptive-cards/`) implement internal UI pieces. Only `Button` and `Modal` from `generic/` are npm-exported; other support components are consumed internally (see Class / Component Relationships).
+
+**`adaptive-cards/Markdown` security note:** The `Markdown` component passes `markdown-it` rendered output through `DOMPurify.sanitize` before assigning to `dangerouslySetInnerHTML`. The markdown-it zero preset with the enabled feature set (emphasis, link, list, strikethrough, etc.) already entity-encodes raw HTML; DOMPurify is an additional defense-in-depth layer that neutralizes any HTML/script payloads that survive rendering.
+
+**`adaptive-cards` link-handling security note:** `useActionOpenUrl` (`src/components/adaptive-cards/hooks/useActionOpenUrl.js`) only builds an `Action.OpenUrl` click/keydown handler when `isValidUrl(data.url, ['https:', 'http:'])` accepts the URL, and it opens the target via `window.open(data.url, '_blank', 'noopener,noreferrer')` so the opened page cannot reach `window.opener` or leak a referrer.
+
+**`src/util.js` shared-helper security invariants:**
+
+- `isValidUrl(url: string, acceptedProtocols: string[]) → boolean` parses `url` with the `URL` constructor (returning `false` on parse failure), rejects any protocol outside `acceptedProtocols`, and for network protocols (`http:`/`https:`) additionally rejects loopback, link-local, and private hosts — `localhost`/`*.localhost`, `127.0.0.0/8`, `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`, `169.254.0.0/16`, and IPv6 `::1`, `fe80::/10`, `fc00::/7`. Non-network allow-listed schemes (e.g. caller-scoped `data:` icon URIs) skip the host check.
+- `deepMerge(dest: object, src: object) → void` copies `src` entries into `dest` in place but skips the `__proto__`, `constructor`, and `prototype` keys, preventing a proto-bearing payload from mutating `Object.prototype` (prototype-pollution guard).
 
 ## Data Flow
 
@@ -252,6 +265,8 @@ Relationship: HOC → Provider → feature components → hooks → adapter inte
 
 Additional hooks: `useActivityScroll`, `useOverflowActivities`, `useAdaptiveCard`, `useOrganization`, `useStream`, `useSpeakers`, `useMetrics`, `useElementDimensions`, `useElementPosition`, `useAutoFocus`, `useRef` — see `src/components/hooks/index.js`.
 
+Adaptive-card hooks under `src/components/adaptive-cards/hooks/` (e.g. `useActionOpenUrl`) are internal to the adaptive-card renderer and not exported from the package barrel.
+
 Evidence: `src/components/` directory listing, import graph from `WebexMeeting.jsx`.
 
 ## Use Cases
@@ -314,15 +329,18 @@ Evidence: `src/components/WebexMeeting/WebexMeeting.jsx`, `@webex/component-adap
 - Assuming `organizationsAdapter` on provider when only five adapters validated in propTypes — verify host adapter shape.
 - Snapshot tests sensitive to class names — coordinate with styles module when changing prefix.
 - `withAdapter` renders the wrapped component immediately without `WebexDataProvider` while connect is pending — use `adapterConnected` prop for loading UI; do not assume `AdapterContext` on first paint.
+- `SignIn` generates and stores the OAuth CSRF `state` but does not read the redirect response — validating that the returned `state` matches the stored value is host-owned (caller `redirectUri` / `getAccessToken`); a host that skips this check reopens the CSRF gap.
 
-Evidence: `src/components/hoc/withAdapter.jsx`, `src/util.js`.
+Evidence: `src/components/hoc/withAdapter.jsx`, `src/util.js`, `src/components/SignIn/SignIn.jsx`.
 
 ## Module Do's / Don'ts
 
 - DO: one folder per component with `ComponentName.jsx` + co-located `.scss`, `.test.js`, `.stories.js`.
 - DO: use `webexComponentClasses()` from `src/components/helpers.js` for BEM-style class names.
 - DO: use responsive breakpoints from `src/components/breakpoints.js` (e.g. `PHONE_LARGE`).
+- DO: gate any component-initiated navigation through `isValidUrl` and open external URLs with `noopener,noreferrer`.
 - DON'T: fetch Webex cloud data directly from components — use adapter hooks only.
+- DON'T: assign untrusted HTML to `dangerouslySetInnerHTML` without `DOMPurify.sanitize`.
 - DON'T: export internal support components without updating `src/components/index.js` and `CONTRACTS.md`.
 
 Evidence: `CONTRIBUTING.md`, `src/components/helpers.js`.
@@ -356,6 +374,10 @@ Evidence: `README.md`, `package.json` peerDependencies.
 | COMP-R-002 connect-before-provider | `src/components/hoc/withAdapter.test.jsx` | none |
 | COMP-R-005 co-located tests | `src/components/**/*.test.js` | not all exports have stories |
 | COMP-R-007 hook cleanup | hook tests under `src/components/hooks/` | none |
+| COMP-R-009 isValidUrl host allow-list | `src/components/adaptive-cards/hooks/useActionOpenUrl.test.js` | none |
+| COMP-R-010 Action.OpenUrl noopener/noreferrer | `src/components/adaptive-cards/hooks/useActionOpenUrl.test.js` | none |
+| COMP-R-011 deepMerge prototype guard | shared helper tests | none |
+| COMP-R-012 Markdown DOMPurify sanitization | `src/components/adaptive-cards/Markdown/Markdown.test.jsx` | none |
 
 Evidence: `src/components/**/*.test.js`, `.circleci/config.yml`.
 
@@ -371,6 +393,10 @@ Evidence: `src/components/**/*.test.js`, `.circleci/config.yml`.
 | COMP-R-006 | `src/components/index.js` | build |
 | COMP-R-007 | `src/components/hooks/useMeeting.js` | hook tests |
 | COMP-R-008 | `src/components/WebexDataProvider/WebexDataProvider.jsx` | WebexDataProvider.test.js |
+| COMP-R-009 | `src/util.js` | `src/components/adaptive-cards/hooks/useActionOpenUrl.test.js` |
+| COMP-R-010 | `src/components/adaptive-cards/hooks/useActionOpenUrl.js` | `src/components/adaptive-cards/hooks/useActionOpenUrl.test.js` |
+| COMP-R-011 | `src/util.js` | shared helper tests |
+| COMP-R-012 | `src/components/adaptive-cards/Markdown/Markdown.jsx` | `src/components/adaptive-cards/Markdown/Markdown.test.jsx` |
 
 - Repo architecture: [`ai-docs/ARCHITECTURE.md`](../../../ai-docs/ARCHITECTURE.md) · Registry: [`ai-docs/SPEC_INDEX.md`](../../../ai-docs/SPEC_INDEX.md)
 - Coverage state & contracts baseline: `.sdd/manifest.json`

@@ -46,11 +46,11 @@ Evidence: `.gitignore` (`.env*`), `CONTRIBUTING.md`.
 
 ## Input Validation & Output Encoding Posture
 
-- Validate URLs with `isValidUrl` and explicit protocol allow-lists where used.
-- Markdown rendering in messaging uses `markdown-it` — hosts should sanitize untrusted content before display if sourcing external messages.
+- Validate URLs with `isValidUrl` and explicit protocol allow-lists where used. For `http:` and `https:` URLs, `isValidUrl` additionally rejects loopback hosts (`localhost`, `127.x.x.x`, `[::1]`), link-local addresses (`169.254.x.x`, `fe80::/10`), and private/unique-local ranges (`10.x`, `172.16-31.x`, `192.168.x`, `fc00::/7`). The protocol allow-list remains caller-scoped, so `data:` URIs used for adaptive-card icons are unaffected.
+- Markdown rendering uses `markdown-it` (zero preset) wrapped with `DOMPurify.sanitize` before `dangerouslySetInnerHTML` — malicious HTML/script is neutralized while supported formatting (emphasis, links, lists, strikethrough) is preserved.
 - Adaptive cards render templated JSON — validate card payload at adapter/host layer.
 
-Evidence: `src/util.js`, `package.json` dependencies.
+Evidence: `src/util.js`, `src/components/adaptive-cards/Markdown/Markdown.jsx`, `package.json` dependencies.
 
 ## Known Sensitive Areas & Accepted Risks
 
