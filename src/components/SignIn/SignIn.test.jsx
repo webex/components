@@ -93,18 +93,34 @@ describe('SignIn', () => {
       expect(stateParam.length).toBeGreaterThanOrEqual(32);
     });
 
-    test('state param is stored before auth window opens', () => {
-      const renderer = renderSignIn();
+    test('state param is generated fresh from crypto.getRandomValues, not a fixed/reused value', () => {
+      let callCount = 0;
+      const randomValuesSpy = jest.spyOn(window.crypto, 'getRandomValues').mockImplementation((arr) => {
+        callCount += 1;
+        for (let i = 0; i < arr.length; i += 1) {
+          // eslint-disable-next-line no-param-reassign
+          arr[i] = callCount * 10 + i;
+        }
 
-      clickSignInButton(renderer);
+        return arr;
+      });
 
-      // window.open was called with a valid state — state was serialized and
-      // stored in csrfStateRef before openAuthUrl called window.open
-      expect(openSpy).toHaveBeenCalled();
-      const calledUrl = openSpy.mock.calls[0][0];
-      const stateParam = new URL(calledUrl).searchParams.get('state');
+      const rendererA = renderSignIn();
 
-      expect(stateParam).toMatch(/^[0-9a-f]{32,}$/i);
+      clickSignInButton(rendererA);
+      const stateA = new URL(openSpy.mock.calls[0][0]).searchParams.get('state');
+
+      const rendererB = renderSignIn();
+
+      clickSignInButton(rendererB);
+      const stateB = new URL(openSpy.mock.calls[1][0]).searchParams.get('state');
+
+      // each click must draw its own bytes from crypto.getRandomValues — a cached
+      // or hardcoded state would call it fewer times and/or produce identical values
+      expect(randomValuesSpy).toHaveBeenCalledTimes(2);
+      expect(stateA).not.toBe(stateB);
+
+      randomValuesSpy.mockRestore();
     });
 
     test('uses caller-supplied state prop when provided', () => {
