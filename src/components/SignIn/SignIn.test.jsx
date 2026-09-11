@@ -1,3 +1,5 @@
+import fs from 'fs';
+import path from 'path';
 import React from 'react';
 import {create, act} from 'react-test-renderer';
 import {AdapterContext} from '../hooks/contexts';
@@ -114,6 +116,12 @@ describe('SignIn', () => {
       const url = new URL(calledUrl);
 
       expect(url.searchParams.get('state')).toBe('caller-provided-state');
+    });
+
+    test('does not keep an unused write-only csrfStateRef', () => {
+      const source = fs.readFileSync(path.join(__dirname, 'SignIn.jsx'), 'utf8');
+
+      expect(source).not.toMatch(/csrfStateRef/);
     });
   });
 

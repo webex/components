@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {Button} from '../generic';
 import Spinner from '../generic/Spinner/Spinner';
@@ -40,7 +40,6 @@ export default function SignIn({
   const [isAuthenticating, setIsAuthenticating] = useState(false);
   const [cssClasses] = webexComponentClasses('oauth-sign-in', className);
   const [emitMetrics] = useMetrics();
-  const csrfStateRef = useRef(null);
 
   const openAuthUrl = () => {
     let newState = state;
@@ -51,7 +50,6 @@ export default function SignIn({
       window.crypto.getRandomValues(arr);
       newState = Array.from(arr).map((b) => b.toString(16).padStart(2, '0')).join('');
     }
-    csrfStateRef.current = newState;
     const fullAuthUrl = `${authUrl}?client_id=${clientID}&response_type=code&redirect_uri=${encodeURI(redirectUri)}${scope !== '' ? `&scope=${encodeURI(scope)}` : ''}&state=${newState}`;
     const startTime = window.performance.now();
     const newWindow = window.open(fullAuthUrl, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=400,height=700');

@@ -73,6 +73,24 @@ describe('useActionOpenUrl', () => {
         '_blank',
         'noopener,noreferrer',
       );
+      expect(onOpenUrl).toHaveBeenCalledWith('https://example.com/page');
+    });
+
+    test('onKeyDown with Enter opens url', () => {
+      const data = {type: 'Action.OpenUrl', url: 'https://example.com/page'};
+      const renderer = renderHook(data);
+      const {root} = renderer;
+      const div = root.findByProps({'data-testid': 'target'});
+
+      act(() => {
+        div.props.onKeyDown({key: 'Enter'});
+      });
+
+      expect(openSpy).toHaveBeenCalledWith(
+        'https://example.com/page',
+        '_blank',
+        'noopener,noreferrer',
+      );
     });
 
     test('rejects loopback http URL — no action and window.open not called', () => {

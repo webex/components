@@ -14,6 +14,18 @@ describe('isValidUrl', () => {
       expect(isValidUrl('http://localhost/x', ['http:', 'https:'])).toBe(false);
     });
 
+    test('rejects .localhost suffix host', () => {
+      expect(isValidUrl('http://foo.localhost/x', ['http:', 'https:'])).toBe(false);
+    });
+
+    test('rejects IPv6 link-local range fe80::/10', () => {
+      expect(isValidUrl('http://[fe80::1]/x', ['http:', 'https:'])).toBe(false);
+    });
+
+    test('rejects IPv6 unique-local range fc00::/fd00::', () => {
+      expect(isValidUrl('http://[fd00::1]/x', ['http:', 'https:'])).toBe(false);
+    });
+
     test('rejects link-local host 169.254.169.254', () => {
       expect(isValidUrl('http://169.254.169.254/latest/meta-data', ['http:', 'https:'])).toBe(false);
     });
@@ -32,6 +44,26 @@ describe('isValidUrl', () => {
 
     test('rejects IPv6 loopback [::1]', () => {
       expect(isValidUrl('http://[::1]/path', ['http:', 'https:'])).toBe(false);
+    });
+
+    test('rejects unspecified host 0.0.0.0', () => {
+      expect(isValidUrl('http://0.0.0.0/', ['http:', 'https:'])).toBe(false);
+    });
+
+    test('rejects IPv6 unspecified [::]', () => {
+      expect(isValidUrl('http://[::]/', ['http:', 'https:'])).toBe(false);
+    });
+
+    test('rejects IPv4-mapped IPv6 loopback [::ffff:127.0.0.1]', () => {
+      expect(isValidUrl('http://[::ffff:127.0.0.1]/', ['http:', 'https:'])).toBe(false);
+    });
+
+    test('rejects trailing-dot loopback host localhost.', () => {
+      expect(isValidUrl('http://localhost./', ['http:', 'https:'])).toBe(false);
+    });
+
+    test('accepts boundary host just outside private class-B range 172.32.0.1', () => {
+      expect(isValidUrl('http://172.32.0.1/', ['http:', 'https:'])).toBe(true);
     });
 
     test('preserves data: icon allow-list', () => {

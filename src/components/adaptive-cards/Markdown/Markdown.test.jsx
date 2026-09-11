@@ -1,5 +1,6 @@
 import React from 'react';
 import {create, act} from 'react-test-renderer';
+import DOMPurify from 'dompurify';
 import Markdown from './Markdown';
 
 function renderMarkdown(children) {
@@ -34,6 +35,17 @@ describe('Markdown', () => {
 
       // No actual <script> element (unencoded tag opener)
       expect(html).not.toMatch(/<script/i);
+    });
+
+    test('rendered output is the DOMPurify-sanitized string, not raw markdown-it output', () => {
+      const sanitizeSpy = jest.spyOn(DOMPurify, 'sanitize').mockReturnValue('<p>SANITIZED-MARKER</p>');
+
+      const renderer = renderMarkdown('**bold**');
+      const html = getHtml(renderer);
+
+      expect(sanitizeSpy).toHaveBeenCalled();
+      expect(html).toContain('SANITIZED-MARKER');
+      sanitizeSpy.mockRestore();
     });
 
     test('supported emphasis formatting preserved', () => {

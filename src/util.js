@@ -64,6 +64,25 @@ export function chainWith(createDependentObservable) {
 
 const NETWORK_PROTOCOLS = new Set(['http:', 'https:']);
 
+const IPV4_MAPPED_IPV6 = /^\[::ffff:([0-9a-f]{1,4}):([0-9a-f]{1,4})\]$/i;
+
+/**
+ * Converts an IPv4-mapped IPv6 address (e.g. [::ffff:7f00:1]) to dotted-decimal form.
+ *
+ * @param {string} hostname - The hostname to convert.
+ * @returns {string|null} The dotted-decimal IPv4 address, or null if not IPv4-mapped.
+ */
+function ipv4MappedToDotted(hostname) {
+  const match = IPV4_MAPPED_IPV6.exec(hostname);
+
+  if (!match) return null;
+
+  const high = parseInt(match[1], 16);
+  const low = parseInt(match[2], 16);
+
+  return `${Math.floor(high / 256)}.${high % 256}.${Math.floor(low / 256)}.${low % 256}`;
+}
+
 /**
  * Returns true if the hostname is a blocked host (loopback, link-local, or private range).
  *
@@ -71,15 +90,21 @@ const NETWORK_PROTOCOLS = new Set(['http:', 'https:']);
  * @returns {boolean} True if the hostname is blocked, otherwise false.
  */
 function isBlockedHost(hostname) {
-  if (hostname === 'localhost' || hostname.endsWith('.localhost')) return true;
-  if (/^127\.\d+\.\d+\.\d+$/.test(hostname)) return true;
-  if (/^10\.\d+\.\d+\.\d+$/.test(hostname)) return true;
-  if (/^172\.(1[6-9]|2\d|3[01])\.\d+\.\d+$/.test(hostname)) return true;
-  if (/^192\.168\.\d+\.\d+$/.test(hostname)) return true;
-  if (/^169\.254\.\d+\.\d+$/.test(hostname)) return true;
-  if (/^\[::1\]$/.test(hostname)) return true;
-  if (/^\[fe[89ab][0-9a-f]:[0-9a-f:]*\]$/i.test(hostname)) return true;
-  if (/^\[f[cd][0-9a-f]{2}:[0-9a-f:]*\]$/i.test(hostname)) return true;
+  const host = hostname.replace(/\.$/, '');
+  const mappedIpv4 = ipv4MappedToDotted(host);
+
+  if (mappedIpv4) return isBlockedHost(mappedIpv4);
+  if (host === 'localhost' || host.endsWith('.localhost')) return true;
+  if (host === '0.0.0.0') return true;
+  if (/^127\.\d+\.\d+\.\d+$/.test(host)) return true;
+  if (/^10\.\d+\.\d+\.\d+$/.test(host)) return true;
+  if (/^172\.(1[6-9]|2\d|3[01])\.\d+\.\d+$/.test(host)) return true;
+  if (/^192\.168\.\d+\.\d+$/.test(host)) return true;
+  if (/^169\.254\.\d+\.\d+$/.test(host)) return true;
+  if (/^\[::\]$/.test(host)) return true;
+  if (/^\[::1\]$/.test(host)) return true;
+  if (/^\[fe[89ab][0-9a-f]:[0-9a-f:]*\]$/i.test(host)) return true;
+  if (/^\[f[cd][0-9a-f]{2}:[0-9a-f:]*\]$/i.test(host)) return true;
 
   return false;
 }
