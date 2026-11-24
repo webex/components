@@ -1,5 +1,6 @@
 {
   "name": "@webex/components",
+  "description": "React components for building Webex integrations.",
   "version": "1.277.1",
   "browser": "dist/umd/webex-components.umd.min.js",
   "unpkg": "dist/umd/webex-components.umd.min.js",
